@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title id="dynamic-title">Country Details | Gay World News</title>
+		<link rel="stylesheet" href="index.css" />
+		<script src="data.js" defer></script>
+		<script src="index.js" defer></script>
+		<script src="country-loader.js" defer></script>
+	</head>
+	<body class="standard-page">
+		<main class="country-detail-container">
+			<div class="header-section">
+				<h1 id="country-name" class="rainbow-text">Loading...</h1>
+				<div id="status-badge" class="status-badge">
+					<span id="status-dot" class="status-dot"></span>
+					<span id="status-text">Checking safety...</span>
+				</div>
+			</div>
+
+			<div class="country-quick-nav">
+				<a href="#travel" class="glass-btn">✈ Travel</a>
+				<a href="#health" class="glass-btn">🏥 Health</a>
+				<a href="#security" class="glass-btn">🛡 Security</a>
+				<a href="#legal" class="glass-btn">⚖ Legal Status</a>
+			</div>
+
+			<div id="info-display-area" style="margin-top: 40px"></div>
+		</main>
+		<footer class="bottom-dock">
+			<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+			<nav class="bottom-nav">
+				<a href="#" class="nav-back" onclick="history.back(); return false;"
+					>Back</a
+				>
+				<a href="about.html">About</a>
+				<a href="legal.html">Legal</a>
+				<a href="safety.html">Safety</a>
+				<a href="culture.html">Culture</a>
+			</nav>
+		</footer>
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				const urlParams = new URLSearchParams(window.location.search);
+				const countryKey = urlParams.get("c");
+
+				// Ensure globalData exists from data.js
+				if (typeof globalData !== "undefined" && globalData[countryKey]) {
+					const countryData = globalData[countryKey];
+
+					// 1. Update Header & Title
+					document.getElementById("country-name").innerText = countryData.name;
+					document.title = `${countryData.name} | Safety Guide`;
+
+					// 2. Update Safety Status
+					const dot = document.getElementById("status-dot");
+					const statusText = document.getElementById("status-text");
+					dot.className = `status-dot ${countryData.status}`;
+					statusText.innerText = countryData.status.toUpperCase() + " ADVISORY";
+
+					// 3. Inject the info into the display area
+					const displayArea = document.getElementById("info-display-area");
+					displayArea.innerHTML = `
+                        <section id="legal" class="glass-card">
+                            <h3>⚖ Legal Status</h3>
+                            <p>${countryData.legal}</p>
+                        </section>
+                        <section id="health" class="glass-card">
+                            <h3>🏥 Health & Care</h3>
+                            <p>${countryData.health}</p>
+                        </section>
+                        <section id="security" class="glass-card">
+                            <h3>🛡 Security & Posture</h3>
+                            <p>${countryData.posture}</p>
+                        </section>
+                    `;
+				} else {
+					document.getElementById("country-name").innerText =
+						"Country Not Found";
+				}
+			});
+		</script>
+	</body>
+</html>

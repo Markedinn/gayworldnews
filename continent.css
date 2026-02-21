@@ -1,0 +1,116 @@
+/* --- CLEAN RESPONSIVE SCROLLING --- */
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: #ffffff;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	/* Changed height to min-height to allow content to push the page down */
+	min-height: 100vh;
+	overflow-y: auto;
+	/* Removing the "display: none" scrollbar rules temporarily helps debugging, 
+       but I've kept them optimized below */
+}
+
+/* --- THE FIX FOR THE BUTTONS --- */
+.page-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	/* Added significant bottom padding so the last cards aren't 
+       trapped under the fixed bottom dock */
+	padding: 40px 20px 200px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+
+/* Ensure the bottom dock is ALWAYS visible on top of continent cards */
+.bottom-dock {
+	z-index: 9999 !important;
+}
+
+/* --- THE RESPONSIVE GRID --- */
+.country-grid {
+	display: grid;
+	gap: 20px;
+	width: 100%;
+	margin-top: 40px;
+	/* Removed padding-bottom here since it's now on the container */
+	grid-template-columns: 1fr;
+}
+
+/* Tablet: 2 Columns (Screens wider than 600px) */
+@media (min-width: 600px) {
+	.country-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* Desktop: 3 Columns (Screens wider than 1024px) */
+@media (min-width: 1024px) {
+	.country-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* --- CARD STYLING --- */
+.country-card {
+	background: #ffffff;
+	padding: 22px;
+	border-radius: 15px;
+	text-decoration: none;
+	color: #333;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	border: 1px solid #eee;
+	transition: all 0.3s ease;
+}
+
+.country-card:hover {
+	transform: translateY(-5px);
+	border-color: #732982;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.status-dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+}
+.green {
+	background: #2ecc71;
+}
+.yellow {
+	background: #f1c40f;
+}
+.red {
+	background: #e74c3c;
+}
+
+.search-wrap {
+	width: 100%;
+	max-width: 600px;
+	margin: 20px 0 40px 0; /* Added bottom margin for the U=U banner */
+}
+.search-wrap input {
+	width: 100%;
+	padding: 15px 25px;
+	border-radius: 50px;
+	border: 1px solid #ddd;
+	font-size: 1rem;
+	outline: none;
+}
+
+/* Add space at the bottom of the body so content can clear the footer */
+body {
+	padding-bottom: 120px; /* Adjust this to be slightly taller than your footer */
+}
+
+/* Optional: Ensure the scroll behavior feels smooth */
+html {
+	scroll-padding-bottom: 120px;
+}
