@@ -1,18 +1,45 @@
-<header class="list-header">
-	<a href="index.html" class="back-link">← Back to World Hub</a>
-	<h1 class="rainbow-text">Global Breaking News</h1>
-</header>
-
-<section class="news-feed">
-	<article class="news-item">
-		<div class="news-bubble" style="--pride: #e40303">NEW</div>
-		<div class="news-content">
-			<h3>Thailand Officially Legalizes Marriage Equality (2026)</h3>
-			<p>
-				A landmark shift for Southeast Asia as Thailand becomes the latest
-				nation to recognize LGBTQ+ unions...
-			</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Europe | Gay World News</title>
+		<link rel="stylesheet" href="continent.css" />
+		<link rel="stylesheet" href="index.css" />
+		<script src="data.js" defer></script>
+		<script src="index.js" defer></script>
+	</head>
+	<body data-continent="europe" class="standard-page">
+		<div class="back-hint-wrap" onclick="history.back()">
+			<div class="chevron-shape"></div>
 		</div>
-	</article>
-	<!-- Add more news articles here -->
-</section>
+		<a
+			href="https://www.youtube.com/"
+			class="exit-btn"
+			onclick="
+				event.preventDefault();
+				location.replace('https://www.youtube.com/');
+			"
+			>EXIT</a
+		>
+		<div class="page-container">
+			<header class="list-header">
+				<h1 class="rainbow-text">Global Breaking News</h1>
+			</header>
+
+			<section class="news-feed">
+				<article class="news-item">
+					<div class="news-bubble" style="--pride: #e40303">NEW</div>
+					<div class="news-content">
+						<h3>Thailand Officially Legalizes Marriage Equality (2026)</h3>
+						<p>
+							A landmark shift for Southeast Asia as Thailand becomes the latest
+							nation to recognize LGBTQ+ unions...
+						</p>
+					</div>
+				</article>
+				<!-- Add more news articles here -->
+			</section>
+		</div>
+	</body>
+</html>

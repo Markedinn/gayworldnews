@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -10,6 +10,18 @@
 		<script src="index.js" defer></script>
 	</head>
 	<body data-continent="africa" class="standard-page">
+		<div class="back-hint-wrap" onclick="history.back()">
+			<div class="chevron-shape"></div>
+		</div>
+		<a
+			href="https://www.youtube.com/"
+			class="exit-btn"
+			onclick="
+				event.preventDefault();
+				location.replace('');
+			"
+			>EXIT</a
+		>
 		<div class="page-container">
 			<header class="list-header">
 				<a href="index.html" style="text-decoration: none">

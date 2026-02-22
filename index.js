@@ -10,10 +10,8 @@ const uEqualsUBannerHTML = `
 
 const autoFooterHTML = `
     <footer class="bottom-dock">
-        <div class="exit-btn">QUICK EXIT</div>
         <div class="dev-notice"><span>🚧</span> Site under active development.</div>
         <nav class="bottom-nav">
-            <a href="#" id="backButton" class="nav-back" style="text-decoration: none;">⬅ Back</a>
             <a href="about.html">About</a>
             <a href="legal-overview.html">Legal</a>
             <a href="safety-index.html">Safety</a>
@@ -22,24 +20,22 @@ const autoFooterHTML = `
     </footer>
 `;
 
-function performQuickExit() {
-	window.location.replace("https://www.youtube.com");
-}
-
 // --- 2. INITIALIZATION ---
+
 document.addEventListener("DOMContentLoaded", () => {
-	// A. FOOTER INJECTION
-	if (!document.querySelector(".bottom-dock")) {
+	// Check if we are on the Home Page (hero-viewport exists)
+	const isHomePage = !!document.querySelector(".hero-viewport");
+
+	// A. FOOTER INJECTION - Only run if not on Home Page (which has its own footer)
+	if (!isHomePage && !document.querySelector(".bottom-dock")) {
 		document.body.insertAdjacentHTML("beforeend", autoFooterHTML);
 	}
 
-	// B. U=U BANNER INJECTION (Added .list-header for Continent pages)
+	// B. U=U BANNER - Only inject if not already in the HTML
 	if (!document.getElementById("u-u-notice")) {
-		const target =
-			document.querySelector(".main-header") ||
-			document.querySelector(".list-header") ||
-			document.querySelector(".page-title-wrap") ||
-			document.querySelector("h1");
+		// On Home Page, maybe we don't want it pushing the Chevron?
+		// Or we target a specific area.
+		const target = isHomePage ? null : document.querySelector(".main-header");
 
 		if (target) {
 			target.insertAdjacentHTML("afterend", uEqualsUBannerHTML);
@@ -109,13 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			});
 	}
-	// D. BACK BUTTON CLICK HANDLER
-	document.addEventListener("click", (e) => {
-		if (e.target && e.target.id === "backButton") {
-			e.preventDefault();
-			window.history.back();
-		}
-	});
 
 	// E. COUNTRY PAGE DATA
 	const urlParams = new URLSearchParams(window.location.search);
@@ -137,3 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") performQuickExit();
 });
+function performQuickExit() {
+	window.location.replace("https://www.youtube.com/");
+}

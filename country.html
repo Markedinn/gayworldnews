@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -10,6 +10,10 @@
 		<script src="country-loader.js" defer></script>
 	</head>
 	<body class="standard-page">
+		<div class="back-hint-wrap" onclick="history.back()">
+			<div class="chevron-shape"></div>
+		</div>
+		<a href="https://youtube.com" class="exit-btn">EXIT</a>
 		<main class="country-detail-container">
 			<div class="header-section">
 				<h1 id="country-name" class="rainbow-text">Loading...</h1>
@@ -29,11 +33,7 @@
 			<div id="info-display-area" style="margin-top: 40px"></div>
 		</main>
 		<footer class="bottom-dock">
-			<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 			<nav class="bottom-nav">
-				<a href="#" class="nav-back" onclick="history.back(); return false;"
-					>Back</a
-				>
 				<a href="about.html">About</a>
 				<a href="legal.html">Legal</a>
 				<a href="safety.html">Safety</a>

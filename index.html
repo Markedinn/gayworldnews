@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -43,6 +43,7 @@
 	</head>
 
 	<body>
+		<a href="https://youtube.com" class="exit-btn">EXIT</a>
 		<section class="hero-viewport">
 			<header class="main-header">
 				<h1 class="rainbow-text">Gay World News</h1>
@@ -67,8 +68,15 @@
 					<span class="pulse-dot"></span> Site under active development
 				</div>
 			</header>
-
-			<div class="scroll-prompt"></div>
+			<div
+				class="scroll-hint"
+				tabindex="-1"
+				onclick="
+					window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
+				"
+			>
+				<div class="chevron-shape chevron-down"></div>
+			</div>
 		</section>
 
 		<section class="content-viewport">
@@ -105,6 +113,5 @@
 				</nav>
 			</footer>
 		</section>
-		<a href="https://www.youtube.com" class="exit-btn">QUICK EXIT</a>
 	</body>
 </html>
