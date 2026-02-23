@@ -69,13 +69,8 @@
 					<span class="pulse-dot"></span> Site under active development
 				</div>
 			</header>
-			<div
-				class="scroll-hint"
-				tabindex="-1"
-				onclick="
-					window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })
-				"
-			>
+			<!-- Only one scroll-hint! -->
+			<div class="scroll-hint" onclick="snapAndHide()">
 				<div class="chevron-shape chevron-down"></div>
 			</div>
 		</section>
@@ -106,7 +101,7 @@
 
 			<footer class="bottom-dock">
 				<nav class="bottom-nav">
-					<a href="#" id="backButton" class="nav-back">⬅ Back</a>
+					<a href="index.html" style="color: #e40303 !important">Home</a>
 					<a href="about.html">About</a>
 					<a href="legal-overview.html">Legal</a>
 					<a href="safety-index.html">Safety</a>

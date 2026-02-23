@@ -12,6 +12,7 @@ const autoFooterHTML = `
     <footer class="bottom-dock">
         <div class="dev-notice"><span>🚧</span> Site under active development.</div>
         <nav class="bottom-nav">
+		<a href="index.html" style="color: #e40303 !important;">Home</a>
             <a href="about.html">About</a>
             <a href="legal-overview.html">Legal</a>
             <a href="safety-index.html">Safety</a>
@@ -129,3 +130,29 @@ document.addEventListener("keydown", (e) => {
 function performQuickExit() {
 	window.location.replace("https://www.youtube.com/");
 }
+function snapToContent() {
+	// Finds the first content section on your page
+	const content = document.querySelector(".content-viewport");
+	if (content) {
+		content.scrollIntoView({
+			behavior: "smooth",
+			block: "start",
+		});
+	}
+}
+function snapAndHide() {
+	// 1. Find the target and the button
+	const target = document.querySelector(".content-viewport");
+	const btn = document.querySelector(".scroll-hint");
+
+	// 2. If both exist, run the actions
+	if (target && btn) {
+		// Perform the smooth snap
+		target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+		// Make the button vanish immediately
+		btn.style.opacity = "0";
+		btn.style.visibility = "hidden";
+		btn.style.pointerEvents = "none";
+	}
+} // <--- This was the missing bracket!
