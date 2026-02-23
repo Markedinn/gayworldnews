@@ -23,4 +23,8 @@ We are currently migrating this project to a **Vite + React** architecture to en
 - **Dynamic Content**: Transitioning to a live API for up-to-the-minute news and health updates.
 
 ---
-*Developed & Maintained by Mark Sutton*
+
+## 🔗 Live Site
+Check out the live project at [gayworldnews.com](https://gayworldnews.com)
+
+*Developed & Maintained by Mark Sutton and friends*
