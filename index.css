@@ -645,8 +645,33 @@ body {
 	padding-bottom: 10px;
 }
 
-@media (min-width: 1024px) {
-	body {
-		background-attachment: fixed;
+@media (max-width: 480px) {
+	/* Ensure both viewports are strictly 100% of the screen height */
+	.hero-viewport,
+	.content-viewport {
+		height: 100dvh !important; /* 'dvh' is better for mobile browsers with toolbars */
+		justify-content: flex-start !important; /* Force content to the top */
+		padding-top: 10px !important;
+		overflow: hidden;
+	}
+
+	/* Target the specific map containers */
+	.map-container,
+	#map-hero,
+	#map-content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+		z-index: 1; /* Keep it behind your text/buttons */
+	}
+
+	/* Make sure your header and search sit ON TOP of the map */
+	.main-header,
+	.landing-search-wrap {
+		position: relative;
+		z-index: 10;
+		margin-top: 20px;
 	}
 }
