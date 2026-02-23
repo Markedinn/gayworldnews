@@ -19,4 +19,4 @@ jobs:
           server: 69.10.43.179
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: domains/gayworldnews.com/public_html
+          server-dir: domains/gayworldnews.com/public_html/
