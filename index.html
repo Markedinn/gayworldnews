@@ -27,7 +27,7 @@
 				"@type": "WebSite",
 				"name": "Gay World News",
 				"url": "https://gayworldnews.com",
-				"description": "Global hub for LGBTQ+ News, Travel Safety, Legal rights, and Health support.",
+				"description": "Global hub for LGBTQ+ News, Travel guide, Safety, Legal rights, and Health support with daily updates.",
 				"potentialAction": {
 					"@type": "SearchAction",
 					"target": "https://gayworldnews.com{search_term_string}",
@@ -45,16 +45,30 @@
 	<body>
 		<a href="https://youtube.com" class="exit-btn">EXIT</a>
 		<section class="hero-viewport">
+			<!-- index.html: Corrected Nesting -->
 			<header class="main-header">
 				<h1 class="rainbow-text">Gay World News</h1>
-
 				<div class="subtitle-group">
 					<p class="subtitle">
-						International Up-To-Date LGBTQ Travel Health Security and Legal
-						Status
+						International LGBTQ Travel Health Security and Legal Status
 					</p>
 					<div class="rainbow-line"></div>
 				</div>
+
+				<!-- U=U BANNER -->
+				<a
+					href="https://www.preventionaccess.org"
+					target="_blank"
+					class="u-u-link"
+				>
+					<div id="u-u-notice">
+						<h4>U=U: Undetectable = Untransmittable</h4>
+						<p>
+							People living with HIV who take ART as prescribed and have an
+							undetectable viral load cannot sexually transmit HIV to others.
+						</p>
+					</div>
+				</a>
 
 				<div class="landing-search-wrap">
 					<input
@@ -65,17 +79,30 @@
 					/>
 					<div id="searchResults" class="search-results-dropdown"></div>
 				</div>
-				<div class="dev-notice">
-					<span class="pulse-dot"></span> Site under active development
+				<img
+					src="images/underconstruction.webp"
+					alt="Site Under Construction"
+					class="construction-graphic"
+				/>
+
+				<div class="scroll-hint" onclick="snapToContent()">
+					<!-- New Image instead of CSS shape -->
+					<img
+						src="images/scroll_down.webp"
+						class="scroll-icon-img"
+						alt="Scroll Down"
+					/>
 				</div>
 			</header>
-			<!-- Only one scroll-hint! -->
-			<div class="scroll-hint" onclick="snapAndHide()">
-				<div class="chevron-shape chevron-down"></div>
-			</div>
+			<!-- Close Header HERE -->
 		</section>
 
 		<section class="content-viewport">
+			<!-- BRANDING ANCHOR FOR VIEWPORT 2 -->
+			<div class="viewport-header">
+				<h2 class="rainbow-text small-rainbow">Gay World News</h2>
+				<div class="rainbow-line mini-line"></div>
+			</div>
 			<a
 				href="https://www.preventionaccess.org/"
 				target="_blank"

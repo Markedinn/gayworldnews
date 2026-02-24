@@ -10,9 +10,16 @@
 		<script src="index.js" defer></script>
 	</head>
 	<body data-continent="oceania" class="standard-page">
-		<div class="back-hint-wrap" onclick="history.back()">
-			<div class="chevron-shape"></div>
-		</div>
+		<a
+			href="#"
+			onclick="
+				history.back();
+				return false;
+			"
+			class="back-btn"
+			>BACK</a
+		>
+
 		<a
 			href="https://www.youtube.com/"
 			class="exit-btn"
@@ -27,7 +34,19 @@
 				<a href="index.html" style="text-decoration: none">
 					<h1 class="rainbow-text">Oceania</h1>
 				</a>
-
+				<a
+					href="https://www.preventionaccess.org"
+					target="_blank"
+					class="u-u-link"
+				>
+					<div id="u-u-notice">
+						<h4>U=U: Undetectable = Untransmittable</h4>
+						<p>
+							People living with HIV who take ART as prescribed and have an
+							undetectable viral load cannot sexually transmit HIV to others.
+						</p>
+					</div>
+				</a>
 				<div class="search-wrap">
 					<input
 						type="text"
@@ -40,5 +59,14 @@
 
 			<section class="list-container" id="countryGrid"></section>
 		</div>
+		<footer class="bottom-dock">
+			<nav class="bottom-nav">
+				<a href="index.html" style="color: #e40303">Home</a>
+				<a href="about.html">About</a>
+				<a href="legal-overview.html">Legal</a>
+				<a href="safety-index.html">Safety</a>
+				<a href="culture-hub.html">Culture</a>
+			</nav>
+		</footer>
 	</body>
 </html>

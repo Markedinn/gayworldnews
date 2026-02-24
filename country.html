@@ -10,25 +10,44 @@
 		<script src="country-loader.js" defer></script>
 	</head>
 	<body class="standard-page">
-		<div class="back-hint-wrap" onclick="history.back()">
-			<div class="chevron-shape"></div>
-		</div>
+		<a
+			href="#"
+			onclick="
+				history.back();
+				return false;
+			"
+			class="back-btn"
+			>BACK</a
+		>
+
 		<a href="https://youtube.com" class="exit-btn">EXIT</a>
 		<main class="country-detail-container">
 			<div class="header-section">
 				<h1 id="country-name" class="rainbow-text">Loading...</h1>
+				<a
+					href="https://www.preventionaccess.org"
+					target="_blank"
+					class="u-u-link"
+				>
+					<div id="u-u-notice">
+						<h4>U=U: Undetectable = Untransmittable</h4>
+						<p>
+							People living with HIV who take ART as prescribed and have an
+							undetectable viral load cannot sexually transmit HIV to others.
+						</p>
+					</div>
+				</a>
 				<div id="status-badge" class="status-badge">
 					<span id="status-dot" class="status-dot"></span>
 					<span id="status-text">Checking safety...</span>
 				</div>
 			</div>
-</div>
 
 			<div id="info-display-area" style="margin-top: 40px"></div>
 		</main>
 		<footer class="bottom-dock">
 			<nav class="bottom-nav">
-				<a href="index.html" style="color: #e40303 !important;">Home</a>
+				<a href="index.html" style="color: #e40303 !important">Home</a>
 
 				<a href="about.html">About</a>
 				<a href="legal.html">Legal</a>
@@ -36,46 +55,5 @@
 				<a href="culture.html">Culture</a>
 			</nav>
 		</footer>
-		<script>
-			document.addEventListener("DOMContentLoaded", () => {
-				const urlParams = new URLSearchParams(window.location.search);
-				const countryKey = urlParams.get("c");
-
-				// Ensure globalData exists from data.js
-				if (typeof globalData !== "undefined" && globalData[countryKey]) {
-					const countryData = globalData[countryKey];
-
-					// 1. Update Header & Title
-					document.getElementById("country-name").innerText = countryData.name;
-					document.title = `${countryData.name} | Safety Guide`;
-
-					// 2. Update Safety Status
-					const dot = document.getElementById("status-dot");
-					const statusText = document.getElementById("status-text");
-					dot.className = `status-dot ${countryData.status}`;
-					statusText.innerText = countryData.status.toUpperCase() + " ADVISORY";
-
-					// 3. Inject the info into the display area
-					const displayArea = document.getElementById("info-display-area");
-					displayArea.innerHTML = `
-                        <section id="legal" class="glass-card">
-                            <h3>⚖ Legal Status</h3>
-                            <p>${countryData.legal}</p>
-                        </section>
-                        <section id="health" class="glass-card">
-                            <h3>🏥 Health & Care</h3>
-                            <p>${countryData.health}</p>
-                        </section>
-                        <section id="security" class="glass-card">
-                            <h3>🛡 Security & Posture</h3>
-                            <p>${countryData.posture}</p>
-                        </section>
-                    `;
-				} else {
-					document.getElementById("country-name").innerText =
-						"Country Not Found";
-				}
-			});
-		</script>
 	</body>
 </html>

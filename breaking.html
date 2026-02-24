@@ -10,9 +10,16 @@
 		<script src="index.js" defer></script>
 	</head>
 	<body data-continent="europe" class="standard-page">
-		<div class="back-hint-wrap" onclick="history.back()">
-			<div class="chevron-shape"></div>
-		</div>
+		<a
+			href="#"
+			onclick="
+				history.back();
+				return false;
+			"
+			class="back-btn"
+			>BACK</a
+		>
+
 		<a
 			href="https://www.youtube.com/"
 			class="exit-btn"
@@ -26,20 +33,43 @@
 			<header class="list-header">
 				<h1 class="rainbow-text">Global Breaking News</h1>
 			</header>
-
+			<a
+				href="https://www.preventionaccess.org"
+				target="_blank"
+				class="u-u-link"
+			>
+				<div id="u-u-notice">
+					<h4>U=U: Undetectable = Untransmittable</h4>
+					<p>
+						People living with HIV who take ART as prescribed and have an
+						undetectable viral load cannot sexually transmit HIV to others.
+					</p>
+				</div>
+			</a>
+			<!-- THE CLEANED NEWS SECTION -->
 			<section class="news-feed">
-				<article class="news-item">
-					<div class="news-bubble" style="--pride: #e40303">NEW</div>
-					<div class="news-content">
-						<h3>Thailand Officially Legalizes Marriage Equality (2026)</h3>
-						<p>
-							A landmark shift for Southeast Asia as Thailand becomes the latest
-							nation to recognize LGBTQ+ unions...
-						</p>
+				<!-- The JavaScript will find THIS ID and inject all the glass cards inside it -->
+				<div id="automated-news-feed">
+					<div
+						class="loading-state"
+						style="padding: 20px; color: #24408e; font-weight: bold"
+					>
+						Scanning Global LGBTQ+ News...
 					</div>
-				</article>
-				<!-- Add more news articles here -->
+				</div>
 			</section>
+
+			<!-- Make sure the news-loader.js is linked here -->
+			<script src="news-loader.js" defer></script>
 		</div>
+		<footer class="bottom-dock">
+			<nav class="bottom-nav">
+				<a href="index.html" style="color: #e40303">Home</a>
+				<a href="about.html">About</a>
+				<a href="legal-overview.html">Legal</a>
+				<a href="safety-index.html">Safety</a>
+				<a href="culture-hub.html">Culture</a>
+			</nav>
+		</footer>
 	</body>
 </html>

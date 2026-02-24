@@ -1,53 +1,12 @@
-// --- 1. SETTINGS & HTML ---
-
-const uEqualsUBannerHTML = `
-    <a class="u-u-link" href="https://aids.ch/en/safer-sex/protection/undetectable/">
-        <div id="u-u-notice" class="u-u-banner-box">
-            <h4>💙 STAY SAFE, ENJOY LIFE</h4>
-            <p><strong>U=U:</strong> Undetectable = Untransmittable. HIV medicated people live a normal healthy life.</p>
-        </div>
-    </a>`;
-
-const autoFooterHTML = `
-    <footer class="bottom-dock">
-        <div class="dev-notice"><span>🚧</span> Site under active development.</div>
-        <nav class="bottom-nav">
-		<a href="index.html" style="color: #e40303 !important;">Home</a>
-            <a href="about.html">About</a>
-            <a href="legal-overview.html">Legal</a>
-            <a href="safety-index.html">Safety</a>
-            <a href="culture-hub.html">Culture</a>
-        </nav>
-    </footer>
-`;
-
-// --- 2. INITIALIZATION ---
+// --- 1. INITIALIZATION ---
 
 document.addEventListener("DOMContentLoaded", () => {
-	// Check if we are on the Home Page (hero-viewport exists)
-	const isHomePage = !!document.querySelector(".hero-viewport");
+	// We removed the footer/banner injection because they are now hard-coded in your HTML.
 
-	// A. FOOTER INJECTION - Only run if not on Home Page (which has its own footer)
-	if (!isHomePage && !document.querySelector(".bottom-dock")) {
-		document.body.insertAdjacentHTML("beforeend", autoFooterHTML);
-	}
-
-	// B. U=U BANNER - Only inject if not already in the HTML
-	if (!document.getElementById("u-u-notice")) {
-		// On Home Page, maybe we don't want it pushing the Chevron?
-		// Or we target a specific area.
-		const target = isHomePage ? null : document.querySelector(".main-header");
-
-		if (target) {
-			target.insertAdjacentHTML("afterend", uEqualsUBannerHTML);
-		}
-	}
-
-	// --- 3. LANDING PAGE SEARCH & LIST GENERATION ---
-
+	// --- 2. LANDING PAGE SEARCH ---
 	const globalInput = document.getElementById("globalSearch");
 	const globalResults = document.getElementById("searchResults");
-	const targetContinent = document.body.dataset.continent; // Grabs "asia", "americas", etc.
+	const targetContinent = document.body.dataset.continent;
 
 	if (globalInput && globalResults) {
 		globalInput.addEventListener("input", (e) => {
@@ -59,10 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 				Object.keys(globalData).forEach((key) => {
 					const country = globalData[key];
-
-					// BACK TO THE START: Uses startsWith for that strict beginning match
 					const matchesSearch = country.name.toLowerCase().startsWith(value);
-					// CONTINENT FILTER: Ensures results match the page region
 					const matchesContinent =
 						!targetContinent || country.continent === targetContinent;
 
@@ -70,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 						const link = document.createElement("a");
 						link.href = `country.html?c=${key}`;
 						link.className = "country-card-search";
-						link.innerHTML = `<span class="status-dot ${country.status}"></span> ${country.name}`;
+						// Using the status classes we consolidated in the CSS
+						link.innerHTML = `<span class="status-dot ${country.status.toLowerCase()}"></span> ${country.name}`;
 						globalResults.appendChild(link);
 					}
 				});
@@ -80,79 +37,42 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// F. AUTOMATIC COUNTRY LIST (Filtered by Continent)
+	// --- 3. AUTOMATIC COUNTRY LIST (For Continent Pages) ---
 	const listContainer = document.querySelector(".list-container");
 
 	if (listContainer && typeof globalData !== "undefined") {
-		// 1. Identify which continent page we are on
-		// This looks for a 'data-continent' attribute on your <body> tag
 		const targetContinent = document.body.dataset.continent;
-
-		listContainer.innerHTML = ""; // Clear placeholders
+		listContainer.innerHTML = "";
 
 		Object.keys(globalData)
 			.sort()
 			.forEach((key) => {
 				const country = globalData[key];
-
-				// 2. Only show the country if it matches the page's continent
-				// Or show all if the page doesn't specify a continent (like a Master List)
 				if (!targetContinent || country.continent === targetContinent) {
 					const card = document.createElement("a");
 					card.href = `country.html?c=${key}`;
 					card.className = "country-card-search";
-					card.innerHTML = `<span class="status-dot ${country.status}"></span> ${country.name}`;
+					card.innerHTML = `<span class="status-dot ${country.status.toLowerCase()}"></span> ${country.name}`;
 					listContainer.appendChild(card);
 				}
 			});
 	}
-
-	// E. COUNTRY PAGE DATA
-	const urlParams = new URLSearchParams(window.location.search);
-	const countryKey = urlParams.get("c")?.toLowerCase();
-	if (countryKey && typeof globalData !== "undefined") {
-		const country = globalData[countryKey];
-		if (country) {
-			const fields = ["country-name", "legal-status", "healthcare", "posture"];
-			fields.forEach((field) => {
-				const el = document.getElementById(field);
-				if (el)
-					el.innerText = country[field.split("-")[0]] || country[field] || "";
-			});
-		}
-	}
 });
+
+// --- 4. UTILITIES ---
 
 // ESC KEY EXIT
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") performQuickExit();
 });
+
 function performQuickExit() {
-	window.location.replace("https://www.youtube.com/");
+	window.location.replace("https://www.youtube.com");
 }
+
 function snapToContent() {
-	// Finds the first content section on your page
 	const content = document.querySelector(".content-viewport");
 	if (content) {
-		content.scrollIntoView({
-			behavior: "smooth",
-			block: "start",
-		});
+		content.scrollIntoView({ behavior: "smooth", block: "start" });
 	}
 }
-function snapAndHide() {
-	// 1. Find the target and the button
-	const target = document.querySelector(".content-viewport");
-	const btn = document.querySelector(".scroll-hint");
-
-	// 2. If both exist, run the actions
-	if (target && btn) {
-		// Perform the smooth snap
-		target.scrollIntoView({ behavior: "smooth", block: "start" });
-
-		// Make the button vanish immediately
-		btn.style.opacity = "0";
-		btn.style.visibility = "hidden";
-		btn.style.pointerEvents = "none";
-	}
-} // <--- This was the missing bracket!
