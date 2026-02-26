@@ -34,10 +34,9 @@ window.addEventListener("DOMContentLoaded", () => {
 			// 4. Inject the Grouped Accordion structure
 			displayArea.innerHTML = `
                 <!-- GROUP 1: LEGAL & SAFETY -->
-                <details class="glass-card news-accordion" open>
+                <details class="glass-card news-accordion">
                     <summary>
                         <h3>⚖ Legal Status & Safety</h3>
-                        <span class="expand-icon">+</span>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -49,7 +48,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 <details class="glass-card news-accordion">
                     <summary>
                         <h3>✈️ Travel & Culture</h3>
-                        <span class="expand-icon">+</span>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -64,7 +62,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 <details class="glass-card news-accordion">
                     <summary>
                         <h3>🏥 Health & Care</h3>
-                        <span class="expand-icon">+</span>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -76,7 +73,6 @@ window.addEventListener("DOMContentLoaded", () => {
                 <details class="glass-card news-accordion">
                     <summary>
                         <h3>🛡 Security Environment</h3>
-                        <span class="expand-icon">+</span>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>

@@ -3,7 +3,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background: #ffffff;
+	/*background: #ffffff;*/
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	/* Changed height to min-height to allow content to push the page down */
 	min-height: 100vh;
@@ -92,9 +92,10 @@ body {
 }
 
 .search-wrap {
-	width: 100%;
+	width: 90%;
 	max-width: 600px;
-	margin: 20px 0 40px 0; /* Added bottom margin for the U=U banner */
+	margin: 20px auto 40px auto; /* Added bottom margin for the U=U banner */
+	position: relative; /* Essential for the dropdown to align correctly */
 }
 .search-wrap input {
 	width: 100%;

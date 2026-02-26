@@ -22,15 +22,23 @@ body {
 
 body::before {
 	content: "";
-	position: fixed; /* Lifts it out of the scroll flow */
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	z-index: -1; /* Puts it behind your content */
-	background: url("images/world_img.webp") no-repeat center center;
+	z-index: -1;
+
+	background-image: url("images/world_img.webp");
+
+	/* Lowering 0.5 to 0.2 makes the mask much lighter/subtle */
+	background-color: rgba(0, 0, 0, 0.2);
+
+	background-blend-mode: darken;
+	background-repeat: no-repeat;
+	background-position: center center;
 	background-size: cover;
-	pointer-events: none; /* Ensures you can still click buttons through it */
+	pointer-events: none;
 }
 
 .hero-viewport,
@@ -46,18 +54,18 @@ body::before {
 	text-align: center; /* Added this to ensure text inside stays centered */
 }
 
-/* --- SCROLL HINT RE-STYLED --- */
+/* --- SCROLL HINT RE-STYLED & RESPONSIVE --- */
 .scroll-hint {
 	position: relative;
-	margin: 30px auto 0 auto;
-	width: 50px; /* Reduced from 65px to match the button "feel" */
+	margin: 40px auto 0 auto;
+	width: 50px;
 	height: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
 	z-index: 10;
-	transition: transform 0.2s ease;
+	transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	-webkit-tap-highlight-color: transparent;
 }
 
@@ -65,15 +73,38 @@ body::before {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-	/* This specific filter matches #E40303 (Exit Button Red) perfectly */
-	filter: brightness(0) saturate(100%) invert(11%) sepia(95%) saturate(6747%)
-		hue-rotate(359deg) brightness(91%) contrast(114%);
+	filter: brightness(0) invert(1);
+	transform: scale(1.5); /* Massive for mobile */
+	opacity: 0.85;
+	transition: all 0.3s ease;
 }
 
+/* Hover Effects */
 .scroll-hint:hover {
-	transform: translateY(-5px); /* Gentle lift on hover */
+	transform: translateY(-8px);
 }
 
+.scroll-hint:hover .scroll-icon-img {
+	opacity: 1;
+	transform: scale(1.7); /* Extra pop on mobile hover */
+}
+
+/* --- TABLET & PC ADJUSTMENTS --- */
+@media (min-width: 768px) {
+	.scroll-hint {
+		width: 40px; /* Smaller footprint for desktop */
+		height: 40px;
+		margin-top: 30px; /* Tighter spacing for desktop */
+	}
+
+	.scroll-icon-img {
+		transform: scale(1); /* Reset to normal size for PC/Tablet */
+	}
+
+	.scroll-hint:hover .scroll-icon-img {
+		transform: scale(1.2); /* Subtle pop for mouse users */
+	}
+}
 /* --- BRANDING --- */
 .rainbow-text {
 	font-size: clamp(2rem, 8vw, 4rem);
@@ -116,17 +147,6 @@ body::before {
 	letter-spacing: 0.2px; /* Slight spacing for a "premium" feel */
 }
 
-/* Update or add this in index.css */
-.country-detail-container {
-	display: flex;
-	flex-direction: column;
-	flex: 1; /* Pushes footer to the absolute bottom */
-	align-items: center; /* Horizontal centering */
-	text-align: center;
-	width: 100%;
-	padding: 40px 20px 140px 20px;
-	min-height: 100vh;
-}
 /* Ensure the footer stays at the bottom even if the page is short */
 .standard-page {
 	display: flex;
@@ -148,15 +168,6 @@ body::before {
 	min-height: 100vh;
 }
 
-/* Standardize search wrap centering across all pages */
-.landing-search-wrap,
-.search-wrap {
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	max-width: 500px;
-}
-
 .rainbow-line {
 	height: 4px;
 	width: 100%;
@@ -173,8 +184,7 @@ body::before {
 		#9400d3
 	);
 }
-
-/* --- SEARCH & DROPDOWN --- */
+/* --- SEARCH & DROPDOWN: U=U MATCHING STYLE --- */
 .landing-search-wrap {
 	position: relative;
 	margin: 15px auto;
@@ -182,29 +192,88 @@ body::before {
 	max-width: 500px;
 	z-index: 100;
 }
+
 .landing-search-wrap input {
 	width: 100%;
 	padding: 14px 25px;
-	border-radius: 50px;
-	border: 2px solid #24408e;
+	border-radius: 50px; /* Pill shape for search vs 8px for banner */
+
+	/* Matching U=U Banner Background & Blur */
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	/* Matching Border Style */
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+	/* U=U Blue Text */
+	color: #24408e;
+	font-weight: 700;
+	font-size: 1rem;
+
 	outline: none;
+	transition: all 0.3s ease;
 }
 
-.search-results-dropdown {
+.landing-search-wrap input::placeholder {
+	color: rgba(36, 64, 142, 0.6);
+}
+
+.landing-search-wrap input:focus {
+	background: rgba(255, 255, 255, 0.95); /* Brightens slightly when typing */
+	border-color: #24408e;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 1. The Container: Invisible, just for positioning */
+.search-results-floating {
 	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
-	background: white;
-	border-radius: 15px;
-	margin-top: 10px;
-	display: none;
-	grid-template-columns: 1fr;
-	gap: 5px;
-	padding: 10px;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	top: 110%;
+	left: 50%;
+	transform: translateX(-50%);
+
+	/* Keep it compact so it doesn't stretch across the screen */
+	width: 95%;
+	max-width: 450px;
+
+	/* Stack them vertically */
+	display: none; /* JS toggles this */
+	flex-direction: column;
+	gap: 10px; /* Space between the glass tiles */
+
+	padding: 10px 0;
+	z-index: 9999;
 }
 
+/* 2. The Individual Results: EXACT Match to your Bento Cards */
+.search-results-floating div,
+.search-results-floating a {
+	/* Copying your Bento Card glass style exactly */
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 12px;
+
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+
+	/* U=U Blue Text for contrast on the glass */
+	color: #ffffff;
+	font-weight: 700;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+/* 3. Hover: Lift and Glow just like your main cards */
+.search-results-floating div:hover,
+.search-results-floating a:hover {
+	transform: translateY(-3px);
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 .construction-graphic {
 	width: 100%;
 	max-width: 300px; /* Adjust this number to make it bigger or smaller */
@@ -229,26 +298,85 @@ body::before {
 	}
 }
 
-/* --- MIRRORED BACK BUTTON --- */
+/* --- MIRRORED BACK BUTTON (BENTO STYLE) --- */
 .back-btn {
 	position: fixed;
-	top: 50%;
-	left: 0; /* Snaps to the left edge */
-	transform: translateY(-50%) rotate(90deg); /* Rotates UP instead of DOWN */
+	bottom: 120px;
+	left: 0;
+	transform: translateY(-50%) rotate(90deg);
 	transform-origin: left bottom;
-	background: #e40303; /* Matches the Exit Red */
-	color: white;
-	padding: 10px 15px;
-	font-weight: 900;
+
+	/* Bento Card Glass Effect */
+	background: rgba(255, 255, 255, 0.1); /* Subtle white tint */
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+	/* Standard Bento Text Color */
+	color: #ffffff;
+	font-weight: 500; /* Clean, modern weight - not "fat" */
+	font-size: 0.9rem;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+
+	/* Dimensions & Shape */
+	padding: 10px 18px; /* Keeping your exact size */
 	z-index: 9999;
 	text-decoration: none;
 	cursor: pointer;
-	border: none;
+
+	/* Borders & Rounded Edges */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-left: none;
+	border-radius: 12.5px 12.5px 0 0; /* Matches your cards */
+
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
 }
 
-/* Optional: Hover effect to match the Exit button */
 .back-btn:hover {
-	background: #b30202;
+	background: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+	color: #ffffff;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- MIRRORED EXIT BUTTON (FROSTED EMERGENCY RED) --- */
+.exit-btn {
+	position: fixed;
+	bottom: 180px;
+	right: 0;
+	white-space: nowrap;
+	transform: translateY(-50%) rotate(-90deg);
+	transform-origin: right bottom;
+
+	/* The "Ruby Glass" Effect */
+	background: rgba(228, 3, 3, 0.7); /* Red at 70% opacity */
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+	color: white;
+	padding: 10px 15px; /* Keeping your exact size */
+	font-weight: 600; /* Matching the slimmer weight of the back button */
+	font-size: 0.9rem;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	z-index: 100;
+	text-decoration: none;
+	text-align: center;
+	min-width: 140px; /* Set a minimum width so it's clearly bigger than 'Back' */
+	cursor: pointer;
+
+	/* Borders & Rounded Edges */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-right: none; /* Snaps to the right edge */
+	border-radius: 12.5px 12.5px 0 0; /* Matches the curve of your cards */
+
+	box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
+}
+
+.exit-btn:hover {
+	background: rgba(228, 3, 3, 0.9); /* Becomes more solid/urgent on hover */
+	box-shadow: -2px 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* --- U=U BANNER RESTORED & COMPACT --- */
@@ -266,36 +394,37 @@ body::before {
 }
 
 #u-u-notice {
-	background: rgba(36, 64, 142, 0.05); /* Very light blue tint */
-	border: 1px solid rgba(36, 64, 142, 0.2);
-	border-left: 6px solid #24408e; /* The signature blue accent */
-	padding: 12px 20px; /* Reduced padding for height */
+	background: rgba(255, 255, 255, 0.8); /* White with 20% transparency */
+	backdrop-filter: blur(10px); /* The "Frosted" effect */
+	-webkit-backdrop-filter: blur(10px); /* Support for Safari */
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-left: 6px solid #24408e; /* Keeps your signature blue accent */
+	padding: 12px 20px;
 	border-radius: 8px;
-	text-align: center; /* Left align looks more professional for notices */
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow to lift it up */
 }
 
 #u-u-notice h4 {
-	margin: 0 0 4px 0; /* Tight margins */
-	color: #24408e;
+	margin: 0 0 4px 0;
+	color: #24408e; /* Navy blue for the header */
 	font-size: 1rem;
 	font-weight: 800;
 	text-transform: uppercase;
-	letter-spacing: 0.5px;
 }
 
 #u-u-notice p {
 	margin: 0;
-	color: #24408e;
-
-	font-size: 0.85rem; /* Smaller text to keep height down */
+	color: #24408e; /* Very dark gray for maximum readability */
+	font-size: 0.85rem;
 	line-height: 1.3;
-	opacity: 0.9; /* Optional: adds a tiny bit of softness so it's not "heavy" */
+	font-weight: 600; /* Slightly thicker text helps it stand out on glass */
 }
 
-/* --- CARDS (Bento & Search Results) --- */
+/* --- UNIFIED GLASS COMPONENTS --- */
 .bento-grid,
 .list-container {
 	display: grid;
@@ -306,78 +435,76 @@ body::before {
 	margin: 20px auto;
 }
 
+/* One rule to rule them all: Bento, Search, and Country Cards */
 .bento-card,
 .country-card-search,
-.glass-card {
+.glass-card,
+.search-results-floating div,
+.search-results-floating a {
+	/* Layout: Centers the dot and text as a pair */
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px; /* Reliable space between dot and text */
+
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 12px;
 	padding: 20px;
 	text-align: center;
 	text-decoration: none;
-	color: #1a2b3c;
+	color: #ffffff;
 	font-weight: 700;
-	transition: 0.3s;
-}
-.bento-card:hover,
-.country-card-search:hover {
-	transform: translateY(-5px);
-	background: rgba(255, 255, 255, 0.4);
+	transition: 0.3s ease;
 }
 
-/* --- STATUS DOTS --- */
-.status-dot {
-	display: block;
+.bento-card:hover,
+.country-card-search:hover,
+.search-results-floating div:hover,
+.search-results-floating a:hover {
+	transform: translateY(-5px);
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- CONSOLIDATED STATUS SYSTEM --- */
+.status-dot,
+.status-dot-country {
+	display: inline-block;
 	width: 12px;
 	height: 12px;
 	border-radius: 50%;
-	margin-right: 8px;
-}
-.safe {
-	background: #28a745;
-	box-shadow: 0 0 8px #28a745;
-}
-.warning {
-	background: #ffc107;
-	box-shadow: 0 0 8px #ffc107;
-}
-.danger {
-	background: #e40303;
-	box-shadow: 0 0 8px #e40303;
-}
-
-/* --- FIX FOR COUNTRY PAGE STATUS DOT --- */
-.status-dot-country {
-	display: inline-block;
-	width: 14px;
-	height: 14px;
-	border-radius: 50%;
-	margin-right: 10px;
+	flex-shrink: 0;
 	vertical-align: middle;
 }
 
-/* Map the data.js status strings to actual colors */
-.status-dot-country.red,
-.status-dot-country.danger {
-	background-color: #e40303;
-	box-shadow: 0 0 8px #e40303;
-}
-
-.status-dot-country.yellow,
-.status-dot-country.warning {
-	background-color: #ffc107;
-	box-shadow: 0 0 8px #ffc107;
-}
-
-.status-dot-country.green,
-.status-dot-country.safe {
-	background-color: #28a745;
+/* Map all possible naming conventions to the same colors */
+.safe,
+.green,
+.status-dot-country.safe,
+.status-dot-country.green {
+	background: #16d242;
 	box-shadow: 0 0 8px #28a745;
 }
-
+.warning,
+.yellow,
+.status-dot-country.warning,
+.status-dot-country.yellow {
+	background: #ffc107;
+	box-shadow: 0 0 8px #ffc107;
+}
+.danger,
+.red,
+.status-dot-country.danger,
+.status-dot-country.red {
+	background: #e40303;
+	box-shadow: 0 0 8px #e40303;
+}
+.orange,
 .status-dot-country.orange {
-	background-color: #ff8c00;
+	background: #ff8c00;
 	box-shadow: 0 0 8px #ff8c00;
 }
 
@@ -415,81 +542,6 @@ body::before {
 	text-transform: uppercase;
 }
 
-.exit-btn {
-	position: fixed;
-	top: 50%;
-	right: 0;
-	transform: translateY(-50%) rotate(-90deg);
-	transform-origin: right bottom;
-	background: #e40303;
-	color: white;
-	padding: 10px 20px;
-	font-weight: 900;
-	z-index: 9999;
-	text-decoration: none;
-	min-width: 80px;
-	text-align: center;
-}
-
-/* --- NEWS ACCORDION STYLING --- */
-.news-accordion {
-	margin: 20px auto;
-	width: 95%;
-	max-width: 800px;
-	cursor: pointer;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	list-style: none; /* Removes the default arrow */
-}
-
-.news-accordion summary {
-	display: flex;
-	flex-direction: column; /* Stack the icon and text vertically for better centering */
-	align-items: center;
-	justify-content: center;
-	padding: 20px;
-	text-align: center;
-}
-
-.news-accordion h3 {
-	margin: 0;
-	font-size: 1.2rem;
-	line-height: 1.4;
-	color: #24408e;
-	max-width: 90%; /* Prevents the text from hitting the very edges */
-}
-
-.expand-icon {
-	margin-top: 10px; /* Puts the red + below the title */
-	font-size: 1.5rem;
-	color: #e40303;
-}
-
-.news-content-expanded {
-	padding: 20px;
-	text-align: left;
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 0 0 12px 12px;
-	animation: fadeIn 0.4s ease;
-}
-
-.expand-icon {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: #e40303;
-	transition: transform 0.3s ease;
-}
-
-/* Rotate the plus to an 'X' when open */
-.news-accordion[open] .expand-icon {
-	transform: rotate(45deg);
-}
-
-.news-accordion[open] {
-	background: rgba(255, 255, 255, 0.4);
-	transform: scale(1.02);
-}
-
 .source-link {
 	display: inline-block;
 	margin-top: 15px;
@@ -506,16 +558,6 @@ body::before {
 .source-link:hover {
 	background: rgba(228, 3, 3, 0.1);
 	transform: translateX(5px);
-}
-/* --- COUNTRY CARD SPACING --- */
-#info-display-area {
-	display: flex;
-	flex-direction: column;
-	gap: 20px; /* This creates a clean 20px space between the cards */
-	width: 90%;
-	max-width: 900px;
-	margin: 30px auto; /* Centers the whole stack */
-	padding-bottom: 20px;
 }
 
 /* Ensure the glass cards themselves look consistent */
