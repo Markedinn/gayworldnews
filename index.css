@@ -140,7 +140,10 @@ body::before {
 .subtitle {
 	color: #ffffff; /* The Brand Blue */
 	font-weight: 500; /* Makes it firm and professional */
-	margin: 10px 0 0 0;
+	/* CHANGE margin to this: */
+	margin: 10px auto 0 auto;
+	/* ADD this to ensure the text inside is also centered: */
+	text-align: center;
 	font-size: 1.1rem; /* Slightly larger for readability */
 	line-height: 1.4;
 	max-width: 800px; /* Keeps it from stretching too wide on desktop */
