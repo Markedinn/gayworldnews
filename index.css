@@ -138,7 +138,7 @@ body::before {
 }
 
 .subtitle {
-	color: #334155; /* The Brand Blue */
+	color: #ffffff; /* The Brand Blue */
 	font-weight: 500; /* Makes it firm and professional */
 	margin: 10px 0 0 0;
 	font-size: 1.1rem; /* Slightly larger for readability */
