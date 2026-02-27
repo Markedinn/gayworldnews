@@ -22,10 +22,10 @@
 	padding-bottom: 20px;
 }
 
-/* 2. Status Pill (Grid Version) */
+/* 2. Status Pill */
 .status-badge-wrapper {
 	display: inline-grid;
-	grid-template-columns: 24px auto;
+	grid-template-columns: 24px auto; /* Keep 24px ONLY if using a dot icon */
 	align-items: center;
 	background-color: #ffffff;
 	padding: 8px 20px;
@@ -35,7 +35,7 @@
 }
 
 #status-text {
-	color: #24408e !important;
+	color: #2979ff !important; /* Updated to your new Vivid Blue */
 	font-weight: 800;
 	font-size: 0.95rem;
 	letter-spacing: 0.05rem;
@@ -51,7 +51,6 @@
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 12px;
 	cursor: pointer;
 	overflow: hidden;
@@ -59,56 +58,55 @@
 	list-style: none;
 }
 
+/* Status Borders (Matched to data.js) */
+.news-accordion.green {
+	border: 3px solid #22c55e;
+}
+.news-accordion.yellow {
+	border: 3px solid #f59e0b;
+}
+.news-accordion.red {
+	border: 3px solid #ef4444;
+}
+
 .news-accordion summary {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	list-style: none !important;
+	list-style: none;
 	padding: 30px 20px;
-
-	/* THE FIX: Ensure it occupies the full card width */
 	width: 100%;
-	outline: none; /* Removes the default focus box on click */
-	user-select: none; /* Prevents accidental text highlighting while clicking */
+	outline: none;
+	user-select: none;
 	flex-shrink: 0;
 }
 
-/* This ensures the hidden content always takes up the full width below the header */
-.news-content-expanded {
-	width: 100%;
-	padding: 20px;
-	text-align: left;
-	background: rgba(
-		255,
-		255,
-		255,
-		0.1
-	); /* Subtle contrast for the "inside" of the card */
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Hide the default triangle in all browsers */
+/* Hide default arrow */
 .news-accordion summary::-webkit-details-marker {
 	display: none;
-}
-.news-accordion summary {
-	list-style: none;
 }
 
 .news-accordion h3 {
 	margin: 0;
 	font-size: 1.2rem;
-	color: #24408e;
-	pointer-events: none; /* Key: Clicks "pass through" the text to the summary */
+	color: #f6f7fa; /* Updated to Vivid Blue */
+	pointer-events: none;
 }
 
-/* Optional: Add a hover effect to the whole card to show it's clickable */
+.news-content-expanded {
+	width: 100%;
+	padding: 20px;
+	text-align: left;
+	background: rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .news-accordion:hover {
 	background: rgba(255, 255, 255, 0.3);
 }
 
 .news-accordion[open] {
 	background: rgba(255, 255, 255, 0.4);
-	transform: scale(1.01); /* Slightly reduced scale for a cleaner look */
+	transform: scale(1.01);
 }

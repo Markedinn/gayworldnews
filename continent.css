@@ -55,18 +55,18 @@ body {
 	}
 }
 
-/* --- CARD STYLING --- */
 .country-card {
-	background: #ffffff;
+	display: flex;
+	align-items: center; /* Vertically centers text */
+	justify-content: center; /* Horizontally centers text */
+	text-align: center; /* Ensures multi-line names stay centered */
+	gap: 0; /* Remove any leftover gap from the dot */
+
+	/* Keep your existing padding, radius, and transition */
 	padding: 22px;
 	border-radius: 15px;
 	text-decoration: none;
-	color: #333;
 	font-weight: 700;
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	border: 1px solid #eee;
 	transition: all 0.3s ease;
 }
 
@@ -76,21 +76,46 @@ body {
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.status-dot {
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-}
-.green {
-	background: #2ecc71;
-}
-.yellow {
-	background: #f1c40f;
-}
-.red {
-	background: #e74c3c;
+/* --- BOLD HEAVY-GLASS STATUS CARDS --- */
+
+/* --- BOLD HEAVY-GLASS STATUS CARDS --- */
+/* --- BOLD MATCHED GLASS STATUS CARDS --- */
+
+.country-card.red {
+	/* Deepened to a rich Safety Red */
+	background: rgba(210, 0, 0, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	color: #ffffff;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+.country-card.yellow {
+	/* Kept the bright Safety Yellow you liked */
+	background: rgba(255, 215, 0, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	color: #ffffff;
+	text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.country-card.green {
+	/* Shifted to a more vibrant, solid Emerald */
+	background: rgba(40, 201, 123, 0.9);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	color: #ffffff;
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+/* Make them feel heavy and physical on hover */
+.country-card:hover {
+	background-color: rgba(255, 255, 255, 0.15); /* Slight white highlight */
+	transform: translateY(-4px) scale(1.01);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
 .search-wrap {
 	width: 90%;
 	max-width: 600px;

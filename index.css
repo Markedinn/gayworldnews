@@ -105,28 +105,26 @@ body::before {
 		transform: scale(1.2); /* Subtle pop for mouse users */
 	}
 }
-/* --- BRANDING --- */
 .rainbow-text {
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: 900;
 	margin: 0;
-	/* We start at Yellow/Green (the middle) so it's bright on load */
 	background: linear-gradient(
 		to right,
-		#ffeb3b,
-		/* Bright Yellow */ #008026,
-		/* Green */ #24408e,
-		/* Blue */ #732982,
-		/* Purple */ #e40303,
-		/* Red */ #ff8c00,
-		/* Orange */ #ffeb3b /* Back to Yellow for seamless loop */
+		#ffd600,
+		#00e676,
+		#2979ff,
+		#aa00ff,
+		#ff1744,
+		#ff9100,
+		#ffd600
 	);
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
-	/* Faster animation (5s instead of 8s) makes it feel more "alive" on mobile */
 	animation: rainbow-flow 5s linear infinite;
+	/* Clean, sharp, no blur */
 }
 @keyframes rainbow-flow {
 	from {

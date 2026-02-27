@@ -51,8 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
 				if (!targetContinent || country.continent === targetContinent) {
 					const card = document.createElement("a");
 					card.href = `country.html?c=${key}`;
-					card.className = "country-card-search";
-					card.innerHTML = `<span class="status-dot ${country.status.toLowerCase()}"></span> ${country.name}`;
+
+					// Direct pass-through of the color word (red, yellow, green)
+					const s = country.status.toLowerCase();
+
+					// We apply the color class to the whole card
+					card.className = `country-card ${s}`;
+
+					// We remove the <span> dot and just show the name
+					card.innerHTML = `${country.name}`;
+
 					listContainer.appendChild(card);
 				}
 			});

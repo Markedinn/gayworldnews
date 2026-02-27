@@ -1859,8 +1859,8 @@ const globalData = {
 		legal: "Decriminalized in 2014.",
 		health: "Welcoming.",
 	},
-	palestine: {
-		name: "Palestine",
+	palestinian_territories: {
+		name: "Palestinian Territories",
 		continent: "asia",
 		status: "red",
 		legal: "Illegal in Gaza; high social risk in West Bank.",
