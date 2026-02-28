@@ -1171,7 +1171,7 @@ const globalData = {
 		continent: "asia",
 		status: "red",
 		legal:
-			"Illegal; carries the death penalty for same-sex acts. State policy ignores gay identity while 'promoting' forced surgery for trans people.",
+			"Following the US/Israel strikes this morning, 28th February 2026, the Iranian people have their chance of freedom from this horrific gay-killing regime. Nobody knows the future or how this will impact the gay community in Iran. I am monitoring this closely to provide updates on how this impacts our community. The current situation is extremely dangerous and if you are in Iran you are advised to stay home and take cover. <br><br> Current Status under the IRGC is: Illegal; carries the death penalty for same-sex acts. State policy ignores gay identity while 'promoting' forced surgery for trans people.",
 		travel:
 			"Extremely Dangerous. Total state surveillance; any form of LGBTQ+ visibility is a capital offense.",
 		culture:
