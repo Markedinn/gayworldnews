@@ -197,18 +197,45 @@ function detectCountry(text) {
 		"new zealand",
 	];
 
+	// 0. SAFE USA PRIORITY (Replacing the Regex version)
+	const lowerText = text.toLowerCase();
+	if (
+		lowerText.includes("u.s.") ||
+		lowerText.includes("usa") ||
+		lowerText.includes("united states")
+	) {
+		return "USA";
+	}
+
+	// 1. Exact Country Match
 	for (const c of countries) {
-		const pattern = new RegExp("\\b" + c + "\\b");
+		const pattern = new RegExp("\\b" + c + "\\b", "i");
 		if (pattern.test(text)) return c.toUpperCase();
 	}
 
-	// CITY MATCH
+	// 2. Exact City Match
 	for (const city in CITY_TO_COUNTRY) {
-		const pattern = new RegExp("\\b" + city + "\\b");
-		if (pattern.test(text)) return CITY_TO_COUNTRY[city];
+		const pattern = new RegExp("\\b" + city + "\\b", "i");
+		if (pattern.test(text)) return city.toUpperCase();
 	}
 
-	return "GLOBAL";
+	// 3. THE "SMART STOP" FALLBACK (No more Global)
+	// Clean HTML first
+	const cleanText = text.replace(/<[^>]*>?/gm, "").trim();
+
+	// Look for punctuation that usually follows a location (—, -, :, [, ( )
+	// We split the text by these characters and take the very first piece
+	const segments = cleanText.split(/[—\-:\[\(]/);
+	let potentialLocation = segments[0].trim();
+
+	// Safety: If the first segment is too long (over 4 words),
+	// it's probably a sentence, so we just take the first 2 words.
+	const wordCount = potentialLocation.split(/\s+/).length;
+	if (wordCount > 4) {
+		potentialLocation = potentialLocation.split(/\s+/).slice(0, 2).join(" ");
+	}
+
+	return potentialLocation ? potentialLocation.toUpperCase() : "LATEST UPDATE";
 }
 
 /* ================================================================
@@ -217,6 +244,17 @@ function detectCountry(text) {
 
 function detectCategories(text) {
 	const T = text.toLowerCase();
+
+	// 1. IDENTITY GATEKEEPER: If it's not LGBTQ+, ignore it completely
+	const isLGBTQ =
+		/lgbt|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning/.test(
+			T,
+		);
+
+	if (!isLGBTQ) {
+		return []; // Return empty array so the story is filtered out
+	}
+
 	const out = [];
 
 	if (
@@ -227,15 +265,13 @@ function detectCategories(text) {
 		out.push("safety");
 
 	if (
-		/law|legal|court|bill|legislation|rights|criminali|parliament|senate|congress|ordinance/.test(
+		/law|legal|court|bill|legislation|rights|criminal|parliament|senate|congress|ordinance/.test(
 			T,
 		)
 	)
 		out.push("legal");
 
-	if (
-		/discriminat|refused service|housing|employment|fired|denied access/.test(T)
-	)
+	if (/discriminat|refused service|housing|employment|denied access/.test(T))
 		out.push("discrimination");
 
 	if (
@@ -275,7 +311,11 @@ function isBlocked(text) {
 	if (T.includes("queer") && detectCategories(T).length === 0) return true;
 
 	// BLOCK FUNDRAISERS / NGO / CHARITY
-	if (/fundraiser|donation|charity|gala|foundation|ngo|benefit concert/.test(T))
+	if (
+		/fundraiser|arts|culture|donation|charity|gala|foundation|ngo|benefit concert/.test(
+			T,
+		)
+	)
 		return true;
 
 	// BLOCK CELEBRITY FLUFF
@@ -294,7 +334,7 @@ function isBlocked(text) {
 
 	// BLOCK PROPOSED BILLS (not passed)
 	if (
-		/proposes|introduces bill|draft bill|could ban|may ban|considers banning/.test(
+		/proposes|introduces bill|washington|draft bill|could ban|may ban|considers banning/.test(
 			T,
 		)
 	)
@@ -389,10 +429,13 @@ const FEEDS = [
 	"https://www.advocate.com/arc/outfeed",
 	"https://www.washingtonblade.com/feed",
 	"https://www.out.com/feeds/all",
-	"https://www.lgbtqnation.com/feed",
 	"https://www.hrw.org/rss/news",
 	"https://www.amnesty.org/en/latest/news/feed/",
-	"https://feeds.bbci.co.uk/news/world/rss.xml",
+	"https://www.ilga-europe.org/rss.xml", // Europe Grassroots
+	"https://76crimes.com/feed/", // Focused on Decriminalization globally
+	"https://www.erasing76crimes.com/feed/", // African/Caribbean focus
+	"https://www.asyluminsight.com/rss?format=rss", // Migration/Local refugee news
+	"https://tiwrm.org/feed/",
 ];
 
 const SEEN = new Set();
