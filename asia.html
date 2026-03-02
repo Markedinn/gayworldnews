@@ -5,9 +5,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Asia | Gay World News</title>
 		<link rel="stylesheet" href="continent.css" />
-		<link rel="stylesheet" href="index.css" />
+		<!-- <link rel="stylesheet" href="index.css" /> -->
 		<script src="data.js" defer></script>
 		<script src="index.js" defer></script>
+		<link
+			rel="icon"
+			type="image/webp"
+			sizes="32x32"
+			href="images/favicon.webp"
+		/>
 	</head>
 	<body data-continent="asia" class="standard-page">
 		<a
@@ -29,6 +35,7 @@
 			"
 			>QUICK EXIT</a
 		>
+
 		<div class="page-container">
 			<header class="list-header">
 				<a href="index.html" style="text-decoration: none">
@@ -47,7 +54,7 @@
 						</p>
 					</div>
 				</a>
-				<div class="search-wrap">
+				<div class="landing-search-wrap">
 					<input
 						type="text"
 						id="globalSearch"
@@ -59,14 +66,49 @@
 
 			<section class="list-container" id="countryGrid"></section>
 		</div>
-		<footer class="bottom-dock">
-			<nav class="bottom-nav">
-				<a href="index.html" style="color: #e40303">Home</a>
-				<a href="about.html">About</a>
-				<a href="legal-overview.html">Legal</a>
-				<a href="safety-index.html">Safety</a>
-				<a href="culture-hub.html">Culture</a>
-			</nav>
-		</footer>
+		<footer class="site-footer">
+    <div class="footer-container">
+        
+        <div class="footer-card" tabindex="0">
+            <h4>Safety & Health</h4>
+            <div class="footer-popup">
+                <p>Real-time advice on security, legal status, and HIV/LGBTQ+ medical services. Monitoring 197 countries to keep you safe in a volatile world.</p>
+            </div>
+        </div>
+
+        <div class="footer-card" tabindex="0">
+            <h4>Cool Travel</h4>
+            <div class="footer-popup">
+                <p>Verified accounts and video guides. We are currently populating 197 territories with the best links and local interviews to assist your journey.</p>
+            </div>
+        </div>
+
+        <div class="footer-card" tabindex="0">
+            <h4>Updated News</h4>
+            <div class="footer-popup">
+                <p>Our proprietary filters strip away celebrity gossip to deliver vital facts. We prioritize manual overrides for critical safety updates.</p>
+            </div>
+        </div>
+
+        <div class="footer-card" tabindex="0">
+            <h4>Connect</h4>
+            <div class="footer-popup">
+                <p>Found a discrepancy or have a local safety update? Your input keeps the community safe.</p>
+                <a href="contact.html" class="footer-cta">Send Report →</a>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer-bottom-bar">
+        <div class="footer-bottom-links">
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Breaking News</a>
+        
+        <p class="footer-copyright">© 2026 LGBTQ+ Global Safety Monitor</p>
+    </div>
+
+</footer>
 	</body>
 </html>

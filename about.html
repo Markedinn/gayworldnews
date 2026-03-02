@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Us | Gay World News</title>
+		<link rel="stylesheet" href="continent.css" />
+		<style>
+			/* THE MAP BACKGROUND */
+			body.about-page {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("images/world-map.webp"); /* Replace with your map path */
+				background-size: cover;
+				background-attachment: fixed;
+				background-position: center;
+				display: flex;
+				flex-direction: column;
+				min-height: 100vh;
+			}
+
+			/* THE FROSTED GLASS RECTANGLE */
+			.glass-mission-card {
+				background: rgba(255, 255, 255, 0.08);
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 20px;
+				padding: 40px;
+				max-width: 800px;
+				margin: 60px auto; /* Centered with margin auto */
+				box-sizing: border-box; /* Your critical rule! */
+				box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+			}
+
+			.glass-mission-card p {
+				line-height: 1.8;
+				font-size: 1.1rem;
+				color: white;
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body class="about-page">
+		<a
+			href="#"
+			onclick="
+				history.back();
+				return false;
+			"
+			class="back-btn"
+			>BACK</a
+		>
+		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
+
+		<div class="page-container">
+			<div class="glass-mission-card">
+				<h1 class="rainbow-text" style="margin-bottom: 30px">Our Mission</h1>
+
+				<p>
+					We love to travel and with like-minded individuals we have created this website to keep ourselves and the LGBTQ+ community safe in a volatile and changing world. Whether
+					you are looking for assistance in a country you live in or are traveling or relocating, we do our best to provide up-to-date advice on not only the nightlife and places
+					to visit and stay, but also most importantly, the security, legal status, and healthcare accessibility - providing a specialized focus on HIV medical services and other
+					LGBTQ+ care.
+				</p>
+
+				<p>
+					When planning a trip or arriving somewhere with no plan, we have been amazed at the lack of information available in the modern day. If a country is somewhat developed,
+					the information tends to be about the gay night life, some suggested hotels and not much else. If it is a developing country or not even started, then you are unlikely to
+					find any meaningful information at all. That is our challenge: A mission to cut out the fluff and focus on the facts. With 197 countries and territories, it is impossible
+					to cover each one ourselves, so we intend to invite LGBTQ+ people all over the world who would like to see their work published, be it in video form or text, to help us
+					with on-the-ground information.
+				</p>
+
+				<p>
+					Until then, we will share our experience while also using tough AI filters to strip away the sensationalism and gossip and bypass that noise to bring you the hidden,
+					vital news that allows you to make safe decisions and have the best possible time.
+				</p>
+			</div>
+		</div>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-card" tabindex="0">
+					<h4>Safety & Health</h4>
+					<div class="footer-popup">
+						<p>Real-time advice on security, legal status, and HIV/LGBTQ+ medical services. Monitoring 197 countries to keep you safe in a volatile world.</p>
+					</div>
+				</div>
+
+				<div class="footer-card" tabindex="0">
+					<h4>Travel & Culture</h4>
+					<div class="footer-popup">
+						<p>Verified accounts and video guides. We are currently populating 197 territories with the best links and local interviews to make your life more fun.</p>
+					</div>
+				</div>
+
+				<div class="footer-card" tabindex="0">
+					<h4>Actual News</h4>
+					<div class="footer-popup">
+						<p>Our tough filters strip away the gossip and the trivia to deliver vital facts. We prioritize manual overrides for critical safety updates.</p>
+					</div>
+				</div>
+
+				<div class="footer-card" tabindex="0">
+					<h4>Connect</h4>
+					<div class="footer-popup">
+						<p>Are we in error or do you have a local update? With your help and your input on serious issues, we can work together to help keep our community safe.</p>
+						<a href="contact.html" class="footer-cta">Send Report →</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom-bar">
+				<div class="footer-bottom-links">
+					<a href="about.html">About</a>
+					<a href="contact.html">Contact Us</a>
+					<a href="breaking.html">Breaking News</a>
+				</div>
+				<p class="footer-copyright">© 2026 LGBTQ+ Global Safety Monitor</p>
+			</div>
+		</footer>
+	</body>
+</html>

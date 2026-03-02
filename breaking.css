@@ -79,6 +79,44 @@
 	transform: scale(1.01);
 }
 
+/* MANUAL INPUT */
+/* MANUAL INPUT */
+#manual-news-portal {
+	width: 90%; /* Matches your .country-grid width */
+	max-width: 900px; /* Matches your .country-grid max-width */
+	margin: 20px auto; /* The 'auto' on left/right pulls it to the center */
+	margin-bottom: 10px;
+}
+
+.manual-pinned {
+	border-left: 5px solid #ff4b2b; /* Urgent Red */
+	background: rgba(255, 75, 43, 0.08);
+	margin-bottom: 20px;
+	padding: 15px;
+}
+
+.manual-pinned .card-tag {
+	background: #ff4b2b;
+	color: white;
+	font-size: 0.7rem;
+	padding: 2px 8px;
+	border-radius: 3px;
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+/* Add this once to your CSS */
+.manual-red-title {
+	color: #fc0505;
+	font-weight: 900;
+}
+
+.date-manual {
+	color: white;
+	font-weight: 600;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
 /* ============================================
    CATEGORY TAGS (Bold Labels)
    ============================================ */

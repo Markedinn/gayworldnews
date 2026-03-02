@@ -1,142 +1,509 @@
-/* --- CLEAN RESPONSIVE SCROLLING --- */
+/* --- 1. GLOBAL LAYOUT (Natural Scroll) --- */
+
+/* Apply the 'Border-Box' rule to every single element on the site */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
 html,
 body {
 	margin: 0;
 	padding: 0;
-	/*background: #ffffff;*/
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	/* Changed height to min-height to allow content to push the page down */
-	min-height: 100vh;
-	overflow-y: auto;
-	/* Removing the "display: none" scrollbar rules temporarily helps debugging, 
-       but I've kept them optimized below */
-}
-
-/* --- THE FIX FOR THE BUTTONS --- */
-.page-container {
-	max-width: 1200px;
-	margin: 0 auto;
-	/* Added significant bottom padding so the last cards aren't 
-       trapped under the fixed bottom dock */
-	padding: 40px 20px 200px 20px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	position: relative;
-	z-index: 1;
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	scroll-snap-type: none !important;
+	overflow-x: hidden;
+	align-items: stretch;
 }
 
-/* Ensure the bottom dock is ALWAYS visible on top of continent cards */
-.bottom-dock {
-	z-index: 9999 !important;
-}
-
-/* --- THE RESPONSIVE GRID --- */
-.country-grid {
-	display: grid;
-	gap: 20px;
+/* --- 2. FIXED BACKGROUND --- */
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
-	margin-top: 40px;
-	/* Removed padding-bottom here since it's now on the container */
-	grid-template-columns: 1fr;
+	height: 100%;
+	z-index: -1;
+	background-image: url("images/world_img.webp");
+	background-color: rgba(0, 0, 0, 0.2);
+	background-blend-mode: darken;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	pointer-events: none;
 }
 
-/* Tablet: 2 Columns (Screens wider than 600px) */
+/* --- 3. HEADER & SEARCH --- */
+.rainbow-text {
+	font-size: clamp(2rem, 8vw, 4rem);
+	font-weight: 900;
+	text-align: center;
+	margin: 50px auto 20px auto;
+	background: linear-gradient(to right, #ffd600, #00e676, #2979ff, #aa00ff, #ff1744, #ff9100, #ffd600);
+	background-size: 200% auto;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: rainbow-flow 5s linear infinite;
+	display: block;
+	width: 100%;
+}
+
+@keyframes rainbow-flow {
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: 200% center;
+	}
+}
+
+/* --- SEARCH & DROPDOWN: U=U MATCHING STYLE --- */
+.landing-search-wrap {
+	position: relative;
+	margin: 30px auto; /* Increased top/bottom margin for better spacing */
+	width: 90%; /* Takes up most of the screen on mobile */
+	max-width: 650px; /* Increased from 500px so it doesn't look tiny on PC */
+	z-index: 100;
+}
+
+.landing-search-wrap input {
+	width: 100%;
+	padding: 14px 25px;
+	border-radius: 50px; /* Pill shape for search vs 8px for banner */
+
+	/* Matching U=U Banner Background & Blur */
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	/* Matching Border Style */
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+	/* U=U Blue Text */
+	color: #24408e;
+	font-weight: 700;
+	font-size: 1rem;
+
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.landing-search-wrap input::placeholder {
+	color: rgba(36, 64, 142, 0.6);
+}
+
+.landing-search-wrap input:focus {
+	background: rgba(255, 255, 255, 0.95); /* Brightens slightly when typing */
+	border-color: #24408e;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- SEARCH RESULTS DROPDOWN --- */
+.search-results-floating {
+	position: absolute;
+	top: 110%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 95%;
+	max-width: 450px;
+	display: none;
+	flex-direction: column;
+	gap: 10px;
+	padding: 10px 0;
+	z-index: 9999;
+}
+
+/* Individual Results Base Style */
+.search-results-floating div,
+.search-results-floating a {
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 12px;
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: 700;
+	transition: 0.3s ease;
+	cursor: pointer;
+	/* Removed the fixed white background from here */
+	background: rgba(255, 255, 255, 0.2);
+}
+
+/* Specific Status Colors */
+.search-results-floating .red {
+	background: rgba(210, 0, 0, 0.9) !important;
+}
+.search-results-floating .yellow {
+	background: rgba(255, 215, 0, 0.9) !important;
+	color: #24408e !important;
+}
+.search-results-floating .green {
+	background: rgba(40, 201, 123, 0.9) !important;
+}
+
+/* Unified Hover State: Glow and Lift */
+.search-results-floating div:hover,
+.search-results-floating a:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1); /* This makes the existing color glow */
+}
+
+/* --- CRITICAL COLOR OVERRIDES --- */
+
+/* This targets the status colors specifically when they appear in the search dropdown */
+.search-results-floating .red,
+.country-card.red {
+	background: rgba(210, 0, 0, 0.9) !important;
+	color: #ffffff !important;
+}
+
+.search-results-floating .yellow,
+.country-card.yellow {
+	background: rgba(255, 215, 0, 0.9) !important;
+	color: #24408e !important; /* Navy text so it's readable on yellow */
+}
+
+.search-results-floating .green,
+.country-card.green {
+	background: rgba(40, 201, 123, 0.9) !important;
+	color: #ffffff !important;
+}
+
+/* This stops the hover effect from turning your colors back to white */
+.search-results-floating div:hover,
+.search-results-floating a:hover {
+	filter: brightness(1.1);
+	transform: translateY(-3px);
+	background-color: inherit !important; /* Forces it to keep the red/yellow/green */
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* --- CONSTRUCTION GRAPHIC & ANIMATIONS --- */
+.construction-graphic {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	margin: 20px auto;
+	display: block;
+	position: relative;
+	z-index: 5;
+	animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* --- 4. U=U BANNER --- */
+.u-u-link {
+	text-decoration: none;
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto 30px auto;
+	display: block;
+}
+#u-u-notice {
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-left: 6px solid #f544b1;
+	padding: 15px 20px;
+	border-radius: 12px;
+	text-align: center;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+#u-u-notice h4 {
+	color: #24408e;
+	margin: 0 0 5px 0;
+	font-size: 1rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+#u-u-notice p {
+	color: #24408e;
+	margin: 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	line-height: 1.4;
+}
+
+/* --- 5. THE RESPONSIVE GRID (3-2-1) --- */
+.country-grid,
+.list-container {
+	display: grid !important;
+	gap: 20px;
+	width: 90%;
+	max-width: 1100px;
+	margin: 20px auto 80px auto;
+	grid-template-columns: 1fr; /* Mobile first */
+}
+
 @media (min-width: 600px) {
-	.country-grid {
+	.country-grid,
+	.list-container {
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
-/* Desktop: 3 Columns (Screens wider than 1024px) */
 @media (min-width: 1024px) {
-	.country-grid {
+	.country-grid,
+	.list-container {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
+/* --- 6. COUNTRY CARDS --- */
 .country-card {
 	display: flex;
-	align-items: center; /* Vertically centers text */
-	justify-content: center; /* Horizontally centers text */
-	text-align: center; /* Ensures multi-line names stay centered */
-	gap: 0; /* Remove any leftover gap from the dot */
-
-	/* Keep your existing padding, radius, and transition */
+	align-items: center;
+	justify-content: center;
 	padding: 22px;
 	border-radius: 15px;
 	text-decoration: none;
 	font-weight: 700;
 	transition: all 0.3s ease;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.country-card:hover {
-	transform: translateY(-5px);
-	border-color: #732982;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-}
-
-/* --- BOLD HEAVY-GLASS STATUS CARDS --- */
-
-/* --- BOLD HEAVY-GLASS STATUS CARDS --- */
-/* --- BOLD MATCHED GLASS STATUS CARDS --- */
 
 .country-card.red {
-	/* Deepened to a rich Safety Red */
 	background: rgba(210, 0, 0, 0.9);
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	color: #ffffff;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
-
 .country-card.yellow {
-	/* Kept the bright Safety Yellow you liked */
 	background: rgba(255, 215, 0, 0.9);
-	border: 1px solid rgba(255, 255, 255, 0.5);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	color: #ffffff;
-	text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+.country-card.green {
+	background: rgba(40, 201, 123, 0.9);
 }
 
-.country-card.green {
-	/* Shifted to a more vibrant, solid Emerald */
-	background: rgba(40, 201, 123, 0.9);
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	color: #ffffff;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-}
-/* Make them feel heavy and physical on hover */
 .country-card:hover {
-	background-color: rgba(255, 255, 255, 0.15); /* Slight white highlight */
 	transform: translateY(-4px) scale(1.01);
 	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+	background-color: rgba(255, 255, 255, 0.15);
 }
-.search-wrap {
-	width: 90%;
-	max-width: 600px;
-	margin: 20px auto 40px auto; /* Added bottom margin for the U=U banner */
-	position: relative; /* Essential for the dropdown to align correctly */
+
+/* --- 7. STYLED SIDEBAR BUTTONS --- */
+.back-btn,
+.exit-btn {
+	position: fixed;
+	z-index: 9999;
+	padding: 10px 18px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 0.85rem;
+	letter-spacing: 0.8px;
+	text-decoration: none;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	transition: all 0.3s ease;
 }
-.search-wrap input {
+
+.back-btn {
+	bottom: 230px;
+	left: 0;
+	transform: translateY(-50%) rotate(90deg);
+	transform-origin: left bottom;
+	background: rgba(255, 255, 255, 0.1);
+	color: #ffffff;
+	border-radius: 12px 12px 0 0;
+	border-left: none;
+}
+
+.exit-btn {
+	bottom: 310px;
+	right: 0;
+	transform: translateY(-50%) rotate(-90deg);
+	transform-origin: right bottom;
+	background: rgba(228, 3, 3, 0.7);
+	color: white;
+	border-radius: 12px 12px 0 0;
+	border-right: none;
+	min-width: 120px;
+	text-align: center;
+}
+
+.back-btn:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+.exit-btn:hover {
+	background: rgba(228, 3, 3, 0.9);
+}
+
+/* --- 8. RESPONSIVE FOOTER --- */
+.site-footer {
 	width: 100%;
-	padding: 15px 25px;
-	border-radius: 50px;
-	border: 1px solid #ddd;
-	font-size: 1rem;
-	outline: none;
+	margin-top: 20px;
+	position: relative;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 8px 0 5px 0;
 }
 
-/* Add space at the bottom of the body so content can clear the footer */
-body {
-	padding-bottom: 120px; /* Adjust this to be slightly taller than your footer */
+.footer-container {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap; /* Allows items to stack on small screens */
+	gap: 15px;
 }
 
-/* Optional: Ensure the scroll behavior feels smooth */
-html {
-	scroll-padding-bottom: 120px;
+/* --- FULLY RESPONSIVE FOOTER BOTTOM --- */
+.footer-bottom-bar {
+	width: 100%;
+	display: flex;
+	flex-direction: row; /* Keeps them on one line */
+	flex-wrap: wrap; /* Allows them to stack ONLY if the screen is tiny */
+	align-items: center;
+	justify-content: center; /* Keeps the whole group centered */
+	margin-top: 5px;
+	padding: 5px 0;
+	border-top: 1px solid rgba(36, 64, 142, 0.2);
+	gap: 15px; /* This is now the ONLY thing controlling the space between them */
+}
+
+/* 2. Horizontal links for Tablet/PC */
+.footer-bottom-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	line-height: 1; /* Added: Shrinks the vertical box of the links */
+}
+
+.footer-bottom-links a {
+	color: rgba(36, 64, 142, 0.9);
+	text-decoration: none;
+	font-size: 0.75rem;
+	font-weight: 600;
+	line-height: 1; /* Added: Shrinks the vertical box of the links */
+}
+
+.footer-copyright {
+	display: inline-block; /* Changed from block to let it sit next to links */
+	width: auto; /* Allow it to only take the space it needs */
+	color: rgba(36, 64, 142, 0.5);
+	font-size: 0.6rem;
+	font-weight: 600;
+	margin: 0;
+	line-height: 1;
+}
+
+/* Ensure the 3 main cards (Mission, Contact, etc) center their text */
+.footer-card {
+	position: relative;
+	cursor: pointer;
+	padding: 5px 10px;
+	display: flex; /* Added */
+	flex-direction: column; /* Added */
+	align-items: center; /* Centers the H4 and Popup anchor */
+	text-align: center; /* Centers the text itself */
+}
+
+/* Ensure the links container itself doesn't lean to one side */
+.footer-bottom-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center; /* Centers the links horizontally */
+	align-items: center;
+	gap: 15px;
+	width: 100%;
+}
+
+/* 3. Media Query to make it horizontal on larger screens */
+@media (min-width: 768px) {
+	.footer-bottom-bar {
+		flex-direction: row; /* Side-by-side on PC */
+		justify-content: space-between;
+		padding: 15px 40px;
+	}
+
+	.footer-bottom-links {
+		gap: 20px;
+	}
+}
+/* Responsive Footer adjustments */
+/* 3. Media Query to make it horizontal on larger screens */
+@media (min-width: 768px) {
+	.footer-bottom-bar {
+		flex-direction: row;
+		justify-content: center;
+		padding: 5px 40px; /* Reduced from 15px to 5px */
+		align-items: center; /* Ensures they stay on the same horizontal line */
+	}
+
+	.footer-bottom-links {
+		gap: 20px;
+		width: auto; /* Prevents the links from taking full width */
+	}
+
+	.footer-copyright {
+		width: auto; /* Prevents the copyright from taking full width */
+		margin: 0;
+	}
+}
+
+/* Footer Popup Logic */
+.footer-card {
+	position: relative;
+	cursor: pointer;
+}
+.footer-card h4 {
+	margin: 0;
+	color: #24408e;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+.footer-card:hover h4 {
+	color: #ff4b2b;
+}
+
+.footer-popup {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	bottom: 150%;
+	left: 50%;
+	transform: translateX(-50%) translateY(10px);
+	width: 250px;
+	background: #fff;
+	color: #24408e;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	z-index: 200;
+}
+
+.footer-card:hover .footer-popup {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
 }

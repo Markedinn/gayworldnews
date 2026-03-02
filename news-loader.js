@@ -129,81 +129,234 @@ function detectCountry(text) {
 
 	// EXPLICIT COUNTRY MATCH
 	const countries = [
-		"uganda",
-		"kenya",
-		"nigeria",
-		"ghana",
-		"south africa",
-		"rwanda",
-		"ethiopia",
-		"tanzania",
-		"zambia",
-		"botswana",
-		"morocco",
-		"tunisia",
+		// --- AFRICA ---
 		"algeria",
+		"angola",
+		"benin",
+		"botswana",
+		"burkina faso",
+		"burundi",
+		"cabo verde",
+		"cape verde",
+		"cameroon",
+		"central african republic",
+		"car",
+		"chad",
+		"comoros",
+		"congo",
+		"dr congo",
+		"drc",
+		"djibouti",
 		"egypt",
-		"lebanon",
-		"jordan",
-		"saudi arabia",
-		"uae",
-		"qatar",
-		"oman",
-		"kuwait",
-		"turkey",
+		"equatorial guinea",
+		"eritrea",
+		"eswatini",
+		"swaziland",
+		"ethiopia",
+		"gabon",
+		"gambia",
+		"ghana",
+		"guinea",
+		"guinea-bissau",
+		"ivory coast",
+		"cote d'ivoire",
+		"kenya",
+		"lesotho",
+		"liberia",
+		"libya",
+		"madagascar",
+		"malawi",
+		"mali",
+		"mauritania",
+		"mauritius",
+		"morocco",
+		"mozambique",
+		"namibia",
+		"niger",
+		"nigeria",
+		"rwanda",
+		"sao tome and principe",
+		"senegal",
+		"seychelles",
+		"sierra leone",
+		"somalia",
+		"somaliland",
+		"south africa",
+		"south sudan",
+		"sudan",
+		"tanzania",
+		"togo",
+		"tunisia",
+		"uganda",
+		"zambia",
+		"zimbabwe",
+
+		// --- ASIA ---
+		"afghanistan",
+		"azerbaijan",
+		"bahrain",
+		"bangladesh",
+		"bhutan",
+		"brunei",
+		"cambodia",
+		"china",
+		"india",
+		"indonesia",
 		"iran",
 		"iraq",
 		"israel",
-		"india",
-		"pakistan",
-		"bangladesh",
-		"sri lanka",
 		"japan",
-		"china",
-		"philippines",
-		"korea",
+		"jordan",
+		"kazakhstan",
+		"kuwait",
+		"kyrgyzstan",
+		"laos",
+		"lebanon",
 		"malaysia",
-		"indonesia",
+		"maldives",
+		"mongolia",
+		"myanmar",
+		"nepal",
+		"north korea",
+		"dprk",
+		"pyongyang",
+		"oman",
+		"pakistan",
+		"palestine",
+		"palestinian territories",
+		"philippines",
+		"qatar",
+		"saudi arabia",
+		"singapore",
+		"south korea",
+		"sri lanka",
+		"syria",
+		"taiwan",
+		"tajikistan",
 		"thailand",
+		"timor-leste",
+		"turkey",
+		"turkmenistan",
+		"uae",
+		"united arab emirates",
+		"uzbekistan",
 		"vietnam",
-		"united kingdom",
-		"uk",
-		"england",
-		"scotland",
-		"wales",
-		"ireland",
+		"yemen",
+
+		// --- EUROPE ---
+		"albania",
+		"andorra",
+		"armenia",
+		"austria",
+		"belarus",
+		"belgium",
+		"bosnia and herzegovina",
+		"bulgaria",
+		"croatia",
+		"cyprus",
+		"czechia",
+		"czech republic",
+		"denmark",
+		"estonia",
+		"finland",
 		"france",
 		"germany",
-		"spain",
-		"italy",
 		"greece",
-		"poland",
 		"hungary",
-		"ukraine",
-		"russia",
-		"portugal",
+		"iceland",
+		"ireland",
+		"italy",
+		"latvia",
+		"liechtenstein",
+		"lithuania",
+		"luxembourg",
+		"malta",
+		"moldova",
+		"monaco",
+		"montenegro",
 		"netherlands",
+		"north macedonia",
+		"macedonia",
+		"norway",
+		"poland",
+		"portugal",
+		"romania",
+		"russia",
+		"san marino",
+		"serbia",
+		"slovakia",
+		"slovenia",
+		"spain",
+		"sweden",
+		"switzerland",
+		"ukraine",
+		"united kingdom",
+		"uk",
+		"vatican city",
+
+		// --- AMERICAS ---
+		"anguilla",
+		"antigua and barbuda",
+		"antigua & barbuda",
+		"argentina",
+		"aruba",
+		"bahamas",
+		"barbados",
+		"belize",
+		"bermuda",
+		"bolivia",
+		"brazil",
+		"canada",
+		"chile",
+		"colombia",
+		"costa rica",
+		"cuba",
+		"curaçao",
+		"dominica",
+		"dominican republic",
+		"ecuador",
+		"el salvador",
+		"grenada",
+		"guatemala",
+		"guyana",
+		"haiti",
+		"honduras",
+		"jamaica",
+		"nicaragua",
+		"panama",
+		"paraguay",
+		"peru",
+		"saint lucia",
+		"suriname",
+		"trinidad and tobago",
+		"trinidad",
 		"usa",
 		"united states",
-		"canada",
-		"mexico",
-		"brazil",
-		"argentina",
-		"colombia",
-		"peru",
-		"chile",
+		"uruguay",
 		"venezuela",
+
+		// --- OCEANIA ---
 		"australia",
+		"cook islands",
+		"fiji",
+		"kiribati",
+		"marshall islands",
+		"micronesia",
+		"nauru",
 		"new zealand",
+		"niue",
+		"palau",
+		"papua new guinea",
+		"samoa",
+		"solomon islands",
+		"tonga",
+		"tuvalu",
+		"vanuatu",
 	];
 
 	// 0. SAFE USA PRIORITY (Replacing the Regex version)
 	const lowerText = text.toLowerCase();
-	if (
-		lowerText.includes("u.s.") ||
-		lowerText.includes("usa") ||
-		lowerText.includes("united states")
-	) {
+	if (lowerText.includes("u.s.") || lowerText.includes("usa") || lowerText.includes("united states")) {
 		return "USA";
 	}
 
@@ -246,10 +399,7 @@ function detectCategories(text) {
 	const T = text.toLowerCase();
 
 	// 1. IDENTITY GATEKEEPER: If it's not LGBTQ+, ignore it completely
-	const isLGBTQ =
-		/lgbt|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning/.test(
-			T,
-		);
+	const isLGBTQ = /lgbt|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning/.test(T);
 
 	if (!isLGBTQ) {
 		return []; // Return empty array so the story is filtered out
@@ -257,45 +407,21 @@ function detectCategories(text) {
 
 	const out = [];
 
-	if (
-		/attack|mob|assault|harassment|killed|raids?|crackdown|unsafe|targeted|arrest|detained/.test(
-			T,
-		)
-	)
-		out.push("safety");
+	if (/attack|mob|assault|harassment|killed|raids?|crackdown|unsafe|targeted|arrest|detained/.test(T)) out.push("safety");
 
-	if (
-		/law|legal|court|bill|legislation|rights|criminal|parliament|senate|congress|ordinance/.test(
-			T,
-		)
-	)
-		out.push("legal");
+	if (/law|legal|court|bill|legislation|rights|criminal|parliament|senate|congress|ordinance/.test(T)) out.push("legal");
 
-	if (/discriminat|refused service|housing|employment|denied access/.test(T))
-		out.push("discrimination");
+	if (/discriminat|refused service|housing|employment|denied access/.test(T)) out.push("discrimination");
 
-	if (
-		/hiv|prep|pep|clinic|art |arv|viral load|treatment|sti|std|syphilis|gonorrhea|healthcare|hospital/.test(
-			T,
-		)
-	)
-		out.push("health");
+	if (/hiv|prep|pep|clinic|art |arv|viral load|treatment|sti|std|syphilis|gonorrhea|healthcare|hospital/.test(T)) out.push("health");
 
-	if (/tourist|travel|visitor|advisory|safety warning|foreigners/.test(T))
-		out.push("travel");
+	if (/tourist|travel|visitor|advisory|safety warning|foreigners/.test(T)) out.push("travel");
 
-	if (
-		/housing|employer|daily life|public spaces|community safety|living conditions/.test(
-			T,
-		)
-	)
-		out.push("living");
+	if (/housing|employer|daily life|public spaces|community safety|living conditions/.test(T)) out.push("living");
 
-	if (/improve|progress|rights expanded|protection added/.test(T))
-		out.push("trend-up");
+	if (/improve|progress|rights expanded|protection added/.test(T)) out.push("trend-up");
 
-	if (/ban|rollback|rights removed|worse|restricted|violence rising/.test(T))
-		out.push("trend-down");
+	if (/ban|rollback|rights removed|worse|restricted|violence rising/.test(T)) out.push("trend-down");
 
 	return out;
 }
@@ -311,41 +437,22 @@ function isBlocked(text) {
 	if (T.includes("queer") && detectCategories(T).length === 0) return true;
 
 	// BLOCK FUNDRAISERS / NGO / CHARITY
-	if (
-		/fundraiser|arts|culture|donation|charity|gala|foundation|ngo|benefit concert/.test(
-			T,
-		)
-	)
-		return true;
+	if (/fundraiser|arts|culture|donation|snl|charity|gala|foundation|ngo|benefit concert/.test(T)) return true;
 
 	// BLOCK CELEBRITY FLUFF
-	if (
-		/celebrity|actor|singer|influencer|photoshoot|instagram|hollywood/.test(T)
-	)
-		return true;
+	if (/celebrity|actor|singer|lyft|influencer|photoshoot|instagram|hollywood/.test(T)) return true;
 
 	// BLOCK US POLITICAL NOISE
-	if (
-		/congress|senate|representative|republican|democrat|school board|culture war/.test(
-			T,
-		)
-	)
-		return true;
+	if (/congress|senate|representative|republican|trump|democrat|school board|culture war/.test(T)) return true;
 
 	// BLOCK PROPOSED BILLS (not passed)
-	if (
-		/proposes|introduces bill|washington|draft bill|could ban|may ban|considers banning/.test(
-			T,
-		)
-	)
-		return true;
+	if (/proposes|introduces bill|washington|draft bill|could ban|may ban|considers banning/.test(T)) return true;
 
 	// BLOCK PRIDE & COMMUNITY EVENTS
 	if (/pride|festival|parade|drag show|community event/.test(T)) return true;
 
 	// BLOCK SYMBOLIC PROTESTS
-	if (/peaceful protest|march for awareness|activists gather/.test(T))
-		return true;
+	if (/peaceful protest|march for awareness|activists gather/.test(T)) return true;
 
 	return false;
 }
@@ -401,8 +508,7 @@ function extractImage(item) {
 
 async function fetchFeed(url) {
 	try {
-		const api =
-			"https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(url);
+		const api = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(url);
 		const r = await fetch(api);
 		const d = await r.json();
 		if (d.status !== "ok") throw new Error();
@@ -440,28 +546,58 @@ const FEEDS = [
 
 const SEEN = new Set();
 
+// 1. The Date Filter (90 days / 3 months)
+function isRecent(dateStr) {
+	if (!dateStr) return false;
+	const pubDate = new Date(dateStr);
+	const threeMonthsAgo = new Date();
+	threeMonthsAgo.setDate(threeMonthsAgo.getDate() - 90);
+	return pubDate >= threeMonthsAgo;
+}
+
+// 2. The Main Fetch Function
 async function fetchLGBTQNews() {
 	const box = document.getElementById("automated-news-feed");
-	box.innerHTML =
-		"<p style='color:white;padding:20px;'>Scanning global updates...</p>";
+	const statusBox = document.getElementById("update-status"); // Finds your new 1rem text
 
-	const results = (await Promise.all(FEEDS.map(fetchFeed))).flat();
+	if (!box) return;
 
-	let items = results.filter(
-		(it) => !SEEN.has(it.link) && isRecent(it.pubDate) && isSerious(it),
-	);
+	box.innerHTML = "<p style='color:white;padding:20px;'>Scanning global updates...</p>";
 
-	if (items.length === 0) {
-		box.innerHTML =
-			"<p style='color:white;padding:20px;'>No serious global updates in the last 3 months.</p>";
-		return;
+	try {
+		const results = (await Promise.all(FEEDS.map(fetchFeed))).flat();
+
+		let items = results.filter((it) => !SEEN.has(it.link) && isRecent(it.pubDate) && isSerious(it));
+
+		if (items.length === 0) {
+			box.innerHTML = "<p style='color:white;padding:20px;'>No major updates found for the last 3 months.</p>";
+		} else {
+			// Sort: Newest first
+			items.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+			box.innerHTML = "";
+			items.slice(0, 40).forEach((it) => {
+				SEEN.add(it.link);
+				box.appendChild(renderCard(it));
+			});
+		}
+
+		// --- TIMESTAMP LOGIC ---
+		const now = new Date();
+		const options = {
+			month: "long",
+			day: "numeric",
+			year: "numeric",
+			hour: "2-digit",
+			minute: "2-digit",
+		};
+
+		if (statusBox) {
+			statusBox.innerText = "Live Update: " + now.toLocaleDateString("en-US", options);
+		}
+	} catch (err) {
+		console.error("Fetch error:", err);
+		if (statusBox) statusBox.innerText = "Update failed. Please refresh.";
 	}
-
-	box.innerHTML = "";
-	items.slice(0, 40).forEach((it) => {
-		SEEN.add(it.link);
-		box.appendChild(renderCard(it));
-	});
 }
 
 /* ================================================================
@@ -492,9 +628,7 @@ function renderCard(it) {
 		})
 		.join("");
 
-	const img = it.image
-		? `<img src="${it.image}" style="width:100%;border-radius:8px;margin-bottom:10px;">`
-		: "";
+	const img = it.image ? `<img src="${it.image}" style="width:100%;border-radius:8px;margin-bottom:10px;">` : "";
 
 	const date = new Date(it.pubDate);
 	const datestr = date.toLocaleDateString("en-US", {

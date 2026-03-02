@@ -3,6 +3,7 @@
 	box-sizing: border-box;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
+	margin: 0;
 }
 *::-webkit-scrollbar {
 	display: none;
@@ -13,11 +14,10 @@ html {
 	scroll-snap-type: y mandatory;
 }
 body {
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	min-height: 100vh;
-	overflow-x: hidden;
 }
 
 body::before {
@@ -41,8 +41,7 @@ body::before {
 	pointer-events: none;
 }
 
-.hero-viewport,
-.content-viewport {
+.hero-viewport {
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -52,6 +51,33 @@ body::before {
 	position: relative;
 	scroll-snap-align: start;
 	text-align: center; /* Added this to ensure text inside stays centered */
+}
+
+/* 1. Update the second viewport to allow the footer to "stick" */
+/* --- SECOND VIEWPORT (BENTO & FOOTER) --- */
+.content-viewport {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* Back to center so your title/grid stay together */
+	justify-content: center;
+	position: relative;
+	scroll-snap-align: start;
+	padding-bottom: 0 !important;
+	overflow: hidden;
+}
+
+/* 2. Style the Viewport Header (The "Gay World News" mini-title) */
+.viewport-header {
+	margin-top: 40px; /* Gives it some breathing room from the top of the snap */
+}
+
+/* 3. The Bento Grid (Add a little top margin to balance the centering) */
+.bento-grid {
+	margin-top: auto;
+	margin-bottom: auto; /* This keeps the grid perfectly centered in the remaining space */
 }
 
 /* --- SCROLL HINT RE-STYLED & RESPONSIVE --- */
@@ -109,16 +135,7 @@ body::before {
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: 900;
 	margin: 0;
-	background: linear-gradient(
-		to right,
-		#ffd600,
-		#00e676,
-		#2979ff,
-		#aa00ff,
-		#ff1744,
-		#ff9100,
-		#ffd600
-	);
+	background: linear-gradient(to right, #ffd600, #00e676, #2979ff, #aa00ff, #ff1744, #ff9100, #ffd600);
 	background-size: 200% auto;
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -148,42 +165,12 @@ body::before {
 	letter-spacing: 0.2px; /* Slight spacing for a "premium" feel */
 }
 
-/* Ensure the footer stays at the bottom even if the page is short */
-.standard-page {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.page-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	text-align: center;
-	/* This ensures the last cards don't sit UNDER the footer */
-	padding: 40px 20px 120px 20px;
-	position: relative;
-	min-height: 100vh;
-}
-
 .rainbow-line {
 	height: 4px;
 	width: 100%;
 	margin-top: 8px;
 	border-radius: 10px;
-	background: linear-gradient(
-		90deg,
-		#ff0000,
-		#ff8000,
-		#ffff00,
-		#00ff00,
-		#0000ff,
-		#4b0082,
-		#9400d3
-	);
+	background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
 }
 /* --- SEARCH & DROPDOWN: U=U MATCHING STYLE --- */
 .landing-search-wrap {
@@ -302,7 +289,7 @@ body::before {
 /* --- MIRRORED BACK BUTTON (BENTO STYLE) --- */
 .back-btn {
 	position: fixed;
-	bottom: 120px;
+	bottom: 330px;
 	left: 0;
 	transform: translateY(-50%) rotate(90deg);
 	transform-origin: left bottom;
@@ -343,7 +330,7 @@ body::before {
 /* --- MIRRORED EXIT BUTTON (FROSTED EMERGENCY RED) --- */
 .exit-btn {
 	position: fixed;
-	bottom: 180px;
+	bottom: 365px;
 	right: 0;
 	white-space: nowrap;
 	transform: translateY(-50%) rotate(-90deg);
@@ -383,9 +370,9 @@ body::before {
 /* --- U=U BANNER RESTORED & COMPACT --- */
 .u-u-link {
 	text-decoration: none;
-	width: 90%;
+	width: 100%;
 	max-width: 900px;
-	margin: 10px auto; /* Reduced margin to save space */
+	margin: 20px auto; /* Reduced margin to save space */
 	display: block;
 	transition: transform 0.2s ease;
 }
@@ -399,7 +386,7 @@ body::before {
 	backdrop-filter: blur(10px); /* The "Frosted" effect */
 	-webkit-backdrop-filter: blur(10px); /* Support for Safari */
 	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-left: 6px solid #24408e; /* Keeps your signature blue accent */
+	border-left: 6px solid #f544b1; /* Keeps your signature blue accent */
 	padding: 12px 20px;
 	border-radius: 8px;
 	text-align: center;
@@ -509,62 +496,140 @@ body::before {
 	box-shadow: 0 0 8px #ff8c00;
 }
 
-/* --- FOOTER & NAV --- */
-.bottom-dock {
-	width: 100%;
-	bottom: 0;
-	background: #f0f7ff;
-	border-top: 1px solid #ddd;
-	z-index: 10;
-}
+/* --- FOOTER --- */
 
-/* This targets the footer ONLY on the Landing Page viewport */
-.content-viewport .bottom-dock {
+/* This is the magic: it pushes the footer to the bottom 
+   without affecting the items above it */
+.site-footer {
 	position: absolute;
 	bottom: 0;
 	left: 0;
+	width: 100%;
+	/* YOUR FROSTED STYLES */
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+	padding: 15px 0 10px 0;
+	z-index: 100;
 }
-
-/* Ensure the second viewport has enough space for the footer without overlapping cards */
-.content-viewport {
-	padding-bottom: 80px; /* Adjust this so the Bento Grid stays centered */
-}
-
-.bottom-nav {
+.footer-container {
+	max-width: 1100px;
+	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
-	padding: 15px;
-}
-.bottom-nav a {
-	text-decoration: none;
-	color: #24408e;
-	font-weight: 800;
-	font-size: 0.8rem;
-	text-transform: uppercase;
+	align-items: center;
 }
 
-.source-link {
-	display: inline-block;
-	margin-top: 15px;
-	color: #e40303; /* Matches your Exit/Back red */
-	font-weight: 800;
-	text-decoration: none;
-	font-size: 0.9rem;
+.footer-card {
+	position: relative;
+	cursor: pointer;
 	padding: 5px 10px;
-	border: 1px solid rgba(228, 3, 3, 0.3);
-	border-radius: 5px;
-	transition: all 0.2s ease;
 }
 
-.source-link:hover {
-	background: rgba(228, 3, 3, 0.1);
-	transform: translateX(5px);
+.footer-card h4 {
+	margin: 0;
+	/* MATCHING U=U HEADER: Navy Blue */
+	color: #24408e;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.05rem;
+	transition: color 0.3s;
 }
 
-/* Ensure the glass cards themselves look consistent */
-.glass-card {
-	margin-bottom: 0; /* Let the 'gap' above handle the space */
-	width: 100%;
+/* Fix for the last footer card popup leaking off-screen */
+.footer-card:last-child .footer-popup {
+	left: auto;
+	right: 0;
+	transform: translateY(10px); /* Remove the horizontal translateX */
+}
+
+.footer-card:last-child:hover .footer-popup {
+	transform: translateY(0);
+}
+
+/* Fix for the first footer card popup leaking off-screen */
+.footer-card:first-child .footer-popup {
+	right: auto;
+	left: 0;
+	transform: translateY(10px); /* Remove the horizontal translateX */
+}
+
+.footer-card:first-child:hover .footer-popup {
+	transform: translateY(0);
+}
+
+/* Red highlight stays for the interactive "Alert" feel */
+.footer-card:hover h4 {
+	color: #ff4b2b;
+}
+
+/* THE POPUP BOX - Keeping it white for contrast */
+.footer-popup {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	bottom: 150%;
+	left: 50%;
+	transform: translateX(-50%) translateY(10px);
+	width: 250px;
+	background: #ffffff;
+	color: #24408e; /* Navy blue text in popup too */
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease;
+	font-size: 0.8rem;
+	line-height: 1.4;
+	pointer-events: none;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-card:hover .footer-popup {
+	visibility: visible;
+	opacity: 1;
+	transform: translateX(-50%) translateY(0);
+	pointer-events: auto;
+}
+
+.footer-cta {
+	display: inline-block;
+	margin-top: 10px;
+	background: #ff4b2b;
+	color: white !important;
+	padding: 5px 12px;
+	border-radius: 4px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.footer-bottom-bar {
+	text-align: center;
+	margin-top: 10px;
+	padding-top: 10px;
+	border-top: 1px solid rgba(36, 64, 142, 0.6); /* Subtle Navy line */
+}
+
+.footer-bottom-links a {
+	/* MATCHING U=U PARAGRAPH: Navy Blue but lighter opacity */
+	color: rgba(36, 64, 142, 0.9);
+	text-decoration: none;
+	font-size: 0.75rem;
+	font-weight: 600;
+	margin: 0 10px;
+}
+
+.footer-bottom-links a:hover {
+	color: #24408e;
+}
+
+.footer-copyright {
+	color: rgba(36, 64, 142, 0.5);
+	font-size: 0.65rem;
+	margin-top: 5px;
+	font-weight: 600;
 }
 
 /* --- POLISHED MEDIA QUERIES --- */
@@ -621,12 +686,28 @@ body::before {
 	.rainbow-text {
 		font-size: 2.2rem;
 	}
+}
 
-	/* Viewport Adjustment: Prevents 'filling the screen' bug */
-	.hero-viewport,
-	.content-viewport {
-		height: auto;
-		min-height: 100vh;
-		padding: 40px 0;
+/* CORRECTED MOBILE FOOTER */
+@media (max-width: 768px) {
+	.footer-container {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.footer-popup {
+		position: relative;
+		bottom: auto;
+		left: auto;
+		transform: none;
+		width: 90%;
+		margin: 10px auto;
+		display: none; /* Hidden until tap */
+	}
+	/* Show popup on mobile tap */
+	.footer-card:active .footer-popup,
+	.footer-card:focus .footer-popup {
+		display: block;
+		opacity: 1;
+		visibility: visible;
 	}
 }

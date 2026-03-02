@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 				Object.keys(globalData).forEach((key) => {
 					const country = globalData[key];
 					const matchesSearch = country.name.toLowerCase().startsWith(value);
-					const matchesContinent =
-						!targetContinent || country.continent === targetContinent;
+					const matchesContinent = !targetContinent || country.continent === targetContinent;
 
 					if (matchesSearch && matchesContinent) {
 						const link = document.createElement("a");

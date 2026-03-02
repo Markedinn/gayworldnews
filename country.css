@@ -96,9 +96,10 @@
 
 .news-content-expanded {
 	width: 100%;
+	color: #f6f7fa;
 	padding: 20px;
-	text-align: left;
-	background: rgba(255, 255, 255, 0.1);
+	text-align: center;
+	background: rgba(2, 7, 82, 0.3);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
