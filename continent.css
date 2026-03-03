@@ -492,28 +492,39 @@ body::before {
 	transform: translateX(-50%) translateY(0);
 }
 
+/* --- THE FINAL HEADER FIX --- */
 .header-utility {
-	position: fixed; /* Use fixed so it stays in the corner */
-	top: 20px;
-	right: 20px;
-	z-index: 2000; /* Higher than everything else */
-	display: flex;
-	justify-content: flex-end;
-	pointer-events: none; /* Allows clicks to pass through the container... */
+	position: absolute !important;
+	top: 20px !important;
+	right: 20px !important;
+	left: auto !important; /* Forces it to NOT stretch from left to right */
+	width: auto !important;
+	display: flex !important;
+	align-items: center !important;
+	z-index: 2000 !important;
 }
 
+/* This stops the container from 'blocking' the title clicks */
 #translator-anchor {
-	pointer-events: auto; /* ...but ensures the actual button IS clickable */
+	pointer-events: auto !important;
 }
 
-/* Match the translator to your branding */
+/* Ensure the title has space and stays centered */
+.main-header {
+	position: relative;
+	width: 100%;
+	text-align: center;
+	padding-top: 50px; /* Gives the buttons breathing room */
+}
+
+/* Force the dropdown to match your UI */
 #translator-anchor select {
-	background: #24408e;
-	color: white;
-	border: 1px solid white;
+	background: #24408e !important;
+	color: white !important;
+	border: 1px solid white !important;
 	border-radius: 4px;
 	padding: 6px 12px;
-	font-size: 14px;
 	cursor: pointer;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	font-family: inherit;
+	font-weight: 600;
 }
