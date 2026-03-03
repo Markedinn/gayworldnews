@@ -273,7 +273,7 @@ body::before {
 }
 
 /* --- MIRRORED BACK BUTTON (BENTO STYLE) --- */
-.back-btn {
+.home-btn {
 	position: fixed;
 	bottom: 330px;
 	left: 0;
@@ -307,7 +307,7 @@ body::before {
 	transition: all 0.3s ease;
 }
 
-.back-btn:hover {
+.home-btn:hover {
 	background: rgba(255, 255, 255, 0.2); /* Subtle highlight */
 	color: #ffffff;
 	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -391,15 +391,6 @@ body::before {
 	gap: 15px; /* This is now the ONLY thing controlling the space between them */
 }
 
-/* 2. Horizontal links for Tablet/PC */
-.footer-bottom-links {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 15px;
-	line-height: 1; /* Added: Shrinks the vertical box of the links */
-}
-
 .footer-bottom-links a {
 	color: rgba(36, 64, 142, 0.9);
 	text-decoration: none;
@@ -439,18 +430,6 @@ body::before {
 	width: 100%;
 }
 
-/* 3. Media Query to make it horizontal on larger screens */
-@media (min-width: 768px) {
-	.footer-bottom-bar {
-		flex-direction: row; /* Side-by-side on PC */
-		justify-content: space-between;
-		padding: 15px 40px;
-	}
-
-	.footer-bottom-links {
-		gap: 20px;
-	}
-}
 /* Responsive Footer adjustments */
 /* 3. Media Query to make it horizontal on larger screens */
 @media (min-width: 768px) {
@@ -511,4 +490,30 @@ body::before {
 	visibility: visible;
 	opacity: 1;
 	transform: translateX(-50%) translateY(0);
+}
+
+.header-utility {
+	position: fixed; /* Use fixed so it stays in the corner */
+	top: 20px;
+	right: 20px;
+	z-index: 2000; /* Higher than everything else */
+	display: flex;
+	justify-content: flex-end;
+	pointer-events: none; /* Allows clicks to pass through the container... */
+}
+
+#translator-anchor {
+	pointer-events: auto; /* ...but ensures the actual button IS clickable */
+}
+
+/* Match the translator to your branding */
+#translator-anchor select {
+	background: #24408e;
+	color: white;
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 6px 12px;
+	font-size: 14px;
+	cursor: pointer;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }

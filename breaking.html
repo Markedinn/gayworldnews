@@ -12,15 +12,7 @@
 		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
 	<body data-continent="europe" class="standard-page">
-		<a
-			href="#"
-			onclick="
-				history.back();
-				return false;
-			"
-			class="back-btn"
-			>BACK</a
-		>
+		<a href="index.html" class="home-btn">HOME</a>
 
 		<a
 			href="https://www.youtube.com/"
@@ -31,6 +23,9 @@
 			"
 			>QUICK EXIT</a
 		>
+		<div class="header-utility">
+        <div id="translator-anchor"></div> 
+    </div>
 		<div class="page-container">
 			<header class="list-header">
 				<h1 class="rainbow-text">Global Breaking News</h1>
@@ -115,12 +110,8 @@
         </div>
 
         <div class="footer-card" tabindex="0">
-            <h4>Connect</h4>
-            <div class="footer-popup">
-                <p>Found a discrepancy or have a local safety update? Your input keeps the community safe.</p>
-                <a href="contact.html" class="footer-cta">Send Report →</a>
-            </div>
-        </div>
+					<a href="contact.html" class="footer-cta"><h4>Connect</h4></a>
+				</div>
 
     </div>
     
@@ -134,5 +125,16 @@
     </div>
 
 </footer>
+<script>
+window.gtranslateSettings = {
+  "default_language": "en",
+  "detect_browser_language": true,
+  "wrapper_selector": "#translator-anchor",
+  "flag_size": 24,
+  "flag_style": "2d",
+  "type": "dropdown"
+};
+</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>
 </html>

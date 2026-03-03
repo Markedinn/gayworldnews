@@ -166,3 +166,24 @@
 .tag-down {
 	background-color: #ef4444;
 }
+
+.header-utility {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	display: flex;
+	justify-content: right; /* Pushes Exit to Left and Translator to Right */
+	align-items: center;
+	z-index: 1000;
+}
+
+/* Match the translator to your branding */
+#translator-anchor select {
+	background: #24408e;
+	color: white;
+	border: 1px solid white;
+	border-radius: 4px;
+	padding: 5px;
+	cursor: pointer;
+}

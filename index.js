@@ -84,10 +84,3 @@ document.addEventListener("keydown", (e) => {
 function performQuickExit() {
 	window.location.replace("https://www.youtube.com");
 }
-
-function snapToContent() {
-	const content = document.querySelector(".content-viewport");
-	if (content) {
-		content.scrollIntoView({ behavior: "smooth", block: "start" });
-	}
-}
