@@ -5,14 +5,15 @@
 	margin: 0;
 }
 /* 🚫 HIDE ALL SCROLLBARS GLOBALLY */
-html, body {
-    scrollbar-width: none;       /* Firefox */
-    -ms-overflow-style: none;    /* IE/Edge */
+html,
+body {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/Edge */
 }
 
 /* Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 header,
@@ -686,49 +687,3 @@ body.contact-page {
 		visibility: visible;
 	}
 }
-/* ==========================================
-   FINAL CONSOLIDATED SEARCH & DROPDOWN
-   ========================================== */
-
-media (max-width: 768px) {
-	.landing-search-wrap {
-		margin-top: 20px;
-		margin-bottom: 15px;
-	}
-
-	.search-results-floating {
-		/* 1. Stay glued to the top of the bar */
-		bottom: 105% !important;
-		top: auto !important;
-
-		/* --- THE SAFETY CEILING FOR ALL TOUCH DEVICES (Tablet & Phone) --- */
-		@media (max-width: 1024px) {
-			.landing-search-wrap {
-				margin-top: 30px;
-				margin-bottom: 20px;
-				/* Ensure the parent doesn't cut off the child */
-				overflow: visible !important;
-			}
-
-			.search-results-floating {
-				/* 1. Anchor to the top of the bar */
-				top: auto !important;
-				bottom: 110% !important;
-
-				/* 2. THE PIXEL LOCK (Better than vh for tablets) */
-				/* We limit the whole box to 280px tall. This fits on almost any tablet 
-           even with the keyboard up. */
-				max-height: 280px !important;
-
-				/* 3. Force scrollability */
-				overflow-y: auto !important;
-				display: flex !important;
-				flex-direction: column-reverse !important;
-
-				/* 4. Boost z-index to stay above headers */
-				z-index: 99999 !important;
-
-				padding: 5px;
-			}
-		
-		}
