@@ -4,12 +4,6 @@
 	scrollbar-width: none;
 	margin: 0;
 }
-/* 🚫 HIDE ALL SCROLLBARS GLOBALLY */
-html,
-body {
-	scrollbar-width: none; /* Firefox */
-	-ms-overflow-style: none; /* IE/Edge */
-}
 
 /* Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
@@ -73,8 +67,9 @@ body::before {
 
 /* 3. The Bento Grid (Add a little top margin to balance the centering) */
 .bento-grid {
-	margin-top: auto;
-	margin-bottom: auto; /* This keeps the grid perfectly centered in the remaining space */
+	.bento-grid {
+		margin: 20px auto;
+	}
 }
 
 .rainbow-text {
@@ -215,7 +210,6 @@ body::before {
 @keyframes slideUp {
 	from {
 		opacity: 0;
-		transform: translate(-50%, 20px);
 	}
 	to {
 		opacity: 1;
@@ -696,7 +690,6 @@ body.contact-page {
 	position: absolute !important;
 	top: 20px !important;
 	right: 20px !important;
-	left: auto !important; /* Forces it to NOT stretch from left to right */
 	width: auto !important;
 	display: flex !important;
 	align-items: center !important;
