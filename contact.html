@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Contact Us | Gay World News</title>
-		<link rel="stylesheet" href="continent.css" />
+		<link rel="stylesheet" href="index.css" />
 		<style>
 			/* THE MAP BACKGROUND */
 			body.about-page {
@@ -101,40 +101,48 @@
 			}
 		</style>
 	</head>
-	<body class="contact-form">
-		<a
-			href="#"
-			onclick="
-				history.back();
-				return false;
-			"
-			class="back-btn"
-			>BACK</a
-		>
-		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
+	<body class="contact-page"> 
 
-		<div class="glass-mission-card">
-			<h1 class="rainbow-text" style="margin-bottom: 20px">Get In Touch</h1>
-			<p>We look forward to hearing from</p>
+    <a href="#" onclick="history.back(); return false;" class="back-btn">BACK</a>
+    <a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
 
-			<form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
-				<div class="form-group">
-					<label>Your Email</label>
-					<input type="email" name="email" placeholder="how-do-we-reply@email.com" required />
-				</div>
+    <div class="page-container">
+        <div class="glass-mission-card">
+            <h1 class="rainbow-text" style="margin-bottom: 20px">Get In Touch</h1>
+            <p>We look forward to hearing from you.</p>
 
-				<div class="form-group">
-					<label>Message</label>
-					<textarea name="message" rows="5" placeholder="Share your story or updates..." required></textarea>
-				</div>
+            <form action="https://formspree.io/f/your-id" method="POST" class="contact-form">
+    <div class="form-group">
+        <label>Your Email</label>
+        <input 
+            type="email" 
+            name="email" 
+            placeholder="how-do-we-reply@email.com" 
+            required 
+        />
+    </div>
 
-				<button type="submit" class="submit-btn">SEND MESSAGE</button>
-				<div class="privacy-note">
-					<span class="lock-icon">🔒</span> We respect your privacy. Your email will never be shared or used for marketing.
-					<strong>Safety is our priority.</strong>
-				</div>
-			</form>
-		</div>
+    <div class="form-group">
+        <label>Message</label>
+        <textarea 
+            name="message" 
+            rows="5" 
+            placeholder="Share your thoughts with us..." 
+            required
+        ></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">SEND MESSAGE</button>
+    
+    <div class="privacy-note">
+        <span class="lock-icon">🔒</span> We respect your privacy. Your email will never be shared or used for marketing.
+        <strong>Safety is our priority.</strong>
+    </div>
+</form>
+        </div>
+    </div>
+
+    </body>
 
 		<footer class="site-footer">
 			<div class="footer-container">

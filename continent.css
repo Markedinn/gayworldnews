@@ -1,4 +1,15 @@
 /* --- 1. GLOBAL LAYOUT (Natural Scroll) --- */
+/* 🚫 HIDE ALL SCROLLBARS GLOBALLY */
+html,
+body {
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+	display: none;
+}
 
 /* Apply the 'Border-Box' rule to every single element on the site */
 *,
@@ -63,84 +74,80 @@ body::before {
 	}
 }
 
-/* --- SEARCH & DROPDOWN: U=U MATCHING STYLE --- */
+/* ==========================================
+   FINAL CONSOLIDATED SEARCH & HUD
+   ========================================== */
+
+/* 1. THE SEARCH BAR WRAPPER */
 .landing-search-wrap {
 	position: relative;
-	margin: 30px auto; /* Increased top/bottom margin for better spacing */
-	width: 90%; /* Takes up most of the screen on mobile */
-	max-width: 650px; /* Increased from 500px so it doesn't look tiny on PC */
+	width: 90%;
+	max-width: 500px;
+	margin: 40px auto 20px auto; /* Breathing room under cards */
 	z-index: 100;
 }
 
+/* 2. THE INPUT FIELD */
 .landing-search-wrap input {
 	width: 100%;
 	padding: 14px 25px;
-	border-radius: 50px; /* Pill shape for search vs 8px for banner */
-
-	/* Matching U=U Banner Background & Blur */
+	border-radius: 50px;
 	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-
-	/* Matching Border Style */
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-
-	/* U=U Blue Text */
 	color: #24408e;
 	font-weight: 700;
 	font-size: 1rem;
-
 	outline: none;
 	transition: all 0.3s ease;
 }
 
-.landing-search-wrap input::placeholder {
-	color: rgba(36, 64, 142, 0.6);
-}
-
 .landing-search-wrap input:focus {
-	background: rgba(255, 255, 255, 0.95); /* Brightens slightly when typing */
+	background: rgba(255, 255, 255, 0.95);
 	border-color: #24408e;
-	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --- SEARCH RESULTS DROPDOWN --- */
+/* 3. THE RESULTS TRAY (The "Levitator") */
 .search-results-floating {
 	position: absolute;
-	top: 110%;
+	bottom: calc(100% + 15px); /* Glued 15px above the bar */
 	left: 50%;
 	transform: translateX(-50%);
-	width: 95%;
-	max-width: 450px;
-	display: none;
-	flex-direction: column;
+	width: 100%;
+	max-width: 500px;
+	display: none; /* JS toggles to flex */
+	flex-direction: column-reverse; /* Stacks UPWARD */
 	gap: 10px;
-	padding: 10px 0;
-	z-index: 9999;
+	z-index: 1000;
+	max-height: 60vh;
+	overflow-y: auto;
+	padding: 5px;
+	animation: slideUp 0.3s ease-out;
 }
 
-/* Individual Results Base Style */
-.search-results-floating div,
-.search-results-floating a {
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+/* 4. THE INDIVIDUAL CARDS */
+.search-results-floating .country-card {
+	display: flex !important;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	padding: 18px;
 	border-radius: 12px;
-	padding: 15px 20px;
-	text-align: center;
 	text-decoration: none;
-	color: #ffffff;
 	font-weight: 700;
-	transition: 0.3s ease;
-	cursor: pointer;
-	/* Removed the fixed white background from here */
-	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+	transition: transform 0.2s;
 }
 
-/* Specific Status Colors */
+/* Status Colors */
 .search-results-floating .red {
 	background: rgba(210, 0, 0, 0.9) !important;
+	color: white !important;
 }
 .search-results-floating .yellow {
 	background: rgba(255, 215, 0, 0.9) !important;
@@ -148,66 +155,29 @@ body::before {
 }
 .search-results-floating .green {
 	background: rgba(40, 201, 123, 0.9) !important;
+	color: white !important;
 }
 
-/* Unified Hover State: Glow and Lift */
-.search-results-floating div:hover,
-.search-results-floating a:hover {
-	transform: translateY(-3px);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-	filter: brightness(1.1); /* This makes the existing color glow */
+/* 5. MOBILE & TABLET OVERRIDES (The Safety Ceiling) */
+@media (max-width: 1024px) {
+	.search-results-floating {
+		/* Strictly limit height so it can't vanish off top of screen */
+		max-height: 280px !important;
+		width: 95%;
+		bottom: 110% !important;
+		/* Ensure smooth scrolling on touch */
+		-webkit-overflow-scrolling: touch;
+	}
 }
 
-/* --- CRITICAL COLOR OVERRIDES --- */
-
-/* This targets the status colors specifically when they appear in the search dropdown */
-.search-results-floating .red,
-.country-card.red {
-	background: rgba(210, 0, 0, 0.9) !important;
-	color: #ffffff !important;
-}
-
-.search-results-floating .yellow,
-.country-card.yellow {
-	background: rgba(255, 215, 0, 0.9) !important;
-	color: #24408e !important; /* Navy text so it's readable on yellow */
-}
-
-.search-results-floating .green,
-.country-card.green {
-	background: rgba(40, 201, 123, 0.9) !important;
-	color: #ffffff !important;
-}
-
-/* This stops the hover effect from turning your colors back to white */
-.search-results-floating div:hover,
-.search-results-floating a:hover {
-	filter: brightness(1.1);
-	transform: translateY(-3px);
-	background-color: inherit !important; /* Forces it to keep the red/yellow/green */
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-/* --- CONSTRUCTION GRAPHIC & ANIMATIONS --- */
-.construction-graphic {
-	width: 100%;
-	max-width: 300px;
-	height: auto;
-	margin: 20px auto;
-	display: block;
-	position: relative;
-	z-index: 5;
-	animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
+@keyframes slideUp {
 	from {
 		opacity: 0;
-		transform: translateY(10px);
+		transform: translate(-50%, 20px);
 	}
 	to {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translate(-50%, 0);
 	}
 }
 
@@ -302,45 +272,80 @@ body::before {
 	background-color: rgba(255, 255, 255, 0.15);
 }
 
-/* --- 7. STYLED SIDEBAR BUTTONS --- */
-.back-btn,
-.exit-btn {
-	position: fixed;
-	z-index: 9999;
-	padding: 10px 18px;
-	text-transform: uppercase;
-	font-weight: 600;
-	font-size: 0.85rem;
-	letter-spacing: 0.8px;
-	text-decoration: none;
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	transition: all 0.3s ease;
-}
-
+/* --- MIRRORED BACK BUTTON (BENTO STYLE) --- */
 .back-btn {
-	bottom: 230px;
+	position: fixed;
+	bottom: 330px;
 	left: 0;
 	transform: translateY(-50%) rotate(90deg);
 	transform-origin: left bottom;
-	background: rgba(255, 255, 255, 0.1);
+
+	/* Bento Card Glass Effect */
+	background: rgba(255, 255, 255, 0.1); /* Subtle white tint */
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
+	/* Standard Bento Text Color */
 	color: #ffffff;
-	border-radius: 12px 12px 0 0;
+	font-weight: 500; /* Clean, modern weight - not "fat" */
+	font-size: 0.9rem;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+
+	/* Dimensions & Shape */
+	padding: 10px 18px; /* Keeping your exact size */
+	z-index: 9999;
+	text-decoration: none;
+	cursor: pointer;
+
+	/* Borders & Rounded Edges */
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-left: none;
+	border-radius: 12.5px 12.5px 0 0; /* Matches your cards */
+
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
 }
 
+.back-btn:hover {
+	background: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+	color: #ffffff;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* --- MIRRORED EXIT BUTTON (FROSTED EMERGENCY RED) --- */
 .exit-btn {
-	bottom: 310px;
+	position: fixed;
+	bottom: 365px;
 	right: 0;
+	white-space: nowrap;
 	transform: translateY(-50%) rotate(-90deg);
 	transform-origin: right bottom;
-	background: rgba(228, 3, 3, 0.7);
+
+	/* The "Ruby Glass" Effect */
+	background: rgba(228, 3, 3, 0.7); /* Red at 70% opacity */
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+
 	color: white;
-	border-radius: 12px 12px 0 0;
-	border-right: none;
-	min-width: 120px;
+	padding: 10px 15px; /* Keeping your exact size */
+	font-weight: 600; /* Matching the slimmer weight of the back button */
+	font-size: 0.9rem;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	z-index: 100;
+	text-decoration: none;
 	text-align: center;
+	min-width: 140px; /* Set a minimum width so it's clearly bigger than 'Back' */
+	cursor: pointer;
+
+	/* Borders & Rounded Edges */
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-right: none; /* Snaps to the right edge */
+	border-radius: 12.5px 12.5px 0 0; /* Matches the curve of your cards */
+
+	box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.3);
+	transition: all 0.3s ease;
 }
 
 .back-btn:hover {

@@ -43,6 +43,45 @@
 	line-height: 1;
 }
 
+/* --- CONSOLIDATED STATUS SYSTEM --- */
+.status-dot,
+.status-dot-country {
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	flex-shrink: 0;
+	vertical-align: middle;
+}
+
+/* Map all possible naming conventions to the same colors */
+.safe,
+.green,
+.status-dot-country.safe,
+.status-dot-country.green {
+	background: #16d242;
+	box-shadow: 0 0 8px #28a745;
+}
+.warning,
+.yellow,
+.status-dot-country.warning,
+.status-dot-country.yellow {
+	background: #ffc107;
+	box-shadow: 0 0 8px #ffc107;
+}
+.danger,
+.red,
+.status-dot-country.danger,
+.status-dot-country.red {
+	background: #e40303;
+	box-shadow: 0 0 8px #e40303;
+}
+.orange,
+.status-dot-country.orange {
+	background: #ff8c00;
+	box-shadow: 0 0 8px #ff8c00;
+}
+
 /* 3. The Modern Accordion */
 .news-accordion {
 	width: 100%;

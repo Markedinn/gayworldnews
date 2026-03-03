@@ -14,21 +14,29 @@ document.addEventListener("DOMContentLoaded", () => {
 			globalResults.innerHTML = "";
 
 			if (value.length > 0 && typeof globalData !== "undefined") {
-				globalResults.style.display = "grid";
+				globalResults.style.display = "flex";
 
 				Object.keys(globalData).forEach((key) => {
 					const country = globalData[key];
 					const matchesSearch = country.name.toLowerCase().startsWith(value);
 					const matchesContinent = !targetContinent || country.continent === targetContinent;
 
+					/* --- REPLACE JUST THIS BLOCK INSIDE THE SEARCH LOOP --- */
 					if (matchesSearch && matchesContinent) {
 						const link = document.createElement("a");
 						link.href = `country.html?c=${key}`;
-						link.className = "country-card-search";
-						// Using the status classes we consolidated in the CSS
-						link.innerHTML = `<span class="status-dot ${country.status.toLowerCase()}"></span> ${country.name}`;
+
+						const s = country.status.toLowerCase();
+
+						// Change to 'country-card' to borrow the continent styles
+						link.className = `country-card ${s}`;
+
+						// Just the name (No dot needed when the whole card is the color)
+						link.innerHTML = `${country.name}`;
+
 						globalResults.appendChild(link);
 					}
+					/* ------------------------------------------------------ */
 				});
 			} else {
 				globalResults.style.display = "none";
