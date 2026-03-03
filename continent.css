@@ -348,9 +348,6 @@ body::before {
 	transition: all 0.3s ease;
 }
 
-.back-btn:hover {
-	background: rgba(255, 255, 255, 0.2);
-}
 .exit-btn:hover {
 	background: rgba(228, 3, 3, 0.9);
 }
@@ -418,6 +415,10 @@ body::before {
 	flex-direction: column; /* Added */
 	align-items: center; /* Centers the H4 and Popup anchor */
 	text-align: center; /* Centers the text itself */
+}
+
+.footer-card a {
+	text-decoration: none;
 }
 
 /* Ensure the links container itself doesn't lean to one side */
