@@ -4,33 +4,12 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Oceania | Gay World News</title>
-		<link rel="stylesheet" href="continent.css?v=3" />
-		<!-- <link rel="stylesheet" href="index.css" /> -->
+		<link rel="stylesheet" href="index.css?v=grid" />
 		<script src="data.js" defer></script>
 		<script src="index.js" defer></script>
-		<link
-			rel="icon"
-			type="image/webp"
-			sizes="32x32"
-			href="images/favicon.webp"
-		/>
-		<style>
-    /* This only runs on the Oceania page */
-    .page-container {
-        min-height: 80vh; /* Forces the page to be at least 80% of the screen height */
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .site-footer {
-        margin-top: auto !important; /* Pushes footer to the bottom of that 80vh space */
-        padding-top: 10px;
-    }
-</style>
+		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
-	<body data-continent="oceania" class="standard-page">
-		<a href="index.html" class="home-btn">HOME</a>
-
+	<body data-continent="oceania">
 		<a
 			href="https://www.youtube.com/"
 			class="exit-btn"
@@ -40,89 +19,69 @@
 			"
 			>QUICK EXIT</a
 		>
-<div class="header-utility">
-        <div id="translator-anchor"></div> 
-    </div>
-		<div class="page-container">
-			<header class="list-header">
+
+		<div class="master-grid-container">
+			<header class="main-header">
 				<a href="index.html" style="text-decoration: none">
 					<h1 class="rainbow-text">Oceania</h1>
 				</a>
-				<a
-					href="https://www.preventionaccess.org"
-					target="_blank"
-					class="u-u-link"
-				>
-					<div id="u-u-notice">
-						<h4>U=U: Undetectable = Untransmittable</h4>
-						<p>
-							People living with HIV who take ART as prescribed and have an
-							undetectable viral load cannot sexually transmit HIV to others.
-						</p>
-					</div>
-				</a>
-				<div class="landing-search-wrap">
-					<input
-						type="text"
-						id="globalSearch"
-						placeholder="Search Countries..."
-					/>
-					<div id="searchResults" class="search-results-floating"></div>
-				</div>
+				<div class="rainbow-line"></div>
 			</header>
 
-			<section class="list-container" id="countryGrid"></section>
+			<a href="https://www.preventionaccess.org" target="_blank" class="u-u-link">
+				<div id="u-u-notice">
+					<h4>U=U: Undetectable = Untransmittable</h4>
+					<p>HIV Medication Keeps Everyone Safe</p>
+				</div>
+			</a>
+
+			<div id="translator-anchor"></div>
+
+			<div class="landing-search-wrap">
+				<input type="text" id="globalSearch" placeholder="Search Countries..." />
+				<div id="searchResults" class="search-results-floating"></div>
+			</div>
+
+			<section class="bento-grid" id="countryGrid"></section>
 		</div>
+
 		<footer class="site-footer">
-    <div class="footer-container">
-        
-        <div class="footer-card" tabindex="0">
-            <h4>Safety & Health</h4>
-            <div class="footer-popup">
-                <p>Real-time advice on security, legal status, and HIV/LGBTQ+ medical services. Monitoring 197 countries to keep you safe in a volatile world.</p>
-            </div>
-        </div>
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="index.html" class="home-btn">HOME</a>
+				</div>
+				<div class="footer-card">
+					<a href="about.html"><h4>about</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>facebook</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>x</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>youtube</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="contact.html"><h4>connect</h4></a>
+				</div>
+			</div>
+			<div class="footer-bottom-bar">
+				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
+			</div>
+		</footer>
 
-        <div class="footer-card" tabindex="0">
-            <h4>Cool Travel</h4>
-            <div class="footer-popup">
-                <p>Verified accounts and video guides. We are currently populating 197 territories with the best links and local interviews to assist your journey.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-            <h4>Updated News</h4>
-            <div class="footer-popup">
-                <p>Our proprietary filters strip away celebrity gossip to deliver vital facts. We prioritize manual overrides for critical safety updates.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-    <a href="contact.html"><h4>Connect</h4></a>
-</div>
-
-    </div>
-    
-    <div class="footer-bottom-bar">
-        <div class="footer-bottom-links">
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="index.html">Breaking News</a>
-        
-        <p class="footer-copyright">© 2026 LGBTQ+ Global Safety Monitor</p>
-    </div>
-
-</footer>
-<script>
-window.gtranslateSettings = {
-  "default_language": "en",
-  "detect_browser_language": true,
-  "wrapper_selector": "#translator-anchor",
-  "flag_size": 24,
-  "flag_style": "2d",
-  "type": "dropdown"
-};
-</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+		<script>
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				flag_size: 24,
+				alt_flags: { en: "usa" },
+				flag_style: "2d",
+				type: "dropdown_with_flags",
+			};
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>
 </html>

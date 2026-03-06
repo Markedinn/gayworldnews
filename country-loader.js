@@ -9,9 +9,7 @@ window.addEventListener("DOMContentLoaded", () => {
 	if (typeof globalData !== "undefined" && slug) {
 		// 1. Case-Insensitive Lookup
 		const searchKey = slug.toLowerCase();
-		const actualKey = Object.keys(globalData).find(
-			(key) => key.toLowerCase() === searchKey,
-		);
+		const actualKey = Object.keys(globalData).find((key) => key.toLowerCase() === searchKey);
 
 		if (actualKey) {
 			const countryData = globalData[actualKey];
@@ -23,9 +21,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			// 3. Update Status Badge & Apply Tint
 			const dot = document.getElementById("status-dot");
 			const statusText = document.getElementById("status-text");
-			const s = countryData.status
-				? countryData.status.toLowerCase()
-				: "warning";
+			const s = countryData.status ? countryData.status.toLowerCase() : "warning";
 
 			// FIX: Change classes on the dot
 			dot.className = `status-dot-country ${s}`;
@@ -39,7 +35,7 @@ window.addEventListener("DOMContentLoaded", () => {
 			displayArea.innerHTML = `
                 <details class="glass-card news-accordion ${s}">
                     <summary>
-                        <h3>⚖ Legal Status & Safety</h3>
+                        <h3>⚖ Legal Status</h3>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -49,7 +45,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 <details class="glass-card news-accordion ${s}">
                     <summary>
-                        <h3>✈️ Travel & Culture</h3>
+                        <h3>✈️ Travel</h3>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -62,7 +58,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 <details class="glass-card news-accordion ${s}">
                     <summary>
-                        <h3>🏥 Health & Care</h3>
+                        <h3>🏥 Health</h3>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -72,7 +68,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
                 <details class="glass-card news-accordion ${s}">
                     <summary>
-                        <h3>🛡 Security Environment</h3>
+                        <h3>🛡 Safety</h3>
                     </summary>
                     <div class="news-content-expanded">
                         <div class="rainbow-line mini-line"></div>
@@ -82,8 +78,7 @@ window.addEventListener("DOMContentLoaded", () => {
             `;
 		} else {
 			// Handle "Country Not Found" with updated colors
-			document.getElementById("country-name").innerText =
-				"Country Awaiting Updates";
+			document.getElementById("country-name").innerText = "Country Awaiting Updates";
 			displayArea.innerHTML = `
         <div class="glass-card" style="padding: 20px; text-align: center;">
             <p style="color:white; opacity: 0.8;">

@@ -45,8 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	// --- 3. AUTOMATIC COUNTRY LIST (For Continent Pages) ---
-	const listContainer = document.querySelector(".list-container");
-
+	const listContainer = document.getElementById("countryGrid");
 	if (listContainer && typeof globalData !== "undefined") {
 		const targetContinent = document.body.dataset.continent;
 		listContainer.innerHTML = "";

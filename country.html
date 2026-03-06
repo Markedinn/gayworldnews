@@ -4,102 +4,79 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title id="dynamic-title">Country Details | Gay World News</title>
-		<link rel="stylesheet" href="continent.css?v=3" />
+		<link rel="stylesheet" href="index.css?v=grid" />
 		<link rel="stylesheet" href="country.css?v=3" />
 		<script src="data.js" defer></script>
 		<script src="index.js" defer></script>
 		<script src="country-loader.js" defer></script>
-		<link
-			rel="icon"
-			type="image/webp"
-			sizes="32x32"
-			href="images/favicon.webp"
-		/>
+		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
 	<body class="standard-page">
-		<a href="index.html" class="home-btn">HOME</a>
-
 		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
-		<div class="header-utility">
-        <div id="translator-anchor"></div> 
-    </div>
-		<main class="country-detail-container">
-			<div class="header-section">
-				
+
+		<div class="master-grid-container">
+			<header class="main-header">
 				<h1 id="country-name" class="rainbow-text">Loading...</h1>
-				<a
-					href="https://www.preventionaccess.org"
-					target="_blank"
-					class="u-u-link"
-				>
-					<div id="u-u-notice">
-						<h4>U=U: Undetectable = Untransmittable</h4>
-						<h3>
-							<strong>Note:</strong> We are currently building out our global
-							database. Detailed safety information for this region is being
-							verified and will be updated daily as soon as our structure is
-							finalized.
-						</h3>
+				<div class="rainbow-line"></div>
+			</header>
+
+			<div id="translator-anchor"></div>
+
+			<a href="https://www.preventionaccess.org" target="_blank" class="u-u-link">
+				<div id="u-u-notice">
+					<h4>U=U: Undetectable = Untransmittable</h4>
+					<p>HIV Medication Keeps Everyone Safe</p>
+					<div style="margin-top: 10px; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 10px; opacity: 0.9">
+						<strong>Database Note:</strong> Detailed safety information is being verified daily as our structure is finalized.
 					</div>
-				</a>
-				<div class="status-badge-wrapper">
-					<span id="status-dot" class="status-dot-country"></span>
-					<span id="status-text">LOADING...</span>
 				</div>
+			</a>
+
+			<div class="status-badge-wrapper" style="grid-column: 2; text-align: center; margin-bottom: 20px">
+				<span id="status-dot" class="status-dot-country"></span>
+				<span id="status-text" style="font-weight: bold; letter-spacing: 1px">LOADING...</span>
 			</div>
 
-			<div id="info-display-area" style="margin-top: 40px"></div>
-		</main>
+			<div id="info-display-area" style="grid-column: 1 / -1"></div>
+		</div>
+
 		<footer class="site-footer">
-    <div class="footer-container">
-        
-        <div class="footer-card" tabindex="0">
-            <h4>Safety & Health</h4>
-            <div class="footer-popup">
-                <p>Real-time advice on security, legal status, and HIV/LGBTQ+ medical services. Monitoring 197 countries to keep you safe in a volatile world.</p>
-            </div>
-        </div>
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="index.html" class="home-btn">HOME</a>
+				</div>
+				<div class="footer-card">
+					<a href="about.html"><h4>about</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>facebook</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>x</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>youtube</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="contact.html"><h4>connect</h4></a>
+				</div>
+			</div>
+			<div class="footer-bottom-bar">
+				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
+			</div>
+		</footer>
 
-        <div class="footer-card" tabindex="0">
-            <h4>Cool Travel</h4>
-            <div class="footer-popup">
-                <p>Verified accounts and video guides. We are currently populating 197 territories with the best links and local interviews to assist your journey.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-            <h4>Updated News</h4>
-            <div class="footer-popup">
-                <p>Our proprietary filters strip away celebrity gossip to deliver vital facts. We prioritize manual overrides for critical safety updates.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-    <a href="contact.html"><h4>Connect</h4></a>
-</div>
-
-    </div>
-    
-    <div class="footer-bottom-bar">
-        <div class="footer-bottom-links">
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="index.html">Breaking News</a>
-        
-        <p class="footer-copyright">© 2026 LGBTQ+ Global Safety Monitor</p>
-    </div>
-
-</footer>
-<script>
-window.gtranslateSettings = {
-  "default_language": "en",
-  "detect_browser_language": true,
-  "wrapper_selector": "#translator-anchor",
-  "flag_size": 24,
-  "flag_style": "2d",
-  "type": "dropdown"
-};
-</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+		<script>
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				flag_size: 24,
+				alt_flags: { en: "usa" },
+				flag_style: "2d",
+				type: "dropdown_with_flags",
+			};
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>
 </html>

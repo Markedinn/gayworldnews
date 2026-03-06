@@ -1,37 +1,22 @@
+/* --- 1. THE RESET & MASTER GRID --- */
 * {
 	box-sizing: border-box;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 	margin: 0;
 }
-
-/* Chrome, Safari, and Edge */
 ::-webkit-scrollbar {
 	display: none;
 }
 
-header,
-.main-header {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	padding-top: 4vh;
-}
-
-.subtitle-group {
-	width: 90%;
-	max-width: 800px;
-	margin-bottom: 10px;
-}
-
 body {
+	min-height: 100vh; /* Ensures the body is at least as tall as the screen */
 	display: flex;
 	flex-direction: column;
+	justify-content: center; /* Pushes content away from the very top */
 	font-family: "Helvetica Neue", Arial, sans-serif;
-	min-height: 100vh;
 	margin: 0;
+	padding: 30px 0 0 0; /* Adds breathing room at the top and bottom */
 }
 
 body::before {
@@ -42,34 +27,28 @@ body::before {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
-
 	background-image: url("images/world_img.webp");
-
-	/* Lowering 0.5 to 0.2 makes the mask much lighter/subtle */
 	background-color: rgba(0, 0, 0, 0.2);
-
 	background-blend-mode: darken;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
 	pointer-events: none;
 }
 
-.dashboard-center-content {
-	flex: 1; /* Grows to fill all empty vertical space */
-	display: flex;
-	flex-direction: column;
-	justify-content: center; /* Centers Search/Bento vertically */
-	align-items: center;
-	width: 100%;
-	padding-bottom: 25px;
+.master-grid-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px; /* Standardizing the gap for a cleaner look */
+	width: 92%;
+	max-width: 900px;
+	margin: 30px auto;
 }
 
-/* 3. The Bento Grid (Add a little top margin to balance the centering) */
-.bento-grid {
-	.bento-grid {
-		margin: 20px auto;
-	}
+/* --- 2. HEADER & RAINBOW TEXT --- */
+.main-header {
+	grid-column: 1 / -1;
+	text-align: center;
 }
 
 .rainbow-text {
@@ -82,8 +61,8 @@ body::before {
 	background-clip: text;
 	-webkit-text-fill-color: transparent;
 	animation: rainbow-flow 5s linear infinite;
-	/* Clean, sharp, no blur */
 }
+
 @keyframes rainbow-flow {
 	from {
 		background-position: 0% center;
@@ -94,16 +73,12 @@ body::before {
 }
 
 .subtitle {
-	color: #ffffff; /* The Brand Blue */
-	font-weight: 500; /* Makes it firm and professional */
-	/* CHANGE margin to this: */
+	color: #ffffff;
+	font-weight: 500;
 	margin: 10px auto 0 auto;
-	/* ADD this to ensure the text inside is also centered: */
 	text-align: center;
-	font-size: 1.1rem; /* Slightly larger for readability */
+	font-size: 1.1rem;
 	line-height: 1.4;
-	max-width: 800px; /* Keeps it from stretching too wide on desktop */
-	letter-spacing: 0.2px; /* Slight spacing for a "premium" feel */
 }
 
 .rainbow-line {
@@ -113,610 +88,384 @@ body::before {
 	border-radius: 10px;
 	background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
 }
-/* ==========================================
-   FINAL CONSOLIDATED SEARCH & HUD
-   ========================================== */
 
-/* 1. THE SEARCH BAR WRAPPER */
-.landing-search-wrap {
-	position: relative;
-	width: 90%;
-	max-width: 500px;
-	margin: 40px auto 20px auto; /* Breathing room under cards */
-	z-index: 100;
-}
-
-/* 2. THE INPUT FIELD */
-.landing-search-wrap input {
-	width: 100%;
-	padding: 14px 25px;
-	border-radius: 50px;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-	color: #24408e;
-	font-weight: 700;
-	font-size: 1rem;
-	outline: none;
-	transition: all 0.3s ease;
-}
-
-.landing-search-wrap input:focus {
-	background: rgba(255, 255, 255, 0.95);
-	border-color: #24408e;
-}
-
-/* 3. THE RESULTS TRAY (The "Levitator") */
-.search-results-floating {
-	position: absolute;
-	bottom: calc(100% + 15px); /* Glued 15px above the bar */
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
-	max-width: 500px;
-	display: none; /* JS toggles to flex */
-	flex-direction: column-reverse; /* Stacks UPWARD */
-	gap: 10px;
-	z-index: 1000;
-	padding: 5px;
-	animation: slideUp 0.3s ease-out;
-}
-
-/* 4. THE INDIVIDUAL CARDS */
-.search-results-floating .country-card {
-	display: flex !important;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	padding: 18px;
-	border-radius: 12px;
-	text-decoration: none;
-	font-weight: 700;
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-	transition: transform 0.2s;
-}
-
-/* Status Colors */
-.search-results-floating .red {
-	background: rgba(210, 0, 0, 0.9) !important;
-	color: white !important;
-}
-.search-results-floating .yellow {
-	background: rgba(255, 215, 0, 0.9) !important;
-	color: #24408e !important;
-}
-.search-results-floating .green {
-	background: rgba(40, 201, 123, 0.9) !important;
-	color: white !important;
-}
-
-/* 5. MOBILE & TABLET OVERRIDES (The Safety Ceiling) */
-@media (max-width: 1024px) {
-	.search-results-floating {
-		/* Strictly limit height so it can't vanish off top of screen */
-		width: 95%;
-		bottom: 110% !important;
-		overflow: visible;
-		/* Ensure smooth scrolling on touch */
-		-webkit-overflow-scrolling: touch;
-	}
-}
-
-@keyframes slideUp {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-		transform: translate(-50%, 0);
-	}
-}
-
-/* --- MIRRORED BACK BUTTON (BENTO STYLE) --- */
-.home-btn {
-	position: fixed;
-	bottom: 330px;
-	left: 0;
-	transform: translateY(-50%) rotate(90deg);
-	transform-origin: left bottom;
-
-	/* Bento Card Glass Effect */
-	background: rgba(255, 255, 255, 0.1); /* Subtle white tint */
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-
-	/* Standard Bento Text Color */
-	color: #ffffff;
-	font-weight: 500; /* Clean, modern weight - not "fat" */
-	font-size: 0.9rem;
-	letter-spacing: 0.8px;
-	text-transform: uppercase;
-
-	/* Dimensions & Shape */
-	padding: 10px 18px; /* Keeping your exact size */
-	z-index: 9999;
-	text-decoration: none;
-	cursor: pointer;
-
-	/* Borders & Rounded Edges */
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-left: none;
-	border-radius: 12.5px 12.5px 0 0; /* Matches your cards */
-
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease;
-}
-
-.home-btn:hover {
-	background: rgba(255, 255, 255, 0.2); /* Subtle highlight */
-	color: #ffffff;
-	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* --- MIRRORED EXIT BUTTON (FROSTED EMERGENCY RED) --- */
-.exit-btn {
-	position: fixed;
-	bottom: 365px;
-	right: 0;
-	white-space: nowrap;
-	transform: translateY(-50%) rotate(-90deg);
-	transform-origin: right bottom;
-
-	/* The "Ruby Glass" Effect */
-	background: rgba(228, 3, 3, 0.7); /* Red at 70% opacity */
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
-
-	color: white;
-	padding: 10px 15px; /* Keeping your exact size */
-	font-weight: 600; /* Matching the slimmer weight of the back button */
-	font-size: 0.9rem;
-	letter-spacing: 0.8px;
-	text-transform: uppercase;
-	z-index: 100;
-	text-decoration: none;
-	text-align: center;
-	min-width: 140px; /* Set a minimum width so it's clearly bigger than 'Back' */
-	cursor: pointer;
-
-	/* Borders & Rounded Edges */
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-right: none; /* Snaps to the right edge */
-	border-radius: 12.5px 12.5px 0 0; /* Matches the curve of your cards */
-
-	box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.3);
-	transition: all 0.3s ease;
-}
-
-.exit-btn:hover {
-	background: rgba(228, 3, 3, 0.9); /* Becomes more solid/urgent on hover */
-	box-shadow: -2px 6px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* --- U=U BANNER RESTORED & COMPACT --- */
+/* --- 3. U=U BANNER --- */
 .u-u-link {
+	grid-column: 1 / -1;
 	text-decoration: none;
-	width: 100%;
-	max-width: 900px;
-	margin: 20px auto 0 auto; /* Tighter placement below the header */
-	display: block;
 	transition: transform 0.2s ease;
 }
 
-.u-u-link:hover {
-	transform: scale(1.01); /* Subtle lift on hover */
-}
-
 #u-u-notice {
-	background: rgba(255, 255, 255, 0.8); /* White with 20% transparency */
-	backdrop-filter: blur(10px); /* The "Frosted" effect */
-	-webkit-backdrop-filter: blur(10px); /* Support for Safari */
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-left: 6px solid #f544b1; /* Keeps your signature blue accent */
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-left: 6px solid #f544b1;
 	padding: 12px 20px;
 	border-radius: 8px;
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow to lift it up */
+	color: #24408e;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 #u-u-notice h4 {
-	margin: 0 0 4px 0;
-	color: #24408e; /* Navy blue for the header */
-	font-size: 1rem;
-	font-weight: 800;
 	text-transform: uppercase;
 }
 
-#u-u-notice p {
-	margin: 0;
-	color: #24408e; /* Very dark gray for maximum readability */
-	font-size: 0.85rem;
-	line-height: 1.3;
-	font-weight: 600; /* Slightly thicker text helps it stand out on glass */
+#u-u-notice {
+	transition:
+		transform 0.2s ease,
+		background 0.2s ease;
+	cursor: pointer;
 }
 
-/* --- UNIFIED GLASS COMPONENTS --- */
-.bento-grid,
-.list-container {
-	display: grid;
-	gap: 15px;
-	width: 90%;
-	max-width: 900px;
-	grid-template-columns: repeat(3, 1fr);
-	margin: 0 auto;
+#u-u-notice:hover {
+	transform: scale(1.02);
+	background: rgba(255, 255, 255, 0.25); /* Lighten slightly on hover */
 }
 
-/* One rule to rule them all: Bento, Search, and Country Cards */
-.bento-card,
-.country-card-search,
-.glass-card,
-.search-results-floating div,
-.search-results-floating a {
-	/* Layout: Centers the dot and text as a pair */
+/* --- 4. TRANSLATOR & BENTO CARDS --- */
+#translator-anchor {
+	grid-column: 2;
+	width: 100%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 15px;
+}
+
+/* 2. The Pink Triangle */
+#translator-anchor::after {
+	content: "▼"; /* The solid downward triangle */
+	position: absolute;
+	right: 20px; /* Distance from the right edge */
+	top: 50%;
+	transform: translateY(-50%);
+	color: #f544b1; /* Your signature pink */
+	font-size: 1.25rem;
+	pointer-events: none; /* Allows clicks to pass through to the select */
+	z-index: 5;
+}
+
+/* 3. The Select adjustment */
+#translator-anchor select {
+	height: 60px; /* Set a fixed height instead of 70% */
+	padding: 0 45px; /* Add space on the right so text doesn't hit the triangle */
+	appearance: none; /* Hides the boring default browser arrow */
+	text-align: center;
+	text-align-last: center;
+	-webkit-appearance: none;
+}
+
+#translator-anchor select,
+.bento-card {
+	width: 100%;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	gap: 10px; /* Reliable space between dot and text */
-
 	background: rgba(255, 255, 255, 0.2);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
 	border-radius: 12px;
 	padding: 20px;
-	text-align: center;
-	text-decoration: none;
 	color: #ffffff;
 	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
 	transition: 0.3s ease;
+	cursor: pointer;
+	appearance: none;
+	font-size: 1rem; /* Explicitly set the size */
+	font-family: inherit; /* Forces the select to use the Body font */
+	line-height: normal; /* Prevents the browser from squashing the text */
+	-webkit-appearance: none;
 }
 
-.bento-card:hover,
-.country-card-search:hover,
-.search-results-floating div:hover,
-.search-results-floating a:hover {
+#translator-anchor:hover select,
+.bento-card:hover {
 	transform: translateY(-5px);
 	background: rgba(255, 255, 255, 0.4);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --- CONSOLIDATED STATUS SYSTEM --- */
-.status-dot,
-.status-dot-country {
-	display: inline-block;
-	width: 12px;
-	height: 12px;
-	border-radius: 50%;
-	flex-shrink: 0;
-	vertical-align: middle;
+/* Styling the actual list items inside the dropdown */
+#translator-anchor select option {
+	background-color: #2f3542; /* Matches the Search Results Slate Gray */
+	color: #ffffff; /* White text for readability */
+	padding: 15px; /* Gives the list some "air" */
+	font-size: 1rem;
+	text-transform: none; /* Keep language names readable (not all caps) */
 }
 
-/* Map all possible naming conventions to the same colors */
-.safe,
-.green,
-.status-dot-country.safe,
-.status-dot-country.green {
-	background: #16d242;
-	box-shadow: 0 0 8px #28a745;
-}
-.warning,
-.yellow,
-.status-dot-country.warning,
-.status-dot-country.yellow {
-	background: #ffc107;
-	box-shadow: 0 0 8px #ffc107;
-}
-.danger,
-.red,
-.status-dot-country.danger,
-.status-dot-country.red {
-	background: #e40303;
-	box-shadow: 0 0 8px #e40303;
-}
-.orange,
-.status-dot-country.orange {
-	background: #ff8c00;
-	box-shadow: 0 0 8px #ff8c00;
+/* On some browsers, we can style the hover state of the list */
+#translator-anchor select option:hover,
+#translator-anchor select option:focus,
+#translator-anchor select option:active {
+	background-color: #f544b1; /* U=U Pink highlight when hovering/selecting */
+	color: #ffffff;
 }
 
-/* --- FOOTER --- */
+/* --- 5. SEARCH BAR (THE LEVITATOR) --- */
+.landing-search-wrap {
+	grid-column: 2;
+	position: relative;
+}
 
-/* This is the magic: it pushes the footer to the bottom 
-   without affecting the items above it */
-.site-footer {
-	margin-top: auto; /* This is the "Docking" magic */
+.landing-search-wrap input {
 	width: 100%;
-	position: relative; /* Changing from absolute stops the overlap */
+	padding: 14px 25px;
+	border-radius: 50px;
 	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border-top: 1px solid rgba(255, 255, 255, 0.3);
-	padding: 8px 0 5px 0;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: #24408e;
+	font-weight: 700;
+	outline: none;
+	text-align: center;
 }
+
+/* 2. THE DROP-DOWN RESULTS (Flipped from Upward to Downward) */
+.search-results-floating {
+	position: absolute;
+	top: calc(100% + 10px); /* Changed from 'bottom' to 'top' */
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	display: none;
+	flex-direction: column; /* Stack DOWNWARD now */
+	gap: 10px;
+	z-index: 1000;
+}
+
+.search-results-floating {
+	position: absolute;
+	top: calc(100% + 8px);
+	/* THE CENTERING TRICK */
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 100%; /* Matches the exact width of the search bar above it */
+	display: none;
+	flex-direction: column;
+	z-index: 1000;
+
+	/* THE LOOK & SCROLL */
+	max-height: 280px;
+	overflow-y: auto;
+	border-radius: 12px;
+	background: #2f3542; /* The Bold Slate Gray */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-results-floating a {
+	display: flex; /* Essential for alignment */
+	align-items: center; /* Vertical center */
+	justify-content: center; /* Horizontal center */
+	text-align: center; /* Fallback for older browsers */
+
+	padding: 14px 20px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 600;
+	font-size: 0.95rem;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+	transition: background 0.2s;
+}
+
+.search-results-floating a:last-child {
+	border-bottom: none;
+}
+
+.search-results-floating a:hover {
+	background: #f544b1; /* U=U Pink highlight on hover */
+	color: white;
+}
+
+/* Hide the scrollbar for the results tray specifically */
+.search-results-floating::-webkit-scrollbar {
+	display: none;
+}
+
+.bento-grid {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px; /* Matching the Master Grid gap */
+	margin-top: 5px; /* A tiny extra "breath" so it's not jammed against the search */
+}
+
+/* --- JS CARD SKELETON --- */
+.country-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 70px; /* Matches the visual weight of your Home cards */
+
+	/* The "Bento" look without the color */
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+
+	padding: 15px;
+	color: #ffffff;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	transition:
+		transform 0.2s ease,
+		filter 0.2s ease;
+}
+
+.country-card:hover {
+	transform: translateY(-3px);
+	filter: brightness(1.2); /* Makes the JS color "pop" on hover */
+}
+
+/* Safety Colors for Country Cards */
+.country-card.red {
+	background: rgba(255, 23, 69, 0.74);
+} /* Danger */
+.country-card.yellow {
+	background: rgba(246, 250, 3, 0.637);
+} /* Warning */
+.country-card.green {
+	background: rgba(0, 230, 119, 0.616);
+} /* Safe */
+.country-card.orange {
+	background: rgba(255, 145, 0, 0.6);
+} /* Caution */
+
+/* --- 6. QUICK EXIT --- */
+.exit-btn {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(228, 3, 3, 0.7);
+	backdrop-filter: blur(15px);
+	color: white;
+	padding: 10px 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	z-index: 9999;
+	text-decoration: none;
+	border-radius: 0 0 12.5px 12.5px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- 7. FOOTER --- */
+.site-footer {
+	width: 100%;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(10px);
+	padding: 20px 0;
+	margin-top: auto;
+}
+
 .footer-container {
-	max-width: 1100px;
+	max-width: 900px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
-	align-items: center;
 }
 
-.footer-card {
-	position: relative;
-	cursor: pointer;
-	padding: 5px 10px;
-}
-
-.footer-card h4 {
-	margin: 0;
-	/* MATCHING U=U HEADER: Navy Blue */
-	color: #24408e;
-	font-size: 0.85rem;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 0.05rem;
-	transition: color 0.3s;
-}
 .footer-card a {
 	text-decoration: none;
+	color: #24408e;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.85rem;
 }
 
-/* Fix for the last footer card popup leaking off-screen */
-.footer-card:last-child .footer-popup {
-	left: auto;
-	right: 0;
-	transform: translateY(10px); /* Remove the horizontal translateX */
-}
-
-.footer-card:last-child:hover .footer-popup {
-	transform: translateY(0);
-}
-
-/* Fix for the first footer card popup leaking off-screen */
-.footer-card:first-child .footer-popup {
-	right: auto;
-	left: 0;
-	transform: translateY(10px); /* Remove the horizontal translateX */
-}
-
-.footer-card:first-child:hover .footer-popup {
-	transform: translateY(0);
-}
-
-/* Red highlight stays for the interactive "Alert" feel */
-.footer-card:hover h4 {
-	color: #ff4b2b;
-}
-
-/* THE POPUP BOX - Keeping it white for contrast */
-.footer-popup {
-	visibility: hidden;
-	opacity: 0;
-	position: absolute;
-	bottom: 150%;
-	left: 50%;
-	transform: translateX(-50%) translateY(10px);
-	width: 250px;
-	background: #ffffff;
-	color: #24408e; /* Navy blue text in popup too */
-	padding: 15px;
-	border-radius: 10px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-	transition: all 0.3s ease;
-	font-size: 0.8rem;
-	line-height: 1.4;
-	pointer-events: none;
-	text-align: center;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.footer-card:hover .footer-popup {
-	visibility: visible;
-	opacity: 1;
-	transform: translateX(-50%) translateY(0);
-	pointer-events: auto;
-}
-
-/* 1. THE BAR: Holds the Link-Group and the Copyright */
 .footer-bottom-bar {
-	width: 100%;
-	display: flex;
-	flex-direction: row; /* Side-by-side on PC */
-	flex-wrap: wrap; /* Allows wrapping on small screens */
-	justify-content: center; /* Center everything */
-	align-items: center;
-	gap: 30px; /* Space between links and copyright */
-	padding: 15px 0;
-	margin-top: 10px;
+	text-align: center;
+	margin-top: 15px;
 	border-top: 1px solid rgba(36, 64, 142, 0.1);
+	padding-top: 10px;
 }
 
-/* 2. THE LINK GROUP: This must be the flex container for the <a> tags */
-.footer-bottom-links {
-	display: flex; /* This puts the links in a line */
-	flex-direction: row;
-	gap: 20px; /* Space between individual links */
-	justify-content: center;
-}
-
-.footer-bottom-links a {
-	color: rgba(36, 64, 142, 0.9);
-	font-size: 0.75rem;
-	font-weight: 600;
-	white-space: nowrap;
-	transition: color 0.2s;
-	text-decoration: none;
-}
-
-/* 3. THE COPYRIGHT: Just needs to behave */
 .footer-copyright {
 	color: rgba(36, 64, 142, 0.5);
 	font-size: 0.65rem;
 	font-weight: 600;
-	margin: 0; /* Removed margin-top to keep it level with links */
-	white-space: nowrap;
 }
 
-/* ABOUT AND CONTACT PAGES */
+/* --- 8. RESPONSIVE BREAKPOINTS --- */
 
-/* Update your body to ensure it stays a flex column */
-body.about-page,
-body.contact-page {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-}
-
-/* This is the magic wrapper for centering */
-.page-container {
-	flex: 1; /* Grows to fill all available space */
-	display: flex;
-	align-items: center; /* Vertically centers the card */
-	justify-content: center; /* Horizontally centers the card */
-	padding: 40px 20px; /* Safety gap for mobile/small screens */
-	width: 100%;
-}
-
-/* Clean up the card margins */
-.glass-mission-card {
-	margin: 0 auto; /* Removed the 60px; the container handles centering now */
-	width: 90%;
-	max-width: 800px;
-	box-sizing: border-box;
-}
-
-/* 4. RESPONSIVITY: For small mobile screens */
-@media (max-width: 600px) {
-	.footer-bottom-bar {
-		flex-direction: column; /* Stack links over copyright on phones */
-		gap: 8px;
-		padding: 20px 0; /* Add a little vertical breathing room */
+/* TABLETS (iPads) - Fixing the "Bunched Up" look */
+@media (min-width: 769px) and (max-width: 1199px) {
+	.master-grid-container {
+		gap: 40px; /* More air between elements */
+		width: 85%; /* Pulls content in from the edges */
+		margin-top: 5vh; /* Nudges the title down from the top */
 	}
-	.footer-copyright {
-		opacity: 0.8; /* Subtle visual hierarchy change for mobile */
-	}
-	.footer-bottom-links {
-		gap: 15px; /* Tighten link spacing on mobile */
-	}
-}
-/* --- POLISHED MEDIA QUERIES --- */
 
-/* 1. TABLETS & SMALL LAPTOPS (1024px and down) */
-@media (max-width: 1024px) {
-	/* Stop snapping if content gets too long to avoid 'jumping' */
-
-	/* Bento Grid: 2 Columns for Tablets */
-	.bento-grid,
-	.list-container {
-		grid-template-columns: repeat(2, 1fr);
-		width: 95%;
+	.landing-search-wrap {
+		margin-bottom: 20px; /* Extra space before the Bento cards */
 	}
 }
 
-/* 2. MOBILE PHONES (480px and down) */
-@media (max-width: 480px) {
-	#u-u-notice {
-		padding: 8px; /* Slimmer for small screens */
+/* BIG SCREENS (27" - 32" Monitors) - Fixing the "Island" look */
+@media (min-width: 1600px) {
+	.master-grid-container {
+		max-width: 1200px; /* Let it grow but keep it readable */
+		gap: 50px;
 	}
 
-	#u-u-notice p {
-		font-size: 0.75rem;
+	body {
+		/* Distributes extra space evenly top and bottom on huge screens */
+		justify-content: center;
 	}
 
-	.u-u-link {
-		margin: 5px auto 10px auto;
-	}
-
-	/* Bento Grid: 1 Column for Phones */
-	.bento-grid,
-	.list-container {
-		grid-template-columns: 1fr;
-		gap: 12px; /* Slightly tighter gap for mobile */
-		width: 85%; /* Slightly narrower cards look better on skinny phones */
-		padding-bottom: 5px; /* Essential: Prevents the last card from touching the footer */
-	}
-
-	/* Keep Search Bar tight to the cards */
-	/* .landing-search-wrap {
-		margin-bottom: 12px;
-	} */
-
-	/* Shrink Branding */
-	.rainbow-text {
-		font-size: 2.2rem;
-	}
-
-	.subtitle {
-		font-size: 0.95rem; /* Shrunk slightly so it doesn't wrap awkwardly */
-		width: 95%;
+	.main-header {
+		margin-bottom: 30px;
 	}
 }
 
-/* CORRECTED MOBILE FOOTER */
+/* MOBILE (Phones) - Your existing rules with one small centering fix */
 @media (max-width: 768px) {
+	.master-grid-container,
+	.bento-grid {
+		grid-template-columns: 1fr;
+	}
+
+	/* Ensure the translator doesn't hug the left on mobile */
+	#translator-anchor,
+	.landing-search-wrap {
+		grid-column: 1 / -1;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	.footer-container {
 		flex-direction: column;
-		gap: 10px;
-	}
-	.footer-popup {
-		position: relative;
-		bottom: auto;
-		left: auto;
-		transform: none;
-		width: 90%;
-		margin: 10px auto;
-		display: none; /* Hidden until tap */
-	}
-	/* Show popup on mobile tap */
-	.footer-card:active .footer-popup,
-	.footer-card:focus .footer-popup {
-		display: block;
-		opacity: 1;
-		visibility: visible;
+		align-items: center;
+		gap: 15px;
 	}
 }
 
-/* --- THE FINAL HEADER FIX --- */
-.header-utility {
-	position: absolute !important;
-	top: 20px !important;
-	right: 20px !important;
-	width: auto !important;
-	display: flex !important;
-	align-items: center !important;
-	z-index: 2000 !important;
-}
+/* --- MOBILE BREAKING NEWS FIX --- */
+@media (max-width: 768px) {
+	.master-grid-container {
+		/* Force everything into a single vertical stack */
+		grid-template-columns: 1fr !important;
+		padding: 10px;
+	}
 
-/* This stops the container from 'blocking' the title clicks */
-#translator-anchor {
-	pointer-events: auto !important;
-}
-
-/* Ensure the title has space and stays centered */
-.main-header {
-	position: relative;
-	width: 100%;
-	text-align: center;
-	padding-top: 50px; /* Gives the buttons breathing room */
-}
-
-/* Force the dropdown to match your UI */
-#translator-anchor select {
-	background: #24408e !important;
-	color: white !important;
-	border: 1px solid white !important;
-	border-radius: 4px;
-	padding: 6px 12px;
-	cursor: pointer;
-	font-family: inherit;
-	font-weight: 600;
+	#manual-news-portal,
+	.main-header,
+	.u-u-link,
+	#translator-anchor {
+		/* On mobile, they all span the same single column */
+		grid-column: 1 / -1 !important;
+		width: 100%;
+	}
 }

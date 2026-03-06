@@ -316,40 +316,42 @@ body::before {
 /* --- MIRRORED EXIT BUTTON (FROSTED EMERGENCY RED) --- */
 .exit-btn {
 	position: fixed;
-	bottom: 365px;
-	right: 0;
+	top: 0; /* Snaps it to the very top */
+	left: 50%; /* Moves the left edge to the center */
+	transform: translateX(-50%); /* Pulls it back by half its own width to truly center it */
+
 	white-space: nowrap;
-	transform: translateY(-50%) rotate(-90deg);
-	transform-origin: right bottom;
+	display: block;
 
 	/* The "Ruby Glass" Effect */
-	background: rgba(228, 3, 3, 0.7); /* Red at 70% opacity */
+	background: rgba(228, 3, 3, 0.7);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 
 	color: white;
-	padding: 10px 15px; /* Keeping your exact size */
-	font-weight: 600; /* Matching the slimmer weight of the back button */
+	padding: 10px 20px; /* Balanced padding for the top tab look */
+	font-weight: 600;
 	font-size: 0.9rem;
 	letter-spacing: 0.8px;
 	text-transform: uppercase;
-	z-index: 100;
+	z-index: 9999; /* Ensuring it stays above EVERYTHING (headers, maps, etc.) */
 	text-decoration: none;
 	text-align: center;
-	min-width: 140px; /* Set a minimum width so it's clearly bigger than 'Back' */
-	cursor: pointer;
+	min-width: 140px;
 
-	/* Borders & Rounded Edges */
+	/* Borders & Rounded Edges - Hanging Tab Style */
 	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-right: none; /* Snaps to the right edge */
-	border-radius: 12.5px 12.5px 0 0; /* Matches the curve of your cards */
+	border-top: none; /* Removes the top border so it blends into the screen edge */
+	border-radius: 0 0 12.5px 12.5px;
 
-	box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 	transition: all 0.3s ease;
 }
 
 .exit-btn:hover {
 	background: rgba(228, 3, 3, 0.9);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+	padding-top: 15px; /* Slight "drop down" effect on hover */
 }
 
 /* --- 8. RESPONSIVE FOOTER --- */

@@ -3,17 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Europe | Gay World News</title>
+		<title>Breaking News | Gay World News</title>
 		<link rel="stylesheet" href="breaking.css?v=3" />
-
-		<link rel="stylesheet" href="continent.css?v=3" />
+		<link rel="stylesheet" href="index.css?v=grid" />
 		<script src="data.js" defer></script>
 		<script src="index.js" defer></script>
 		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
-	<body data-continent="europe" class="standard-page">
-		<a href="index.html" class="home-btn">HOME</a>
-
+	<body class="standard-page">
 		<a
 			href="https://www.youtube.com/"
 			class="exit-btn"
@@ -23,118 +20,88 @@
 			"
 			>QUICK EXIT</a
 		>
-		<div class="header-utility">
-        <div id="translator-anchor"></div> 
-    </div>
-		<div class="page-container">
-			<header class="list-header">
+
+		<div class="master-grid-container">
+			<header class="main-header">
 				<h1 class="rainbow-text">Global Breaking News</h1>
 				<div id="update-status" style="color: #fdfbfb; font-size: 1rem; padding: 10px; text-align: center">Checking for updates...</div>
-				<div class="rainbow-line" style="margin-bottom: 20px"></div>
+				<div class="rainbow-line"></div>
 			</header>
+
 			<a href="https://www.preventionaccess.org" target="_blank" class="u-u-link">
 				<div id="u-u-notice">
 					<h4>U=U: Undetectable = Untransmittable</h4>
-					<p>People living with HIV who take ART as prescribed and have an undetectable viral load cannot sexually transmit HIV to others.</p>
+					<p>HIV Medication Keeps Everyone Safe</p>
 				</div>
 			</a>
-			<!--MANUAL INPUT FOR BREAKING NEWS-->
-			<div id="manual-news-portal">
+			<div id="translator-anchor"></div>
+
+			<div id="manual-news-portal" style="grid-column: 2">
 				<details class="news-accordion">
 					<summary style="padding: 25px 20px">
 						<div class="tag-bar">
 							<span class="tag tag-safety">Safety Alert</span>
 							<span class="tag tag-down">Rights Trend: Down</span>
 						</div>
-
 						<div class="country-label manual-red-title">NORTH KOREA (Manual Update)</div>
-
 						<h3>UN Reports Increased Persecution under 'Reactionary Culture' Law</h3>
-
 						<div class="date-manual">(March 2, 2026)</div>
 					</summary>
-
 					<div class="news-content-expanded">
-						<p>
-							New testimonies from February 2026 reveal that the DPRK is using anti-socialist laws to target LGBTQ individuals in detention camps. The 9th Party Congress has
-							reportedly increased crackdowns on "non-socialist" behaviors.
-						</p>
-
+						<p>New testimonies reveal that the DPRK is using anti-socialist laws to target LGBTQ individuals...</p>
 						<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8"><strong>Source:</strong> Human Rights Watch / UN OHCHR</p>
-
 						<div style="margin-top: 20px; text-align: center">
-							<a
-								href="https://www.hrw.org/news/2026/02/20/north-korea-party-congress-set-to-bolster-repression"
-								target="_blank"
-								style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">
-								READ FULL HUMAN RIGHTS REPORT →
-							</a>
+							<a href="https://www.hrw.org" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">READ FULL REPORT →</a>
 						</div>
 					</div>
 				</details>
 			</div>
 
-			<!-- THE CLEANED NEWS SECTION -->
-			<section class="news-feed">
-				<!-- The JavaScript will find THIS ID and inject all the glass cards inside it -->
-				<div id="automated-news-feed">
-					<div class="loading-state" style="padding: 20px; color: #24408e; font-weight: bold">Scanning Global LGBTQ+ News...</div>
+			<section class="news-feed" style="grid-column: 1 / -1">
+				<div id="automated-news-feed" class="bento-grid">
+					<div class="loading-state" style="padding: 20px; color: white; font-weight: bold">Scanning Global LGBTQ+ News...</div>
 				</div>
 			</section>
 
-			<!-- Make sure the news-loader.js is linked here -->
 			<script src="news-loader.js" defer></script>
 		</div>
+
 		<footer class="site-footer">
-    <div class="footer-container">
-        
-        <div class="footer-card" tabindex="0">
-            <h4>Safety & Health</h4>
-            <div class="footer-popup">
-                <p>Real-time advice on security, legal status, and HIV/LGBTQ+ medical services. Monitoring 197 countries to keep you safe in a volatile world.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-            <h4>Cool Travel</h4>
-            <div class="footer-popup">
-                <p>Verified accounts and video guides. We are currently populating 197 territories with the best links and local interviews to assist your journey.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-            <h4>Updated News</h4>
-            <div class="footer-popup">
-                <p>Our proprietary filters strip away celebrity gossip to deliver vital facts. We prioritize manual overrides for critical safety updates.</p>
-            </div>
-        </div>
-
-        <div class="footer-card" tabindex="0">
-    <a href="contact.html"><h4>Connect</h4></a>
-</div>
-
-    </div>
-    
-    <div class="footer-bottom-bar">
-        <div class="footer-bottom-links">
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact Us</a>
-            <a href="index.html">Breaking News</a>
-        
-        <p class="footer-copyright">© 2026 LGBTQ+ Global Safety Monitor</p>
-    </div>
-
-</footer>
-<script>
-window.gtranslateSettings = {
-  "default_language": "en",
-  "detect_browser_language": true,
-  "wrapper_selector": "#translator-anchor",
-  "flag_size": 24,
-  "flag_style": "2d",
-  "type": "dropdown"
-};
-</script>
-<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="index.html" class="home-btn">HOME</a>
+				</div>
+				<div class="footer-card">
+					<a href="about.html"><h4>about</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>facebook</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>x</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="#"><h4>youtube</h4></a>
+				</div>
+				<div class="footer-card">
+					<a href="contact.html"><h4>connect</h4></a>
+				</div>
+			</div>
+			<div class="footer-bottom-bar">
+				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
+			</div>
+		</footer>
+		<script>
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				flag_size: 24,
+				alt_flags: { en: "usa" },
+				flag_style: "2d",
+				type: "dropdown_with_flags",
+			};
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>
 </html>
