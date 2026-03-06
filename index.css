@@ -452,20 +452,34 @@ body::before {
 	}
 }
 
-/* --- MOBILE BREAKING NEWS FIX --- */
+/* --- UNIVERSAL MOBILE GRID RESET --- */
 @media (max-width: 768px) {
+	/* 1. Force the master grid to a single column */
 	.master-grid-container {
-		/* Force everything into a single vertical stack */
 		grid-template-columns: 1fr !important;
 		padding: 10px;
+		gap: 15px; /* Tighter gaps for smaller screens */
 	}
 
+	/* 2. Force ALL children to span the full width */
+	.master-grid-container > *,
 	#manual-news-portal,
-	.main-header,
+	#translator-anchor,
 	.u-u-link,
-	#translator-anchor {
-		/* On mobile, they all span the same single column */
+	.main-header,
+	.status-badge-wrapper,
+	#info-display-area {
 		grid-column: 1 / -1 !important;
-		width: 100%;
+		width: 100% !important;
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+	}
+
+	/* 3. Center the status badge items on mobile */
+	.status-badge-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
 	}
 }
