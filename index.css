@@ -429,57 +429,68 @@ body::before {
 	}
 }
 
-/* MOBILE (Phones) - Your existing rules with one small centering fix */
+/* --- CLEAN CONSOLIDATED MOBILE RESET --- */
+/* --- CLEAN CONSOLIDATED MOBILE RESET --- */
 @media (max-width: 768px) {
-	.master-grid-container,
-	.bento-grid {
-		grid-template-columns: 1fr;
-	}
-
-	/* Ensure the translator doesn't hug the left on mobile */
-	#translator-anchor,
-	.landing-search-wrap {
-		grid-column: 1 / -1;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.footer-container {
+	.master-grid-container {
+		display: flex !important;
 		flex-direction: column;
 		align-items: center;
+		width: 100%;
+		padding: 10px;
+		box-sizing: border-box; /* Critical for padding */
+	}
+
+	/* Force the Bento Grid to be a 1-column grid, NOT flex */
+	.bento-grid {
+		display: grid !important;
+		grid-template-columns: 1fr !important; /* One card per row */
+		width: 100% !important;
 		gap: 15px;
 	}
-}
 
-/* --- UNIVERSAL MOBILE GRID RESET --- */
-@media (max-width: 768px) {
-	/* 1. Force the master grid to a single column */
-	.master-grid-container {
-		grid-template-columns: 1fr !important;
-		padding: 10px;
-		gap: 15px; /* Tighter gaps for smaller screens */
-	}
-
-	/* 2. Force ALL children to span the full width */
+	/* Force cards and headers to take full width */
 	.master-grid-container > *,
+	.country-card,
 	#manual-news-portal,
 	#translator-anchor,
 	.u-u-link,
 	.main-header,
 	.status-badge-wrapper,
-	#info-display-area {
-		grid-column: 1 / -1 !important;
-		width: 100% !important;
-		margin-left: 0 !important;
-		margin-right: 0 !important;
+	#info-display-area,
+	.landing-search-wrap {
+		grid-column: auto !important;
+		width: 100% !important; /* This stops them from being "letter-width" */
+		max-width: 100% !important;
+		margin: 0 auto !important;
+		box-sizing: border-box;
 	}
 
-	/* 3. Center the status badge items on mobile */
+	/* Keep the status badge from stretching too wide */
 	.status-badge-wrapper {
+		width: auto !important;
+		padding: 10px 20px;
+	}
+
+	/* 4. Footer Reset */
+	.footer-container {
+		display: flex !important;
+		flex-direction: column !important; /* Stack cards vertically */
+		align-items: center !important;
+		width: 100% !important;
+		gap: 15px !important;
+	}
+
+	.footer-card {
+		width: 100% !important; /* Full width cards */
+		max-width: 400px; /* Keeps them from being too chunky on tablets */
+		text-align: center;
+	}
+
+	.footer-bottom-links {
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column; /* Stack About/Contact/Home links */
 		gap: 10px;
+		align-items: center;
 	}
 }
