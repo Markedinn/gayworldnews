@@ -175,8 +175,8 @@ Object.assign(globalData, {
 		sources: ["https://www.equaldex.com/region/comoros", "https://www.humandignitytrust.org/country-profile/comoros/"],
 	},
 
-	congo: {
-		name: "Congo (Republic of)",
+	republic_of_the_congo: {
+		name: "Republic of the Congo",
 		continent: "africa",
 		status: "yellow",
 		legal:
@@ -191,7 +191,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_the_Republic_of_the_Congo", "https://database.ilga.org/congo-lgbti"],
 	},
 
-	drc_congo: {
+	democratic_republic_of_the_congo: {
 		name: "Congo (DRC)",
 		continent: "africa",
 		status: "red",
@@ -367,7 +367,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Guinea", "https://www.humandignitytrust.org/country-profile/guinea/"],
 	},
 
-	guinea_bissau: {
+	guineabissau: {
 		name: "Guinea-Bissau",
 		continent: "africa",
 		status: "yellow",
@@ -726,15 +726,33 @@ Object.assign(globalData, {
 		continent: "africa",
 		status: "red",
 		legal:
-			"Illegal & Lethal. Under the 1962 Penal Code, same-sex acts carry up to 3 years in prison. However, in 2026, Sharia law is the primary legal force, which imposes the death penalty for homosexuality. In areas controlled by Al-Shabaab, executions (including of teenagers) for 'homosexual acts' are reported as recently as late 2025. In the semi-autonomous Somaliland, prison sentences of up to 8 years were issued for gay men in early 2026.",
+			"Lethal Criminalization and Sharia Supremacy. In 2026, Somalia remains one of the most dangerous jurisdictions globally for LGBTQ+ individuals. While the 1962 Penal Code technically mandates 3 months to 3 years of imprisonment for same-sex acts, the reality is governed by Article 2 of the Federal Constitution, which establishes Sharia as the supreme law. In many regions, particularly those under the influence of traditional courts or militant groups like Al-Shabaab, the death penalty is actively sought and carried out for 'homosexuality.' There are zero legal protections against discrimination, and gender identity is viewed as a criminal subversion of Islamic values. State authorities and extremist groups alike maintain a policy of 'moral cleansing,' where suspected queer individuals are targeted for arrest or extrajudicial execution without recourse to a fair trial.",
 		travel:
-			"Avoid Travel. Somalia is one of the most dangerous countries in the world for any traveler, but for an LGBTQ+ person, it is a death-zone. There is zero state protection. Both state actors and militant groups actively hunt for 'immorality.' Digital surveillance is used by extremists to track and kill suspected LGBTQ+ people. Total invisibility is not just a suggestion; it is a life-or-death requirement.",
+			"Extreme Danger - Do Not Travel. Somalia is a high-conflict zone where LGBTQ+ travelers face almost certain persecution if their identity is discovered. The 'Red' status reflects a environment of total hostility. Public Displays of Affection (PDA) or any non-conforming gender expression are considered capital offenses by local militants and can lead to immediate kidnapping, torture, or public execution. Digital safety is a critical concern; extremist groups have been known to monitor social media and dating apps to entrap and 'out' individuals. Consular assistance is virtually non-existent for LGBTQ-specific issues, as local staff and authorities are often complicit in or supportive of the prevailing anti-queer laws. Travelers are advised that even total discretion may not be enough in an environment of active 'morality' policing.",
 		culture:
-			"Total Invisibility. There is no public discussion of LGBTQ+ issues; the topic is a lethal taboo. The community is entirely underground or has fled. Society views LGBTQ+ identity as an ultimate violation of Islam and national identity. Any perceived deviation from strict gender norms can result in immediate and fatal violence from family or 'morality' enforcers.",
+			"Absolute Taboo and Social Purging. Somali culture is deeply conservative, traditional, and centered on a strict interpretation of Sunni Islam. LGBTQ+ identity is not recognized as a human trait but as an 'external moral disease' or a Western conspiracy against Somali heritage. The 'Wantok' or tribal kinship system, while providing social safety for others, acts as a surveillance network against queer people; family members are often the first to report or 'honor kill' relatives suspected of being gay to avoid collective shame. In 2025 and 2026, reports indicate that even perceived 'effeminacy' in men or 'masculinity' in women can lead to violent social purging. There is no visible community, no 'underground' scene, and no safe space within the borders of the country. Silence and invisibility are the only means of survival for those who cannot flee.",
 		health:
-			"Non-existent. There is no safe healthcare for LGBTQ+ people. Seeking care for a related health issue would almost certainly result in being turned over to the authorities or militants. In a medical crisis, the only safe option is immediate evacuation from the country. Do not disclose identity to any local medical personnel.",
-		posture: "Do Not Travel - Extreme risk of execution and state/militant violence.",
-		sources: ["https://www.humandignitytrust.org/country-profile/somalia/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Somalia"],
+			"Hostile and Non-Existent Care. The healthcare infrastructure in Somalia is fragmented and deeply influenced by religious bias. For LGBTQ+ individuals, seeking medical attention is a high-risk activity; doctors are socially and often legally obligated to report 'unnatural acts' to the authorities. Gender-affirming care is a foreign concept and would be treated as a criminal act of 'mutilation' by the state. HIV/AIDS services, where they exist via international NGOs, are heavily stigmatized and often inaccessible to the queer community due to the fear of being 'outed' at a clinic. Travelers must carry a comprehensive medical kit and all personal medications, as local pharmacies are unreliable and pharmacists may interrogate patients about the nature of their prescriptions. In any medical emergency, immediate evacuation to a neighboring country like Kenya or Ethiopia is the only viable and safe path.",
+		posture: "Do Not Travel - Extreme risk of state-sanctioned execution, militant violence, and zero legal recourse.",
+		sources: ["https://www.humandignitytrust.org/country-profile/somalia/", "https://www.state.gov/reports/2023-country-reports-on-human-rights-practices/somalia/"],
+	},
+	somaliland: {
+		name: "Somaliland",
+		continent: "africa",
+		status: "red",
+		legal:
+			"Unrecognized State, Recognized Persecution. While Somaliland operates as a de facto independent republic with its own government, it still enforces the 1962 Somali Penal Code, which criminalizes same-sex activity. In 2026, the legal posture has hardened as the government seeks to prove its 'moral Islamic credentials' to the conservative population. Under Section 409, 'libidinous acts' are punishable by prison, but the pervasive influence of Sharia means that capital punishment remains a constant threat for 'sodomy.' Unlike the chaos of the south, Somaliland has a more functioning police force, which has been utilized in early 2026 to conduct 'morality raids' on private residences. There is no legal recognition for transgender individuals, and 'cross-dressing' is frequently used as a charge to arrest and harass those who deviate from traditional gender binaries.",
+		travel:
+			"Severe Risk and Surveillance. While Somaliland is generally more stable and safer for general tourists than the south, it remains a 'no-go' zone for LGBTQ+ travelers. The 'Red' status is driven by state-led persecution rather than just militant anarchy. Travelers in Hargeisa are under constant social surveillance; hotels and local guides are often culturally conservative and may report 'suspicious' behavior to the police. PDA is strictly forbidden and dangerous. Transgender travelers face extreme scrutiny at the border and within the city, as there is zero local understanding or tolerance for gender diversity. If an LGBTQ+ traveler is arrested, they face a legal system that does not recognize their human rights and a prison system where they would be at extreme risk of violence from both guards and other inmates.",
+		culture:
+			"Conservative Resilience and Religious Governance. Somaliland pride is built on its perceived stability and Islamic identity, both of which are currently used to exclude LGBTQ+ people. In 2025, several local 'uema' (religious councils) issued fatwas against 'Western moral decadence,' specifically targeting queer identities. The concept of 'Somaliland Values' is strictly enforced, and anyone advocating for LGBTQ+ rights is labeled a traitor or a heretic. While some younger people in Hargeisa are quietly aware of global trends via the internet, they remain deeply closeted for fear of state and family retribution. Tribal elders (the Guurti) hold immense power and frequently mediate 'disputes' that involve 'correcting' the behavior of youth who show queer tendencies through forced marriages or religious 're-education.'",
+		health:
+			"Fragile and Discriminatory. Healthcare in Somaliland is limited to basic services in Hargeisa and Berbera. LGBTQ+ patients face overt discrimination and the threat of being turned over to religious police if their sexuality or gender identity is revealed during an exam. There is no access to PrEP or gender-affirming hormones, and anyone found with such medications would likely be interrogated by customs or local health officials. HIV services are minimal and fraught with the risk of social exposure. Travelers are advised that they are entirely on their own regarding health needs; private clinics may offer more privacy, but they are still bound by the laws of the land. Any serious condition requiring surgery or sensitive care should be handled via medical evacuation to more inclusive hubs in the region.",
+		posture: "Extreme Caution - Functioning state-led criminalization and absolute social intolerance.",
+		sources: [
+			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Somaliland",
+			"https://www.amnesty.org/en/location/africa/east-africa-the-horn-and-great-lakes/somalia/report-somalia/",
+		],
 	},
 
 	south_africa: {
@@ -788,7 +806,7 @@ Object.assign(globalData, {
 		],
 	},
 
-	tanzania: {
+	united_republic_of_tanzania: {
 		name: "Tanzania",
 		continent: "africa",
 		status: "red",

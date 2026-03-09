@@ -559,7 +559,7 @@ Object.assign(globalData, {
 		],
 	},
 
-	palestinian_territories: {
+	palestine: {
 		name: "Palestinian Territories",
 		continent: "asia",
 		status: "red",

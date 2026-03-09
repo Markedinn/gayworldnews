@@ -963,6 +963,22 @@ Object.assign(globalData, {
 		],
 	},
 
+	south_georgia_and_the_islands: {
+		name: "South Georgia and the South Sandwich Islands",
+		continent: "americas",
+		status: "green",
+		legal:
+			"British Overseas Territory Jurisdiction. Same-sex marriage has been legal in South Georgia and the South Sandwich Islands since 2014, and civil partnerships were formally recognized in 2020. As a territory administered by the United Kingdom, it falls under the jurisdiction of the Commissioner (who is also the Governor of the Falkland Islands). All UK-aligned anti-discrimination protections apply here. While the territory has no permanent residents, the legal framework ensures that any visiting scientists or staff enjoy the same marital and civil rights as they would in the UK. There are no specific laws regarding gender identity recognition locally, but UK-issued documents are fully recognized.",
+		travel:
+			"Safe (Restricted Access). You cannot simply 'fly' to South Georgia; there are no airstrips. Most people arrive via expedition cruise ships from the Falkland Islands or South America. For the few dozen scientists and temporary staff who work there, the environment is professional and inclusive. The 'Green' status reflects the absolute lack of legal or state-led persecution. Visitors are subject to strict environmental permits, but your identity will not be an issue with the British officials or the Antarctic research community. The biggest danger here is the climate and the wildlife, not the law.",
+		culture:
+			"Scientific and Administrative. There is no 'local' culture in the traditional sense. The 'society' consists entirely of rotating scientists, researchers, and government staff living in small stations like King Edward Point and Bird Island. The culture is one of international cooperation, rigorous environmental protection, and scientific inquiry. It is a highly professional atmosphere where personal identity is respected. The historical site of Grytviken (an old whaling station) serves as a museum and is the only 'social' hub, primarily for visiting tourists.",
+		health:
+			"Basic Research Facilities Only. There are no public hospitals or specialized clinics. The research stations have basic medical facilities for staff, but anyone with a serious medical emergency—or requiring specialized LGBTQ+ health services like HRT—would need to be evacuated by sea to the Falkland Islands or South America. Travelers are required to have comprehensive evacuation insurance. Do not travel here expecting any form of medical infrastructure.",
+		posture: "Full Equality - Same-sex marriage legal since 2014; territory follows UK law; zero permanent population.",
+		sources: ["https://gov.gs/governance/laws-of-sgssi/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_South_Georgia_and_the_South_Sandwich_Islands"],
+	},
+
 	suriname: {
 		name: "Suriname",
 		continent: "americas",
@@ -1116,6 +1132,25 @@ Object.assign(globalData, {
 			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_the_United_States_Virgin_Islands",
 			"https://www.lgbtmap.org/equality-maps/profile_state/VI",
 			"https://www.equaldex.com/region/us-virgin-islands",
+		],
+	},
+
+	united_states_of_america: {
+		name: "United States of America",
+		continent: "americas",
+		status: "yellow",
+		legal:
+			"Federal Protection vs. State Volatility. At the federal level, the United States offers significant protections, including the landmark 2015 Supreme Court ruling (Obergefell v. Hodges) legalizing same-sex marriage nationwide and the 2020 Bostock v. Clayton County decision protecting LGBTQ+ employees from discrimination. The Respect for Marriage Act (2022) further codified these rights against potential judicial reversals. However, in 2024 and 2025, a stark legal divide has emerged between states. While 'sanctuary states' like California and New York have passed robust protections for gender-affirming care, over 20 other states have passed restrictive legislation targeting transgender healthcare, drag performances, and inclusive curricula in schools. This patchwork legal landscape means that rights are not uniform; a traveler's legal standing regarding discrimination and medical autonomy changes significantly the moment they cross state lines, creating a complex environment for both citizens and visitors.",
+		travel:
+			"High Safety with Regional Caveats. The United States remains a top destination for LGBTQ+ travelers, particularly in urban hubs like San Francisco, New York City, and Chicago, which boast world-famous 'gayborhoods' and massive Pride celebrations. The 'Yellow' status is reflective of the increasing social polarization and specific legislative targeting of the transgender community in certain regions. While physical violence is statistically rare for tourists, travelers should be aware of 'Don't Say Gay' climates in states like Florida or Texas, where public expressions of queer identity may face local administrative or social pushback. PDA is generally safe and celebrated in coastal cities but may attract unwanted attention or verbal harassment in deeply rural or socially conservative 'Red State' areas. Transgender travelers are advised to research state-specific laws regarding bathroom usage and healthcare access before departure, as these are currently high-conflict political issues.",
+		culture:
+			"A Culture of Visibility and Polarization. American LGBTQ+ culture is a global powerhouse, influencing media, fashion, and politics worldwide. From the historic legacy of the Stonewall Inn to the mainstream success of queer icons, visibility is at an all-time high. However, this visibility has met with a significant conservative counter-movement. In 2026, the culture is defined by this 'tug-of-war.' Urban centers offer a vibrant, intersectional queer life with diverse nightlife and community centers. Conversely, many rural communities remain centered on traditional religious values where LGBTQ+ life is less visible or actively discouraged. The 'Culture Wars' have made symbols like the Rainbow Flag a political statement; while it is a sign of safety in many windows, it has been the subject of removal controversies in others. Overall, the U.S. is a place of 'extreme variety'—it houses both the most inclusive and some of the most vocal anti-LGBTQ+ social pockets in the Western world.",
+		health:
+			"Advanced Care Amidst Legal Hurdles. The U.S. offers some of the world's most advanced LGBTQ-specific healthcare, particularly in specialized centers like Fenway Health or the Callen-Lorde Community Health Center. HIV care is state-of-the-art, with PrEP widely available via pharmacies, though costs can be prohibitive without insurance. For travelers, the primary concern is the astronomical cost of the private healthcare system; comprehensive travel insurance is mandatory. In 2026, the biggest health challenge is the regional banning of gender-affirming care. Travelers requiring HRT should bring a full supply and a copy of their prescription, as out-of-state doctors in certain jurisdictions may be legally restricted or hesitant to provide continuing care. Emergency rooms are federally required to stabilize all patients (EMTALA), but the cultural competency of staff regarding transgender or non-binary identities varies wildly between a metropolitan teaching hospital and a small rural clinic.",
+		posture: "Regional Variance - Strong federal marriage rights but significant state-level legislative challenges for transgender individuals.",
+		sources: [
+			"https://www.hrc.org/resources/state-scorecards",
+			"https://travel.state.gov/content/travel/en/international-travel/before-you-go/travelers-with-special-considerations/lgbtqi.html",
 		],
 	},
 });

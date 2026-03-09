@@ -5,9 +5,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Gay World News | LGBTQ+ Legal Status, Health, Fun, Travel and Safety</title>
 
-		<link rel="stylesheet" href="index.css?v=grid2" />
+		<link rel="stylesheet" href="index.css?v=grid4" />
 
-		<script src="data.js" defer></script>
+		<script>
+			window.globalData = {};
+		</script>
+
+		<script src="country-info/country-files/africa-data.js"></script>
+		<script src="country-info/country-files/asia-data.js"></script>
+		<script src="country-info/country-files/europe-data.js"></script>
+		<script src="country-info/country-files/americas-data.js"></script>
+		<script src="country-info/country-files/oceania-data.js"></script>
 		<script src="index.js" defer></script>
 	</head>
 
@@ -25,9 +33,20 @@
 
 			<div id="translator-anchor"></div>
 
-			<div class="landing-search-wrap">
-				<input type="text" id="globalSearch" placeholder="Search Country" />
-				<div id="searchResults" class="search-results-floating"></div>
+			<div class="dual-search-container">
+				<div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="Search Country" oninput="filterList()" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+				<a href="lgbt_risk_map.html" class="search-map-link">
+					<div class="search-map-bar">
+						<div class="search-map-content">
+							<span class="search-map-text">Search Map</span>
+						</div>
+						<span class="search-map-arrow">▶</span>
+					</div>
+				</a>
 			</div>
 
 			<nav class="bento-grid">

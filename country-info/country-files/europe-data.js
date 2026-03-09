@@ -181,8 +181,8 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Cyprus", "https://www.equaldex.com/region/cyprus"],
 	},
 
-	czech_republic: {
-		name: "Czech Republic",
+	czechia: {
+		name: "Czechia",
 		continent: "europe",
 		status: "green",
 		legal:
@@ -382,6 +382,22 @@ Object.assign(globalData, {
 		],
 	},
 
+	kosovo: {
+		name: "Kosovo",
+		continent: "europe",
+		status: "yellow",
+		legal:
+			"Constitutional Protection Amidst Legislative Stagnation. Kosovo stands out in the Western Balkans for its remarkably progressive Constitution, which explicitly prohibits discrimination based on sexual orientation (Article 24). This constitutional framework, established post-independence in 2008, was designed to align with European Union standards. Additionally, the 2015 Law on Protection from Discrimination further reinforces these rights in employment and services. However, in 2026, the legal landscape remains incomplete regarding family rights. While there has been significant debate over a new Civil Code that would allow for same-sex civil partnerships, the parliament has repeatedly stalled its adoption due to pressure from conservative and religious groups. As of early 2026, marriage is still defined as a union between a man and a woman. Transgender individuals face significant hurdles, as there is no clear administrative procedure for legal gender recognition, often requiring lengthy and inconsistent court battles to change gender markers on official identification documents.",
+		travel:
+			"Safe with Moderate Discretion. Kosovo is generally a welcoming and safe destination for LGBTQ+ travelers, particularly in the capital, Pristina. The 'Yellow' status reflects a peaceful environment that still requires social awareness. Pristina has hosted successful Pride parades annually since 2017, which are notable for being well-protected and attended by high-ranking government officials. For a traveler, the primary advice is discretion in rural areas and the northern municipalities, where social conservatism and ethnic tensions are higher. Public Displays of Affection (PDA) are not illegal but may attract stares or verbal comments in deeply traditional neighborhoods. In Pristina’s vibrant cafe culture, younger generations are increasingly open and inclusive. Violent crime against tourists is extremely rare, but travelers are advised to avoid political rallies or protests where conservative rhetoric can sometimes target 'non-traditional' lifestyles. Overall, the safety profile is high, provided one navigates the local cultural norms with common sense.",
+		culture:
+			"A Growing Scene in a Traditional Society. Kosovar culture is characterized by a strong sense of hospitality (Besa) and deep-rooted traditional family values. In 2026, a visible generational gap is defining the LGBTQ+ experience. The capital, Pristina, acts as a 'liberal bubble' with a small but dedicated underground scene, featuring queer-friendly bars and art spaces that foster a sense of community. Outside of the capital, society remains largely heteronormative, and the influence of both Islamic and Orthodox traditions plays a role in public perceptions of queer identity. Despite this, Kosovo is one of the few Muslim-majority countries in the world that regularly holds Pride events without significant violence. The LGBTQ+ movement is driven by energetic local NGOs like CEL and CSGD, which have successfully moved the needle on visibility. For the visitor, the culture feels like a society in transition—simultaneously honoring its conservative past while striving toward a more inclusive, European-aligned future.",
+		health:
+			"Developing Infrastructure and Local Support. Healthcare in Kosovo is undergoing modernization but still lags behind Western European standards. In 2026, LGBTQ-specific health services are primarily managed by civil society organizations in Pristina, which offer sensitized counseling and sexual health resources. General medical staff in public hospitals may lack specific training in LGBTQ+ health needs, though they are professional and generally treat foreign patients with respect. PrEP is available but often through specialized clinics rather than every local pharmacy. For transgender travelers, bringing an ample supply of gender-affirming medications is essential, as local endocrinology services are not yet standardized for trans-specific care. Private hospitals in the capital, such as the American Hospital or other international clinics, offer a higher degree of privacy and are recommended for sensitive health concerns. Emergency medical services are available via '194', though English-speaking dispatchers are more common in larger cities.",
+		posture: "Constitutional Leader - Best legal protections in the Balkans; same-sex unions pending; high social conservatism outside Pristina.",
+		sources: ["https://www.lgbti-era.org/content/kosovo", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Kosovo"],
+	},
+
 	latvia: {
 		name: "Latvia",
 		continent: "europe",
@@ -453,6 +469,22 @@ Object.assign(globalData, {
 			"https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/combatting-discrimination/lesbian-gay-bi-trans-and-intersex-equality/lgbtiq-equality-strategy-2026-2030_en",
 			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Luxembourg",
 		],
+	},
+
+	north_macedonia: {
+		name: "North Macedonia",
+		continent: "europe",
+		status: "yellow",
+		legal:
+			"A Framework of Progress with Implementation Gaps. North Macedonia has made significant strides in legalizing LGBTQ+ rights compared to its regional neighbors. Same-sex sexual activity was decriminalized in 1996, and in 2020, the country adopted a comprehensive Law on Prevention and Protection against Discrimination that explicitly includes sexual orientation and gender identity. This was a critical requirement for its European Union accession path. However, in 2026, the legal frontier remains stalled regarding same-sex unions. While marriage is not constitutionally banned, there is no legal recognition for civil unions or domestic partnerships. Furthermore, legal gender recognition for transgender individuals remains a complex judicial process rather than a simplified administrative one. While the laws on the books are increasingly progressive, the state’s ability to enforce these protections in the face of local administrative resistance remains the primary legal hurdle for citizens.",
+		travel:
+			"Safe for Travelers with Moderate Social Caution. North Macedonia is generally safe for LGBTQ+ visitors, particularly in the capital, Skopje. The 'Yellow' status indicates that while state persecution is non-existent, social conservatism remains high. Public Displays of Affection (PDA) are generally tolerated in the center of Skopje and around the tourist areas of Lake Ohrid, but may attract unwanted attention or verbal harassment in smaller towns and rural areas. The country hosted its first Pride parade in 2019, which has since become an annual event, though it requires heavy police protection to ensure safety from small groups of counter-protesters. Travelers should feel comfortable in international hotel chains and mainstream cafes, but a degree of discretion is advised when interacting with older generations or in deeply traditional neighborhoods. Violent incidents against tourists are rare, but 'quiet visibility' is the standard approach for most queer visitors.",
+		culture:
+			"Traditional Values Meeting a Developing Queer Scene. The culture of North Macedonia is a blend of Mediterranean hospitality and Balkan conservatism. In 2026, there is a clear generational divide; younger Macedonians are increasingly inclusive and influenced by global queer media, while the older population remains anchored in traditional Orthodox or Islamic family values. Skopje has a small but resilient LGBTQ+ scene, with several 'safe-space' cafes and underground parties that provide a vibrant sense of community. The culture is not overtly hostile, but it is 'heteronormative'—meaning the assumption of heterosexuality is the default. Pride events have successfully increased visibility, but they are often framed by local media as political events rather than cultural celebrations. For the traveler, the experience is one of being welcomed as a guest first, with your identity being a secondary, private matter in the eyes of the locals.",
+		health:
+			"Improving Access within a Developing System. Healthcare in North Macedonia is accessible but may lack the specific cultural competency found in Western Europe. In 2026, there are specific NGOs in Skopje that provide sensitized health services, including HIV testing and counseling, which are safe for LGBTQ+ individuals. PrEP is becoming more recognized among medical professionals in the capital, though availability can be inconsistent in state-run pharmacies. For transgender travelers, it is vital to bring a full supply of hormones and a copy of the original prescription, as local endocrinologists may be unfamiliar with international standards of care. Most medical staff speak basic English in urban centers and are generally professional, though they may not be trained in LGBTQ-specific health concerns. Private clinics in Skopje offer a higher standard of privacy and are the recommended choice for any sensitive health issues while visiting.",
+		posture: "Progressive Alignment - Strong anti-discrimination laws in place; social conservatism remains high; no legal union recognition yet.",
+		sources: ["https://www.ilga-europe.org/report/annual-review-2024/", "https://www.queer.mk/"],
 	},
 
 	malta: {
@@ -557,6 +589,22 @@ Object.assign(globalData, {
 		],
 	},
 
+	northern_cyprus: {
+		name: "Northern Cyprus",
+		continent: "europe",
+		status: "yellow",
+		legal:
+			"A Post-Colonial Transition to Protection. Northern Cyprus was the final territory in Europe to repeal its colonial-era 'anti-sodomy' laws, decriminalizing same-sex activity in February 2014. In 2026, the legal landscape is defined by the 2014 Penal Code amendments, which not only legalized private consensual acts but also introduced explicit protections against hate speech and discrimination in public services. However, despite these advancements, there is no legal recognition for same-sex unions or marriage, and adoption rights remain unavailable for queer couples. Gender identity is not currently a recognized legal category for document changes, leaving transgender individuals in a state of legal invisibility. While the laws on the books are superior to those in mainland Turkey, the lack of full civil rights for families keeps the region at a 'Yellow' status.",
+		travel:
+			"Safe and Welcoming for Discrete Travelers. Northern Cyprus is a peaceful and increasingly popular tourist destination where LGBTQ+ travelers face very little risk of state-led harassment. The 'Yellow' status reflects the conservative social backdrop rather than any legal danger. In the capital, North Nicosia (Lefkoşa), and coastal towns like Girne (Kyrenia), the atmosphere is relaxed, and queer travelers are welcomed as guests. Public Displays of Affection (PDA) should be kept to a minimum to avoid local discomfort, but the risk of violence is extremely low. The region has begun hosting small Pride events, which have been attended by local mayors, signaling a significant shift in government posture. Travelers should feel confident using mainstream hotels and restaurants, as the local economy relies heavily on tourism and maintains a professional 'live and let live' attitude.",
+		culture:
+			"Secularism vs. Traditional Influence. The culture of Northern Cyprus is distinct from both mainland Turkey and the Republic of Cyprus. It is a largely secular society where the influence of religion on daily law is minimal. In 2026, there is a vibrant sense of community in the north, driven by local NGOs like 'Queer Cyprus,' which have successfully normalized the conversation around LGBTQ+ rights. However, family remains the core of society, and many local queer people choose to remain 'closeted' to their older relatives to maintain social harmony. For a visitor, the culture is one of profound hospitality (Misafirperverlik), where you are treated with respect regardless of your background, provided you respect local social boundaries. It is an environment of 'quiet acceptance' rather than 'celebrated pride.'",
+		health:
+			"Developing but Professional Care. Healthcare in Northern Cyprus is generally of a good standard, though smaller than the systems in neighboring countries. In 2026, LGBTQ+ individuals can access healthcare without fear of legal reprisal, but specific cultural competency among doctors varies. There are no specialized 'LGBTQ+ clinics,' but private hospitals in Lefkoşa offer high-quality, confidential care. PrEP is available but often requires sourcing through specific pharmacies or NGOs. For transgender travelers, it is essential to bring your own supply of hormones, as the local medical system is not yet standardized for gender-affirming care. In cases of serious medical emergencies, patients are often transferred to high-tech hospitals in Turkey, which offer a full range of services but may have a different social climate. Emergency services are responsive and generally have English-speaking staff in tourist areas.",
+		posture: "Safe & Progressive - Decriminalized in 2014; hate speech protection in place; no family rights yet; high safety for tourists.",
+		sources: ["https://www.humandignitytrust.org/country-profile/northern-cyprus/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Northern_Cyprus"],
+	},
+
 	poland: {
 		name: "Poland",
 		continent: "europe",
@@ -611,7 +659,7 @@ Object.assign(globalData, {
 	russia: {
 		name: "Russia",
 		continent: "europe",
-		status: "black",
+		status: "red",
 		legal:
 			"Total Criminalization. In **November 2023**, the Russian Supreme Court designated the 'International LGBT Movement' as a **terrorist and extremist organization**. In 2026, this means that even displaying a rainbow flag or identifying as queer in public can lead to years of imprisonment under 'terrorism' or 'extremism' charges. In **July 2023**, a total ban on gender-affirming care and legal gender change was enacted. There is no legal protection; rather, the state actively hunts and prosecutes LGBTQ+ individuals and activists. It is currently one of the most dangerous countries in the world for the community.",
 		travel:
@@ -624,7 +672,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Russia", "https://www.themoscowtimes.com/2023/11/30/russia-bans-lgbt-movement-as-extremist-a83262"],
 	},
 
-	serbia: {
+	republic_of_serbia: {
 		name: "Serbia",
 		continent: "europe",
 		status: "yellow",
@@ -787,3 +835,8 @@ Object.assign(globalData, {
 		],
 	},
 });
+
+// Check if 'russia' exists, then link the Cosmodrome to it
+if (window.globalData && window.globalData.russia) {
+	window.globalData.baykonur_cosmodrome = window.globalData.russia;
+}

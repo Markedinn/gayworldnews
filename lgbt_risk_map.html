@@ -1,0 +1,259 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Gay World News – LGBT Risk Map</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+		<script>
+			window.globalData = {};
+		</script>
+
+		<script src="country-info/country-files/africa-data.js"></script>
+		<script src="country-info/country-files/americas-data.js"></script>
+		<script src="country-info/country-files/asia-data.js"></script>
+		<script src="country-info/country-files/europe-data.js"></script>
+		<script src="country-info/country-files/oceania-data.js"></script>
+
+		<style>
+			html,
+			body,
+			#map {
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				height: 100%;
+				background: #1a2b56;
+			}
+
+			#hoverBox {
+				position: absolute;
+				background: white;
+				padding: 8px 12px;
+				border-radius: 6px;
+				pointer-events: none;
+				display: none;
+				z-index: 10000;
+				border: 1px solid #ccc;
+				font-size: 14px;
+			}
+
+			#legend {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				background: rgba(255, 255, 255, 0.95);
+				padding: 15px;
+				border-radius: 8px;
+				z-index: 9999;
+				width: 240px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+			}
+
+			.legend-item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 8px;
+				font-size: 13px;
+			}
+			.color-box {
+				width: 16px;
+				height: 16px;
+				margin-right: 10px;
+				border-radius: 3px;
+				border: 1px solid #666;
+			}
+
+			.leaflet-overlay-pane {
+				z-index: 400 !important;
+			}
+			#legend {
+				position: absolute;
+				top: 20px;
+				left: 20px;
+				background: rgba(255, 255, 255, 0.95);
+				padding: 0; /* Changed to 0 so the header fills the space */
+				border-radius: 8px;
+				z-index: 9999;
+				width: 240px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+				overflow: hidden; /* Clips the content when closed */
+				transition: all 0.3s ease;
+			}
+
+			#legendHeader {
+				padding: 12px 15px;
+				background: #f8fafc;
+				cursor: pointer;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom: 1px solid #eee;
+			}
+
+			#legendHeader:hover {
+				background: #f1f5f9;
+			}
+
+			#legendContent {
+				padding: 15px;
+				transition: max-height 0.3s ease;
+			}
+
+			/* State for when legend is collapsed */
+			.legend-collapsed #legendContent {
+				display: none;
+			}
+
+			#legendArrow {
+				font-size: 12px;
+				transition: transform 0.3s ease;
+			}
+
+			.legend-collapsed #legendArrow {
+				transform: rotate(-90deg); /* Points arrow sideways when closed */
+			}
+
+			/* This hides the text content when the class is present */
+			.legend-collapsed #legendContent {
+				display: none;
+			}
+
+			/* This rotates the arrow so it points 'closed' by default */
+			.legend-collapsed #legendArrow {
+				transform: rotate(-90deg);
+			}
+
+			/* Change arrow color to Pink */
+			#legendArrow {
+				font-size: 14px;
+				color: #ff3399; /* <--- Replace with your exact Pink hex code */
+				transition: transform 0.3s ease;
+				user-select: none; /* Prevents the arrow itself from being highlighted/selected */
+			}
+
+			/* Remove the 'flashing' underline/focus ring on click */
+			#legendHeader {
+				outline: none !important;
+				-webkit-tap-highlight-color: transparent; /* Removes the blue flash on mobile tap */
+			}
+
+			/* For accessibility, we keep the outline only for keyboard users */
+			#legendHeader:focus-visible {
+				outline: 2px solid; /* Change arrow color to Pink */
+			}
+			#legendArrow {
+				font-size: 14px;
+				color: #ff3399; /* <--- Replace with your exact Pink hex code */
+				transition: transform 0.3s ease;
+				user-select: none; /* Prevents the arrow itself from being highlighted/selected */
+			}
+
+			/* Remove the 'flashing' underline/focus ring on click */
+			#legendHeader {
+				outline: none !important;
+				-webkit-tap-highlight-color: transparent; /* Removes the blue flash on mobile tap */
+			}
+
+			/* For accessibility, we keep the outline only for keyboard users */
+			#legendHeader:focus-visible {
+				outline: 2px solid #ff3399;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="legend" class="legend-collapsed">
+			<div id="legendHeader" onclick="toggleLegend()">
+				<h3 style="margin: 0; font-size: 16px; color: #333">LGBT Risk Advisory</h3>
+				<span id="legendArrow">▼</span>
+			</div>
+			<div id="legendContent">
+				<div class="legend-item">
+					<div class="color-box" style="background: #22c55e"></div>
+					<strong>Green:&nbsp;</strong> Safe / Normal
+				</div>
+				<div class="legend-item">
+					<div class="color-box" style="background: #eab308"></div>
+					<strong>Yellow:&nbsp;</strong> Caution Required
+				</div>
+				<div class="legend-item">
+					<div class="color-box" style="background: #ef4444"></div>
+					<strong>Red:&nbsp;</strong> Danger / Persecution
+				</div>
+				<div class="legend-item">
+					<div class="color-box" style="background: #a5dff9"></div>
+					<strong>Ice:&nbsp;</strong> International Territory
+				</div>
+			</div>
+		</div>
+
+		<div id="map"></div>
+
+		<script>
+			// Replace your existing <script> inside the <body> with this:
+
+			const map = L.map("map", {
+				zoomSnap: 0.1,
+				attributionControl: false,
+				zoomControl: false, // This line hides the +/- buttons
+			}).setView([15, 0], 2);
+
+			// 1. Check if data files loaded
+			console.log("Data Status:", window.globalData ? "Loaded" : "Missing!");
+
+			// 2. Fetch the world shapes
+			fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
+				.then((res) => {
+					if (!res.ok) throw new Error("Network block! Are you running this locally?");
+					return res.json();
+				})
+				.then((geo) => {
+					L.geoJSON(geo, {
+						style: function (feature) {
+							// GeoJSON uses .ADMIN or .name. We check both.
+							const rawName = feature.properties.ADMIN || feature.properties.name || "";
+							const key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+
+							const country = window.globalData ? window.globalData[key] : null;
+							let status = country ? country.status.toLowerCase() : "gray";
+
+							let color = "#94a3b8"; // Default gray
+							if (status === "green") color = "#22c55e";
+							else if (status === "yellow") color = "#eab308";
+							else if (status === "red" || status === "danger") color = "#ef4444";
+							else if (status === "black") color = "#1a1a1a";
+							else if (status === "ice" || status === "advisory") color = "#00e5ff";
+
+							return {
+								fillColor: color,
+								// THE TRICK: Match the border to the sea (#1a2b56)
+								color: "#1a2b56",
+								// SLEEK WEIGHT: Thin but visible for land-to-land borders
+								weight: 0.8,
+								fillOpacity: 0.9, // Slightly higher opacity makes the colors richer
+							};
+						},
+						onEachFeature: (feature, layer) => {
+							const rawName = feature.properties.ADMIN || feature.properties.name || "";
+							const key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+
+							layer.on("click", () => {
+								window.location.href = `country.html?c=${key}`;
+							});
+						},
+					}).addTo(map);
+				})
+				.catch((err) => {
+					console.error("MAP ERROR:", err);
+					alert("The map couldn't load the country shapes. If you are testing this locally, please upload it to your web server first!");
+				});
+			function toggleLegend() {
+				const legend = document.getElementById("legend");
+				legend.classList.toggle("legend-collapsed");
+			}
+		</script>
+	</body>
+</html>

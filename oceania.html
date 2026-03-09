@@ -4,14 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Oceania | Gay World News</title>
-		<link rel="stylesheet" href="index.css?v=grid2" />
+		<link rel="stylesheet" href="index.css?v=grid4" />
 		<script>
 			window.globalData = window.globalData || {};
 		</script>
 
 		<script src="country-info/country-files/oceania-data.js"></script>
 
-		<script src="continent.js" defer></script>
+		<script src="index.js" defer></script>
+
 		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
 	<body data-continent="oceania">
@@ -35,9 +36,20 @@
 
 			<div id="translator-anchor"></div>
 
-			<div class="landing-search-wrap">
-				<input type="text" id="globalSearch" placeholder="Search Countries..." />
-				<div id="searchResults" class="search-results-floating"></div>
+			<div class="dual-search-container">
+				<div class="landing-search-wrap">
+					<input type="text" id="globalSearch" name="country-search" placeholder="Search Country" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+				<a href="lgbt_risk_map.html" class="search-map-link">
+					<div class="search-map-bar">
+						<div class="search-map-content">
+							<span class="search-map-text">Search Map</span>
+						</div>
+						<span class="search-map-arrow">▶</span>
+					</div>
+				</a>
 			</div>
 
 			<section class="bento-grid" id="countryGrid"></section>

@@ -76,10 +76,12 @@
 	background: #e40303;
 	box-shadow: 0 0 8px #e40303;
 }
-.orange,
-.status-dot-country.orange {
-	background: #ff8c00;
-	box-shadow: 0 0 8px #ff8c00;
+.ice,
+.status-dot-country.ice {
+	background: rgba(0, 229, 255, 0.6) !important; /* Vivid Cyan with glass transparency */
+	border: 1px solid rgba(255, 255, 255, 0.4); /* Brighter border for a "chilled" look */
+	color: #ffffff !important;
+	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8); /* Subtle glow to make the text "icey" */
 }
 
 /* 3. The Modern Accordion */

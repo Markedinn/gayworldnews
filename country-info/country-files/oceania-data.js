@@ -94,6 +94,21 @@ Object.assign(window.globalData, {
 		posture: "Quiet Discretion - Same-sex acts are legal, but the society is small, traditional, and lacks protective infrastructure.",
 		sources: ["https://en.wikipedia.org/wiki/LGBT_rights_in_Nauru", "https://www.equaldex.com/region/nauru"],
 	},
+	new_caledonia: {
+		name: "New Caledonia",
+		continent: "oceania",
+		status: "yellow",
+		legal:
+			"French Legal Framework with Pacific Nuance. As a special collectivity of France, New Caledonia is governed by French law regarding LGBTQ+ rights. Same-sex marriage has been legal since 2013, and joint adoption rights were established at the same time. Consensual same-sex activity was never criminalized under French rule, and the age of consent has been equalized since 1982. In 2026, comprehensive anti-discrimination protections cover sexual orientation and gender identity in employment, housing, and public services. Transgender individuals can change their legal gender without the requirement of surgery. However, the application of these laws can sometimes face hurdles in local customary jurisdictions, where traditional Kanak law (which governs civil matters for many indigenous people) may not always align perfectly with the French secular civil code.",
+		travel:
+			"Safe but Socially Conservative. The 'Yellow' status for 2026 is primarily due to ongoing political civil unrest and the sharp divide between urban Nouméa and rural areas. While state persecution is non-existent, visible same-sex relationships are not widely accepted outside the capital. Public Displays of Affection (PDA) may meet with social disapproval or 'introspection' in customary Kanak lands and smaller islands like the Loyalty Islands. Travelers should exercise caution due to the general security situation following the 2024–2025 riots; however, there is no specific targeting of LGBTQ+ tourists. Discretion and respect for local 'custom' (Kanak traditions) are essential when traveling outside tourist resorts. The atmosphere in Nouméa is more relaxed and aligned with European social norms.",
+		culture:
+			"A Blend of French Liberalism and Melanesian Tradition. The culture is a unique mix of European secularism and indigenous Melanesian values. In 2026, the local LGBTQ+ movement is increasingly active, with organizations like 'Diversités NC' providing support and advocacy. However, for many Kanak communities, identity is deeply tied to traditional family structures and clan lineage, which can make 'coming out' a complex social challenge. The capital, Nouméa, has a modest queer-friendly scene, including bars and associative spaces that feel like small pockets of France. Outside the city, life is governed by 'La Coutume' (custom), which emphasizes community harmony over individual expression. A tragic 'transfemicide' in early 2026 sparked a nationwide dialogue about gender-based violence, signaling both the risks that persist and the growing social push for inclusion and safety.",
+		health:
+			"Top-Tier Care with French Standards. Healthcare in New Caledonia is excellent, particularly in Nouméa, which serves as a regional medical hub for the South Pacific. In 2026, LGBTQ+ travelers can access health services with the same level of privacy and professionalism expected in mainland France. The Medipôle de Koutio is a state-of-the-art facility capable of handling most medical needs. Gender-affirming care is available, though specialized surgeries often require travel to Australia or France. PrEP is available through local pharmacies and clinics. For travelers, the main risk is the availability of care in remote areas and the disruption of services during civil unrest. It is always recommended to have comprehensive travel insurance that includes medical evacuation, as the cost of private care can be high for non-French citizens.",
+		posture: "Legal Equality - Same-sex marriage and adoption are legal; strong anti-discrimination laws; social conservatism in rural areas.",
+		sources: ["https://database.ilga.org/new-caledonia-france-lgbti", "https://travel.gc.ca/destinations/new-caledonia"],
+	},
 	new_zealand: {
 		name: "New Zealand",
 		continent: "oceania",
@@ -108,6 +123,19 @@ Object.assign(window.globalData, {
 			"World-Class and Inclusive Care. The healthcare system is highly advanced and LGBTQ-competent. In 2026, gender-affirming healthcare is accessible through the public health system (Te Whatu Ora), though wait times for specific surgeries can vary. HIV care is state-of-the-art; U=U (Undetectable = Untransmittable) is a central pillar of public health campaigns, and PrEP is widely available and subsidized for residents. For travelers, private clinics like 'Sexual Wellbeing Aotearoa' offer professional, non-judgmental services. Pharmacies in both rural and urban areas are well-stocked and familiar with hormone replacement therapy (HRT) medications. Emergency services are reliable and treat all patients with dignity. Visitors should ensure they have travel insurance, as while the care is excellent, costs for non-residents can be high in the private sector.",
 		posture: "Full Inclusion - Comprehensive legal protection, high social acceptance, and specialized healthcare availability.",
 		sources: ["https://en.wikipedia.org/wiki/LGBT_rights_in_New_Zealand", "https://www.hrc.co.nz/our-work/lgbti-rights/"],
+	},
+	antarctica: {
+		name: "Antarctica",
+		continent: "oceania",
+		status: "ice",
+		legal:
+			"A World Sanctuary. Governed by the Antarctic Treaty, Antarctica has no local laws but follows the home-nation laws of its visitors. All territorial claimants (UK, Norway, etc.) have full legal protections. In 2016, it was symbolically declared the 'World's First LGBT-Friendly Continent.'",
+		travel:
+			"Environmentally intense but socially safe. No state-led persecution exists. The biggest dangers are the weather and wildlife. Cruise staff and scientists are famously inclusive.",
+		culture: "Scientific collaboration. 'Polar Pride' is celebrated annually on Nov 18th across major research stations. It’s a community of international cooperation.",
+		health: "Emergency stabilize-and-evacuate only. No specialized clinics or pharmacies. Bring all personal medical supplies.",
+		posture: "Global Sanctuary - Governed by international treaty; host to annual 'Polar Pride' events.",
+		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Antarctica"],
 	},
 	palau: {
 		name: "Palau",

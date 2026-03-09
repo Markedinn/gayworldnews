@@ -209,86 +209,184 @@ body::before {
 	color: #ffffff;
 }
 
-/* --- 5. SEARCH BAR (THE LEVITATOR) --- */
+/* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
-	grid-column: 2;
 	position: relative;
+	width: 100%; /* CRITICAL: Ensures the dropdown has a width to match */
+	z-index: 1001; /* Must be higher than the map bar below it */
 }
 
+/* THE INPUT */
 .landing-search-wrap input {
 	width: 100%;
-	padding: 14px 25px;
+	height: 48px; /* Matching the height we set for the stack */
+	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	color: #24408e;
-	font-weight: 700;
+	background: #ffffff;
+	border: 2px solid #e2e8f0;
+	color: #ff3399;
+	font-size: 16px;
+	font-weight: 600;
 	outline: none;
+	text-align: center;
+	box-sizing: border-box; /* Prevents padding from breaking width */
+}
+
+/* Ensure the placeholder isn't blurred or too faint */
+.landing-search-wrap input::placeholder {
+	color: #ff3399;
+}
+
+/* --- 1. THE DROPDOWN TRAY --- */
+/* THE TRAY */
+.search-results-floating {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	z-index: 2000;
+
+	background: rgba(255, 255, 255, 0.1);
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
+	border-radius: 15px;
+	padding: 10px;
+	gap: 8px;
+
+	max-height: 400px;
+	overflow-y: auto;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+	margin-top: 10px;
+}
+
+/* THE CARDS INSIDE (Using Country.css shades with Bento transparency) */
+.search-results-floating .country-card {
+	width: 100% !important;
+	margin: 0 !important;
+	color: #ffffff !important;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* GREEN: Safe (#16d242) */
+.search-results-floating .country-card.green,
+.search-results-floating .country-card.safe {
+	background: rgba(22, 210, 66, 0.6) !important;
+}
+
+/* YELLOW: Warning (#ffc107) */
+.search-results-floating .country-card.yellow,
+.search-results-floating .country-card.warning {
+	background: rgba(255, 193, 7, 0.6) !important;
+	color: #ffffff !important;
+}
+
+/* RED: Danger (#e40303) */
+.search-results-floating .country-card.red,
+.search-results-floating .country-card.danger {
+	background: rgba(228, 3, 3, 0.7) !important;
+	color: #ffffff !important;
+}
+
+/* ICE ADVISORY: Frost Blue (#00e5ff) */
+.search-results-floating .country-card.ice,
+.search-results-floating .country-card.advisory {
+	background: rgba(0, 229, 255, 0.6) !important; /* Vivid Cyan with glass transparency */
+	border: 1px solid rgba(255, 255, 255, 0.4); /* Brighter border for a "chilled" look */
+	color: #ffffff !important;
+	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8); /* Subtle glow to make the text "icey" */
+}
+
+/* --- NEW GLOBAL ICE ADVISORY --- */
+.country-card.ice,
+.country-card.advisory {
+	background: rgba(0, 229, 255, 0.6) !important; /* Vivid Cyan glass */
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	color: #ffffff !important;
+	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
+.search-map-link {
+	text-decoration: none;
+	display: block;
+	margin: 10px 0 25px 0;
+}
+
+.search-map-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Centers the content group */
+	background: #ffffff;
+	border: 2px solid #e2e8f0;
+	padding: 12px 20px;
+	border-radius: 50px;
+	position: relative; /* Necessary to anchor the arrow */
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.search-map-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 12px;
+}
+
+.search-map-text {
+	color: #ff3399;
+	font-size: 16px;
+	font-weight: 600; /* Synced to your search bar */
 	text-align: center;
 }
 
-/* 2. THE DROP-DOWN RESULTS (Flipped from Upward to Downward) */
-.search-results-floating {
-	position: absolute;
-	top: calc(100% + 10px); /* Changed from 'bottom' to 'top' */
-	left: 50%;
-	transform: translateX(-50%);
-	width: 100%;
-	display: none;
-	flex-direction: column; /* Stack DOWNWARD now */
-	gap: 10px;
-	z-index: 1000;
+.search-map-arrow {
+	position: absolute; /* Takes the arrow out of the layout flow */
+	right: 25px; /* Parks it on the right side */
+	color: #ff3399;
+	font-weight: bold;
+	font-size: 18px;
 }
 
-.search-results-floating {
-	position: absolute;
-	top: calc(100% + 8px);
-	/* THE CENTERING TRICK */
-	left: 50%;
-	transform: translateX(-50%);
-
-	width: 100%; /* Matches the exact width of the search bar above it */
-	display: none;
+/* THE MASTER CONTAINER - TIGHTENED */
+.dual-search-container {
+	grid-column: 2;
+	display: flex;
 	flex-direction: column;
-	z-index: 1000;
-
-	/* THE LOOK & SCROLL */
-	max-height: 280px;
-	overflow-y: auto;
-	border-radius: 12px;
-	background: #2f3542; /* The Bold Slate Gray */
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	gap: 8px; /* Reduced gap between the two bars */
+	width: 100%;
+	max-width: 600px; /* Perfect width for a centered "stack" */
+	margin: 10px auto 20px auto; /* 10px above (under translator), 20px below (above bento) */
 }
 
-.search-results-floating a {
-	display: flex; /* Essential for alignment */
-	align-items: center; /* Vertical center */
-	justify-content: center; /* Horizontal center */
-	text-align: center; /* Fallback for older browsers */
-
-	padding: 14px 20px;
-	color: #ffffff;
-	text-decoration: none;
-	font-weight: 600;
-	font-size: 0.95rem;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-	transition: background 0.2s;
+/* 1. MOBILE & INTERMEDIATE (Up to 27-inch / 1920px) */
+/* Keep them stacked so they never look unlevel */
+.landing-search-wrap,
+.search-map-link {
+	width: 100%;
 }
 
-.search-results-floating a:last-child {
-	border-bottom: none;
+.landing-search-wrap input,
+.search-map-bar {
+	height: 48px; /* Slightly slimmer for a tighter look */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.search-results-floating a:hover {
-	background: #f544b1; /* U=U Pink highlight on hover */
-	color: white;
-}
-
-/* Hide the scrollbar for the results tray specifically */
-.search-results-floating::-webkit-scrollbar {
-	display: none;
+/* 2. ONLY SIDE-BY-SIDE ON ULTRA-WIDE (> 2000px) */
+@media (min-width: 2000px) {
+	.dual-search-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 15px;
+		max-width: 900px;
+		width: 110%;
+		margin-left: -5%;
+	}
 }
 
 .bento-grid {
