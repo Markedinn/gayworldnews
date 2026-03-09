@@ -194,7 +194,7 @@ body::before {
 
 /* Styling the actual list items inside the dropdown */
 #translator-anchor select option {
-	background-color: #2f3542; /* Matches the Search Results Slate Gray */
+	background-color: #f544b1; /* Matches the Search Results Slate Gray */
 	color: #ffffff; /* White text for readability */
 	padding: 15px; /* Gives the list some "air" */
 	font-size: 1rem;

@@ -161,18 +161,87 @@
 	pointer-events: none; /* Allows clicks to pass through the container... */
 }
 
+/* --- 4. TRANSLATOR & BENTO CARDS --- */
 #translator-anchor {
-	pointer-events: auto; /* ...but ensures the actual button IS clickable */
+	grid-column: 2;
+	width: 100%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-top: 15px;
 }
 
-/* Match the translator to your branding */
+/* 2. The Pink Triangle */
+#translator-anchor::after {
+	content: "▼"; /* The solid downward triangle */
+	position: absolute;
+	right: 20px; /* Distance from the right edge */
+	top: 50%;
+	transform: translateY(-50%);
+	color: #f544b1; /* Your signature pink */
+	font-size: 1.25rem;
+	pointer-events: none; /* Allows clicks to pass through to the select */
+	z-index: 5;
+}
+
+/* 3. The Select adjustment */
 #translator-anchor select {
-	background: #24408e;
-	color: white;
-	border: 1px solid white;
-	border-radius: 4px;
-	padding: 6px 12px;
-	font-size: 14px;
+	height: 60px; /* Set a fixed height instead of 70% */
+	padding: 0 45px; /* Add space on the right so text doesn't hit the triangle */
+	appearance: none; /* Hides the boring default browser arrow */
+	text-align: center;
+	text-align-last: center;
+	-webkit-appearance: none;
+}
+
+#translator-anchor select,
+.bento-card {
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 12px;
+	padding: 20px;
+	color: #ffffff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.3s ease;
 	cursor: pointer;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	appearance: none;
+	font-size: 1rem; /* Explicitly set the size */
+	font-family: inherit; /* Forces the select to use the Body font */
+	line-height: normal; /* Prevents the browser from squashing the text */
+	-webkit-appearance: none;
+}
+
+#translator-anchor:hover select,
+.bento-card:hover {
+	transform: translateY(-5px);
+	background: rgba(255, 255, 255, 0.4);
+}
+
+/* Styling the actual list items inside the dropdown */
+#translator-anchor select option {
+	background-color: #2f3542; /* Matches the Search Results Slate Gray */
+	color: #ffffff; /* White text for readability */
+	padding: 15px; /* Gives the list some "air" */
+	font-size: 1rem;
+	text-transform: none; /* Keep language names readable (not all caps) */
+}
+
+/* On some browsers, we can style the hover state of the list */
+#translator-anchor select option:hover,
+#translator-anchor select option:focus,
+#translator-anchor select option:active {
+	background-color: #f544b1; /* U=U Pink highlight when hovering/selecting */
+	color: #ffffff;
 }

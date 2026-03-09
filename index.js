@@ -1,9 +1,4 @@
-// --- 1. INITIALIZATION ---
-
 document.addEventListener("DOMContentLoaded", () => {
-	// We removed the footer/banner injection because they are now hard-coded in your HTML.
-
-	// --- 2. LANDING PAGE SEARCH ---
 	const globalInput = document.getElementById("globalSearch");
 	const globalResults = document.getElementById("searchResults");
 	const targetContinent = document.body.dataset.continent;
@@ -21,22 +16,19 @@ document.addEventListener("DOMContentLoaded", () => {
 					const matchesSearch = country.name.toLowerCase().startsWith(value);
 					const matchesContinent = !targetContinent || country.continent === targetContinent;
 
-					/* --- REPLACE JUST THIS BLOCK INSIDE THE SEARCH LOOP --- */
 					if (matchesSearch && matchesContinent) {
 						const link = document.createElement("a");
+						// Key is already underscored (e.g., san_marino), which our loader loves
 						link.href = `country.html?c=${key}`;
 
-						const s = country.status.toLowerCase();
+						// FORCE RED LOGIC
+						let s = country.status.toLowerCase();
+						if (s === "danger" || s === "black") s = "red";
 
-						// Change to 'country-card' to borrow the continent styles
 						link.className = `country-card ${s}`;
-
-						// Just the name (No dot needed when the whole card is the color)
 						link.innerHTML = `${country.name}`;
-
 						globalResults.appendChild(link);
 					}
-					/* ------------------------------------------------------ */
 				});
 			} else {
 				globalResults.style.display = "none";
@@ -44,42 +36,46 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// --- 3. AUTOMATIC COUNTRY LIST (For Continent Pages) ---
+	// --- AUTOMATIC COUNTRY LIST (FIXED) ---
 	const listContainer = document.getElementById("countryGrid");
-	if (listContainer && typeof globalData !== "undefined") {
-		const targetContinent = document.body.dataset.continent;
-		listContainer.innerHTML = "";
+	if (listContainer) {
+		let homeAttempts = 0;
+		const waitForHomeData = setInterval(() => {
+			homeAttempts++;
 
-		Object.keys(globalData)
-			.sort()
-			.forEach((key) => {
-				const country = globalData[key];
-				if (!targetContinent || country.continent === targetContinent) {
-					const card = document.createElement("a");
-					card.href = `country.html?c=${key}`;
+			// Only run once globalData is defined AND has countries in it
+			if (typeof globalData !== "undefined" && Object.keys(globalData).length > 0) {
+				clearInterval(waitForHomeData);
 
-					// Direct pass-through of the color word (red, yellow, green)
-					const s = country.status.toLowerCase();
+				listContainer.innerHTML = "";
+				Object.keys(globalData)
+					.sort()
+					.forEach((key) => {
+						const country = globalData[key];
+						if (!targetContinent || country.continent === targetContinent) {
+							const card = document.createElement("a");
+							card.href = `country.html?c=${key}`;
 
-					// We apply the color class to the whole card
-					card.className = `country-card ${s}`;
+							let s = (country.status || "warning").toLowerCase();
+							if (s === "danger" || s === "black") s = "red";
 
-					// We remove the <span> dot and just show the name
-					card.innerHTML = `${country.name}`;
+							card.className = `country-card ${s}`;
+							card.innerHTML = `${country.name}`;
+							listContainer.appendChild(card);
+						}
+					});
+			}
 
-					listContainer.appendChild(card);
-				}
-			});
+			// Stop trying after 5 seconds
+			if (homeAttempts > 50) {
+				clearInterval(waitForHomeData);
+				console.error("Home Data failed to load.");
+			}
+		}, 100);
 	}
 });
 
-// --- 4. UTILITIES ---
-
 // ESC KEY EXIT
 document.addEventListener("keydown", (e) => {
-	if (e.key === "Escape") performQuickExit();
+	if (e.key === "Escape") window.location.replace("https://www.youtube.com");
 });
-
-function performQuickExit() {
-	window.location.replace("https://www.youtube.com");
-}

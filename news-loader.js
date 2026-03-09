@@ -449,7 +449,7 @@ function isBlocked(text) {
 	if (/proposes|introduces bill|washington|draft bill|could ban|may ban|considers banning/.test(T)) return true;
 
 	// BLOCK PRIDE & COMMUNITY EVENTS
-	if (/pride|festival|parade|drag show|community event/.test(T)) return true;
+	if (/pride|festival|parade|drag show|eurovision|community event/.test(T)) return true;
 
 	// BLOCK SYMBOLIC PROTESTS
 	if (/peaceful protest|march for awareness|activists gather/.test(T)) return true;

@@ -5,10 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title id="dynamic-title">Country Details | Gay World News</title>
 		<link rel="stylesheet" href="index.css?v=grid2" />
-		<link rel="stylesheet" href="country.css?v=3" />
-		<script src="data.js" defer></script>
-		<script src="index.js" defer></script>
-		<script src="country-loader.js" defer></script>
+		<link rel="stylesheet" href="country.css?v=4" />
+
 		<link rel="icon" type="image/webp" sizes="32x32" href="images/favicon.webp" />
 	</head>
 	<body class="standard-page">
@@ -27,7 +25,7 @@
 					<h4>U=U: Undetectable = Untransmittable</h4>
 					<p>HIV Medication Keeps Everyone Safe</p>
 					<div style="margin-top: 10px; font-size: 0.85rem; border-top: 1px solid rgba(255, 255, 255, 0.2); padding-top: 10px; opacity: 0.9">
-						<strong>Database Note:</strong> Detailed safety information is being verified daily as our structure is finalized.
+						<strong>Note: We are still building this site - Much more coming soon!</strong>
 					</div>
 				</div>
 			</a>
@@ -65,6 +63,20 @@
 				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
 			</div>
 		</footer>
+		<script>
+			// Create the bucket on the window object so it's impossible to miss
+			window.globalData = window.globalData || {};
+		</script>
+
+		<script src="country-info/country-files/africa-data.js"></script>
+		<script src="country-info/country-files/americas-data.js"></script>
+		<script src="country-info/country-files/asia-data.js"></script>
+		<script src="country-info/country-files/europe-data.js"></script>
+		<script src="country-info/country-files/oceania-data.js"></script>
+
+		<script src="country-info/country-loader.js"></script>
+
+		<script src="index.js"></script>
 
 		<script>
 			window.gtranslateSettings = {
