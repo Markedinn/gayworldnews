@@ -635,6 +635,22 @@ Object.assign(globalData, {
 		sources: ["https://www.humandignitytrust.org/country-profile/nigeria/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Nigeria"],
 	},
 
+	reunion_island: {
+		name: "Réunion Island (France)",
+		continent: "africa",
+		status: "green",
+		legal:
+			"Full Equality. As an overseas department of France, Réunion is governed by the French Penal Code. Same-sex marriage has been legal since 2013, and comprehensive anti-discrimination laws protect LGBTQ+ individuals in employment, housing, and public services. Article 225-1 of the Penal Code strictly prohibits discrimination based on sexual orientation or gender identity. Procedures for legal gender recognition are available without the requirement of medical intervention. While the island is geographically distant from Paris, the legal 'safety net' is identical to mainland France, ensuring that LGBTQ+ rights are constitutionally protected and enforced by the local Prefecture.",
+		travel:
+			"Low Risk. For travelers, Réunion is one of the safest destinations in the Indian Ocean. Unlike many neighboring nations, there are no 'morality' laws or police harassment of same-sex couples. Public displays of affection (PDA) are generally accepted in tourist hubs like Saint-Gilles-les-Bains and the capital, Saint-Denis. Digital safety is high; apps like Grindr and Tinder are used freely without state monitoring. The primary travel advice is 'standard caution'—while the island is inclusive, the mountainous interior villages ('Les Hauts') are more traditional. In these rural areas, a more discreet approach to PDA is advisable to respect local cultural norms, though the risk of state intervention remains zero.",
+		culture:
+			"Tolerant & Creole. The local culture is a unique blend of French secularism and diverse religious traditions (Catholic, Hindu, and Muslim). This creates a social philosophy known as 'viv-ansanm' (living together). While there isn't a massive 'gay scene' like in the Marais in Paris, the community is visible in arts and cultural festivals. There are several 'gay-friendly' bars and guesthouses catering to the community. Organizations like 'Le Planning Familial' provide support and advocacy locally. Travelers will find a society that is generally indifferent to sexual orientation, though gender roles can remain somewhat traditional in the smaller, less-touristed volcanic 'cirques'.",
+		health:
+			"Excellent & Inclusive. Healthcare standards follow the European Union model, providing high-quality care that is inclusive of LGBTQ+ needs. Confidentiality is legally mandated, and medical providers are trained under French national standards which prohibit discrimination. HIV/AIDS services, including access to PEP (Post-Exposure Prophylaxis) and PrEP, are available through the Centre Hospitalier Universitaire (CHU) in Saint-Denis and Saint-Pierre. Unlike mainland Africa, there is no state-sponsored stigma in medical settings. Travelers should bring their European Health Insurance Card (EHIC) or private travel insurance to access these services easily.",
+		posture: "Standard Caution - Legal equality is high; discretion is only suggested in remote rural villages.",
+		sources: ["https://www.equaldex.com/region/reunion", "https://www.sos-homophobie.org/outre-mer", "https://en.wikipedia.org/wiki/LGBT_rights_in_France"],
+	},
+
 	rwanda: {
 		name: "Rwanda",
 		continent: "africa",

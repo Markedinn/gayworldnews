@@ -778,3 +778,22 @@ body::before {
 		width: 92%;
 	}
 }
+
+/* This makes the source links pop and stay clickable on the country pages*/
+.sources-list a {
+	color: #ff3399 !important; /* Your pink */
+	text-decoration: underline;
+	font-size: 13px;
+	display: block;
+	margin-bottom: 8px;
+	word-break: break-all; /* Prevents long URLs from breaking the frame */
+	pointer-events: auto !important; /* Forces the browser to ignore the map underneath */
+	z-index: 10001;
+	position: relative;
+}
+
+/* Ensure the text inside the accordion is readable against the navy background */
+#legendContent {
+	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
+	color: #333; /* Dark text for readability */
+}
