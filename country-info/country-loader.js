@@ -4,8 +4,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
 	const params = new URLSearchParams(window.location.search);
 	const rawC = params.get("c") || "";
-
-	// Clean the URL (lowercases and handles URL encoding)
 	const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
 
 	if (!slug) return;
@@ -17,14 +15,15 @@ window.addEventListener("DOMContentLoaded", () => {
 		if (typeof globalData !== "undefined" && Object.keys(globalData).length > 0) {
 			clearInterval(waitForData);
 
-			// CONVERT: Turn dashes or spaces from the URL into underscores
 			const underscoredKey = slug.replace(/[\s-]/g, "_");
 			const countryData = globalData[underscoredKey];
 
 			if (countryData) {
-				// FORCE RED: Keep it simple as requested
 				let s = (countryData.status || "warning").toLowerCase();
 				if (s === "danger" || s === "black") s = "red";
+
+				const now = new Date();
+				const updateStamp = now.toLocaleString("default", { month: "long", year: "numeric" });
 
 				document.getElementById("country-name").innerText = countryData.name;
 				document.title = `${countryData.name} | Safety Guide`;
@@ -36,11 +35,38 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				displayArea.className = `info-display-container status-${s}`;
 
+				// --- SMART SOURCES LOGIC ---
+				let sourcesHtml = "Information pending.";
+				if (countryData.sources) {
+					const sList = Array.isArray(countryData.sources) ? countryData.sources : countryData.sources.split(",");
+
+					// Create the clickable links
+					const links = sList.map((link) => {
+						const cleanLink = link.trim();
+						return `<a href="${cleanLink}" target="_blank" class="source-link">${cleanLink}</a>`;
+					});
+
+					// If only one source, add the "Verification in Progress" note
+					if (links.length === 1) {
+						sourcesHtml =
+							links[0] +
+							`<p style="margin-top:10px; font-size:0.8rem; opacity:0.7; font-style:italic;">Note: We are currently verifying additional secondary sources for this region. Please check back for updates.</p>`;
+					} else {
+						sourcesHtml = links.join("<br>");
+					}
+				}
+
+				// Render the Accordions
 				displayArea.innerHTML = `
-                    <details class="glass-card news-accordion ${s}">
+                    <details class="glass-card news-accordion ${s}" open>
                         <summary><h3>⚖️ Legal Status</h3></summary>
                         <div class="news-content-expanded">
                             <div class="rainbow-line mini-line"></div>
+                            
+                            <div class="update-badge">
+                                <span class="pulse-icon"></span> Verified: ${updateStamp}
+                            </div>
+
                             <p>${countryData.legal || "Information pending."}</p> 
                         </div>
                     </details>
@@ -68,11 +94,13 @@ window.addEventListener("DOMContentLoaded", () => {
                             <p>${countryData.posture || "General monitoring advised."}</p>
                         </div>
                     </details>
-					<details class="glass-card news-accordion ${s}">
+                    <details class="glass-card news-accordion ${s}">
                         <summary><h3>📚 Sources</h3></summary>
                         <div class="news-content-expanded">
                             <div class="rainbow-line mini-line"></div>
-                            <p>${countryData.sources || "Information pending."}</p>
+                            <div class="sources-list">
+                                ${sourcesHtml}
+                            </div>
                         </div>
                     </details>
                 `;
@@ -84,7 +112,8 @@ window.addEventListener("DOMContentLoaded", () => {
 	}, 100);
 
 	function renderNotFound() {
-		document.getElementById("country-name").innerText = "Update in Progress";
+		const titleEl = document.getElementById("country-name");
+		if (titleEl) titleEl.innerText = "Update in Progress";
 		displayArea.innerHTML = `<div class="glass-card" style="padding: 20px; text-align: center;"><p style="color:white; opacity: 0.8;">Detailed data is being verified.</p></div>`;
 	}
 });
