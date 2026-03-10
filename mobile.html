@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Gay World News | Mobile</title>
+
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=3" />
+
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
+
+		<script>
+			window.globalData = {};
+		</script>
+		<script src="country-info/country-files/africa-data.js"></script>
+		<script src="country-info/country-files/asia-data.js"></script>
+		<script src="country-info/country-files/europe-data.js"></script>
+		<script src="country-info/country-files/americas-data.js"></script>
+		<script src="country-info/country-files/oceania-data.js"></script>
+		<script src="index.js" defer></script>
+
+		<style>
+			/* --- 1. THE RIGID MASTER GRID --- */
+			body {
+				margin: 0;
+				padding: 0;
+				min-height: 100vh;
+				display: grid;
+				/* R1: 35% Gap | R2: Header (Title/Burger) | R3: Translate | R4: Search | R5: Map | R6: Flex Spacer | R7: Footer */
+				grid-template-rows: auto auto auto auto auto 1fr auto;
+				gap: 15px;
+				font-family: "Helvetica Neue", Arial, sans-serif;
+				overflow-x: hidden;
+				position: relative;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background: url("images/world_img.webp") center/cover no-repeat;
+				filter: brightness(0.65);
+			}
+
+			/* --- 2. HEADER & FURNITURE --- */
+			.main-header {
+				grid-row: 3;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				z-index: 10;
+				margin-top: 25vh;
+			}
+
+			.menu-toggle {
+				grid-row: 1;
+				justify-self: end; /* Stays on the right */
+				align-self: start; /* Starts from the top of the row... */
+				padding-top: 5vh; /* ...but is pushed down by exactly 25% of the screen */
+				margin-right: 8%;
+				display: flex;
+				flex-direction: column;
+				gap: 6px;
+				cursor: pointer;
+				padding-bottom: 10px; /* Some breathing room before the title starts */
+			}
+
+			.bar {
+				width: 32px;
+				height: 5px;
+				background-color: #ffffff;
+				border-radius: 2px;
+			}
+
+			.rainbow-text {
+				grid-row: 3;
+				text-align: center;
+				font-size: clamp(2.5rem, 10vw, 4rem);
+				font-weight: 900;
+				margin: 0;
+				background: linear-gradient(to right, #ffd600, #00e676, #2979ff, #aa00ff, #ff1744, #ff9100, #ffd600);
+				background-size: 200% auto;
+				-webkit-background-clip: text;
+				background-clip: text;
+				-webkit-text-fill-color: transparent;
+				animation: rainbow-flow 5s linear infinite;
+			}
+
+			.subtitle {
+				color: #ffffff;
+				font-size: 1.1rem;
+				margin-top: 5px;
+				font-weight: 500;
+				letter-spacing: 1.5px;
+				text-align: center;
+			}
+
+			@keyframes rainbow-flow {
+				from {
+					background-position: 0% center;
+				}
+				to {
+					background-position: 200% center;
+				}
+			}
+
+			/* --- 3. THE PILLS (Translate, Search, Map) --- */
+			#translator-anchor {
+				grid-row: 2;
+				top: 5vh;
+				justify-self: end;
+				width: 45%;
+				margin: 0 auto;
+				z-index: 50;
+				/* This ensures it sits at the bottom of its container */
+				margin-top: auto;
+				position: relative;
+				margin-right: 5%;
+			}
+			.landing-search-wrap {
+				grid-row: 4;
+				width: 90%;
+				max-width: 450px;
+				padding-top: 10vh;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column-reverse;
+				position: relative;
+			}
+			.search-map-link {
+				grid-row: 5;
+				width: 90%;
+				max-width: 450px;
+				margin: 0 auto;
+				text-decoration: none;
+			}
+
+			/* GTranslate Specific Styling */
+			.gt_selector {
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				width: 100% !important;
+				height: 50px !important;
+				background: #ffffff !important;
+				border: 2px solid #e2e8f0 !important;
+				border-radius: 50px !important;
+				color: #ff3399 !important;
+				font-weight: 700 !important;
+				font-size: 16px !important;
+				text-align: center !important;
+				appearance: none;
+			}
+
+			#globalSearch,
+			.search-map-bar {
+				width: 100%;
+				height: 55px;
+				background: #ffffff;
+				border: 2px solid #e2e8f0;
+				border-radius: 50px;
+				text-align: center;
+				font-size: 16px;
+				color: #ff3399;
+				font-weight: 700;
+				box-sizing: border-box;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.search-map-bar span:last-child {
+				position: absolute;
+				right: 40px;
+				font-size: 12px;
+			}
+
+			/* --- 4. SEARCH TRAY & SIDE MENU --- */
+			.search-results-floating {
+				position: absolute;
+				bottom: 55px;
+				left: 8px;
+				width: 90%;
+				background: rgb(1, 178, 129, 0.7);
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				border-radius: 15px;
+				padding: 10px;
+				display: none;
+				flex-direction: column;
+				gap: 8px;
+				z-index: 40;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				max-height: 35vh;
+				overflow-y: auto;
+				scrollbar-width: none;
+			}
+
+			.side-menu {
+				position: fixed;
+				top: 0;
+				right: -100%;
+				width: 95%;
+				height: 100%;
+				background: rgba(35, 63, 138, 0.98);
+				border-left: 1px solid rgba(255, 255, 255, 0.2);
+				z-index: 3000;
+				transition: 0.4s ease;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				padding: 30px;
+				box-sizing: border-box;
+				visibility: hidden;
+			}
+			.side-menu.open {
+				right: 0;
+				visibility: visible;
+			}
+			.close-icon {
+				position: absolute;
+				top: 20px;
+				right: 20px;
+				color: white;
+				font-size: 50px;
+				cursor: pointer;
+			}
+			.bento-grid {
+				display: grid;
+				grid-template-columns: 1fr;
+				gap: 12px;
+				width: 100%;
+				margin-top: 60px;
+			}
+			.bento-card {
+				background: rgba(255, 255, 255, 0.1);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				padding: 20px;
+				color: white;
+				text-decoration: none;
+				border-radius: 12px;
+				text-align: center;
+				font-weight: 600;
+				text-transform: uppercase;
+			}
+			.breaking-card {
+				background: rgba(228, 3, 3, 0.6);
+			}
+
+			/* --- 5. EXIT AND FOOTER --- */
+			.exit-btn {
+				position: fixed;
+				top: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				background: rgba(228, 3, 3, 0.9); /* Slightly more opaque for better visibility */
+				color: white;
+				/* Increased padding: 10px top/bottom, 22px left/right (approx 10-15% bump) */
+				padding: 10px 22px;
+				font-weight: 700; /* Bolder for easier reading */
+				z-index: 9999;
+				text-decoration: none;
+				border-radius: 0 0 15px 15px; /* Slightly larger curve to match the size */
+				font-size: 13px; /* Bumped from 11px */
+				letter-spacing: 0.5px;
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds a little depth so it "pops" off the background */
+			}
+
+			/* --- 6. FOOTER FIX --- */
+			.main-footer {
+				grid-row: 7; /* Matches your 1fr auto grid logic */
+				padding: 40px 20px;
+				text-align: center;
+				display: flex;
+				flex-direction: column;
+				gap: 12px;
+				align-self: end; /* Forces it to the very bottom of the grid row */
+			}
+
+			.footer-text {
+				font-size: 11px;
+				color: rgba(255, 255, 255, 0.5);
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			/* --- TRANSLATOR DROPDOWN CUSTOMIZATION --- */
+
+			/* 1. The main container pill */
+			#translator-anchor {
+				background-color: #ffffff !important;
+				border-radius: 50px !important;
+				border: 2px solid rgba(255, 255, 255, 0.3) !important;
+				overflow: hidden; /* Keeps the rounded corners clean */
+			}
+
+			/* 2. Targeting the actual Select/Dropdown inside */
+			#translator-anchor select,
+			.gt_selector,
+			.goog-te-combo {
+				background-color: #ffffff !important;
+				color: #ff3399 !important;
+				font-weight: 700 !important;
+				border: none !important;
+				padding: 10px 20px !important;
+				width: 100% !important;
+				height: 50px !important;
+				font-family: inherit !important;
+				appearance: none; /* Removes the default grey arrow on some browsers */
+				-webkit-appearance: none;
+				text-align: center;
+				text-align-last: center; /* Centers text in the dropdown */
+				overflow-y: hidden !important; /* The 'No Overflow' you mentioned */
+				height: 50px !important; /* Lock the height of the pill */
+			}
+
+			/* 3. Handling the "Popup" menu (The part that opens) */
+			/* Note: Some mobile browsers use the native OS picker, 
+   but for those that don't, this helps */
+			.goog-te-menu-value {
+				color: white !important;
+			}
+
+			/* 4. Optional: Adding a custom white arrow so users know it's a dropdown */
+			#translator-anchor::after {
+				content: "▶"; /* The right arrow to match the Map bar */
+				position: absolute;
+				right: 20px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: #ff3399;
+				font-size: 12px;
+				pointer-events: none; /* Allows clicks to pass through to the select */
+			}
+
+			/* THE FIX: Targeting only the dropdown list items */
+			#translator-anchor select option {
+				background-color: rgb(1, 178, 129) !important; /* Brand Blue for the list background */
+				color: #ffffff !important;
+				text-align: left; /* White text for the list items */
+				padding: 12px;
+				font-size: 14px;
+				font-weight: 600;
+				overflow: hidden !important;
+			}
+
+			/* Specific target for the Google-injected class if it ignores the above */
+			.goog-te-combo option {
+				background-color: #24408e !important;
+				color: #ffffff !important;
+				overflow: hidden !important;
+				scrollbar-width: none !important; /* Firefox */
+				-ms-overflow-style: none !important; /* IE/Edge */
+				overflow: hidden !important;
+			}
+
+			#translator-anchor select::-webkit-scrollbar,
+			.goog-te-combo::-webkit-scrollbar {
+				width: 0px !important; /* Removes vertical width */
+				background: transparent !important;
+				display: none !important;
+			}
+
+			/* 3. For Firefox */
+			#translator-anchor select {
+				scrollbar-width: none !important;
+			}
+
+			/* --- SEARCH RESULTS DROPDOWN STYLING --- */
+
+			/* The main tray already has the blur, now we style the links inside */
+			#searchResults a {
+				display: block; /* Makes the whole row clickable */
+				padding: 15px 20px;
+				margin-bottom: 2px;
+				color: #ffffff !important;
+				text-decoration: none !important;
+				font-weight: 700;
+				text-transform: uppercase;
+				font-size: 14px;
+				letter-spacing: 1px;
+				background-color: rgba(36, 64, 142, 0.9); /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+				border-radius: 12.5px;
+				transition: background 0.2s ease;
+			}
+
+			/* Hover/Active state to match the index feel */
+			#searchResults a:hover,
+			#searchResults a:active {
+				/* background: rgba(255, 255, 255, 0.2); */
+				color: #ff3399 !important; /* Site pink highlight on select */
+			}
+
+			/* Remove border from the last item to keep it clean */
+			#searchResults a:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+
+			/* --- SEARCH BAR PINK PLACEHOLDER --- */
+
+			/* Standard */
+			#globalSearch::placeholder {
+				color: #ff3399 !important;
+				opacity: 1; /* Firefox fix to ensure color shows at full strength */
+			}
+
+			/* Chrome, Safari, and newer Edge */
+			#globalSearch::-webkit-input-placeholder {
+				color: #ff3399 !important;
+			}
+
+			/* Firefox */
+			#globalSearch::-moz-placeholder {
+				color: #ff3399 !important;
+			}
+		</style>
+	</head>
+
+	<body>
+		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+
+		<div id="sideMenu" class="side-menu">
+			<span class="close-icon" onclick="toggleMenu()">&times;</span>
+			<nav class="bento-grid">
+				<a href="breaking.html" class="bento-card breaking-card">Breaking News</a>
+				<a href="americas.html" class="bento-card">Americas</a>
+				<a href="europe.html" class="bento-card">Europe</a>
+				<a href="asia.html" class="bento-card">Asia</a>
+				<a href="africa.html" class="bento-card">Africa</a>
+				<a href="oceania.html" class="bento-card">Oceania</a>
+			</nav>
+		</div>
+
+		<div class="menu-toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
+
+		<header class="main-header">
+			<h1 class="rainbow-text">Gay World News</h1>
+			<p class="subtitle">Legal Health Travel & Safety</p>
+		</header>
+
+		<div id="translator-anchor"></div>
+
+		<div class="landing-search-wrap">
+			<input type="text" id="globalSearch" placeholder="Search Country" autocomplete="off" />
+			<div id="searchResults" class="search-results-floating"></div>
+		</div>
+
+		<a href="lgbt_risk_map.html" class="search-map-link">
+			<div class="search-map-bar">
+				<span>Search Map</span>
+				<span>▶</span>
+			</div>
+		</a>
+
+		<footer class="main-footer">
+			<span class="footer-text">© 2026 GAY WORLD NEWS</span>
+			<a href="about.html" class="footer-text">ABOUT</a>
+		</footer>
+
+		<script>
+			function toggleMenu() {
+				document.getElementById("sideMenu").classList.toggle("open");
+			}
+
+			document.addEventListener("DOMContentLoaded", () => {
+				const globalInput = document.getElementById("globalSearch");
+				const globalResults = document.getElementById("searchResults");
+
+				globalInput.addEventListener("input", (e) => {
+					const value = e.target.value.toLowerCase().trim();
+					globalResults.innerHTML = "";
+					if (value.length > 0 && typeof globalData !== "undefined") {
+						globalResults.style.display = "flex";
+						Object.keys(globalData)
+							.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
+							.forEach((key) => {
+								if (globalData[key].name.toLowerCase().startsWith(value)) {
+									const link = document.createElement("a");
+									link.href = `country.html?c=${key}`;
+									let s = (globalData[key].status || "warning").toLowerCase();
+									if (s === "danger" || s === "black") s = "red";
+									link.style = "padding:15px; color:white; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); font-weight:bold;";
+									link.innerHTML = globalData[key].name;
+									globalResults.appendChild(link);
+								}
+							});
+					} else {
+						globalResults.style.display = "none";
+					}
+				});
+			});
+
+			document.addEventListener("click", (e) => {
+				if (!document.querySelector(".landing-search-wrap").contains(e.target)) {
+					document.getElementById("searchResults").style.display = "none";
+				}
+			});
+
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				flag_size: 24,
+				type: "dropdown",
+			};
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+	</body>
+</html>
