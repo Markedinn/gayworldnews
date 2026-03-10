@@ -167,6 +167,43 @@
 			#legendHeader:focus-visible {
 				outline: 2px solid #ff3399;
 			}
+			.site-footer {
+				position: fixed !important; /* Force it to ignore index.css */
+				bottom: 0 !important;
+				left: 0;
+				width: 100%;
+				z-index: 999 !important; /* High enough to beat Leaflet panes */
+				background-color: #1a2b56 !important; /* Use a solid color so map doesn't show through */
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				/* border-top: 2px solid #faf9f9; */
+			}
+
+			/* IMPORTANT: Shrink the map so it doesn't try to go under the footer */
+			#map {
+				height: calc(100vh - 60px) !important;
+				width: 100%;
+			}
+
+			.footer-container {
+				display: flex !important;
+				flex-direction: row !important;
+				justify-content: space-between !important; /* Pushes them to opposite ends */
+				align-items: center !important;
+				padding: 12px 20px !important; /* 20px on the sides keeps them off the edges */
+				width: 100% !important;
+				box-sizing: border-box; /* Ensures padding doesn't break the width */
+			}
+
+			.footer-container a {
+				display: inline-block !important;
+				text-decoration: none;
+				font-weight: bold;
+				font-size: 13px; /* Slightly smaller to ensure they fit on one line */
+				white-space: nowrap;
+			}
 		</style>
 	</head>
 	<body>
@@ -199,36 +236,13 @@
 
 		<footer class="site-footer">
 			<div class="footer-container">
-				<div class="footer-card">
-					<a href="index.html" class="home-btn">HOME</a>
-				</div>
-				<div class="footer-card">
-					<a class="home-btn" style="color: #ff3399">TAP A COUNTRY TO OPEN IT</a>
-				</div>
-				<!-- <div class="footer-card">
-					<a href="about.html"><h4>about</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>facebook</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>x</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>youtube</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="contact.html"><h4>connect</h4></a>
-				</div> -->
+				<a href="index.html" class="home-btn" style="color: #fcf9fa">HOME</a>
+				<span style="color: rgba(255, 255, 255, 0.3); margin: 0 5px">|</span>
+				<span class="home-btn" style="color: #ff3399">TAP A COUNTRY TO OPEN</span>
 			</div>
-			<!-- <div class="footer-bottom-bar">
-				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
-			</div> -->
 		</footer>
 
 		<script>
-			// Replace your existing <script> inside the <body> with this:
-
 			const map = L.map("map", {
 				zoomSnap: 0.1,
 				attributionControl: false,
