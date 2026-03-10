@@ -5,7 +5,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Gay World News | LGBTQ+ Legal Status, Health, Fun, Travel and Safety</title>
 
-		<link rel="stylesheet" href="index.css?v=grid4" />
+		<script>
+			// Check if the screen width is 480px or less (standard mobile)
+			if (window.innerWidth <= 480) {
+				// Redirect to the mobile version
+				window.location.href = "mobile.html";
+			}
+		</script>
+
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
+
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
+
+		<link rel="stylesheet" href="index.css?v=mobile1" />
 
 		<script>
 			window.globalData = {};
@@ -31,18 +43,20 @@
 				</div>
 			</header>
 
-			<div id="translator-anchor"></div>
+			<div class="three-search-container">
+				<div id="translator-anchor" class="landing-pill-style">
+					<div id="google_translate_element"></div>
+				</div>
 
-			<div class="dual-search-container">
 				<div class="landing-search-wrap">
-					<input type="text" id="globalSearch" placeholder="Search Country" oninput="filterList()" />
+					<input type="text" id="globalSearch" placeholder="SEARCH COUNTRY" autocomplete="off" />
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
 
 				<a href="lgbt_risk_map.html" class="search-map-link">
 					<div class="search-map-bar">
 						<div class="search-map-content">
-							<span class="search-map-text">Search Map</span>
+							<span class="search-map-text">SEARCH MAP</span>
 						</div>
 						<span class="search-map-arrow">▶</span>
 					</div>

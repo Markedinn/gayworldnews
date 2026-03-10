@@ -89,10 +89,9 @@
 }
 
 .manual-pinned {
-	border-left: 5px solid #ff4b2b; /* Urgent Red */
-	background: rgba(255, 75, 43, 0.08);
+	border: 5px solid #ff4b2b; /* Urgent Red */
 	margin-bottom: 20px;
-	padding: 15px;
+	border-radius: 17.5px;
 }
 
 .manual-pinned .card-tag {
@@ -176,14 +175,4 @@
 	justify-content: right; /* Pushes Exit to Left and Translator to Right */
 	align-items: center;
 	z-index: 1000;
-}
-
-/* Match the translator to your branding */
-#translator-anchor select {
-	background: #24408e;
-	color: white;
-	border: 1px solid white;
-	border-radius: 4px;
-	padding: 5px;
-	cursor: pointer;
 }

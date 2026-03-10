@@ -1,11 +1,19 @@
 /* --- 1. THE RESET & MASTER GRID --- */
-* {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
-	margin: 0;
 }
-::-webkit-scrollbar {
+
+*::-webkit-scrollbar {
 	display: none;
 }
 
@@ -43,12 +51,14 @@ body::before {
 	width: 92%;
 	max-width: 900px;
 	margin: 30px auto;
+	z-index: 10;
 }
 
 /* --- 2. HEADER & RAINBOW TEXT --- */
 .main-header {
 	grid-column: 1 / -1;
 	text-align: center;
+	z-index: 30;
 }
 
 .rainbow-text {
@@ -94,6 +104,8 @@ body::before {
 	grid-column: 1 / -1;
 	text-decoration: none;
 	transition: transform 0.2s ease;
+	position: relative;
+	z-index: 10;
 }
 
 #u-u-notice {
@@ -137,31 +149,101 @@ body::before {
 	margin-top: 15px;
 }
 
-/* 2. The Pink Triangle */
-#translator-anchor::after {
-	content: "▼"; /* The solid downward triangle */
+/* --- GLOBAL CONSISTENT SMILE STYLE --- */
+
+/* 1. The Container for the Translator */
+#translator-anchor.landing-pill-style {
+	position: relative;
+	z-index: 30;
+	width: 100%;
+	max-width: 600px; /* Keeps it from getting too wide on Desktop */
+	margin: 10px auto;
+}
+
+/* 2. The Actual Dropdown (The Smile) */
+.landing-pill-style select {
+	width: 100%;
+	max-width: 500px;
+	height: 48px;
+	border-radius: 50px !important;
+	background: #ffffff !important;
+	border: 2px solid #e2e8f0;
+	color: #ff3399;
+	font-size: 16px;
+	font-weight: 600;
+	text-align: left;
+	text-align-last: center;
+	appearance: none;
+	-webkit-appearance: none;
+	padding: 0 45px;
+	cursor: pointer;
+	text-transform: uppercase;
+	outline: none;
+}
+
+/* 3. The Unified Pink Arrow (The Smile's dimple) */
+.landing-pill-style::after {
+	content: "▶"; /* Changed from ▼ to ▶ to match the Map bar */
 	position: absolute;
-	right: 20px; /* Distance from the right edge */
+	right: 25px;
 	top: 50%;
 	transform: translateY(-50%);
-	color: #f544b1; /* Your signature pink */
+	color: #ff3399;
+	font-weight: bold; /* Added bold to match the Map arrow's weight */
+	font-size: 18px; /* Increased from 14px to match the Map bar */
+	pointer-events: none;
+	z-index: 25;
+
+	/* Optional: Add a slight transition if you want it to feel 'live' */
+	transition: transform 0.2s ease;
+}
+
+/* THE FIX: Targeting the options list */
+.landing-pill-style select option {
+	background-color: #24408e !important; /* Brand Blue */
+	color: #ffffff !important; /* White Text */
+	padding: 12px;
+	font-size: 14px;
+	font-weight: 600;
+	letter-spacing: 1.5;
+	min-width: 500px !important;
+	max-width: 500px !important;
+}
+
+/* 4. Hover Effect for all bars */
+.landing-pill-style:hover select,
+.landing-search-wrap:hover input,
+.search-map-bar:hover {
+	border-color: #ff3399;
+	box-shadow: 0 4px 12px rgba(255, 51, 153, 0.1);
+}
+
+/* #translator-anchor::after {
+	content: "▼"; 
+	position: absolute;
+	right: 20px; 
+	top: 50%;
+	transform: translateY(-50%);
+	color: #f544b1; 
 	font-size: 1.25rem;
-	pointer-events: none; /* Allows clicks to pass through to the select */
+	pointer-events: none; 
 	z-index: 5;
 }
 
-/* 3. The Select adjustment */
+
 #translator-anchor select {
-	height: 60px; /* Set a fixed height instead of 70% */
-	padding: 0 45px; /* Add space on the right so text doesn't hit the triangle */
-	appearance: none; /* Hides the boring default browser arrow */
+	height: 60px; 
+	padding: 0 45px; 
+	appearance: none; 
 	text-align: center;
 	text-align-last: center;
 	-webkit-appearance: none;
-}
+} */
 
-#translator-anchor select,
+/* #translator-anchor select, */
 .bento-card {
+	position: relative;
+	z-index: 10;
 	width: 100%;
 	display: inline-flex;
 	align-items: center;
@@ -180,40 +262,38 @@ body::before {
 	transition: 0.3s ease;
 	cursor: pointer;
 	appearance: none;
-	font-size: 1rem; /* Explicitly set the size */
-	font-family: inherit; /* Forces the select to use the Body font */
-	line-height: normal; /* Prevents the browser from squashing the text */
+	font-size: 1rem;
+	font-family: inherit;
+	line-height: normal;
 	-webkit-appearance: none;
 }
 
-#translator-anchor:hover select,
 .bento-card:hover {
 	transform: translateY(-5px);
 	background: rgba(255, 255, 255, 0.4);
 }
 
-/* Styling the actual list items inside the dropdown */
-#translator-anchor select option {
-	background-color: #f544b1; /* Matches the Search Results Slate Gray */
-	color: #ffffff; /* White text for readability */
-	padding: 15px; /* Gives the list some "air" */
+/* #translator-anchor select option {
+	background-color: #f544b1; 
+	color: #ffffff; 
+	padding: 15px; 
 	font-size: 1rem;
-	text-transform: none; /* Keep language names readable (not all caps) */
+	text-transform: none; 
 }
 
-/* On some browsers, we can style the hover state of the list */
+
 #translator-anchor select option:hover,
 #translator-anchor select option:focus,
 #translator-anchor select option:active {
-	background-color: #f544b1; /* U=U Pink highlight when hovering/selecting */
+	background-color: #f544b1; 
 	color: #ffffff;
-}
+} */
 
 /* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
 	position: relative;
 	width: 100%; /* CRITICAL: Ensures the dropdown has a width to match */
-	z-index: 1001; /* Must be higher than the map bar below it */
+	z-index: 20; /* Must be higher than the map bar below it */
 }
 
 /* THE INPUT */
@@ -230,6 +310,28 @@ body::before {
 	outline: none;
 	text-align: center;
 	box-sizing: border-box; /* Prevents padding from breaking width */
+	/* THE FIX: Makes the cursor and text more prominent */
+	font-size: 16px; /* Slightly larger font */
+	font-weight: 700; /* Thicker text makes the cursor look more "at home" */
+	letter-spacing: 1px; /* Gives the cursor more 'air' */
+
+	outline: none;
+	text-align: center;
+	box-sizing: border-box;
+	caret-color: #ff3399; /* Ensures the blinking line is your brand pink */
+}
+
+.landing-search-wrap::before {
+	content: "◀"; /* Left-pointing triangle */
+	position: absolute;
+	right: 25px; /* Matches the 25px 'right' placement of the others */
+	top: 50%;
+	transform: translateY(-50%);
+	color: #ff3399;
+	font-weight: bold;
+	font-size: 18px; /* Matches the Map and Translator arrow size */
+	pointer-events: none;
+	z-index: 25;
 }
 
 /* Ensure the placeholder isn't blurred or too faint */
@@ -246,7 +348,7 @@ body::before {
 	width: 100%;
 	display: none;
 	flex-direction: column;
-	z-index: 2000;
+	z-index: 100;
 
 	background: rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
@@ -255,11 +357,14 @@ body::before {
 	padding: 10px;
 	gap: 8px;
 
-	max-height: 400px;
-	overflow-y: auto;
+	overflow-y: auto !important; /* The list scrolls INSIDE, not the page */
+	overflow-x: hidden;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	margin-top: 10px;
+
+	max-height: 40vh;
+	padding-bottom: 20px;
 }
 
 /* THE CARDS INSIDE (Using Country.css shades with Bento transparency) */
@@ -314,6 +419,8 @@ body::before {
 	text-decoration: none;
 	display: block;
 	margin: 10px 0 25px 0;
+	position: relative;
+	z-index: 10; /* INTERACTION LAYER */
 }
 
 .search-map-bar {
@@ -349,6 +456,7 @@ body::before {
 	color: #ff3399;
 	font-weight: bold;
 	font-size: 18px;
+	z-index: 21; /* INTERACTION LAYER */
 }
 
 /* THE MASTER CONTAINER - TIGHTENED */
@@ -395,6 +503,8 @@ body::before {
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px; /* Matching the Master Grid gap */
 	margin-top: 5px; /* A tiny extra "breath" so it's not jammed against the search */
+	position: relative;
+	z-index: 10;
 }
 
 /* --- JS CARD SKELETON --- */
@@ -419,6 +529,8 @@ body::before {
 	transition:
 		transform 0.2s ease,
 		filter 0.2s ease;
+	position: relative;
+	z-index: 11;
 }
 
 .country-card:hover {
@@ -451,6 +563,7 @@ body::before {
 	color: white;
 	padding: 10px 20px;
 	font-weight: 600;
+	z-index: 50;
 	text-transform: uppercase;
 	z-index: 9999;
 	text-decoration: none;
@@ -465,6 +578,7 @@ body::before {
 	backdrop-filter: blur(10px);
 	padding: 20px 0;
 	margin-top: auto;
+	z-index: 1 !important;
 }
 
 .footer-container {
@@ -498,7 +612,7 @@ body::before {
 /* --- 8. RESPONSIVE BREAKPOINTS --- */
 
 /* TABLETS (iPads) - Fixing the "Bunched Up" look */
-@media (min-width: 769px) and (max-width: 1199px) {
+@media (min-width: 481px) and (max-width: 1024px) {
 	.master-grid-container {
 		gap: 40px; /* More air between elements */
 		width: 85%; /* Pulls content in from the edges */
@@ -507,6 +621,23 @@ body::before {
 
 	.landing-search-wrap {
 		margin-bottom: 20px; /* Extra space before the Bento cards */
+	}
+
+	/* Force the Translator container to match the 500px width */
+	#translator-anchor.landing-pill-style {
+		width: 100% !important;
+		max-width: 500px !important;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		display: block;
+		position: relative; /* Anchor for the pill itself */
+	}
+
+	/* Ensure the internal select doesn't overflow its pink border */
+	.landing-pill-style select {
+		width: 50vw !important;
+		max-width: 500px !important;
+		left: calc(-50vw + 250px) !important;
 	}
 }
 
@@ -528,67 +659,122 @@ body::before {
 }
 
 /* --- CLEAN CONSOLIDATED MOBILE RESET --- */
-/* --- CLEAN CONSOLIDATED MOBILE RESET --- */
-@media (max-width: 768px) {
+
+@media screen and (max-width: 440px) {
+	/* 1. LAYOUT RESET: Convert grid to a clean vertical stack */
 	.master-grid-container {
 		display: flex !important;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
 		padding: 10px;
-		box-sizing: border-box; /* Critical for padding */
+		gap: 15px; /* Consistent spacing between all bars */
+		z-index: 10;
 	}
 
-	/* Force the Bento Grid to be a 1-column grid, NOT flex */
+	/* 2. THE SEARCH TRAY: Ensure results float above the rest */
+	.landing-search-wrap {
+		position: relative !important;
+		overflow: visible !important;
+		width: 100% !important;
+		z-index: 20;
+	}
+
+	.search-results-floating {
+		position: absolute !important;
+		top: 50px !important;
+		left: 0 !important;
+		width: 100% !important;
+		z-index: 1000 !important;
+		display: none;
+	}
+
+	/* 3. THE TRANSLATOR: Make sure it's visible and full width */
+	#translator-anchor.landing-pill-style {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important; /* Force full width of the container */
+		max-width: 100% !important;
+		margin: 10px 0 !important;
+	}
+
+	#google_translate_element,
+	#google_translate_element div {
+		width: 100% !important; /* Force the internal GTranslate div to expand */
+	}
+
+	/* 4. THE BENTO GRID: One card per row */
 	.bento-grid {
 		display: grid !important;
-		grid-template-columns: 1fr !important; /* One card per row */
+		grid-template-columns: 1fr !important;
 		width: 100% !important;
 		gap: 15px;
+		position: relative;
+		z-index: 10;
 	}
 
-	/* Force cards and headers to take full width */
+	/* 5. FULL WIDTH FORCE: Make everything look consistent */
 	.master-grid-container > *,
 	.country-card,
 	#manual-news-portal,
-	#translator-anchor,
 	.u-u-link,
 	.main-header,
-	.status-badge-wrapper,
-	#info-display-area,
-	.landing-search-wrap {
-		grid-column: auto !important;
-		width: 100% !important; /* This stops them from being "letter-width" */
+	#info-display-area {
+		width: 100% !important;
 		max-width: 100% !important;
 		margin: 0 auto !important;
 		box-sizing: border-box;
 	}
 
-	/* Keep the status badge from stretching too wide */
-	.status-badge-wrapper {
-		width: auto !important;
-		padding: 10px 20px;
-	}
-
-	/* 4. Footer Reset */
+	/* 6. FOOTER: Stacked for small screens */
 	.footer-container {
 		display: flex !important;
-		flex-direction: column !important; /* Stack cards vertically */
+		flex-direction: column !important;
 		align-items: center !important;
 		width: 100% !important;
 		gap: 15px !important;
 	}
 
-	.footer-card {
-		width: 100% !important; /* Full width cards */
-		max-width: 400px; /* Keeps them from being too chunky on tablets */
-		text-align: center;
-	}
-
 	.footer-bottom-links {
 		display: flex;
-		flex-direction: column; /* Stack About/Contact/Home links */
+		flex-direction: column;
 		gap: 10px;
 		align-items: center;
+	}
+}
+
+/* THE UNIFIED STACK */
+/* THE UNIFIED STACK - CENTERED & LAYERED */
+.three-search-container {
+	grid-column: 1 / -1; /* Spans across but centers via margin */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	width: 90%;
+	max-width: 500px;
+	margin: 20px auto;
+	position: relative;
+	/* Allows the dropdown to "spill out" without being clipped */
+	overflow: visible !important;
+	z-index: 2000;
+}
+
+/* THE INDIVIDUAL BARS: Remove top/bottom margins to let 'gap' do the work */
+#translator-anchor.landing-pill-style,
+.landing-search-wrap,
+.search-map-link {
+	width: 100%;
+	height: 50px;
+	margin: 0 !important; /* Force margins to zero so the 15px gap is exact */
+	position: relative;
+}
+
+/* Responsive Fix for Mobile */
+@media screen and (max-width: 850px) {
+	.three-search-container {
+		grid-column: 1 / -1; /* Take full width on smaller screens */
+		width: 92%;
 	}
 }
