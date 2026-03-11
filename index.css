@@ -843,41 +843,21 @@ body::before {
 	}
 }
 
-/* --- 8. RESPONSIVE BREAKPOINTS (SAFETY NET) --- */
-
-/* TABLETS (Mid-size to Landscape) - 769px to 1024px */
-@media (min-width: 500px) and (max-width: 1024px) {
-	.master-grid-container {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-		width: 92%; /* This is currently your only 'margin' */
-		max-width: 900px;
-		margin: 30px auto;
-		padding: 0 20px; /* ADD THIS: 20px of breathing room on left/right */
-		z-index: 10;
-		box-sizing: border-box; /* Ensures padding doesn't grow the width */
+/* TABLET FIX: Catching iPad Mini, iPad Air, and Samsung Tab S8 (Portrait) */
+@media screen and (min-width: 500px) and (max-width: 1100px) {
+	/* Force 2 Columns on Americas/Country Pages */
+	.bento-grid {
+		grid-template-columns: repeat(2, 1fr) !important;
+		gap: 20px !important;
 	}
 
-	/* Force the Translator to match the Search & Map bars */
+	/* Fix the Translator on wider portrait screens */
 	#translator-anchor.landing-pill-style,
 	.landing-search-wrap,
 	.search-map-link {
-		width: 100% !important; /* Full width of the stack */
-		max-width: 550px !important; /* Uniform cap for all three */
-		margin: 0 auto !important; /* Centers them together */
-	}
-
-	/* Ensure Google's internal container fills the 550px width */
-	#google_translate_element,
-	#google_translate_element div {
 		width: 100% !important;
-	}
-
-	.bento-grid {
-		grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns */
-		gap: 15px;
-		width: 100%;
+		max-width: 550px !important; /* Uniform width for the "pills" */
+		margin: 10px auto !important;
 	}
 }
 
