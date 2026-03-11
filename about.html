@@ -7,7 +7,7 @@
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
 
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=grid4" />
+		<link rel="stylesheet" href="index.css?v=mobile4" />
 		<style>
 			/* THE MAP BACKGROUND */
 			body.about-page {
@@ -47,12 +47,26 @@
 				margin: 20px auto;
 				width: 90%;
 			}
+
+			/* Align the About Page Translator to match the Homepage/Regions */
+			#translator-anchor {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+			}
+
+			/* Ensure the GTranslate dropdown doesn't hug the left side */
+			.gt_container {
+				margin: 0 auto !important;
+			}
 		</style>
 	</head>
 	<body class="about-page">
 		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
 		<div class="centered-utility-wrap">
-			<div id="translator-anchor"></div>
+			<div id="translator-anchor" class="landing-pill-style">
+				<div id="google_translate_element"></div>
+			</div>
 		</div>
 
 		<div class="page-container">
@@ -81,32 +95,6 @@
 			</div>
 		</div>
 
-		<footer class="site-footer">
-			<div class="footer-container">
-				<div class="footer-card">
-					<a href="index.html" class="home-btn">HOME</a>
-				</div>
-				<div class="footer-card">
-					<a href="about.html"><h4>about</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>facebook</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>x</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="#"><h4>youtube</h4></a>
-				</div>
-				<div class="footer-card">
-					<a href="contact.html"><h4>connect</h4></a>
-				</div>
-			</div>
-			<div class="footer-bottom-bar">
-				<p class="footer-copyright">© 2026 LGBTQ+ Global Monitor</p>
-			</div>
-		</footer>
-
 		<script>
 			window.gtranslateSettings = {
 				default_language: "en",
@@ -119,5 +107,12 @@
 			};
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="index.html" class="home-btn">HOME</a>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
