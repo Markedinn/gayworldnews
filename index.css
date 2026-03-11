@@ -43,14 +43,16 @@ body::before {
 	background-size: cover;
 	pointer-events: none;
 }
-
 .master-grid-container {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 20px; /* Standardizing the gap for a cleaner look */
+	gap: 20px;
 	width: 92%;
 	max-width: 900px;
 	margin: 30px auto;
+	/* --- THE FIX --- */
+	padding: 0 25px; /* This creates the margin space on the iPad Air */
+	box-sizing: border-box; /* This is vital so padding doesn't stretch the box */
 	z-index: 10;
 }
 
@@ -611,36 +613,56 @@ body::before {
 
 /* --- 8. RESPONSIVE BREAKPOINTS --- */
 
-/* TABLETS (iPads) - Fixing the "Bunched Up" look */
+/* TABLETS (iPads/Samsung) - Final Structural Alignment */
 @media (min-width: 481px) and (max-width: 1024px) {
+	/* 1. Reset the Grid Container to be a strict column */
 	.master-grid-container {
-		gap: 40px; /* More air between elements */
-		width: 85%; /* Pulls content in from the edges */
-		margin-top: 5vh; /* Nudges the title down from the top */
-	}
-
-	.landing-search-wrap {
-		margin-bottom: 20px; /* Extra space before the Bento cards */
-	}
-
-	/* Force the Translator container to match the 500px width */
-	#translator-anchor.landing-pill-style {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
 		width: 100% !important;
-		max-width: 500px !important;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		display: block;
-		position: relative; /* Anchor for the pill itself */
+		padding: 0 !important;
 	}
 
-	/* Ensure the internal select doesn't overflow its pink border */
-	.landing-pill-style select {
-		width: 50vw !important;
+	/* 2. Fix the Anchor - This is the "Track" the pill sits on */
+	#translator-anchor.landing-pill-style {
+		width: 90% !important;
 		max-width: 500px !important;
-		left: calc(-50vw + 250px) !important;
+		/* margin: 20px auto !important; */
+		position: relative !important;
+		height: 50px !important;
+	}
+
+	/* 3. The "Nuclear" Strike on Google's Inline Styles */
+	/* We target the ID Google injects to force it to 100% of the 500px anchor */
+	#google_translate_element,
+	#google_translate_element div {
+		width: 100% !important;
+	}
+
+	.goog-te-gadget-simple {
+		width: 100% !important; /* Forces the white to hit the pink arrow */
+		height: 46px !important;
+		display: flex !important;
+		justify-content: space-between !important;
+		align-items: center !important;
+		padding: 0 45px 0 15px !important; /* Reserves space for the pink arrow */
+		box-sizing: border-box !important;
+		border: none !important; /* Let your anchor handle the border */
+		background: white !important;
+		border-radius: 50px !important;
+		position: absolute !important;
+		left: 0 !important;
+		top: 0 !important;
+	}
+
+	/* 4. Hide the Google Logo/Trash that causes shifting */
+	.goog-te-gadget-icon,
+	.goog-te-menu-value img,
+	.goog-te-menu-value span:nth-child(3) {
+		display: none !important;
 	}
 }
-
 /* BIG SCREENS (27" - 32" Monitors) - Fixing the "Island" look */
 @media (min-width: 1600px) {
 	.master-grid-container {
@@ -796,4 +818,85 @@ body::before {
 #legendContent {
 	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
 	color: #333; /* Dark text for readability */
+}
+
+/* --- 8. RESPONSIVE BREAKPOINTS (SAFETY NET) --- */
+
+/* 1. MOBILE RESET (Phones) - Up to 480px */
+@media screen and (max-width: 480px) {
+	.master-grid-container {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 10px;
+		gap: 15px;
+	}
+
+	.bento-grid {
+		grid-template-columns: 1fr !important;
+		width: 100% !important;
+	}
+
+	.footer-container {
+		flex-direction: column !important;
+	}
+}
+
+/* --- 8. RESPONSIVE BREAKPOINTS (SAFETY NET) --- */
+
+/* TABLETS (Mid-size to Landscape) - 769px to 1024px */
+@media (min-width: 500px) and (max-width: 1024px) {
+	.master-grid-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		width: 92%; /* This is currently your only 'margin' */
+		max-width: 900px;
+		margin: 30px auto;
+		padding: 0 20px; /* ADD THIS: 20px of breathing room on left/right */
+		z-index: 10;
+		box-sizing: border-box; /* Ensures padding doesn't grow the width */
+	}
+
+	/* Force the Translator to match the Search & Map bars */
+	#translator-anchor.landing-pill-style,
+	.landing-search-wrap,
+	.search-map-link {
+		width: 100% !important; /* Full width of the stack */
+		max-width: 550px !important; /* Uniform cap for all three */
+		margin: 0 auto !important; /* Centers them together */
+	}
+
+	/* Ensure Google's internal container fills the 550px width */
+	#google_translate_element,
+	#google_translate_element div {
+		width: 100% !important;
+	}
+
+	.bento-grid {
+		grid-template-columns: repeat(2, 1fr) !important; /* Forces 2 columns */
+		gap: 15px;
+		width: 100%;
+	}
+}
+
+/* BIG SCREENS - Remains the same */
+@media (min-width: 1600px) {
+	.master-grid-container {
+		max-width: 1200px;
+		gap: 50px;
+	}
+}
+
+/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
+@media (min-width: 1600px) {
+	.master-grid-container {
+		max-width: 1200px;
+		gap: 50px;
+	}
+
+	body {
+		justify-content: center;
+	}
 }
