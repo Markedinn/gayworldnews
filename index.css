@@ -220,29 +220,6 @@ body::before {
 	box-shadow: 0 4px 12px rgba(255, 51, 153, 0.1);
 }
 
-/* #translator-anchor::after {
-	content: "▼"; 
-	position: absolute;
-	right: 20px; 
-	top: 50%;
-	transform: translateY(-50%);
-	color: #f544b1; 
-	font-size: 1.25rem;
-	pointer-events: none; 
-	z-index: 5;
-}
-
-
-#translator-anchor select {
-	height: 60px; 
-	padding: 0 45px; 
-	appearance: none; 
-	text-align: center;
-	text-align-last: center;
-	-webkit-appearance: none;
-} */
-
-/* #translator-anchor select, */
 .bento-card {
 	position: relative;
 	z-index: 10;
@@ -274,22 +251,6 @@ body::before {
 	transform: translateY(-5px);
 	background: rgba(255, 255, 255, 0.4);
 }
-
-/* #translator-anchor select option {
-	background-color: #f544b1; 
-	color: #ffffff; 
-	padding: 15px; 
-	font-size: 1rem;
-	text-transform: none; 
-}
-
-
-#translator-anchor select option:hover,
-#translator-anchor select option:focus,
-#translator-anchor select option:active {
-	background-color: #f544b1; 
-	color: #ffffff;
-} */
 
 /* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
@@ -611,6 +572,53 @@ body::before {
 	font-weight: 600;
 }
 
+/* 1. The Keyframes - Ensure it moves from 0 to 200% */
+@keyframes flow-rainbow {
+	from {
+		background-position: 0% center;
+	}
+	to {
+		background-position: 200% center;
+	}
+}
+
+.gwn-logo {
+	font-size: 1.8rem;
+	font-weight: 900;
+	text-transform: uppercase;
+
+	/* 2. THE SECRET SAUCE: The background must be 200% wide to "slide" */
+	background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+	background-size: 200% auto;
+
+	/* 3. Clipping */
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+
+	/* 4. Animation Call - Make sure 'infinite' and 'linear' are there */
+	animation: flow-rainbow 3s linear infinite;
+
+	/* 5. Depth */
+	filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.5));
+
+	/* Extra insurance for some browsers */
+	display: inline-block;
+}
+
+.footer-card h4 {
+	margin: 0; /* Removes the default space pushing these links down */
+	font-size: 0.85rem; /* Keeps your sizing consistent */
+	display: inline; /* Ensures they behave like the logo */
+}
+
+.footer-container {
+	max-width: 900px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center; /* This centers the big logo and small text links */
+}
 /* --- 8. RESPONSIVE BREAKPOINTS --- */
 
 /* TABLETS (iPads/Samsung) - Final Structural Alignment */
