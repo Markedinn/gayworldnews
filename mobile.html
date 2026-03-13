@@ -173,12 +173,6 @@
 				justify-content: center;
 			}
 
-			.search-map-bar span:last-child {
-				position: absolute;
-				right: 40px;
-				font-size: 12px;
-			}
-
 			/* --- 4. SEARCH TRAY & SIDE MENU --- */
 			.search-results-floating {
 				position: absolute;
@@ -293,32 +287,39 @@
 
 			/* 1. The main container pill */
 			#translator-anchor {
-				background-color: #ffffff !important;
-				border-radius: 50px !important;
-				border: 2px solid rgba(255, 255, 255, 0.3) !important;
-				overflow: hidden; /* Keeps the rounded corners clean */
+				background: rgba(255, 255, 255, 0.1) !important; /* Translucent */
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				border-radius: 12px !important; /* Bento corner radius instead of 50px */
+				border: 1px solid rgba(255, 255, 255, 0.2) !important;
+				overflow: hidden;
+				width: 90%;
+				max-width: 450px;
+				margin: 0 auto;
+				position: relative;
+				grid-row: 2;
+				margin-top: 20px;
 			}
 
-			/* 2. Targeting the actual Select/Dropdown inside */
+			/* 2. The Select/Dropdown inside - Ghost Styling */
 			#translator-anchor select,
 			.gt_selector,
 			.goog-te-combo {
-				background-color: #ffffff !important;
-				color: #ff3399 !important;
-				font-weight: 700 !important;
+				background-color: transparent !important;
+				color: #ffffff !important; /* White text to match Bento cards */
+				font-weight: 600 !important;
+				text-transform: uppercase;
+				letter-spacing: 1px;
 				border: none !important;
 				padding: 10px 20px !important;
 				width: 100% !important;
-				height: 50px !important;
+				height: 55px !important; /* Match search bar height */
 				font-family: inherit !important;
-				appearance: none; /* Removes the default grey arrow on some browsers */
+				appearance: none;
 				-webkit-appearance: none;
 				text-align: center;
-				text-align-last: center; /* Centers text in the dropdown */
-				overflow-y: hidden !important; /* The 'No Overflow' you mentioned */
-				height: 50px !important; /* Lock the height of the pill */
+				text-align-last: center;
 			}
-
 			/* 3. Handling the "Popup" menu (The part that opens) */
 			/* Note: Some mobile browsers use the native OS picker, 
    but for those that don't, this helps */
@@ -326,50 +327,78 @@
 				color: white !important;
 			}
 
-			/* 4. Optional: Adding a custom white arrow so users know it's a dropdown */
+			/* 3. The Arrow - Updated for the new background */
 			#translator-anchor::after {
-				content: "▶"; /* The right arrow to match the Map bar */
+				content: "▼";
 				position: absolute;
 				right: 20px;
 				top: 50%;
 				transform: translateY(-50%);
-				color: #ff3399;
-				font-size: 12px;
-				pointer-events: none; /* Allows clicks to pass through to the select */
+				color: #ff3399; /* Soft white arrow */
+				font-size: 18px;
+				pointer-events: none;
 			}
 
 			/* THE FIX: Targeting only the dropdown list items */
 			#translator-anchor select option {
-				background-color: rgb(1, 178, 129) !important; /* Brand Blue for the list background */
+				background-color: rgb(1, 178, 129) !important;
 				color: #ffffff !important;
-				text-align: left; /* White text for the list items */
+				text-align: left;
 				padding: 12px;
-				font-size: 14px;
-				font-weight: 600;
-				overflow: hidden !important;
 			}
 
-			/* Specific target for the Google-injected class if it ignores the above */
+			/* Hide the scrollbar for the desktop dropdown list */
+			#translator-anchor select::-webkit-scrollbar {
+				display: none !important;
+				width: 0 !important;
+			}
+
+			/* For Firefox */
+			#translator-anchor select {
+				scrollbar-width: none !important;
+			}
+
+			/* Target the actual dropdown menu injected by Google if the above doesn't catch it */
+			.goog-te-combo {
+				scrollbar-width: none !important;
+				-ms-overflow-style: none !important;
+			}
+
+			.goog-te-combo::-webkit-scrollbar {
+				display: none !important;
+			}
+
+			/* Remove the gold border and grey background on click */
+			#translator-anchor select:focus,
+			#translator-anchor select:active,
+			.goog-te-combo:focus,
+			.goog-te-combo:active {
+				outline: none !important; /* Removes the gold/blue border */
+				background-color: transparent !important; /* Prevents the grey box */
+				box-shadow: none !important; /* Removes any shadow/glow */
+			}
+
+			/* Specific target for the Google-injected class if it ignores the above
 			.goog-te-combo option {
 				background-color: #24408e !important;
 				color: #ffffff !important;
 				overflow: hidden !important;
-				scrollbar-width: none !important; /* Firefox */
-				-ms-overflow-style: none !important; /* IE/Edge */
+				scrollbar-width: none !important;
+				-ms-overflow-style: none !important; 
 				overflow: hidden !important;
 			}
 
 			#translator-anchor select::-webkit-scrollbar,
 			.goog-te-combo::-webkit-scrollbar {
-				width: 0px !important; /* Removes vertical width */
+				width: 0px !important;
 				background: transparent !important;
 				display: none !important;
 			}
 
-			/* 3. For Firefox */
+			
 			#translator-anchor select {
 				scrollbar-width: none !important;
-			}
+			} */
 
 			/* --- SEARCH RESULTS DROPDOWN STYLING --- */
 
@@ -458,7 +487,6 @@
 		<a href="lgbt_risk_map.html" class="search-map-link">
 			<div class="search-map-bar">
 				<span>Search Map</span>
-				<span>▶</span>
 			</div>
 		</a>
 

@@ -176,3 +176,18 @@
 	align-items: center;
 	z-index: 1000;
 }
+
+/* 1. Remove the default arrow in Chrome and Firefox */
+.news-accordion summary {
+	list-style: none; /* Modern standard */
+}
+
+/* 2. Specifically remove the arrow in Safari (WebKit) */
+.news-accordion summary::-webkit-details-marker {
+	display: none;
+}
+
+/* 3. Ensure the summary behaves like a clean block (fixes some alignment bugs) */
+.news-accordion summary {
+	display: block; /* Removes the 'list-item' behavior that forces an arrow space */
+}
