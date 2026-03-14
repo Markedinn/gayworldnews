@@ -184,7 +184,7 @@ body::before {
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.3);
-	border-radius: 12px;
+	border-radius: 50px;
 	padding: 20px;
 	color: #ffffff;
 	font-weight: 700;
@@ -831,23 +831,32 @@ body::before {
 		margin: 0 auto !important;
 	}
 
-	/* BIG SCREENS - Remains the same */
-	@media (min-width: 1600px) {
-		.master-grid-container {
-			max-width: 1200px;
-			gap: 50px;
-		}
+	/* Isolate the translator when it is inside the three-pill stack */
+	.three-search-container #translator-anchor {
+		grid-column: 1 / -1 !important; /* Breaks out of the 3-column grid */
+		width: 100% !important; /* Fills the .three-search-container */
+		max-width: 500px !important; /* Matches your .three-search-container max-width */
+		margin: 0 auto !important;
+		display: flex !important;
+	}
+}
+
+/* BIG SCREENS - Remains the same */
+@media (min-width: 1600px) {
+	.master-grid-container {
+		max-width: 1200px;
+		gap: 50px;
+	}
+}
+
+/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
+@media (min-width: 1600px) {
+	.master-grid-container {
+		max-width: 1200px;
+		gap: 50px;
 	}
 
-	/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
-	@media (min-width: 1600px) {
-		.master-grid-container {
-			max-width: 1200px;
-			gap: 50px;
-		}
-
-		body {
-			justify-content: center;
-		}
+	body {
+		justify-content: center;
 	}
 }
