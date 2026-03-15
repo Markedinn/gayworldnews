@@ -101,41 +101,41 @@ body::before {
 	background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
 }
 
-/* --- 3. U=U BANNER --- */
+/* --- 3. U=U BANNER (Global Style) --- */
 .u-u-link {
 	grid-column: 1 / -1;
 	text-decoration: none;
 	transition: transform 0.2s ease;
 	position: relative;
 	z-index: 10;
+	display: block; /* Ensures it takes up space correctly */
 }
 
 #u-u-notice {
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	background: #ffffff !important; /* Solid White - No more transparency */
+	backdrop-filter: none !important;
+	-webkit-backdrop-filter: none !important;
 	border-left: 6px solid #f544b1;
-	padding: 12px 20px;
-	border-radius: 8px;
+	padding: 15px 20px; /* Slightly more padding for the "card" feel */
+	border-radius: 12px; /* Uniform Bento corners */
 	text-align: center;
 	color: #24408e;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-#u-u-notice h4 {
-	text-transform: uppercase;
-}
-
-#u-u-notice {
 	transition:
 		transform 0.2s ease,
 		background 0.2s ease;
 	cursor: pointer;
 }
 
+#u-u-notice h4 {
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	font-weight: 800;
+}
+
 #u-u-notice:hover {
-	transform: scale(1.02);
-	background: rgba(255, 255, 255, 0.25);
+	transform: scale(1.01); /* Subtle scale is more professional than 1.02 */
+	background: #fafafa !important; /* Very slight grey so user knows they are hovering */
 }
 
 /* --- 4. TRANSLATOR & BENTO CARDS --- */
@@ -225,6 +225,18 @@ body::before {
 	outline: none !important;
 	background-color: transparent !important;
 	box-shadow: none !important;
+}
+
+/* Target only the vertical padding to slim the pill */
+#translator-anchor .gt_selector {
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	height: auto !important; /* Ensures it doesn't try to force a height */
+}
+
+/* Optional: If the flag or arrow looks too tight, adjust them slightly */
+#translator-anchor .gt_selector img {
+	margin-top: -2px !important; /* Micro-adjustment to keep flag centered */
 }
 
 /* 4. Hover Effect for all bars */
