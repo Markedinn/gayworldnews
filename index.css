@@ -776,6 +776,35 @@ body::before {
 	position: relative;
 }
 
+/* 1. Neutralize the GTranslate 'Phantom' Spacing */
+#translator-anchor {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+	line-height: 0; /* Removes the bottom-line ghost space */
+}
+
+/* 2. Tighten the Container Logic */
+.dual-search-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px; /* This is now the ONLY master control for spacing */
+	width: 100%;
+	max-width: 600px;
+	margin: 10px auto 20px auto;
+}
+
+/* 3. Ensure the Search Bar doesn't have its own top margin */
+.landing-search-wrap {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+/* 4. Ensure the Map Link doesn't have its own top margin */
+.search-map-link {
+	margin-top: 0 !important;
+}
+
 /* Responsive Fix for Mobile */
 @media screen and (max-width: 850px) {
 	.three-search-container {
