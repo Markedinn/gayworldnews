@@ -5,10 +5,10 @@
 		<title>Gay World News – LGBT World Risk Map</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=3" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="index.css?v=mobile6" />
+		<!-- <link rel="stylesheet" href="index.css?v=mobile6" /> -->
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -32,6 +32,7 @@
 				width: 100%;
 				height: 100%;
 				background: #1a2b56;
+				font-family: "Helvetica Neue", Arial, sans-serif;
 			}
 
 			#hoverBox {
@@ -167,18 +168,11 @@
 			#legendHeader:focus-visible {
 				outline: 2px solid #ff3399;
 			}
-			.site-footer {
-				position: fixed !important; /* Force it to ignore index.css */
-				bottom: 0 !important;
-				left: 0;
-				width: 100%;
-				z-index: 999 !important; /* High enough to beat Leaflet panes */
-				background-color: #1a2b56 !important; /* Use a solid color so map doesn't show through */
-				height: 60px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				/* border-top: 2px solid #faf9f9; */
+
+			/* Ensure the legend can actually grow when opened */
+			#legend:not(.legend-collapsed) #legendContent {
+				display: block;
+				max-height: 500px; /* Or whatever height fits your content */
 			}
 
 			/* IMPORTANT: Shrink the map so it doesn't try to go under the footer */
@@ -187,22 +181,92 @@
 				width: 100%;
 			}
 
-			.footer-container {
-				display: flex !important;
-				flex-direction: row !important;
-				justify-content: space-between !important; /* Pushes them to opposite ends */
-				align-items: center !important;
-				padding: 12px 20px !important; /* 20px on the sides keeps them off the edges */
-				width: 100% !important;
-				box-sizing: border-box; /* Ensures padding doesn't break the width */
+			/* --- UNIVERSAL FOOTER FIX --- */
+			/* THE MISSING PIECE: The instructions for the movement */
+			@keyframes flow-rainbow {
+				0% {
+					background-position: 0% center;
+				}
+				100% {
+					background-position: 200% center;
+				}
 			}
 
-			.footer-container a {
-				display: inline-block !important;
+			.gwn-logo {
+				font-size: 1.8rem;
+				font-weight: 900;
+				text-transform: uppercase;
+
+				/* Background 200% wide to "slide" */
+				background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
+				background-size: 200% auto;
+
+				/* Clipping */
+				-webkit-background-clip: text;
+				background-clip: text;
+				color: transparent;
+
+				/* Animation Call */
+				animation: flow-rainbow 2s linear infinite;
+
+				/* Depth */
+				filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
+
+				/* Insurance */
+				display: inline-block;
+			}
+
+			/* --- REDESIGNED FOOTER LAYOUT --- */
+			.site-footer {
+				position: fixed !important;
+				bottom: 0 !important;
+				left: 0;
+				width: 100%;
+				height: 60px;
+				background-color: #1a2b56 !important;
+				z-index: 9999;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+			}
+
+			.footer-container {
+				display: grid !important;
+				/* Two equal halves for content, 'auto' for the thin bar */
+				grid-template-columns: 1fr auto 1fr !important;
+				align-items: center !important;
+				width: 100% !important;
+			}
+
+			/* Centering the content within each half */
+			.footer-section {
+				display: flex !important;
+				justify-content: center !important;
+				align-items: center !important;
+			}
+
+			/* The vertical bar styling */
+			.footer-divider {
+				color: rgba(255, 255, 255, 0.3);
+				font-size: 20px;
+				font-weight: 100;
+				/* Ensures the space is no bigger than the character itself */
+				padding: 0;
+				margin: 0;
+			}
+
+			.home-btn {
+				color: #ff3399;
+				font-weight: 800;
+				font-size: 12px;
+				letter-spacing: 1px;
+				text-align: center;
+				/* cursor: pointer; */
+			}
+
+			.home-btn-logo {
 				text-decoration: none;
-				font-weight: bold;
-				font-size: 13px; /* Slightly smaller to ensure they fit on one line */
-				white-space: nowrap;
 			}
 		</style>
 	</head>
@@ -236,13 +300,17 @@
 
 		<footer class="site-footer">
 			<div class="footer-container">
-				<div class="footer-card">
-					<a href="index.html" class="home-btn-logo" title="Gay World News - Home">
+				<div class="footer-section">
+					<a href="index.html" class="home-btn-logo">
 						<span class="gwn-logo">GWN</span>
 					</a>
 				</div>
-				<span style="color: rgba(255, 255, 255, 0.3); margin: 0 5px">|</span>
-				<span class="home-btn" style="color: #ff3399">TAP A COUNTRY TO OPEN</span>
+
+				<span class="footer-divider">|</span>
+
+				<div class="footer-section">
+					<span class="home-btn">TAP A COUNTRY TO OPEN</span>
+				</div>
 			</div>
 		</footer>
 

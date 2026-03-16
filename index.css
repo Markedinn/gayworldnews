@@ -375,21 +375,10 @@ body::before {
 	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
 }
 
-/* --- NEW GLOBAL ICE ADVISORY --- */
-.country-card.ice,
-.country-card.advisory {
-	background: rgba(0, 229, 255, 0.6) !important;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	color: #ffffff !important;
-	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-}
-
 .search-map-link {
 	text-decoration: none;
 	display: block;
-	margin: 10px 0 25px 0;
+	/* margin: 10px 0 25px 0; */
 	position: relative;
 	z-index: 10; /* INTERACTION LAYER */
 }
@@ -398,6 +387,7 @@ body::before {
 	display: flex;
 	align-items: center;
 	justify-content: center; /* Centers the content group */
+	height: 50px;
 	background: #ffffff;
 	border: 2px solid #e2e8f0;
 	padding: 12px 20px;
@@ -422,28 +412,74 @@ body::before {
 }
 
 /* THE MASTER CONTAINER - TIGHTENED */
-.dual-search-container {
+/* .dual-search-container {
 	grid-column: 2;
 	display: flex;
 	flex-direction: column;
-	gap: 8px; /* Reduced gap between the two bars */
+	gap: 8px; 
+	width: 100%;
+	max-width: 600px;
+	margin: 10px auto 20px auto;
+} */
+
+.landing-search-wrap input,
+.search-map-bar {
+	/* height: 48px;  */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.three-search-container {
+	grid-column: 1 / -1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 22px;
+	width: 90%;
+	max-width: 500px;
+	margin: 20px auto;
+	position: relative;
+	overflow: visible !important;
+	z-index: 2000;
+}
+
+#translator-anchor.landing-pill-style,
+.landing-search-wrap,
+.search-map-link {
+	width: 100%;
+	height: 50px;
+	margin: 0 !important;
+	position: relative;
+}
+
+/* 1. Neutralize the GTranslate 'Phantom' Spacing */
+#translator-anchor {
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+	line-height: 0; /* Removes the bottom-line ghost space */
+}
+
+/* 2. Tighten the Container Logic */
+.dual-search-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
 	width: 100%;
 	max-width: 600px;
 	margin: 10px auto 20px auto;
 }
 
-/* 1. MOBILE & INTERMEDIATE (Up to 27-inch / 1920px) */
-.landing-search-wrap,
-.search-map-link {
-	width: 100%;
+/* 3. Ensure the Search Bar doesn't have its own top margin */
+.landing-search-wrap {
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
 }
 
-.landing-search-wrap input,
-.search-map-bar {
-	height: 48px; /* Slightly slimmer for a tighter look */
-	display: flex;
-	align-items: center;
-	justify-content: center;
+/* 4. Ensure the Map Link doesn't have its own top margin */
+.search-map-link {
+	margin-top: 0 !important;
 }
 
 .bento-grid {
@@ -501,6 +537,17 @@ body::before {
 	background: rgba(255, 145, 0, 0.6);
 } /* Caution */
 
+/* --- NEW GLOBAL ICE ADVISORY --- */
+.country-card.ice,
+.country-card.advisory {
+	background: rgba(0, 229, 255, 0.6) !important;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	color: #ffffff !important;
+	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+}
+
 /* --- 6. QUICK EXIT --- */
 .exit-btn {
 	position: fixed;
@@ -525,37 +572,143 @@ body::before {
 	width: 100%;
 	background: rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(10px);
-	padding: 20px 0;
 	margin-top: auto;
 	z-index: 1 !important;
+	padding: 10px 0 5px 0; /* Tightened vertical padding */
 }
 
 .footer-container {
 	max-width: 900px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center; /* Changed from space-around for a tighter cluster */
+	align-items: center;
+	gap: 20px; /* Controlled space between pills and text */
+	flex-wrap: wrap;
 }
 
 .footer-card a {
 	text-decoration: none;
 	color: #24408e;
-	text-transform: uppercase;
 	font-weight: 800;
-	font-size: 0.85rem;
+	font-size: 0.8rem;
+	/* Removed extra margins/padding here to keep it short */
+}
+
+/* The Fixed-Width Pill Styling - Reduced Height */
+/* .social-pill {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 120px;
+	height: 32px;
+	gap: 8px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	padding: 0;
+} */
+
+.social-pill span {
+	font-size: 0.75rem; /* Scaled down to match shorter height */
+	font-weight: 600;
+	color: white;
+	/* margin-left: 6px; */
+	line-height: 1;
+}
+
+/* Brand Colors */
+.facebook {
+	background-color: #1877f2;
+}
+.x-twitter {
+	background-color: #000000;
+}
+.youtube {
+	background-color: #ff0000;
+}
+
+.social-pill:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	filter: brightness(1.1);
 }
 
 .footer-bottom-bar {
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 8px; /* Reduced from 15px */
 	border-top: 1px solid rgba(36, 64, 142, 0.1);
-	padding-top: 10px;
+	padding-top: 5px; /* Reduced from 10px */
 }
 
 .footer-copyright {
 	color: rgba(36, 64, 142, 0.5);
 	font-size: 0.65rem;
 	font-weight: 600;
+	margin: 0; /* Ensure no default paragraph margins */
+}
+
+/* Neutral style for About and Connect */
+.neutral {
+	background-color: rgba(36, 64, 142, 0.05); /* Very faint brand blue */
+	border: 1px solid rgba(36, 64, 142, 0.2); /* Subtle outline */
+}
+
+.neutral span,
+.neutral i {
+	color: #24408e !important; /* Uses your existing brand blue for the text */
+}
+
+.neutral:hover {
+	background-color: rgba(36, 64, 142, 0.1);
+	border-color: #24408e;
+}
+
+/* Adjusting the icon spacing for the info and envelope icons */
+.social-pill i {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Container adjustment */
+
+/* The Fixed-Width Pill Styling */
+.social-pill {
+	display: flex;
+	align-items: center;
+	justify-content: center; /* Centers content inside the fixed width */
+	width: 130px; /* Set a fixed width for uniformity */
+	height: 38px; /* Set a fixed height */
+	border-radius: 50px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.social-pill span {
+	font-size: 0.85rem; /* Slightly smaller to fit "YouTube" comfortably */
+	font-weight: 600;
+	color: white;
+	margin-left: 8px;
+}
+
+/* Brand Colors */
+.facebook {
+	background-color: #1877f2;
+}
+.x-twitter {
+	background-color: #000000;
+}
+.youtube {
+	background-color: #ff0000;
+}
+
+/* Hover Effects */
+.social-pill:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
 }
 
 /* 1. The Keyframes - Ensure it moves from 0 to 200% */
@@ -598,17 +751,103 @@ body::before {
 	display: inline;
 }
 
-.footer-container {
+/* .footer-container {
 	max-width: 900px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+} */
+
+.sources-list a {
+	color: #ff3399 !important; /* Your pink */
+	text-decoration: underline;
+	font-size: 13px;
+	display: block;
+	margin-bottom: 8px;
+	word-break: break-all; /* Prevents long URLs from breaking the frame */
+	pointer-events: auto !important; /* Forces the browser to ignore the map underneath */
+	z-index: 10001;
+	position: relative;
 }
+
+/* Ensure the text inside the accordion is readable against the navy background */
+#legendContent {
+	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
+	color: #333; /* Dark text for readability */
+}
+
 /* --- 8. RESPONSIVE BREAKPOINTS --- */
 
+@media screen and (max-width: 480px) {
+	.master-grid-container {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 10px;
+		gap: 15px;
+		z-index: 10;
+	}
+
+	.landing-search-wrap {
+		position: relative !important;
+		margin-top: 10px !important;
+		overflow: visible !important;
+		width: 100% !important;
+		z-index: 20;
+	}
+
+	.search-results-floating {
+		position: absolute !important;
+		top: 50px !important;
+		left: 0 !important;
+		width: 100% !important;
+		z-index: 1000 !important;
+		display: none;
+	}
+
+	#translator-anchor {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important; /* Force full width of the container */
+		max-width: 100% !important;
+		margin: 10px 0 !important;
+		margin-bottom: 10px !important;
+	}
+
+	.bento-grid {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		width: 100% !important;
+		gap: 15px;
+		position: relative;
+		z-index: 10;
+	}
+
+	.master-grid-container > *,
+	.country-card,
+	#manual-news-portal,
+	.u-u-link,
+	.main-header,
+	#info-display-area {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 auto !important;
+		box-sizing: border-box;
+	}
+
+	.footer-container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		gap: 15px !important;
+	}
+}
+
 /* TABLETS (iPads/Samsung) - Final Structural Alignment */
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 481px) and (max-width: 1100px) {
 	.master-grid-container {
 		display: flex !important;
 		flex-direction: column !important;
@@ -619,7 +858,7 @@ body::before {
 
 	/* 2. Fix the Anchor - This is the "Track" the pill sits on */
 	#translator-anchor.landing-pill-style {
-		width: 90% !important;
+		width: 100% !important;
 		position: relative !important;
 		height: 50px !important;
 	}
@@ -646,218 +885,7 @@ body::before {
 	.goog-te-menu-value span:nth-child(3) {
 		display: none !important;
 	}
-}
-/* BIG SCREENS (27" - 32" Monitors) - Fixing the "Island" look */
-@media (min-width: 1600px) {
-	.master-grid-container {
-		max-width: 1200px;
-		gap: 50px;
-	}
-	#translator-anchor {
-		margin-bottom: 20px !important; /* This adds the breathing room below the translator */
-	}
 
-	.main-header {
-		margin-bottom: 30px;
-	}
-}
-
-/* --- CLEAN CONSOLIDATED MOBILE RESET --- */
-
-@media screen and (max-width: 440px) {
-	/* 1. LAYOUT RESET: Convert grid to a clean vertical stack */
-	.master-grid-container {
-		display: flex !important;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		padding: 10px;
-		gap: 15px; /* Consistent spacing between all bars */
-		z-index: 10;
-	}
-
-	#translator-anchor {
-		margin-bottom: 20px !important; /* This adds the breathing room below the translator */
-	}
-
-	/* 2. THE SEARCH TRAY: Ensure results float above the rest */
-	.landing-search-wrap {
-		position: relative !important;
-		margin-top: 10px !important;
-		overflow: visible !important;
-		width: 100% !important;
-		z-index: 20;
-	}
-
-	.search-results-floating {
-		position: absolute !important;
-		top: 50px !important;
-		left: 0 !important;
-		width: 100% !important;
-		z-index: 1000 !important;
-		display: none;
-	}
-
-	/* 3. THE TRANSLATOR: Make sure it's visible and full width */
-	#translator-anchor {
-		display: flex !important;
-		justify-content: center !important;
-		align-items: center !important;
-		width: 100% !important; /* Force full width of the container */
-		max-width: 100% !important;
-		margin: 10px 0 !important;
-		margin-bottom: 10px !important;
-	}
-
-	/* 4. THE BENTO GRID: One card per row */
-	.bento-grid {
-		display: grid !important;
-		grid-template-columns: 1fr !important;
-		width: 100% !important;
-		gap: 15px;
-		position: relative;
-		z-index: 10;
-	}
-
-	/* 5. FULL WIDTH FORCE: Make everything look consistent */
-	.master-grid-container > *,
-	.country-card,
-	#manual-news-portal,
-	.u-u-link,
-	.main-header,
-	#info-display-area {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 auto !important;
-		box-sizing: border-box;
-	}
-
-	/* 6. FOOTER: Stacked for small screens */
-	.footer-container {
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: center !important;
-		width: 100% !important;
-		gap: 15px !important;
-	}
-
-	.footer-bottom-links {
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-		align-items: center;
-	}
-}
-
-/* THE UNIFIED STACK */
-/* THE UNIFIED STACK - CENTERED & LAYERED */
-.three-search-container {
-	grid-column: 1 / -1; /* Spans across but centers via margin */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 22px;
-	width: 90%;
-	max-width: 500px;
-	margin: 20px auto;
-	position: relative;
-	/* Allows the dropdown to "spill out" without being clipped */
-	overflow: visible !important;
-	z-index: 2000;
-}
-
-/* THE INDIVIDUAL BARS: Remove top/bottom margins to let 'gap' do the work */
-#translator-anchor.landing-pill-style,
-.landing-search-wrap,
-.search-map-link {
-	width: 100%;
-	height: 50px;
-	margin: 0 !important; /* Force margins to zero so the 15px gap is exact */
-	position: relative;
-}
-
-/* 1. Neutralize the GTranslate 'Phantom' Spacing */
-#translator-anchor {
-	margin-bottom: 0 !important;
-	padding-bottom: 0 !important;
-	line-height: 0; /* Removes the bottom-line ghost space */
-}
-
-/* 2. Tighten the Container Logic */
-.dual-search-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px; /* This is now the ONLY master control for spacing */
-	width: 100%;
-	max-width: 600px;
-	margin: 10px auto 20px auto;
-}
-
-/* 3. Ensure the Search Bar doesn't have its own top margin */
-.landing-search-wrap {
-	margin-top: 0 !important;
-	margin-bottom: 0 !important;
-}
-
-/* 4. Ensure the Map Link doesn't have its own top margin */
-.search-map-link {
-	margin-top: 0 !important;
-}
-
-/* Responsive Fix for Mobile */
-@media screen and (max-width: 850px) {
-	.three-search-container {
-		grid-column: 1 / -1; /* Take full width on smaller screens */
-		width: 92%;
-	}
-}
-
-/* This makes the source links pop and stay clickable on the country pages*/
-.sources-list a {
-	color: #ff3399 !important; /* Your pink */
-	text-decoration: underline;
-	font-size: 13px;
-	display: block;
-	margin-bottom: 8px;
-	word-break: break-all; /* Prevents long URLs from breaking the frame */
-	pointer-events: auto !important; /* Forces the browser to ignore the map underneath */
-	z-index: 10001;
-	position: relative;
-}
-
-/* Ensure the text inside the accordion is readable against the navy background */
-#legendContent {
-	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
-	color: #333; /* Dark text for readability */
-}
-
-/* --- 8. RESPONSIVE BREAKPOINTS (SAFETY NET) --- */
-
-/* 1. MOBILE RESET (Phones) - Up to 480px */
-@media screen and (max-width: 480px) {
-	.master-grid-container {
-		display: flex !important;
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		padding: 10px;
-		gap: 15px;
-	}
-
-	.bento-grid {
-		grid-template-columns: 1fr !important;
-		width: 100% !important;
-	}
-
-	.footer-container {
-		flex-direction: column !important;
-	}
-}
-
-/* TABLET FIX: Catching iPad Mini, iPad Air, and Samsung Tab S8 (Portrait) */
-@media screen and (min-width: 500px) and (max-width: 1100px) {
-	/* Force 2 Columns on Americas/Country Pages */
 	.bento-grid {
 		grid-template-columns: repeat(2, 1fr) !important;
 		gap: 20px !important;
@@ -868,7 +896,7 @@ body::before {
 	.landing-search-wrap,
 	.search-map-link {
 		width: 100% !important;
-		max-width: 550px !important; /* Uniform width for the "pills" */
+		max-width: 500px !important; /* Uniform width for the "pills" */
 		margin: 0 auto !important;
 	}
 
@@ -880,13 +908,20 @@ body::before {
 		margin: 0 auto !important;
 		display: flex !important;
 	}
-}
 
-/* BIG SCREENS - Remains the same */
-@media (min-width: 1600px) {
-	.master-grid-container {
-		max-width: 1200px;
-		gap: 50px;
+	.footer-container {
+		display: grid !important;
+		grid-template-columns: repeat(3, 1fr) !important;
+		justify-items: center;
+		align-items: center;
+		gap: 20px 0;
+		max-width: 800px;
+		margin: 0 auto;
+	}
+	.footer-card {
+		display: flex !important;
+		justify-content: center !important;
+		width: 100%;
 	}
 }
 
@@ -899,5 +934,13 @@ body::before {
 
 	body {
 		justify-content: center;
+	}
+
+	#translator-anchor {
+		margin-bottom: 20px !important; /* This adds the breathing room below the translator */
+	}
+
+	.main-header {
+		margin-bottom: 30px;
 	}
 }
