@@ -24,7 +24,7 @@ body {
 	justify-content: center; /* Pushes content away from the very top */
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	margin: 0;
-	padding: 30px 0 0 0; /* Adds breathing room at the top and bottom */
+	padding: 20px 0 0 0; /* Adds breathing room at the top and bottom */
 }
 
 body::before {
@@ -63,31 +63,20 @@ body::before {
 	z-index: 30;
 }
 
+/* Update your CSS */
 .rainbow-text {
+	/* Remove the complex animation/gradient clipping properties */
+	color: white; /* Clean, static white */
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	font-size: clamp(2rem, 8vw, 4rem);
-	font-weight: 900;
-	margin: 0;
-	background: linear-gradient(to right, #ffd600, #00e676, #2979ff, #aa00ff, #ff1744, #ff9100, #ffd600);
-	background-size: 200% auto;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: rainbow-flow 5s linear infinite;
-}
-
-@keyframes rainbow-flow {
-	from {
-		background-position: 0% center;
-	}
-	to {
-		background-position: 200% center;
-	}
+	font-weight: bold; /* (Keep your weight) */
+	margin-top: 0vh;
 }
 
 .subtitle {
 	color: #ffffff;
 	font-weight: 500;
-	margin: 10px auto 0 auto;
+	margin: 10px auto 10px auto;
 	text-align: center;
 	font-size: 1.1rem;
 	line-height: 1.4;
@@ -96,7 +85,7 @@ body::before {
 .rainbow-line {
 	height: 4px;
 	width: 100%;
-	margin-top: 8px;
+	margin: 8px auto;
 	border-radius: 10px;
 	background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
 }
@@ -140,7 +129,7 @@ body::before {
 
 /* --- 4. TRANSLATOR & BENTO CARDS --- */
 #translator-anchor {
-	grid-column: 2;
+	/* grid-column: 2; */
 	width: 100%;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -148,7 +137,7 @@ body::before {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 }
 
 /* 2. The Pink Triangle */
@@ -166,7 +155,30 @@ body::before {
 
 /* 3. The Select adjustment */
 #translator-anchor select {
-	height: 60px; /* Set a fixed height instead of 70% */
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(255, 255, 255, 0.18) !important;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 50px;
+	/* padding: 20px; */
+	color: #ffffff;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.3s ease;
+	cursor: pointer;
+	appearance: none;
+	font-size: 1rem;
+	font-family: inherit;
+	line-height: normal;
+	-webkit-appearance: none;
+	height: 50px;
 	padding: 0 45px; /* Add space on the right so text doesn't hit the triangle */
 	appearance: none; /* Hides the boring default browser arrow */
 	text-align: center;
@@ -174,16 +186,16 @@ body::before {
 	-webkit-appearance: none;
 }
 
-#translator-anchor select,
 .bento-card {
 	width: 100%;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(255, 255, 255, 0.18) !important;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 	border-radius: 50px;
 	padding: 20px;
 	color: #ffffff;
@@ -204,10 +216,10 @@ body::before {
 
 /* 1. Style the list items for Desktop visibility */
 #translator-anchor select option {
-	background-color: #24408e !important;
+	background-color: #0ac4f3 !important;
 	color: #ffffff !important;
 	padding: 12px !important;
-	font-size: 1rem;
+	font-size: 1.15rem;
 	text-transform: none;
 }
 
@@ -225,13 +237,6 @@ body::before {
 	outline: none !important;
 	background-color: transparent !important;
 	box-shadow: none !important;
-}
-
-/* Target only the vertical padding to slim the pill */
-#translator-anchor .gt_selector {
-	padding-top: 8px !important;
-	padding-bottom: 8px !important;
-	height: auto !important; /* Ensures it doesn't try to force a height */
 }
 
 /* Optional: If the flag or arrow looks too tight, adjust them slightly */
@@ -254,10 +259,11 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(255, 255, 255, 0.18) !important;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 	border-radius: 12px;
 	padding: 20px;
 	color: #ffffff;
@@ -289,12 +295,15 @@ body::before {
 /* THE INPUT */
 .landing-search-wrap input {
 	width: 100%;
-	height: 48px;
+	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	background: #ffffff;
-	border: 2px solid #e2e8f0;
-	color: #ff3399;
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(255, 255, 255, 0.18);
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.4);
+	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
 	outline: none;
@@ -303,12 +312,12 @@ body::before {
 	outline: none;
 	text-align: center;
 	box-sizing: border-box;
-	caret-color: #ff3399;
+	caret-color: #ffffff;
 }
 
 /* Ensure the placeholder isn't blurred or too faint */
 .landing-search-wrap input::placeholder {
-	color: #ff3399;
+	color: #ffffff;
 }
 
 /* --- 1. THE DROPDOWN TRAY --- */
@@ -343,7 +352,7 @@ body::before {
 	width: 100% !important;
 	margin: 0 !important;
 	color: #ffffff !important;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 /* GREEN: Safe (#16d242) */
@@ -388,8 +397,11 @@ body::before {
 	align-items: center;
 	justify-content: center; /* Centers the content group */
 	height: 50px;
-	background: #ffffff;
-	border: 2px solid #e2e8f0;
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(255, 255, 255, 0.18) !important;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border: 2px solid rgba(255, 255, 255, 0.4);
 	padding: 12px 20px;
 	border-radius: 50px;
 	position: relative; /* Necessary to anchor the arrow */
@@ -405,7 +417,7 @@ body::before {
 }
 
 .search-map-text {
-	color: #ff3399;
+	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600; /* Synced to your search bar */
 	text-align: center;
@@ -424,7 +436,6 @@ body::before {
 
 .landing-search-wrap input,
 .search-map-bar {
-	/* height: 48px;  */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -435,10 +446,10 @@ body::before {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 22px;
+	gap: 20px;
 	width: 90%;
 	max-width: 500px;
-	margin: 20px auto;
+	margin: 40px auto;
 	position: relative;
 	overflow: visible !important;
 	z-index: 2000;
@@ -460,17 +471,6 @@ body::before {
 	line-height: 0; /* Removes the bottom-line ghost space */
 }
 
-/* 2. Tighten the Container Logic */
-.dual-search-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px;
-	width: 100%;
-	max-width: 600px;
-	margin: 10px auto 20px auto;
-}
-
 /* 3. Ensure the Search Bar doesn't have its own top margin */
 .landing-search-wrap {
 	margin-top: 0 !important;
@@ -487,7 +487,7 @@ body::before {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 20px;
-	margin-top: 5px;
+	/* margin-top: 5px; */
 	position: relative;
 	z-index: 10;
 }
@@ -594,20 +594,6 @@ body::before {
 	font-size: 0.8rem;
 	/* Removed extra margins/padding here to keep it short */
 }
-
-/* The Fixed-Width Pill Styling - Reduced Height */
-/* .social-pill {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 120px;
-	height: 32px;
-	gap: 8px;
-	border-radius: 50px;
-	text-decoration: none;
-	transition: all 0.3s ease;
-	padding: 0;
-} */
 
 .social-pill span {
 	font-size: 0.75rem; /* Scaled down to match shorter height */
@@ -792,7 +778,7 @@ body::before {
 
 	.landing-search-wrap {
 		position: relative !important;
-		margin-top: 10px !important;
+		/* margin-top: 10px !important; */
 		overflow: visible !important;
 		width: 100% !important;
 		z-index: 20;
@@ -813,8 +799,8 @@ body::before {
 		align-items: center !important;
 		width: 100% !important; /* Force full width of the container */
 		max-width: 100% !important;
-		margin: 10px 0 !important;
-		margin-bottom: 10px !important;
+		/* margin: 10px 0 !important;
+		margin-bottom: 10px !important; */
 	}
 
 	.bento-grid {
@@ -865,9 +851,9 @@ body::before {
 
 	.goog-te-gadget-simple {
 		width: 100% !important; /* Forces the white to hit the pink arrow */
-		height: 46px !important;
+		height: 50px !important;
 		display: flex !important;
-		justify-content: space-between !important;
+		/* justify-content: space-between !important; */
 		align-items: center !important;
 		padding: 0 45px 0 15px !important; /* Reserves space for the pink arrow */
 		box-sizing: border-box !important;
@@ -936,9 +922,9 @@ body::before {
 		justify-content: center;
 	}
 
-	#translator-anchor {
-		margin-bottom: 20px !important; /* This adds the breathing room below the translator */
-	}
+	/* #translator-anchor {
+		margin-bottom: 20px !important; 
+	} */
 
 	.main-header {
 		margin-bottom: 30px;

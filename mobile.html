@@ -42,9 +42,9 @@
 				padding: 0;
 				min-height: 100dvh;
 				display: grid;
-				/* R1: 35% Gap | R2: Header (Title/Burger) | R3: Translate | R4: Search | R5: Map | R6: Flex Spacer | R7: Footer */
-				grid-template-rows: auto auto auto auto auto 1fr auto;
-				gap: 15px;
+				/* R1: Burger | R2: Title/Sub | R3: Control Stack | R4: Footer */
+				grid-template-rows: auto 1fr auto auto;
+				gap: 0; /* We will use margins for better control */
 				font-family: "Helvetica Neue", Arial, sans-serif;
 				overflow-x: hidden;
 				position: relative;
@@ -64,35 +64,45 @@
 
 			/* --- 2. HEADER & FURNITURE --- */
 			.main-header {
-				grid-row: 3;
+				grid-row: 2;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				z-index: 10;
-				margin-top: 15vh;
+				margin-top: 5vh; /* Pushes title down from the burger menu */
+				align-self: center; /* Centers the title unit vertically in the 1fr space */
 			}
 
 			.menu-toggle {
 				grid-row: 1;
 				justify-self: end; /* Stays on the right */
 				align-self: start; /* Starts from the top of the row... */
-				padding-top: 5vh; /* ...but is pushed down by exactly 25% of the screen */
-				margin-right: 8%;
+				padding-top: 10vh; /* ...but is pushed down by exactly 25% of the screen */
+				margin-right: 5%;
 				display: flex;
 				flex-direction: column;
-				gap: 6px;
+				gap: 7px;
 				cursor: pointer;
 				padding-bottom: 10px; /* Some breathing room before the title starts */
 			}
 
 			.bar {
-				width: 32px;
-				height: 5px;
+				width: 40px;
+				height: 6px;
 				background-color: #ffffff;
 				border-radius: 2px;
 			}
 
 			.rainbow-text {
+				text-align: center;
+				color: white;
+				text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+				font-size: clamp(2.5rem, 12vw, 4.5rem); /* Slightly larger for impact */
+				font-weight: bold;
+				margin: 0;
+			}
+
+			/* .rainbow-text {
 				grid-row: 3;
 				text-align: center;
 				font-size: clamp(2.5rem, 10vw, 4rem);
@@ -104,7 +114,7 @@
 				background-clip: text;
 				-webkit-text-fill-color: transparent;
 				animation: rainbow-flow 5s linear infinite;
-			}
+			} */
 
 			.subtitle {
 				color: #ffffff;
@@ -115,28 +125,18 @@
 				text-align: center;
 			}
 
-			@keyframes rainbow-flow {
+			/* @keyframes rainbow-flow {
 				from {
 					background-position: 0% center;
 				}
 				to {
 					background-position: 200% center;
 				}
-			}
+			} */
 
 			/* --- 3. THE PILLS (Translate, Search, Map) --- */
-			#translator-anchor {
-				grid-row: 2;
-				top: 5vh;
-				/* justify-self: center; */
-				width: 35%;
-				margin: 0 auto;
-				z-index: 50;
-				/* This ensures it sits at the bottom of its container */
-				margin-top: auto;
-				position: relative;
-				margin-right: 7%;
-			}
+			/* 1. The Wrapper (The Pill Shape) */
+
 			.landing-search-wrap {
 				grid-row: 4;
 				width: 90%;
@@ -172,42 +172,61 @@
 				appearance: none;
 			}
 
+			/* --- 3. UNIFIED GLASS PILLS (Search & Map) --- */
+
 			#globalSearch,
 			.search-map-bar {
 				width: 100%;
-				height: 55px;
-				background: #ffffff;
-				border: 2px solid #e2e8f0;
+				height: 50px; /* Matched to translator height */
+				background: rgba(255, 255, 255, 0.18) !important;
+				backdrop-filter: blur(12px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%);
+				border: 2px solid rgba(255, 255, 255, 0.4) !important;
 				border-radius: 50px;
 				text-align: center;
 				font-size: 16px;
-				color: #ff3399;
+				color: #ffffff !important; /* Changed from pink to white for the "Glass" look */
 				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 1px;
 				box-sizing: border-box;
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				cursor: pointer;
+				outline: none;
+				transition:
+					background 0.3s ease,
+					border-color 0.3s ease;
 			}
 
-			/* --- 4. SEARCH TRAY & SIDE MENU --- */
+			/* Hover effect for the Map button and Search focus */
+			#globalSearch:focus,
+			.search-map-link:hover .search-map-bar {
+				background: rgba(255, 255, 255, 0.25) !important;
+				border-color: rgba(255, 255, 255, 0.7) !important;
+			}
+
+			/* --- 4. THE FLOATING SEARCH TRAY --- */
 			.search-results-floating {
 				position: absolute;
-				bottom: 55px;
-				left: 8px;
+				bottom: 60px; /* Lifted slightly above the bar */
+				left: 5%;
 				width: 90%;
-				background: rgb(1, 178, 129, 0.7);
+				/* Matching your "Index" green but with glass transparency */
+				background: rgba(1, 178, 129, 0.85) !important;
 				backdrop-filter: blur(15px);
 				-webkit-backdrop-filter: blur(15px);
-				border-radius: 15px;
-				padding: 10px;
+				border-radius: 20px;
+				padding: 8px;
 				display: none;
 				flex-direction: column;
-				gap: 8px;
-				z-index: 40;
+				gap: 4px;
+				z-index: 100;
 				border: 1px solid rgba(255, 255, 255, 0.2);
-				max-height: 35vh;
+				max-height: 40vh;
 				overflow-y: auto;
-				scrollbar-width: none;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 			}
 
 			.side-menu {
@@ -303,57 +322,58 @@
 
 			/* 1. The main container pill */
 			#translator-anchor {
-				background: rgba(255, 255, 255, 0.1) !important; /* Translucent */
-				backdrop-filter: blur(15px);
-				-webkit-backdrop-filter: blur(15px);
-				border-radius: 50px !important; /* Bento corner radius instead of 50px */
-				border: 1px solid rgba(255, 255, 255, 0.2) !important;
-				overflow: hidden;
+				grid-row: 3;
 				width: 90%;
 				max-width: 450px;
+				height: 50px;
 				margin: 0 auto;
 				position: relative;
-				grid-row: 2;
-				margin-top: 20px;
+				background: rgba(255, 255, 255, 0.18);
+				backdrop-filter: blur(12px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%);
+				border: 2px solid rgba(255, 255, 255, 0.4);
+				border-radius: 50px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				z-index: 50;
+				overflow: hidden; /* Keeps the internal dropdown from "leaking" out corners */
 			}
 
-			/* 2. The Select/Dropdown inside - Ghost Styling */
+			/* 2. THE GOOGLE WIDGET: Make it invisible but fill the whole pill */
 			#translator-anchor select,
 			.gt_selector,
 			.goog-te-combo {
-				background-color: transparent !important;
-				color: #ffffff !important; /* White text to match Bento cards */
-				font-weight: 600 !important;
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				border: none !important;
-				padding: 10px 20px !important;
 				width: 100% !important;
-				height: 55px !important; /* Match search bar height */
-				font-family: inherit !important;
-				appearance: none;
-				-webkit-appearance: none;
+				height: 100% !important;
+				background: transparent !important; /* Let the anchor provide the glass look */
+				border: none !important;
+				color: #ffffff !important;
+				font-weight: 700 !important;
+				text-transform: uppercase;
 				text-align: center;
 				text-align-last: center;
-				border-radius: 50px !important; /* Ensure this is also 50px */
-			}
-			/* 3. Handling the "Popup" menu (The part that opens) */
-			/* Note: Some mobile browsers use the native OS picker, 
-   but for those that don't, this helps */
-			.goog-te-menu-value {
-				color: white !important;
+				font-size: 1rem !important;
+				padding: 0 40px !important; /* Space for the arrow */
+				margin: 0 !important;
+				appearance: none !important;
+				-webkit-appearance: none !important;
+				cursor: pointer;
+				position: relative;
+				z-index: 2;
 			}
 
-			/* 3. The Arrow - Updated for the new background */
+			/* 3. THE PINK TRIANGLE: Ensure it sits "under" the transparent select */
 			#translator-anchor::after {
 				content: "▼";
 				position: absolute;
 				right: 20px;
 				top: 50%;
 				transform: translateY(-50%);
-				color: #ff3399; /* Soft white arrow */
-				font-size: 18px;
+				color: #f544b1;
+				font-size: 1rem;
 				pointer-events: none;
+				z-index: 1; /* Sits behind the invisible click area */
 			}
 
 			/* THE FIX: Targeting only the dropdown list items */
@@ -430,18 +450,39 @@
 
 			/* Standard */
 			#globalSearch::placeholder {
-				color: #ff3399 !important;
+				color: #ffffff !important;
 				opacity: 1; /* Firefox fix to ensure color shows at full strength */
 			}
 
 			/* Chrome, Safari, and newer Edge */
 			#globalSearch::-webkit-input-placeholder {
-				color: #ff3399 !important;
+				color: #ffffff !important;
 			}
 
 			/* Firefox */
 			#globalSearch::-moz-placeholder {
-				color: #ff3399 !important;
+				color: #ffffff !important;
+			}
+
+			/* Container for Translator, Search, and Map */
+			.interaction-stack {
+				grid-row: 3;
+				width: 90%;
+				max-width: 450px;
+				margin: 0 auto 10vh auto; /* 10vh margin at bottom keeps it off the footer */
+				display: flex;
+				flex-direction: column;
+				gap: 15px; /* Perfect uniform spacing between pills */
+				z-index: 100;
+			}
+
+			/* Reset specific margins on children since the stack handles it now */
+			#translator-anchor,
+			.landing-search-wrap,
+			.search-map-link {
+				width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
 			}
 		</style>
 	</head>
@@ -450,17 +491,18 @@
 		<a href="https://www.google.com" class="exit-btn">QUICK EXIT</a>
 
 		<div id="sideMenu" class="side-menu">
-			<span class="close-icon" onclick="toggleMenu()">&times;</span>
-			<nav class="bento-grid">
-				<a href="breaking.html" class="bento-card breaking-card">Breaking News</a>
-				<a href="americas.html" class="bento-card">Americas</a>
-				<a href="europe.html" class="bento-card">Europe</a>
-				<a href="asia.html" class="bento-card">Asia</a>
-				<a href="africa.html" class="bento-card">Africa</a>
-				<a href="oceania.html" class="bento-card">Oceania</a>
-			</nav>
-		</div>
+			<div class="close-icon" onclick="toggleMenu()">&times;</div>
 
+			<div class="bento-grid">
+				<a href="breaking.html" class="bento-card breaking-card">Breaking News</a>
+				<a href="africa.html" class="bento-card">AFRICA</a>
+				<a href="americas.html" class="bento-card">AMERICAS</a>
+				<a href="asia.html" class="bento-card">ASIA</a>
+				<a href="europe.html" class="bento-card">EUROPE</a>
+				<a href="oceania.html" class="bento-card">OCEANIA</a>
+				<a href="contact.html" class="bento-card">CONTACT</a>
+			</div>
+		</div>
 		<div class="menu-toggle" onclick="toggleMenu()">
 			<div class="bar"></div>
 			<div class="bar"></div>
@@ -472,18 +514,20 @@
 			<p class="subtitle">Legal Health Travel & Safety</p>
 		</header>
 
-		<div id="translator-anchor" data-nosnippet></div>
+		<div class="interaction-stack">
+			<div id="translator-anchor" data-nosnippet></div>
 
-		<div class="landing-search-wrap">
-			<input type="text" id="globalSearch" placeholder="Search Country" autocomplete="off" />
-			<div id="searchResults" class="search-results-floating"></div>
-		</div>
-
-		<a href="lgbt_risk_map.html" class="search-map-link">
-			<div class="search-map-bar">
-				<span>Search Map</span>
+			<div class="landing-search-wrap">
+				<input type="text" id="globalSearch" placeholder="Search Country" autocomplete="off" />
+				<div id="searchResults" class="search-results-floating"></div>
 			</div>
-		</a>
+
+			<a href="lgbt_risk_map.html" class="search-map-link">
+				<div class="search-map-bar">
+					<span>Search Map</span>
+				</div>
+			</a>
+		</div>
 
 		<footer class="main-footer">
 			<span class="footer-text">© 2026 GAY WORLD NEWS</span>
