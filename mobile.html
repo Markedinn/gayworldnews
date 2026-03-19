@@ -22,7 +22,7 @@
 		<meta name="twitter:description" content="Fast-loading LGBTQ+ legal travel health and safety updates for travelers worldwide." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=10" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.1" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<script>
@@ -43,7 +43,7 @@
 				min-height: 100dvh;
 				display: grid;
 				/* R1: Burger | R2: Title/Sub | R3: Control Stack | R4: Footer */
-				grid-template-rows: auto 1fr auto auto;
+				grid-template-rows: auto auto 1fr auto auto;
 				gap: 0; /* We will use margins for better control */
 				font-family: "Helvetica Neue", Arial, sans-serif;
 				overflow-x: hidden;
@@ -58,8 +58,12 @@
 				width: 100%;
 				height: 100%;
 				z-index: -1;
-				background: url("images/world_img.webp") center/cover no-repeat;
-				filter: brightness(0.65);
+				background: url("images/world_img_mobile.webp") center/cover no-repeat;
+				background-size: 100% 100%;
+				filter: brightness(0.8) contrast(1.6) saturate(1.6);
+				background-color: rgba(30, 45, 60, 0.5);
+				background-blend-mode: multiply;
+				/* filter: brightness(0.6) contrast(1.6); */
 			}
 
 			/* --- 2. HEADER & FURNITURE --- */
@@ -69,7 +73,7 @@
 				flex-direction: column;
 				align-items: center;
 				z-index: 10;
-				margin-top: 5vh; /* Pushes title down from the burger menu */
+				margin-top: 5vh;
 				align-self: center; /* Centers the title unit vertically in the 1fr space */
 			}
 
@@ -89,8 +93,9 @@
 			.bar {
 				width: 40px;
 				height: 6px;
-				background-color: #ffffff;
-				border-radius: 2px;
+				background-color: #ffffff; /* Switched from orange to white */
+				border-radius: 3px;
+				/* This shadow is the secret to making white elements visible on light maps */
 			}
 
 			.rainbow-text {
@@ -102,40 +107,15 @@
 				margin: 0;
 			}
 
-			/* .rainbow-text {
-				grid-row: 3;
-				text-align: center;
-				font-size: clamp(2.5rem, 10vw, 4rem);
-				font-weight: 900;
-				margin: 0;
-				background: linear-gradient(to right, #ffd600, #00e676, #2979ff, #aa00ff, #ff1744, #ff9100, #ffd600);
-				background-size: 200% auto;
-				-webkit-background-clip: text;
-				background-clip: text;
-				-webkit-text-fill-color: transparent;
-				animation: rainbow-flow 5s linear infinite;
-			} */
-
 			.subtitle {
 				color: #ffffff;
 				font-size: 1.1rem;
 				margin-top: 5px;
-				font-weight: 500;
+				font-weight: 700;
+				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 				letter-spacing: 1.5px;
 				text-align: center;
 			}
-
-			/* @keyframes rainbow-flow {
-				from {
-					background-position: 0% center;
-				}
-				to {
-					background-position: 200% center;
-				}
-			} */
-
-			/* --- 3. THE PILLS (Translate, Search, Map) --- */
-			/* 1. The Wrapper (The Pill Shape) */
 
 			.landing-search-wrap {
 				grid-row: 4;
@@ -178,15 +158,16 @@
 			.search-map-bar {
 				width: 100%;
 				height: 50px; /* Matched to translator height */
-				background: rgba(255, 255, 255, 0.18) !important;
-				backdrop-filter: blur(12px) saturate(180%);
+				background: rgba(22, 70, 96, 0.4) !important;
+				backdrop-filter: blur(8px) saturate(180%);
 				-webkit-backdrop-filter: blur(12px) saturate(180%);
-				border: 2px solid rgba(255, 255, 255, 0.4) !important;
+				border: 2px solid rgba(255, 255, 255, 0.5) !important;
 				border-radius: 50px;
 				text-align: center;
 				font-size: 16px;
 				color: #ffffff !important; /* Changed from pink to white for the "Glass" look */
 				font-weight: 700;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				box-sizing: border-box;
@@ -203,20 +184,21 @@
 			/* Hover effect for the Map button and Search focus */
 			#globalSearch:focus,
 			.search-map-link:hover .search-map-bar {
-				background: rgba(255, 255, 255, 0.25) !important;
-				border-color: rgba(255, 255, 255, 0.7) !important;
+				background: rgba(15, 45, 65, 0.6) !important;
+				border-color: rgba(255, 255, 255, 0.8) !important;
+				transition: all 0.2s ease-in-out;
 			}
 
 			/* --- 4. THE FLOATING SEARCH TRAY --- */
+			/* --- 4. THE FLOATING SEARCH TRAY --- */
 			.search-results-floating {
 				position: absolute;
-				bottom: 60px; /* Lifted slightly above the bar */
-				left: 5%;
-				width: 90%;
-				/* Matching your "Index" green but with glass transparency */
-				background: rgba(1, 178, 129, 0.85) !important;
-				backdrop-filter: blur(15px);
-				-webkit-backdrop-filter: blur(15px);
+				bottom: 60px; /* This stays the same - it floats ABOVE the input */
+				left: 0; /* Changed to 0 because its parent is already centered/90% width */
+				width: 100%;
+				background: rgba(22, 70, 96, 0.4) !important;
+				backdrop-filter: blur(8px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%);
 				border-radius: 20px;
 				padding: 8px;
 				display: none;
@@ -224,21 +206,34 @@
 				gap: 4px;
 				z-index: 100;
 				border: 1px solid rgba(255, 255, 255, 0.2);
-				max-height: 40vh;
+				max-height: 35vh; /* Keep it slightly shorter so it doesn't cover the title */
 				overflow-y: auto;
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+				box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3); /* Shadow goes UP */
+			}
+
+			/* Hide scrollbar for Chrome, Safari and Opera */
+			.search-results-floating::-webkit-scrollbar {
+				display: none;
+			}
+
+			/* Hide scrollbar for IE, Edge and Firefox */
+			.search-results-floating {
+				-ms-overflow-style: none; /* IE and Edge */
+				scrollbar-width: none; /* Firefox */
 			}
 
 			.side-menu {
 				position: fixed;
 				top: 0;
 				right: -100%;
-				width: 95%;
+				width: 60%;
 				height: 100%;
-				background: rgba(35, 63, 138, 0.98);
+				background: rgba(22, 70, 96, 0.4) !important;
+				backdrop-filter: blur(8px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%);
 				border-left: 1px solid rgba(255, 255, 255, 0.2);
 				z-index: 3000;
-				transition: 0.4s ease;
+				transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother slide effect */
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -252,11 +247,19 @@
 			}
 			.close-icon {
 				position: absolute;
-				top: 20px;
-				right: 20px;
-				color: white;
-				font-size: 50px;
+				/* Match the .menu-toggle vertical push */
+				top: 10vh;
+				/* Match the .menu-toggle horizontal margin */
+				right: 7%;
+
+				color: #ffffff;
+				/* Adjusting size and line-height so the center of the X 
+       hits the same visual anchor as the burger bars */
+				font-size: 62px;
+				line-height: 1;
 				cursor: pointer;
+				text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+				transition: color 0.2s ease;
 			}
 			.bento-grid {
 				display: grid;
@@ -266,18 +269,19 @@
 				margin-top: 60px;
 			}
 			.bento-card {
-				background: rgba(255, 255, 255, 0.1);
-				border: 1px solid rgba(255, 255, 255, 0.1);
+				background: rgba(33, 103, 140, 0.8);
+				border: 2px solid rgba(255, 255, 255, 0.5) !important;
 				padding: 20px;
 				color: white;
 				text-decoration: none;
 				border-radius: 12px;
 				text-align: center;
 				font-weight: 600;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 				text-transform: uppercase;
 			}
 			.breaking-card {
-				background: rgba(228, 3, 3, 0.6);
+				background: rgba(228, 3, 3, 0.8);
 			}
 
 			/* --- 5. EXIT AND FOOTER --- */
@@ -301,7 +305,7 @@
 
 			/* --- 6. FOOTER FIX --- */
 			.main-footer {
-				grid-row: 7; /* Matches your 1fr auto grid logic */
+				grid-row: 5; /* Matches your 1fr auto grid logic */
 				padding: 20px 20px 60px 20px;
 				text-align: center;
 				display: flex;
@@ -310,12 +314,15 @@
 				align-self: end; /* Forces it to the very bottom of the grid row */
 			}
 
+			/* --- UPDATED FOOTER FOR BETTER CONTRAST --- */
 			.footer-text {
-				font-size: 11px;
-				color: rgba(255, 255, 255, 0.5);
+				font-size: 12px;
+				color: #ffffff;
 				text-decoration: none;
 				text-transform: uppercase;
-				letter-spacing: 1px;
+				letter-spacing: 1.2px;
+				font-weight: 600;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 			}
 
 			/* --- TRANSLATOR DROPDOWN CUSTOMIZATION --- */
@@ -328,10 +335,10 @@
 				height: 50px;
 				margin: 0 auto;
 				position: relative;
-				background: rgba(255, 255, 255, 0.18);
-				backdrop-filter: blur(12px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%);
-				border: 2px solid rgba(255, 255, 255, 0.4);
+				background: rgba(22, 70, 96, 0.4);
+				backdrop-filter: blur(8px) saturate(180%);
+				-webkit-backdrop-filter: blur(8px) saturate(180%);
+				border: 2px solid rgba(255, 255, 255, 0.5);
 				border-radius: 50px;
 				display: flex;
 				align-items: center;
@@ -349,7 +356,8 @@
 				background: transparent !important; /* Let the anchor provide the glass look */
 				border: none !important;
 				color: #ffffff !important;
-				font-weight: 700 !important;
+				font-weight: 600;
+				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 				text-transform: uppercase;
 				text-align: center;
 				text-align-last: center;
@@ -378,7 +386,7 @@
 
 			/* THE FIX: Targeting only the dropdown list items */
 			#translator-anchor select option {
-				background-color: rgb(1, 178, 129) !important;
+				background-color: rgb(33, 103, 140) !important;
 				color: #ffffff !important;
 				text-align: left;
 				padding: 12px;
@@ -428,7 +436,7 @@
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 1px;
-				background-color: rgba(36, 64, 142, 0.9); /* border-bottom: 1px solid rgba(255, 255, 255, 0.1); */
+				background-color: rgba(33, 103, 140, 0.9);
 				border-radius: 12.5px;
 				transition: background 0.2s ease;
 			}
@@ -466,10 +474,10 @@
 
 			/* Container for Translator, Search, and Map */
 			.interaction-stack {
-				grid-row: 3;
+				grid-row: 4;
 				width: 90%;
 				max-width: 450px;
-				margin: 0 auto 10vh auto; /* 10vh margin at bottom keeps it off the footer */
+				margin: 0 auto 4vh auto; /* 10vh margin at bottom keeps it off the footer */
 				display: flex;
 				flex-direction: column;
 				gap: 15px; /* Perfect uniform spacing between pills */
@@ -481,7 +489,7 @@
 			.landing-search-wrap,
 			.search-map-link {
 				width: 100% !important;
-				margin: 0 !important;
+				/* margin: 0 !important; */
 				padding: 0 !important;
 			}
 		</style>
@@ -524,7 +532,7 @@
 
 			<a href="lgbt_risk_map.html" class="search-map-link">
 				<div class="search-map-bar">
-					<span>Search Map</span>
+					<span>Interactive Map</span>
 				</div>
 			</a>
 		</div>
@@ -556,7 +564,6 @@
 									link.href = `country.html?c=${key}`;
 									let s = (globalData[key].status || "warning").toLowerCase();
 									if (s === "danger" || s === "black") s = "red";
-									link.style = "padding:15px; color:white; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); font-weight:bold;";
 									link.innerHTML = globalData[key].name;
 									globalResults.appendChild(link);
 								}

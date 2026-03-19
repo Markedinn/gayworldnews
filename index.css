@@ -36,8 +36,9 @@ body::before {
 	height: 100%;
 	z-index: -1;
 	background-image: url("images/world_img.webp");
-	background-color: rgba(0, 0, 0, 0.2);
-	background-blend-mode: darken;
+	filter: brightness(0.8) contrast(1.6) saturate(1.6);
+	background-color: rgba(30, 45, 60, 0.5);
+	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -83,11 +84,13 @@ body::before {
 }
 
 .rainbow-line {
-	height: 4px;
+	height: 3px;
 	width: 100%;
-	margin: 8px auto;
-	border-radius: 10px;
-	background: linear-gradient(90deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3);
+	max-width: 600px; /* Keeps it centered and tidy on desktop */
+	margin: 15px auto;
+	border-radius: 2px;
+	background: linear-gradient(90deg, #ff3b3b, #ff8800, #ffee00, #33ff33, #0088ff, #9933ff);
+	opacity: 0.8;
 }
 
 /* --- 3. U=U BANNER (Global Style) --- */
@@ -159,13 +162,11 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgba(255, 255, 255, 0.18) !important;
+	background: rgba(22, 70, 96, 0.4) !important;
 	backdrop-filter: blur(12px) saturate(180%);
 	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	border: 2px solid rgba(255, 255, 255, 0.2);
 	border-radius: 50px;
-	/* padding: 20px; */
 	color: #ffffff;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -191,7 +192,6 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
 	background: rgba(255, 255, 255, 0.18) !important;
 	backdrop-filter: blur(12px) saturate(180%);
 	-webkit-backdrop-filter: blur(12px) saturate(180%);
@@ -214,9 +214,8 @@ body::before {
 
 /* --- DESKTOP DROPDOWN STYLING --- */
 
-/* 1. Style the list items for Desktop visibility */
 #translator-anchor select option {
-	background-color: #0ac4f3 !important;
+	background-color: #164660 !important;
 	color: #ffffff !important;
 	padding: 12px !important;
 	font-size: 1.15rem;
@@ -260,10 +259,10 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgba(255, 255, 255, 0.18) !important;
+	background: rgba(22, 70, 96, 0.4) !important;
 	backdrop-filter: blur(12px) saturate(180%);
 	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 12px;
 	padding: 20px;
 	color: #ffffff;
@@ -299,10 +298,10 @@ body::before {
 	padding: 12px 20px;
 	border-radius: 50px;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgba(255, 255, 255, 0.18);
+	background: rgba(22, 70, 96, 0.4) !important;
 	backdrop-filter: blur(12px) saturate(180%);
 	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	border: 2px solid rgba(255, 255, 255, 0.2);
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
@@ -398,10 +397,10 @@ body::before {
 	justify-content: center; /* Centers the content group */
 	height: 50px;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgba(255, 255, 255, 0.18) !important;
+	background: rgba(22, 70, 96, 0.4) !important;
 	backdrop-filter: blur(12px) saturate(180%);
 	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 2px solid rgba(255, 255, 255, 0.4);
+	border: 2px solid rgba(255, 255, 255, 0.2);
 	padding: 12px 20px;
 	border-radius: 50px;
 	position: relative; /* Necessary to anchor the arrow */
@@ -570,8 +569,10 @@ body::before {
 /* --- 7. FOOTER --- */
 .site-footer {
 	width: 100%;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.18) !important;
+	backdrop-filter: blur(12px) saturate(180%);
+	-webkit-backdrop-filter: blur(12px) saturate(180%);
+	border-top: 2px solid rgba(255, 255, 255, 0.4);
 	margin-top: auto;
 	z-index: 1 !important;
 	padding: 10px 0 5px 0; /* Tightened vertical padding */
@@ -628,7 +629,7 @@ body::before {
 }
 
 .footer-copyright {
-	color: rgba(36, 64, 142, 0.5);
+	color: rgba(249, 249, 250);
 	font-size: 0.65rem;
 	font-weight: 600;
 	margin: 0; /* Ensure no default paragraph margins */
@@ -636,18 +637,35 @@ body::before {
 
 /* Neutral style for About and Connect */
 .neutral {
-	background-color: rgba(36, 64, 142, 0.05); /* Very faint brand blue */
-	border: 1px solid rgba(36, 64, 142, 0.2); /* Subtle outline */
+	background-color: rgba(255, 255, 255, 0.4) !important;
+	border: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
 .neutral span,
 .neutral i {
-	color: #24408e !important; /* Uses your existing brand blue for the text */
+	color: #1e2d3c !important; /* Darker text for contrast */
 }
 
+/* --- 7. NEUTRAL PILLS (About / Connect) HOVER --- */
 .neutral:hover {
-	background-color: rgba(36, 64, 142, 0.1);
-	border-color: #24408e;
+	/* 1. Make the glass "thicker" on hover */
+	background-color: rgba(255, 255, 255, 0.4) !important;
+
+	/* 2. Instead of just white, give the border a subtle shine */
+	border-color: rgba(255, 255, 255, 0.9) !important;
+
+	/* 3. The "Lift": A soft dark shadow to make the white pop */
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+
+	/* 4. Subtle scale up */
+	transform: translateY(-3px) scale(1.03);
+}
+
+/* Make the icon and text inside shift slightly to feel "alive" */
+.neutral:hover i,
+.neutral:hover span {
+	color: #1a3a5a !important; /* Slightly deeper navy for contrast */
+	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* Adjusting the icon spacing for the info and envelope icons */
@@ -664,17 +682,25 @@ body::before {
 .social-pill {
 	display: flex;
 	align-items: center;
-	justify-content: center; /* Centers content inside the fixed width */
-	width: 130px; /* Set a fixed width for uniformity */
-	height: 38px; /* Set a fixed height */
+	justify-content: center;
+	width: 130px;
+	height: 38px;
 	border-radius: 50px;
 	text-decoration: none;
-	transition: all 0.3s ease;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+	/* THE KEY FIX: The Border & Glow */
+	border: 2px solid rgba(255, 255, 255, 0.4); /* Matches Search/Neutral pills */
+	box-shadow:
+		0 4px 10px rgba(0, 0, 0, 0.2),
+		inset 0 0 8px rgba(255, 255, 255, 0.1);
+	position: relative;
+	overflow: hidden;
 }
 
 .social-pill span {
 	font-size: 0.85rem; /* Slightly smaller to fit "YouTube" comfortably */
-	font-weight: 600;
+	font-weight: 700;
 	color: white;
 	margin-left: 8px;
 }
@@ -682,6 +708,8 @@ body::before {
 /* Brand Colors */
 .facebook {
 	background-color: #1877f2;
+	/* Extra insurance for Facebook blue on blue maps */
+	border-color: rgba(255, 255, 255, 0.6);
 }
 .x-twitter {
 	background-color: #000000;
@@ -692,8 +720,9 @@ body::before {
 
 /* Hover Effects */
 .social-pill:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	transform: translateY(-3px) scale(1.02);
+	border-color: #ffffff; /* Border brightens on hover */
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 	filter: brightness(1.1);
 }
 
@@ -731,19 +760,27 @@ body::before {
 	display: inline-block;
 }
 
+/* --- GWN LOGO HOVER STATE --- */
+.gwn-logo:hover {
+	/* 1. The Physical Jump */
+	transform: translateY(-5px) scale(1.05);
+
+	/* 2. Speed up the rainbow flow slightly on hover for "energy" */
+	animation: flow-rainbow 1.5s linear infinite;
+
+	/* 3. The Neon Glow: Uses a soft white/rainbow bloom */
+	filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4)) brightness(1.2);
+
+	/* 4. Smooth transition */
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	cursor: pointer;
+}
+
 .footer-card h4 {
 	margin: 0;
 	font-size: 0.85rem;
 	display: inline;
 }
-
-/* .footer-container {
-	max-width: 900px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-} */
 
 .sources-list a {
 	color: #ff3399 !important; /* Your pink */
