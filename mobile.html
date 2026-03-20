@@ -60,10 +60,9 @@
 				z-index: -1;
 				background: url("images/world_img_mobile.webp") center/cover no-repeat;
 				background-size: 100% 100%;
-				filter: brightness(0.8) contrast(1.6) saturate(1.6);
-				background-color: rgba(30, 45, 60, 0.5);
+				filter: brightness(0.7) contrast(1.6) saturate(1.6);
+				background-color: rgba(78, 111, 139, 0.5);
 				background-blend-mode: multiply;
-				/* filter: brightness(0.6) contrast(1.6); */
 			}
 
 			/* --- 2. HEADER & FURNITURE --- */
@@ -158,14 +157,12 @@
 			.search-map-bar {
 				width: 100%;
 				height: 50px; /* Matched to translator height */
-				background: rgba(22, 70, 96, 0.4) !important;
-				backdrop-filter: blur(8px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%);
-				border: 2px solid rgba(255, 255, 255, 0.5) !important;
+				background: rgb(21, 139, 202, 0.7);
+				border: 2px solid rgba(255, 255, 255, 0.5);
 				border-radius: 50px;
 				text-align: center;
 				font-size: 16px;
-				color: #ffffff !important; /* Changed from pink to white for the "Glass" look */
+				color: #ffffff;
 				font-weight: 700;
 				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 				text-transform: uppercase;
@@ -196,9 +193,8 @@
 				bottom: 60px; /* This stays the same - it floats ABOVE the input */
 				left: 0; /* Changed to 0 because its parent is already centered/90% width */
 				width: 100%;
-				background: rgba(22, 70, 96, 0.4) !important;
-				backdrop-filter: blur(8px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%);
+				background: rgba(72, 100, 116, 0.8);
+				border: 2px solid rgba(255, 255, 255, 0.5) !important;
 				border-radius: 20px;
 				padding: 8px;
 				display: none;
@@ -229,8 +225,8 @@
 				width: 60%;
 				height: 100%;
 				background: rgba(22, 70, 96, 0.4) !important;
-				backdrop-filter: blur(8px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%);
+				backdrop-filter: blur(8px) saturate(150%);
+				-webkit-backdrop-filter: blur(12px) saturate(150%);
 				border-left: 1px solid rgba(255, 255, 255, 0.2);
 				z-index: 3000;
 				transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother slide effect */
@@ -247,14 +243,9 @@
 			}
 			.close-icon {
 				position: absolute;
-				/* Match the .menu-toggle vertical push */
-				top: 10vh;
-				/* Match the .menu-toggle horizontal margin */
-				right: 7%;
-
+				top: 9vh;
+				right: 8%;
 				color: #ffffff;
-				/* Adjusting size and line-height so the center of the X 
-       hits the same visual anchor as the burger bars */
 				font-size: 62px;
 				line-height: 1;
 				cursor: pointer;
@@ -269,7 +260,7 @@
 				margin-top: 60px;
 			}
 			.bento-card {
-				background: rgba(33, 103, 140, 0.8);
+				background: rgb(21, 139, 202, 0.7);
 				border: 2px solid rgba(255, 255, 255, 0.5) !important;
 				padding: 20px;
 				color: white;
@@ -335,9 +326,7 @@
 				height: 50px;
 				margin: 0 auto;
 				position: relative;
-				background: rgba(22, 70, 96, 0.4);
-				backdrop-filter: blur(8px) saturate(180%);
-				-webkit-backdrop-filter: blur(8px) saturate(180%);
+				background: rgb(21, 139, 202, 0.7);
 				border: 2px solid rgba(255, 255, 255, 0.5);
 				border-radius: 50px;
 				display: flex;
@@ -480,7 +469,7 @@
 				margin: 0 auto 4vh auto; /* 10vh margin at bottom keeps it off the footer */
 				display: flex;
 				flex-direction: column;
-				gap: 15px; /* Perfect uniform spacing between pills */
+				gap: 20px; /* Perfect uniform spacing between pills */
 				z-index: 100;
 			}
 
