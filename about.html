@@ -40,7 +40,7 @@
 
 			/* THE FROSTED GLASS RECTANGLE */
 			.glass-mission-card {
-				background: rgb(21, 139, 202, 0.7);
+				background: rgb(21, 139, 202, 0.8);
 
 				border: 1px solid rgba(255, 255, 255, 0.2);
 				border-radius: 20px;
@@ -76,6 +76,20 @@
 			/* Ensure the GTranslate dropdown doesn't hug the left side */
 			.gt_container {
 				margin: 0 auto !important;
+			}
+
+			@media (max-width: 600px) {
+				.glass-mission-card {
+					/* Reduce padding so there's more room for text on small screens */
+					padding: 25px 20px;
+
+					/* The Magic Move: 90% width keeps 5% 'air' on each side */
+					width: 92%;
+					margin: 40px auto;
+
+					/* Ensure the border-radius doesn't look too 'aggressive' on small screens */
+					border-radius: 15px;
+				}
 			}
 		</style>
 	</head>

@@ -170,9 +170,9 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgb(21, 139, 202, 0.7);
+	background: rgba(21, 139, 202, 0.7);
 
-	border: 2px solid rgb(252, 248, 248, 0.5);
+	border: 2px solid rgba(252, 248, 248, 0.5);
 	border-radius: 50px;
 	color: #ffffff;
 	font-weight: 700;
@@ -197,7 +197,7 @@ body::before {
 /* --- DESKTOP DROPDOWN STYLING --- */
 
 #translator-anchor select option {
-	background: rgb(21, 139, 202, 0.7) !important;
+	background: rgba(21, 139, 202) !important;
 	color: #ffffff !important;
 	padding: 12px !important;
 	font-size: 1.15rem;
@@ -206,24 +206,24 @@ body::before {
 }
 
 /* 2. Hide Desktop Scrollbars */
-#translator-anchor select::-webkit-scrollbar {
+/* #translator-anchor select::-webkit-scrollbar {
 	display: none !important;
 }
 #translator-anchor select {
 	scrollbar-width: none !important;
-}
+} */
 
 /* 3. The "No-Ghosting" Click Fix */
-#translator-anchor select:focus,
+/* #translator-anchor select:focus,
 #translator-anchor select:active {
 	outline: none !important;
 	background-color: transparent !important;
 	box-shadow: none !important;
-}
+} */
 
 /* Optional: If the flag or arrow looks too tight, adjust them slightly */
 #translator-anchor .gt_selector img {
-	margin-top: -2px !important; /* Micro-adjustment to keep flag centered */
+	margin-top: -2px !important;
 }
 
 /* 4. Hover Effect for all bars */
@@ -241,8 +241,8 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgb(21, 139, 202, 0.7);
-	border: 2px solid rgb(252, 248, 248, 0.5);
+	background: rgba(21, 139, 202, 0.7);
+	border: 2px solid rgba(252, 248, 248, 0.5);
 	border-radius: 12px;
 	padding: 20px;
 	color: #ffffff;
@@ -266,6 +266,20 @@ body::before {
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* SPECIAL COLOR FOR BREAKING NEWS BENTO CARD */
+.bento-card.breaking-red {
+	background: rgba(228, 3, 3, 0.7) !important;
+	border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
+	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.3); /* Soft red glow */
+}
+
+.bento-card.breaking-red:hover {
+	background: rgba(228, 3, 3, 0.9) !important;
+	transform: translateY(-5px) scale(1.02);
+	box-shadow: 0 8px 20px rgba(228, 3, 3, 0.5);
+	border-color: #ffffff;
+}
+
 /* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
 	position: relative;
@@ -281,7 +295,7 @@ body::before {
 	border-radius: 50px;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
 	background: rgba(10, 158, 238, 0.4);
-	border: 2px solid rgb(252, 248, 248, 0.5);
+	border: 2px solid rgba(252, 248, 248, 0.5);
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
@@ -377,9 +391,9 @@ body::before {
 	justify-content: center; /* Centers the content group */
 	height: 50px;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgb(21, 139, 202, 0.7);
+	background: rgba(21, 139, 202, 0.7);
 
-	border: 2px solid rgb(252, 248, 248, 0.5);
+	border: 2px solid rgba(252, 248, 248, 0.5);
 	padding: 12px 20px;
 	border-radius: 50px;
 	position: relative; /* Necessary to anchor the arrow */
@@ -533,7 +547,7 @@ body::before {
 }
 
 .country-card:hover {
-	border: 3px solid rgb(252, 248, 248, 0.5);
+	border: 3px solid rgba(252, 248, 248, 0.5);
 	transform: translateY(-3px);
 	filter: brightness(1.2);
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -561,9 +575,9 @@ body::before {
 /* --- 7. FOOTER --- */
 .site-footer {
 	width: 100%;
-	background: rgb(21, 139, 202, 0.7);
+	background: rgba(21, 139, 202, 0.7);
 
-	border-top: 2px solid rgb(252, 248, 248, 0.5);
+	border-top: 2px solid rgba(252, 248, 248, 0.5);
 	margin-top: auto;
 	z-index: 1 !important;
 	padding: 10px 0 5px 0; /* Tightened vertical padding */
@@ -672,7 +686,7 @@ body::before {
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 	/* THE KEY FIX: The Border & Glow */
-	border: 2px solid rgb(255, 255, 255, 0.7); /* Matches Search/Neutral pills */
+	border: 2px solid rgba(255, 255, 255, 0.7); /* Matches Search/Neutral pills */
 	box-shadow:
 		0 4px 10px rgba(0, 0, 0, 0.2),
 		inset 0 0 8px rgba(255, 255, 255, 0.1);

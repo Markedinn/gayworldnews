@@ -89,7 +89,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(21, 139, 202, 0.7);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border-radius: 12px;
@@ -140,7 +140,7 @@
 	color: #f6f7fa;
 	padding: 20px;
 	text-align: center;
-	background: rgba(2, 7, 82, 0.3);
+	background: rgba(21, 139, 202, 0.7);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -164,17 +164,17 @@
 }
 
 /* This makes the source links pop and stay clickable */
-.sources-list a {
-	color: #ff3399 !important; /* Your pink */
+/* .sources-list a {
+	color: #ff3399 !important; 
 	text-decoration: underline;
 	font-size: 13px;
 	display: block;
 	margin-bottom: 8px;
-	word-break: break-all; /* Prevents long URLs from breaking the frame */
-	pointer-events: auto !important; /* Forces the browser to ignore the map underneath */
+	word-break: break-all; 
+	pointer-events: auto !important; 
 	z-index: 10001;
 	position: relative;
-}
+} */
 
 /* Ensure the text inside the accordion is readable against the navy background */
 #legendContent {
@@ -219,19 +219,19 @@
 
 /* Individual Link Styling */
 .sources-list a {
-	background: rgba(255, 255, 255, 0.1); /* Subtle box for better "tap" area */
+	background: rgba(255, 255, 255, 0.979);
 	padding: 6px 12px;
 	border-radius: 6px;
-	font-size: 0.9rem;
-	color: #ff3399 !important;
+	font-size: 1rem;
+	color: #1708ee !important;
 	text-decoration: none;
-	border: 1px solid rgba(255, 51, 153, 0.3);
+	border: 1px solid rgba(247, 7, 127, 0.3);
 	transition: all 0.2s ease;
-	white-space: nowrap; /* Prevents a single link from breaking in half */
+	white-space: wrap;
 }
 
 .sources-list a:hover {
-	background: rgba(255, 51, 153, 0.2);
+	background: rgba(230, 86, 160, 0.4);
 	transform: translateY(-2px);
 }
 

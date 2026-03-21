@@ -22,7 +22,7 @@
 		<meta name="twitter:description" content="Fast-loading LGBTQ+ legal travel health and safety updates for travelers worldwide." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.2" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.5" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<script>
@@ -368,15 +368,25 @@
 
 			/* 3. THE PINK TRIANGLE: Ensure it sits "under" the transparent select */
 			#translator-anchor::after {
-				content: "▼";
+				/* A clean, white vector globe */
+				content: "";
 				position: absolute;
-				right: 20px;
+				right: 18px;
 				top: 50%;
 				transform: translateY(-50%);
-				color: #f544b1;
-				font-size: 1rem;
+				width: 22px;
+				height: 22px;
+
+				/* THE MAGIC: A white SVG globe background */
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='2' y1='12' x2='22' y2='12'%3E%3C/line%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'%3E%3C/path%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-size: contain;
+
+				/* This makes it ignore the background's blue saturation */
+				filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+
 				pointer-events: none;
-				z-index: 1; /* Sits behind the invisible click area */
+				z-index: 10;
 			}
 
 			/* THE FIX: Targeting only the dropdown list items */
