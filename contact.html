@@ -20,37 +20,34 @@
 		<meta name="twitter:description" content="Connect with the team at Gay World News for LGBTQ+ global safety inquiries and community feedback.">
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg">
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=3" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=5" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=mobile11" />
+		<link rel="stylesheet" href="index.css?v=1.6" />
 		<style>
 						
 
 			/* THE FROSTED GLASS RECTANGLE */
 			.glass-mission-card {
-background: rgba(10, 158, 238, 0.4);
-				backdrop-filter: blur(8px) saturate(10%);
-				-webkit-backdrop-filter: blur(12px) saturate(10%);				backdrop-filter: blur(15px);
-				-webkit-backdrop-filter: blur(15px);
-				border: 1px solid rgb(247, 241, 241);
+				/* Less 'glass', more solid brand blue to match your map/footer */
+				background: rgb(21, 139, 202, 0.8); 
+				border: 2px solid rgba(255, 255, 255, 0.2);
 				border-radius: 20px;
 				padding: 40px;
 				max-width: 800px;
-				margin: 60px auto; /* Centered with margin auto */
-				box-sizing: border-box; /* Your critical rule! */
-				box-shadow: 0 25px 50px rgba(46, 44, 44, 0.3);
+				margin: 60px auto;
+				box-sizing: border-box;
+				/* Clean shadow for depth */
+				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 				text-align: center;
-
 			}
 
-			.glass-mission-card p {
-				line-height: 1.8;
-				font-size: 1.1rem;
-				color: white;
-				margin-bottom: 20px;
+			.glass-mission-card h1, 
+			.glass-mission-card p, 
+			.form-group label {
+				color: #ffffff !important;
 			}
 
-			.contact-form {
+				.contact-form {
 				display: flex;
 				flex-direction: column;
 				gap: 20px;
@@ -66,12 +63,21 @@ background: rgba(10, 158, 238, 0.4);
 
 			.contact-form input,
 			.contact-form textarea {
-				background: rgba(255, 255, 255, 0.1);
-				border: 1px solid rgba(255, 255, 255, 0.3);
+				/* Darker input background for better contrast */
+				background: rgba(0, 0, 0, 0.2); 
+				border: 1px solid rgba(255, 255, 255, 0.4);
 				border-radius: 8px;
 				padding: 12px;
 				color: white;
 				font-family: inherit;
+				font-size: 1rem;
+			}
+
+			/* THE PLACEHOLDER FIX - Makes them readable */
+			.contact-form input::placeholder,
+			.contact-form textarea::placeholder {
+				color: rgba(255, 255, 255, 0.7); /* Brighter, clearer text */
+				font-style: italic;
 			}
 
 			.submit-btn {
@@ -113,10 +119,35 @@ background: rgba(10, 158, 238, 0.4);
 			}
 
 			/* Add this to your main CSS for single-column pages */
-.centered-utility-wrap {
-    max-width: 400px; /* Adjust this to match your search bar width */
-    margin: 80px auto 20px auto;
-    width: 90%;
+			.centered-utility-wrap {
+				display: flex;
+				justify-content: center; /* Centers the pill horizontally */
+				align-items: center;
+				max-width: 100%;
+				margin: 80px auto 20px auto;
+				padding: 0 20px;
+			}
+
+			@media (max-width: 600px) {
+    .glass-mission-card {
+        /* Reduce padding so there's more room for text on small screens */
+        padding: 25px 20px; 
+        
+        /* The Magic Move: 90% width keeps 5% 'air' on each side */
+        width: 92%; 
+        margin: 40px auto; 
+        
+        /* Ensure the border-radius doesn't look too 'aggressive' on small screens */
+        border-radius: 15px; 
+    }
+
+    .contact-form {
+        gap: 15px; /* Tighten the gap for shorter screens */
+    }
+
+    .submit-btn {
+        padding: 12px; /* Slightly smaller button for thumbs */
+    }
 }
 		</style>
 	</head>

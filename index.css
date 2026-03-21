@@ -194,38 +194,14 @@ body::before {
 	-webkit-appearance: none;
 }
 
-/* .bento-card {
-	width: 100%;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(255, 255, 255, 0.18) !important;
-	backdrop-filter: blur(12px) saturate(180%);
-	-webkit-backdrop-filter: blur(12px) saturate(180%);
-	border: 2px solid rgba(255, 255, 255, 0.4);
-	border-radius: 50px;
-	padding: 20px;
-	color: #ffffff;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	text-decoration: none;
-	transition: 0.3s ease;
-	cursor: pointer;
-	appearance: none;
-	font-size: 1rem;
-	font-family: inherit;
-	line-height: normal;
-	-webkit-appearance: none;
-} */
-
 /* --- DESKTOP DROPDOWN STYLING --- */
 
 #translator-anchor select option {
-	background-color: #164660 !important;
+	background: rgb(21, 139, 202, 0.7) !important;
 	color: #ffffff !important;
 	padding: 12px !important;
 	font-size: 1.15rem;
+	text-align: left;
 	text-transform: none;
 }
 
@@ -254,7 +230,7 @@ body::before {
 .landing-pill-style:hover select,
 .landing-search-wrap:hover input,
 .search-map-bar:hover {
-	border-color: #ff3399;
+	border-color: #ffffff;
 	box-shadow: 0 4px 12px rgba(255, 51, 153, 0.1);
 }
 
@@ -285,8 +261,9 @@ body::before {
 
 .bento-card:hover {
 	transform: translateY(-5px);
-	background: rgba(255, 255, 255, 0.4);
-	border: 3px solid rgb(252, 248, 248, 0.8);
+	background: rgba(21, 139, 202, 0.9);
+	border: 2px solid rgb(252, 248, 248, 0.8);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* THE WRAPPER (The Anchor) */
@@ -304,8 +281,6 @@ body::before {
 	border-radius: 50px;
 	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
 	background: rgba(10, 158, 238, 0.4);
-	/* backdrop-filter: blur(12px) saturate(180%);
-	-webkit-backdrop-filter: blur(12px) saturate(180%); */
 	border: 2px solid rgb(252, 248, 248, 0.5);
 	color: #ffffff;
 	font-size: 16px;
@@ -485,13 +460,13 @@ body::before {
 }
 
 /* --- JS CARD SKELETON --- */
-.country-card {
+/* .country-card {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	min-height: 70px;
 
-	/* The "Bento" look without the color */
+	
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.2);
@@ -508,26 +483,21 @@ body::before {
 		filter 0.2s ease;
 	position: relative;
 	z-index: 11;
-}
-
-.country-card:hover {
-	transform: translateY(-3px);
-	filter: brightness(1.2);
-}
+} */
 
 /* Safety Colors for Country Cards */
 .country-card.red {
 	background: rgba(255, 23, 69, 0.74);
 } /* Danger */
 .country-card.yellow {
-	background: rgba(246, 250, 3, 0.637);
+	background: rgba(252, 235, 3, 0.7);
 } /* Warning */
 .country-card.green {
 	background: rgba(0, 230, 119, 0.616);
 } /* Safe */
-.country-card.orange {
+/* .country-card.orange {
 	background: rgba(255, 145, 0, 0.6);
-} /* Caution */
+}  */
 
 /* --- NEW GLOBAL ICE ADVISORY --- */
 .country-card.ice,
@@ -547,9 +517,7 @@ body::before {
 	min-height: 70px;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-
-	/* --- MATCH THE BENTO BORDER --- */
-	border: 2px solid rgb(252, 248, 248, 0.5) !important;
+	border: 2px solid rgb(252, 248, 248, 0.5);
 	border-radius: 12px;
 	padding: 15px;
 	color: #ffffff;
@@ -557,11 +525,18 @@ body::before {
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
-	transition:
-		transform 0.2s ease,
-		filter 0.2s ease;
 	position: relative;
+	transition:
+		transform 0.3s ease,
+		filter 0.3s ease;
 	z-index: 11;
+}
+
+.country-card:hover {
+	border: 3px solid rgb(252, 248, 248, 0.5);
+	transform: translateY(-3px);
+	filter: brightness(1.2);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* --- 6. QUICK EXIT --- */
@@ -664,24 +639,15 @@ body::before {
 
 /* --- 7. NEUTRAL PILLS (About / Connect) HOVER --- */
 .neutral:hover {
-	/* 1. Make the glass "thicker" on hover */
-	background-color: rgba(255, 255, 255, 0.4) !important;
-
-	/* 2. Instead of just white, give the border a subtle shine */
-	border-color: rgba(255, 255, 255, 0.9) !important;
-
-	/* 3. The "Lift": A soft dark shadow to make the white pop */
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-
-	/* 4. Subtle scale up */
-	transform: translateY(-3px) scale(1.03);
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	filter: brightness(1.1);
 }
 
 /* Make the icon and text inside shift slightly to feel "alive" */
 .neutral:hover i,
 .neutral:hover span {
-	color: #1a3a5a !important; /* Slightly deeper navy for contrast */
-	text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+	color: #ffffff; /* Slightly deeper navy for contrast */
 }
 
 /* Adjusting the icon spacing for the info and envelope icons */

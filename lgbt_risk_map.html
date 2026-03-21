@@ -20,7 +20,7 @@
 		<meta name="twitter:description" content="Explore the official GWN interactive map for LGBTQ+ Legal Travel Health and Safety." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.1" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.5" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<!-- <link rel="stylesheet" href="index.css?v=mobile6" /> -->
@@ -46,7 +46,7 @@
 				padding: 0;
 				width: 100%;
 				height: 100%;
-				background: #1a2b56;
+				background: rgb(21, 139, 202);
 				font-family: "Helvetica Neue", Arial, sans-serif;
 			}
 
@@ -238,12 +238,13 @@
 				left: 0;
 				width: 100%;
 				height: 60px;
-				background-color: #1a2b56 !important;
+				background: rgb(21, 139, 202) !important;
 				z-index: 9999;
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				border-top: 2.5px solid rgba(255, 255, 255, 0.3);
+				transition: all 0.3s ease;
 			}
 
 			.footer-container {
@@ -365,10 +366,10 @@
 							return {
 								fillColor: color,
 								// THE TRICK: Match the border to the sea (#1a2b56)
-								color: "#1a2b56",
-								// SLEEK WEIGHT: Thin but visible for land-to-land borders
-								weight: 0.8,
-								fillOpacity: 0.9, // Slightly higher opacity makes the colors richer
+								// A darker blue border makes the map look high-end
+								color: "rgb(15, 100, 150)",
+								weight: 0.7,
+								fillOpacity: 1.0, // Full opacity for the richest colors possible
 							};
 						},
 						onEachFeature: (feature, layer) => {

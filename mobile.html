@@ -89,6 +89,12 @@
 				padding-bottom: 10px; /* Some breathing room before the title starts */
 			}
 
+			.menu-toggle {
+				-webkit-touch-callout: none;
+				user-select: none;
+				-webkit-tap-highlight-color: transparent;
+			}
+
 			.bar {
 				width: 40px;
 				height: 6px;
@@ -576,6 +582,20 @@
 				flag_size: 24,
 				type: "dropdown",
 			};
+
+			// Close menu when clicking outside of it
+			document.addEventListener("click", (e) => {
+				const sideMenu = document.getElementById("sideMenu");
+				const menuToggle = document.querySelector(".menu-toggle");
+
+				// Check if the menu is open
+				if (sideMenu.classList.contains("open")) {
+					// If the click is NOT on the menu and NOT on the burger icon...
+					if (!sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+						sideMenu.classList.remove("open");
+					}
+				}
+			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>
