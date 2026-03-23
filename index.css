@@ -955,7 +955,14 @@ body::before {
 }
 
 /* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
-@media (min-width: 1800px) {
+@media (min-width: 1700px) {
+	.main-header {
+		margin: 4vh auto 30px auto;
+	}
+}
+
+/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
+@media (min-width: 2000px) {
 	.master-grid-container {
 		max-width: 1400px; /* Give the cards a bit more room to stretch */
 		transform: scale(1.1); /* Subtly scale up the whole grid for 32" screens */
@@ -964,6 +971,6 @@ body::before {
 	}
 
 	.main-header {
-		margin: 150px auto 30px auto;
+		margin: 10vh auto 30px auto;
 	}
 }
