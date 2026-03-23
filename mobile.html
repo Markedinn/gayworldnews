@@ -22,8 +22,8 @@
 		<meta name="twitter:description" content="Fast-loading LGBTQ+ legal travel health and safety updates for travelers worldwide." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.5" />
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=1.5" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.6" />
+		<link rel="apple-touch-icon" href="images/favicon.webp?v=1.6" />
 
 		<script>
 			window.globalData = {};
@@ -588,9 +588,24 @@
 				default_language: "en",
 				detect_browser_language: true,
 				wrapper_selector: "#translator-anchor",
-				flag_size: 24,
 				type: "dropdown",
 			};
+
+			// This "forces" the text because the widget settings sometimes fail
+			window.addEventListener("load", function () {
+				setTimeout(function () {
+					var select = document.querySelector("#translator-anchor select");
+					if (select) {
+						// Creates a new "Select Language" option at the very top
+						var opt = document.createElement("option");
+						opt.value = "";
+						opt.innerHTML = "Select Language";
+						opt.selected = true;
+						opt.disabled = true;
+						select.insertBefore(opt, select.firstChild);
+					}
+				}, 1000); // Waits 1 second for the widget to finish loading
+			});
 
 			// Close menu when clicking outside of it
 			document.addEventListener("click", (e) => {

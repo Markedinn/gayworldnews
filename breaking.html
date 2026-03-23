@@ -14,7 +14,7 @@
 		<script src="country-info/country-files/americas-data.js"></script>
 		<script src="country-info/country-files/oceania-data.js"></script>
 
-		<link rel="stylesheet" href="breaking.css?v=1.1" />
+		<link rel="stylesheet" href="breaking.css?v=1.2" />
 		<script src="news-loader.js" defer></script>
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=3" />
 
@@ -225,11 +225,24 @@
 				default_language: "en",
 				detect_browser_language: true,
 				wrapper_selector: "#translator-anchor",
-				flag_size: 24,
-				alt_flags: { en: "usa" },
-				flag_style: "2d",
-				type: "dropdown_with_flags",
+				type: "dropdown",
 			};
+
+			// This "forces" the text because the widget settings sometimes fail
+			window.addEventListener("load", function () {
+				setTimeout(function () {
+					var select = document.querySelector("#translator-anchor select");
+					if (select) {
+						// Creates a new "Select Language" option at the very top
+						var opt = document.createElement("option");
+						opt.value = "";
+						opt.innerHTML = "Select Language";
+						opt.selected = true;
+						opt.disabled = true;
+						select.insertBefore(opt, select.firstChild);
+					}
+				}, 1000); // Waits 1 second for the widget to finish loading
+			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 	</body>

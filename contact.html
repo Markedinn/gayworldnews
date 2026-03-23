@@ -69,9 +69,6 @@
 				width: 100%; /* Ensures it fills the 600px max-width */
 				box-sizing: border-box;
 				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-
-				/* Laptop Height Logic: 
-               Keeps the card from ever touching the footer on short screens */
 				max-height: 60vh;
 				overflow-y: auto;
 			}
@@ -182,23 +179,15 @@
 				.page-container {
 					/* Switch from Center to Top-Aligned */
 					justify-content: flex-start !important;
-
-					/* Expert Calculation: 
-           Quick Exit (~45px) + 20px gap = 65px. 
-           This pins the Translator 20px below the Exit button. */
 					padding-top: 45px !important;
 				}
 
 				.glass-mission-card {
-					/* Slightly shrink the card padding on laptops to show more footer */
 					padding: 20px 30px;
-
-					/* Ensure the card doesn't get too tall */
 					max-height: 65vh;
 				}
 
 				#translator-anchor {
-					/* Maintain that consistent 20px rhythm */
 					margin-bottom: 20px !important;
 				}
 			}
@@ -206,35 +195,31 @@
 			/* 6. SMARTPHONE-ONLY PRECISION (Width-based) */
 			@media (max-width: 480px) {
 				.page-container {
-					/* On phones, the button feels 'taller' due to screen density. 
-           35px is usually the 'magic number' to get that 20px visual gap. */
 					padding-top: 35px !important;
-					gap: 10px; /* Tighten the gap between translator and card for mobile */
+					gap: 10px;
 				}
 
 				#translator-anchor {
-					/* Force the margin-bottom to be smaller on tiny screens 
-           so the card doesn't get pushed off-screen. */
 					margin-bottom: 10px !important;
 				}
 
 				.glass-mission-card {
-					padding: 15px 20px !important; /* Reduces top/bottom padding by half */
-					border-radius: 15px; /* Slightly tighter corners for a smaller screen */
+					padding: 15px 20px !important;
+					border-radius: 15px;
 				}
 
 				.contact-form {
-					gap: 10px; /* Tightens the space between Name, Email, and Message */
+					gap: 10px;
 				}
 
 				.main-title {
-					font-size: 1.5rem !important; /* Shrinks the 'Write To Us' header slightly */
-					margin-bottom: 10px !important;
+					font-size: 1.5rem;
+					margin-bottom: 10px;
 				}
 
 				.contact-form input,
 				.contact-form textarea {
-					padding: 10px; /* Slimmer input boxes */
+					padding: 10px;
 				}
 			}
 		</style>
