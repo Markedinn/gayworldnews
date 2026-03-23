@@ -50,7 +50,7 @@ body::before {
 }
 
 /* --- 3. HEADER & SEARCH --- */
-.rainbow-text {
+.main-title {
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: 900;
 	text-align: center;

@@ -399,7 +399,10 @@ function detectCategories(text) {
 	const T = text.toLowerCase();
 
 	// 1. IDENTITY GATEKEEPER: If it's not LGBTQ+, ignore it completely
-	const isLGBTQ = /lgbt|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning/.test(T);
+	const isLGBTQ =
+		/lgbt|sogie|sogiesc|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning|intersex|msm|wsw|same-gender|gender-affirming|identity-registry/.test(
+			T,
+		);
 
 	if (!isLGBTQ) {
 		return []; // Return empty array so the story is filtered out
@@ -419,9 +422,11 @@ function detectCategories(text) {
 
 	if (/housing|employer|daily life|public spaces|community safety|living conditions/.test(T)) out.push("living");
 
-	if (/improve|progress|rights expanded|protection added/.test(T)) out.push("trend-up");
-
-	if (/ban|rollback|rights removed|worse|restricted|violence rising/.test(T)) out.push("trend-down");
+	if (/improve|progress|rights expanded|protection added|decriminalized|legalized/.test(T)) {
+		out.push("trend-up");
+	} else if (/ban|rollback|rights removed|worse|restricted|violence rising|crackdown|sentenced/.test(T)) {
+		out.push("trend-down");
+	}
 
 	return out;
 }
@@ -452,7 +457,7 @@ function isBlocked(text) {
 	if (/pride|festival|parade|drag show|eurovision|community event/.test(T)) return true;
 
 	// BLOCK SYMBOLIC PROTESTS
-	if (/peaceful protest|march for awareness|activists gather/.test(T)) return true;
+	if (/peaceful protest|march for awareness|activists gather|queering|heteronormativity|cisnormativity|deconstruct|intersectionality/.test(T)) return true;
 
 	return false;
 }
@@ -495,11 +500,12 @@ function clean(html) {
    SECTION 8 — IMAGE EXTRACTION
    ================================================================ */
 
+/* ================================================================
+   SECTION 8 — IMAGE EXTRACTION (DISABLED)
+   ================================================================ */
+
 function extractImage(item) {
-	if (item.thumbnail) return item.thumbnail;
-	if (item.enclosure?.link) return item.enclosure.link;
-	const m = (item.description || "").match(/<img[^>]+src="([^"]+)"/);
-	return m ? m[1] : null;
+	return null; // Images disabled to save space and improve performance
 }
 
 /* ================================================================
@@ -530,18 +536,31 @@ async function fetchFeed(url) {
    ================================================================ */
 
 const FEEDS = [
-	"https://www.gaystarnews.com/feed",
-	"https://www.pinknews.co.uk/feed",
-	"https://www.advocate.com/arc/outfeed",
-	"https://www.washingtonblade.com/feed",
-	"https://www.out.com/feeds/all",
-	"https://www.hrw.org/rss/news",
-	"https://www.amnesty.org/en/latest/news/feed/",
-	"https://www.ilga-europe.org/rss.xml", // Europe Grassroots
-	"https://76crimes.com/feed/", // Focused on Decriminalization globally
-	"https://www.erasing76crimes.com/feed/", // African/Caribbean focus
-	"https://www.asyluminsight.com/rss?format=rss", // Migration/Local refugee news
-	"https://tiwrm.org/feed/",
+	// --- MIDDLE EAST & NORTH AFRICA (MENA) ---
+	"https://wp.mykalimag.com/en/feed/", // MENA Region (Conceptual/Factual)
+	"https://www.iraqueer.org/blog/feed", // Iraq Specific (Legal/Safety)
+	"https://www.helem.net/category/news/feed", // Lebanon/Levant Legal Updates
+	// --- SOUTH & CENTRAL AMERICA (LGBT Only) ---
+	"https://agenciapresentes.org/en/feed/", // Regional Expert Agency
+	"https://www.washingtonblade.com/tag/latin-america/feed/", // Specific LatAm Coverage
+
+	// --- SOUTHEAST ASIA & ASIA PACIFIC ---
+	"https://aseansogiecaucus.org/latest/asc-statements?format=feed&type=rss",
+	"https://equal-eyes.org/explore?format=rss", // High-quality Global South digest
+
+	// --- GLOBAL HUMAN RIGHTS & LEGAL ---
+	"https://www.openlynews.com/feed", // Reuters (Dry, factual reporting)
+	"https://76crimes.com/feed/", // Decriminalization focus
+	"https://www.erasing76crimes.com/feed/", // Africa/Caribbean focus
+	"https://www.amnesty.org/en/latest/news/feed/", // Amnesty (Filter for LGBT needed)
+	"https://outrightinternational.org/news/rss.xml",
+
+	// --- EUROPE & MIGRATION ---
+	"https://www.ilga-europe.org/rss.xml", // European legislation
+	"https://www.asyluminsight.com/rss?format=rss", // Migration & Refugee status
+
+	// --- GAY PRESS ---
+	"https://tiwrm.org/feed/", // Women's/LBT Rights
 ];
 
 const SEEN = new Set();
@@ -598,11 +617,15 @@ async function fetchLGBTQNews() {
 		console.error("Fetch error:", err);
 		if (statusBox) statusBox.innerText = "Update failed. Please refresh.";
 	}
+
+	// Inside news-loader.js
+	const isBreakingPage = window.location.pathname.includes("breaking");
+	const daysLimit = isBreakingPage ? 30 : 90; // 30 days for breaking, 90 for country archives
 }
 
 /* ================================================================
-   SECTION 11 — RENDER CARD
-   ================================================================ */
+   SECTION 11 — RENDER CARD (CLEAN TEXT-ONLY)
+   ================================================================ */
 
 function renderCard(it) {
 	const card = document.createElement("details");
@@ -610,7 +633,8 @@ function renderCard(it) {
 
 	const text = it.title + " " + it.description;
 	const country = detectCountry(text);
-	const cats = detectCategories(text);
+	// 1. Get categories from your detection function
+	let cats = detectCategories(text);
 
 	const tagHTML = cats
 		.map((c) => {
@@ -623,34 +647,43 @@ function renderCard(it) {
 				living: "LIVING CONDITIONS",
 				"trend-up": "RIGHTS TREND: UP",
 				"trend-down": "RIGHTS TREND: DOWN",
+				"trend-stable": "RIGHTS TREND: UNCHANGED",
 			};
-			return `<span class="tag tag-${c.replace("trend-", "")}">${map[c]}</span>`;
+
+			if (!map[c]) return "";
+
+			// 2. Use a special class for Unchanged so it gets the yellow color
+			const css = c === "trend-stable" ? "tag-unchanged" : c.replace("trend-", "");
+			return `<span class="tag tag-${css}">${map[c]}</span>`;
 		})
 		.join("");
 
-	const img = it.image ? `<img src="${it.image}" style="width:100%;border-radius:8px;margin-bottom:10px;">` : "";
-
+	// 1. Updated Date Logic (Adds the Day)
 	const date = new Date(it.pubDate);
 	const datestr = date.toLocaleDateString("en-US", {
 		month: "long",
+		day: "numeric", // This adds the '11th' or '23rd'
 		year: "numeric",
 	});
 
+	// 2. Updated HTML Structure
 	card.innerHTML = `
-        <summary>
-            <div class="country-label">${country}</div>
-            <div class="tag-bar">${tagHTML}</div>
-            <h3>${it.title}<br>
-                <span style="opacity:0.7;font-size:0.8em;">(${datestr})</span>
-            </h3>
-        </summary>
-        <div class="news-content-expanded">
-            ${img}
-            <p>${it.description.substring(0, 400)}...</p>
-            <a href="${it.link}" target="_blank" rel="noopener noreferrer"
-               style="color:#fff;text-decoration:underline;">Read full report</a>
+    <summary>
+        <div class="country-label">${country}</div>
+        <div class="tag-bar">${tagHTML}</div>
+        <h3>${it.title}</h3>
+        <div class="news-date-full">${datestr}</div>
+    </summary>
+    <div class="news-content-expanded">
+        <p>${it.description.substring(0, 400)}...</p>
+        <div style="margin-top: 20px; text-align: center;">
+            <a href="${it.link}" target="_blank" rel="noopener noreferrer" 
+               style="color:#fff; text-decoration:underline; font-weight:800; font-size:0.9rem;">
+                READ FULL REPORT →
+            </a>
         </div>
-    `;
+    </div>
+`;
 
 	return card;
 }

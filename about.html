@@ -24,7 +24,7 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp?" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=1.5" />
+		<link rel="stylesheet" href="index.css?v=1.8" />
 
 		<style>
 			/* THE MAP BACKGROUND */
@@ -38,15 +38,20 @@
 				min-height: 100vh;
 			}
 
+			.page-container {
+				width: 92%; /* This creates the side 'air' (gutters) */
+				max-width: 800px; /* This matches your card's max width */
+				margin: 0 auto; /* This centers the whole track */
+			}
+
 			/* THE FROSTED GLASS RECTANGLE */
 			.glass-mission-card {
-				background: rgb(21, 139, 202, 0.8);
+				background: rgba(21, 139, 202, 0.8);
 
 				border: 1px solid rgba(255, 255, 255, 0.2);
 				border-radius: 20px;
 				padding: 40px;
-				max-width: 800px;
-				margin: 60px auto; /* Centered with margin auto */
+				margin: 20px auto;
 				box-sizing: border-box; /* Your critical rule! */
 				box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 			}
@@ -60,9 +65,9 @@
 
 			/* Add this to your main CSS for single-column pages */
 			.centered-utility-wrap {
-				max-width: 400px; /* Adjust this to match your search bar width */
-				margin: 80px auto 20px auto;
-				width: 90%;
+				max-width: 500px; /* Adjust this to match your search bar width */
+				margin: 40px auto 20px auto;
+				width: 100%;
 			}
 
 			/* Align the About Page Translator to match the Homepage/Regions */
@@ -78,32 +83,55 @@
 				margin: 0 auto !important;
 			}
 
+			.exit-btn {
+				margin-bottom: 20px;
+			}
+
+			@media (max-width: 1024px) {
+				.glass-mission-card {
+					padding: 30px 20px; /* Slightly more padding for tablets */
+					width: 100%;
+					margin: 40px 0; /* Vertical gap only */
+					border-radius: 15px;
+				}
+
+				.glass-mission-card p {
+					line-height: 1.6;
+					font-size: 1.15rem; /* Better readability for the Pro screen */
+				}
+			}
+
 			@media (max-width: 600px) {
 				.glass-mission-card {
 					/* Reduce padding so there's more room for text on small screens */
 					padding: 25px 20px;
 
 					/* The Magic Move: 90% width keeps 5% 'air' on each side */
-					width: 92%;
-					margin: 40px auto;
+					width: 100%;
+					margin: 20px 0;
 
 					/* Ensure the border-radius doesn't look too 'aggressive' on small screens */
 					border-radius: 15px;
+				}
+
+				.glass-mission-card p {
+					line-height: 1.6;
+					font-size: 1.1rem;
 				}
 			}
 		</style>
 	</head>
 	<body class="about-page">
 		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
-		<div class="centered-utility-wrap">
-			<div id="translator-anchor" class="landing-pill-style">
-				<div id="google_translate_element"></div>
-			</div>
-		</div>
 
 		<div class="page-container">
+			<div class="centered-utility-wrap">
+				<div id="translator-anchor" class="landing-pill-style">
+					<div id="google_translate_element"></div>
+				</div>
+			</div>
 			<div class="glass-mission-card">
-				<h1 class="rainbow-text" style="margin-bottom: 30px; text-align: center">Our Mission</h1>
+				<h1 class="main-title" style="margin-bottom: 30px; text-align: center">Our Mission</h1>
 
 				<p>
 					We love to travel and with like-minded individuals we have created this website to keep ourselves and the LGBT community safe in a volatile and changing world. Whether

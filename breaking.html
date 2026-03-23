@@ -15,192 +15,164 @@
 		<script src="country-info/country-files/oceania-data.js"></script>
 
 		<link rel="stylesheet" href="breaking.css?v=8" />
-		<link rel="stylesheet" href="index.css?v=1.5" />
-		<script src="index.js" defer></script>
+		<script src="news-loader.js" defer></script>
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
 
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 	</head>
 	<body class="standard-page">
-		<a href="https://www.google.com" class="exit-btn">QUICK EXIT</a>
+		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
 
 		<div class="master-grid-container">
 			<header class="main-header">
-				<h1 class="rainbow-text">Global Breaking News</h1>
-				<div id="update-status" style="color: #fdfbfb; font-size: 1rem; padding: 10px; text-align: center">Checking for updates...</div>
+				<h1 class="main-title">Global Breaking News</h1>
+				<div id="update-status">Checking for updates...</div>
 				<div class="rainbow-line"></div>
 			</header>
 
 			<div class="three-search-container">
 				<div id="translator-anchor"></div>
-
 				<div class="landing-search-wrap">
-					<input type="text" id="globalSearch" placeholder="SEARCH COUNTRY" autocomplete="off" />
+					<input type="text" id="globalSearch" placeholder="FIND A COUNTRY" autocomplete="off" />
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
-
 				<a href="lgbt_risk_map.html" class="search-map-link">
 					<div class="search-map-bar">
 						<div class="search-map-content">
-							<span class="search-map-text">SEARCH MAP</span>
+							<span class="search-map-text">INTERATIVE MAP</span>
 						</div>
 					</div>
 				</a>
 			</div>
 
-			<div class="news-feed" style="grid-column: 1 / -1">
-				<details class="news-accordion manual-pinned">
-					<summary style="padding: 20px 20px">
-						<div class="tag-bar">
-							<span class="tag tag-safety">Safety Alert</span>
-							<span class="tag tag-down">Rights Trend: Down</span>
+			<main class="news-feed-wrapper">
+				<div id="manual-news-portal">
+					<details class="news-accordion manual-pinned">
+						<summary>
+							<div class="tag-bar">
+								<span class="tag tag-safety">Digital Safety</span>
+								<span class="tag tag-down">Rights Trend: Declining</span>
+							</div>
+							<div class="country-label manual-red-title">LEBANON (Digital Crackdown)</div>
+							<h3>Security Forces Increase Use of Social Media Entrapment Against LGBTQ+ Individuals</h3>
+							<div class="date-manual">(March 18, 2026)</div>
+						</summary>
+						<div class="news-content-expanded">
+							<p>
+								A new report from the Maharat Foundation highlights a dangerous surge in security forces using "digital targeting" tactics in Lebanon. Authorities are increasingly
+								using dating apps and social media to entrap, harass, and arbitrarily detain members of the community. Activists are urging users to exercise extreme caution with
+								their digital footprints as legal restrictions on journalists and activists continue to tighten across the MENA region.
+							</p>
+							<a href="https://ifex.org/issue/gender-and-sexual-diversity/" target="_blank">READ FULL REPORT →</a>
 						</div>
-						<div class="country-label manual-red-title">SENEGAL (Legislative Update)</div>
-						<h3>
-							National Assembly Passes Bill Doubling Prison Sentences to 10 Years<br /><strong style="color: black">‘Homosexuals will no longer breathe in this country’</strong>
-						</h3>
-						<div class="date-manual">(March 12, 2026)</div>
-					</summary>
-					<div class="news-content-expanded">
-						<p>
-							In a devastating blow to human rights, Senegal’s National Assembly has passed a bill that significantly increases the penalties for consensual same-sex acts. The new
-							legislation doubles the maximum prison term from five to 10 years for those convicted under the country’s "acts against nature" laws. This move, backed by Prime
-							Minister Ousmane Sonko, specifically targets the LGBTQ+ community and any allies providing advocacy or support.
-						</p>
-						<p>
-							Beyond imprisonment, the law introduces heavy fines and criminalizes the "promotion" of LGBTQ+ identities, effectively banning advocacy groups. While the bill awaits
-							the final signature of the President, local defenders report that the public debate has already triggered a wave of "outings" and vigilante violence in Dakar. As the
-							climate becomes increasingly hostile, many in the community are urgently seeking pathways to safety.
-						</p>
-						<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8"><strong>Source:</strong> Associated Press / Reuters</p>
-						<div style="margin-top: 20px; text-align: center">
-							<a href="https://apnews.com" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">READ FULL REPORT →</a>
-						</div>
-					</div>
-				</details>
-			</div>
+					</details>
 
-			<div class="news-feed" style="grid-column: 1 / -1">
-				<details class="news-accordion manual-pinned">
-					<summary style="padding: 20px 20px">
-						<div class="tag-bar">
-							<span class="tag tag-safety">Policy Alert</span>
-							<span class="tag tag-down">Rights Trend: Down</span>
+					<details class="news-accordion manual-pinned">
+						<summary>
+							<div class="tag-bar">
+								<span class="tag tag-safety">Safety Alert</span>
+								<span class="tag tag-down">Rights Trend: Down</span>
+							</div>
+							<div class="country-label manual-red-title">SENEGAL (Legislative Update)</div>
+							<h3>National Assembly Passes Bill Doubling Prison Sentences to 10 Years</h3>
+							<div class="date-manual">(March 12, 2026)</div>
+						</summary>
+						<div class="news-content-expanded">
+							<p>
+								The introduction of the bill comes in the backdrop of increased arrests on charges of same-sex conduct, mostly targeting men. In February 2026, 12 men, including
+								two Senegalese public figures, media presenter Pape Chinch Diallo and musician Djiby Dramé, were arrested and charged with, among other things, unnatural acts...
+							</p>
+							<p><strong>Source:</strong> OUTRIGHT INTERNATIONAL / Reuters</p>
+							<div>
+								<a href="https://outrightinternational.org/insights/escalating-threats-lgbtq-people-senegal-legal-reform-moral-panic-and-devastating" target="_blank"
+									>READ FULL REPORT →</a
+								>
+							</div>
 						</div>
-						<div class="country-label manual-red-title">UNITED KINGDOM (Healthcare Update)</div>
-						<h3>NHS Immediately Pauses All Hormone Treatments for Youth Under 18</h3>
-						<div class="date-manual">(March 10, 2026)</div>
-					</summary>
-					<div class="news-content-expanded">
-						<p>
-							Health Secretary Wes Streeting has officially confirmed an immediate pause on all prescriptions of puberty blockers and hormones for transgender youth under the age
-							of 18. This decision follows a review suggesting a lack of long-term evidence regarding the clinical safety and effectiveness of such treatments for minors. This move
-							shifts the UK toward a more restrictive model of care, aligning with recent changes seen in several other European nations.
-						</p>
-						<p>
-							While the government maintains that the pause is a necessary safety precaution, advocacy groups have labeled the decision a "grave betrayal" that will exacerbate
-							mental health crises among vulnerable youth. As the UK's first openly gay Health Secretary, Streeting faces significant pressure to reconsider the ban. A public
-							consultation is currently underway to determine the permanent future of these services, but for now, no new referrals will be accepted for hormone therapy.
-						</p>
-						<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8"><strong>Source:</strong> UK Parliament / NHS England</p>
-						<div style="margin-top: 20px; text-align: center">
-							<a href="https://www.parliament.uk" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">READ FULL REPORT →</a>
-						</div>
-					</div>
-				</details>
-			</div>
+					</details>
 
-			<div class="news-feed" style="grid-column: 1 / -1">
-				<details class="news-accordion manual-pinned">
-					<summary style="padding: 20px 20px">
-						<div class="tag-bar">
-							<span class="tag tag-safety">Legal Victory</span>
-							<span class="tag tag-down" style="background: #2ecc71">Rights Trend: Neutral/Stable</span>
+					<details class="news-accordion manual-pinned">
+						<summary>
+							<div class="tag-bar">
+								<span class="tag tag-legal">Legal Victory</span>
+								<span class="tag tag-up">Rights Trend: Improving</span>
+							</div>
+							<div class="country-label manual-red-title">ECUADOR (Gender Recognition)</div>
+							<h3>Constitutional Court Affirms Adolescents' Right to Legal Gender Identity</h3>
+							<div class="date-manual">(March 12, 2026)</div>
+						</summary>
+						<div class="news-content-expanded">
+							<p>
+								In a landmark ruling, Ecuador's Constitutional Court has recognized the right of adolescents to change the gender marker on their identity documents without
+								requiring parental consent in all cases. The court stated that "progressive autonomy" is a fundamental right, ensuring that young people can have their legal
+								identity match their lived reality, strengthening dignity and self-determination across the nation.
+							</p>
+							<a href="https://www.hrw.org/news/2026/03/12/ecuador-court-affirms-adolescents-right-gender-recognition" target="_blank">READ FULL REPORT →</a>
 						</div>
-						<div class="country-label manual-red-title">CAMEROON (Prison Release)</div>
-						<h3>Five Men Released from Kondengui Prison Following 4-Month Sentence</h3>
-						<div class="date-manual">(March 6, 2026)</div>
-					</summary>
-					<div class="news-content-expanded">
-						<p>
-							Five men have been released from Kondengui Central Prison in Yaoundé after being held for four months on homosexuality charges. The group, including four Cameroonians
-							and one Congolese national, were arrested following a targeted police operation involving illegal phone searches. Their release marks a rare legal victory in a
-							country that frequently uses Article 347-1 of the Penal Code to prosecute individuals based on perceived sexual orientation.
-						</p>
-						<p>
-							The advocacy group SOS Solidarity spearheaded the efforts for their release, highlighting that the arrests were based on entrapment. While the men are now physically
-							free, they face severe social consequences, including loss of employment and family ostracization. Activists note that this case underscores the ongoing danger for
-							LGBTQ+ people in Cameroon, where the legal system is often weaponized for extortion and arbitrary detention.
-						</p>
-						<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8"><strong>Source:</strong> Erasing 76 Crimes / SOS Solidarity</p>
-						<div style="margin-top: 20px; text-align: center">
-							<a href="https://76crimes.com" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">READ FULL REPORT →</a>
-						</div>
-					</div>
-				</details>
-			</div>
-			<div class="news-feed" style="grid-column: 1 / -1">
-				<details class="news-accordion manual-pinned">
-					<summary style="padding: 20px 20px">
-						<div class="tag-bar">
-							<span class="tag tag-safety">Safety Alert</span>
-							<span class="tag tag-down">Rights Trend: Down</span>
-						</div>
-						<div class="country-label manual-red-title">NORTH KOREA (Manual Update)</div>
-						<h3>UN Reports Increased Persecution under 'Reactionary Culture' Law</h3>
-						<div class="date-manual">(March 2, 2026)</div>
-					</summary>
-					<div class="news-content-expanded">
-						<p>New testimonies reveal that the DPRK is using anti-socialist laws to target LGBTQ individuals...</p>
-						<p style="margin-top: 15px; font-size: 0.9rem; opacity: 0.8"><strong>Source:</strong> Human Rights Watch / UN OHCHR</p>
-						<div style="margin-top: 20px; text-align: center">
-							<a href="https://www.hrw.org" target="_blank" style="color: #ffffff; text-decoration: underline; font-weight: 800; font-size: 0.9rem">READ FULL REPORT →</a>
-						</div>
-					</div>
-				</details>
-			</div>
+					</details>
 
-			<section class="news-feed" style="grid-column: 1 / -1">
-				<div id="automated-news-feed" class="bento-grid">
-					<div class="loading-state" style="padding: 20px; color: white; font-weight: bold">Scanning Global LGBTQ+ News...</div>
+					<details class="news-accordion manual-pinned">
+						<summary>
+							<div class="tag-bar">
+								<span class="tag tag-legal">Legal Victory</span>
+								<span class="tag tag-up">Rights Trend: Improving</span>
+							</div>
+							<div class="country-label manual-red-title">KENYA (Hate Crime Justice)</div>
+							<h3>High Court Sentences Attackers to 15 Years in Landmark LGBTQ+ Protection Case</h3>
+							<div class="date-manual">(March 11, 2026)</div>
+						</summary>
+						<div class="news-content-expanded">
+							<p>
+								In a decision hailed as a "sign of hope" for the East African community, a Kenyan court has sentenced two individuals to 15 years in prison for a violent robbery
+								and assault targeting gay men. Activists note that the severity of the sentence reflects a growing judicial intolerance for hate-motivated violence, even as the
+								country's legislative landscape remains challenging.
+							</p>
+							<a href="https://www.theguardian.com/world/lgbt-rights+africa" target="_blank">READ FULL REPORT →</a>
+						</div>
+					</details>
+
+					<details class="news-accordion manual-pinned">
+						<summary>
+							<div class="tag-bar">
+								<span class="tag tag-legal">Legal Victory</span>
+								<span class="tag tag-unchanged">Rights Trend: Unchanged</span>
+							</div>
+							<div class="country-label manual-red-title">CAMEROON (Prison Release)</div>
+							<h3>Five Men Released from Kondengui Prison Following 4-Month Sentence</h3>
+							<div class="date-manual">(March 6, 2026)</div>
+						</summary>
+						<div class="news-content-expanded">
+							<p>
+								Their liberation came earlier than had been feared because their personal finances allowed them to pay the relatively low fines of 30,000 CFA francs (about US $51)
+								each, which was all the judge demanded after hearing pleas on their behalf.
+							</p>
+							<a href="https://76crimes.com/2026/03/06/cameroon-five-men-freed-after-4-months-in-prison-for-homosexuality/" target="_blank">READ FULL REPORT →</a>
+						</div>
+					</details>
 				</div>
-			</section>
 
-			<script src="news-loader.js" defer></script>
+				<h2>Live Global Feed:</h2>
+				<div id="automated-news-feed" class="bento-grid">
+					<div class="loading-state">Scanning Global LGBTQ+ News...</div>
+				</div>
+			</main>
 		</div>
-
 		<footer class="site-footer">
 			<div class="footer-container">
 				<div class="footer-card">
-					<a href="index.html" class="home-btn-logo" title="Gay World News - Home">
-						<span class="gwn-logo">GWN</span>
-					</a>
+					<a href="index.html" class="home-btn-logo"><span class="gwn-logo">GWN</span></a>
 				</div>
-
 				<div class="footer-card">
-					<a href="about.html" class="social-pill neutral" aria-label="Learn more about Gay World News"> <i class="fas fa-info-circle"></i> <span>About</span> </a>
+					<a href="about.html" class="social-pill neutral"><span>About</span></a>
 				</div>
-
 				<div class="footer-card">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
-						<i class="fab fa-facebook-f"></i> <span>Facebook</span>
-					</a>
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" class="social-pill facebook"><span>Facebook</span></a>
 				</div>
-
 				<div class="footer-card">
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
-						<i class="fab fa-x-twitter"></i> <span>X</span>
-					</a>
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" class="social-pill x-twitter"><span>X</span></a>
 				</div>
-
 				<div class="footer-card">
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
-						<i class="fab fa-youtube"></i> <span>YouTube</span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="contact.html" class="social-pill neutral" aria-label="Contact Gay World News"> <i class="fas fa-envelope"></i> <span>Connect</span> </a>
+					<a href="contact.html" class="social-pill neutral"><span>Connect</span></a>
 				</div>
 			</div>
 			<div class="footer-bottom-bar">

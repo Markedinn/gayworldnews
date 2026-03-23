@@ -64,7 +64,7 @@ body::before {
 }
 
 /* Update your CSS */
-.rainbow-text {
+.main-title {
 	/* Remove the complex animation/gradient clipping properties */
 	color: white; /* Clean, static white */
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
@@ -204,22 +204,6 @@ body::before {
 	text-align: left;
 	text-transform: none;
 }
-
-/* 2. Hide Desktop Scrollbars */
-/* #translator-anchor select::-webkit-scrollbar {
-	display: none !important;
-}
-#translator-anchor select {
-	scrollbar-width: none !important;
-} */
-
-/* 3. The "No-Ghosting" Click Fix */
-/* #translator-anchor select:focus,
-#translator-anchor select:active {
-	outline: none !important;
-	background-color: transparent !important;
-	box-shadow: none !important;
-} */
 
 /* Optional: If the flag or arrow looks too tight, adjust them slightly */
 #translator-anchor .gt_selector img {
@@ -790,12 +774,6 @@ body::before {
 	position: relative;
 }
 
-/* Ensure the text inside the accordion is readable against the navy background */
-#legendContent {
-	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
-	color: #333; /* Dark text for readability */
-}
-
 /* --- 8. RESPONSIVE BREAKPOINTS --- */
 
 @media screen and (max-width: 480px) {
@@ -809,10 +787,9 @@ body::before {
 		z-index: -1;
 		background: url("images/world_img_mobile.webp") center/cover no-repeat;
 		background-size: 100% 100%;
-		filter: brightness(0.8) contrast(1.6) saturate(1.6);
+		filter: brightness(0.9) contrast(1.6) saturate(1.6);
 		background-color: rgba(30, 45, 60, 0.5);
 		background-blend-mode: multiply;
-		/* filter: brightness(0.6) contrast(1.6); */
 	}
 
 	.master-grid-container {
@@ -827,7 +804,6 @@ body::before {
 
 	.landing-search-wrap {
 		position: relative !important;
-		/* margin-top: 10px !important; */
 		overflow: visible !important;
 		width: 100% !important;
 		z-index: 20;
@@ -879,7 +855,7 @@ body::before {
 	}
 }
 
-/* TABLETS (iPads/Samsung) - Final Structural Alignment */
+/* TABLETS */
 @media (min-width: 481px) and (max-width: 1100px) {
 	body::before {
 		content: "";
@@ -891,18 +867,16 @@ body::before {
 		z-index: -1;
 		background: url("images/world_img_mobile.webp") center/cover no-repeat;
 		background-size: 100% 100%;
-		filter: brightness(0.8) contrast(1.6) saturate(1.6);
+		filter: brightness(0.9) contrast(1.6) saturate(1.6);
 		background-color: rgba(30, 45, 60, 0.5);
 		background-blend-mode: multiply;
-		/* filter: brightness(0.6) contrast(1.6); */
 	}
 
 	.master-grid-container {
-		display: flex !important;
-		flex-direction: column !important;
-		align-items: center !important;
-		width: 100% !important;
-		padding: 0 !important;
+		display: fle;
+		flex-direction: colum;
+		align-items: center;
+		padding: 0 30px 40px 30px; /* 30px on sides, 40px at bottom */
 	}
 
 	/* 2. Fix the Anchor - This is the "Track" the pill sits on */
@@ -935,7 +909,8 @@ body::before {
 	}
 
 	.bento-grid {
-		grid-template-columns: repeat(2, 1fr) !important;
+		grid-template-columns: repeat(3, 1fr) !important;
+		gap: 20px !important;
 		gap: 20px !important;
 	}
 
@@ -957,34 +932,38 @@ body::before {
 		display: flex !important;
 	}
 
+	/* --- UPDATED TABLET FOOTER (Symmetrical Flex) --- */
 	.footer-container {
-		display: grid !important;
-		grid-template-columns: repeat(3, 1fr) !important;
-		justify-items: center;
-		align-items: center;
-		gap: 20px 0;
+		display: flex !important; /* Changed from grid to flex */
+		flex-wrap: wrap !important;
+		justify-content: center !important; /* This is the magic centering line */
+		align-items: center !important;
+		gap: 15px 20px !important; /* 15px vertical, 20px horizontal */
 		max-width: 800px;
 		margin: 0 auto;
+		padding: 10px 20px !important;
 	}
+
 	.footer-card {
 		display: flex !important;
 		justify-content: center !important;
-		width: 100%;
+		/* This ensures buttons only take up the space they need, 
+       allowing them to center themselves on the bottom row */
+		flex: 0 1 auto !important;
+		width: auto !important;
 	}
 }
 
 /* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
-@media (min-width: 1600px) {
+@media (min-width: 1800px) {
 	.master-grid-container {
-		max-width: 1200px;
+		max-width: 1400px; /* Give the cards a bit more room to stretch */
+		transform: scale(1.1); /* Subtly scale up the whole grid for 32" screens */
+		transform-origin: top center;
 		gap: 50px;
 	}
 
-	body {
-		justify-content: center;
-	}
-
 	.main-header {
-		margin-bottom: 30px;
+		margin: 150px auto 30px auto;
 	}
 }
