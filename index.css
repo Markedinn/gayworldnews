@@ -953,3 +953,15 @@ body::before {
 		width: auto !important;
 	}
 }
+
+/* 27" Monitor "Studio Mode" */
+@media (min-width: 2000px) {
+	.home-hero {
+		margin-top: 10vh !important; /* Pushes it down for the camera */
+		text-align: center;
+	}
+
+	.home-hero .main-title {
+		font-size: 5rem !important; /* Bigger logo for your video backdrop */
+	}
+}
