@@ -953,17 +953,3 @@ body::before {
 		width: auto !important;
 	}
 }
-
-/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
-@media (min-width: 1700px) {
-	.main-header {
-		margin: 4vh auto 30px auto;
-	}
-}
-
-/* 3. BIG SCREENS (27" - 32" Monitors) - 1600px+ */
-@media (min-width: 2000px) {
-	.main-header {
-		margin: 10vh auto 30px auto;
-	}
-}
