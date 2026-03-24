@@ -29,7 +29,7 @@ body::before {
 	z-index: -1;
 	background: url("images/world_img.webp") center/cover no-repeat;
 	filter: brightness(0.8) contrast(1.6) saturate(1.6);
-	background-color: rgba(78, 111, 139, 0.5);
+	background-color: rgba(10, 158, 238, 0.3);
 	background-blend-mode: multiply;
 	pointer-events: none;
 }
@@ -125,10 +125,6 @@ h2 {
 	text-transform: uppercase;
 }
 
-/* ============================================
-   UNIFIED CHARCOAL ACCORDION ENGINE
-   ============================================ */
-
 /* THE MAIN BOX: */
 .news-accordion,
 .manual-pinned {
@@ -143,6 +139,7 @@ h2 {
 	transition: all 0.3s ease;
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 	text-align: center;
+	cursor: pointer;
 }
 
 .news-accordion summary::-webkit-details-marker {
@@ -158,6 +155,12 @@ h2 {
 	justify-content: center;
 	padding: 20px;
 	min-height: 140px;
+	cursor: pointer;
+	outline: none;
+}
+
+.news-accordion[open] {
+	cursor: default;
 }
 
 /* FORCE THE ORDER: Title -> Tags -> Date */
@@ -205,7 +208,34 @@ h2 {
 	animation: none; /* Stops pulsing when the user is hovering to click */
 }
 
-/* TEXT STYLING: Full White, No Underlines */
+/* TEXT STYLING */
+
+.news-accordion .country-label {
+	display: inline-block !important;
+	color: #ffffff !important;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1.3rem;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 8px;
+	position: relative;
+	z-index: 5;
+}
+
+.country-label.manual-red-title {
+	display: inline-block !important;
+	color: #ff3366 !important;
+	font-weight: 900 !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 1.3rem;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 8px;
+	position: relative;
+	z-index: 5;
+}
+
 .news-accordion h3,
 .news-date-full,
 .country-label {
@@ -216,8 +246,15 @@ h2 {
 }
 
 .news-accordion h3 {
-	font-size: 1.15rem;
-	font-weight: 800;
+	display: inline-block !important;
+	font-weight: 500 !important;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	font-size: 1.3rem;
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+	margin-bottom: 8px;
+	position: relative;
+	z-index: 5;
 }
 
 .news-date-full {
@@ -230,39 +267,49 @@ h2 {
 	font-size: 1.2rem;
 	line-height: 1.7;
 	margin-bottom: 25px;
-	text-align: center;
+	text-align: left;
+	padding: 0 30px;
 }
 
-/* THE BUTTON: No Underline */
-.news-content-expanded a {
-	display: inline-block;
-	color: #ffffff;
-	text-decoration: none;
-	border: 1px solid #ffffff;
-	padding: 12px 30px;
-	border-radius: 50px;
+/* THE BUTTON: White Glass Effect */
+.news-accordion .news-content-expanded a,
+.manual-pinned .news-content-expanded a {
+	display: inline-block !important;
+
+	/* 1. THE GLASS EFFECT */
+	background: rgba(4, 21, 252, 0.5);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+
+	/* 2. THE BORDER & TEXT (Frozen Blue) */
+	color: #ffffff !important;
+	border: 1.5px solid rgba(255, 255, 255, 0.993) !important;
+
+	/* 3. THE SIZE (Refined) */
+	padding: 10px 24px !important;
+	font-size: 0.8rem !important;
 	font-weight: 800;
 	text-transform: uppercase;
-	font-size: 0.9rem;
-	transition: 0.3s;
+	letter-spacing: 1.5px;
+	border-radius: 50px;
+
+	/* 4. THE SPACING */
+	margin-top: 15px !important;
+	margin-bottom: 35px !important;
+
+	text-decoration: none !important;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	cursor: pointer !important;
 }
 
-.news-content-expanded a:hover {
-	background: #ffffff;
-	color: #000000;
-}
-
-/* STATES */
-.news-accordion:hover,
-.manual-pinned:hover {
-	background: rgba(21, 139, 202, 0.85);
-	transform: translateY(-3px);
-	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-}
-
-.news-content-expanded {
-	background: rgba(0, 0, 0, 0.2);
-	border-top: 1px solid rgba(255, 255, 255, 0.1);
+/* THE HOVER: "Glowing Glass" */
+.news-accordion .news-content-expanded a:hover,
+.manual-pinned .news-content-expanded a:hover {
+	background: rgba(4, 21, 252, 0.9);
+	border-color: #ffffff !important;
+	color: #ffffff !important;
+	transform: translateY(-3px) scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* --- TRANSLATOR & PILLS --- */
@@ -316,6 +363,17 @@ h2 {
 	text-align-last: center;
 }
 
+#translator-anchor select:hover {
+	background: #ff3399 !important;
+	color: #ffffff !important;
+	border-color: #ffffff;
+	box-shadow:
+		0 8px 15px rgba(255, 51, 153, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+	transform: translateY(-2px);
+	transition: all 0.2s ease-out;
+}
+
 /* ============================================
    CATEGORY TAGS & RIGHTS TREND
    ============================================ */
@@ -328,6 +386,11 @@ h2 {
 }
 
 .tag {
+	position: relative;
+	z-index: 10;
+	opacity: 1 !important;
+	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+	background-image: none !important;
 	padding: 4px 12px;
 	border-radius: 50px;
 	font-size: 0.7rem;
@@ -335,11 +398,11 @@ h2 {
 	color: #ffffff;
 	text-transform: uppercase;
 	letter-spacing: 0.05rem;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
 .tag-legal {
-	background-color: #3b82f6;
+	background-color: #0b63f1;
 }
 .tag-discrimination {
 	background-color: #f59e0b;
@@ -351,7 +414,7 @@ h2 {
 	background-color: #06b6d4;
 }
 .tag-health {
-	background-color: #22c55e;
+	background-color: #15cf5a;
 }
 .tag-safety {
 	background-color: #ef4444;
@@ -360,11 +423,10 @@ h2 {
 	background-color: #ef4444;
 }
 .tag-unchanged {
-	background-color: #a0960d;
+	background-color: #a39802;
 }
 .tag-up {
-	background-color: #22c55e;
-	box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+	background-color: #05bd49;
 }
 
 /* ============================================
@@ -423,12 +485,18 @@ h2 {
 	margin-top: -2px !important;
 }
 
-/* 4. Hover Effect for all bars */
+/* Hover Effect for all bars */
 .landing-pill-style:hover select,
 .landing-search-wrap:hover input,
 .search-map-bar:hover {
+	background: #ff3399 !important;
+	color: #ffffff !important;
 	border-color: #ffffff;
-	box-shadow: 0 4px 12px rgba(255, 51, 153, 0.1);
+	box-shadow:
+		0 8px 15px rgba(255, 51, 153, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+	transform: translateY(-2px);
+	transition: all 0.2s ease-out;
 }
 
 .bento-card {

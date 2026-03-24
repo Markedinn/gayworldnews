@@ -676,10 +676,9 @@ function renderCard(it) {
     </summary>
     <div class="news-content-expanded">
         <p>${it.description.substring(0, 400)}...</p>
-        <div style="margin-top: 20px; text-align: center;">
-            <a href="${it.link}" target="_blank" rel="noopener noreferrer" 
-               style="color:#fff; text-decoration:underline; font-weight:800; font-size:0.9rem;">
-                READ FULL REPORT →
+        <div>
+            <a href="${it.link}" target="_blank" rel="noopener noreferrer">
+			READ ARTICLE 
             </a>
         </div>
     </div>

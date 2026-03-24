@@ -25,7 +25,7 @@
 /* 2. Status Pill */
 .status-badge-wrapper {
 	display: inline-grid;
-	grid-template-columns: 24px auto; /* Keep 24px ONLY if using a dot icon */
+	grid-template-columns: 24px auto;
 	align-items: center;
 	background-color: #ffffff;
 	padding: 8px 20px;
@@ -35,7 +35,7 @@
 }
 
 #status-text {
-	color: #2979ff !important; /* Updated to your new Vivid Blue */
+	color: #2979ff !important;
 	font-weight: 800;
 	font-size: 0.95rem;
 	letter-spacing: 0.05rem;
@@ -78,10 +78,10 @@
 }
 .ice,
 .status-dot-country.ice {
-	background: rgba(0, 229, 255, 0.6) !important; /* Vivid Cyan with glass transparency */
-	border: 1px solid rgba(255, 255, 255, 0.4); /* Brighter border for a "chilled" look */
+	background: rgba(0, 229, 255, 0.6) !important;
+	border: 1px solid rgba(255, 255, 255, 0.4);
 	color: #ffffff !important;
-	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8); /* Subtle glow to make the text "icey" */
+	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
 }
 
 /* 3. The Modern Accordion */
@@ -131,7 +131,7 @@
 .news-accordion h3 {
 	margin: 0;
 	font-size: 1.2rem;
-	color: #f6f7fa; /* Updated to Vivid Blue */
+	color: #f6f7fa;
 	pointer-events: none;
 }
 
@@ -154,32 +154,19 @@
 }
 
 .header-utility {
-	position: fixed; /* Use fixed so it stays in the corner */
+	position: fixed;
 	top: 20px;
 	right: 20px;
-	z-index: 2000; /* Higher than everything else */
+	z-index: 2000;
 	display: flex;
 	justify-content: flex-end;
-	pointer-events: none; /* Allows clicks to pass through the container... */
+	pointer-events: none;
 }
-
-/* This makes the source links pop and stay clickable */
-/* .sources-list a {
-	color: #ff3399 !important; 
-	text-decoration: underline;
-	font-size: 13px;
-	display: block;
-	margin-bottom: 8px;
-	word-break: break-all; 
-	pointer-events: auto !important; 
-	z-index: 10001;
-	position: relative;
-} */
 
 /* Ensure the text inside the accordion is readable against the navy background */
 #legendContent {
-	background-color: rgba(255, 255, 255, 0.95); /* Light background for high contrast */
-	color: #333; /* Dark text for readability */
+	background-color: rgba(255, 255, 255, 0.95);
+	color: #333;
 }
 
 /* Ensure the expanded area is fully interactive */
@@ -200,38 +187,38 @@
 
 /* Fix for the Header Utility potentially blocking clicks in the viewport */
 .header-utility {
-	pointer-events: none; /* Already in your code, but good to keep */
+	pointer-events: none;
 }
 
 .header-utility * {
-	pointer-events: auto; /* Re-enables clicks for buttons inside the utility */
+	pointer-events: auto;
 }
 
 /* Container for the source links */
 .sources-list {
 	display: flex;
-	flex-wrap: wrap; /* Allows links to move to a new line on small screens */
-	justify-content: center; /* Centers them to match your page style */
-	gap: 12px; /* This creates the space between the links automatically */
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
 	margin-top: 15px;
 	padding: 10px;
 }
 
 /* Individual Link Styling */
 .sources-list a {
-	background: rgba(255, 255, 255, 0.979);
+	background: rgba(6, 233, 74, 0.3);
 	padding: 6px 12px;
 	border-radius: 6px;
 	font-size: 1rem;
-	color: #1708ee !important;
+	color: #ffffff !important;
 	text-decoration: none;
-	border: 1px solid rgba(247, 7, 127, 0.3);
+	border: 1px solid rgba(6, 233, 74, 0.3);
 	transition: all 0.2s ease;
 	white-space: wrap;
 }
 
 .sources-list a:hover {
-	background: rgba(230, 86, 160, 0.4);
+	background: rgba(11, 236, 4, 0.7);
 	transform: translateY(-2px);
 }
 
@@ -239,8 +226,8 @@
 .update-badge {
 	display: inline-flex;
 	align-items: center;
-	background: rgba(0, 255, 136, 0.1); /* Subtle green glow background */
-	color: #00ff88; /* High-visibility Neon Green */
+	background: rgba(0, 255, 136, 0.1);
+	color: #00ff88;
 	padding: 6px 14px;
 	border-radius: 50px;
 	font-size: 0.75rem;
@@ -291,14 +278,14 @@
 
 /* 1. The Container */
 .top-utility-stack {
-	grid-column: 1 / -1; /* Spans the full width of the grid */
+	grid-column: 1 / -1;
 	display: flex;
 	flex-direction: column;
-	align-items: center; /* Keeps everything centered */
+	align-items: center;
 	width: 90%;
-	max-width: 450px; /* The professional Bento width */
-	margin: 20px auto; /* Centers the container itself */
-	gap: 15px; /* Even spacing between items */
+	max-width: 450px;
+	margin: 20px auto;
+	gap: 15px;
 }
 
 /* 2. Force Translator & U=U to 100% of the 450px */
@@ -312,5 +299,5 @@
 .status-badge-wrapper {
 	width: fit-content !important;
 	margin: 5px auto 0 auto !important;
-	grid-column: auto !important; /* Resets your previous inline style */
+	grid-column: auto !important;
 }

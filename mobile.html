@@ -22,8 +22,8 @@
 		<meta name="twitter:description" content="Fast-loading LGBTQ+ legal travel health and safety updates for travelers worldwide." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.6" />
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=1.6" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.7" />
+		<link rel="apple-touch-icon" href="images/favicon.webp?v=1.7" />
 
 		<script>
 			window.globalData = {};
@@ -37,6 +37,25 @@
 
 		<style>
 			/* --- 1. THE RIGID MASTER GRID --- */
+
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html,
+			body {
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+			}
+
+			*::-webkit-scrollbar {
+				display: none;
+			}
+
 			body {
 				margin: 0;
 				padding: 0;
@@ -46,7 +65,8 @@
 				grid-template-rows: auto auto 1fr auto auto;
 				gap: 0; /* We will use margins for better control */
 				font-family: "Helvetica Neue", Arial, sans-serif;
-				overflow-x: hidden;
+				overflow-x: hidden !important;
+				width: 100%;
 				position: relative;
 			}
 
@@ -61,7 +81,7 @@
 				background: url("images/world_img_mobile.webp") center/cover no-repeat;
 				background-size: 100% 100%;
 				filter: brightness(0.7) contrast(1.6) saturate(1.6);
-				background-color: rgba(78, 111, 139, 0.5);
+				background-color: rgba(10, 158, 238, 0.3);
 				background-blend-mode: multiply;
 			}
 
@@ -187,41 +207,72 @@
 			/* Hover effect for the Map button and Search focus */
 			#globalSearch:focus,
 			.search-map-link:hover .search-map-bar {
-				background: rgba(15, 45, 65, 0.6) !important;
+				background: rgba(21, 139, 202, 0.7) !important;
 				border-color: rgba(255, 255, 255, 0.8) !important;
-				transition: all 0.2s ease-in-out;
+				outline: none;
 			}
 
-			/* --- 4. THE FLOATING SEARCH TRAY --- */
-			/* --- 4. THE FLOATING SEARCH TRAY --- */
+			/* --- DROPDOWN MENU--- */
 			.search-results-floating {
 				position: absolute;
-				bottom: 60px; /* This stays the same - it floats ABOVE the input */
-				left: 0; /* Changed to 0 because its parent is already centered/90% width */
+				bottom: 110%;
+				top: auto !important;
+				left: 0;
 				width: 100%;
-				background: rgba(72, 100, 116, 0.8);
-				border: 2px solid rgba(255, 255, 255, 0.5) !important;
-				border-radius: 20px;
-				padding: 8px;
-				display: none;
+				display: none; /* Controlled by your JavaScript */
 				flex-direction: column;
-				gap: 4px;
-				z-index: 100;
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				max-height: 35vh; /* Keep it slightly shorter so it doesn't cover the title */
+				z-index: 2000; /* High enough to float over everything */
+				background: rgba(10, 158, 238, 0.3) !important;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				border-radius: 15px;
+				padding: 10px;
+				gap: 0; /* We use margins on the cards instead for that "Small Break" */
+
 				overflow-y: auto;
-				box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3); /* Shadow goes UP */
+				overflow-x: hidden;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+				margin-top: 10px;
+				max-height: 40vh;
 			}
 
-			/* Hide scrollbar for Chrome, Safari and Opera */
-			.search-results-floating::-webkit-scrollbar {
-				display: none;
+			/* --- THE INVISIBLE LIST ITEM --- */
+			.search-results-floating .country-card.search-item-card,
+			.search-results-floating .country-card.red,
+			.search-results-floating .country-card.green,
+			.search-results-floating .country-card.warning,
+			.search-results-floating .country-card.yellow {
+				/* 1. THE ERASER: This kills the blocky grid styles */
+				background: transparent !important;
+				min-height: auto !important;
+				border: none !important;
+				backdrop-filter: none !important;
+				margin: 0 !important;
+
+				/* 2. THE STYLE: The name-only look */
+				padding: 12px 15px;
+				display: block;
+				color: #ffffff;
+				text-transform: none;
+
+				/* 3. THE SEPARATOR: The subtle line BEFORE hover */
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			}
 
-			/* Hide scrollbar for IE, Edge and Firefox */
-			.search-results-floating {
-				-ms-overflow-style: none; /* IE and Edge */
-				scrollbar-width: none; /* Firefox */
+			/* THE HOVER POP: THIS IS WHERE THE WHITE LINE APPEARS */
+			.search-results-floating .country-card.search-item-card:hover {
+				transform: scale(1.02) translateY(-2px);
+				background: rgba(21, 139, 202, 0.5) !important; /* The Blue Pop */
+
+				/* THE FIX: Solid white line replaces the ghost line */
+				border-bottom: 1px solid #ffffff !important;
+
+				border-radius: 8px;
+				box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+				z-index: 10;
 			}
 
 			.side-menu {
@@ -366,9 +417,7 @@
 				z-index: 2;
 			}
 
-			/* 3. THE PINK TRIANGLE: Ensure it sits "under" the transparent select */
 			#translator-anchor::after {
-				/* A clean, white vector globe */
 				content: "";
 				position: absolute;
 				right: 18px;
@@ -376,28 +425,21 @@
 				transform: translateY(-50%);
 				width: 22px;
 				height: 22px;
-
-				/* THE MAGIC: A white SVG globe background */
 				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='2' y1='12' x2='22' y2='12'%3E%3C/line%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'%3E%3C/path%3E%3C/svg%3E");
 				background-repeat: no-repeat;
 				background-size: contain;
-
-				/* This makes it ignore the background's blue saturation */
 				filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
-
 				pointer-events: none;
 				z-index: 10;
 			}
 
-			/* THE FIX: Targeting only the dropdown list items */
 			#translator-anchor select option {
-				background-color: rgb(33, 103, 140) !important;
+				background: rgba(21, 139, 202, 1.9) !important;
 				color: #ffffff !important;
 				text-align: left;
 				padding: 12px;
 			}
 
-			/* Hide the scrollbar for the desktop dropdown list */
 			#translator-anchor select::-webkit-scrollbar {
 				display: none !important;
 				width: 0 !important;
@@ -408,7 +450,6 @@
 				scrollbar-width: none !important;
 			}
 
-			/* Target the actual dropdown menu injected by Google if the above doesn't catch it */
 			.goog-te-combo {
 				scrollbar-width: none !important;
 				-ms-overflow-style: none !important;
@@ -418,21 +459,19 @@
 				display: none !important;
 			}
 
-			/* Remove the gold border and grey background on click */
 			#translator-anchor select:focus,
 			#translator-anchor select:active,
 			.goog-te-combo:focus,
 			.goog-te-combo:active {
-				outline: none !important; /* Removes the gold/blue border */
-				background-color: transparent !important; /* Prevents the grey box */
-				box-shadow: none !important; /* Removes any shadow/glow */
+				outline: none !important;
+				background-color: transparent !important;
+				box-shadow: none !important;
 			}
 
 			/* --- SEARCH RESULTS DROPDOWN STYLING --- */
 
-			/* The main tray already has the blur, now we style the links inside */
 			#searchResults a {
-				display: block; /* Makes the whole row clickable */
+				display: block;
 				padding: 15px 20px;
 				margin-bottom: 2px;
 				color: #ffffff !important;
@@ -446,22 +485,16 @@
 				transition: background 0.2s ease;
 			}
 
-			/* Hover/Active state to match the index feel */
 			#searchResults a:hover,
 			#searchResults a:active {
-				/* background: rgba(255, 255, 255, 0.2); */
-				color: #ff3399 !important; /* Site pink highlight on select */
+				color: #ff3399;
 			}
 
-			/* Remove border from the last item to keep it clean */
 			#searchResults a:last-child {
 				border-bottom: none;
 				margin-bottom: 0;
 			}
 
-			/* --- SEARCH BAR PINK PLACEHOLDER --- */
-
-			/* Standard */
 			#globalSearch::placeholder {
 				color: #ffffff !important;
 				opacity: 1; /* Firefox fix to ensure color shows at full strength */
@@ -482,20 +515,47 @@
 				grid-row: 4;
 				width: 90%;
 				max-width: 450px;
-				margin: 0 auto 4vh auto; /* 10vh margin at bottom keeps it off the footer */
+				margin: 0 auto 4vh auto;
 				display: flex;
 				flex-direction: column;
-				gap: 20px; /* Perfect uniform spacing between pills */
+				gap: 20px;
 				z-index: 100;
 			}
 
-			/* Reset specific margins on children since the stack handles it now */
 			#translator-anchor,
 			.landing-search-wrap,
 			.search-map-link {
 				width: 100% !important;
-				/* margin: 0 !important; */
 				padding: 0 !important;
+			}
+
+			/* THE HOVER STATE (For modern browsers) */
+			#translator-anchor select:hover {
+				background: #ff3399 !important;
+				border-color: #ffffff !important;
+			}
+
+			/* Hover Effect for all bars */
+			.landing-pill-style:hover select,
+			.landing-search-wrap:hover input,
+			.search-map-bar:hover {
+				background: #ff3399 !important;
+				color: #ffffff !important;
+				border-color: #ffffff;
+				box-shadow:
+					0 8px 15px rgba(255, 51, 153, 0.3),
+					inset 0 3px 5px rgba(255, 255, 255, 0.4);
+				transform: translateY(-2px);
+				transition: all 0.2s ease-out;
+			}
+
+			.landing-pill-style:active select,
+			.landing-search-wrap:active input,
+			.search-map-bar:active {
+				transform: translateY(1px); /* Pushes the button "into" the screen */
+				box-shadow:
+					0 2px 5px rgba(255, 51, 153, 0.2),
+					inset 0 2px 4px rgba(0, 0, 0, 0.3); /* Deepens the shadow inside */
 			}
 		</style>
 	</head>
