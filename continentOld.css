@@ -74,88 +74,97 @@ body::before {
 	}
 }
 
-/* ==========================================
-   FINAL CONSOLIDATED SEARCH & HUD
-   ========================================== */
-
-/* 1. THE SEARCH BAR WRAPPER */
+/* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
 	position: relative;
-	width: 90%;
-	max-width: 500px;
-	margin: 40px auto 20px auto; /* Breathing room under cards */
-	z-index: 100;
+	width: 100%;
+	z-index: 20;
 }
 
-/* 2. THE INPUT FIELD */
+/* THE INPUT */
 .landing-search-wrap input {
 	width: 100%;
-	padding: 14px 25px;
+	height: 50px;
+	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-	color: #24408e;
-	font-weight: 700;
-	font-size: 1rem;
+	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
+	background: rgba(10, 158, 238, 0.4);
+	border: 2px solid rgba(252, 248, 248, 0.5);
+	color: #ffffff;
+	font-size: 16px;
+	font-weight: 600;
 	outline: none;
-	transition: all 0.3s ease;
+	text-align: center;
+	box-sizing: border-box;
+	outline: none;
+	text-align: center;
+	box-sizing: border-box;
+	caret-color: #ffffff;
 }
 
-.landing-search-wrap input:focus {
-	background: rgba(255, 255, 255, 0.95);
-	border-color: #24408e;
+/* Ensure the placeholder isn't blurred or too faint */
+.landing-search-wrap input::placeholder {
+	color: #ffffff;
 }
 
-/* 3. THE RESULTS TRAY (The "Levitator") */
+/* --- DROPDOWN MENU--- */
 .search-results-floating {
 	position: absolute;
-	bottom: calc(100% + 15px); /* Glued 15px above the bar */
-	left: 50%;
-	transform: translateX(-50%);
+	top: 100%;
+	left: 0;
 	width: 100%;
-	max-width: 500px;
-	display: none; /* JS toggles to flex */
-	flex-direction: column-reverse; /* Stacks UPWARD */
-	gap: 10px;
-	z-index: 1000;
-	max-height: 60vh;
-	overflow-y: auto;
-	padding: 5px;
-	animation: slideUp 0.3s ease-out;
-}
+	display: none; /* Controlled by your JavaScript */
+	flex-direction: column;
+	z-index: 2000; /* High enough to float over everything */
 
-/* 4. THE INDIVIDUAL CARDS */
-.search-results-floating .country-card {
-	display: flex !important;
-	width: 100%;
-	justify-content: center;
-	align-items: center;
-	padding: 18px;
-	border-radius: 12px;
-	text-decoration: none;
-	font-weight: 700;
+	background: rgba(10, 158, 238, 0.25) !important;
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-	transition: transform 0.2s;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 15px;
+	padding: 10px;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+	overflow-y: auto;
+	overflow-x: hidden;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	margin-top: 10px;
+	max-height: 45vh;
 }
 
-/* Status Colors */
-.search-results-floating .red {
-	background: rgba(210, 0, 0, 0.9) !important;
-	color: white !important;
+/* --- THE INVISIBLE LIST ITEM --- */
+/* We target the card AND the status classes specifically inside the tray */
+.search-results-floating .country-card.search-item-card,
+.search-results-floating .country-card.red,
+.search-results-floating .country-card.green,
+.search-results-floating .country-card.warning,
+.search-results-floating .country-card.yellow {
+	/* 1. THE ERASER: This kills the blocky grid styles */
+	background: transparent !important;
+	min-height: auto;
+	border: none;
+	backdrop-filter: none;
+	-webkit-backdrop-filter: none;
+	margin: 0;
+
+	/* 2. THE STYLE: The name-only look */
+	padding: 12px 15px;
+	display: block;
+	color: #ffffff;
+	text-transform: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
-.search-results-floating .yellow {
-	background: rgba(255, 215, 0, 0.9) !important;
-	color: #24408e !important;
-}
-.search-results-floating .green {
-	background: rgba(40, 201, 123, 0.9) !important;
-	color: white !important;
+
+/* THE HOVER POP: The only time color should appear */
+.search-results-floating .country-card.search-item-card:hover {
+	transform: scale(1.02) translateY(-2px);
+	background: rgba(21, 139, 202, 0.3);
+	border-bottom: 1px solid #ffffff !important;
+	border-radius: 8px;
+	box-shadow: none !important;
+	border: 1px solid transparent !important;
+	z-index: 10;
 }
 
 /* 5. MOBILE & TABLET OVERRIDES (The Safety Ceiling) */

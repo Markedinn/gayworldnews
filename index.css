@@ -194,20 +194,41 @@ body::before {
 	-webkit-appearance: none;
 }
 
-/* --- DESKTOP DROPDOWN STYLING --- */
+/* --- DESKTOP TRANSLATOR DROPDOWN --- */
 
-#translator-anchor select option {
-	background: rgba(21, 139, 202) !important;
+/* 1. THE MAIN BOX */
+#translator-anchor select {
+	background: rgba(10, 158, 238, 0.4) !important; /* Matches Search Input */
 	color: #ffffff !important;
-	padding: 12px !important;
-	font-size: 1.15rem;
-	text-align: left;
-	text-transform: none;
+	border: 2px solid rgba(252, 248, 248, 0.5) !important;
+	border-radius: 50px !important;
+	padding: 8px 15px !important;
+	font-weight: 600;
+	outline: none;
+	cursor: pointer;
+	backdrop-filter: blur(15px);
+	-webkit-backdrop-filter: blur(15px);
 }
 
-/* Optional: If the flag or arrow looks too tight, adjust them slightly */
+/* 2. THE DROPDOWN LIST (The Options) */
+#translator-anchor select option {
+	/* We use the "Hover Blue" here for better legibility in the list */
+	background: rgb(21, 139, 202) !important;
+	color: #ffffff !important;
+	padding: 12px !important;
+	font-size: 1.1rem;
+}
+
+/* 3. THE HOVER STATE (For modern browsers) */
+#translator-anchor select:hover {
+	background: rgba(21, 139, 202, 0.6) !important;
+	border-color: #ffffff !important;
+}
+
+/* 4. FIXING THE ICON TIGHTNESS */
 #translator-anchor .gt_selector img {
 	margin-top: -2px !important;
+	margin-right: 8px !important;
 }
 
 /* 4. Hover Effect for all bars */
@@ -295,70 +316,69 @@ body::before {
 /* Ensure the placeholder isn't blurred or too faint */
 .landing-search-wrap input::placeholder {
 	color: #ffffff;
+	letter-spacing: 2px;
 }
 
-/* --- 1. THE DROPDOWN TRAY --- */
+/* --- DROPDOWN MENU--- */
 .search-results-floating {
 	position: absolute;
 	top: 100%;
 	left: 0;
 	width: 100%;
-	display: none;
+	display: none; /* Controlled by your JavaScript */
 	flex-direction: column;
-	z-index: 100;
-
-	background: rgba(255, 255, 255, 0.1);
+	z-index: 2000; /* High enough to float over everything */
+	background: rgba(10, 158, 238, 0.3) !important;
+	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	border-radius: 15px;
 	padding: 10px;
-	gap: 8px;
+	gap: 0; /* We use margins on the cards instead for that "Small Break" */
 
-	overflow-y: auto !important; /* The list scrolls INSIDE, not the page */
+	overflow-y: auto;
 	overflow-x: hidden;
-	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	margin-top: 10px;
-
-	max-height: 40vh;
-	padding-bottom: 20px;
+	max-height: 45vh;
 }
 
-/* THE CARDS INSIDE (Using Country.css shades with Bento transparency) */
-.search-results-floating .country-card {
-	width: 100% !important;
-	margin: 0 !important;
-	color: #ffffff !important;
-	border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-/* GREEN: Safe (#16d242) */
-.search-results-floating .country-card.green,
-.search-results-floating .country-card.safe {
-	background: rgba(22, 210, 66, 0.6) !important;
-}
-
-/* YELLOW: Warning (#ffc107) */
-.search-results-floating .country-card.yellow,
-.search-results-floating .country-card.warning {
-	background: rgba(255, 193, 7, 0.6) !important;
-	color: #ffffff !important;
-}
-
-/* RED: Danger (#e40303) */
+/* --- THE INVISIBLE LIST ITEM --- */
+.search-results-floating .country-card.search-item-card,
 .search-results-floating .country-card.red,
-.search-results-floating .country-card.danger {
-	background: rgba(228, 3, 3, 0.7) !important;
-	color: #ffffff !important;
+.search-results-floating .country-card.green,
+.search-results-floating .country-card.warning,
+.search-results-floating .country-card.yellow {
+	/* 1. THE ERASER: This kills the blocky grid styles */
+	background: transparent !important;
+	min-height: auto !important;
+	border: none !important;
+	backdrop-filter: none !important;
+	margin: 0 !important;
+
+	/* 2. THE STYLE: The name-only look */
+	padding: 12px 15px;
+	display: block;
+	color: #ffffff;
+	text-transform: none;
+
+	/* 3. THE SEPARATOR: The subtle line BEFORE hover */
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* ICE ADVISORY: Frost Blue (#00e5ff) */
-.search-results-floating .country-card.ice,
-.search-results-floating .country-card.advisory {
-	background: rgba(0, 229, 255, 0.6) !important;
-	border: 2px solid rgb(255, 255, 255);
-	color: #ffffff !important;
-	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
+/* THE HOVER POP: THIS IS WHERE THE WHITE LINE APPEARS */
+.search-results-floating .country-card.search-item-card:hover {
+	transform: scale(1.02) translateY(-2px);
+	background: rgba(21, 139, 202, 0.5) !important; /* The Blue Pop */
+
+	/* THE FIX: Solid white line replaces the ghost line */
+	border-bottom: 1px solid #ffffff !important;
+
+	border-radius: 8px;
+	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+	z-index: 10;
 }
 
 .search-map-link {
@@ -395,7 +415,9 @@ body::before {
 .search-map-text {
 	color: #ffffff;
 	font-size: 16px;
-	font-weight: 600; /* Synced to your search bar */
+	font-weight: 600;
+	letter-spacing: 1.5px;
+	font-weight: 700;
 	text-align: center;
 }
 
@@ -404,6 +426,7 @@ body::before {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	letter-spacing: 1px;
 }
 
 .three-search-container {
@@ -456,32 +479,6 @@ body::before {
 	position: relative;
 	z-index: 10;
 }
-
-/* --- JS CARD SKELETON --- */
-/* .country-card {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 70px;
-
-	
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 12px;
-
-	padding: 15px;
-	color: #ffffff;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	transition:
-		transform 0.2s ease,
-		filter 0.2s ease;
-	position: relative;
-	z-index: 11;
-} */
 
 /* Safety Colors for Country Cards */
 .country-card.red {

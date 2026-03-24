@@ -33,13 +33,13 @@
 			<div class="three-search-container">
 				<div id="translator-anchor"></div>
 				<div class="landing-search-wrap">
-					<input type="text" id="globalSearch" placeholder="FIND A COUNTRY" autocomplete="off" />
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
 				<a href="lgbt_risk_map.html" class="search-map-link">
 					<div class="search-map-bar">
 						<div class="search-map-content">
-							<span class="search-map-text">INTERATIVE MAP</span>
+							<span class="search-map-text">INTERACTIVE MAP</span>
 						</div>
 					</div>
 				</a>
@@ -197,12 +197,18 @@
 						Object.keys(globalData)
 							.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
 							.forEach((key) => {
+								// ... inside your forEach((key) => { ...
 								if (globalData[key].name.toLowerCase().startsWith(value)) {
 									const link = document.createElement("a");
 									link.href = `country.html?c=${key}`;
-									let s = (globalData[key].status || "warning").toLowerCase();
-									if (s === "danger" || s === "black") s = "red";
-									link.style = "padding:15px; color:white; text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.1); font-weight:bold;";
+
+									// 1. ADD THIS LINE so the CSS knows what to animate
+									link.classList.add("country-card");
+
+									// 2. CHANGE THIS LINE (Remove the inline padding/border strings)
+									// We only keep the color and weight so it stays visible
+									link.style = "color:white; text-decoration:none; font-weight:bold; display:block;";
+
 									link.innerHTML = globalData[key].name;
 									globalResults.appendChild(link);
 								}
