@@ -35,8 +35,8 @@ body::before {
 	height: 100%;
 	z-index: -1;
 	background-image: url("images/world_img.webp");
-	filter: brightness(0.8) contrast(1.6) saturate(1.6);
-	background-color: rgba(10, 158, 238, 0.3);
+	filter: brightness(0.9) contrast(1.5) saturate(1.8);
+	background-color: rgba(73, 73, 68, 0.141);
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -103,11 +103,12 @@ body::before {
 	background: #ffffff !important;
 	backdrop-filter: none !important;
 	-webkit-backdrop-filter: none !important;
-	border-left: 6px solid #f544b1;
+	border-top: 6px solid #f544b1;
+	/* border-right: 6px solid #f544b1; */
 	padding: 15px 20px;
 	border-radius: 12px;
 	text-align: center;
-	color: #24408e;
+	color: rgba(22, 7, 230);
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 	transition:
 		transform 0.2s ease,
@@ -160,7 +161,6 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	background: rgba(21, 139, 202, 0.7);
-
 	border: 2px solid rgba(252, 248, 248, 0.5);
 	border-radius: 50px;
 	color: #ffffff;
@@ -187,9 +187,9 @@ body::before {
 
 /* THE MAIN BOX */
 #translator-anchor select {
-	background: rgba(10, 158, 238, 0.4) !important;
+	background: rgba(22, 7, 230, 0.7) !important;
 	color: #ffffff !important;
-	border: 2px solid rgba(252, 248, 248, 0.5) !important;
+	border: 2px solid rgba(252, 248, 248, 0.747) !important;
 	border-radius: 50px !important;
 	padding: 8px 15px !important;
 	font-weight: 600;
@@ -201,7 +201,7 @@ body::before {
 
 /* THE DROPDOWN LIST (The Options) */
 #translator-anchor select option {
-	background: rgb(21, 139, 202) !important;
+	background: rgba(22, 7, 230, 0.993) !important;
 	color: #ffffff !important;
 	padding: 12px !important;
 	font-size: 1.1rem;
@@ -233,15 +233,6 @@ body::before {
 	transition: all 0.2s ease-out;
 }
 
-.landing-pill-style:active select,
-.landing-search-wrap:active input,
-.search-map-bar:active {
-	transform: translateY(1px); /* Pushes the button "into" the screen */
-	box-shadow:
-		0 2px 5px rgba(255, 51, 153, 0.2),
-		inset 0 2px 4px rgba(0, 0, 0, 0.3); /* Deepens the shadow inside */
-}
-
 .bento-card {
 	position: relative;
 	z-index: 10;
@@ -249,8 +240,9 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(21, 139, 202, 0.7);
+	background: rgba(22, 7, 230, 0.7);
 	border: 2px solid rgba(252, 248, 248, 0.5);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	border-radius: 12px;
 	padding: 20px;
 	color: #ffffff;
@@ -269,23 +261,31 @@ body::before {
 
 .bento-card:hover {
 	transform: translateY(-5px);
-	background: rgba(21, 139, 202, 0.9);
-	border: 2px solid rgb(252, 248, 248, 0.8);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	background: rgba(22, 7, 230, 0.9) !important;
+	border: 2px solid rgba(252, 248, 248, 0.8) !important;
+	box-shadow:
+		0 8px 15px rgb(35, 31, 247, 03),
+		inset 0 3px 5px rgba(19, 4, 233, 0.151);
+	transform: translateY(-2px);
+	transition: all 0.2s ease-out;
 }
 
 /* SPECIAL COLOR FOR BREAKING NEWS BENTO CARD */
 .bento-card.breaking-red {
-	background: rgba(228, 3, 3, 0.7) !important;
+	background: rgba(228, 3, 3, 0.808) !important;
 	border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
-	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.3); /* Soft red glow */
+	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281); /* Soft red glow */
 }
 
 .bento-card.breaking-red:hover {
 	background: rgba(228, 3, 3, 0.9) !important;
-	transform: translateY(-5px) scale(1.02);
-	box-shadow: 0 8px 20px rgba(228, 3, 3, 0.5);
+	box-shadow: 0 8px 20px rgba(228, 3, 3, 0.884);
 	border-color: #ffffff;
+	box-shadow:
+		0 8px 15px rgba(255, 51, 153, 0.5),
+		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+	transform: translateY(-2px);
+	transition: all 0.2s ease-out;
 }
 
 /* THE WRAPPER (The Anchor) */
@@ -301,10 +301,9 @@ body::before {
 	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	/* Apply this to .bento-card, .search-map-bar, and .landing-search-wrap input */
-	background: rgba(10, 158, 238, 0.4);
-	border: 2px solid rgba(252, 248, 248, 0.5);
-	color: #ffffff;
+	background: rgba(22, 7, 230, 0.7) !important;
+	color: #ffffff !important;
+	border: 2px solid rgba(252, 248, 248, 0.747) !important;
 	font-size: 16px;
 	font-weight: 600;
 	outline: none;
@@ -325,20 +324,20 @@ body::before {
 /* --- DROPDOWN MENU--- */
 .search-results-floating {
 	position: absolute;
-	top: 100%;
+	top: 80%;
+	top: auto !important;
 	left: 0;
 	width: 100%;
 	display: none; /* Controlled by your JavaScript */
 	flex-direction: column;
 	z-index: 2000; /* High enough to float over everything */
-	background: rgba(10, 158, 238, 0.3) !important;
+	background: rgba(22, 7, 230, 0.993) !important;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	border-radius: 15px;
 	padding: 10px;
-	gap: 0; /* We use margins on the cards instead for that "Small Break" */
-
+	gap: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -396,8 +395,8 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	background: rgba(21, 139, 202, 0.7);
-	border: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.7);
+	border: 2px solid rgba(252, 248, 248, 0.747);
 	padding: 12px 20px;
 	border-radius: 50px;
 	position: relative;
@@ -556,9 +555,9 @@ body::before {
 /* --- 7. FOOTER --- */
 .site-footer {
 	width: 100%;
-	background: rgba(21, 139, 202, 0.7);
-
-	border-top: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.7);
+	border: 2px solid rgba(252, 248, 248, 0.5);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin-top: auto;
 	z-index: 1 !important;
 	padding: 10px 0 5px 0; /* Tightened vertical padding */
@@ -772,8 +771,8 @@ body::before {
 		z-index: -1;
 		background: url("images/world_img_mobile.webp") center/cover no-repeat;
 		background-size: 100% 100%;
-		filter: brightness(0.9) contrast(1.6) saturate(1.6);
-		background-color: rgba(30, 45, 60, 0.5);
+		filter: brightness(0.7) contrast(1.6) saturate(1.8);
+		background-color: rgba(25, 1, 241, 0.281);
 		background-blend-mode: multiply;
 	}
 
@@ -852,8 +851,8 @@ body::before {
 		z-index: -1;
 		background: url("images/world_img_mobile.webp") center/cover no-repeat;
 		background-size: 100% 100%;
-		filter: brightness(0.9) contrast(1.6) saturate(1.6);
-		background-color: rgba(30, 45, 60, 0.5);
+		filter: brightness(0.7) contrast(1.6) saturate(1.8);
+		background-color: rgba(25, 1, 241, 0.281);
 		background-blend-mode: multiply;
 	}
 

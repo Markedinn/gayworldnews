@@ -35,7 +35,7 @@
 }
 
 #status-text {
-	color: #2979ff !important;
+	color: rgba(22, 7, 230);
 	font-weight: 800;
 	font-size: 0.95rem;
 	letter-spacing: 0.05rem;
@@ -89,7 +89,7 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	background: rgba(21, 139, 202, 0.7);
+	background: rgba(22, 7, 230, 0.3);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
 	border-radius: 12px;
@@ -140,16 +140,16 @@
 	color: #f6f7fa;
 	padding: 20px;
 	text-align: center;
-	background: rgba(21, 139, 202, 0.7);
+	background: rgba(22, 7, 230, 0.8);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .news-accordion:hover {
-	background: rgba(255, 255, 255, 0.3);
+	background: rgba(247, 244, 244, 0.3);
 }
 
 .news-accordion[open] {
-	background: rgba(255, 255, 255, 0.4);
+	background: rgba(22, 7, 230, 0.3);
 	transform: scale(1.01);
 }
 
@@ -206,7 +206,7 @@
 
 /* Individual Link Styling */
 .sources-list a {
-	background: rgba(6, 233, 74, 0.3);
+	background: rgba(6, 233, 74, 0.7);
 	padding: 6px 12px;
 	border-radius: 6px;
 	font-size: 1rem;

@@ -112,7 +112,7 @@ h2 {
 	position: absolute;
 	top: 10px;
 	right: 15px;
-	background: rgba(255, 255, 255, 0.15);
+	background: rgba(22, 7, 230, 0.3);
 	color: #ffffff;
 	font-size: 0.65rem;
 	font-weight: 800;
@@ -128,7 +128,7 @@ h2 {
 /* THE MAIN BOX: */
 .news-accordion,
 .manual-pinned {
-	background: rgba(21, 139, 202, 0.7) !important;
+	background: rgba(22, 7, 230, 0.3) !important;
 	backdrop-filter: blur(12px) saturate(120%);
 	-webkit-backdrop-filter: blur(12px) saturate(120%);
 
@@ -277,7 +277,7 @@ h2 {
 	display: inline-block !important;
 
 	/* 1. THE GLASS EFFECT */
-	background: rgba(4, 21, 252, 0.5);
+	background: rgba(22, 7, 230, 0.3);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 
@@ -305,7 +305,7 @@ h2 {
 /* THE HOVER: "Glowing Glass" */
 .news-accordion .news-content-expanded a:hover,
 .manual-pinned .news-content-expanded a:hover {
-	background: rgba(4, 21, 252, 0.9);
+	background: rgba(22, 7, 230, 0.3);
 	border-color: #ffffff !important;
 	color: #ffffff !important;
 	transform: translateY(-3px) scale(1.05);
@@ -344,8 +344,8 @@ h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(21, 139, 202, 0.7);
-	border: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.3);
+	border: 2px solid rgb(252, 248, 248);
 	border-radius: 50px;
 	color: #ffffff;
 	font-weight: 700;
@@ -473,8 +473,8 @@ h2 {
 /* --- DESKTOP DROPDOWN STYLING --- */
 
 #translator-anchor select option {
-	background: rgba(21, 139, 202) !important;
-	color: #ffffff !important;
+	background: rgb(19, 2, 248) !important;
+	color: #faf9f9 !important;
 	padding: 12px !important;
 	font-size: 1.15rem;
 	text-align: left;
@@ -499,7 +499,7 @@ h2 {
 	transition: all 0.2s ease-out;
 }
 
-.bento-card {
+/* .bento-card {
 	position: relative;
 	z-index: 10;
 	width: 100%;
@@ -529,7 +529,7 @@ h2 {
 	background: rgba(21, 139, 202, 0.9);
 	border: 2px solid rgb(252, 248, 248, 0.8);
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+} */
 
 /* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
@@ -544,8 +544,8 @@ h2 {
 	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(10, 158, 238, 0.4);
-	border: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.3);
+	border: 2px solid rgb(252, 248, 248);
 	color: #ffffff;
 	font-size: 16px;
 	font-weight: 600;
@@ -572,8 +572,7 @@ h2 {
 	display: none; /* Controlled by your JavaScript */
 	flex-direction: column;
 	z-index: 2000;
-
-	background: rgba(10, 158, 238, 0.3);
+	background: rgba(22, 7, 230, 0.3);
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
@@ -602,14 +601,14 @@ h2 {
 }
 
 /* THE MOVEMENT HOVER */
-.search-results-floating .country-card:hover {
+/* .search-results-floating .country-card:hover {
 	transform: scale(1.02) translateY(-2px);
 	background: rgba(21, 139, 202, 0.5);
 	border-bottom: 1px solid #ffffff;
 	border-radius: 8px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 	z-index: 10;
-}
+} */
 
 .search-map-link {
 	text-decoration: none;
@@ -623,9 +622,8 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	background: rgba(21, 139, 202, 0.7);
-
-	border: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.3);
+	border: 2px solid rgb(252, 248, 248);
 	padding: 12px 20px;
 	border-radius: 50px;
 	position: relative;

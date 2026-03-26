@@ -80,8 +80,8 @@
 				z-index: -1;
 				background: url("images/world_img_mobile.webp") center/cover no-repeat;
 				background-size: 100% 100%;
-				filter: brightness(0.7) contrast(1.6) saturate(1.6);
-				background-color: rgba(10, 158, 238, 0.3);
+				filter: brightness(0.9) contrast(1.5) saturate(1.8);
+				background-color: rgba(73, 73, 68, 0.141);
 				background-blend-mode: multiply;
 			}
 
@@ -183,8 +183,9 @@
 			.search-map-bar {
 				width: 100%;
 				height: 50px; /* Matched to translator height */
-				background: rgb(21, 139, 202, 0.7);
-				border: 2px solid rgba(255, 255, 255, 0.5);
+				background: rgba(22, 7, 230, 0.7) !important;
+				color: #ffffff !important;
+				border: 2px solid rgba(252, 248, 248, 0.747) !important;
 				border-radius: 50px;
 				text-align: center;
 				font-size: 16px;
@@ -222,7 +223,7 @@
 				display: none; /* Controlled by your JavaScript */
 				flex-direction: column;
 				z-index: 2000; /* High enough to float over everything */
-				background: rgba(10, 158, 238, 0.3) !important;
+				background: rgba(22, 7, 230, 0.993);
 				border: 1px solid rgba(255, 255, 255, 0.1);
 				backdrop-filter: blur(15px);
 				-webkit-backdrop-filter: blur(15px);
@@ -265,7 +266,8 @@
 			/* THE HOVER POP: THIS IS WHERE THE WHITE LINE APPEARS */
 			.search-results-floating .country-card.search-item-card:hover {
 				transform: scale(1.02) translateY(-2px);
-				background: rgba(21, 139, 202, 0.5) !important; /* The Blue Pop */
+				background: rgba(22, 7, 230, 0.5) !important;
+				color: #ffffff !important;
 
 				/* THE FIX: Solid white line replaces the ghost line */
 				border-bottom: 1px solid #ffffff !important;
@@ -317,8 +319,9 @@
 				margin-top: 60px;
 			}
 			.bento-card {
-				background: rgb(21, 139, 202, 0.7);
-				border: 2px solid rgba(255, 255, 255, 0.5) !important;
+				background: rgba(22, 7, 230, 0.7);
+				border: 2px solid rgba(252, 248, 248, 0.5);
+				transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 				padding: 20px;
 				color: white;
 				text-decoration: none;
@@ -329,7 +332,9 @@
 				text-transform: uppercase;
 			}
 			.breaking-card {
-				background: rgba(228, 3, 3, 0.8);
+				background: rgba(228, 3, 3, 0.808) !important;
+				border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
+				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281); /* Soft red glow */
 			}
 
 			/* --- 5. EXIT AND FOOTER --- */
@@ -383,8 +388,9 @@
 				height: 50px;
 				margin: 0 auto;
 				position: relative;
-				background: rgb(21, 139, 202, 0.7);
-				border: 2px solid rgba(255, 255, 255, 0.5);
+				background: rgba(22, 7, 230, 0.7) !important;
+				color: #ffffff !important;
+				border: 2px solid rgba(252, 248, 248, 0.747) !important;
 				border-radius: 50px;
 				display: flex;
 				align-items: center;
@@ -434,7 +440,7 @@
 			}
 
 			#translator-anchor select option {
-				background: rgba(21, 139, 202, 1.9) !important;
+				background: rgba(22, 7, 230, 0.993) !important;
 				color: #ffffff !important;
 				text-align: left;
 				padding: 12px;
@@ -474,13 +480,13 @@
 				display: block;
 				padding: 15px 20px;
 				margin-bottom: 2px;
-				color: #ffffff !important;
 				text-decoration: none !important;
 				font-weight: 700;
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 1px;
-				background-color: rgba(33, 103, 140, 0.9);
+				background: rgba(22, 7, 230, 0.5) !important;
+				color: #ffffff !important;
 				border-radius: 12.5px;
 				transition: background 0.2s ease;
 			}
@@ -548,22 +554,13 @@
 				transform: translateY(-2px);
 				transition: all 0.2s ease-out;
 			}
-
-			.landing-pill-style:active select,
-			.landing-search-wrap:active input,
-			.search-map-bar:active {
-				transform: translateY(1px); /* Pushes the button "into" the screen */
-				box-shadow:
-					0 2px 5px rgba(255, 51, 153, 0.2),
-					inset 0 2px 4px rgba(0, 0, 0, 0.3); /* Deepens the shadow inside */
-			}
 		</style>
 	</head>
 
 	<body>
 		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
 		<div id="sideMenu" class="side-menu">
-			<div class="close-icon" onclick="toggleMenu()" aria-label="Close Menu">&times;</div>
+			<div class="close-icon" onclick="toggleMenu()">&times;</div>
 
 			<div class="bento-grid">
 				<a href="breaking.html" class="bento-card breaking-card">Breaking News</a>
