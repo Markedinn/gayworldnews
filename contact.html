@@ -24,7 +24,7 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=6" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=2.3" />
+		<link rel="stylesheet" href="index.css?v=2.4" />
 
 		<style>
 			/* 1. THE MASTER LAYOUT */
@@ -62,7 +62,7 @@
 			}
 
 			.glass-mission-card {
-				background: rgba(22, 7, 230, 0.7);
+				background: rgba(22, 7, 230, 0.8);
 				border: 2px solid rgba(255, 255, 255, 0.2);
 				border-radius: 20px;
 				padding: 30px;
@@ -71,6 +71,7 @@
 				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 				max-height: 60vh;
 				overflow-y: auto;
+				text-align: center;
 			}
 
 			/* 3. THE FORM ELEMENTS (Clean & Modern) */
@@ -78,6 +79,7 @@
 				display: flex;
 				flex-direction: column;
 				gap: 15px;
+				text-align: center;
 			}
 
 			.form-group label {
@@ -234,7 +236,7 @@
 
 			<div class="glass-mission-card">
 				<h1 class="main-title" style="margin-bottom: 20px">Write To Us</h1>
-				<p style="color: white; margin-bottom: 20px">We'd love to hear from you.</p>
+				<p style="color: white; margin-bottom: 20px">Your opinion matters.</p>
 
 				<div id="form-status-success" class="status-msg success-msg" style="display: none"><i class="fas fa-check-circle"></i> Message sent successfully!</div>
 
@@ -248,7 +250,7 @@
 
 					<div class="form-group">
 						<label>Message</label>
-						<textarea name="message" rows="4" required placeholder="Message Example: Hi! I have important information about a new development in..."></textarea>
+						<textarea name="message" rows="4" required placeholder="Hi! I have an update for you..."></textarea>
 					</div>
 
 					<button type="submit" class="submit-btn">SEND MESSAGE</button>

@@ -187,7 +187,7 @@ body::before {
 
 /* THE MAIN BOX */
 #translator-anchor select {
-	background: rgba(22, 7, 230, 0.7) !important;
+	background: rgba(22, 7, 230, 0.9) !important;
 	color: #ffffff !important;
 	border: 2px solid rgba(252, 248, 248, 0.747) !important;
 	border-radius: 50px !important;
@@ -240,7 +240,7 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(22, 7, 230, 0.7);
+	background: rgba(22, 7, 230, 0.9);
 	border: 2px solid rgba(252, 248, 248, 0.5);
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	border-radius: 12px;
@@ -261,7 +261,7 @@ body::before {
 
 .bento-card:hover {
 	transform: translateY(-5px);
-	background: rgba(22, 7, 230, 0.9) !important;
+	background: rgba(22, 7, 230, 0.99) !important;
 	border: 2px solid rgba(252, 248, 248, 0.8) !important;
 	box-shadow:
 		0 8px 15px rgb(35, 31, 247, 03),
@@ -272,9 +272,9 @@ body::before {
 
 /* SPECIAL COLOR FOR BREAKING NEWS BENTO CARD */
 .bento-card.breaking-red {
-	background: rgba(228, 3, 3, 0.808) !important;
-	border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
-	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281); /* Soft red glow */
+	background: rgba(228, 3, 3, 0.99) !important;
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281);
 }
 
 .bento-card.breaking-red:hover {
@@ -301,7 +301,7 @@ body::before {
 	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(22, 7, 230, 0.7) !important;
+	background: rgba(22, 7, 230, 0.99) !important;
 	color: #ffffff !important;
 	border: 2px solid rgba(252, 248, 248, 0.747) !important;
 	font-size: 16px;
@@ -373,7 +373,7 @@ body::before {
 /* THE HOVER POP: THIS IS WHERE THE WHITE LINE APPEARS */
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-2px);
-	background: rgba(21, 139, 202, 0.5) !important; /* The Blue Pop */
+	background: rgba(22, 7, 230, 0.7) !important; /* The Blue Pop */
 
 	/* THE FIX: Solid white line replaces the ghost line */
 	border-bottom: 1px solid #ffffff !important;
@@ -395,7 +395,7 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	background: rgba(22, 7, 230, 0.7);
+	background: rgba(22, 7, 230, 0.99);
 	border: 2px solid rgba(252, 248, 248, 0.747);
 	padding: 12px 20px;
 	border-radius: 50px;
@@ -539,7 +539,9 @@ body::before {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	background: rgba(228, 3, 3, 0.7);
+	background: rgba(228, 3, 3, 0.99);
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-top: none;
 	backdrop-filter: blur(15px);
 	color: white;
 	padding: 10px 20px;
@@ -555,21 +557,21 @@ body::before {
 /* --- 7. FOOTER --- */
 .site-footer {
 	width: 100%;
-	background: rgba(22, 7, 230, 0.7);
-	border: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.8);
+	border-top: 2px solid rgba(252, 248, 248, 0.5);
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin-top: auto;
 	z-index: 1 !important;
-	padding: 10px 0 5px 0; /* Tightened vertical padding */
+	padding: 10px 0 10px 0;
 }
 
 .footer-container {
 	max-width: 900px;
 	margin: 0 auto;
 	display: flex;
-	justify-content: center; /* Changed from space-around for a tighter cluster */
+	justify-content: center;
 	align-items: center;
-	gap: 20px; /* Controlled space between pills and text */
+	gap: 20px;
 	flex-wrap: wrap;
 }
 
@@ -578,20 +580,18 @@ body::before {
 	color: #24408e;
 	font-weight: 800;
 	font-size: 0.8rem;
-	/* Removed extra margins/padding here to keep it short */
 }
 
 .social-pill span {
-	font-size: 0.75rem; /* Scaled down to match shorter height */
+	font-size: 0.75rem;
 	font-weight: 600;
 	color: white;
-	/* margin-left: 6px; */
 	line-height: 1;
 }
 
 /* Brand Colors */
 .facebook {
-	background-color: #1877f2;
+	background-color: #075dfdfb;
 }
 .x-twitter {
 	background-color: #000000;
@@ -608,43 +608,39 @@ body::before {
 
 .footer-bottom-bar {
 	text-align: center;
-	margin-top: 8px; /* Reduced from 15px */
+	margin-top: 5px;
 	border-top: 1px solid rgba(36, 64, 142, 0.1);
-	padding-top: 5px; /* Reduced from 10px */
+	padding-top: 5px;
 }
 
 .footer-copyright {
 	color: rgba(249, 249, 250);
 	font-size: 0.65rem;
 	font-weight: 600;
-	margin: 0; /* Ensure no default paragraph margins */
+	margin: 0;
 }
 
-/* Neutral style for About and Connect */
 .neutral {
-	background-color: rgba(0, 230, 119, 0.616) !important;
-	border: 2px solid rgba(255, 255, 255, 0.6) !important;
+	background-color: rgba(0, 230, 0, 0.8);
+	border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .neutral span,
 .neutral i {
-	color: #faf2f2 !important; /* Darker text for contrast */
+	color: #faf2f2 !important;
 }
 
-/* --- 7. NEUTRAL PILLS (About / Connect) HOVER --- */
 .neutral:hover {
 	transform: translateY(-2px);
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 	filter: brightness(1.1);
 }
 
-/* Make the icon and text inside shift slightly to feel "alive" */
 .neutral:hover i,
 .neutral:hover span {
-	color: #ffffff; /* Slightly deeper navy for contrast */
+	color: #ffffff;
 }
 
-/* Adjusting the icon spacing for the info and envelope icons */
 .social-pill i {
 	margin: 0;
 	display: flex;
@@ -683,7 +679,7 @@ body::before {
 
 /* Brand Colors */
 .facebook {
-	background-color: #1877f2;
+	background-color: #0973fd;
 	/* Extra insurance for Facebook blue on blue maps */
 	border-color: rgba(255, 255, 255, 0.6);
 }

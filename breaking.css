@@ -121,14 +121,14 @@ h2 {
 	letter-spacing: 0.05rem;
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	z-index: 5;
-	pointer-events: none; /* User can still click the accordion through it */
+	pointer-events: none;
 	text-transform: uppercase;
 }
 
 /* THE MAIN BOX: */
 .news-accordion,
 .manual-pinned {
-	background: rgba(22, 7, 230, 0.3) !important;
+	background: rgba(22, 7, 230, 0.99) !important;
 	backdrop-filter: blur(12px) saturate(120%);
 	-webkit-backdrop-filter: blur(12px) saturate(120%);
 
@@ -186,7 +186,7 @@ h2 {
 .news-accordion summary::after {
 	content: "▼";
 	display: block;
-	color: #ff3399; /* Your vibrant pink */
+	color: #ff3399;
 	font-size: 1.2rem;
 	margin: 15px auto 0 auto;
 }
@@ -195,7 +195,7 @@ h2 {
 .news-accordion[open] summary::after {
 	opacity: 0;
 	height: 0;
-	margin-top: 0;
+	margin-top: 15px;
 	transform: scale(0); /* Shrinks it to nothing */
 	pointer-events: none;
 	overflow: hidden;
@@ -277,7 +277,7 @@ h2 {
 	display: inline-block !important;
 
 	/* 1. THE GLASS EFFECT */
-	background: rgba(22, 7, 230, 0.3);
+	background: rgba(22, 7, 230, 0.99);
 	backdrop-filter: blur(8px);
 	-webkit-backdrop-filter: blur(8px);
 
@@ -305,7 +305,7 @@ h2 {
 /* THE HOVER: "Glowing Glass" */
 .news-accordion .news-content-expanded a:hover,
 .manual-pinned .news-content-expanded a:hover {
-	background: rgba(22, 7, 230, 0.3);
+	background: rgba(22, 7, 230, 0.99);
 	border-color: #ffffff !important;
 	color: #ffffff !important;
 	transform: translateY(-3px) scale(1.05);
@@ -344,7 +344,7 @@ h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(22, 7, 230, 0.3);
+	background: rgba(22, 7, 230, 0.99);
 	border: 2px solid rgb(252, 248, 248);
 	border-radius: 50px;
 	color: #ffffff;
@@ -499,38 +499,6 @@ h2 {
 	transition: all 0.2s ease-out;
 }
 
-/* .bento-card {
-	position: relative;
-	z-index: 10;
-	width: 100%;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	background: rgba(21, 139, 202, 0.7);
-	border: 2px solid rgba(252, 248, 248, 0.5);
-	border-radius: 12px;
-	padding: 20px;
-	color: #ffffff;
-	font-weight: 700;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	text-decoration: none;
-	transition: 0.3s ease;
-	cursor: pointer;
-	appearance: none;
-	font-size: 1rem;
-	font-family: inherit;
-	line-height: normal;
-	-webkit-appearance: none;
-}
-
-.bento-card:hover {
-	transform: translateY(-5px);
-	background: rgba(21, 139, 202, 0.9);
-	border: 2px solid rgb(252, 248, 248, 0.8);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-} */
-
 /* THE WRAPPER (The Anchor) */
 .landing-search-wrap {
 	position: relative;
@@ -544,7 +512,7 @@ h2 {
 	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(22, 7, 230, 0.3);
+	background: rgba(22, 7, 230, 0.99);
 	border: 2px solid rgb(252, 248, 248);
 	color: #ffffff;
 	font-size: 16px;
@@ -600,16 +568,6 @@ h2 {
 	min-height: auto;
 }
 
-/* THE MOVEMENT HOVER */
-/* .search-results-floating .country-card:hover {
-	transform: scale(1.02) translateY(-2px);
-	background: rgba(21, 139, 202, 0.5);
-	border-bottom: 1px solid #ffffff;
-	border-radius: 8px;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-	z-index: 10;
-} */
-
 .search-map-link {
 	text-decoration: none;
 	display: block;
@@ -622,7 +580,7 @@ h2 {
 	align-items: center;
 	justify-content: center;
 	height: 50px;
-	background: rgba(22, 7, 230, 0.3);
+	background: rgba(22, 7, 230, 0.99);
 	border: 2px solid rgb(252, 248, 248);
 	padding: 12px 20px;
 	border-radius: 50px;
@@ -686,7 +644,9 @@ h2 {
 	top: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	background: rgba(228, 3, 3, 0.7);
+	background: rgba(228, 3, 3, 0.99);
+	border: 2px solid rgba(255, 255, 255, 0.6);
+	border-top: none;
 	backdrop-filter: blur(15px);
 	color: white;
 	padding: 10px 20px;
