@@ -481,13 +481,16 @@ body::before {
 
 /* Safety Colors for Country Cards */
 .country-card.red {
-	background: rgba(255, 23, 69, 0.74);
+	background: rgba(255, 23, 69, 0.89);
+	letter-spacing: 1.3px;
 } /* Danger */
 .country-card.yellow {
-	background: rgba(252, 235, 3, 0.7);
+	background: rgba(252, 235, 3, 0.89);
+	letter-spacing: 1.4px;
 } /* Warning */
 .country-card.green {
-	background: rgba(0, 230, 119, 0.616);
+	background: rgba(0, 230, 119, 0.89);
+	letter-spacing: 1.3px;
 } /* Safe */
 /* .country-card.orange {
 	background: rgba(255, 145, 0, 0.6);
@@ -496,12 +499,8 @@ body::before {
 /* --- NEW GLOBAL ICE ADVISORY --- */
 .country-card.ice,
 .country-card.advisory {
-	background: rgba(0, 229, 255, 0.6) !important;
-	border: 1px solid rgba(255, 255, 255, 0.4);
-	color: #ffffff !important;
-	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	background: rgba(0, 229, 255, 0.89) !important;
+	letter-spacing: 1.3px;
 }
 
 .country-card {
@@ -511,11 +510,11 @@ body::before {
 	min-height: 70px;
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	border: 2px solid rgb(252, 248, 248, 0.5);
+	border: 2px solid rgb(252, 248, 248, 0.7);
 	border-radius: 12px;
 	padding: 15px;
-	color: #ffffff;
-	font-weight: 700;
+	color: rgba(22, 7, 230, 0.8);
+	font-weight: 800;
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
@@ -527,10 +526,9 @@ body::before {
 }
 
 .country-card:hover {
-	border: 3px solid rgba(252, 248, 248, 0.5);
-	transform: translateY(-3px);
-	filter: brightness(1.2);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: 2px solid rgba(255, 255, 255, 5); /* Pure white border on hover */
+	transform: translateY(-5px); /* Slightly more movement */
+	box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Deepen shadow as it "lifts" */
 }
 
 /* --- 6. QUICK EXIT --- */
@@ -597,7 +595,7 @@ body::before {
 	background-color: #000000;
 }
 .youtube {
-	background-color: #ff0000;
+	background-color: rgba(255, 23, 69, 0.89);
 }
 
 .social-pill:hover {
@@ -679,7 +677,7 @@ body::before {
 
 /* Brand Colors */
 .facebook {
-	background-color: #0973fd;
+	background-color: rgba(20, 91, 245, 0.8);
 	/* Extra insurance for Facebook blue on blue maps */
 	border-color: rgba(255, 255, 255, 0.6);
 }

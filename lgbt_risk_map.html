@@ -20,10 +20,8 @@
 		<meta name="twitter:description" content="Explore the official GWN interactive map for LGBTQ+ Legal Travel Health and Safety." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.6" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.7" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-
-		<!-- <link rel="stylesheet" href="index.css?v=1.8?v=mobile6" /> -->
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -32,22 +30,34 @@
 			window.globalData = {};
 		</script>
 
-		<script src="country-info/country-files/africa-data.js?v=1"></script>
-		<script src="country-info/country-files/americas-data.js?v=1"></script>
-		<script src="country-info/country-files/asia-data.js?v=1"></script>
-		<script src="country-info/country-files/europe-data.js?v=1"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1"></script>
+		<script src="country-info/country-files/africa-data.js" defer></script>
+		<script src="country-info/country-files/asia-data.js" defer></script>
+		<script src="country-info/country-files/europe-data.js" defer></script>
+		<script src="country-info/country-files/americas-data.js" defer></script>
+		<script src="country-info/country-files/oceania-data.js" defer></script>
 
 		<style>
 			html,
-			body,
-			#map {
+			body {
 				margin: 0;
 				padding: 0;
 				width: 100%;
 				height: 100%;
-				background: rgba(22, 7, 230);
+				overflow: hidden;
 				font-family: "Helvetica Neue", Arial, sans-serif;
+			}
+
+			#map {
+				position: fixed !important; /* Changed from absolute to fixed */
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: 100vw;
+				height: 125vh !important;
+				height: 125dvh !important;
+				background: #1607e6; /* Match your deep blue */
+				z-index: 1;
 			}
 
 			#hoverBox {
@@ -129,11 +139,6 @@
 				display: none;
 			}
 
-			#legendArrow {
-				font-size: 12px;
-				transition: transform 0.3s ease;
-			}
-
 			.legend-collapsed #legendArrow {
 				transform: rotate(-90deg); /* Points arrow sideways when closed */
 			}
@@ -156,16 +161,6 @@
 				user-select: none; /* Prevents the arrow itself from being highlighted/selected */
 			}
 
-			/* Remove the 'flashing' underline/focus ring on click */
-			#legendHeader {
-				outline: none !important;
-				-webkit-tap-highlight-color: transparent; /* Removes the blue flash on mobile tap */
-			}
-
-			/* For accessibility, we keep the outline only for keyboard users */
-			#legendHeader:focus-visible {
-				outline: 2px solid; /* Change arrow color to Pink */
-			}
 			#legendArrow {
 				font-size: 14px;
 				color: #ff3399; /* <--- Replace with your exact Pink hex code */
@@ -188,12 +183,6 @@
 			#legend:not(.legend-collapsed) #legendContent {
 				display: block;
 				max-height: 500px; /* Or whatever height fits your content */
-			}
-
-			/* IMPORTANT: Shrink the map so it doesn't try to go under the footer */
-			#map {
-				height: calc(100vh - 60px) !important;
-				width: 100%;
 			}
 
 			/* --- UNIVERSAL FOOTER FIX --- */
@@ -238,7 +227,7 @@
 				left: 0;
 				width: 100%;
 				height: 60px;
-				background: rgba(22, 7, 230, 0.8) !important;
+				background: rgba(22, 7, 230, 0.99);
 				z-index: 9999;
 				display: flex;
 				align-items: center;
@@ -306,7 +295,7 @@
 					<strong>Red:&nbsp;</strong> Danger / Persecution
 				</div>
 				<div class="legend-item">
-					<div class="color-box" style="background: #a5dff9"></div>
+					<div class="color-box" style="background: #00e5ff"></div>
 					<strong>Ice:&nbsp;</strong> International Territory
 				</div>
 			</div>
@@ -341,9 +330,9 @@
 			console.log("Data Status:", window.globalData ? "Loaded" : "Missing!");
 
 			// 2. Fetch the world shapes
-			fetch("https://raw.githubusercontent.com/datasets/geo-countries/master/data/countries.geojson")
+			fetch("world.geojson.txt")
 				.then((res) => {
-					if (!res.ok) throw new Error("Network block! Are you running this locally?");
+					if (!res.ok) throw new Error("File not found!");
 					return res.json();
 				})
 				.then((geo) => {

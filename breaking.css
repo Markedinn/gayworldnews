@@ -662,9 +662,9 @@ h2 {
 /* --- 7. FOOTER --- */
 .site-footer {
 	width: 100%;
-	background: rgba(21, 139, 202, 0.7);
-
+	background: rgba(22, 7, 230, 0.8);
 	border-top: 2px solid rgba(252, 248, 248, 0.5);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin-top: auto;
 	z-index: 1 !important;
 	padding: 10px 0 5px 0;
@@ -769,14 +769,13 @@ h2 {
 
 /* Brand Colors */
 .facebook {
-	background-color: #1877f2;
-	border-color: rgba(255, 255, 255, 0.6);
+	background-color: #075dfdfb;
 }
 .x-twitter {
 	background-color: #000000;
 }
 .youtube {
-	background-color: #ff0000;
+	background-color: rgba(255, 23, 69, 0.89);
 }
 
 /* Hover Effects */
