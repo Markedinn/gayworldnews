@@ -23,8 +23,8 @@
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
 		<meta name="twitter:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.2" />
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=2.2" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.3" />
+		<link rel="apple-touch-icon" href="images/favicon.webp?v=2.3" />
 
 		<script>
 			window.globalData = {};
@@ -520,6 +520,33 @@
 			.search-map-link {
 				width: 100% !important;
 				padding: 0 !important;
+			}
+
+			@media (max-height: 500px) and (orientation: landscape) {
+				.side-menu {
+					/* 1. Use padding instead of margin to create the gap */
+					padding-top: 120px;
+
+					/* 2. Ensure it starts from the top, not the center */
+					display: block;
+
+					/* 3. Keep your original background and blur */
+					background: rgba(22, 70, 96, 0.4);
+				}
+
+				.close-icon {
+					/* 4. Pin the X so it stays in that 120px padded 'Safe Zone' */
+					position: absolute;
+					top: 15px;
+					right: 20px;
+					font-size: 55px;
+				}
+
+				.bento-grid {
+					/* 5. Reset the grid margin since the parent's padding is doing the work */
+					margin-top: 0;
+					padding-bottom: 40px;
+				}
 			}
 		</style>
 	</head>
