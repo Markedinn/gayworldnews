@@ -68,26 +68,16 @@ body::before {
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: bold;
-	margin-top: 0vh;
+	margin-top: 3vh;
 }
 
 .subtitle {
 	color: #ffffff;
 	font-weight: 700;
-	margin: 10px auto 10px auto;
+	margin: 10px auto 15px auto;
 	text-align: center;
 	font-size: 1.4rem;
 	line-height: 1.4;
-}
-
-.rainbow-line {
-	height: 3px;
-	width: 100%;
-	max-width: 600px;
-	margin: 15px auto;
-	border-radius: 2px;
-	background: linear-gradient(90deg, #ff3b3b, #ff8800, #ffee00, #33ff33, #0088ff, #9933ff);
-	opacity: 0.8;
 }
 
 /* --- U=U BANNER --- */
@@ -375,7 +365,7 @@ body::before {
 .bento-card.breaking-red:hover {
 	background: rgba(228, 3, 3, 0.9);
 	border-color: #ffffff;
-	box-shadow: 0 8px 25px rgba(228, 3, 3, 0.6);
+	box-shadow: 0 8px 20px rgba(228, 3, 3, 0.6);
 }
 
 /* Country Cards */
