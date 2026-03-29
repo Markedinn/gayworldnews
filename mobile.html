@@ -23,8 +23,8 @@
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
 		<meta name="twitter:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.9" />
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=1.9" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.0" />
+		<link rel="apple-touch-icon" href="images/favicon.webp?v=2.0" />
 
 		<script>
 			window.globalData = {};
@@ -37,7 +37,7 @@
 		<script src="index.js" defer></script>
 
 		<style>
-			/* --- 1. THE RIGID MASTER GRID --- */
+			/* --- THE RIGID MASTER GRID --- */
 
 			*,
 			*::before,
@@ -62,9 +62,8 @@
 				padding: 0;
 				min-height: 100dvh;
 				display: grid;
-				/* R1: Burger | R2: Title/Sub | R3: Control Stack | R4: Footer */
 				grid-template-rows: auto auto 1fr auto auto;
-				gap: 0; /* We will use margins for better control */
+				gap: 0;
 				font-family: "Helvetica Neue", Arial, sans-serif;
 				overflow-x: hidden !important;
 				width: 100%;
@@ -86,7 +85,7 @@
 				background-blend-mode: multiply;
 			}
 
-			/* --- 2. HEADER & FURNITURE --- */
+			/* --- HEADER & FURNITURE --- */
 			.main-header {
 				grid-row: 2;
 				display: flex;
@@ -94,20 +93,20 @@
 				align-items: center;
 				z-index: 10;
 				margin-top: 5vh;
-				align-self: center; /* Centers the title unit vertically in the 1fr space */
+				align-self: center;
 			}
 
 			.menu-toggle {
 				grid-row: 1;
-				justify-self: end; /* Stays on the right */
-				align-self: start; /* Starts from the top of the row... */
-				padding-top: 10vh; /* ...but is pushed down by exactly 25% of the screen */
+				justify-self: end;
+				align-self: start;
+				padding-top: 10vh;
 				margin-right: 5%;
 				display: flex;
 				flex-direction: column;
 				gap: 7px;
 				cursor: pointer;
-				padding-bottom: 10px; /* Some breathing room before the title starts */
+				padding-bottom: 10px;
 			}
 
 			.menu-toggle {
@@ -127,7 +126,7 @@
 				text-align: center;
 				color: white;
 				text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-				font-size: clamp(2.5rem, 12vw, 4.5rem); /* Slightly larger for impact */
+				font-size: clamp(2.5rem, 12vw, 4.5rem);
 				font-weight: bold;
 				margin: 0;
 			}
@@ -177,12 +176,12 @@
 				appearance: none;
 			}
 
-			/* --- 3. UNIFIED GLASS PILLS (Search & Map) --- */
+			/* --- UNIFIED GLASS PILLS (Search & Map) --- */
 
 			#globalSearch,
 			.search-map-bar {
 				width: 100%;
-				height: 50px; /* Matched to translator height */
+				height: 50px;
 				background: rgba(22, 7, 230, 0.99) !important;
 				color: #ffffff !important;
 				border: 2px solid rgba(252, 248, 248, 0.747) !important;
@@ -205,32 +204,24 @@
 					border-color 0.3s ease;
 			}
 
-			/* Hover effect for the Map button and Search focus */
-			#globalSearch:focus,
-			.search-map-link:hover .search-map-bar {
-				background: rgba(21, 139, 202, 0.7) !important;
-				border-color: rgba(255, 255, 255, 0.8) !important;
-				outline: none;
-			}
-
 			/* --- DROPDOWN MENU--- */
+
 			.search-results-floating {
 				position: absolute;
 				bottom: 110%;
 				top: auto !important;
 				left: 0;
 				width: 100%;
-				display: none; /* Controlled by your JavaScript */
+				display: none;
 				flex-direction: column;
-				z-index: 2000; /* High enough to float over everything */
+				z-index: 2000;
 				background: rgba(22, 7, 230, 0.993);
 				border: 1px solid rgba(255, 255, 255, 0.1);
 				backdrop-filter: blur(15px);
 				-webkit-backdrop-filter: blur(15px);
-				border-radius: 15px;
+				border-radius: 20px;
 				padding: 10px;
-				gap: 0; /* We use margins on the cards instead for that "Small Break" */
-
+				gap: 0;
 				overflow-y: auto;
 				overflow-x: hidden;
 				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -240,41 +231,23 @@
 			}
 
 			/* --- THE INVISIBLE LIST ITEM --- */
+
 			.search-results-floating .country-card.search-item-card,
 			.search-results-floating .country-card.red,
 			.search-results-floating .country-card.green,
 			.search-results-floating .country-card.warning,
 			.search-results-floating .country-card.yellow {
-				/* 1. THE ERASER: This kills the blocky grid styles */
 				background: transparent !important;
 				min-height: auto !important;
 				border: none !important;
 				backdrop-filter: none !important;
 				margin: 0 !important;
-
-				/* 2. THE STYLE: The name-only look */
 				padding: 12px 15px;
 				display: block;
 				color: #ffffff;
 				text-transform: none;
-
-				/* 3. THE SEPARATOR: The subtle line BEFORE hover */
 				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
 				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			}
-
-			/* THE HOVER POP: THIS IS WHERE THE WHITE LINE APPEARS */
-			.search-results-floating .country-card.search-item-card:hover {
-				transform: scale(1.02) translateY(-2px);
-				background: rgba(22, 7, 230, 0.5) !important;
-				color: #ffffff !important;
-
-				/* THE FIX: Solid white line replaces the ghost line */
-				border-bottom: 1px solid #ffffff !important;
-
-				border-radius: 8px;
-				box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
-				z-index: 10;
 			}
 
 			.side-menu {
@@ -288,7 +261,7 @@
 				-webkit-backdrop-filter: blur(12px) saturate(150%);
 				border-left: 1px solid rgba(255, 255, 255, 0.2);
 				z-index: 3000;
-				transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother slide effect */
+				transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -333,8 +306,8 @@
 			}
 			.breaking-card {
 				background: rgba(228, 3, 3, 0.99) !important;
-				border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
-				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281); /* Soft red glow */
+				border: 2px solid rgba(255, 255, 255, 0.6);
+				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281);
 			}
 
 			.bento-card:active {
@@ -344,11 +317,11 @@
 
 			.contact-card {
 				background-color: rgba(0, 230, 0, 0.8);
-				border: 2px solid rgba(255, 255, 255, 0.6); /* Brighter border for attention */
-				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281); /* Soft red glow */
+				border: 2px solid rgba(255, 255, 255, 0.6);
+				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281);
 			}
 
-			/* --- 5. EXIT AND FOOTER --- */
+			/* --- EXIT AND FOOTER --- */
 			.exit-btn {
 				position: fixed;
 				top: 0;
@@ -359,24 +332,24 @@
 				border-top: none;
 				color: white;
 				padding: 13px 25px;
-				font-weight: 800; /* Bolder for easier reading */
+				font-weight: 800;
 				z-index: 9999;
 				text-decoration: none;
-				border-radius: 0 0 15px 15px; /* Slightly larger curve to match the size */
-				font-size: 13px; /* Bumped from 11px */
+				border-radius: 0 0 15px 15px;
+				font-size: 13px;
 				letter-spacing: 0.5px;
-				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds a little depth so it "pops" off the background */
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 			}
 
-			/* --- 6. FOOTER FIX --- */
+			/* --- FOOTER FIX --- */
 			.main-footer {
-				grid-row: 5; /* Matches your 1fr auto grid logic */
+				grid-row: 5;
 				padding: 20px 20px 60px 20px;
 				text-align: center;
 				display: flex;
 				flex-direction: column;
 				gap: 12px;
-				align-self: end; /* Forces it to the very bottom of the grid row */
+				align-self: end;
 			}
 
 			/* --- UPDATED FOOTER FOR BETTER CONTRAST --- */
@@ -392,7 +365,6 @@
 
 			/* --- TRANSLATOR DROPDOWN CUSTOMIZATION --- */
 
-			/* 1. The main container pill */
 			#translator-anchor {
 				grid-row: 3;
 				width: 90%;
@@ -408,16 +380,16 @@
 				align-items: center;
 				justify-content: center;
 				z-index: 50;
-				overflow: hidden; /* Keeps the internal dropdown from "leaking" out corners */
+				overflow: hidden;
 			}
 
-			/* 2. THE GOOGLE WIDGET: Make it invisible but fill the whole pill */
+			/* THE GOOGLE WIDGET: Make it invisible but fill the whole pill */
 			#translator-anchor select,
 			.gt_selector,
 			.goog-te-combo {
 				width: 100% !important;
 				height: 100% !important;
-				background: transparent !important; /* Let the anchor provide the glass look */
+				background: transparent !important;
 				border: none !important;
 				color: #ffffff !important;
 				font-weight: 600;
@@ -497,15 +469,10 @@
 				text-transform: uppercase;
 				font-size: 14px;
 				letter-spacing: 1px;
-				background: rgba(22, 7, 230, 0.5) !important;
+				background: rgba(22, 7, 230, 0.5);
 				color: #ffffff !important;
 				border-radius: 12.5px;
 				transition: background 0.2s ease;
-			}
-
-			#searchResults a:hover,
-			#searchResults a:active {
-				color: #ff3399;
 			}
 
 			#searchResults a:last-child {
@@ -546,26 +513,6 @@
 				width: 100% !important;
 				padding: 0 !important;
 			}
-
-			/* THE HOVER STATE (For modern browsers) */
-			#translator-anchor select:hover {
-				background: #ff3399 !important;
-				border-color: #ffffff !important;
-			}
-
-			/* Hover Effect for all bars */
-			.landing-pill-style:hover select,
-			.landing-search-wrap:hover input,
-			.search-map-bar:hover {
-				background: #ff3399 !important;
-				color: #ffffff !important;
-				border-color: #ffffff;
-				box-shadow:
-					0 8px 15px rgba(255, 51, 153, 0.3),
-					inset 0 3px 5px rgba(255, 255, 255, 0.4);
-				transform: translateY(-2px);
-				transition: all 0.2s ease-out;
-			}
 		</style>
 	</head>
 
@@ -584,7 +531,7 @@
 				<a href="contact.html" class="bento-card contact-card">CONTACT</a>
 			</div>
 		</div>
-		<div class="menu-toggle" onclick="toggleMenu()" aria-label="Open Navigation Menu">
+		<div class="menu-toggle" onclick="toggleMenu()">
 			<div class="bar"></div>
 			<div class="bar"></div>
 			<div class="bar"></div>

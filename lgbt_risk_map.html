@@ -20,7 +20,7 @@
 		<meta name="twitter:description" content="Explore the official GWN interactive map for LGBTQ+ Legal Travel Health and Safety." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=1.7" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.0" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -101,6 +101,20 @@
 			.leaflet-overlay-pane {
 				z-index: 400 !important;
 			}
+
+			.leaflet-tile-container {
+				/* Tells the mobile GPU: "Don't let go of these images!" */
+				will-change: transform;
+				pointer-events: none;
+			}
+
+			.leaflet-zoom-animated {
+				/* Prevents the "white flash" when moving fast */
+				backface-visibility: hidden;
+			}
+
+			/* LEGEND */
+
 			#legend {
 				position: absolute;
 				top: 20px;
@@ -139,18 +153,9 @@
 				display: none;
 			}
 
-			.legend-collapsed #legendArrow {
-				transform: rotate(-90deg); /* Points arrow sideways when closed */
-			}
-
 			/* This hides the text content when the class is present */
 			.legend-collapsed #legendContent {
 				display: none;
-			}
-
-			/* This rotates the arrow so it points 'closed' by default */
-			.legend-collapsed #legendArrow {
-				transform: rotate(-90deg);
 			}
 
 			/* Change arrow color to Pink */
@@ -186,38 +191,43 @@
 			}
 
 			/* --- UNIVERSAL FOOTER FIX --- */
-			/* THE MISSING PIECE: The instructions for the movement */
-			@keyframes flow-rainbow {
-				0% {
-					background-position: 0% center;
-				}
-				100% {
-					background-position: 200% center;
-				}
-			}
-
 			.gwn-logo {
-				font-size: 1.8rem;
-				font-weight: 900;
+				position: relative;
+				font-size: 2rem;
+				font-weight: 700;
 				text-transform: uppercase;
-
-				/* Background 200% wide to "slide" */
-				background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #9400d3, #ff0000);
-				background-size: 200% auto;
-
-				/* Clipping */
+				display: inline-block;
+				letter-spacing: -2.9px;
+				line-height: 1;
+				cursor: pointer;
+				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				z-index: 1;
+				padding-left: 0.4em;
+				margin-left: -0.4em;
+				background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(240, 240, 240, 0.9) 100%);
 				-webkit-background-clip: text;
 				background-clip: text;
 				color: transparent;
+				filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.5)) drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+			}
 
-				/* Animation Call */
-				animation: flow-rainbow 2s linear infinite;
+			.gwn-logo::after {
+				content: "";
+				position: absolute;
+				bottom: 1.8px;
+				left: 0;
+				width: calc(100% + 0.03em);
+				height: 4px;
+				background: linear-gradient(180deg, #ff3399 0%, #d62b82 100%);
+				box-shadow:
+					inset 0 -2px 0 rgba(0, 0, 0, 0.2),
+					0 2px 4px rgba(0, 0, 0, 0.2);
+				border-radius: 1px;
+				z-index: -1;
+			}
 
-				/* Depth */
-				filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.3));
-
-				/* Insurance */
-				display: inline-block;
+			.gwn-logo:hover {
+				transform: translateY(-4px);
 			}
 
 			/* --- REDESIGNED FOOTER LAYOUT --- */
@@ -227,7 +237,7 @@
 				left: 0;
 				width: 100%;
 				height: 60px;
-				background: rgba(22, 7, 230, 0.99);
+				background: rgba(22, 7, 230, 0.79);
 				z-index: 9999;
 				display: flex;
 				align-items: center;
@@ -306,7 +316,7 @@
 		<footer class="site-footer">
 			<div class="footer-container">
 				<div class="footer-section">
-					<a href="index.html" class="home-btn-logo">
+					<a href="/" class="home-btn-logo" title="Gay World News - Home">
 						<span class="gwn-logo">GWN</span>
 					</a>
 				</div>
@@ -320,10 +330,21 @@
 		</footer>
 
 		<script>
+			// Prevents mobile browsers from "pulling down to refresh" while using the map
+			document.body.addEventListener(
+				"touchmove",
+				function (e) {
+					e.preventDefault();
+				},
+				{ passive: false },
+			);
 			const map = L.map("map", {
+				renderer: L.canvas(), // <--- This makes the countries stay "drawn" in memory
 				zoomSnap: 0.1,
 				attributionControl: false,
-				zoomControl: false, // This line hides the +/- buttons
+				zoomControl: false,
+				inertia: true, // Makes the "flick" feel smoother
+				inertiaFraction: 0.5,
 			}).setView([15, 0], 2);
 
 			// 1. Check if data files loaded
