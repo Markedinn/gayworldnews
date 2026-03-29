@@ -73,10 +73,10 @@ body::before {
 
 .subtitle {
 	color: #ffffff;
-	font-weight: 500;
+	font-weight: 700;
 	margin: 10px auto 10px auto;
 	text-align: center;
-	font-size: 1.1rem;
+	font-size: 1.4rem;
 	line-height: 1.4;
 }
 
@@ -105,7 +105,7 @@ body::before {
 	background: #ffffff !important;
 	backdrop-filter: none !important;
 	-webkit-backdrop-filter: none !important;
-	border-top: 6px solid #f544b1;
+	border-left: 6px solid #f544b1;
 	/* border-right: 6px solid #f544b1; */
 	padding: 15px 20px;
 	border-radius: 12px;
@@ -178,19 +178,21 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	border: 2px solid rgba(252, 248, 248, 0.747) !important;
+	background: rgba(22, 7, 230, 0.8) !important;
+	border: 1px solid rgba(252, 248, 248, 0.747) !important;
+	border-left: 6px solid rgba(252, 248, 248, 0.8) !important;
 	border-radius: 50px !important;
 	border-radius: 50px;
 	color: #ffffff;
 	font-weight: 600;
-	letter-spacing: 1px;
 	text-transform: uppercase;
-	text-decoration: none;
 	transition: 0.3s ease;
 	cursor: pointer;
 	appearance: none;
 	font-size: 1rem;
 	font-family: inherit;
+	letter-spacing: 1px;
+	text-decoration: none;
 	line-height: normal;
 	height: 50px;
 	padding: 8px 15px !important;
@@ -199,8 +201,8 @@ body::before {
 	text-align-last: center;
 	outline: none;
 	cursor: pointer;
-	backdrop-filter: blur(15px);
-	-webkit-backdrop-filter: blur(15px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #translator-anchor select option {
@@ -233,12 +235,11 @@ body::before {
 	height: 50px;
 	padding: 12px 20px;
 	border-radius: 50px;
-	background: rgba(22, 7, 230, 0.7);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	background: rgba(22, 7, 230, 0.8);
 	letter-spacing: 2px;
 	text-decoration: none;
-	border: 2px solid rgba(255, 255, 255, 0.8);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 6px solid rgba(255, 255, 255, 0.9);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	font-size: 16px;
@@ -270,14 +271,14 @@ body::before {
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
-	border-radius: 15px;
+	border-radius: 12px;
 	padding: 10px;
 	gap: 0;
 	overflow-y: auto;
 	overflow-x: hidden;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-	margin-top: 10px;
+	margin-top: 1px;
 	max-height: 45vh;
 }
 
@@ -304,9 +305,9 @@ body::before {
 
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-5px);
-	background: rgba(22, 7, 230, 0.7);
+	background: rgba(22, 7, 230, 1);
 	border-bottom: 1px solid #ffffff;
-	border-radius: 8px;
+	border-radius: 50px;
 	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 	z-index: 10;
 }
@@ -315,17 +316,6 @@ body::before {
 .search-map-link {
 	position: relative;
 	width: 100%;
-}
-
-#translator-anchor select {
-	background: rgba(22, 7, 230, 0.7) !important;
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	letter-spacing: 1px;
-	text-decoration: none;
-	border: 2px solid rgba(255, 255, 255, 0.8);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .landing-pill-style:hover select,
@@ -347,10 +337,11 @@ body::before {
 }
 
 .bento-card {
-	background: rgba(22, 7, 230, 0.6);
+	background: rgba(22, 7, 230, 0.8);
 	backdrop-filter: blur(9px);
 	-webkit-backdrop-filter: blur(9px);
-	border: 3px solid rgba(255, 255, 255, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 6px solid rgba(255, 255, 255, 0.8);
 	border-radius: 12px;
 	box-shadow:
 		0 4px 12px rgba(0, 0, 0, 0.25),
@@ -376,7 +367,8 @@ body::before {
 
 .bento-card.breaking-red {
 	background: rgba(228, 3, 3, 0.8);
-	border: 3px solid rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 6px solid rgba(255, 255, 255, 0.8);
 	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.3);
 }
 
@@ -393,8 +385,7 @@ body::before {
 	align-items: center;
 	justify-content: center;
 	min-height: 70px;
-	background: rgba(22, 7, 230, 0.5);
-	backdrop-filter: blur(9px);
+	background: rgba(22, 7, 230, 0.8);
 	border-radius: 12px;
 	padding: 15px;
 	color: #ffffff;
@@ -402,9 +393,11 @@ body::before {
 	text-transform: uppercase;
 	text-decoration: none;
 	text-align: center;
+	letter-spacing: 0.5px;
 	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	cursor: pointer;
-	border: 3px solid rgba(252, 248, 248, 0.4);
+	border: 1px solid rgba(252, 248, 248, 0.4);
+	border-left: 8px solid rgba(252, 248, 248, 0.4);
 	box-shadow:
 		0 4px 12px rgba(0, 0, 0, 0.25),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.3);
@@ -419,16 +412,15 @@ body::before {
 }
 
 .country-card.red {
-	border-color: rgb(252, 3, 53);
+	border-color: rgb(252, 3, 53, 0.8);
 }
 
 .country-card.yellow {
-	border-color: rgb(255, 238, 0);
-	color: #ffffff;
+	border-color: rgb(255, 238, 0, 0.8);
 }
 
 .country-card.green {
-	border-color: rgb(4, 247, 129);
+	border-color: rgb(4, 247, 129, 0.8);
 }
 
 .country-card.ice {
@@ -437,22 +429,21 @@ body::before {
 
 .country-card:hover {
 	transform: translateY(-5px);
-	background: rgba(22, 7, 230, 0.7);
-	border-color: rgba(255, 255, 255, 0.9);
+	background: rgba(22, 7, 230, 1);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .country-card.red:hover {
 	border-color: rgba(252, 3, 53, 0.8);
 	box-shadow:
-		0 4px 10px rgb(255, 0, 51),
+		-4px 5px 10px rgb(255, 0, 51),
 		inset 0 2px 4px rgba(255, 255, 255, 0.2),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
 }
 .country-card.yellow:hover {
 	border-color: rgba(252, 235, 3, 0.8);
 	box-shadow:
-		0 4px 10px rgba(241, 226, 4, 0.925),
+		-4px 5px 10px rgba(241, 226, 4, 0.925),
 		inset 0 2px 4px rgba(255, 255, 255, 0.2),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
 }
@@ -460,19 +451,17 @@ body::before {
 .country-card.green:hover {
 	border-color: rgba(0, 230, 119, 1);
 	box-shadow:
-		0 4px 10px rgba(0, 230, 119, 0.8),
+		-4px 5px 10px rgba(0, 230, 119, 0.8),
 		inset 0 2px 4px rgba(255, 255, 255, 0.2),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
-	transform: translateY(-5px);
 }
 
 .country-card.ice:hover {
 	border-color: rgba(0, 229, 255, 1);
 	box-shadow:
-		0 4px 10px rgba(0, 229, 255, 0.8),
+		-4px 5px 10px rgba(0, 229, 255, 0.8),
 		inset 0 2px 4px rgba(255, 255, 255, 0.2),
 		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
-	transform: translateY(-5px);
 }
 
 /* --- QUICK EXIT --- */
@@ -501,8 +490,8 @@ body::before {
 
 .site-footer {
 	width: 100%;
-	background: rgba(22, 7, 230, 1);
-	border-top: 2px solid rgba(252, 248, 248, 0.5);
+	background: rgba(22, 7, 230, 0.9);
+	border-top: 1px solid rgba(252, 248, 248, 0.8);
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	margin-top: auto;
 	z-index: 100;
@@ -521,7 +510,7 @@ body::before {
 
 .footer-card a {
 	text-decoration: none;
-	color: #24408e;
+	color: #ffffff; /* Improved contrast */
 	font-weight: 800;
 	font-size: 0.8rem;
 }
@@ -542,7 +531,6 @@ body::before {
 
 .neutral {
 	background-color: rgba(0, 230, 0, 0.8);
-	border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 .neutral span,
@@ -577,7 +565,8 @@ body::before {
 	border-radius: 50px;
 	text-decoration: none;
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	border: 2px solid rgba(255, 255, 255, 0.7);
+	border: 1px solid rgba(255, 255, 255, 0.4);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
 	box-shadow:
 		0 4px 10px rgba(0, 0, 0, 0.2),
 		inset 0 0 8px rgba(255, 255, 255, 0.1);
@@ -605,7 +594,7 @@ body::before {
 
 .social-pill:hover {
 	transform: translateY(-3px) scale(1.02);
-	border-color: #ffffff;
+	border-color: rgba(255, 255, 255, 1);
 	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 	filter: brightness(1.1);
 }
