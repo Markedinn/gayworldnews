@@ -95,7 +95,7 @@ body::before {
 	background: #ffffff !important;
 	backdrop-filter: none !important;
 	-webkit-backdrop-filter: none !important;
-	border-left: 6px solid #f544b1;
+	border-left: 3px solid #f544b1;
 	/* border-right: 6px solid #f544b1; */
 	padding: 15px 20px;
 	border-radius: 12px;
@@ -153,10 +153,10 @@ body::before {
 	transform: translateY(-50%);
 	width: 22px;
 	height: 22px;
-	background-image: url("../images/globe-icon.svg");
+	background-image: url("images/globe-icon.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+	filter: invert(12%) sepia(95%) saturate(5453%) hue-rotate(244deg) brightness(85%) contrast(148%);
 	pointer-events: none;
 	z-index: 10;
 }
@@ -168,15 +168,13 @@ body::before {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(22, 7, 230, 0.8) !important;
-	border: 1px solid rgba(252, 248, 248, 0.747) !important;
-	border-left: 6px solid rgba(252, 248, 248, 0.8) !important;
+	background: rgba(255, 255, 255, 1) !important;
+	border: 1px solid rgb(228, 82, 191);
+	border-left: 3px solid rgb(228, 82, 191);
 	border-radius: 50px !important;
-	border-radius: 50px;
-	color: #ffffff;
-	font-weight: 600;
+	color: rgba(22, 7, 230, 1) !important;
+	font-weight: 800;
 	text-transform: uppercase;
-	transition: 0.3s ease;
 	cursor: pointer;
 	appearance: none;
 	font-size: 1rem;
@@ -186,11 +184,9 @@ body::before {
 	line-height: normal;
 	height: 50px;
 	padding: 8px 15px !important;
-	appearance: none;
 	text-align: center;
 	text-align-last: center;
 	outline: none;
-	cursor: pointer;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -205,6 +201,7 @@ body::before {
 #translator-anchor select:hover {
 	background: rgba(22, 7, 230, 1) !important;
 	border-color: #ffffff !important;
+	color: #ffffff !important;
 	box-shadow:
 		0 8px 15px rgba(12, 12, 12, 0.3),
 		inset 0 3px 5px rgba(255, 255, 255, 0.4);
@@ -212,10 +209,10 @@ body::before {
 	transition: all 0.2s ease-out;
 }
 
-#translator-anchor .gt_selector img {
+/* #translator-anchor .gt_selector img {
 	margin-top: -2px !important;
 	margin-right: 8px !important;
-}
+} */
 
 /* THE SEARCH AND MAP PILLS */
 
@@ -223,27 +220,33 @@ body::before {
 .search-map-link {
 	width: 100%;
 	height: 50px;
-	padding: 12px 20px;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0 20px !important;
 	border-radius: 50px;
-	background: rgba(22, 7, 230, 0.8);
+	background: rgba(255, 255, 255, 1);
 	letter-spacing: 2px;
 	text-decoration: none;
-	border: 1px solid rgba(255, 255, 255, 0.8);
-	border-left: 6px solid rgba(255, 255, 255, 0.9);
+	border: 1px solid rgb(228, 82, 191);
+	border-left: 3px solid rgb(228, 82, 191);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	font-size: 16px;
-	color: #ffffff;
-	font-weight: 600;
+	color: rgba(22, 7, 230, 1);
+	font-weight: 800;
 	text-align: center;
-	box-sizing: border-box;
 	outline: none;
 	caret-color: #ffffff;
 }
 
 .landing-search-wrap input::placeholder {
-	color: #ffffff;
+	color: rgba(22, 7, 230, 1);
 	letter-spacing: 2px;
+}
+
+.landing-search-wrap input:hover::placeholder {
+	color: #ffffff !important;
 }
 
 /* --- DROPDOWN MENU--- */
@@ -272,27 +275,6 @@ body::before {
 	max-height: 45vh;
 }
 
-/* --- THE INVISIBLE LIST ITEM --- */
-
-.search-results-floating .country-card.search-item-card,
-.search-results-floating .country-card.red,
-.search-results-floating .country-card.green,
-.search-results-floating .country-card.warning,
-.search-results-floating .country-card.yellow {
-	background: transparent;
-	min-height: auto;
-	border: none;
-	backdrop-filter: none;
-	margin: 0;
-	padding: 12px 15px;
-	display: block;
-	color: #ffffff;
-	text-transform: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	z-index: 20;
-}
-
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-5px);
 	background: rgba(22, 7, 230, 1);
@@ -308,13 +290,15 @@ body::before {
 	width: 100%;
 }
 
-.landing-pill-style:hover select,
-.landing-search-wrap:hover input,
+.landing-search-wrap input:hover,
 .search-map-link:hover {
-	transform: translateY(-4px);
-	background: rgba(22, 7, 230, 0.9);
-	border-color: rgba(255, 255, 255, 1);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+	background: rgba(22, 7, 230, 1) !important;
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	transform: translateY(-2px);
+	box-shadow:
+		0 8px 15px rgba(12, 12, 12, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.4);
 }
 
 .bento-grid {
@@ -331,7 +315,7 @@ body::before {
 	backdrop-filter: blur(9px);
 	-webkit-backdrop-filter: blur(9px);
 	border: 1px solid rgba(255, 255, 255, 0.8);
-	border-left: 6px solid rgba(255, 255, 255, 0.8);
+	border-left: 3px solid rgba(255, 255, 255, 0.8);
 	border-radius: 12px;
 	box-shadow:
 		0 4px 12px rgba(0, 0, 0, 0.25),
@@ -358,7 +342,7 @@ body::before {
 .bento-card.breaking-red {
 	background: rgba(228, 3, 3, 0.8);
 	border: 1px solid rgba(255, 255, 255, 0.8);
-	border-left: 6px solid rgba(255, 255, 255, 0.8);
+	border-left: 3px solid rgba(255, 255, 255, 0.8);
 	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.3);
 }
 
@@ -378,7 +362,6 @@ body::before {
 	padding: 10px !important; /* Space between color frame and blue box */
 	border-radius: 15px !important;
 	text-decoration: none !important;
-	width: 92% !important;
 	min-height: 70px !important; /* Ensures consistent height */
 	border: none !important;
 	background: rgba(22, 7, 230, 0.95) !important; /* Your signature blue */
@@ -400,7 +383,7 @@ body::before {
 	color: #ffffff;
 	border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
-.country-card.yellow {
+.country-card.amber {
 	background-color: rgba(223, 157, 16, 0.9) !important;
 	color: #ffffff;
 	border: 1px solid rgba(255, 255, 255, 0.5) !important;
@@ -545,7 +528,7 @@ body::before {
 	text-decoration: none;
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-left: 3px solid rgba(255, 255, 255, 0.8);
 	box-shadow:
 		0 4px 10px rgba(0, 0, 0, 0.2),
 		inset 0 0 8px rgba(255, 255, 255, 0.1);
@@ -698,7 +681,18 @@ body::before {
 	}
 }
 
-/* TABLETS */
+/* --- MOBILE & TABLET BACKGROUND --- */
+
+@media screen and (max-width: 1100px) {
+	body::before {
+		background: url("images/world_img_mobile.webp") center/cover no-repeat !important;
+		background-size: 100% 100% !important;
+		filter: brightness(0.7) contrast(1.6) saturate(1.8) !important;
+		background-color: rgba(25, 1, 241, 0.281) !important;
+		background-blend-mode: multiply !important;
+	}
+}
+
 @media (min-width: 481px) and (max-width: 1100px) {
 	body::before {
 		content: "";
@@ -774,13 +768,13 @@ body::before {
 		display: flex !important;
 	}
 
-	/* --- UPDATED TABLET FOOTER (Symmetrical Flex) --- */
+	/* ---  TABLET FOOTER --- */
 	.footer-container {
-		display: flex !important; /* Changed from grid to flex */
+		display: flex !important;
 		flex-wrap: wrap !important;
-		justify-content: center !important; /* This is the magic centering line */
+		justify-content: center !important;
 		align-items: center !important;
-		gap: 15px 20px !important; /* 15px vertical, 20px horizontal */
+		gap: 15px 20px !important;
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 10px 20px !important;
@@ -789,8 +783,6 @@ body::before {
 	.footer-card {
 		display: flex !important;
 		justify-content: center !important;
-		/* This ensures buttons only take up the space they need, 
-       allowing them to center themselves on the bottom row */
 		flex: 0 1 auto !important;
 		width: auto !important;
 	}
@@ -804,7 +796,7 @@ body::before {
 	}
 
 	.home-hero .main-title {
-		font-size: 5rem !important; /* Bigger logo for your video backdrop */
+		font-size: 5rem !important;
 	}
 }
 
@@ -818,8 +810,4 @@ body::before {
 	.home-hero .main-title {
 		font-size: 5rem !important;
 	}
-}
-
-@media screen and (max-width: 480px) {
-	/* 1. The Outer Card (The Status Frame) */
 }

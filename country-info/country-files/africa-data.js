@@ -18,7 +18,7 @@ Object.assign(globalData, {
 	angola: {
 		name: "Angola",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. In a landmark 2021 update, Angola formally decriminalized same-sex acts and introduced laws banning discrimination based on sexual orientation in employment and service provision. This makes Angola one of the few African nations with explicit legal protections. However, marriage equality and gender identity recognition are still not legally established as of 2026. The legal shift was a massive win for the 'Iris Angola' advocacy group, which is now legally recognized.",
 		travel:
@@ -34,7 +34,7 @@ Object.assign(globalData, {
 	benin: {
 		name: "Benin",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Benin is unique in that it has never explicitly criminalized consensual same-sex acts between adults. The 2018 Penal Code maintained this legality, though it set an equal age of consent (18) for all. In a major 2026 update, Benin passed Law 2026-02, which specifically protects 'key populations' (including MSM and Trans individuals) from stigma in healthcare. Despite this, there is no legal recognition for same-sex unions or adoption.",
 		travel:
@@ -178,7 +178,7 @@ Object.assign(globalData, {
 	republic_of_the_congo: {
 		name: "Republic of the Congo",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Consensual same-sex acts have been legal since 1940. However, the legal environment remains unequal; the age of consent is 21 for same-sex acts compared to 18 for opposite-sex acts. While there is no explicit ban, there is also no legal recognition of same-sex unions. A notable 2026 development is the continued implementation of Law No. 29-2019 and Decree 2025-66, which protect 'sexual life' as sensitive personal data. While these offer some digital privacy, they do not provide broad protection against social discrimination or hate crimes.",
 		travel:
@@ -242,7 +242,7 @@ Object.assign(globalData, {
 	equatorial_guinea: {
 		name: "Equatorial Guinea",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Consensual same-sex acts have never been criminalized. In a rare move for the region, the 2022 Penal Code (Article 364) explicitly prohibits employment discrimination based on sexual orientation. However, the 2019 Decree No. 94 still defines homosexuality as a 'threat to moral identity,' and same-sex marriage is unrecognized. In 2026, the legal framework is a contradiction: you have a right to work, but no right to marry or register an advocacy organization.",
 		travel:
@@ -274,7 +274,7 @@ Object.assign(globalData, {
 	eswatini: {
 		name: "Eswatini",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Technically Illegal but Unenforced. Common law criminalizes 'sodomy' (men only), but there are no recent records of arrests for consensual acts. In 2026, the legal status remains in a stalemate: while the Supreme Court has ruled that the state cannot block the registration of LGBTQ+ advocacy groups (ESGM), the government continues to use bureaucratic hurdles to prevent them from operating. There are no protections against discrimination in employment, health, or housing.",
 		travel:
@@ -306,7 +306,7 @@ Object.assign(globalData, {
 	gabon: {
 		name: "Gabon",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Restricted. Gabon decriminalized same-sex acts in 2020. However, in late 2024, a new constitution was passed via referendum that explicitly defines marriage as a union between a man and a woman as an 'eternity clause,' meaning it can never be changed. While the 2023 Law No. 025 protects 'sexual orientation' as sensitive personal data, the 2025 constitutional ban on marriage equality signals a hard ceiling on legal progress for the foreseeable future.",
 		travel:
@@ -370,7 +370,7 @@ Object.assign(globalData, {
 	guineabissau: {
 		name: "Guinea-Bissau",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Consensual same-sex acts were decriminalized in 1993, and the 2014 Law Against Domestic Violence (Article 5) explicitly includes 'sexual orientation' as a protected class—a rare legal feat in West Africa. However, same-sex marriage is banned under Article 1577 of the Civil Code. In 2026, the country remains one of the few in the region where being LGBTQ+ is not a crime, though it lacks the infrastructure for full legal equality or gender recognition.",
 		travel:
@@ -386,7 +386,7 @@ Object.assign(globalData, {
 	ivory_coast: {
 		name: "Ivory Coast",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Same-sex acts have never been criminalized in Côte d'Ivoire. However, 'Public Indecency' laws (Article 360) are sometimes used to target LGBTQ+ people if their behavior is deemed 'contrary to nature' in a public setting. In 2026, the country remains the most legally stable for LGBTQ+ people in Francophone West Africa, though it lacks specific hate-crime or marriage-equality laws. The age of consent is unequal (21 for same-sex, 18 for opposite-sex), but this is rarely enforced against consenting adults.",
 		travel:
@@ -421,7 +421,7 @@ Object.assign(globalData, {
 	lesotho: {
 		name: "Lesotho",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Male same-sex acts were decriminalized in 2012, and female acts were never illegal. In a significant 2024 update, the Labour Act was amended to ban discrimination based on sexual orientation in the workplace. Furthermore, the National Identity Cards Act (2011) has been interpreted in 2026 to allow transgender individuals to change their gender markers, making Lesotho one of the most progressive nations in Southern Africa for gender recognition outside of South Africa.",
 		travel:
@@ -472,7 +472,7 @@ Object.assign(globalData, {
 	madagascar: {
 		name: "Madagascar",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Consensual same-sex acts have never been criminalized for adults over 21. However, the age of consent is unequal (15 for heterosexuals, 21 for same-sex). In 2026, the 'Data Protection Law' (No. 2017-045) remains a key tool, as it classifies 'sexual life' as sensitive data that cannot be collected or shared without consent. While there are no hate-crime laws or marriage equality, the country is legally stable for the community compared to mainland Africa.",
 		travel:
@@ -587,7 +587,7 @@ Object.assign(globalData, {
 	namibia: {
 		name: "Namibia",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Contested. In a historic June 2024 ruling, the High Court of Namibia struck down colonial-era sodomy laws as unconstitutional. However, in late 2024 and 2025, the Parliament responded by passing laws to explicitly ban same-sex marriage and prevent the recognition of unions performed abroad. In 2026, the legal landscape is a tug-of-war: while gay sex is no longer a crime, the state is actively working to limit further rights. Transgender people can legally change their gender, but only after proving medical intervention.",
 		travel:
@@ -606,7 +606,7 @@ Object.assign(globalData, {
 	niger: {
 		name: "Niger",
 		continent: "africa",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Same-sex acts have never been criminalized in Niger. However, the age of consent is unequal (13 for heterosexual, 21 for same-sex). In 2026, the military-led government remains focused on 'public morality,' and while there are no sodomy laws, individuals can be prosecuted for 'indecent acts' or 'social disturbance.' There are no protections against discrimination, and the state does not recognize same-sex unions. The legal status is one of 'omission' rather than proactive rights.",
 		travel:

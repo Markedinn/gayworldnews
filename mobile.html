@@ -111,7 +111,8 @@
 				flex-direction: column;
 				align-items: center;
 				z-index: 10;
-				margin-top: 5vh;
+				margin-top: clamp(20px, 14dvh, 100px);
+				margin-bottom: clamp(15px, 12dvh, 80px);
 				align-self: center;
 			}
 
@@ -158,116 +159,6 @@
 				text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 				letter-spacing: 1.5px;
 				text-align: center;
-			}
-
-			.landing-search-wrap {
-				grid-row: 4;
-				width: 90%;
-				max-width: 450px;
-				padding-top: 10vh;
-				margin: 0 auto;
-				display: flex;
-				flex-direction: column-reverse;
-				position: relative;
-			}
-			.search-map-link {
-				grid-row: 5;
-				width: 90%;
-				max-width: 450px;
-				margin: 0 auto;
-				text-decoration: none;
-			}
-
-			/* GTranslate Specific Styling */
-			.gt_selector {
-				display: flex !important;
-				align-items: center !important;
-				justify-content: center !important;
-				width: 100% !important;
-				height: 50px !important;
-				background: #ffffff !important;
-				border: 2px solid #e2e8f0 !important;
-				border-radius: 50px !important;
-				color: #ff3399 !important;
-				font-weight: 700 !important;
-				font-size: 16px !important;
-				text-align: center !important;
-				appearance: none;
-			}
-
-			/* --- UNIFIED GLASS PILLS (Search & Map) --- */
-
-			#globalSearch,
-			.search-map-bar {
-				width: 100%;
-				height: 50px;
-				background: rgba(22, 7, 230, 0.9) !important;
-				color: #ffffff !important;
-				border: 1px solid rgba(255, 255, 255, 0.7);
-				border-left: 5px solid rgba(255, 255, 255, 0.8);
-				border-radius: 50px;
-				text-align: center;
-				font-size: 16px;
-				color: #ffffff;
-				font-weight: 700;
-				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-				text-transform: uppercase;
-				letter-spacing: 1px;
-				box-sizing: border-box;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				cursor: pointer;
-				outline: none;
-				transition:
-					background 0.3s ease,
-					border-color 0.3s ease;
-			}
-
-			/* --- DROPDOWN MENU--- */
-
-			.search-results-floating {
-				position: absolute;
-				bottom: 110%;
-				top: auto !important;
-				left: 0;
-				width: 100%;
-				display: none;
-				flex-direction: column;
-				z-index: 2000;
-				background: rgba(22, 7, 230, 0.993);
-				border: 1px solid rgba(255, 255, 255, 0.596);
-				backdrop-filter: blur(15px);
-				-webkit-backdrop-filter: blur(15px);
-				border-radius: 20px;
-				padding: 10px;
-				gap: 0;
-				overflow-y: auto;
-				overflow-x: hidden;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-				margin-top: 10px;
-				max-height: 40vh;
-			}
-
-			/* --- THE INVISIBLE LIST ITEM --- */
-
-			.search-results-floating .country-card.search-item-card,
-			.search-results-floating .country-card.red,
-			.search-results-floating .country-card.green,
-			.search-results-floating .country-card.warning,
-			.search-results-floating .country-card.yellow {
-				background: transparent !important;
-				min-height: auto !important;
-				border: none !important;
-				backdrop-filter: none !important;
-				margin: 0 !important;
-				padding: 12px 15px;
-				display: block;
-				color: #ffffff;
-				text-transform: none;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			}
 
 			.side-menu {
@@ -347,6 +238,242 @@
 				box-shadow: 0 4px 15px rgba(228, 3, 3, 0.281);
 			}
 
+			.three-search-container {
+				grid-column: 1 / -1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 20px;
+				width: 90%;
+				max-width: 500px;
+				margin: 40px auto;
+				position: relative;
+				overflow: visible !important;
+				z-index: 2000;
+			}
+
+			#translator-anchor {
+				width: 100%;
+				font-weight: 700;
+				letter-spacing: 1px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				position: relative;
+			}
+
+			#translator-anchor::after {
+				content: "";
+				position: absolute;
+				right: 18px;
+				top: 50%;
+				transform: translateY(-50%);
+				width: 22px;
+				height: 22px;
+				background-image: url("images/globe-icon.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+				filter: invert(12%) sepia(95%) saturate(5453%) hue-rotate(244deg) brightness(85%) contrast(148%);
+				pointer-events: none;
+				z-index: 10;
+			}
+
+			#translator-anchor select {
+				width: 100%;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				background: rgba(255, 255, 255, 1) !important;
+				border: 1px solid rgb(228, 82, 191);
+				border-left: 3px solid rgb(228, 82, 191);
+				border-radius: 50px !important;
+				color: rgba(22, 7, 230, 1) !important;
+				font-weight: 800;
+				text-transform: uppercase;
+				cursor: pointer;
+				appearance: none;
+				font-size: 1rem;
+				font-family: inherit;
+				letter-spacing: 1px;
+				text-decoration: none;
+				line-height: normal;
+				height: 50px;
+				padding: 8px 15px !important;
+				text-align: center;
+				text-align-last: center;
+				outline: none;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			}
+
+			#translator-anchor select option {
+				background: rgba(22, 7, 230, 0.93) !important;
+				color: #ffffff !important;
+				padding: 12px !important;
+				font-size: 1.1rem;
+			}
+
+			#translator-anchor select:hover {
+				background: rgba(22, 7, 230, 1) !important;
+				border-color: #ffffff !important;
+				color: #ffffff !important;
+				box-shadow:
+					0 8px 15px rgba(12, 12, 12, 0.3),
+					inset 0 3px 5px rgba(255, 255, 255, 0.4);
+				transform: translateY(-2px);
+				transition: all 0.2s ease-out;
+			}
+
+			/* THE SEARCH AND MAP PILLS */
+
+			.landing-search-wrap input,
+			.search-map-link {
+				width: 100%;
+				height: 50px;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				padding: 0 20px !important;
+				border-radius: 50px;
+				background: rgba(255, 255, 255, 1);
+				letter-spacing: 2px;
+				text-decoration: none;
+				border: 1px solid rgb(228, 82, 191);
+				border-left: 3px solid rgb(228, 82, 191);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+				transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				font-size: 16px;
+				color: rgba(22, 7, 230, 1);
+				font-weight: 800;
+				text-align: center;
+				outline: none;
+				caret-color: #ffffff;
+			}
+
+			.landing-search-wrap input::placeholder {
+				color: rgba(22, 7, 230, 1);
+				letter-spacing: 2px;
+			}
+
+			.landing-search-wrap input:hover::placeholder {
+				color: #ffffff !important;
+			}
+
+			/* --- DROPDOWN MENU--- */
+
+			.search-results-floating {
+				position: absolute;
+				top: 80%;
+				top: auto !important;
+				left: 0;
+				width: 100%;
+				display: none;
+				flex-direction: column;
+				z-index: 2000;
+				background: rgba(22, 7, 230, 0.993) !important;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				backdrop-filter: blur(15px);
+				-webkit-backdrop-filter: blur(15px);
+				border-radius: 12px;
+				padding: 10px;
+				gap: 0;
+				overflow-y: auto;
+				overflow-x: hidden;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+				margin-top: 1px;
+				max-height: 45vh;
+			}
+
+			.search-results-floating .country-card.search-item-card:hover {
+				transform: scale(1.02) translateY(-5px);
+				background: rgba(22, 7, 230, 1);
+				border-bottom: 1px solid #ffffff;
+				border-radius: 50px;
+				box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+				z-index: 10;
+			}
+
+			.landing-search-wrap,
+			.search-map-link {
+				position: relative;
+				width: 100%;
+			}
+
+			.landing-search-wrap input:hover,
+			.search-map-link:hover {
+				background: rgba(22, 7, 230, 1);
+				color: #ffffff;
+				border-color: #ffffff;
+				transform: translateY(-2px);
+				box-shadow:
+					0 8px 15px rgba(12, 12, 12, 0.3),
+					inset 0 3px 5px rgba(255, 255, 255, 0.4);
+			}
+
+			.country-card {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 12px auto;
+				padding: 10px;
+				border-radius: 15px;
+				text-decoration: none;
+				min-height: 70px;
+				border: none;
+				width: 100%;
+				padding: 12px 5px;
+				border-radius: 10px;
+				font-size: 1.2rem;
+				font-weight: 600;
+				letter-spacing: 0.5px;
+				text-transform: uppercase;
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+			}
+
+			.country-card.green {
+				background-color: rgba(0, 180, 0, 0.9);
+				color: #ffffff;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+			}
+			.country-card.amber {
+				background-color: rgba(223, 157, 16, 0.9);
+				color: #ffffff;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			.country-card.red {
+				background-color: rgba(200, 0, 0, 0.9);
+				color: #ffffff;
+				border: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			.country-card.ice {
+				background-color: rgba(102, 207, 241, 0.966);
+				border: 1px solid rgba(255, 255, 255, 0.5);
+			}
+
+			.country-card:hover {
+				transform: translateY(-3px);
+				filter: brightness(1.15);
+				box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+				cursor: pointer;
+			}
+
+			.country-card:hover span {
+				background: rgba(22, 7, 230, 1) !important;
+				box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+			}
+
+			.country-card.red:hover {
+				box-shadow: 0 0 20px rgba(200, 0, 0, 0.6);
+			}
+
+			.country-card:active {
+				transform: scale(0.97);
+				filter: brightness(0.9);
+			}
+
 			/* --- FOOTER --- */
 
 			.main-footer {
@@ -359,7 +486,6 @@
 				align-self: end;
 			}
 
-			/* --- UPDATED FOOTER FOR BETTER CONTRAST --- */
 			.footer-text {
 				font-size: 12px;
 				color: #ffffff;
@@ -370,172 +496,15 @@
 				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 			}
 
-			/* --- TRANSLATOR DROPDOWN CUSTOMIZATION --- */
-
-			#translator-anchor {
-				grid-row: 3;
-				width: 90%;
-				max-width: 450px;
-				height: 50px;
-				margin: 0 auto;
-				position: relative;
-				background: rgba(22, 7, 230, 0.9) !important;
-				color: #ffffff !important;
-				border: 1px solid rgba(255, 255, 255, 0.7) !important;
-				border-left: 6px solid rgba(255, 255, 255, 0.9) !important;
-				border-radius: 50px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				z-index: 50;
-				overflow: hidden;
-			}
-
-			/* THE GOOGLE WIDGET: Make it invisible but fill the whole pill */
-			#translator-anchor select,
-			.gt_selector,
-			.goog-te-combo {
-				width: 100% !important;
-				height: 100% !important;
-				background: transparent !important;
-				border: none !important;
-				color: #ffffff !important;
-				font-weight: 600;
-				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-				text-transform: uppercase;
-				text-align: center;
-				text-align-last: center;
-				font-size: 1rem !important;
-				padding: 0 40px !important; /* Space for the arrow */
-				margin: 0 !important;
-				appearance: none !important;
-				-webkit-appearance: none !important;
-				cursor: pointer;
-				position: relative;
-				z-index: 2;
-			}
-
-			#translator-anchor::after {
-				content: "";
-				position: absolute;
-				right: 18px;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 22px;
-				height: 22px;
-				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='2' y1='12' x2='22' y2='12'%3E%3C/line%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'%3E%3C/path%3E%3C/svg%3E");
-				background-repeat: no-repeat;
-				background-size: contain;
-				filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
-				pointer-events: none;
-				z-index: 10;
-			}
-
-			#translator-anchor select option {
-				background: rgba(22, 7, 230, 0.993) !important;
-				color: #ffffff !important;
-				text-align: left;
-				padding: 12px;
-			}
-
-			#translator-anchor select::-webkit-scrollbar {
-				display: none !important;
-				width: 0 !important;
-			}
-
-			/* For Firefox */
-			#translator-anchor select {
-				scrollbar-width: none !important;
-			}
-
-			.goog-te-combo {
-				scrollbar-width: none !important;
-				-ms-overflow-style: none !important;
-			}
-
-			.goog-te-combo::-webkit-scrollbar {
-				display: none !important;
-			}
-
-			#translator-anchor select:focus,
-			#translator-anchor select:active,
-			.goog-te-combo:focus,
-			.goog-te-combo:active {
-				outline: none !important;
-				background-color: transparent !important;
-				box-shadow: none !important;
-			}
-
-			/* --- SEARCH RESULTS DROPDOWN STYLING --- */
-
-			#searchResults a {
-				display: block;
-				padding: 15px 20px;
-				margin-bottom: 2px;
-				text-decoration: none !important;
-				font-weight: 700;
-				text-transform: uppercase;
-				font-size: 14px;
-				letter-spacing: 1px;
-				background: rgba(22, 7, 230, 0.5);
-				color: #ffffff !important;
-				border-radius: 12.5px;
-				transition: background 0.2s ease;
-			}
-
-			#searchResults a:last-child {
-				border-bottom: none;
-				margin-bottom: 0;
-			}
-
-			#globalSearch::placeholder {
-				color: #ffffff !important;
-				opacity: 1; /* Firefox fix to ensure color shows at full strength */
-			}
-
-			/* Chrome, Safari, and newer Edge */
-			#globalSearch::-webkit-input-placeholder {
-				color: #ffffff !important;
-			}
-
-			/* Firefox */
-			#globalSearch::-moz-placeholder {
-				color: #ffffff !important;
-			}
-
-			/* Container for Translator, Search, and Map */
-			.interaction-stack {
-				grid-row: 4;
-				width: 90%;
-				max-width: 450px;
-				margin: 0 auto 4vh auto;
-				display: flex;
-				flex-direction: column;
-				gap: 15px;
-				z-index: 100;
-			}
-
-			#translator-anchor,
-			.landing-search-wrap,
-			.search-map-link {
-				width: 100% !important;
-				padding: 0 !important;
-			}
-
 			@media (max-height: 500px) and (orientation: landscape) {
 				.side-menu {
-					/* 1. Use padding instead of margin to create the gap */
 					padding-top: 120px;
 
-					/* 2. Ensure it starts from the top, not the center */
 					display: block;
-
-					/* 3. Keep your original background and blur */
 					background: rgba(22, 70, 96, 0.4);
 				}
 
 				.close-icon {
-					/* 4. Pin the X so it stays in that 120px padded 'Safe Zone' */
 					position: absolute;
 					top: 15px;
 					right: 20px;
@@ -543,7 +512,6 @@
 				}
 
 				.bento-grid {
-					/* 5. Reset the grid margin since the parent's padding is doing the work */
 					margin-top: 0;
 					padding-bottom: 40px;
 				}
@@ -577,17 +545,19 @@
 			<p class="subtitle">Legal Health Travel & Safety</p>
 		</header>
 
-		<div class="interaction-stack">
+		<div class="three-search-container">
 			<div id="translator-anchor" data-nosnippet></div>
 
 			<div class="landing-search-wrap">
-				<input type="text" id="globalSearch" placeholder="FIND Country" autocomplete="off" />
+				<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
 				<div id="searchResults" class="search-results-floating"></div>
 			</div>
 
-			<a href="lgbt_risk_map.html" class="search-map-link" title="View Global Interactive Map">
+			<a href="lgbt_risk_map.html" class="search-map-link">
 				<div class="search-map-bar">
-					<span>Interactive Map</span>
+					<div class="search-map-content">
+						<span class="search-map-text">INTERACTIVE MAP</span>
+					</div>
 				</div>
 			</a>
 		</div>

@@ -2,7 +2,7 @@ Object.assign(globalData, {
 	anguilla: {
 		name: "Anguilla",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Same-sex sexual activity has been legal in Anguilla since the 2000 United Kingdom Overseas Territories Order in Council. As a British Overseas Territory, it is technically bound by the European Convention on Human Rights, yet local legislation has not kept pace with the UK's domestic advancements. There is no legal recognition of same-sex marriage or civil partnerships as of early 2026. Furthermore, Anguilla lacks comprehensive anti-discrimination laws that specifically protect sexual orientation or gender identity in employment or housing. While the legal foundation is neutral, the lack of proactive protections creates a legal vacuum for residents, though tourists are rarely affected by this lack of infrastructure. Legal experts note that while the UK could technically impose marriage equality, it has preferred to let local governments lead, resulting in a stagnant legal status for over two decades.",
 		travel:
@@ -79,7 +79,7 @@ Object.assign(globalData, {
 	bahamas: {
 		name: "Bahamas",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Same-sex sexual activity has been legal in the Bahamas since the passage of the Sexual Offences and Domestic Violence Act in 1991. However, the legal landscape in 2026 remains significantly behind its Caribbean neighbors like Barbados. The age of consent is unequal: 18 for same-sex acts and 16 for heterosexual acts. Same-sex marriage is not recognized, and the constitution does not explicitly prohibit discrimination based on sexual orientation or gender identity. A 2016 constitutional referendum, which included a provision to ban discrimination based on sex, failed largely due to a campaign by religious groups who feared it would lead to marriage equality. Consequently, there are no proactive legal protections for LGBTQ+ people in employment, housing, or public accommodations. Legal experts describe the Bahamas as a 'stagnant' jurisdiction where the lack of criminalization provides safety from the state, but the lack of protection leaves individuals vulnerable to private discrimination.",
 		travel:
@@ -119,7 +119,7 @@ Object.assign(globalData, {
 	belize: {
 		name: "Belize",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Belize's legal history is defined by the landmark 2016 Section 53 case (Caleb Orozco v. Attorney General), where the Supreme Court struck down the law criminalizing same-sex acts. Crucially, the Chief Justice also ruled that the constitutional ban on discrimination based on 'sex' includes 'sexual orientation.' This made Belize the first country in the English-speaking Caribbean to decriminalize through the courts. In 2025 and 2026, the legal status is stable, but incomplete. Same-sex marriage is not recognized, and while the 2016 ruling provides a constitutional basis for protection, specific legislative acts (like a dedicated Anti-Discrimination Act) are still being debated in the National Assembly. Transgender rights are in a gray area; while there is no law against transitioning, there is also no formal administrative process for changing gender markers on national documents without a court order.",
 		travel:
@@ -135,7 +135,7 @@ Object.assign(globalData, {
 	bermuda: {
 		name: "Bermuda",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Complicated. Bermuda has had a rollercoaster legal history regarding marriage equality. Same-sex marriage was legalized by the Supreme Court in 2017, then revoked by the government and replaced with 'Domestic Partnerships,' then reinstated by local courts, and finally, in 2022, the UK Privy Council (the final court of appeal) ruled that the ban on same-sex marriage was constitutional. As of 2026, same-sex marriage is NOT legal in Bermuda, but 'Domestic Partnerships' remain available, providing almost all the same legal rights, including pensions, inheritance, and healthcare. Bermuda's Human Rights Act does prohibit discrimination based on sexual orientation in employment, housing, and services. The legal environment is professional and stable in 2026, but the 'marriage' title remains a point of contention for activists. For travelers, this means you are legally protected from discrimination, but you cannot have a legally recognized 'marriage' performed on the island.",
 		travel:
@@ -151,7 +151,7 @@ Object.assign(globalData, {
 	bolivia: {
 		name: "Bolivia",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Bolivia has a complex and contradictory legal environment. On one hand, the 2009 Constitution was one of the first in the world to explicitly ban discrimination based on sexual orientation and gender identity. On the other, the government was slow to implement these rights. A major breakthrough occurred in 2023 when the Supreme Electoral Tribunal (TSE) began recognizing 'Free Unions' (similar to civil unions) for same-sex couples following a Constitutional Court ruling. By 2026, these unions are being registered nationwide, though same-sex 'marriage' in the traditional sense is still blocked by legislative hurdles. The 2016 Gender Identity Law allows transgender people to change their legal name and gender on documents, but this law has faced multiple challenges from religious groups in the courts. In 2026, the legal status is one of 'fragile progress,' where constitutional rights exist on paper but often require legal intervention to be realized in practice.",
 		travel:
@@ -187,7 +187,7 @@ Object.assign(globalData, {
 	british_virgin_islands: {
 		name: "British Virgin Islands",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. Same-sex sexual activity has been legal since 2001, following a UK-mandated order. As of 2026, the BVI is in a period of legal stasis; while the 2007 Constitution provides one of the few explicit protections against discrimination based on 'sexual orientation' in the Caribbean, it does not recognize same-sex marriage or civil unions. A landmark 2021 judicial review by a local couple challenging the non-recognition of their UK marriage remains a pivotal legal touchstone, but the House of Assembly has been slow to legislate. Gender identity has no formal legal recognition, and there is no pathway for legal gender changes. While the UK government has the power to intervene as it did with decriminalization, it has currently adopted a policy of encouraging local legislative progress rather than imposing it.",
 		travel:
@@ -343,7 +343,7 @@ Object.assign(globalData, {
 	dominica: {
 		name: "Dominica",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal. In a landmark victory on April 22, 2024, the High Court of Dominica struck down the colonial-era laws that criminalized consensual same-sex acts ('buggery' and 'gross indecency'), declaring them unconstitutional. This historic ruling followed similar decisions in Antigua and Barbados. In 2026, the legal status is neutral; being gay is no longer a crime, but there is no legal recognition of same-sex marriage or civil unions. There are currently no proactive anti-discrimination laws in the private sector, and the government has not yet passed legislation to address gender identity or expression. The 2024 ruling was a massive leap forward, but the legal system is still in a 'transitional' phase where the absence of criminalization has not yet been replaced by affirmative protections.",
 		travel:
@@ -363,7 +363,7 @@ Object.assign(globalData, {
 	dominican_republic: {
 		name: "Dominican Republic",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal & Improving. Same-sex sexual activity has been legal since 1822. However, the legal landscape remained stagnant for nearly two centuries until a landmark 2025 Constitutional Court ruling. The court found that the national constitution implicitly bans discrimination based on sexual orientation, effectively striking down old 'sodomy' regulations within the police and military and establishing a precedent for employment protections. Despite this, same-sex marriage is constitutionally banned (Article 55), and there is no recognition for civil unions. As of 2026, a new Penal Code is under debate to formally criminalize hate crimes and 'cruel treatment' based on orientation. Gender identity lacks a formal administrative pathway for change, though judicial challenges are increasing. While the law is evolving, the lack of explicit statutory protections in housing and public accommodations remains a gap.",
 		travel:
@@ -399,7 +399,7 @@ Object.assign(globalData, {
 	el_salvador: {
 		name: "El Salvador",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Fragile. Same-sex sexual activity has been legal since 1826. However, the legal environment in 2026 is marked by significant tension. While hate crimes were formally criminalized in 2015, recent executive actions have moved in a more conservative direction. In 2025, the government issued mandates prohibiting 'inclusive language' and LGBTQ-related content in public schools and state institutions. There is no recognition of same-sex marriage or civil unions, and a 2022 Supreme Court order to allow name changes for transgender people has seen slow and inconsistent implementation. The legal 'posture' of the state has become increasingly hostile to 'gender ideology,' which has created a chilling effect on NGOs, though basic decriminalization remains intact.",
 		travel:
@@ -547,7 +547,7 @@ Object.assign(globalData, {
 	dominican_republic: {
 		name: "Dominican Republic",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal & Improving. Same-sex sexual activity has been legal since 1822. However, the legal landscape remained stagnant for nearly two centuries until a landmark 2025 Constitutional Court ruling. The court found that the national constitution implicitly bans discrimination based on sexual orientation, effectively striking down old 'sodomy' regulations within the police and military and establishing a precedent for employment protections. Despite this, same-sex marriage is constitutionally banned (Article 55), and there is no recognition for civil unions. As of 2026, a new Penal Code is under debate to formally criminalize hate crimes and 'cruel treatment' based on orientation. Gender identity lacks a formal administrative pathway for change, though judicial challenges are increasing. While the law is evolving, the lack of explicit statutory protections in housing and public accommodations remains a gap.",
 		travel:
@@ -583,7 +583,7 @@ Object.assign(globalData, {
 	el_salvador: {
 		name: "El Salvador",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Fragile. Same-sex sexual activity has been legal since 1826. However, the legal environment in 2026 is marked by significant tension. While hate crimes were formally criminalized in 2015, recent executive actions have moved in a more conservative direction. In 2025, the government issued mandates prohibiting 'inclusive language' and LGBTQ-related content in public schools and state institutions. There is no recognition of same-sex marriage or civil unions, and a 2022 Supreme Court order to allow name changes for transgender people has seen slow and inconsistent implementation. The legal 'posture' of the state has become increasingly hostile to 'gender ideology,' which has created a chilling effect on NGOs, though basic decriminalization remains intact.",
 		travel:
@@ -811,7 +811,7 @@ Object.assign(globalData, {
 	dominica: {
 		name: "Dominica",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Recently Decriminalized. In a historic 2024 ruling, the Dominica High Court struck down the country's colonial-era sodomy laws (Sections 14 and 16 of the Sexual Offences Act), declaring that they violated the constitutional rights to liberty and privacy. As of 2026, same-sex sexual activity is legal for both men and women. However, this legal victory is fresh; there is still no recognition for same-sex unions or adoption, and no comprehensive anti-discrimination laws exist. While the 'crime' is gone, the legal system has not yet built proactive protections for the community. Gender identity recognition remains legally non-existent, and the country continues to operate on a very traditional common-law framework.",
 		travel:
@@ -851,7 +851,7 @@ Object.assign(globalData, {
 	montserrat: {
 		name: "Montserrat",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Limited. As a British Overseas Territory, Montserrat decriminalized same-sex acts in 2001 via a UK Order in Council. The 2010 Constitution (and the 2010 Labour Code) explicitly bans discrimination based on sexual orientation. However, same-sex marriage remains constitutionally banned (Article 10), and there is no recognition for civil unions. There are currently no legal pathways for gender identity recognition or protections for gender expression. In 2026, the legal status is one of 'protected but unequal,' as the island maintains a higher age of consent for homosexual acts (18) than for heterosexual ones (16), though this remains under periodic review for alignment with the European Convention on Human Rights.",
 		travel:
@@ -891,7 +891,7 @@ Object.assign(globalData, {
 	panama: {
 		name: "Panama",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Stagnant. Same-sex activity has been legal since 2008. However, Panama remains a legal outlier in the region. In March 2023, the Supreme Court ruled that there is no 'right' to same-sex marriage, effectively ignoring a previous Inter-American Court of Human Rights advisory opinion. As of 2026, same-sex marriage and civil unions are strictly prohibited. There are no national anti-discrimination laws. For transgender people, legal gender change is possible but requires sex reassignment surgery, a high bar that most activists are currently challenging. The legal 'posture' of the state is one of traditionalism, and LGBTQ+ people lack clear statutory protections in housing, employment, or public accommodations.",
 		travel:
@@ -927,7 +927,7 @@ Object.assign(globalData, {
 	peru: {
 		name: "Peru",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Restricted. Same-sex sexual activity has been legal since 1924. However, Peru remains one of the few large South American nations without a legal framework for same-sex unions. In 2022, the Constitutional Court reaffirmed that marriage is exclusively between a man and a woman. While a 2017 decree prohibits discrimination and hate crimes based on sexual orientation and gender identity, enforcement is weak. Notably, in May 2025, Law 32,331 was passed, which explicitly prohibits individuals from using public bathrooms that do not match their biological sex, a significant setback for transgender rights. Legal gender changes are possible through a judicial process, but they are often costly, slow, and frequently appealed by state registries.",
 		travel:
@@ -1035,7 +1035,7 @@ Object.assign(globalData, {
 	st_kitts_nevis: {
 		name: "Saint Kitts and Nevis",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Recently Decriminalized. In August 2022, the Eastern Caribbean Supreme Court (ECSC) struck down the colonial-era 'buggery' and 'indecent assault' laws, declaring them unconstitutional. As of 2026, same-sex activity between consenting adults is legal. However, the legal victory has not yet been followed by proactive legislation. There are no laws recognizing same-sex marriage or civil unions, and the state provides no specific anti-discrimination protections in housing or employment. The government’s 2022-2027 Gender Equality Policy (GEPAP) mentions LGBTQ+ individuals, but implementation remains stalled. Transgender people have no legal pathway to change their gender marker on official documents, leaving them in a state of 'legal invisibility.'",
 		travel:
@@ -1055,7 +1055,7 @@ Object.assign(globalData, {
 	st_lucia: {
 		name: "Saint Lucia",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legalized in 2025. In a historic ruling on July 29, 2025, the High Court of Saint Lucia struck down Sections 132 and 133 of the Criminal Code, which had criminalized 'buggery' and 'gross indecency.' This followed the regional trend set by the ECSC. As of 2026, same-sex intimacy is legal. Saint Lucia also has some unique existing protections: the 2006 Labour Code bans 'unfair dismissal' based on sexual orientation, and the 2022 Domestic Violence Act explicitly protects LGBTQ+ couples. However, same-sex marriage remains unrecognized, and there is no legal procedure for gender identity recognition. The state has previously been the only UN member in the Americas to formally oppose the UN declaration on sexual orientation, though this stance is under internal review following the 2025 ruling.",
 		travel:
@@ -1135,11 +1135,11 @@ Object.assign(globalData, {
 	united_states_of_america: {
 		name: "United States of America",
 		continent: "americas",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Federal Protection vs. State Volatility. At the federal level, the United States offers significant protections, including the landmark 2015 Supreme Court ruling (Obergefell v. Hodges) legalizing same-sex marriage nationwide and the 2020 Bostock v. Clayton County decision protecting LGBTQ+ employees from discrimination. The Respect for Marriage Act (2022) further codified these rights against potential judicial reversals. However, in 2024 and 2025, a stark legal divide has emerged between states. While 'sanctuary states' like California and New York have passed robust protections for gender-affirming care, over 20 other states have passed restrictive legislation targeting transgender healthcare, drag performances, and inclusive curricula in schools. This patchwork legal landscape means that rights are not uniform; a traveler's legal standing regarding discrimination and medical autonomy changes significantly the moment they cross state lines, creating a complex environment for both citizens and visitors.",
 		travel:
-			"High Safety with Regional Caveats. The United States remains a top destination for LGBTQ+ travelers, particularly in urban hubs like San Francisco, New York City, and Chicago, which boast world-famous 'gayborhoods' and massive Pride celebrations. The 'Yellow' status is reflective of the increasing social polarization and specific legislative targeting of the transgender community in certain regions. While physical violence is statistically rare for tourists, travelers should be aware of 'Don't Say Gay' climates in states like Florida or Texas, where public expressions of queer identity may face local administrative or social pushback. PDA is generally safe and celebrated in coastal cities but may attract unwanted attention or verbal harassment in deeply rural or socially conservative 'Red State' areas. Transgender travelers are advised to research state-specific laws regarding bathroom usage and healthcare access before departure, as these are currently high-conflict political issues.",
+			"High Safety with Regional Caveats. The United States remains a top destination for LGBTQ+ travelers, particularly in urban hubs like San Francisco, New York City, and Chicago, which boast world-famous 'gayborhoods' and massive Pride celebrations. The 'amber' status is reflective of the increasing social polarization and specific legislative targeting of the transgender community in certain regions. While physical violence is statistically rare for tourists, travelers should be aware of 'Don't Say Gay' climates in states like Florida or Texas, where public expressions of queer identity may face local administrative or social pushback. PDA is generally safe and celebrated in coastal cities but may attract unwanted attention or verbal harassment in deeply rural or socially conservative 'Red State' areas. Transgender travelers are advised to research state-specific laws regarding bathroom usage and healthcare access before departure, as these are currently high-conflict political issues.",
 		culture:
 			"A Culture of Visibility and Polarization. American LGBTQ+ culture is a global powerhouse, influencing media, fashion, and politics worldwide. From the historic legacy of the Stonewall Inn to the mainstream success of queer icons, visibility is at an all-time high. However, this visibility has met with a significant conservative counter-movement. In 2026, the culture is defined by this 'tug-of-war.' Urban centers offer a vibrant, intersectional queer life with diverse nightlife and community centers. Conversely, many rural communities remain centered on traditional religious values where LGBTQ+ life is less visible or actively discouraged. The 'Culture Wars' have made symbols like the Rainbow Flag a political statement; while it is a sign of safety in many windows, it has been the subject of removal controversies in others. Overall, the U.S. is a place of 'extreme variety'—it houses both the most inclusive and some of the most vocal anti-LGBTQ+ social pockets in the Western world.",
 		health:

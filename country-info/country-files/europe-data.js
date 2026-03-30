@@ -2,7 +2,7 @@ Object.assign(globalData, {
 	albania: {
 		name: "Albania",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Progressive Laws, Social Lag. Same-sex acts have been legal since 1995. Albania has some of the most comprehensive anti-discrimination laws in the Balkans (enacted in 2010), covering sexual orientation, gender identity, and sex characteristics in all areas of life. However, same-sex unions and marriage are not recognized as of 2026. Transgender people face a legal vacuum; there is no administrative process for changing legal gender markers, and the 'Gender Identity' protections are rarely enforced in practice.",
 		travel:
@@ -117,7 +117,7 @@ Object.assign(globalData, {
 	bosnia_and_herzegovina: {
 		name: "Bosnia and Herzegovina",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Fragmented. Same-sex activity has been legal nationwide since 2003. Anti-discrimination laws (2009/2016) cover sexual orientation and gender identity, but they are weakly enforced. Same-sex marriage and unions are NOT recognized as of 2026. Transgender rights are in a gray area; gender change is possible but strictly requires 'full' surgery, which is not available in the country. In early 2026, the government faces pressure from the EU to pass a 'Life Partnership Act,' but it remains stalled due to opposition from conservative religious blocks in the Republika Srpska.",
 		travel:
@@ -168,7 +168,7 @@ Object.assign(globalData, {
 	cyprus: {
 		name: "Cyprus",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Progressive but Incomplete. Same-sex activity has been legal since 1998. Civil unions providing most rights of marriage were enacted in 2015, and conversion therapy was strictly banned in 2023. In a major move, the 2022 legal gender recognition framework allows transgender people over 18 to change their legal gender via self-determination (online application) without surgery or diagnosis. However, joint adoption and IVF for same-sex couples remain illegal in 2026. Note: The northern third of the island (TRNC) has also decriminalized same-sex acts since 2014, though it remains more socially conservative.",
 		travel:
@@ -366,7 +366,7 @@ Object.assign(globalData, {
 	italy: {
 		name: "Italy",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Stagnation & Bureaucratic Churn. Italy legalized civil unions in 2016, but marriage equality and joint adoption remain illegal in 2026. Under the Meloni government (2022–2026), there has been a significant 'administrative crackdown.' In **October 2024**, Italy passed a law making surrogacy a 'universal crime,' allowing the state to prosecute citizens who use surrogates abroad. Furthermore, the government has moved to remove 'non-biological' same-sex parents from birth certificates. Transgender rights exist (legal change possible via court) but face increasing bureaucratic hurdles and rhetoric.",
 		travel:
@@ -385,11 +385,11 @@ Object.assign(globalData, {
 	kosovo: {
 		name: "Kosovo",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Constitutional Protection Amidst Legislative Stagnation. Kosovo stands out in the Western Balkans for its remarkably progressive Constitution, which explicitly prohibits discrimination based on sexual orientation (Article 24). This constitutional framework, established post-independence in 2008, was designed to align with European Union standards. Additionally, the 2015 Law on Protection from Discrimination further reinforces these rights in employment and services. However, in 2026, the legal landscape remains incomplete regarding family rights. While there has been significant debate over a new Civil Code that would allow for same-sex civil partnerships, the parliament has repeatedly stalled its adoption due to pressure from conservative and religious groups. As of early 2026, marriage is still defined as a union between a man and a woman. Transgender individuals face significant hurdles, as there is no clear administrative procedure for legal gender recognition, often requiring lengthy and inconsistent court battles to change gender markers on official identification documents.",
 		travel:
-			"Safe with Moderate Discretion. Kosovo is generally a welcoming and safe destination for LGBTQ+ travelers, particularly in the capital, Pristina. The 'Yellow' status reflects a peaceful environment that still requires social awareness. Pristina has hosted successful Pride parades annually since 2017, which are notable for being well-protected and attended by high-ranking government officials. For a traveler, the primary advice is discretion in rural areas and the northern municipalities, where social conservatism and ethnic tensions are higher. Public Displays of Affection (PDA) are not illegal but may attract stares or verbal comments in deeply traditional neighborhoods. In Pristina’s vibrant cafe culture, younger generations are increasingly open and inclusive. Violent crime against tourists is extremely rare, but travelers are advised to avoid political rallies or protests where conservative rhetoric can sometimes target 'non-traditional' lifestyles. Overall, the safety profile is high, provided one navigates the local cultural norms with common sense.",
+			"Safe with Moderate Discretion. Kosovo is generally a welcoming and safe destination for LGBTQ+ travelers, particularly in the capital, Pristina. The 'amber' status reflects a peaceful environment that still requires social awareness. Pristina has hosted successful Pride parades annually since 2017, which are notable for being well-protected and attended by high-ranking government officials. For a traveler, the primary advice is discretion in rural areas and the northern municipalities, where social conservatism and ethnic tensions are higher. Public Displays of Affection (PDA) are not illegal but may attract stares or verbal comments in deeply traditional neighborhoods. In Pristina’s vibrant cafe culture, younger generations are increasingly open and inclusive. Violent crime against tourists is extremely rare, but travelers are advised to avoid political rallies or protests where conservative rhetoric can sometimes target 'non-traditional' lifestyles. Overall, the safety profile is high, provided one navigates the local cultural norms with common sense.",
 		culture:
 			"A Growing Scene in a Traditional Society. Kosovar culture is characterized by a strong sense of hospitality (Besa) and deep-rooted traditional family values. In 2026, a visible generational gap is defining the LGBTQ+ experience. The capital, Pristina, acts as a 'liberal bubble' with a small but dedicated underground scene, featuring queer-friendly bars and art spaces that foster a sense of community. Outside of the capital, society remains largely heteronormative, and the influence of both Islamic and Orthodox traditions plays a role in public perceptions of queer identity. Despite this, Kosovo is one of the few Muslim-majority countries in the world that regularly holds Pride events without significant violence. The LGBTQ+ movement is driven by energetic local NGOs like CEL and CSGD, which have successfully moved the needle on visibility. For the visitor, the culture feels like a society in transition—simultaneously honoring its conservative past while striving toward a more inclusive, European-aligned future.",
 		health:
@@ -401,7 +401,7 @@ Object.assign(globalData, {
 	latvia: {
 		name: "Latvia",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The First Step. On **July 1, 2024**, Latvia officially implemented its first 'Partnership' law. In 2026, this gives same-sex couples legal recognition and rights in healthcare and tax, but it is explicitly *not* marriage and does not include adoption or inheritance rights. Marriage remains constitutionally restricted to opposite-sex couples. Transgender rights require a 'medical certificate' (vaguely defined), though surgery is no longer strictly mandatory in practice. It is a country making slow, 'legalistic' progress under heavy pressure from the EU and its own courts.",
 		travel:
@@ -439,7 +439,7 @@ Object.assign(globalData, {
 	lithuania: {
 		name: "Lithuania",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Constitutional Deadlock. Lithuania remains one of the few EU states without any legal recognition for same-sex couples in 2026. After several failed civil union bills (2022–2025), the government withdrew the latest proposal in **late 2025** due to political boycotts. However, a **2025 Constitutional Court ruling** has begun allowing couples to register 'cohabitation agreements' through the courts. Marriage is constitutionally banned. Transgender rights allow for legal gender change without surgery, but the process often requires a court battle to force the registry office to comply.",
 		travel:
@@ -474,11 +474,11 @@ Object.assign(globalData, {
 	north_macedonia: {
 		name: "North Macedonia",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"A Framework of Progress with Implementation Gaps. North Macedonia has made significant strides in legalizing LGBTQ+ rights compared to its regional neighbors. Same-sex sexual activity was decriminalized in 1996, and in 2020, the country adopted a comprehensive Law on Prevention and Protection against Discrimination that explicitly includes sexual orientation and gender identity. This was a critical requirement for its European Union accession path. However, in 2026, the legal frontier remains stalled regarding same-sex unions. While marriage is not constitutionally banned, there is no legal recognition for civil unions or domestic partnerships. Furthermore, legal gender recognition for transgender individuals remains a complex judicial process rather than a simplified administrative one. While the laws on the books are increasingly progressive, the state’s ability to enforce these protections in the face of local administrative resistance remains the primary legal hurdle for citizens.",
 		travel:
-			"Safe for Travelers with Moderate Social Caution. North Macedonia is generally safe for LGBTQ+ visitors, particularly in the capital, Skopje. The 'Yellow' status indicates that while state persecution is non-existent, social conservatism remains high. Public Displays of Affection (PDA) are generally tolerated in the center of Skopje and around the tourist areas of Lake Ohrid, but may attract unwanted attention or verbal harassment in smaller towns and rural areas. The country hosted its first Pride parade in 2019, which has since become an annual event, though it requires heavy police protection to ensure safety from small groups of counter-protesters. Travelers should feel comfortable in international hotel chains and mainstream cafes, but a degree of discretion is advised when interacting with older generations or in deeply traditional neighborhoods. Violent incidents against tourists are rare, but 'quiet visibility' is the standard approach for most queer visitors.",
+			"Safe for Travelers with Moderate Social Caution. North Macedonia is generally safe for LGBTQ+ visitors, particularly in the capital, Skopje. The 'amber' status indicates that while state persecution is non-existent, social conservatism remains high. Public Displays of Affection (PDA) are generally tolerated in the center of Skopje and around the tourist areas of Lake Ohrid, but may attract unwanted attention or verbal harassment in smaller towns and rural areas. The country hosted its first Pride parade in 2019, which has since become an annual event, though it requires heavy police protection to ensure safety from small groups of counter-protesters. Travelers should feel comfortable in international hotel chains and mainstream cafes, but a degree of discretion is advised when interacting with older generations or in deeply traditional neighborhoods. Violent incidents against tourists are rare, but 'quiet visibility' is the standard approach for most queer visitors.",
 		culture:
 			"Traditional Values Meeting a Developing Queer Scene. The culture of North Macedonia is a blend of Mediterranean hospitality and Balkan conservatism. In 2026, there is a clear generational divide; younger Macedonians are increasingly inclusive and influenced by global queer media, while the older population remains anchored in traditional Orthodox or Islamic family values. Skopje has a small but resilient LGBTQ+ scene, with several 'safe-space' cafes and underground parties that provide a vibrant sense of community. The culture is not overtly hostile, but it is 'heteronormative'—meaning the assumption of heterosexuality is the default. Pride events have successfully increased visibility, but they are often framed by local media as political events rather than cultural celebrations. For the traveler, the experience is one of being welcomed as a guest first, with your identity being a secondary, private matter in the eyes of the locals.",
 		health:
@@ -506,7 +506,7 @@ Object.assign(globalData, {
 	moldova: {
 		name: "Moldova",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Pro-EU Shift. In 2026, Moldova is in a significant period of transition. While marriage is still constitutionally restricted to opposite-sex couples, the country has significantly expanded its anti-discrimination laws. A **2023 law** added 'sexual orientation and gender identity' as protected grounds across all sectors. In **November 2025**, following a landmark European Court of Justice ruling, Moldova (as an EU candidate) began the legal process of recognizing same-sex marriages performed elsewhere in the EU for residency purposes. However, domestic civil partnerships remain stalled in parliament as of early 2026.",
 		travel:
@@ -522,7 +522,7 @@ Object.assign(globalData, {
 	monaco: {
 		name: "Monaco",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Conservative Exception. Monaco remains the most conservative state in Western Europe regarding LGBTQ+ rights. It does not recognize same-sex marriage. Since **June 2020**, couples can sign a 'cohabitation agreement' (*contrat de vie commune*), which provides limited rights in inheritance and health, but does not grant the same tax or social status as marriage. In **July 2022**, the Court of First Instance established a precedent allowing legal gender change, though it remains an 'ambiguous' and court-heavy process in 2026. Adoption and IVF for same-sex couples remain illegal.",
 		travel:
@@ -538,7 +538,7 @@ Object.assign(globalData, {
 	montenegro: {
 		name: "Montenegro",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Balkan Pioneer. Montenegro has recognized same-sex partnerships (Life Partnerships) since 2020, granting most rights of marriage excluding adoption. In **2024–2025**, the government lifted long-standing restrictions on LBTQ women accessing medically assisted insemination. It remains one of the few Balkan nations with full constitutional protection for 'sexual orientation and gender identity.' However, same-sex marriage remains constitutionally banned in 2026, and legal gender recognition still requires a medical component (though self-determination court challenges are active).",
 		travel:
@@ -592,11 +592,11 @@ Object.assign(globalData, {
 	northern_cyprus: {
 		name: "Northern Cyprus",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
-			"A Post-Colonial Transition to Protection. Northern Cyprus was the final territory in Europe to repeal its colonial-era 'anti-sodomy' laws, decriminalizing same-sex activity in February 2014. In 2026, the legal landscape is defined by the 2014 Penal Code amendments, which not only legalized private consensual acts but also introduced explicit protections against hate speech and discrimination in public services. However, despite these advancements, there is no legal recognition for same-sex unions or marriage, and adoption rights remain unavailable for queer couples. Gender identity is not currently a recognized legal category for document changes, leaving transgender individuals in a state of legal invisibility. While the laws on the books are superior to those in mainland Turkey, the lack of full civil rights for families keeps the region at a 'Yellow' status.",
+			"A Post-Colonial Transition to Protection. Northern Cyprus was the final territory in Europe to repeal its colonial-era 'anti-sodomy' laws, decriminalizing same-sex activity in February 2014. In 2026, the legal landscape is defined by the 2014 Penal Code amendments, which not only legalized private consensual acts but also introduced explicit protections against hate speech and discrimination in public services. However, despite these advancements, there is no legal recognition for same-sex unions or marriage, and adoption rights remain unavailable for queer couples. Gender identity is not currently a recognized legal category for document changes, leaving transgender individuals in a state of legal invisibility. While the laws on the books are superior to those in mainland Turkey, the lack of full civil rights for families keeps the region at a 'amber' status.",
 		travel:
-			"Safe and Welcoming for Discrete Travelers. Northern Cyprus is a peaceful and increasingly popular tourist destination where LGBTQ+ travelers face very little risk of state-led harassment. The 'Yellow' status reflects the conservative social backdrop rather than any legal danger. In the capital, North Nicosia (Lefkoşa), and coastal towns like Girne (Kyrenia), the atmosphere is relaxed, and queer travelers are welcomed as guests. Public Displays of Affection (PDA) should be kept to a minimum to avoid local discomfort, but the risk of violence is extremely low. The region has begun hosting small Pride events, which have been attended by local mayors, signaling a significant shift in government posture. Travelers should feel confident using mainstream hotels and restaurants, as the local economy relies heavily on tourism and maintains a professional 'live and let live' attitude.",
+			"Safe and Welcoming for Discrete Travelers. Northern Cyprus is a peaceful and increasingly popular tourist destination where LGBTQ+ travelers face very little risk of state-led harassment. The 'amber' status reflects the conservative social backdrop rather than any legal danger. In the capital, North Nicosia (Lefkoşa), and coastal towns like Girne (Kyrenia), the atmosphere is relaxed, and queer travelers are welcomed as guests. Public Displays of Affection (PDA) should be kept to a minimum to avoid local discomfort, but the risk of violence is extremely low. The region has begun hosting small Pride events, which have been attended by local mayors, signaling a significant shift in government posture. Travelers should feel confident using mainstream hotels and restaurants, as the local economy relies heavily on tourism and maintains a professional 'live and let live' attitude.",
 		culture:
 			"Secularism vs. Traditional Influence. The culture of Northern Cyprus is distinct from both mainland Turkey and the Republic of Cyprus. It is a largely secular society where the influence of religion on daily law is minimal. In 2026, there is a vibrant sense of community in the north, driven by local NGOs like 'Queer Cyprus,' which have successfully normalized the conversation around LGBTQ+ rights. However, family remains the core of society, and many local queer people choose to remain 'closeted' to their older relatives to maintain social harmony. For a visitor, the culture is one of profound hospitality (Misafirperverlik), where you are treated with respect regardless of your background, provided you respect local social boundaries. It is an environment of 'quiet acceptance' rather than 'celebrated pride.'",
 		health:
@@ -608,7 +608,7 @@ Object.assign(globalData, {
 	poland: {
 		name: "Poland",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Great Transition. Between 2024 and 2026, Poland underwent a historic shift. By **April 2025**, all 'LGBT-Free Zones' were officially repealed or invalidated by courts. In **January 2026**, the Tusk government introduced the 'Closest Person Status' bill (a rebrand of Registered Partnerships) to provide same-sex couples with rights to health information, inheritance, and joint taxation. While same-sex marriage remains constitutionally restricted, the state has moved from active hostility to 'gradual recognition.' Conversion therapy bans and expanded hate crime laws are currently under legislative debate as of early 2026.",
 		travel:
@@ -675,7 +675,7 @@ Object.assign(globalData, {
 	republic_of_serbia: {
 		name: "Serbia",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Stalled Promise. Serbia remains the only country with an 'out' lesbian Prime Minister (Ana Brnabić, serving until 2024) that has failed to pass a same-sex partnership law. In 2026, the 'Same-Sex Partnership Bill' remains stalled in parliament due to a lack of political will and opposition from the President. Same-sex marriage is constitutionally banned. Transgender rights exist (legal change possible without surgery), but the process is medically heavy. Discrimination is legally banned in employment and education, though enforcement is inconsistent.",
 		travel:
@@ -771,7 +771,7 @@ Object.assign(globalData, {
 	ukraine: {
 		name: "Ukraine",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"War-Driven Progress. In 2026, Ukraine is in a unique position. While marriage is constitutionally restricted, the war has accelerated the push for 'Civil Partnerships.' Since **March 2023**, a bill to recognize same-sex unions (focusing on rights for soldiers' partners) has been in parliament. As of early 2026, the government is working to pass this as a key 'EU Roadmap' requirement. Discrimination in the workplace is banned, and in **2024**, a landmark hate-crime law was introduced to include 'sexual orientation and gender identity.' Progress is rapid but currently focused on 'human rights for the front lines.'",
 		travel:
@@ -819,7 +819,7 @@ Object.assign(globalData, {
 	vatican_city: {
 		name: "Vatican City",
 		continent: "europe",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"The Theocratic Exception. As a theocracy, the Vatican recognizes no civil LGBTQ+ rights. However, the 'pastoral' stance has shifted. The **2023 declaration *Fiducia Supplicans*** allowed priests to give spontaneous, non-liturgical blessings to same-sex couples. Furthermore, **2024 Vatican guidelines** clarified that transgender individuals can be baptized and serve as godparents. In 2026, while doctrine still views same-sex acts as 'sinful,' the administrative focus has moved toward 'pastoral closeness' rather than active exclusion.",
 		travel:

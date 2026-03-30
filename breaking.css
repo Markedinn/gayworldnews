@@ -105,16 +105,6 @@ h2 {
 	line-height: 1.4;
 }
 
-.rainbow-line {
-	height: 5px;
-	width: 100%;
-	max-width: 600px;
-	margin: 15px auto 0 auto;
-	border-radius: 2px;
-	background: linear-gradient(90deg, #ff3b3b, #ff8800, #ffee00, #33ff33, #0088ff, #9933ff);
-	opacity: 0.8;
-}
-
 /* --- TRANSLATOR, BENTO & SEARCH CARDS --- */
 
 .three-search-container {
@@ -152,7 +142,7 @@ h2 {
 	background-image: url("../images/globe-icon.svg");
 	background-repeat: no-repeat;
 	background-size: contain;
-	filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.3));
+	filter: invert(12%) sepia(95%) saturate(5453%) hue-rotate(244deg) brightness(85%) contrast(148%);
 	pointer-events: none;
 	z-index: 10;
 }
@@ -164,13 +154,13 @@ h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(22, 7, 230, 0.8) !important;
-	border: 1px solid rgba(252, 248, 248, 0.747) !important;
-	border-left: 6px solid rgba(252, 248, 248, 0.8) !important;
+	background: rgba(255, 255, 255, 1);
+	border: 1px solid rgb(228, 82, 191);
+	border-left: 3px solid rgb(228, 82, 191);
 	border-radius: 50px !important;
 	border-radius: 50px;
-	color: #ffffff;
-	font-weight: 600;
+	color: rgba(22, 7, 230, 1);
+	font-weight: 800;
 	text-transform: uppercase;
 	transition: 0.3s ease;
 	cursor: pointer;
@@ -201,16 +191,12 @@ h2 {
 #translator-anchor select:hover {
 	background: rgba(22, 7, 230, 1) !important;
 	border-color: #ffffff !important;
+	color: #ffffff !important;
 	box-shadow:
 		0 8px 15px rgba(12, 12, 12, 0.3),
 		inset 0 3px 5px rgba(255, 255, 255, 0.4);
 	transform: translateY(-2px);
 	transition: all 0.2s ease-out;
-}
-
-#translator-anchor .gt_selector img {
-	margin-top: -2px !important;
-	margin-right: 8px !important;
 }
 
 /* THE SEARCH AND MAP PILLS */
@@ -219,27 +205,33 @@ h2 {
 .search-map-link {
 	width: 100%;
 	height: 50px;
-	padding: 12px 20px;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0 20px !important;
 	border-radius: 50px;
-	background: rgba(22, 7, 230, 0.8);
+	background: rgba(255, 255, 255, 1);
 	letter-spacing: 2px;
 	text-decoration: none;
-	border: 1px solid rgba(255, 255, 255, 0.8);
-	border-left: 6px solid rgba(255, 255, 255, 0.9);
+	border: 1px solid rgb(228, 82, 191);
+	border-left: 3px solid rgb(228, 82, 191);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	font-size: 16px;
-	color: #ffffff;
-	font-weight: 600;
+	color: rgba(22, 7, 230, 1);
+	font-weight: 800;
 	text-align: center;
-	box-sizing: border-box;
 	outline: none;
 	caret-color: #ffffff;
 }
 
 .landing-search-wrap input::placeholder {
-	color: #ffffff;
+	color: rgba(22, 7, 230, 1);
 	letter-spacing: 2px;
+}
+
+.landing-search-wrap input:hover::placeholder {
+	color: #ffffff !important;
 }
 
 /* --- DROPDOWN MENU--- */
@@ -268,27 +260,6 @@ h2 {
 	max-height: 45vh;
 }
 
-/* --- THE INVISIBLE LIST ITEM --- */
-
-.search-results-floating .country-card.search-item-card,
-.search-results-floating .country-card.red,
-.search-results-floating .country-card.green,
-.search-results-floating .country-card.warning,
-.search-results-floating .country-card.yellow {
-	background: transparent;
-	min-height: auto;
-	border: none;
-	backdrop-filter: none;
-	margin: 0;
-	padding: 12px 15px;
-	display: block;
-	color: #ffffff;
-	text-transform: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	z-index: 20;
-}
-
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-5px);
 	background: rgba(22, 7, 230, 1);
@@ -304,13 +275,88 @@ h2 {
 	width: 100%;
 }
 
-.landing-pill-style:hover select,
-.landing-search-wrap:hover input,
+.landing-search-wrap input:hover,
 .search-map-link:hover {
-	transform: translateY(-4px);
-	background: rgba(22, 7, 230, 0.9);
-	border-color: rgba(255, 255, 255, 1);
+	background: rgba(22, 7, 230, 1) !important;
+	color: #ffffff !important;
+	border-color: #ffffff !important;
+	transform: translateY(-2px);
+	box-shadow:
+		0 8px 15px rgba(12, 12, 12, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+}
+
+/* Country Cards */
+
+.country-card {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin: 12px auto !important;
+	padding: 10px !important;
+	border-radius: 15px !important;
+	text-decoration: none !important;
+	min-height: 70px !important;
+	border: none !important;
+	background: rgba(22, 7, 230, 0.95) !important;
+	color: #ffffff !important;
+	width: 100% !important;
+	padding: 12px 5px !important;
+	border-radius: 10px !important;
+	text-align: center !important;
+	font-size: 1.2rem !important;
+	font-weight: 600 !important;
+	letter-spacing: 0.5px !important;
+	text-transform: uppercase !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 3. Status Backgrounds (Slightly Transparent) */
+.country-card.green {
+	background-color: rgba(0, 180, 0, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.country-card.amber {
+	background-color: rgba(223, 157, 16, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.country-card.red {
+	background-color: rgba(200, 0, 0, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/* --- THE ANTARCTICA ICE CARD --- */
+.country-card.ice {
+	background-color: rgba(102, 207, 241, 0.966) !important;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+
+.country-card:hover {
+	transform: translateY(-3px);
+	filter: brightness(1.15);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
+}
+
+/* Make the inner blue box pop even more on hover */
+.country-card:hover span {
+	background: rgba(22, 7, 230, 1) !important;
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Specific Red Glow for Danger */
+.country-card.red:hover {
+	box-shadow: 0 0 20px rgba(200, 0, 0, 0.6);
+}
+
+/* Tap Effect (Mobile/All) */
+.country-card:active {
+	transform: scale(0.97);
+	filter: brightness(0.9);
 }
 
 .news-feed-wrapper {

@@ -63,11 +63,11 @@
 	box-shadow: 0 0 8px #28a745;
 }
 .warning,
-.yellow,
+.amber,
 .status-dot-country.warning,
-.status-dot-country.yellow {
-	background: #ffc107;
-	box-shadow: 0 0 8px #ffc107;
+.status-dot-country.amber {
+	background: #f59e0b;
+	box-shadow: 0 0 8px #f59e0b;
 }
 .danger,
 .red,
@@ -103,7 +103,7 @@
 .news-accordion.green {
 	border: 3px solid #22c55e;
 }
-.news-accordion.yellow {
+.news-accordion.amber {
 	border: 3px solid #f59e0b;
 }
 .news-accordion.red {

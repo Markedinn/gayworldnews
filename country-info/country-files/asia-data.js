@@ -22,7 +22,7 @@ Object.assign(globalData, {
 	armenia: {
 		name: "Armenia",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Unprotected. Same-sex activity has been legal since 2003, but the 2015 Constitution was amended to define marriage strictly as a union between a man and a woman. In early 2026, the government faced international pressure to adopt a comprehensive anti-discrimination law, which still excludes explicit mention of SOGI (Sexual Orientation and Gender Identity) to avoid domestic backlash. While legal gender change is possible, it remains 'medicalized' and often requires proof of surgery. In February 2026, rumors of a state-approved Pride parade were officially denied by the Prime Minister's office, signaling a continued hesitance to grant public visibility.",
 		travel:
@@ -58,7 +58,7 @@ Object.assign(globalData, {
 	bahrain: {
 		name: "Bahrain",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Restricted. Same-sex activity was decriminalized in 1976. However, broad 'public indecency' and 'debauchery' laws are frequently used to target the community. In 2025, efforts were made to introduce even stricter 'anti-homosexuality' propaganda laws, though they remain in debate as of 2026. Legal gender change is possible but strictly 'medicalized' and requires a court order based on surgery. There are no anti-discrimination protections. Under the 'National Plan for Human Rights 2022-2026,' the government claims to protect 'vulnerable groups,' but this has not yet translated into specific LGBTQ+ rights.",
 		travel:
@@ -134,7 +134,7 @@ Object.assign(globalData, {
 	cambodia: {
 		name: "Cambodia",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Unrecognized. Same-sex sexual activity has never been criminalized in Cambodia’s history. However, there are no national anti-discrimination laws or hate crime protections. While the 1993 Constitution limits marriage to 'one man and one woman,' King Norodom Sihamoni has publicly supported same-sex marriage. In 2026, a limited 'Declaration of Family Relationship' is available in about 5% of communes, providing some local recognition for couples. There is no legal pathway to change your gender marker on official documents. While the state is not aggressive, the lack of formal protection leaves the community vulnerable to administrative bias.",
 		travel:
@@ -186,7 +186,7 @@ Object.assign(globalData, {
 	india: {
 		name: "India",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Limited. Same-sex activity was decriminalized in 2018 (Navtej Singh Johar v. Union of India). While the Supreme Court declined to legalize same-sex marriage in October 2023, it reinforced the right to 'live-in relationships' for queer couples. In early 2026, the Allahabad High Court ruled that police must provide protection to same-sex couples in such relationships, citing constitutional fundamental rights. Several states like Odisha and Delhi have introduced 'Transgender Welfare Rules' in 2025-2026, including third-gender options in civil service exams and passports. However, there is no national anti-discrimination law covering the private sector, and marriage rights remain in the hands of Parliament.",
 		travel:
@@ -294,7 +294,7 @@ Object.assign(globalData, {
 	jordan: {
 		name: "Jordan",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Restricted. Same-sex activity was decriminalized in 1951. However, in August 2023, Jordan passed a new 'Cybercrime Law' which in 2026 is being used to target 'immoral' digital content, including LGBTQ+ advocacy. While you cannot be arrested for being gay, you can be arrested for 'disrupting public morality' (Article 278 of the Penal Code). In 2024, the government banned doctors from performing gender-affirming surgery on anyone whose biological sex is 'clear.' There are no discrimination protections, and the 'Family Values' rhetoric has intensified in 2026.",
 		travel:
@@ -374,7 +374,7 @@ Object.assign(globalData, {
 	laos: {
 		name: "Laos",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Unrecognized. Same-sex sexual activity has never been criminalized in the Lao People's Democratic Republic. However, there are no laws protecting against discrimination based on orientation or gender identity. As of 2026, there is no legal framework for same-sex marriage or civil unions, and the state remains socially conservative. While the government generally ignores the private lives of citizens, it does not permit formal LGBTQ+ advocacy or political organizing. There is no legal procedure to change one’s gender marker, leaving transgender individuals in a state of administrative invisibility.",
 		travel:
@@ -582,7 +582,7 @@ Object.assign(globalData, {
 	philippines: {
 		name: "Philippines",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Limited. Same-sex acts have never been criminalized. In February 2026, the Supreme Court made a landmark ruling granting limited property and inheritance rights to same-sex couples, though it stopped short of recognizing marriage. The 'SOGIESC Equality Bill' (Anti-Discrimination Bill) remains the longest-debated bill in history; as of early 2026, it is still stuck in the 20th Congress despite passing the House several times. Many cities (Manila, Quezon City, Cebu) have their own local anti-discrimination ordinances, creating a 'patchwork' of protections depending on where you stand.",
 		travel:
@@ -638,7 +638,7 @@ Object.assign(globalData, {
 	singapore: {
 		name: "Singapore",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Decriminalized but Restricted. Section 377A was officially repealed in January 2023, decriminalizing gay sex. However, the Constitution was simultaneously amended (Article 156) to protect the definition of marriage as 'between a man and a woman,' effectively blocking any court challenges for marriage equality. In 2026, there are no national anti-discrimination laws. Transgender people can change their legal gender, but only after undergoing full gender-reassignment surgery (including 'bottom' surgery), making it one of the most restrictive processes in the region.",
 		travel:
@@ -658,7 +658,7 @@ Object.assign(globalData, {
 	south_korea: {
 		name: "South Korea",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal but Unprotected. Same-sex activity is legal, but in 2026, a national Anti-Discrimination Act still hasn't passed due to fierce religious opposition. However, in July 2024, the Supreme Court issued a landmark ruling confirming that same-sex partners are eligible for state health insurance benefits—the first time the state has recognized same-sex unions in any capacity. Transgender people can change their legal gender, and in 2024, the Supreme Court further eased the process by ruling that having minor children is no longer a bar to gender correction.",
 		travel:
@@ -678,7 +678,7 @@ Object.assign(globalData, {
 	sri_lanka: {
 		name: "Sri Lanka",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Decriminalization in Progress. In 2024–2025, the Supreme Court cleared a private member's bill to decriminalize same-sex acts (repealing Section 365/365A). As of early 2026, the bill has the support of the major political parties (NPP, SJB) and is moving through its final parliamentary readings. While still technically 'illegal' until the final vote is gazetted, the police have been instructed to stop arrests for consensual acts. There are currently no broader anti-discrimination laws, and transgender rights depend on a 2016 circular that allows for gender change with a medical certificate.",
 		travel:
@@ -774,7 +774,7 @@ Object.assign(globalData, {
 	timor_leste: {
 		name: "Timor-Leste",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal & Developing. Same-sex activity has been legal since 2009. In 2024–2026, the government took quiet but significant steps: Decree-Law 22/2024 officially designated LGBTQI+ individuals as a 'vulnerable population' entitled to specific state social protections. There are no marriage or civil union laws yet, but the 2026-2030 National Equality Strategy aims to further integrate queer rights into state policy. There are currently no laws regarding legal gender recognition for transgender people, leaving them in a legal gray area.",
 		travel:
@@ -858,11 +858,11 @@ Object.assign(globalData, {
 	vietnam: {
 		name: "Vietnam",
 		continent: "asia",
-		status: "yellow",
+		status: "amber",
 		legal:
 			"Legal & Advancing. Same-sex activity has never been criminalized. In 2024–2026, Vietnam entered a period of 'Quiet Progress.' While a full 'Gender Affirmation Law' for transgender people was delayed in late 2024, the government has signaled support for its re-introduction in 2026. Same-sex marriage is 'not prohibited' but also not legally recognized, meaning symbolic weddings are allowed but carry no legal weight. In 2022, the Ministry of Health officially declared that being LGBTQ+ is 'not a disease' and banned conversion therapy practices nationwide.",
 		travel:
-			"Safe & Welcoming. Vietnam is very safe and increasingly 'queer-friendly' in its tourist hubs. In 2026, Hanoi and Ho Chi Minh City (Saigon) have thriving, open scenes. PDA is generally tolerated in cities and among the younger generation, though it remains rare in rural areas. Transgender travelers are safe from violence and are common in the service industry. The 'posture' is: confident openness. You will find that most Vietnamese people are curious and non-judgmental, making it one of the most comfortable 'yellow' status countries in Asia.",
+			"Safe & Welcoming. Vietnam is very safe and increasingly 'queer-friendly' in its tourist hubs. In 2026, Hanoi and Ho Chi Minh City (Saigon) have thriving, open scenes. PDA is generally tolerated in cities and among the younger generation, though it remains rare in rural areas. Transgender travelers are safe from violence and are common in the service industry. The 'posture' is: confident openness. You will find that most Vietnamese people are curious and non-judgmental, making it one of the most comfortable 'amber' status countries in Asia.",
 		culture:
 			"Pragmatic & Youth-Driven. Vietnamese culture is influenced by ancestor worship and Confucianism, but lacks the religious anti-queer zeal found elsewhere. In 2026, 'VietPride' is a series of festive events across major cities. For a visitor, the culture is one of 'Hoi Nhap' (Integration)—moving toward global standards while maintaining local harmony. The youth are exceptionally progressive. It is a society that values 'social peace,' so as long as you are respectful, your identity will rarely be an issue. It is a country on the verge of a major pro-LGBTQ+ legal shift.",
 		health:

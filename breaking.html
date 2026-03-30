@@ -197,10 +197,6 @@
 		</footer>
 
 		<script>
-			function toggleMenu() {
-				document.getElementById("sideMenu").classList.toggle("open");
-			}
-
 			document.addEventListener("DOMContentLoaded", () => {
 				const globalInput = document.getElementById("globalSearch");
 				const globalResults = document.getElementById("searchResults");
@@ -208,24 +204,33 @@
 				globalInput.addEventListener("input", (e) => {
 					const value = e.target.value.toLowerCase().trim();
 					globalResults.innerHTML = "";
+
 					if (value.length > 0 && typeof globalData !== "undefined") {
 						globalResults.style.display = "flex";
+
 						Object.keys(globalData)
 							.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
 							.forEach((key) => {
-								// ... inside your forEach((key) => { ...
 								if (globalData[key].name.toLowerCase().startsWith(value)) {
+									const country = globalData[key];
 									const link = document.createElement("a");
 									link.href = `country.html?c=${key}`;
 
-									// 1. ADD THIS LINE so the CSS knows what to animate
+									// 1. THIS CREATES THE CARD LOOK
 									link.classList.add("country-card");
 
-									// 2. CHANGE THIS LINE (Remove the inline padding/border strings)
-									// We only keep the color and weight so it stays visible
-									link.style = "color:white; text-decoration:none; font-weight:bold; display:block;";
+									// 2. THIS INJECTS THE COLOR (Red, Green, or Warning)
+									if (country.status) {
+										link.classList.add(country.status);
+									} else {
+										link.classList.add("search-item-card");
+									}
 
-									link.innerHTML = globalData[key].name;
+									// 3. OVERRIDE TEXT DECORATION
+									link.style.textDecoration = "none";
+									link.style.display = "block";
+
+									link.innerHTML = country.name;
 									globalResults.appendChild(link);
 								}
 							});
@@ -233,12 +238,14 @@
 						globalResults.style.display = "none";
 					}
 				});
-			});
 
-			document.addEventListener("click", (e) => {
-				if (!document.querySelector(".landing-search-wrap").contains(e.target)) {
-					document.getElementById("searchResults").style.display = "none";
-				}
+				// Close results when clicking outside
+				document.addEventListener("click", (e) => {
+					const wrap = document.querySelector(".landing-search-wrap");
+					if (wrap && !wrap.contains(e.target)) {
+						globalResults.style.display = "none";
+					}
+				});
 			});
 		</script>
 

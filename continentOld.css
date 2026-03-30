@@ -138,7 +138,7 @@ body::before {
 .search-results-floating .country-card.red,
 .search-results-floating .country-card.green,
 .search-results-floating .country-card.warning,
-.search-results-floating .country-card.yellow {
+.search-results-floating .country-card.amber {
 	/* 1. THE ERASER: This kills the blocky grid styles */
 	background: transparent !important;
 	min-height: auto;
@@ -268,7 +268,7 @@ body::before {
 .country-card.red {
 	background: rgba(210, 0, 0, 0.9);
 }
-.country-card.yellow {
+.country-card.amber {
 	background: rgba(255, 215, 0, 0.9);
 }
 .country-card.green {

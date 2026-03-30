@@ -652,7 +652,7 @@ function renderCard(it) {
 
 			if (!map[c]) return "";
 
-			// 2. Use a special class for Unchanged so it gets the yellow color
+			// 2. Use a special class for Unchanged so it gets the amber color
 			const css = c === "trend-stable" ? "tag-unchanged" : c.replace("trend-", "");
 			return `<span class="tag tag-${css}">${map[c]}</span>`;
 		})
