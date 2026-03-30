@@ -371,87 +371,76 @@ body::before {
 /* Country Cards */
 
 .country-card {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 70px;
-	background: rgba(22, 7, 230, 0.8);
-	border-radius: 12px;
-	padding: 15px;
-	color: #ffffff;
-	font-weight: 800;
-	text-transform: uppercase;
-	text-decoration: none;
-	text-align: center;
-	letter-spacing: 0.5px;
-	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	cursor: pointer;
-	border: 1px solid rgba(252, 248, 248, 0.4);
-	border-left: 8px solid rgba(252, 248, 248, 0.4);
-	box-shadow:
-		0 4px 12px rgba(0, 0, 0, 0.25),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.3);
-	will-change: transform;
+	display: flex !important;
+	align-items: center !important; /* Centers Inner Pill on Y-axis */
+	justify-content: center !important; /* Centers Inner Pill on X-axis */
+	margin: 12px auto !important;
+	padding: 10px !important; /* Space between color frame and blue box */
+	border-radius: 15px !important;
+	text-decoration: none !important;
+	width: 92% !important;
+	min-height: 70px !important; /* Ensures consistent height */
+	border: none !important;
+	background: rgba(22, 7, 230, 0.95) !important; /* Your signature blue */
+	color: #ffffff !important;
+	width: 100% !important;
+	padding: 12px 5px !important;
+	border-radius: 10px !important;
+	text-align: center !important;
+	font-size: 1.2rem !important; /* Bigger letters */
+	font-weight: 600 !important;
+	letter-spacing: 0.5px !important;
+	text-transform: uppercase !important;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-.country-card:active {
-	transform: translateY(2px) scale(0.98);
-	box-shadow:
-		0 2px 5px rgba(0, 0, 0, 0.2),
-		inset 0 2px 4px rgba(0, 0, 0, 0.5);
+/* 3. Status Backgrounds (Slightly Transparent) */
+.country-card.green {
+	background-color: rgba(0, 180, 0, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.country-card.yellow {
+	background-color: rgba(223, 157, 16, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .country-card.red {
-	border-color: rgb(252, 3, 53, 0.8);
+	background-color: rgba(200, 0, 0, 0.9) !important;
+	color: #ffffff;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
-.country-card.yellow {
-	border-color: rgb(255, 238, 0, 0.8);
-}
-
-.country-card.green {
-	border-color: rgb(4, 247, 129, 0.8);
-}
-
+/* --- THE ANTARCTICA ICE CARD --- */
 .country-card.ice {
-	border-color: rgba(0, 229, 255, 0.8);
+	/* A crisp, frozen blue-grey at 0.89 opacity */
+	background-color: rgba(102, 207, 241, 0.966) !important;
+	border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .country-card:hover {
-	transform: translateY(-5px);
-	background: rgba(22, 7, 230, 1);
+	transform: translateY(-3px); /* Subtle lift up */
+	filter: brightness(1.15); /* Slight highlight */
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+	cursor: pointer;
 }
 
+/* Make the inner blue box pop even more on hover */
+.country-card:hover span {
+	background: rgba(22, 7, 230, 1) !important; /* Solid blue on hover */
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Specific Red Glow for Danger */
 .country-card.red:hover {
-	border-color: rgba(252, 3, 53, 0.8);
-	box-shadow:
-		-4px 5px 10px rgb(255, 0, 51),
-		inset 0 2px 4px rgba(255, 255, 255, 0.2),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
-}
-.country-card.yellow:hover {
-	border-color: rgba(252, 235, 3, 0.8);
-	box-shadow:
-		-4px 5px 10px rgba(241, 226, 4, 0.925),
-		inset 0 2px 4px rgba(255, 255, 255, 0.2),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
+	box-shadow: 0 0 20px rgba(200, 0, 0, 0.6);
 }
 
-.country-card.green:hover {
-	border-color: rgba(0, 230, 119, 1);
-	box-shadow:
-		-4px 5px 10px rgba(0, 230, 119, 0.8),
-		inset 0 2px 4px rgba(255, 255, 255, 0.2),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
-}
-
-.country-card.ice:hover {
-	border-color: rgba(0, 229, 255, 1);
-	box-shadow:
-		-4px 5px 10px rgba(0, 229, 255, 0.8),
-		inset 0 2px 4px rgba(255, 255, 255, 0.2),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.4);
+/* Tap Effect (Mobile/All) */
+.country-card:active {
+	transform: scale(0.97);
+	filter: brightness(0.9);
 }
 
 /* --- QUICK EXIT --- */
@@ -829,4 +818,8 @@ body::before {
 	.home-hero .main-title {
 		font-size: 5rem !important;
 	}
+}
+
+@media screen and (max-width: 480px) {
+	/* 1. The Outer Card (The Status Frame) */
 }
