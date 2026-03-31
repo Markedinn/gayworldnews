@@ -392,7 +392,7 @@ Object.assign(globalData, {
 		],
 	},
 
-	bosnia_herzegovina: {
+	bosnia_and_herzegovina: {
 		name: "Bosnia and Herzegovina",
 		continent: "europe",
 		status: "amber",
