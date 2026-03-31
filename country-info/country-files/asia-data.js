@@ -72,6 +72,79 @@ Object.assign(globalData, {
 		],
 	},
 
+	azerbaijan: {
+		name: "Azerbaijan",
+		continent: "europe",
+		status: "red",
+
+		legal: `
+<p>In 2026, Azerbaijan remains one of the most challenging legal environments in the Council of Europe. While same-sex activity was decriminalized in 2000, there is zero legal recognition for same-sex partnerships or marriage. Anti-discrimination laws are non-existent, leaving LGBT individuals vulnerable in employment and housing.</p>
+
+<p><strong>The Statute vs. Ground Gap:</strong> Extreme. Despite being a member of the Council of Europe, the state frequently ignores ECHR rulings. In late 2025 and early 2026, a massive crackdown on "unethical behavior" led to the arbitrary detention of over 100 individuals in Baku. The 2026 verdict is "State-Sanctioned Hostility."</p>
+
+<div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+<div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+<strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Minority Azerbaijan</strong>
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary digital platform for LGBT news and support within the country, operating under high surveillance.</p>
+<a href="https://minorityaze.org/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+</div>
+</div> `,
+
+		safety: `
+<p>Physical safety for LGBT travelers is "High Risk." While the capital, Baku, appears cosmopolitan, police raids on known LGBT-friendly venues are common. In January 2026, reports emerged of detainees being subjected to physical violence and forced medical testing during a raid on a Baku nightclub.</p>
+
+<p><strong>Street Pulse & Policing:</strong> Very Low Response. Policing is often the primary threat rather than a source of protection. Public displays of affection (PDA) are strictly discouraged for all travelers, but can lead to immediate detention or extortion for same-sex couples. The 2026 vibe is "Underground and Vigilant."</p>
+
+<div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
+<div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+<strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #148</strong>
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Ranked at the bottom of European safety charts due to frequent arbitrary arrests and lack of hate-crime legislation.</p>
+</div>
+</div> `,
+
+		travel: `
+<p>2026 Traveler Rating: Discretion Mandatory. Safe for tourism if your identity remains private, but high-risk for those seeking "the scene."</p>
+
+<p><strong>Safe Havens vs. Red Zones:</strong>
+* **Green Zones:** International hotel chains (e.g., Marriott, Hilton) in Baku are generally safe and professional.
+* **Red Zones:** Public parks at night and local "underground" clubs, which are frequent targets for police stings.</p>
+
+<p><strong>The Venue Spectrum:</strong>
+* **Upscale/Protected:** Four Seasons Hotel Baku
+* **The Local Way:** No specific local LGBT venues are currently "safe" to recommend due to 2026 police activity.</p>
+
+<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+<div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+<strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Privacy Tip</strong>
+<p style="color: #fff; font-size: 0.85rem;">Police in Baku have been known to confiscate phones and search for dating apps. It is highly recommended to use a "clean" device or hide such apps when in public.</p>
+</div>
+</div> `,
+
+		health: `
+<p><strong>Standard of Care:</strong> Medical facilities in Baku are modern, but cultural competency regarding LGBT health is nearly non-existent. Stigma in the healthcare sector often leads to refusal of service for trans individuals.</p>
+
+<p><strong>Traveler Essential:</strong> Accessing PrEP or HIV medication locally is risky due to mandatory reporting requirements. Ensure you carry your own supply. In an emergency, international clinics like SOS International are the only vetted options for privacy.</p>
+
+<div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+<div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Republican AIDS Center</strong>
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Baku - Provides basic HIV services, but discretion and privacy are not guaranteed.</p>
+</div>
+</div> `,
+
+		posture: `
+<p>The "Invisible Minority" posture in Azerbaijan describes a 2026 climate where the LGBT community is forced into deep digital and physical secrecy to survive state pressure. The vibe is "Extreme Discretion."</p> `,
+
+		sources: [
+			{ label: "Ground Intel: Human Rights Watch Azerbaijan", url: "https://www.hrw.org/europe/central-asia/azerbaijan", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Minority Magazine", url: "https://minorityaze.org/en", button: "VIEW COMMUNITY DATA →" },
+		],
+	},
+
 	bhutan: {
 		name: "Bhutan",
 		continent: "asia",
