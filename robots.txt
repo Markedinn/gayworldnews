@@ -1,0 +1,26 @@
+# ----------------------------------------------------------
+# LGBT Travel Safety & Community Hub - robots.txt (v1.1 - March 2026)
+# ----------------------------------------------------------
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /config/
+
+# Allow "Search AI" to index us for citations (AEO)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Block "Scraper AI" from training on our unique country data
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Standardize Sitemap for faster indexing
+Sitemap: https://gayworldnews.com/sitemap.xml
