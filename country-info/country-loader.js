@@ -22,9 +22,6 @@ window.addEventListener("DOMContentLoaded", () => {
 				let s = (countryData.status || "warning").toLowerCase();
 				if (s === "danger" || s === "black") s = "red";
 
-				const now = new Date();
-				const updateStamp = now.toLocaleString("default", { month: "long", year: "numeric" });
-
 				document.getElementById("country-name").innerText = countryData.name;
 				document.title = `${countryData.name} | Safety Guide`;
 
@@ -35,75 +32,70 @@ window.addEventListener("DOMContentLoaded", () => {
 
 				displayArea.className = `info-display-container status-${s}`;
 
-				// --- SMART SOURCES LOGIC ---
+				// --- HYBRID SMART SOURCES LOGIC (Compatible with old & new data) ---
 				let sourcesHtml = "Information pending.";
-				if (countryData.sources) {
-					const sList = Array.isArray(countryData.sources) ? countryData.sources : countryData.sources.split(",");
+				if (countryData.sources && countryData.sources.length > 0) {
+					const sList = Array.isArray(countryData.sources) ? countryData.sources : [countryData.sources];
 
-					// Create the clickable links
-					const links = sList.map((link) => {
-						const cleanLink = link.trim();
-						return `<a href="${cleanLink}" target="_blank" class="source-link">${cleanLink}</a>`;
+					const links = sList.map((source) => {
+						// 1. CHECK THE DATA TYPE
+						const isObject = typeof source === "object" && source !== null;
+
+						// 2. EXTRACT DATA BASED ON TYPE
+						// If it's a new object, use the labels. If it's an old string, use defaults.
+						const label = isObject ? source.label || "Official Intelligence" : "Primary Intelligence";
+						const url = isObject ? source.url : source.trim();
+						const buttonText = isObject ? source.button || "OPEN SOURCE →" : "OPEN OFFICIAL SOURCE →";
+
+						return `
+            <div class="stat-card" style="background: rgba(52, 152, 219, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #3498db; margin-bottom: 20px; text-align: left;">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db; margin-bottom: 5px;">📚 ${label}</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8; line-height: 1.6;">
+                    Verified documentation for the 2026 reporting cycle. 
+                    <br><br>
+                    <a href="${url}" target="_blank" style="color: #ffffff; text-decoration: none; font-weight: 700; border-bottom: 1px dashed #3498db; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+                        ${buttonText}
+                    </a>
+                </p>
+            </div>`;
 					});
 
-					// If only one source, add the "Verification in Progress" note
-					if (links.length === 1) {
-						sourcesHtml =
-							links[0] +
-							`<p style="margin-top:10px; font-size:0.8rem; opacity:0.7; font-style:italic;">Note: We are currently verifying additional secondary sources for this region. Please check back for updates.</p>`;
-					} else {
-						sourcesHtml = links.join("<br>");
-					}
+					sourcesHtml = links.join("");
 				}
 
-				// Render the Accordions
+				// --- RENDER ALL ACCORDIONS UNIFORMLY ---
 				displayArea.innerHTML = `
-                    <details class="glass-card news-accordion ${s}" open>
-                        <summary><h3>⚖️ Legal Status</h3></summary>
-                        <div class="news-content-expanded">
-                            <div class="rainbow-line mini-line"></div>
-                            
-                            <div class="update-badge">
-                                <span class="pulse-icon"></span> Verified: ${updateStamp}
-                            </div>
-
-                            <p>${countryData.legal || "Information pending."}</p> 
-                        </div>
-                    </details>
-                    <details class="glass-card news-accordion ${s}">
-                        <summary><h3>🏖️ Travel</h3></summary>
-                        <div class="news-content-expanded">
-                            <div class="rainbow-line mini-line"></div>
-                            <p>${countryData.travel || "Data coming soon."}</p>
-                            <p style="margin-top:15px; border-top: 1px solid rgba(255,255,255,0.1); padding-top:15px;">
-                                ${countryData.culture || ""}
-                            </p>
-                        </div>
-                    </details>
-                    <details class="glass-card news-accordion ${s}">
-                        <summary><h3>🚑 Health</h3></summary>
-                        <div class="news-content-expanded">
-                            <div class="rainbow-line mini-line"></div>
-                            <p>${countryData.health || "Information pending."}</p>
-                        </div>
-                    </details>
-                    <details class="glass-card news-accordion ${s}">
-                        <summary><h3>🛡️ Safety</h3></summary>
-                        <div class="news-content-expanded">
-                            <div class="rainbow-line mini-line"></div>
-                            <p>${countryData.posture || "General monitoring advised."}</p>
-                        </div>
-                    </details>
-                    <details class="glass-card news-accordion ${s}">
-                        <summary><h3>📚 Sources</h3></summary>
-                        <div class="news-content-expanded">
-                            <div class="rainbow-line mini-line"></div>
-                            <div class="sources-list">
-                                ${sourcesHtml}
-                            </div>
-                        </div>
-                    </details>
+                    ${renderCategory("⚖️ Legal Status", countryData.legal, countryData.videoLegal)}
+                    ${renderCategory("🏖️ Travel", countryData.travel, countryData.videoTravel)}
+                    ${renderCategory("🚑 Health", countryData.health, countryData.videoHealth)}
+                    ${renderCategory("🛡️ Safety", countryData.posture, countryData.videoSafety)}
+                    ${renderCategory("📚 Sources and Further Information", sourcesHtml, null)}
                 `;
+
+				function renderCategory(title, text, videoUrl) {
+					const content = videoUrl
+						? `<div class="split-content-row">
+                                <div class="video-side-box">
+                                    <div class="video-ratio-box">
+                                        <iframe src="${videoUrl.replace("watch?v=", "embed/")}" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="text-side-box">
+                                    <p>${text || "Information pending."}</p>
+                                </div>
+                           </div>`
+						: `<div>${text || "Information pending."}</div>`;
+
+					return `
+                        <details class="glass-card news-accordion ${s}">
+                            <summary><h3>${title}</h3></summary>
+                            <div class="news-content-expanded">
+                                <div class="rainbow-line mini-line"></div>
+                                ${content}
+                            </div>
+                        </details>
+                    `;
+				}
 			} else {
 				renderNotFound();
 			}

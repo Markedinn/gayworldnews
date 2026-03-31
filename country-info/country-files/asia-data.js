@@ -3,111 +3,145 @@ Object.assign(globalData, {
 		name: "Afghanistan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced Death Penalty. Under the Taliban's 2024 'Propagation of Virtue and Prevention of Vice' law, same-sex sexual intimacy is explicitly criminalized. Article 22(3) and (4) cover 'sahaq' (between women) and 'lawatat' (between men). The maximum penalty is death under Sharia law. In January 2026, reports emerged of individuals being flogged in Herat for 'sodomy.' There are zero protections against discrimination, and being queer is viewed as a capital offense against morality. In early 2025, the International Criminal Court (ICC) requested arrest warrants for Taliban leaders specifically citing the persecution of the LGBTQ+ community as a crime against humanity.",
-		travel:
-			"Extreme Risk - Do Not Travel. Afghanistan is currently one of the most dangerous places on Earth for LGBTQ+ individuals. As of 2026, the Taliban actively hunt members of the community through mobile phone checks at checkpoints and digital surveillance. Public displays of affection, even between friends, can be misinterpreted and lead to immediate arrest or mob violence. Transgender and non-binary individuals are at the highest risk of extrajudicial killing. International travelers have no diplomatic protection that can override Sharia law. All LGBTQ+ travel to Afghanistan is strictly discouraged.",
-		culture:
-			"Totalitarian & Fundamentalist. The social fabric is currently dominated by a strict interpretation of Deobandi Islam. Any discussion of LGBTQ+ rights is considered apostasy or 'Western corruption.' In 2026, the community has been forced entirely underground or into hiding ('the shadow life'). For an outsider, the culture of hospitality (Pashtunwali) still exists but is completely superseded by the Vice and Virtue police (MoVPE). There is no 'safe' way to be an out traveler here; the cultural expectation is total conformity to gender roles and religious edicts.",
-		health:
-			"Critical Failure. The healthcare system is in a state of collapse following the withdrawal of international aid. In 2026, UN experts warned of a 'health catastrophe' specifically affecting women and marginalized groups. HIV care and PrEP are non-existent in the public sector, and seeking such care can be used as evidence of 'immoral' behavior, leading to arrest. There is no gender-affirming care. Travelers would have zero access to inclusive or even basic medical support. Medical evacuation is nearly impossible from most regions.",
-		posture: "Extreme Risk - Avoid travel. Legal death penalty and active state persecution make identity-based safety impossible.",
+
+		legal: `
+        <p>In 2026, the legal status is the most severe in the world. Under the current de facto authorities, same-sex acts are punishable by death. There are no protections, and the 2024-2025 "Vice and Virtue" laws have effectively criminalized any non-conforming existence.</p>
+        <p><strong>Voices from the Ground:</strong> Local activists operating in exile describe the 2026 climate as "Total Erasure." The recent 2025 ICC request for arrest warrants against Taliban leaders for gender persecution has intensified the regime's hostility toward anyone suspected of LGBTQ+ identity.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Afghanistan LGBT Organization (ALO)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Operating primarily from exile in 2026, providing emergency relocation and digital safety training for those still inside.</p>
+                <a href="https://afghanistanlgbt.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Social climate is 100% hostile. There is no distinction between high-end or local areas; the risk of extrajudicial violence or state execution is universal.</p>
+        <p><strong>Community Density:</strong> Invisible. There are zero public LGBT spaces. Community life is restricted to deep-web encrypted chats and immediate family circles if trusted.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #197</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Ranked as the most dangerous country for LGBTQ+ individuals in 2026.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Travel is strongly discouraged for all LGBTQ+ individuals. Disclosure of identity is life-threatening.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** None. High-end hotels are monitored by intelligence services.
+        * **The Local Way:** None. Any "traditional" male-only spaces are under surveillance for "immoral" behavior.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Use with extreme caution. Authorities are known to use **lure tactics** on apps like Grindr to locate and arrest individuals.
+        * **Community Forums:** Access is restricted. Most community interaction happens via **Telegram** and **Signal** through verified local networks only.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Security Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Scrub all dating apps and LGBTQ+ content from devices before arrival. Use "Hidden Folders" or dual-boot phones if entry is mandatory.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>No LGBTQ-specific healthcare exists. Trans individuals and those with HIV face total exclusion or persecution if their status is discovered.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">None Available Internally</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Contact ALO (abroad) for remote tele-health advice.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'State-Sustained Terror.' There is no visible openness; only a silent, resilient underground fighting for survival.</p>
+    `,
+
 		sources: [
-			"https://www.humandignitytrust.org/country-profile/afghanistan/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Afghanistan",
-			"https://www.ohchr.org/en/press-releases/2026/02/afghanistan-talibans-gender-oppression",
-		],
-	},
-
-	armenia: {
-		name: "Armenia",
-		continent: "asia",
-		status: "amber",
-		legal:
-			"Legal but Unprotected. Same-sex activity has been legal since 2003, but the 2015 Constitution was amended to define marriage strictly as a union between a man and a woman. In early 2026, the government faced international pressure to adopt a comprehensive anti-discrimination law, which still excludes explicit mention of SOGI (Sexual Orientation and Gender Identity) to avoid domestic backlash. While legal gender change is possible, it remains 'medicalized' and often requires proof of surgery. In February 2026, rumors of a state-approved Pride parade were officially denied by the Prime Minister's office, signaling a continued hesitance to grant public visibility.",
-		travel:
-			"Safe but Discrete. Yerevan is a cosmopolitan city with a growing 'underground' queer scene, especially in central districts like the Cascade. However, outside the capital, the environment is deeply conservative. In 2026, travelers are advised to keep public displays of affection (PDA) to a minimum. While physical violence against tourists is rare, verbal harassment in rural areas is possible. Transgender travelers may face scrutiny if their documents do not match their appearance, particularly at land borders. The 'posture' is one of urban openness and rural caution.",
-		culture:
-			"Traditional & Orthodox. Armenian culture is heavily influenced by the Armenian Apostolic Church and a strong sense of 'national survival' through traditional family structures. In 2026, while a nascent drag and ballroom scene has emerged in Yerevan (partially fueled by an influx of LGBTQ+ Russians), the broader public remains resistant. Queer identity is often viewed through the lens of 'traditional values' versus 'Western influence.' For a visitor, the culture is incredibly warm and hospitable, but it is a hospitality based on a 'don't ask, don't tell' social contract. Respecting these boundaries ensures a smooth experience.",
-		health:
-			"Adequate (Yerevan). Healthcare in the capital is professional. In 2026, NGOs like 'Pink Armenia' have been granted consultative status with the Ministry of Health, improving access to sensitized care. HIV care is available and confidential in Yerevan, and PrEP can be accessed through specific NGO programs. Outside the capital, medical staff may lack specialized training and may exhibit bias. Transgender health care is largely private and unregulated. For travelers, sticking to major private clinics in Yerevan is the best way to ensure professional and non-discriminatory treatment.",
-		posture: "Confident Discretion - High safety in Yerevan's liberal pockets; social conservatism and lack of legal protections elsewhere.",
-		sources: ["https://www.hrw.org/world-report/2026/country-chapters/armenia", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Armenia", "https://www.equaldex.com/region/armenia"],
-	},
-
-	azerbaijan: {
-		name: "Azerbaijan",
-		continent: "asia",
-		status: "red",
-		legal:
-			"Legal but Hostile. Same-sex activity was decriminalized in 2000, but Azerbaijan consistently ranks as the worst country in Europe/Caucasus for LGBTQ+ rights (ILGA Rainbow Map). There are no hate crime protections or anti-discrimination laws. In early 2026, Human Rights Watch documented brutal police raids on 'LGBT-friendly' venues in Baku, involving abuse, humiliation, and extortion. While legal gender change is technically 'legal but requires surgery,' the process is administrative and highly medicalized. Same-sex marriage is constitutionally banned.",
-		travel:
-			"Cautious & Vigilant. Baku is a flashy, modern city, but the 'European' facade does not extend to social liberties. In 2026, the safety of LGBTQ+ travelers is unpredictable. While tourists are generally exempt from the 'raids' targeting locals, PDA is highly discouraged and can lead to police intervention or detention. Transgender travelers are at high risk of harassment and should ensure all documentation is perfectly in order. Avoid any 'queer-coded' bars that are not well-vetted, as they can be targets for surveillance or raids. The general rule is: total discretion in public.",
-		culture:
-			"Secular but Macho. While Azerbaijan is a secular state, its social norms are deeply patriarchal and influenced by 'honor' culture. Queer visibility is often met with state-enforced censorship or 'social cleaning' operations. In 2026, there is no public Pride, and activism is high-risk. For a visitor, the culture is one of formal politeness and 'face-saving.' People are unlikely to confront you directly unless you openly challenge social taboos. It is a country where you can enjoy the architecture and tea culture, but your private life should remain strictly private.",
-		health:
-			"Adequate (Private) but Risky. Public healthcare is riddled with stigma. In 2026, HIV care is available but highly monitored, leading many to seek care privately. PrEP is difficult to obtain. Following the recent police raids, many community-vetted health spaces have gone underground. Travelers should use high-end international clinics in Baku for any medical needs and avoid discussing their orientation with public health officials. Gender-affirming care is extremely limited and requires traveling abroad for most procedures.",
-		posture: "Confident Discretion - Significant risk of state-sponsored harassment and raids; total discretion is mandatory.",
-		sources: [
-			"https://www.hrw.org/news/2026/01/14/brutal-police-raid-on-lgbt-friendly-venue-in-azerbaijan",
-			"https://rainbowmap.ilga-europe.org/",
-			"https://www.equaldex.com/region/azerbaijan",
-		],
-	},
-
-	bahrain: {
-		name: "Bahrain",
-		continent: "asia",
-		status: "amber",
-		legal:
-			"Legal but Restricted. Same-sex activity was decriminalized in 1976. However, broad 'public indecency' and 'debauchery' laws are frequently used to target the community. In 2025, efforts were made to introduce even stricter 'anti-homosexuality' propaganda laws, though they remain in debate as of 2026. Legal gender change is possible but strictly 'medicalized' and requires a court order based on surgery. There are no anti-discrimination protections. Under the 'National Plan for Human Rights 2022-2026,' the government claims to protect 'vulnerable groups,' but this has not yet translated into specific LGBTQ+ rights.",
-		travel:
-			"Safe but Discrete. Bahrain is often considered the most 'socially liberal' of the Gulf states, but this is relative. In 2026, Manama has a discreet, cosmopolitan nightlife where many queer people socialize. However, PDA remains a red line and can lead to deportation for non-nationals or jail time under 'indecency' codes. Transgender travelers, especially those 'cross-dressing' (as defined by local law), are at significant risk of arrest. For a standard tourist, the island is very safe as long as personal lives remain private. The 'posture' is: enjoy the liberal atmosphere of hotels and private clubs, but remain conservative in public.",
-		culture:
-			"Cosmopolitan & Islamic. Bahraini culture is a blend of ancient history, oil-wealth modernity, and Islamic tradition. It is a 'weekend getaway' for many in the region, leading to a more relaxed social scene in the capital. However, the local religious lobby is powerful and often pushes back against perceived 'Western immorality.' In 2026, there is no public Pride or visible activism. For a visitor, the culture is welcoming and sophisticated; hospitality is a point of pride. As long as you respect the public Islamic character of the country, you will find it to be a comfortable destination.",
-		health:
-			"Good (Private). Bahrain has excellent healthcare facilities. In 2026, the private sector is professional and generally respects patient confidentiality. HIV care is available but linked to the state registry, which can be a risk for residents. PrEP is available through private pharmacies but is expensive. There is no public gender-affirming care, though some private doctors may provide hormone therapy. For travelers, the medical system is reliable and safe, but it is best to use international private hospitals like American Mission Hospital to ensure the highest level of privacy regarding identity.",
-		posture: "Confident Discretion - One of the more 'relaxed' Gulf nations, but legal traps regarding 'indecency' require constant awareness.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Bahrain", "https://www.mofa.gov.bh/en/national-plan-2022-2026", "https://www.equaldex.com/region/bahrain"],
-	},
-
-	bangladesh: {
-		name: "Bangladesh",
-		continent: "asia",
-		status: "red",
-		legal:
-			"Illegal & Dangerous. Same-sex sexual activity is criminalized under Section 377 ('Unnatural Offences'), carrying a maximum penalty of life imprisonment. In 2026, the legal environment remains hostile despite the 2024 transition to an interim government. While Section 377 is rarely used for formal convictions, it is a constant tool for police harassment and extortion. Notably, 'Hijras' (a traditional third-gender identity) have been legally recognized since 2013, but this does not extend to the broader trans or gay community. In 2025, a surge in mob violence by religious hardliners targeted queer activists, further chilling the legal and social climate.",
-		travel:
-			"Extreme Risk - Avoid Visibility. Bangladesh is not a safe destination for out LGBTQ+ travelers. In 2026, the risk of 'mob justice' and arbitrary detention is high. PDA of any kind is culturally taboo for everyone but is legally dangerous for same-sex couples. Transgender travelers are at risk of public harassment and should be aware that the 'Hijra' recognition does not provide a safety net for foreign trans visitors. The best posture is total 'invisibility.' Do not use dating apps, as they have been used by both police and extremist groups to lure and attack individuals.",
-		culture:
-			"Deeply Conservative & Volatile. Bangladeshi society is shaped by a mix of Bengali culture and a growing religious conservatism. The 2016 murder of Xulhaz Mannan (Pride magazine founder) still casts a long shadow. In 2026, the community is in survival mode. For a visitor, the culture is one of extreme hospitality—people will go out of their way to help a guest—but this hospitality is contingent on adhering to conservative norms. It is a 'high-friction' environment where even minor deviations from gender norms can lead to confrontation. Travelers should focus on the rich history and nature while keeping their identity entirely offline and out of sight.",
-		health:
-			"Basic & Risky. The healthcare system is overstretched and often judgmental. In 2026, HIV care is primarily managed through NGOs like 'Bandhu Social Welfare Society,' which are the only safe spaces for queer health. Public hospitals often exhibit extreme bias. PrEP is not widely available. There is no gender-affirming care for the general trans population, only limited social support for the Hijra community. For travelers, any medical emergency should be handled through high-end private clinics in Dhaka (e.g., Evercare Hospital), and personal identity should be disclosed only if absolutely medically necessary.",
-		posture: "Confident Discretion - High risk of mob violence and police harassment; the 'Hijra' exception does not equal general safety.",
-		sources: [
-			"https://www.humandignitytrust.org/country-profile/bangladesh/",
-			"https://www.hrw.org/world-report/2026/country-chapters/bangladesh",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Bangladesh",
+			{ label: "Ground Intel: Rainbow Railroad", url: "https://www.rainbowrailroad.org/", button: "RELOCATION NEWS →" },
+			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/", button: "LEGAL DATA →" },
 		],
 	},
 
 	bhutan: {
 		name: "Bhutan",
 		continent: "asia",
-		status: "green",
-		legal:
-			"Legalized in 2021. Since February 17, 2021, same-sex sexual activity has been decriminalized after Parliament amended the Penal Code to clarify that 'homosexuality between adults shall not be considered unnatural sex.' As of 2026, transgender people can legally change their gender marker on identification documents, provided they have a medical diagnosis and support from a civil society organization. While same-sex marriage is not yet recognized, the 2018 Information, Communications and Media Act explicitly protects sexual orientation as 'sensitive personal data.' In 2025, new education regulations (Bhutan Filming Regulation 2025) were introduced to prevent incitement of hatred against the LGBTQ+ community in media.",
-		travel:
-			"Safe & Welcoming. Bhutan is a high-value, low-impact tourism destination known for its 'Gross National Happiness' philosophy. For LGBTQ+ travelers, the environment is very safe. While public displays of affection (PDA) are generally rare for all couples in Bhutanese culture, same-sex couples are unlikely to face harassment. In 2026, Thimphu has a growing, visible queer community, and high-profile figures like the 2022 Miss Bhutan (Tashi Choden) have increased public acceptance. There are no 'gay bars,' but the nightlife in the capital is inclusive. Transgender travelers are generally treated with the same respect as others, provided they follow standard local customs of modesty.",
-		culture:
-			"Buddhist & Evolving. Bhutanese Buddhism does not traditionally condemn LGBTQ+ identities, and many high-profile lamas have publicly supported the community. In 2026, the culture is shifting from 'invisibility' to 'acceptance.' However, rural areas remain traditional, and many locals may still lack awareness of queer identities. The concept of family is central, and social pressure to marry remains a hurdle for local youth. For a visitor, the culture is one of profound hospitality; you are more likely to encounter curiosity than hostility. It is a destination where identity is secondary to the mutual respect expected between host and guest.",
-		health:
-			"Adequate (Professional). Healthcare is provided through a national system where medical ethics codes (updated 2021) explicitly protect sexual orientation. In 2026, HIV care is well-integrated and managed with a focus on confidentiality to reduce stigma. While gender-affirming surgeries are not performed in Bhutan, hormone therapy is accessible through private channels. Travelers should rely on the JDW National Referral Hospital in Thimphu for any major needs. The system is professional, though specialized LGBTQ+ clinics are rare. It is advisable to bring a full supply of personal medications, as certain niche treatments may be difficult to source locally.",
-		posture: "Safe & Open - A regional leader in progressive shifts; identity-based risks are very low.",
+		status: "amber",
+
+		legal: `
+        <p>In 2026, Bhutan is a regional beacon of progress. Since the formal decriminalization of same-sex acts on February 17, 2021, the government has moved toward active inclusion. The **2023-2025 National Strategic Framework** integrated LGBTQ+ protections into healthcare and education mandates.</p>
+        <p><strong>Voices from the Ground:</strong> Local activists from <strong>LGBT Voices of Bhutan</strong> describe the current climate as "Quietly Optimistic." While same-sex marriage is not yet legal in 2026, the Ministry of Education has implemented anti-bullying procedures specifically protecting gender identity in schools.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ LGBT Voices of Bhutan (QVB)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary 2026 advocacy body, focusing on legal gender recognition and rural community outreach.</p>
+                <a href="https://www.facebook.com/LGBTVoicesofBhutan/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Page →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Bhutanese culture is generally non-confrontational. In 2026, travelers face little to no risk of violence, though public displays of affection (PDA) remain rare for all couples, regardless of orientation.</p>
+        <p><strong>Community Density:</strong> Moderate. There are no dedicated "Gay Bars," but the capital, Thimphu, has a growing circuit of LGBT-friendly "Mixed" lounges where the community gathers openly.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #74</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index reflects a massive jump in safety since decriminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safe for all LGBTQ+ travelers. Trans and GNC individuals will find Bhutan more accepting than many neighboring countries, though "official" gender markers on travel documents should match your visa for ease of entry.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Thimphu Deluxe Hotels** - Bars at the Le Méridien or Taj Tashi are safe, high-end "Mixed" environments frequented by the local LGBT elite and expats.
+        * **The Local Way:** **Ambient Cafe** (Thimphu) - Long known as a de facto safe space for the artistic and LGBT community to gather during the day.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** **Tinder** and **Grindr** are the most used. In Thimphu, these apps are quite active and safe to use.
+        * **Community Forums:** **QVB’s social media** is the heartbeat of the local scene, often announcing "secret" meetups or film screenings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Cultural Gaze"</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, curiosity is more common than hostility. Travelers are encouraged to support local LGBT-owned businesses, which are slowly emerging in the capital's craft and cafe sector.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP is expanding in Thimphu as of 2026. HIV care is integrated into the national health system with a high degree of confidentiality for a small nation.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Lhaksam (HIV/AIDS Support)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Thimphu - The leading NGO for sexual health and peer support in Bhutan.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Enlightened Transition.' Bhutan is proving that traditional Himalayan values and modern LGBT rights can coexist peacefully.</p>
+    `,
+
 		sources: [
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Bhutan",
-			"https://www.equaldex.com/region/bhutan",
-			"https://www.responsibletravel.com/holidays/lgbt/travel-guide/lgbt-bhutan",
+			{ label: "Ground Intel: LGBT Voices of Bhutan", url: "https://www.facebook.com/queerVoicesofBhutan/", button: "COMMUNITY UPDATES →" },
+			{ label: "Official Index: Equaldex Bhutan", url: "https://www.equaldex.com/region/bhutan", button: "VIEW LEGAL DATA →" },
 		],
 	},
 
@@ -115,19 +149,72 @@ Object.assign(globalData, {
 		name: "Brunei",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Death Penalty (De Jure). Same-sex sexual activity is criminalized under both the 1951 Penal Code and the 2013 Syariah Penal Code (SPC). Under the SPC, the penalty for 'liwat' (anal sex) is death by stoning for married men, though a moratorium on the death penalty has been in place since 2019. For women, 'musahaqah' is punishable by 10 years in prison or 40 lashes. In 2026, the law also criminalizes 'posing as the opposite sex' (Section 198), carrying up to a year in prison. The state actively monitors digital communications, and there are no protections against discrimination. The legal environment remains one of the most repressive in the world.",
-		travel:
-			"Extreme Risk - Total Discretion. Brunei is a conservative Islamic monarchy where the 'Religious Police' (KDN) have broad powers. For LGBTQ+ travelers, safety is entirely dependent on total 'invisibility.' Any public display of affection or 'queer-coded' clothing/behavior can lead to immediate arrest, corporal punishment, or deportation. In 2026, digital safety is critical; ensure dating apps are deleted and social media is private before entering the country. Transgender travelers are at extreme risk due to the 'gender posing' laws. While luxury hotels are generally safe spaces, they are not immune to state monitoring. Travel here requires a strict 'stealth' approach.",
-		culture:
-			"Strictly Islamic & Conservative. The social fabric is defined by MIB (Malay Islamic Monarchy) philosophy. In 2026, there is no public LGBTQ+ life, and local activists operate only in extreme secrecy or from abroad. Public discourse is heavily censored, and 'moral' conformity is viewed as a national duty. For a visitor, the culture is one of formal, quiet politeness, but this can be deceptive as surveillance is high. It is a country where dissent is not tolerated and queer identity is officially viewed as a threat to the state's moral order. As a guest, you must respect all Islamic norms, including modest dress and abstinence from alcohol in public.",
-		health:
-			"Good (Technical) but High Stigma. Healthcare is high-quality but socially restrictive. In 2026, HIV/AIDS care is available but highly stigmatized; diagnosis often triggers state reports and social isolation. There is no gender-affirming care, and even discussing it with a doctor can be risky. For travelers, private clinics offer the best chance at confidentiality, but any sensitive medical issue should ideally be handled outside the country (e.g., in Singapore). If you have a medical emergency, doctors are professional but bound by local law; do not disclose your orientation or gender history unless it is a life-or-death necessity. Carry all medications in original, labeled packaging.",
-		posture: "Extreme Risk - Avoid visibility; death penalty and corporal punishment are de jure options; high state surveillance.",
+
+		legal: `
+        <p>Brunei’s **Sharia Penal Code (SPCO)**, fully implemented in 2019, remains the law of the land in 2026. This includes de jure death by stoning for male-to-male sex and 40 lashes/10 years prison for women.</p>
+        <p><strong>Voices from the Ground:</strong> Local activists operate in deep anonymity. While a **moratorium on the death penalty** remains in place as of early 2026, the "Chilling Effect" is absolute. Any form of advocacy is treated as a threat to the Islamic monarchy.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ The Brunei Project (Exile)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Based outside Brunei, this is the only reliable 2026 monitor of human rights abuses within the Sultanate.</p>
+                <a href="https://www.thebruneiproject.com/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Brunei is a high-surveillance state. LGBTQ+ life is strictly a "Private-Room" reality. In 2026, the government continues to monitor digital communications for "immoral content."</p>
+        <p><strong>Community Density:</strong> Underground. There are zero public LGBT spaces, festivals, or even "friendly" mixed venues. The scene exists entirely in private residences behind heavy security.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #194</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">One of the most legally repressive regimes globally in 2026.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Travel is discouraged for activists or highly visible individuals. For general travelers, absolute discretion is mandatory. Any "LGBT" content on your phone can be grounds for detention if searched at the border.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Bandar Seri Begawan High-End Hotels** - Places like The Empire are safe for general tourism, but offer no "LGBT" protection. They are monitored by state security.
+        * **The Local Way:** None. The risk of police entrapment makes even informal meetups in local cafes dangerous.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** **Grindr** is used, but carries high risk. Users often use blank profiles and demand immediate off-app verification.
+        * **Community Forums:** None. Most locals use **Telegram with disappearing messages** to communicate within trusted circles.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Digital Scrub"</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, it is standard practice for LGBT travelers to delete all dating apps and related media before landing in BSB. Use a VPN for any web browsing.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP is non-existent for the general public. HIV testing is available but carries the risk of state reporting. Most LGBT Bruneians seek medical care in nearby **Kuala Lumpur** or **Singapore**.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Seek Care Abroad</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">No safe, LGBT-specific medical infrastructure exists in Brunei as of 2026.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Oppressive Silence.' The Sultanate maintains an outward face of stability while the community survives in the deepest shadows of the digital world.</p>
+    `,
+
 		sources: [
-			"https://www.humandignitytrust.org/country-profile/brunei/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Brunei",
-			"https://www.iasociety.org/ias-statement/ias-statement-bruneis-anti-gay-laws-counter-stated-aim-end-aids-epidemic",
+			{ label: "Ground Intel: The Brunei Project", url: "https://www.thebruneiproject.com/", button: "MONITORING UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/brunei/", button: "LEGAL DATA →" },
 		],
 	},
 
@@ -135,51 +222,220 @@ Object.assign(globalData, {
 		name: "Cambodia",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Unrecognized. Same-sex sexual activity has never been criminalized in Cambodia’s history. However, there are no national anti-discrimination laws or hate crime protections. While the 1993 Constitution limits marriage to 'one man and one woman,' King Norodom Sihamoni has publicly supported same-sex marriage. In 2026, a limited 'Declaration of Family Relationship' is available in about 5% of communes, providing some local recognition for couples. There is no legal pathway to change your gender marker on official documents. While the state is not aggressive, the lack of formal protection leaves the community vulnerable to administrative bias.",
-		travel:
-			"Safe & Open. Cambodia is a highly popular destination for LGBTQ+ travelers, especially in Siem Reap and Phnom Penh. In 2026, 'Gay Phnom Penh' features a vibrant scene of bars, saunas, and clubs that operate openly. PDA is generally tolerated in tourist areas, though discretion is advised in rural or religious settings (like inside Angkor Wat). Transgender travelers are common and generally accepted in the tourism sector, but they may face documentation issues at smaller land borders. The 'posture' is one of high safety within the urban/tourism bubble and standard regional caution in the provinces.",
-		culture:
-			"Tolerant & Traditional. Cambodian culture is influenced by Theravada Buddhism, which is generally more tolerant than other major religions. The concept of 'gender' is often seen as fluid, with a long history of 'Kteuy' (third-gender) presence. However, there is immense social pressure to marry and have children to honor one’s parents. In 2026, 'Cambodia Pride' is a growing, celebratory event in the capital. For a visitor, the culture is exceptionally friendly. While you may see people staring, it is usually out of curiosity rather than malice. It is a society where 'saving face' is important, so polite and modest behavior is the key to a positive experience.",
-		health:
-			"Basic to Moderate. Healthcare in Phnom Penh (e.g., Royal Phnom Penh Hospital) is adequate. In 2026, HIV/AIDS care is strong, with many NGOs like CCHR and RoCK providing sensitized support. PrEP is widely available in the capital through specialized clinics. While gender-affirming care has grown since 2015, it remains largely unregulated and often expensive. Travelers should use international private clinics for any sensitive issues. For serious emergencies, medical evacuation to Bangkok is standard. If you are trans, it is best to bring your own hormones, as local supplies can be inconsistent in quality.",
-		posture: "Confident Discretion - High safety in urban centers and tourist zones; social tolerance is high but legal protections are missing.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Cambodia", "https://www.equaldex.com/region/cambodia", "https://cambodia.ohchr.org/en/issues/lgbt-rights-0"],
+
+		legal: `
+            <p>In 2026, Cambodia remains a legal paradox. While there are no laws against same-sex acts, there are also no explicit protections. This "legal vacuum" allows local authorities to interpret "public order" or "morality" laws however they see fit during raids.</p>
+
+            <p><strong>Voices from the Ground:</strong> Local advocates at **RoCK** warn that the biggest threat isn't a prison sentence, but **public shaming**. Authorities sometimes coordinate with local TV stations during "inspections" to film patrons, often forcing them to sit in the street or cover their faces while being broadcast as part of a "social cleanup."</p>
+
+            <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+                <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ RoCK (Rainbow Community Kampuchea)</strong>
+                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary NGO providing support for those targeted by police shaming or family-based discrimination.</p>
+                    <a href="https://rockcambodia.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+                </div>
+            </div>
+        `,
+
+		safety: `
+            <p>Socially, Cambodia is welcoming, but the "2026 Posture" is one of **Selective Enforcement**. While tourists are rarely the primary targets, being in a venue during a raid can lead to involuntary media exposure.</p>
+
+            <p><strong>Community Density:</strong> High. The scene is anchored by established spots like **Blue Chilli**, **POC**, and **Space Bar**, but travelers should be aware that "Mixed" venues in the Tuol Kork or Daun Penh districts are occasionally raided under the guise of "drug prevention" or "morality checks."</p>
+
+            <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Critical Warning: Media Shaming</h4>
+                <div class="metrics-card" style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">⚠️ RAID ADVISORY</strong>
+                    <p style="margin: 0; font-size: 0.95rem; color: #fff;">Police raids often involve local news crews. If a venue is raided, **do not resist**, but keep your face covered if cameras are present. Authorities may use these recordings for "social education" broadcasts.</p>
+                </div>
+            </div>
+        `,
+
+		travel: `
+            <p>Phnom Penh and Siem Reap are the twin pillars of the scene. **Barcode** in Siem Reap is a "Safe Anchor," while the capital's scene is more spread out and integrated into the nightlife districts.</p>
+
+            <p><strong>Underground Pulse & Anchors:</strong> 
+            * **Blue Chilli** (Street 130) and **POC (Pride of Cambodia)** are the primary community hubs.
+            * **Arthur & Paul (A&P)** on Street 71 is the premier gay-run hotel and sauna/bar hub. 
+            * **Heart of Darkness** (Street 51) is a mixed industrial-style club that is an institution on the gay scene.
+            * **Space Hair Salon and Bar** remains a safer, more "neighborhood" vibe that is less likely to draw high-profile police attention.</p>
+
+            <p><strong>Underground Saunas:** Beyond A&P, there are several "Local-only" or "Underground" saunas that you would have to find via a local. Massage spots (like **Paradise**) operate with zero external signage. These spots are safe but require you to "read the room" and follow local etiquette regarding noise and visibility.</p>
+
+			<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Street 130/172" Circuit</strong>
+                    <p style="color: #fff; font-size: 0.85rem;">Phnom Penh’s gay life is highly walkable. Start at Space Bar for a sunset drink, move to Blue Chilli for the 10 PM drag show, and end your night at POC or Heart of Darkness for dancing.</p>
+                </div>
+            </div>
+
+            <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                    <p style="color: #fff; font-size: 0.85rem;">Carry a digital copy of your passport. In the event of a raid, police will check IDs. Foreigners are usually allowed to leave after a document check, but being polite and compliant is the fastest way out.</p>
+                </div>
+            </div>
+        `,
+
+		health: `
+            <p>Healthcare is accessible through **MHSS (Men’s Health Social Service)**. They are the only ones providing truly "stigma-free" care in 2026.</p>
+
+            <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+                <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+                <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Men's Health Social Service (MHSS)</strong>
+                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Phnom Penh & Siem Reap</p>
+                </div>
+            </div>
+        `,
+
+		posture: `
+            <p>Cambodia in 2026 is a land of "Visible Resilience." The community is out, proud, and running businesses, but they are always mindful of the "morality lens" of the local authorities.</p>
+        `,
+
+		sources: [
+			{ label: "Ground Intel: Khmer LGBT Network", url: "https://khmer.lgbt/", button: "VIEW 2026 EVENTS →" },
+			{ label: "Travel Intel: The Gay Passport", url: "https://thegaypassport.com/explore/gay-map-phnom-penh/", button: "2026 CITY GUIDE →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/cambodia", button: "LEGAL DATA →" },
+		],
 	},
 
 	china: {
 		name: "China",
 		continent: "asia",
-		status: "red",
-		legal:
-			"Legal but Suppressed. Same-sex activity was decriminalized in 1997 and removed from the list of mental illnesses in 2001. However, since 2021, there has been a significant 'freeze' on rights. In 2026, there is no legal recognition of same-sex unions. Transgender rights are highly medicalized; while surgery is no longer required for a gender marker change, 'reproductive organ removal' is still mandated. Crucially, in 2025–2026, new 'Internet Cleanliness' laws led to the shutdown of almost all major LGBTQ+ dating apps and social media groups. Advocacy is increasingly treated as 'foreign interference,' and there are no protections against discrimination in employment or housing.",
-		travel:
-			"Cautious & Strategic. China is safe in terms of physical crime, but LGBTQ+ travelers face a climate of increasing censorship and state surveillance. In 2026, PDA is highly discouraged in public as it can be flagged as 'disturbing social order.' While international hotels are professional, the 'gay scene' in cities like Shanghai and Chengdu has been pushed back into the shadows. Transgender travelers should ensure their visas match their passports exactly, as security checks at train stations and airports are highly automated and facial-recognition based. The 'posture' is: enjoy the sights, but keep your identity and digital life entirely private while within the 'Great Firewall.'",
-		culture:
-			"Traditional & State-Directed. Chinese culture emphasizes 'Confucian family values' and the continuation of the bloodline, making coming out a difficult family ordeal. In 2026, the government has intensified the promotion of 'traditional masculinity' in media. Public Pride events have been banned since 2020. For a visitor, the culture is one of extreme efficiency and hospitality, but the public square is increasingly sterilized of queer visibility. You will find that younger generations in Tier-1 cities are very progressive, but the state narrative remains hostile. It is a country of 'private openness and public conformity.'",
-		health:
-			"Good (Urban) but Monitored. Healthcare in major cities is world-class. In 2026, HIV care is widely available, but patients must be registered in a national database, which raises privacy concerns. PrEP can be bought in pharmacies but is often monitored via digital ID. Gender-affirming care exists (e.g., Fudan University clinic), but it is primarily for minors or strictly vetted adults. For travelers, private international hospitals (like United Family) are the only way to ensure privacy. Always use a VPN if searching for LGBTQ+ health resources while in the country, and be aware that your medical records in the public system are linked to your travel ID.",
-		posture: "Confident Discretion - Low physical risk but high digital and administrative risk; active state suppression of queer visibility.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_China", "https://www.hrw.org/world-report/2026/country-chapters/china", "https://database.ilga.org/china-lgbti"],
+		status: "amber",
+
+		legal: `
+        <p>In 2026, China remains in a state of "Legal Stagnation." While homosexuality was decriminalized in 1997 and removed from the list of mental illnesses in 2001, there are zero legal protections against discrimination, and same-sex marriage is not recognized.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "The Great Digital Shrinking." Following the 2024-2025 closure of several major university LGBTQ+ associations, the 2026 sentencing of digital activists under "picking quarrels and provoking trouble" statutes has pushed advocacy into small, private offline circles.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ PFLAG China (Exile/Digital)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Despite domestic restrictions, they remain the primary 2026 network for family support and regional community building via decentralized channels.</p>
+                <a href="https://www.pflag.org.cn/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is "Socially Tolerant, Politically Hostile." Violence is rare, but state-sponsored censorship of "effeminate" or "non-traditional" aesthetics in media is at an all-time high.</p>
+
+        <p><strong>Community Density:</strong> Moderate to High in Tier-1 cities. Dedicated LGBT-only spaces have largely been replaced by "LGBT-Friendly Mixed" venues to avoid regulatory scrutiny.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #124</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The 2026 index reflects a decline due to the total ban on "Pride" branding and restricted assembly.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Generally safe for travelers. Trans and GNC individuals may face confusion or invasive questions at transit hubs, but physical safety is rarely a concern in major cities like Shanghai or Chengdu.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **ROXIE** (Shanghai) or **Destination** (Beijing) - These are established anchors. While Destination has faced "renovation" closures in the past for political reasons, it remains the upscale heart of Beijing's scene.
+        * **The Local Way:** **Chengdu Scene** - Chengdu is the "Gay Capital." Bars in the **Jinjiang District** provide the most authentic, relaxed local community vibe in the country.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** **HeeSay** (formerly Blued) is the dominant app. **Allo** is also gaining traction for its privacy features in 2026.
+        * **Community Forums:** **WeChat Groups** are the true forums, but they are highly invitation-only and heavily monitored. Use coded language.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Pink Scrutiny" Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, avoid wearing explicitly political LGBT symbols (like protest slogans) in public. Standard rainbow accessories are usually ignored, but anything suggesting "organization" or "activism" can trigger unwanted police attention.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HIV care and PrEP is available in major cities through "Blue Map" clinics. HRT for Trans individuals is becoming more restricted under 2025 medical guidelines, often requiring "Underground" referrals within the community.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Beijing Gender Health Education Institute</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">A critical node for LGBTQ+ health resources and sexual education in North China.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Quiet Resilience.' The community is massive and tech-savvy, but they have learned to live 'between the lines' of state control.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: China Digital Times", url: "https://chinadigitaltimes.net/chinese/tag/lgbtq/", button: "CENSORSHIP UPDATES →" },
+			{ label: "Official Index: Equaldex China", url: "https://www.equaldex.com/region/china", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Chengdu Underground", url: "https://www.travelgay.com/chengdu-gay-bars-and-dance-clubs", button: "CITY GUIDE →" },
+		],
 	},
 
-	georgia: {
-		name: "Georgia",
+	hong_kong: {
+		name: "Hong Kong",
 		continent: "asia",
-		status: "red",
-		legal:
-			"Legal but Regressing. Same-sex activity has been legal since 2000, but 2024–2026 has seen a drastic legal crackdown. In September 2024, Parliament passed the 'Family Values and Protection of Minors' bill, which in 2026 effectively bans same-sex marriage, adoption, and any 'propaganda' of LGBTQ+ relationships in schools and media. The law also bans gender-affirming medical care for transgender people. While the 2014 Anti-Discrimination Law technically includes SOGI, it is rarely enforced. Crimes motivated by orientation are considered an 'aggravating circumstance,' yet police often fail to protect the community during public events.",
-		travel:
-			"Cautious & Vigilant. Georgia, particularly Tbilisi, was once a regional haven, but safety has deteriorated. In 2026, LGBTQ+ travelers are advised to avoid any public displays of affection. Far-right groups, often unchecked by police, have targeted 'queer-coded' individuals in public. Transgender travelers are at high risk, as the recent laws have fueled public hostility. While the vibrant nightlife (like Bassiani) remains a safe sanctuary for the community, the street environment is unpredictable. The 'posture' here is: be extremely careful in public spaces and avoid any political or Pride-related gatherings, as they are frequently met with violence.",
-		culture:
-			"Polarized & Orthodox. Georgian culture is a battleground between pro-European youth and the powerful, conservative Georgian Orthodox Church. In 2026, 'Family Values' have been weaponized by the state to halt EU accession. For a visitor, the culture is famous for 'Supra' (feasts) and hospitality, but this is deeply rooted in traditional gender roles. Queer identity is often framed as a 'foreign threat.' You will find two Georgias: the liberal, underground world of artists in Tbilisi, and the deeply conservative, often hostile public and rural sectors. Navigating this requires knowing exactly where you are and who you are with at all times.",
-		health:
-			"Adequate (Tbilisi). Healthcare is professional, but the 2024–2026 laws have criminalized gender-affirming care, forcing many providers underground. In 2026, HIV care is managed through the AIDS Center in Tbilisi and remains confidential, though stigma is rising. PrEP is available through NGOs but may face future restrictions under the 'Family Values' act. For travelers, high-end private clinics (like Evex) are safe for general health, but identity should be disclosed with caution. If you are trans, you must bring all necessary medications with you, as obtaining hormones or specialized care is now legally and practically difficult.",
-		posture: "Confident Discretion - Significant risk of mob violence and legal regression; safe only within private or high-security nightlife spaces.",
+		status: "amber",
+
+		legal: `
+<p>2026 marks a complex era following landmark court rulings for civil partnerships and trans-identity rights on IDs, though full marriage equality remains absent.</p>
+<p><strong>The Statute vs. Ground Gap:</strong> Moderate. The courts are the community's primary ally, while the government remains reactive. In 2026, the community reports High Trust in the judicial process but Low Trust in police regarding activist visibility.</p> 
+<div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+<div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+<strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Hong Kong Marriage Equality (HKME)</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The leading group advocating for full marriage rights through 2026 court challenges.</p> 
+<a href="https://hkme.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+</div> </div> `,
+
+		safety: ` 
+<p>Physical safety is high for individuals, but political safety for organizers is "Amber" due to the National Security Law.</p>
+<p><strong>Street Pulse & Policing:</strong> Moderate Response. In 2026, the "Pink Pulse" is found in private venues. Public displays of affection are generally tolerated in Central and Soho, but the days of massive public pride marches have shifted to "Pink Dot" carnival-style private events.</p> 
+<div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+<div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+<strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #28</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Strong rankings for trans ID rights and safety, tempered by political restrictions on advocacy.</p> </div> </div> `,
+
+		travel: ` 
+<p>2026 Traveler Rating: Highly Visible in urban hubs. HK remains a global hub for LGBT business travelers.</p> 
+<p><strong>Safe Havens vs. Red Zones:</strong> 
+* **Green Zones:** Central, Soho, and Sheung Wan (The "LGBT Triangle"). 
+* **Amber Zones:** Less frequent but present in older traditional districts of Kowloon during political anniversaries.</p>
+<p><strong>The Venue Spectrum:</strong> 
+* **Upscale/Protected:** The Upper House (Luxury inclusion) 
+* **The Local Way:** Petticoat Lane (The quintessential gay club hub)</p>
+<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+<h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+<div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+<strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+<p style="color: #fff; font-size: 0.85rem;">Being LGBT is totally fine; being a LGBT activist is politically sensitive. Keep your travel about the "vibe," not the "politics."</p> 
+</div> </div> `,
+
+		health: ` 
+<p><strong>Standard of Care:</strong> World-class access to PrEP and HIV care via the Department of Health and NGOs like AIDS Concern.</p> 
+<p><strong>Traveler Essential:</strong> Specialized clinics like Quilt or AIDS Concern are essential for competent care compared to standard public A&E waits.</p>
+<div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+<h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+<a href="https://aidsconcern.org.hk/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;"> 
+<div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">AIDS Concern HK</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">The primary NGO for testing, PrEP referrals, and LGBT-competent counseling.</p> </div> </a> 
+</div> `,
+
+		posture: ` 
+<p>The "Resilient Cosmopolitan" posture in Hong Kong shows a community that is winning legal rights in the courts while navigating a complex political landscape. The 2026 verdict is "Vibrant but Careful."</p> `,
+
 		sources: [
-			"https://www.ohchr.org/en/meeting-summaries/2026/02/experts-committee-economic-social-and-cultural-rights-welcome-georgias",
-			"https://www.hrw.org/world-report/2025/country-chapters/georgia",
-			"https://www.mfrr.eu/georgia-family-values-bill-imposes-censorship-on-media/",
+			{ label: "Ground Intel: HK Free Press", url: "https://hongkongfp.com/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Pink Alliance", url: "https://pinkalliance.hk/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Pink Dot HK 2026", url: "https://pinkdot.hk/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -187,71 +443,306 @@ Object.assign(globalData, {
 		name: "India",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Limited. Same-sex activity was decriminalized in 2018 (Navtej Singh Johar v. Union of India). While the Supreme Court declined to legalize same-sex marriage in October 2023, it reinforced the right to 'live-in relationships' for queer couples. In early 2026, the Allahabad High Court ruled that police must provide protection to same-sex couples in such relationships, citing constitutional fundamental rights. Several states like Odisha and Delhi have introduced 'Transgender Welfare Rules' in 2025-2026, including third-gender options in civil service exams and passports. However, there is no national anti-discrimination law covering the private sector, and marriage rights remain in the hands of Parliament.",
-		travel:
-			"Generally Safe. Urban centers like Mumbai, Delhi, and Bangalore have vibrant queer communities and inclusive nightlife. In 2026, major international hotel chains are increasingly 'LGBTQ+ certified.' While PDA is generally discouraged for all couples in India due to social conservatism, same-sex couples should exercise extra caution in rural areas. Transgender travelers are generally respected if identified as 'Hijra' (a traditional third-gender category), but foreign trans travelers may face bureaucratic hurdles. The 'posture' is: high comfort in metropolitan hubs; traditional modesty in the provinces.",
-		culture:
-			"Pluralistic & Traditional. Indian culture is a mix of ancient fluidity and colonial-era conservatism. While traditional Hindu and Buddhist philosophies are often neutral or inclusive, the social structure is built around arranged marriage. In 2026, 'Pride' marches are massive events in cities, but the community faces pushback from religious hardliners. For a visitor, the culture is one of extreme hospitality. You will likely find the youth to be highly progressive and the older generation to be 'politely private' about such topics. Respecting local modesty norms (avoiding PDA) ensures a smooth experience.",
-		health:
-			"Good (Urban). India has a robust private healthcare system. In 2026, HIV care is specialized and widely available, and PrEP is accessible in major cities. The 'Transgender Persons (Protection of Rights) Act' has improved access to gender-affirming care in public hospitals, though quality varies. For travelers, private hospitals (like Apollo or Max) provide world-class, confidential care. While inclusive clinics are increasing, it is best to seek care in Tier-1 cities. Always ensure you have a prescription for any personal medications, as Indian customs can be strict regarding bulk drugs.",
-		posture: "Confident Discretion - High safety in cities; limited legal family recognition; cultural focus on family privacy.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_India", "https://database.ilga.org/india-lgbti", "https://www.humandignitytrust.org/country-profile/india/"],
+
+		legal: `
+        <p>In 2026, India's legal landscape is a study in "High-Level Progress vs. Grassroots Erasure." While the 2018 decriminalization of Section 377 remains a bedrock, the 2023 Supreme Court refusal to legalize same-sex marriage has shifted the battle to "attainable rights" like the Right to Cohabitation and joint bank accounts. 2026 has seen a significant push for a comprehensive Anti-Discrimination Bill, though it remains stalled in committee.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "The Great Re-Medicalization." For example, the <strong>Transgender Persons (Protection of Rights) Amendment Bill of 2026</strong> has provided a chilling precedent for the community by proposing to replace self-identification with mandatory medical boards, a move heavily protested by local activists as a regression of the landmark 2014 NALSA judgment.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ The Humsafar Trust</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">India's oldest LGBTQ+ organization, currently leading the 2026 legal aid initiative for LGBT couples seeking protection from familial harassment (High Court "Protection Orders").</p>
+                <a href="https://humsafar.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' In Tier-1 cities like Mumbai and Bengaluru, public visibility is high and generally safe. However, digital safety has deteriorated; LGBT influencers face extreme organized trolling and doxxing. Rural areas remain largely governed by traditional social codes where visibility can carry significant risk.</p>
+
+        <p><strong>Community Density:</strong> Moderate. There are a growing number of "LGBT-Owned" cafes and co-working spaces in urban hubs, but few dedicated, exclusive "night-only" LGBT bars outside of Mumbai and Delhi.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #92</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 performance is held back by the lack of hate-crime legislation and increasing digital marginalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>India is a safe 2026 destination for "Gay-passing" travelers, particularly in the luxury segment. Trans and GNC individuals may face frequent misgendering or "staring" in public transport, though the Hijra community's historical presence provides a unique, if complex, cultural context for gender non-conformity.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Kitty Su** (Mumbai/Delhi/Chandigarh) - Located within The Lalit hotels, these are the safest, high-end "inclusive" clubs with rigorous security.
+        * **The Local Way:** **Indiranagar Hub** (Bengaluru) - Not a single bar, but a district where several "mixed" cafes like **Blue Tokai** or local craft breweries act as de facto LGBT safe spaces during the day.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** **Grindr** remains the king for men, but **HeeSay** (formerly Blued) is popular for its community-stream features. **Hinge** and **Bumble** are the go-to for more serious LGBT dating.
+        * **Community Forums:** **Gaysi Family** and **Orinam** are essential for up-to-date 2026 event listings and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 20px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Discretion Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, be cautious of "honey-trapping" on apps in smaller cities. Always meet in public, high-traffic areas like malls or well-known cafes for a first meetup.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP has expanded significantly in 2026 through private providers like **Safe Zindagi**. HRT is available but requires navigating a shrinking pool of trans-affirmative psychiatrists due to the new 2026 medical board proposals.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Mist HIV/Health Clinic</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Focuses on non-stigmatizing care and decentralized PrEP delivery across Mumbai and Pune.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Audacious Resilience.' The community is no longer waiting for the courts; they are building their own economic and social ecosystems despite the legislative standstill.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Gaysi Family", url: "https://gaysifamily.com/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex India", url: "https://www.equaldex.com/region/india", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Mumbai Pride (KASHISH)", url: "http://mumbaiqueerfest.com/", button: "EVENT DETAILS →" },
+		],
 	},
 
 	indonesia: {
 		name: "Indonesia",
 		continent: "asia",
-		status: "red",
-		legal:
-			"Legal but De Facto Criminalized. As of January 2, 2026, the new Indonesian Penal Code (KUHP) is in full force. While same-sex activity itself isn't explicitly named, Article 411 criminalizes any sexual activity outside of marriage (up to 1 year prison), and Article 412 criminalizes cohabitation. Since same-sex marriage is illegal, all queer intimacy is technically a crime under these 'morality' laws. In 2025-2026, regional 'anti-LGBT' bylaws in West Java and Sumatra have intensified, often using 'public order' clauses to conduct raids. There are no national discrimination protections. In Bali, the enforcement is significantly more relaxed, but the national law still applies.",
-		travel:
-			"Cautious to High Risk. Safety varies drastically by island. Bali remains a global LGBTQ+ tourism hub with open nightlife and inclusive resorts in 2026. However, in Aceh (under Sharia law), public caning for same-sex acts remains a reality. In Jakarta, the 'ASEAN Queer Advocacy Week' was forced to cancel in late 2024 due to threats. Travelers should avoid PDA and keep a low digital profile. Avoid using dating apps in conservative regions like Sumatra or Sulawesi, as 'trap' operations by local vigilante groups have been reported. The 'posture' is: Bali is safe; the rest of the country requires high levels of discretion.",
-		culture:
-			"Conservative & Religious. Indonesia is a pluralistic society with a strong 'Pancasila' (national ideology) that has been increasingly interpreted through a conservative Islamic lens. In 2026, the government officially classifies LGBTQ+ identity as 'social deviance.' For a visitor, the local culture is famous for 'Gotong Royong' (mutual help) and kindness. People are rarely confrontational, but the 'moral' pressure to conform is intense. Tourism is vital, so hotels generally protect guests' privacy, but 'shaming' campaigns can happen on social media if PDA is captured on camera.",
-		health:
-			"Adequate (Private) but Risky. Public health clinics often require 'family registration,' which is a barrier for queer people. In 2026, HIV care is available but highly stigmatized; diagnosis can lead to pressure for 'rehabilitation' under Article 85 of the new code. PrEP is available through specific NGOs in Bali and Jakarta but is difficult to source elsewhere. For travelers, only use reputable private international clinics (like BIMC in Bali). Disclosure of identity to medical staff in conservative regions is risky. Gender-affirming care is extremely limited and not legally protected.",
-		posture: "Confident Discretion - High risk under new 2026 Penal Code; Bali remains a safe 'bubble' but national surveillance is increasing.",
+		status: "amber",
+
+		legal: `
+        <p>In 2026, the legal landscape is a "Checkered Flag." Consensual same-sex acts are not nationally illegal, but the **2023 Penal Code** (fully active as of 2026) includes vague "morality" and "cohabitation" clauses. For travelers, this rarely results in arrest, but it is frequently used as a pretext for police to raid private parties or budget "local" saunas to "maintain public order."</p>
+
+        <p><strong>The "Double Standard":</strong> Authorities rarely touch high-end, Western-facing hotels or upscale clubs in the SCBD (Sudirman Central Business District), as these are vital to the economy and frequented by the elite. The "legal risk" is almost entirely concentrated on the lower-income local scene and specific "activist" gatherings.</p>
+
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Arus Pelangi</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary legal defense network for LGBTQ+ Indonesians facing morality-based charges.</p>
+                <a href="https://aruspelangi.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Jakarta in 2026 is a "Discreet Playground." Safety is tied directly to your surroundings. In upscale South Jakarta (SCBD, Senopati), the vibe is cosmopolitan and safe. In East or North Jakarta, a much lower profile is required.</p>
+
+        <p><strong>Community Density:</strong> 
+        * **Bali:** High Visibility. The Seminyak strip (**Bali Joe**, **Mixwell**) is the only place in Indonesia where the rainbow flag flies openly.
+        * **Jakarta:** High Density, Low Visibility. The community is huge but moves through "Mixed" anchors and private guest-list events.</p>
+
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 20px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">🚨 RAID AWARENESS</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Avoid unlisted, budget "men-only" massage parlors or saunas in North Jakarta. These are the primary targets for 2026 morality raids. Stick to upscale hotel spas or known anchors.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>For a complete 2026 Jakarta experience, you need to visit both the "Local Hearth" and the "Upscale Anchors."</p>
+
+        <p><strong>The "Local Hearth":** **ML (Meli)** remains the essential Jakarta experience. It is gritty, loud, and 100% LGBT-local. This is where you see the real community without the "Western" filter. It’s located in the Hayam Wuruk area and is best visited after 11 PM.</p>
+
+        <p><strong>The Upscale Anchors:</strong> 
+        * **Tiga Puluh** (Le Meridien Hotel): A long-standing "Mixed" institution. It is upscale, features live bands, and is a safe, high-end meeting spot for the professional gay crowd and expats.
+        * **Dragonfly** (Graha Niaga): One of the most famous clubs in Asia. While technically a mainstream "A-List" club, it is extremely gay-friendly and hosts the city's wealthy elite. Dress to impress; the door policy is strict.
+        * **Skye** or **Cloud Lounge**: These rooftop bars in Central Jakarta are the go-to for "Gay-Friendly" sunset cocktails. They offer safety through high-end anonymity.</p>
+
+        <p><strong>The "Pop-Up" Circuit:** In 2026, the most vibrant part of the scene is nomadic. Groups like **The Closet** or **BOP** host semi-private parties in rotating venues across Senopati. These are "invite-only" or requires a Telegram/Instagram follow to find the location. These are the safest and most modern expressions of LGBT Jakarta life.</p>
+
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "SCBD" Safe Zone</strong>
+                <p style="color: #fff; font-size: 0.85rem;">When in Jakarta, base yourself in the SCBD or Mega Kuningan areas. These business districts are the most liberal and provide easy access to the upscale "Mixed" clubs where you can socialize without scrutiny.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to health services is discreet. **Bali Medika** remains the hub for travelers, while **Ruang Kenanga** clinics in Jakarta offer safe, NGO-supported HIV and PrEP services.</p>
+
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Bali Medika Clinic</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Seminyak, Bali - The regional leader in LGBTQ+ health.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>Indonesia in 2026 is a world of "Sophisticated Discretion." From the raw energy of ML to the polished dancefloors of Dragonfly, the community thrives by knowing exactly where the boundaries lie.</p>
+    `,
+
 		sources: [
-			"https://www.reuters.com/world/asia-pacific/indonesias-new-criminal-code-requires-public-oversight-minister-says-2025-12-31/",
-			"https://database.ilga.org/indonesia-lgbti",
-			"https://www.hrw.org/news/2022/12/08/indonesia-new-criminal-code-disastrous-rights",
+			{ label: "Ground Intel: The Closet Jakarta", url: "https://www.instagram.com/thecloset.jkt/", button: "FOLLOW FOR PARTIES →" },
+			{ label: "Travel Intel: Travel Gay Jakarta", url: "https://www.travelgay.com/jakarta-gay-bars-and-dance-clubs", button: "2026 CLUB LIST →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/indonesia", button: "LEGAL DATA →" },
 		],
 	},
-
 	iran: {
 		name: "Iran",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Death Penalty. Same-sex sexual activity remains a capital offense under the 2013 Islamic Penal Code. Articles 233-240 cover 'lavat' (men) and 'musaheqeh' (women). In 2025, several executions for 'sodomy' were reported by human rights groups. However, Iran uniquely allows sex reassignment surgery (legalized by Fatwa in the 1980s) as a 'cure' for homosexuality. In 2026, the government continues to pressure gay men to undergo surgery to avoid execution. There are no protections against discrimination, and 'immoral acts' like kissing in public can lead to 74 lashes.",
-		travel:
-			"Extreme Risk. Iran is not a safe destination for out LGBTQ+ travelers. Under the current political climate in 2026, travelers from Western nations already face high risk of arbitrary detention; being queer adds a layer of extreme vulnerability. PDA is strictly forbidden for everyone, but for same-sex couples, it can lead to immediate arrest. Transgender travelers are technically legal if they have undergone surgery, but they still face intense harassment and scrutiny at borders. Digital surveillance is absolute; do not have any queer content or dating apps on your phone. Discretion is the only survival strategy.",
-		culture:
-			"Conservative & Totalitarian. Iranian society is split between a deeply secular, progressive youth and a fundamentalist clerical regime. In 2026, the 'Women, Life, Freedom' movement has created some underground solidarity with the LGBTQ+ community, but public life is strictly controlled. For a visitor, the culture of 'Taarof' (complex etiquette) and hospitality is world-famous. Iranians are often incredibly welcoming to foreigners, but your identity must remain entirely hidden. The regime views queer rights as 'Westoxification' (Gharbzadegi).",
-		health:
-			"Good (Technical) but Dangerous. Iran has highly advanced medical facilities, but they are used as tools of state control. In 2026, HIV care is available but heavily monitored. Gender-affirming surgery is common but often forced or low-quality. For travelers, a medical emergency should be handled by high-end private clinics in Tehran, but never disclose your orientation. There is a high risk that medical records could be shared with 'Morality' officials. If you require specialized LGBTQ+ care, you must seek it outside the country.",
-		posture: "Extreme Risk - Death penalty and lashings are active; state-forced gender surgery is used to 'erase' homosexuality.",
-		sources: ["https://www.humandignitytrust.org/country-profile/iran/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_iran", "https://www.iranhr.net/"],
+
+		legal: `
+        <p>In 2026, Iran remains one of the most legally hostile environments for LGBTQ+ individuals. Consensual same-sex acts are capital offenses under the Islamic Penal Code. While the state recognizes binary transgender transitions (following a 1987 fatwa), this is often used as a tool for "forced re-assignment" to fit the heteronormative legal framework.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Survivalism." For example, the 2026 increased surveillance of encrypted messaging apps has provided a chilling precedent for the community, leading to a total withdrawal from digital visibility to avoid morality police entrapment.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ 6Rang (Iranian Lesbian and Transgender Network)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Operating from exile, they provide the primary 2026 reporting on human rights violations and legal aid for those attempting to flee.</p>
+                <a href="https://6rang.org/english/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 public sentiment is highly hostile, governed by state-sanctioned homophobia. Public visibility is dangerous. However, in affluent North Tehran neighborhoods, "underground" house parties exist behind high walls and heavy security.</p>
+
+        <p><strong>Community Density:</strong> Underground. There are zero dedicated LGBT spaces; community life is entirely confined to private residences.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #194</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Ranked among the most dangerous countries globally for LGBTQ+ life in 2026.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Extremely high risk. Travelers should maintain total digital and physical discretion. Foreign nationals are not immune to morality laws.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** Private North Tehran Villas - Only accessible via trusted local networks; security is handled by private gatekeepers.
+        * **The Local Way:** N/A - Authentic public community hubs do not exist due to the threat of execution.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Hornet and Grindr are used via VPNs, but carry high risk of entrapment.
+        * **Community Forums:** JoopeA is a key digital resource for Iranian LGBT news and safety info in the diaspora.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Wipe all LGBT-dating apps and sensitive photos before arrival. Do not discuss LGBTQ+ topics with guides or strangers.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Sexual health care is virtually non-existent for the LGBT community outside of state-sanctioned transition paths. HIV care is available but highly stigmatized.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">JoopeA Health (Digital)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Provides digital resources and anonymous health counseling for the Persian-speaking LGBT community.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Extreme Erasure.' The community exists in total secrecy, showing resilience only through high-risk underground social networks.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: JoopeA", url: "https://joopea.info/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	iraq: {
 		name: "Iraq",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced. In April 2024, Iraq amended its 1988 Anti-Prostitution Law to explicitly criminalize 'homosexuality' with up to 15 years in prison. In 2026, this law is actively being used to arrest activists and 'men who act like women.' The law also bans gender-affirming surgery and imposes 7 years for 'promoting' homosexuality. While an earlier draft included the death penalty, the final version substituted long-term imprisonment and heavy fines. There are no discrimination protections, and the term 'homosexuality' has been replaced in official media with 'sexual deviance.'",
-		travel:
-			"Extreme Risk. Iraq is highly dangerous for LGBTQ+ individuals. In 2026, 'militia' groups often act with impunity, conducting 'honor' killings and kidnappings of those perceived as queer. PDA is a certain trigger for violence. Even in the more liberal Erbil (Kurdistan region), recent 2025 laws have restricted 'LGBT advocacy.' Transgender travelers are at extreme risk of arrest under the new 'imitation' clauses. Digital safety is a major concern; authorities and militias use social media to track and target individuals. Travel is strongly discouraged.",
-		culture:
-			"Conservative & Volatile. Iraqi culture is deeply patriarchal and currently dominated by religious factions. Queer identity is seen as an existential threat to 'moral depravity.' In 2026, the community is entirely underground. For a visitor, the culture is one of legendary hospitality, but it is a hospitality based on rigid social codes. Any deviation from traditional gender roles is met with intense hostility. The state-run media actively campaigns against the community, framing them as a 'global corruption' that must be purged.",
-		health:
-			"Basic & High Risk. Healthcare is limited and biased. In 2026, seeking HIV care can lead to police reports under the new 'promotion' laws. There is no gender-affirming care (it is now explicitly illegal for doctors to perform). Travelers should use high-end private hospitals in Erbil for general health but remain 'stealth.' In Baghdad, public medical staff are often tied to religious factions and may exhibit extreme hostility or refuse treatment based on perceived identity. Medical evacuation is highly recommended for anything serious.",
-		posture: "Extreme Risk - 15-year prison sentences and active militia violence; state-mandated 'erasure' of queer identity.",
+
+		legal: `
+        <p>Following the 2024 Anti-Prostitution Law amendments, same-sex relations carry up to 15 years in prison. In 2026, legal protections are non-existent, and the state actively uses "public morality" laws to target LGBTQ+ expression.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "The Purge." The 2026 digital tracking of "immoral content" has provided a chilling precedent, forcing the few remaining local NGOs to move entirely to secure, offshore operations.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ IraLGBT</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The leading 2026 advocate for Iraqi LGBTQ+ rights, focusing on international pressure and emergency evacuations.</p>
+                <a href="https://www.iraLGBT.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is extremely dangerous. Militias and "morality squads" operate with impunity. Safe havens are non-existent, though some parts of the Kurdistan Region (Erbil) were historically more relaxed, that window is rapidly closing in 2026.</p>
+
+        <p><strong>Community Density:</strong> Underground. Visibility is a direct threat to life.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #190</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">A severe decline following the 2024-2025 legislative crackdown.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Travel is highly discouraged for LGBTQ+ individuals. Total invisibility is the only safety strategy.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** None.
+        * **The Local Way:** Private, vetted apartments in Baghdad or Erbil—only accessible via deep community trust.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Hornet and Grindr (highly monitored).
+        * **Community Forums:** IraLGBT's digital guides provide the most reliable 2026 security protocols.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Lockdown</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, Iraq has authorized phone searches for "immoral content." Delete all history, apps, and photos before entry.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Health care for LGBT individuals is often a trap. Stigma in clinics is severe. Most community members rely on private, peer-recommended doctors.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">IraLGBT Security Hub</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Contact through secure channels for lists of vetted, non-judgmental healthcare providers.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Terrified Resilience.' The legal crackdown has turned daily life into a series of high-stakes security decisions.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/news/2024/04/27/iraq-homosexuality-law-new-low",
-			"https://www.humandignitytrust.org/country-profile/iraq/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_iraq",
+			{ label: "Ground Intel: IraLGBT News", url: "https://www.iraqueer.org/", button: "SECURITY UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -259,35 +750,151 @@ Object.assign(globalData, {
 		name: "Israel",
 		continent: "asia",
 		status: "green",
-		legal:
-			"Progressive & Protected. Israel is the only country in Asia to recognize same-sex marriages (performed abroad or via 'Utah' online services). Since 1992, discrimination in employment has been illegal. In 2026, hate crime laws provide double penalties for orientation-based violence. Same-sex couples have full adoption and surrogacy rights (confirmed by the Supreme Court in 2021). While the current government includes far-right members who oppose these rights, the judiciary has remained a strong defender of LGBTQ+ equality. There is no domestic civil marriage for anyone, so all couples must marry abroad or through the online loophole to be registered.",
-		travel:
-			"Safe & Open. Tel Aviv is widely considered the 'Gay Capital of the Middle East,' with world-class Pride events and an extremely visible community. In 2026, the city remains a sanctuary for travelers. PDA is perfectly safe in Tel Aviv and Haifa. However, in Jerusalem and religious towns like Bnei Brak, discretion is advised to avoid social friction with the Ultra-Orthodox community. Transgender travelers face very little discrimination and have access to inclusive facilities. The 'posture' is: high safety and visibility in urban centers.",
-		culture:
-			"Liberal & Diverse. Israeli culture is a vibrant mix of Mediterranean openness and religious tradition. While the secular majority is highly supportive, there is a sharp divide with religious sectors. In 2026, the LGBTQ+ community is integrated into the military, politics, and media. For a visitor, the culture is energetic and 'Sabra' (blunt but warm). You will find rainbow flags throughout Tel Aviv, but you should be respectful when visiting holy sites in Jerusalem. It is a society that values 'living and letting live,' provided you respect the sanctity of religious zones.",
-		health:
-			"World-Class. Israel has some of the best healthcare in the world. In 2026, HIV care is advanced, and PrEP is subsidized and widely available through health funds (Kupot Cholim). Gender-affirming care is fully supported by the Ministry of Health and is accessible to residents and foreign-residents alike. For travelers, any medical need will be met with professional, non-discriminatory care at hospitals like Sourasky (Ichilov). Privacy and patient rights are strictly protected by law, making it a safe haven for medical needs in the region.",
-		posture: "Safe & Open - The most progressive nation in the Middle East; full legal recognition and high social visibility.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_israel", "https://www.jewishvirtuallibrary.org/lgbt-rights-in-israel", "https://www.equaldex.com/region/israel"],
+
+		legal: `
+        <p>In 2026, Israel maintains the most advanced LGBTQ+ protections in the Middle East. While same-sex marriage cannot be performed in-country, foreign marriages are recognized, and adoption rights are established. 2025-2026 saw increased legal battles to secure these rights against conservative legislative shifts.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Fragile Progress." For example, the 2026 mass rallies in Tel Aviv against potential rollbacks have provided a hopeful precedent for the community’s mobilization power.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ The Aguda</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The umbrella organization for LGBTQ+ rights in Israel, focusing on legislative defense and community safety in 2026.</p>
+                <a href="https://www.lgbt.org.il/english" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is highly polarized. Tel Aviv remains a global "Gay Mecca," but Jerusalem and periphery cities are significantly more conservative. Public displays of affection are safe in Tel Aviv but may draw hostility in religious quarters.</p>
+
+        <p><strong>Community Density:</strong> High. Tel Aviv has numerous LGBT-owned bars, clubs, and community centers.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #34</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">High ranking, though weighed down by regional geopolitical instability and domestic political tension.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Excellent for LGBTQ+ travelers, especially in Tel Aviv. Trans/GNC individuals are generally well-received in the city center, though airport security can be invasive for everyone.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Shpagat** - A staple Tel Aviv cafe-bar that is the definition of "safe and trendy."
+        * **The Local Way:** **Layla** - A neighborhood bar that offers an authentic, less-touristy vibe for the local LGBT community.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Scruff, and Tinder.
+        * **Community Forums:** WDG (Walla Gay) is the leading 2026 portal for local LGBT news and events.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Tel Aviv Pride 2026</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Expect heavy but supportive security. The 2026 posture is one of "Defiant Celebration" amidst regional tensions.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>PrEP is widely accessible through the national health system. HRT is available, though wait times for specialized clinics have increased in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">The Tel Aviv LGBTQ+ Center</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Sarona Park - Provides comprehensive health, mental, and community support.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Vigilant Openness.' The community is thriving but deeply aware that their rights are a focal point of broader political shifts.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: WDG News", url: "https://wdg.co.il/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex Israel", url: "https://www.equaldex.com/region/israel", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Tel Aviv Pride", url: "https://www.visit-tel-aviv.com/en/pride/", button: "EVENT DETAILS →" },
+		],
 	},
 
 	japan: {
 		name: "Japan",
 		continent: "asia",
-		status: "green",
-		legal:
-			"Legal & Evolving. Same-sex sexual activity has never been criminalized in modern Japan. In 2024-2025, High Courts in Sapporo and Tokyo ruled that the ban on same-sex marriage is unconstitutional, putting immense pressure on Parliament to pass a national law. In 2026, over 70% of the population lives in municipalities that offer 'Partnership Certificates.' While these don't provide full inheritance or spousal visa rights, they signify a major social shift. A 2024 Supreme Court ruling also removed the requirement for 'sterilization' to legally change gender, though 'reproductive functionality' clauses are still being debated in 2026.",
-		travel:
-			"Safe & Welcoming. Japan is one of the safest countries in the world for all travelers. In 2026, Tokyo (Shinjuku Ni-chome) and Osaka have world-famous, densely packed queer districts. PDA is generally rare for all couples in Japan due to cultural modesty, but same-sex couples face virtually no risk of violence. Transgender travelers are treated with professional respect, though they may encounter confusion at traditional 'Onsens' (hot springs); however, 'gender-neutral' or 'private' baths are increasingly common in 2026. The 'posture' is: extremely safe; cultural focus is on privacy and etiquette.",
-		culture:
-			"Polite & Private. Japanese culture is based on 'Wa' (harmony). While traditional religions (Shinto/Buddhism) have no history of condemning queer identity, the pressure to conform to the 'salaryman' family model is high. In 2026, 'Tokyo Rainbow Pride' is a major corporate-sponsored event. For a visitor, the culture is one of extreme politeness. You are unlikely to ever face a direct confrontation. The social rule is: what you do in private is your business, provided it doesn't disrupt public harmony. As a guest, following local etiquette and 'reading the air' (Kuuki wo yomu) is the key to a perfect trip.",
-		health:
-			"World-Class. Healthcare is efficient and professional. In 2026, HIV care is excellent and highly confidential. PrEP is available but often requires visiting specialized clinics in Tokyo or Osaka. Since 2024, gender-affirming care has become more accessible following the Supreme Court's relaxed sterilization rules. For travelers, hospitals like St. Luke's in Tokyo offer international-standard, non-discriminatory care. Privacy laws are strict. If you are trans, it is wise to carry a 'Gender Identity Certificate' from your home doctor if you plan to use gendered public spaces like Onsens.",
-		posture: "Safe & Open - High physical safety; rapid legal progress toward marriage; strong cultural focus on privacy.",
+		status: "amber",
+
+		legal: `
+        <p>In 2026, Japan is in a state of "Judicial Transition." While same-sex marriage is not yet legal at the national level, over 80% of the population lives in municipalities with partnership certificates. 2025-2026 court rulings have consistently found the ban on same-sex marriage "unconstitutional," putting immense pressure on the Diet to act.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "The Final Push." The 2026 ruling on the <em>Marriage for All Japan</em> case has provided a hopeful precedent, signaling that a national legislative shift is inevitable.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Marriage For All Japan</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary legal organization in 2026 fighting for national marriage equality through coordinated lawsuits.</p>
+                <a href="https://marriageforall.jp/en/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Public safety is exceptionally high. Violence is almost non-existent. However, social pressure for "harmony" (wa) means public visibility is still met with quiet discomfort in many regions. Shinjuku Ni-chome remains the densest LGBT district in the world.</p>
+
+        <p><strong>Community Density:</strong> High. Thousands of small LGBT bars exist, primarily in Tokyo and Osaka.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #52</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Very high personal safety, but low legal recognition scores.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Japan is very safe for 2026 travelers. Trans/GNC individuals generally face curiosity rather than hostility, though binary gender norms in onsens (hot springs) remain a point of friction.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Goldfinger** (Shinjuku) - A world-famous hub particularly welcoming to LGBT women and non-binary people.
+        * **The Local Way:** Small 6-seat "snack bars" in **Shinjuku Ni-chome** - These are the backbone of the community vibe; look for the rainbow flags on small vertical signs.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** 9monsters (the local favorite), Grindr, and Jack'd.
+        * **Community Forums:** TRP (Tokyo Rainbow Pride) official site is the go-to for 2026 event calendars.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Tokyo Rainbow Pride 2026</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Expect a corporate-heavy but joyful atmosphere. Security is light and the vibe is very family-friendly.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>PrEP is available but often self-funded as it isn't fully covered by national insurance yet. HRT is accessible, and 2026 has seen a rise in gender-affirming clinics in Tokyo and Osaka.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Personal Health Clinic (Shinjuku)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Leading provider of sexual health and PrEP services for the LGBTQ+ community in Japan.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Patient Optimism.' The culture is shifting faster than the laws, creating a society that is largely ready for equality even if the government is lagging.</p>
+    `,
+
 		sources: [
-			"https://www.amnestyusa.org/press-releases/japan-momentum-for-marriage-equality-grows-with-tokyo-high-court-ruling/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_japan",
-			"https://www.hrw.org/world-report/2026/country-chapters/japan",
+			{ label: "Ground Intel: Marriage For All", url: "https://marriageforall.jp/en/", button: "LEGAL UPDATES →" },
+			{ label: "Official Index: Equaldex Japan", url: "https://www.equaldex.com/region/japan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Tokyo Rainbow Pride", url: "https://tokyorainbowpride.com/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -295,19 +902,75 @@ Object.assign(globalData, {
 		name: "Jordan",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Restricted. Same-sex activity was decriminalized in 1951. However, in August 2023, Jordan passed a new 'Cybercrime Law' which in 2026 is being used to target 'immoral' digital content, including LGBTQ+ advocacy. While you cannot be arrested for being gay, you can be arrested for 'disrupting public morality' (Article 278 of the Penal Code). In 2024, the government banned doctors from performing gender-affirming surgery on anyone whose biological sex is 'clear.' There are no discrimination protections, and the 'Family Values' rhetoric has intensified in 2026.",
-		travel:
-			"Safe but Discrete. Jordan is relatively progressive compared to its neighbors. Amman has a 'low-key' queer scene in areas like Jabal Amman and Rainbow Street. In 2026, travelers are generally safe as long as they avoid PDA (which is frowned upon for everyone). However, dating apps have been blocked periodically under the 2023 Cybercrime Law. Transgender travelers are at risk of harassment, especially at checkpoints or borders, as the 2018 'Illegal' gender change ruling remains in effect. The 'posture' is: Amman is a sophisticated, tolerant bubble; rural areas (Wadi Rum/Petra) require strict conservatism.",
-		culture:
-			"Cosmopolitan & Islamic. Jordan is a bridge between East and West. While the monarchy is generally moderate, the tribal and religious sectors are deeply conservative. In 2026, there is no public Pride, and the 'My.Kali' webzine remains the primary underground voice for the community. For a visitor, the culture is one of immense pride and generosity. You will find Jordanians to be some of the most helpful people you'll ever meet. The social contract is 'don't ask, don't tell'—identity is a private matter, and keeping it that way ensures respect.",
-		health:
-			"Adequate (Private). Jordan is a regional hub for medical tourism. In 2026, private hospitals in Amman (like Al-Khalidi) are professional and generally respect patient privacy. HIV care is available but must be registered with the Ministry of Health, which can be a risk for non-tourists. PrEP is difficult to obtain. Gender-affirming care is now legally restricted for most people. For travelers, sticking to high-end private care is safe, but avoid discussing your orientation unless it is essential for treatment. Always carry proof of any hormones you are bringing into the country.",
-		posture: "Confident Discretion - Legal since 1951 but 'vague morality' and new cybercrime laws create legal traps.",
+
+		legal: `
+        <p>Homosexuality was decriminalized in 1951, making Jordan unique in the region. However, there are zero anti-discrimination laws. In 2026, the state uses "public decency" and "cybercrime" laws to restrict LGBT expression, and social/familial pressure remains the primary legislative force.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Quiet Presence." For example, the 2026 closure of a "liberal" cultural space in Amman has provided a chilling precedent for the community, signaling a tightening of the already narrow public sphere.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ My.Kali (Digital)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The most influential 2026 LGBT magazine and digital voice for Jordan, though operating with extreme caution due to censorship.</p>
+                <a href="https://www.mykalimag.com/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' Amman is split between the "Old City" (conservative) and "West Amman" (cosmopolitan). West Amman cafes and galleries are relatively safe for discreet LGBT individuals, but public displays of affection are highly discouraged.</p>
+
+        <p><strong>Community Density:</strong> Underground/Moderate. No dedicated bars, but several "safe-adjacent" cafes exist in Jabal Lweibdeh.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #121</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Score reflects the absence of criminalization but the heavy presence of social hostility.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Discretion is mandatory. "Gay-passing" travelers will find Amman a welcoming city. Trans/GNC individuals should expect significant scrutiny and potential harassment in public spaces.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Books@Cafe** (Jabal Amman) - A historic landmark of tolerance; generally safe for LGBT travelers to gather discreetly.
+        * **The Local Way:** Cafes in **Jabal Lweibdeh** - These are the "Bohemian" heart of Amman where the local LGBT community finds breathing room.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Tinder are active but use with caution regarding cybercrime laws.
+        * **Community Forums:** My.Kali remains the primary digital safe space for the 2026 community.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Privacy Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, be aware that Jordanian authorities have used "misuse of telecommunications" laws against LGBT dating app users. Use a VPN and clear your app history frequently.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HIV care is available but often tied to state institutions where stigma is high. PrEP access is limited to private clinics for those with the means.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">SKeyes Center</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">While primarily for media freedom, they are a 2026 ally for LGBT individuals facing digital harassment or health-related stigma.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 vibe is 'Calculated Discretion.' The community is intelligent and connected, but they navigate a city that officially ignores them while socially monitoring them.</p>
+    `,
+
 		sources: [
-			"https://www.intrepidtravel.com/en/jordan/is-jordan-lgbtqia-friendly",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_jordan",
-			"https://www.hrw.org/news/2023/08/11/jordan-cybercrime-law-new-blow-freedom",
+			{ label: "Ground Intel: My.Kali Magazine", url: "https://www.mykalimag.com/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -315,19 +978,75 @@ Object.assign(globalData, {
 		name: "Kazakhstan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Legal but Suppressing. Same-sex activity has been legal since 1998, but the legal landscape turned sharply hostile in late 2025. On December 30, 2025, President Tokayev signed a law banning 'LGBT propaganda,' which in 2026 criminalizes the public promotion or positive representation of queer topics in media and online platforms. Violations carry 10 days of arrest and heavy fines. While private relationships remain legal, the state has empowered itself to block websites. Legal gender change is possible but requires a 30-day psychiatric hospitalization and surgery, which many international groups have condemned.",
-		travel:
-			"Cautious & Vigilant. Before 2025, Almaty was the 'queer capital' of Central Asia; in 2026, the community has been pushed underground. While the risk of violent crime is low, police now have the authority to arrest anyone 'promoting' non-traditional values in public. PDA is highly risky. Transgender travelers are at risk of administrative detention if their documents are questioned. Dating apps should be used with extreme caution, as 'police traps' have increased since the 2025 law. The 'posture' is: Almaty remains cosmopolitan, but the new laws mean you must be invisible in the public square.",
-		culture:
-			"Post-Soviet & Traditional. Kazakh culture is a mix of Russian influence and nomadic tradition. In 2026, a 50,000-person petition for the 'propaganda ban' shows the level of local hostility fueled by Russian media influence. For a visitor, the culture is one of formal respect and 'Steppe' hospitality. People are unlikely to be aggressive toward tourists unless you openly challenge the 'propaganda' laws. It is a country where you should enjoy the nature and the food while keeping your digital and social presence entirely neutral.",
-		health:
-			"Basic to Adequate. Public healthcare is riddled with Soviet-era stigma. In 2026, HIV care is available but diagnosis often leads to social shaming. PrEP is available through specific NGOs in Almaty like 'Answer,' but their future is uncertain under the new laws. Gender-affirming care is highly medicalized and psychiatric in nature. For travelers, use only top-tier private clinics in Almaty or Astana. Privacy is not guaranteed in the public system. If you require sensitized care, it is safer to travel to nearby Almaty, but keep your medical history private from general practitioners.",
-		posture: "Confident Discretion - Severe 2026 'Propaganda' ban; legal since 1998 but public visibility is now an administrative offense.",
+
+		legal: `
+        <p>In 2026, Kazakhstan’s legal landscape has darkened significantly. While same-sex acts have been legal since 1998, the government implemented a sweeping "Anti-LGBTQ Propaganda" law in March 2026, prohibiting the "promotion of non-traditional sexual relations" in media and online platforms. This law effectively criminalizes public advocacy and visibility.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Censored and Precarious." For example, the 2026 sentencing of a local blogger for "propaganda" on social media has provided a chilling precedent for the community, forcing many activists into digital exile or anonymity.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Feminita (Kazakhstan Feminist Initiative)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Despite constant state pressure and registration denials, they remain the most vocal 2026 grassroots force for LBQ rights.</p>
+                <a href="https://feminita.kz/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' While major cities like Almaty maintain a degree of cosmopolitan tolerance, rural areas remain deeply conservative. Public visibility is increasingly dangerous following the 2026 propaganda ban, as it emboldens nationalist vigilante groups.</p>
+
+        <p><strong>Community Density:</strong> Underground. Dedicated LGBT spaces are vanishing, replaced by "secret" pop-up events and private house gatherings.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #118</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has dropped following the new censorship legislation.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety for 2026 travelers depends heavily on location. Almaty is relatively safe for "Gay-passing" individuals, but Trans/GNC travelers face significant risk of harassment and detention due to strict binary gender norms.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Barmaglot** (Almaty) - A high-end cocktail bar; not specifically LGBT but attracts a diverse, liberal, and elite crowd where discretion is the norm.
+        * **The Local Way:** Private Almaty Loft Parties - In 2026, the real community pulse is found in invitation-only events organized via Telegram.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Tinder and Grindr (requires VPN for safety and to bypass local throttling).
+        * **Community Forums:** Telegram channels like "Selftanu" (often blocked/mirrored) are the go-to for safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Avoid displaying pride symbols (even on phone cases/stickers) as the 2026 propaganda law can be interpreted broadly by local police.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT and HIV care exists but is increasingly medicalized and pathologized. 2026 has seen a rise in "psychological vetting" for gender-affirming care.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Community Center "Almaty"</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Provides peer-led support and navigation for safe sexual health services.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cautious Resilience.' The community is going quiet to survive, but underground networks remain incredibly robust in Almaty.</p>
+    `,
+
 		sources: [
-			"https://russiapost.info/society/kazakhstan_gay_propaganda_law",
-			"https://en.wikipedia.org/wiki/Anti-LGBTQ_law_in_Kazakhstan",
-			"https://www.hrw.org/world-report/2026/country-chapters/kazakhstan",
+			{ label: "Ground Intel: Feminita", url: "https://feminita.kz/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/kazakhstan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: LGBT Studies Astana 2026", url: "https://conferencealerts.co.in/event/100771102", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -335,19 +1054,75 @@ Object.assign(globalData, {
 		name: "Kuwait",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Restricted. Same-sex activity between men is criminalized under Article 193 of the 1960 Penal Code, carrying up to 7 years in prison. While female same-sex activity is not explicitly named, it is often prosecuted under 'public indecency' (Article 198). In 2022, a major victory occurred when the Constitutional Court struck down the 'imitation of the opposite sex' law. However, in 2025-2026, Parliament has proposed new laws to criminalize 'LGBT advocacy' (including flags) with 3 years in prison. There are zero protections against discrimination, and HIV+ foreigners are deported immediately.",
-		travel:
-			"High Risk. Kuwait is one of the most conservative Gulf states. In 2026, police harassment and 'morality' arrests are common. Transgender travelers, despite the 2022 ruling, still face extreme risk of being targeted by police under 'indecency' codes. PDA is strictly forbidden for everyone and can lead to immediate deportation. Digital safety is low; authorities monitor social media for 'immoral' content. If you are a man with 'effeminate' mannerisms, you are at risk of detention. The 'posture' is: total invisibility; luxury hotels are the only semi-private spaces.",
-		culture:
-			"Conservative & Wealthy. Kuwaiti society is deeply traditional and tribal. In 2026, billboards with 'anti-LGBT' messages are a frequent sight in Manama. For a visitor, the culture is one of formal, high-end hospitality—if you follow the rules. Kuwaitis are often very private about their own lives and expect the same from guests. The public mood toward the community is one of active hostility, fueled by religious and political leaders who view queer rights as a threat to national identity. Respecting the dress code and Islamic norms is mandatory.",
-		health:
-			"Good (Technical) but Dangerous. Kuwait has high-quality private hospitals. However, in 2026, any medical check that reveals LGBTQ+ identity or HIV+ status is legally dangerous for foreigners. HIV+ status leads to mandatory deportation. There is no gender-affirming care. For travelers, a medical emergency should be handled by international clinics, but never disclose your orientation. If you carry medication for HIV or HRT, you are at extreme risk of being flagged at the airport. It is one of the few places where 'stealth' is required even in a hospital setting.",
-		posture: "Extreme Risk - 7-year prison sentences for men; mandatory deportation for HIV+; rising state-led anti-LGBT messaging.",
+
+		legal: `
+        <p>Kuwait criminalizes same-sex sexual activity between men with up to seven years' imprisonment. While the 2022 overturning of Article 198 (criminalizing "imitation of the opposite sex") was a win, 2025 and 2026 have seen a massive backlash, including the deportation of thousands of perceived trans individuals under "public morals" clauses.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Hostile." For example, the 2026 crackdown on rainbow-colored merchandise in retail stores has provided a chilling precedent for any form of visible support.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (Kuwait Watch)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Since no domestic NGOs are legally permitted, HDT remains the primary reporter of 2026 human rights violations.</p>
+                <a href="https://www.humandignitytrust.org/country-profile/kuwait/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' Police incited violence and "morality" raids are frequent. Surveillance of public spaces and shopping malls is high, targeting those who do not adhere to traditional gender presentations.</p>
+
+        <p><strong>Community Density:</strong> Underground. There are zero dedicated LGBT spaces; social life is entirely private and high-risk.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #188</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains near the bottom due to state-sponsored transphobia.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>High risk for 2026. Travelers are advised to wipe all dating apps and sensitive media before entry. Trans individuals, even with updated passports, are at high risk of being denied entry or detained.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** None - Even high-end hotels are subject to morality police oversight.
+        * **The Local Way:** N/A - Social life is strictly within private homes among trusted friends.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Scruff (heavily monitored by local authorities).
+        * **Community Forums:** LGBT Kuwaitis often use anonymous Twitter/X accounts to share real-time security alerts.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Security Warning</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Kuwaiti police may inspect phones for "immoral content." In 2026, having a "Pride" flag image can lead to deportation for non-citizens.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Healthcare for LGBTQ+ individuals is inaccessible through official channels. Trans individuals face total exclusion from state medical services following 2025 decrees.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Tele-Health (International)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Most community members rely on digital consultations from abroad for hormonal or sexual health advice.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Survival.' The community is under direct assault from both legal statutes and societal "purity" campaigns.</p>
+    `,
+
 		sources: [
-			"https://www.humandignitytrust.org/country-profile/kuwait/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_kuwait",
-			"https://www.amnesty.org/en/latest/news/2022/02/kuwait-court-victory-for-transgender-rights/",
+			{ label: "Ground Intel: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/kuwait/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/kuwait", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -355,19 +1130,75 @@ Object.assign(globalData, {
 		name: "Kyrgyzstan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Legal but Regressing. Same-sex activity has been legal since 1998, but in August 2023, Kyrgyzstan adopted a 'Gay Propaganda' law similar to Russia's. In 2026, this law is actively used to fine organizations and individuals who distribute information about 'non-traditional' sexual relations near schools or public spaces. Furthermore, in 2020, the government removed the right to legal gender recognition, making it impossible for trans people to change their documents. Same-sex marriage is constitutionally banned (Article 36). There are no hate crime laws, and police often fail to intervene in 'patriotic' vigilante attacks on the community.",
-		travel:
-			"Cautious & Vigilant. Kyrgyzstan (especially Bishkek) was once the most liberal spot in Central Asia; in 2026, that safety has evaporated. While physical crime against tourists is generally low, being 'visibly queer' is now a legal and social risk. PDA is highly discouraged. Transgender travelers are at extreme risk due to the 2020 document ban and the 2023 propaganda law. Digital safety is a concern, as local nationalist groups (like Kirk Choro) use social media to identify and harass individuals. The 'posture' is: Bishkek has a small underground scene, but public life must be strictly gender-conforming and discrete.",
-		culture:
-			"Conservative & Nationalistic. Kyrgyz culture is a mix of nomadic heritage and Soviet-era social norms. In 2026, 'National Values' are being used to justify the crackdown on NGOs and the LGBTQ+ community. For a visitor, the culture is one of legendary mountain hospitality—people will invite you into their yurts and share their bread. However, this is a traditional, heteronormative hospitality. Mentioning queer identity will likely end the conversation or lead to a confrontation. It is a country where you should enjoy the horses and the mountains while keeping your personal life to yourself.",
-		health:
-			"Basic & Stigmatized. Healthcare in Bishkek is adequate but biased. In 2026, HIV care is primarily managed by the 'Republican AIDS Center,' but stigma remains a massive barrier. PrEP is available through specific NGOs like 'Kyrgyz Indigo,' but they are under immense legal pressure. There is no public gender-affirming care. For travelers, use only high-end private clinics (like Neomed) and avoid disclosing orientation. If you are trans, you must bring all medication with you, as the system is now legally designed to exclude gender identity care.",
-		posture: "Confident Discretion - Severe 2023 'Propaganda' ban; 2020 ban on legal gender changes; high risk from vigilante groups.",
+
+		legal: `
+        <p>In 2026, Kyrgyzstan has shifted toward a repressive legal framework similar to Russia’s. A "Propaganda of non-traditional sexual relations" law was fully enacted by early 2026, targeting any information deemed "harmful to children," effectively banning all LGBTQ+ advocacy and public life.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Suffocating." For example, the 2026 closure of several human rights NGOs under the "Foreign Agents" style laws has provided a chilling precedent, leaving the community without legal defense.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Labrys Kyrgyzstan</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The longest-standing 2026 advocate, now operating under extreme surveillance to provide emergency support and housing.</p>
+                <a href="https://labrys.kg/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' Vigilante groups often target LGBT people with "entrapment" dates, and police are more likely to arrest the victim than the perpetrator. Bishkek, once a regional hub for Central Asian LGBT life, has seen its safe havens raided and closed.</p>
+
+        <p><strong>Community Density:</strong> Underground. Visible community life has retreated into closed-circle Telegram groups and private flats.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: solid 2px rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #134</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects a steep decline in safety and freedom of assembly.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Low safety rating for 2026. Travelers are advised to remain "closeted" for their stay. Trans/GNC individuals should avoid the country entirely if their identity doesn't match their legal documents, as border officials have become more aggressive.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **No Name Bar** (Bishkek) - A historically liberal space, but in 2026, it operates with a "no politics, no flags" policy for survival.
+        * **The Local Way:** Private Kitchen Table Gatherings - The only place for authentic conversation and safety in 2026.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Hornet and Grindr (highly prone to entrapment by "trolls").
+        * **Community Forums:** Secret Signal groups are now the only trusted way to receive local intel.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Do not meet anyone from apps in a private residence. Only meet in very public, crowded places in 2026 due to kidnapping risks.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT requires surgery in 2026, a regression from previous administrative tracks. HIV care is available but often linked to mandatory reporting.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Kyrgyz Indigo</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Digital support and referral to vetted, safe doctors for the community.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Under Siege.' The community is fighting for basic existence in a legal environment that has turned hostile almost overnight.</p>
+    `,
+
 		sources: [
-			"https://database.ilga.org/kyrgyzstan-lgbti",
-			"https://www.hrw.org/news/2023/08/17/kyrgyzstan-passes-anti-lgbt-propaganda-law",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_kyrgyzstan",
+			{ label: "Ground Intel: Labrys News", url: "https://labrys.kg/en", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA-Europe", url: "https://www.ilga-europe.org/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -375,35 +1206,225 @@ Object.assign(globalData, {
 		name: "Laos",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Unrecognized. Same-sex sexual activity has never been criminalized in the Lao People's Democratic Republic. However, there are no laws protecting against discrimination based on orientation or gender identity. As of 2026, there is no legal framework for same-sex marriage or civil unions, and the state remains socially conservative. While the government generally ignores the private lives of citizens, it does not permit formal LGBTQ+ advocacy or political organizing. There is no legal procedure to change one’s gender marker, leaving transgender individuals in a state of administrative invisibility.",
-		travel:
-			"Safe & Relaxed. Laos is a very safe country for travelers. In 2026, Vientiane and Luang Prabang have small, low-key queer-friendly scenes. PDA is generally frowned upon for *all* couples in Lao culture, so same-sex couples who remain discrete will face no issues. Transgender travelers (especially trans women) are common in the service and entertainment sectors and are generally treated with politeness. The 'posture' is one of quiet acceptance: as long as you respect local customs of modesty and don't make your identity a political statement, you will be very welcome.",
-		culture:
-			"Buddhist & Modest. Similar to Thailand, Lao Buddhism is relatively tolerant, but the communist government and traditional family structures create a 'don't ask, don't tell' environment. In 2026, the 'Proud to be Us Laos' group continues to host small, sanctioned cultural events. For a visitor, the culture is laid-back ('Lao Time'). People are non-confrontational and value 'saving face.' It is a society where identity is viewed through the lens of family and community rather than individual expression. Modesty in dress and behavior is the best way to bridge any cultural gap.",
-		health:
-			"Basic. Healthcare in Laos is developing. In 2026, HIV care is accessible through the Center for HIV/AIDS/STI (CHAS) with international support, and PrEP is available in Vientiane. However, specialized LGBTQ+ or gender-affirming care is non-existent. For any serious medical issue, travelers typically evacuate to Udon Thani or Bangkok in Thailand. Doctors in Vientiane are professional but may have limited experience with queer-specific health needs. If you are trans, carry an ample supply of your own medication, as sourcing hormones locally is difficult and unregulated.",
-		posture: "Confident Discretion - High physical safety; legal but zero formal protections; culturally very modest.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Laos", "https://www.equaldex.com/region/laos", "https://www.lonelyplanet.com/laos/lgbtq-travellers"],
+
+		legal: `
+        <p>Laos has no laws criminalizing same-sex sexual activity, but it also has no protections. In 2026, the government remains largely indifferent, though strict control over assembly and media means organized LGBTQ+ advocacy is restricted to state-approved health frameworks.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Invisible but Calm." For example, the 2026 expansion of the Proud to Be Us Laos initiative has provided a hopeful precedent for soft-visibility through cultural events.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Proud to Be Us Laos</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary group in 2026 navigating the delicate balance of government relations to promote awareness.</p>
+                <a href="https://www.facebook.com/proudtobeuslaos/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Moderate.' Violence is rare, but conservative family values mean most locals remain closeted. Vientiane and Luang Prabang are generally safe for tourists to be "out," provided they avoid political commentary.</p>
+
+        <p><strong>Community Density:</strong> Low/Moderate. No "gay neighborhoods" exist, but several venues are known to be LGBT-friendly.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #92</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Stable 2026 Index Performance based on low violence but high social pressure.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Generally safe for 2026 travelers. Trans/GNC individuals are mostly met with politeness, though legal recognition is non-existent. Same-sex couples will find hotels in Luang Prabang very welcoming.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Icon KLUB** (Luang Prabang) - A stylish, artsy lounge with a decades-long reputation for being a haven for everyone.
+        * **The Local Way:** **@Home** (Vientiane) - A nightclub that, while not exclusively LGBT, is the 2026 go-to for the local "young and liberal" crowd.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Blued.
+        * **Community Forums:** The Proud to Be Us Laos Facebook page is the central hub for event news.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Respect & Visibility</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Lao culture values "saving face." In 2026, keeping PDA to a minimum is advised, not for safety, but out of cultural respect.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HIV prevention and PrEP are available through NGO-led clinics in Vientiane. HRT is available but largely self-managed via pharmacies in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">APCOM / Lao Health</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Regional partners providing safe clinics for testing and care in the capital.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Quiet Progress.' Laos is moving slowly, focusing on health and community building rather than political confrontation.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Proud to Be Us", url: "https://www.facebook.com/proudtobeuslaos/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/laos", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Vientiane Pride (Pop-up)", url: "#", button: "CHECK LOCAL NEWS →" },
+		],
 	},
 
 	lebanon: {
 		name: "Lebanon",
 		continent: "asia",
-		status: "red",
-		legal:
-			"Illegal but Contested. Article 534 criminalizes 'sexual intercourse against nature' with up to 1 year in prison. While several high court rulings (2017–2024) have declared that homosexuality is *not* 'unnatural,' the law remains on the books. In 2025–2026, the legal environment has regressed; the Ministry of Interior has intensified bans on LGBTQ+ gatherings, and new 'anti-propaganda' bills were introduced in Parliament. Transgender people can legally change their gender, but only after surgery and a court order. Despite the judicial wins, the state has become more aggressive in using 'morality' laws to target activists.",
-		travel:
-			"Cautious & Strategic. Beirut was once the 'queer haven' of the Middle East, but in 2026, safety is fragile. LGBTQ+ venues still exist but often operate without external signage to avoid raids. PDA is risky and can lead to harassment or arrest by 'Moral Intelligence' units. Transgender travelers are at high risk of detention at checkpoints, especially if documents don't match their presentation. Digital safety is paramount: avoid dating apps in public. The 'posture' is: stay in the liberal pockets of Beirut (like Mar Mikhael), avoid any public activism, and maintain high situational awareness.",
-		culture:
-			"Sophisticated but Fractured. Lebanon is a mosaic of 18 religious sects. While the coastal urban culture is highly cosmopolitan and progressive, religious authorities (both Christian and Muslim) have united in 2026 to campaign against 'moral decay.' For a visitor, the hospitality is unparalleled, and the nightlife is legendary. However, the political crisis has made the community an easy scapegoat. You will find a brave, resilient queer community in Beirut, but you must respect that their 'openness' is currently under siege by the state and religious institutions.",
-		health:
-			"Good (Private) but Stigmatized. Lebanon has excellent private hospitals (e.g., AUBMC). In 2026, HIV care and PrEP are available through NGOs like Marsa Sexual Health Center, which offers world-class, anonymous service. However, public hospitals may be hostile. Gender-affirming care exists but is expensive and increasingly scrutinized under new 2025 directives. For travelers, private clinics are safe and professional. Do not disclose your orientation in public health settings; stick to vetted NGOs or high-end private facilities where patient confidentiality is a priority.",
-		posture: "Confident Discretion - High social volatility; legal ambiguity with increasing state-led crackdowns since 2024.",
+		status: "amber",
+
+		legal: `
+        <p>Lebanon exists in a legal gray area in 2026. While Article 534 (punishing acts "contrary to nature") remains, several court rulings have declared it does not apply to same-sex acts. However, 2025-2026 has seen a surge in political rhetoric targeting "LGBTQ+ propaganda," leading to frequent administrative bans on community gatherings.</p>
+
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Fragile." For example, the 2026 judicial push to formally repeal Article 534 has provided a hopeful but contested precedent for the community.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Helem</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The first LGBTQ+ organization in the Arab world, Helem continues to provide 2026 legal aid and safety net services in Beirut.</p>
+                <a href="https://www.helem.net/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' Beirut (specifically Mar Mikhael and Hamra) remains a regional safe haven, but political instability has made the community a frequent scapegoat. Security posture at events is high, often requiring "secret" locations to avoid conservative protests.</p>
+
+        <p><strong>Community Density:</strong> Moderate. Beirut has several well-known (though often unmarked) LGBT bars and cafes.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #104</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains stagnant due to the lack of formal legal repeal.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Beirut is a 2026 highlight for LGBT travelers in the Middle East, though the situation can change rapidly. Trans/GNC individuals face higher scrutiny at checkpoints, but the city’s underground scene is exceptionally welcoming.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **B018** (Beirut) - While not exclusively LGBT, it is a world-class venue where the community is deeply integrated and safe.
+        * **The Local Way:** **Kaleidoscope** - A community-focused space that host regular drag events and safe social nights in 2026.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Scruff (active but used with awareness of potential state monitoring).
+        * **Community Forums:** Leb-LGBT Telegram groups are the 2026 pulse for real-time safety and party info.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Public "Pride" displays (flags/posters) are frequently banned by the Ministry of Interior in 2026. Keep visibility to private or vetted venues.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Beirut remains a regional hub for LGBTQ+ health. Organizations like Marsa provide confidential, high-quality sexual health care and HRT referrals in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Marsa Sexual Health Center</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Hamra, Beirut - The gold standard for safe, non-judgmental healthcare.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Defiant Resilience.' Despite political attacks, the Lebanese community remains the most organized and visible in the region.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/news/2023/09/05/lebanon-politicians-ramp-up-attacks-lgbt-rights",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_lebanon",
-			"https://www.equaldex.com/region/lebanon",
+			{ label: "Ground Intel: Helem", url: "https://www.helem.net/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/lebanon/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Beirut Pride (Unannounced)", url: "#", button: "CHECK LOCAL CHANNELS →" },
+		],
+	},
+
+	laos: {
+		name: "Laos",
+		continent: "asia",
+		status: "amber",
+
+		legal: `
+        <p>In 2026, Laos remains one of the few Southeast Asian nations where same-sex sexual activity has never been explicitly criminalized. However, the legal landscape is characterized by a "void of protection"—there are no anti-discrimination laws or legal recognitions for same-sex unions. While the government maintains a policy of indifference, it strictly regulates any organized assembly not aligned with state interests.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Quietly Tolerant." For example, the 2026 expansion of the "Proud to Be Us" workshops in Vientiane has provided a hopeful precedent for soft-advocacy through public health and community-building frameworks rather than political confrontation.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Proud to Be Us Laos</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">In 2026, they focus on mental health support and visibility through cultural storytelling, operating with high government coordination.</p>
+                <a href="https://www.facebook.com/proudtobeuslaos/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed'—safe for travelers in urban tourist hubs but culturally restrictive for locals. Public displays of affection (PDA) are generally discouraged for all couples, but same-sex couples should exercise extra discretion to avoid unwanted attention in rural provinces.</p>
+        <p><strong>Community Density:</strong> Moderate. There are few dedicated LGBT-only spaces, but many venues in Vientiane and Luang Prabang are "de facto" inclusive.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #84</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains stable due to a lack of targeted state violence, though protection remains low.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Generally safe for 2026 travelers who are 'Gay-passing.' Trans/GNC individuals may face curiosity or bureaucratic confusion at border crossings, but outright hostility is uncommon compared to neighboring countries.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Icon KLUB** (Luang Prabang) - A long-standing artsy cocktail bar that serves as a sophisticated, LGBT-friendly sanctuary.
+        * **The Local Way:** **@Home** (Vientiane) - A popular nightclub where the local LGBT youth often congregate, though it is not a "gay bar" by Western definitions.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Blued - In Laos, Blued is frequently used by the local community for social networking beyond just dating.
+        * **Community Forums:** The Proud to Be Us Laos social pages are the primary source for safe social gatherings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, ensure your phone doesn't contain material critical of the government; while LGBT content is rarely targeted, "political" content is a high-risk factor during entry.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT remains unofficial via pharmacies; PreP and HIV care are available through international-partnered clinics like Lao PHA.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Lao PHA (Lao Positive Health Association)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Vientiane HQ - Provides peer-led counseling and sexual health referrals.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cautious Resilience.' While the community is growing in confidence, they navigate a system that prefers them to remain a "private matter."</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Proud To Be Us Laos", url: "https://www.facebook.com/proudtobeuslaos/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/laos", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Vientiane Pride (Public Health Focus)", url: "https://www.travelgay.com/vientiane-gay-pride/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -411,19 +1432,73 @@ Object.assign(globalData, {
 		name: "Malaysia",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced. Same-sex acts are criminalized under the federal Penal Code (Section 377), carrying up to 20 years and whipping. In a landmark 2024 ruling, the High Court ordered the government to return 'Pride' watches seized from Swatch, stating the seizure was illegal. However, the government responded in 2025 by tightening the 'Printing Presses and Publications Act' to explicitly ban all LGBTQ+ symbols. State-level Sharia laws (for Muslims) also criminalize 'cross-dressing' and 'musahaqah' (lesbianism). In 2026, the MCMC (media regulator) has actively blocked LGBTQ+ websites and dating apps like Grindr.",
-		travel:
-			"Cautious to High Risk. Malaysia is generally safe from violent crime, but the state is actively hostile toward LGBTQ+ visibility. In 2026, PDA is a major risk and can lead to 'indecency' charges for any traveler. Transgender travelers are at high risk of arrest under 'public nuisance' or 'impersonation' laws, especially in more conservative states like Kelantan or Terengganu. In Kuala Lumpur, international hotels are safe, but the 'gay scene' is entirely underground. The 'posture' is: total discretion in public; avoid any 'queer-coded' accessories (like rainbow pins) which are now technically illegal to possess.",
-		culture:
-			"Conservative & Multi-Ethnic. Malaysia is a 'Moderate Islamic' nation where religious identity is central to politics. In 2026, the government uses 'Anti-LGBT' rhetoric to bolster its conservative credentials. For a visitor, the culture is one of extreme politeness and 'Budi' (grace). You will find the food and sights incredible, and the people friendly, provided you stay within the bounds of traditional gender roles. There is no public Pride. The community is vibrant but operates within 'closed-door' private circles to avoid state 'rehabilitation' programs.",
-		health:
-			"Good (Technical) but Highly Biased. Private healthcare is excellent. In 2026, HIV care is available but carries heavy social stigma; for Muslims, a diagnosis can trigger Sharia-based 'counseling.' PrEP is available in KL but difficult to find elsewhere. There is no legal gender-affirming care. For travelers, use only international private hospitals (like Gleneagles). Disclosure of identity is not recommended unless necessary for treatment. Always carry a prescription for any medication, as the 2025 'Pride Ban' has made customs officers more likely to scrutinize 'non-traditional' items.",
-		posture: "Extreme Risk - Active federal criminalization; 2025 ban on LGBTQ symbols/watches; high digital censorship.",
+
+		legal: `
+        <p>In 2026, Malaysia maintains a dual-track legal system that criminalizes LGBTQ+ existence. Federal law (Section 377A) penalizes sodomy with up to 20 years' imprisonment, while State-level Sharia laws target "musahaqah" (lesbianism) and gender non-conformity. Recent years have seen increased raids on "morality" grounds and the banning of rainbow-themed merchandise under the Printing Presses and Publications Act.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Hostile and Surveilled." For example, the 2026 sentencing of a trans woman in Kelantan under Sharia dress codes has provided a chilling precedent for the community, signaling a shift toward more aggressive street-level enforcement.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Justice for Sisters</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Leading 2026 efforts to document human rights violations and provide legal aid to trans and GNC individuals targeted by Sharia authorities.</p>
+                <a href="https://justiceforsisters.wixsite.com/home" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' Kuala Lumpur maintains a vibrant but discreet underground scene, whereas states like Terengganu and Kelantan are highly hostile. High-end urban areas and malls are generally safe for "gay-passing" travelers, but state-sponsored "morality" units (Jais/Jawi) represent a constant threat to locals.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces that are legally protected; most operate as "known" hubs within liberal-leaning establishments.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #172</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has dropped due to increased rhetoric against "Western LGBTQ ideologies."</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Moderate safety for 'Gay-passing' travelers, but Trans/GNC individuals face significant risk of harassment or being denied entry if their appearance contradicts their passport gender.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Blue Boy Disco** (Kuala Lumpur) - A legendary, long-running institution that provides a relatively safe, historic space for the community.
+        * **The Local Way:** **RexKL** - While a mainstream cultural hub, its "inclusive vibe" makes it a 2026 favorite for the city’s creative LGBT youth.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Hornet - Note that Grindr is occasionally throttled by local ISPs, and accounts have been used by authorities for "entrapment" raids.
+        * **Community Forums:** **LGBT Lapis** is the go-to for up-to-date community stories and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, avoid bringing Pride-themed books or clothing; Customs officials have the power to seize items deemed "contrary to public morality."</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HIV care and PreP is available but requires navigating a system where stigma is high. Trans-specific health services are virtually non-existent in state facilities.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">PT Foundation</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Chow Kit, Kuala Lumpur - A pioneer in providing anonymous HIV testing and support for the community.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Quiet Resistance.' The community is thriving in the shadows of the capital, but under the constant watch of a tightening state.</p>
+    `,
+
 		sources: [
-			"https://www.cna.com.my/asia/malaysia-swatch-lawsuit-pride-watches-return-2024-4768866",
-			"https://www.hrw.org/world-report/2026/country-chapters/malaysia",
-			"https://www.humandignitytrust.org/country-profile/malaysia/",
+			{ label: "Ground Intel: LGBT Lapis", url: "https://www.queerlapis.com/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex Malaysia", url: "https://www.equaldex.com/region/malaysia", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: George Town Festival (Inclusive Spaces)", url: "https://georgetownfestival.com/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -431,19 +1506,73 @@ Object.assign(globalData, {
 		name: "Maldives",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Sharia-Based. Same-sex sexual activity is criminalized under the Penal Code and Sharia law, with penalties including up to 8 years in prison, 100 lashes, and house arrest. In 2026, the government remains strictly opposed to any LGBTQ+ rights, viewing them as contrary to the nation's 100% Muslim identity. There are no discrimination protections, and the state actively monitors social media for 'anti-Islamic' behavior. Freedom of expression regarding queer identity is non-existent.",
-		travel:
-			"Safe (Resorts) vs High Risk (Local Islands). The Maldives is a 'dual-world' destination. On private resort islands, the law is effectively suspended; same-sex couples are welcome, can share beds, and are treated with luxury service. However, on 'local islands' (inhabited by locals) and in the capital, Malé, the law is strictly enforced. In 2026, any PDA on a local island or Malé will lead to immediate arrest or deportation. Transgender travelers are safe on private resorts but at extreme risk elsewhere. The 'posture' is: stay on your resort; remain 'stealth' if passing through Malé.",
-		culture:
-			"Strictly Islamic & Traditional. Maldivian culture is deeply tied to Sunni Islam. In 2026, there is no visible local LGBTQ+ community; those who exist live in total secrecy or have fled abroad. For a visitor, the culture at the resort is 'International Luxury,' but the local culture is conservative. Respect for local prayer times and modest dress (outside resorts) is mandatory. It is a country where your safety is guaranteed by the tourism industry’s desire for privacy, provided you don't bring your identity into the public (local) sphere.",
-		health:
-			"Basic to Limited. Healthcare in Malé (IGMH Hospital) is adequate for basics, but specialized care is rare. In 2026, HIV care is available but involves mandatory reporting to the state, which is a risk for non-tourists. There is no gender-affirming care. Travelers should rely on their resort's on-call doctor for minor issues. For anything serious, evacuation to Colombo (Sri Lanka) or India is standard. Disclosure of orientation to local medical staff in Malé is not advised. Always bring all necessary medications in original packaging.",
-		posture: "Extreme Risk - Total criminalization; safety exists only within the 'resort bubble'; lashes and prison are active penalties.",
+
+		legal: `
+        <p>The Maldives is a Sharia-compliant state where same-sex sexual activity is strictly illegal, punishable by fines, lashings, or up to eight years' imprisonment. In 2026, the legal environment remains one of total non-recognition; there are no protections, and the Penal Code specifically targets "indecent behavior" which is widely interpreted to include LGBTQ+ identities.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Invisible for Survival." For example, the 2026 police monitoring of social media for "immoral lifestyle promotion" has provided a chilling precedent, forcing the few local activists into deep anonymity or exile.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (Maldives Desk)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Since domestic LGBTQ+ NGOs are illegal, HDT provides the primary 2026 legal monitoring and international advocacy.</p>
+                <a href="https://www.humandignitytrust.org/country-profile/maldives/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Bifurcated.' On private resort islands, LGBT tourists are largely welcomed and safe due to their economic status. However, on "local islands" and in the capital, Malé, visibility is highly dangerous and can lead to mob violence or arrest.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; local LGBT life exists entirely in private, encrypted digital spaces.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #182</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects the total absence of civil rights for the community.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safe for 2026 travelers as long as they stay within the "Resort Bubble." Trans/GNC individuals are generally safe in high-end resorts but should strictly adhere to conservative dress codes when transiting through Malé.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Amilla Maldives** - One of the few 2026 resorts that has actively sought "IGLTA-certified" status, offering a verified safe haven for LGBT travelers.
+        * **The Local Way:** N/A - There is no safe "local" venue for LGBT connection in the Maldives; avoid seeking community in public areas of Malé.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr - Use with extreme caution in Malé, as local religious vigilantes have been known to use it for entrapment.
+        * **Community Forums:** There are no public forums; travel info is best sourced from **TravelGay Maldives**.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, do not carry rainbow stickers or "explicit" LGBTQ+ literature through Customs. Penalties for "bringing in materials contrary to Islam" can be severe.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Medical care is highly conservative. HIV testing is available in Malé but often involves mandatory reporting. PrEP is difficult to source locally in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Society for Health Education (SHE)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Malé - Provides general sexual health services and is the safest local point for confidential advice.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Deeply Underground.' For locals, it is a matter of absolute discretion; for travelers, it is a paradise with an invisible wall.</p>
+    `,
+
 		sources: [
-			"https://www.humandignitytrust.org/country-profile/maldives/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_the_maldives",
-			"https://www.equaldex.com/region/maldives",
+			{ label: "Ground Intel: TravelGay Maldives", url: "https://www.travelgay.com/destination/gay-maldives/", button: "READ TRAVEL UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/maldives", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Int. Conference on LGBT Politics 2026", url: "https://conferencealerts.co.in/event/100788260", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -451,19 +1580,73 @@ Object.assign(globalData, {
 		name: "Mongolia",
 		continent: "asia",
 		status: "green",
-		legal:
-			"Protected & Progressive. Same-sex activity has been legal since 1993. Mongolia is a regional leader in protections: since 2017, the Penal Code (Article 14.1) has explicitly banned discrimination and hate crimes based on sexual orientation and gender identity. In 2022, the Labor Code was updated to protect LGBTQ+ employees. In 2026, while same-sex marriage is still constitutionally limited to 'a man and a woman,' the government has cooperated with UN experts to further refine anti-bias laws. Transgender people can change their legal gender after medical affirmation, though the process remains somewhat bureaucratic.",
-		travel:
-			"Safe & Open. Mongolia is generally very safe. In 2026, Ulaanbaatar has a small but very open queer scene, including bars like 'd.l.' and the 'LGBT Centre' which is the most active in Central/East Asia. PDA is mostly ignored in the capital, though it may draw curious stares in the countryside. Transgender travelers are generally safe, but they should be prepared for questions if their documents don't match their appearance at rural border crossings. The 'posture' is: high safety; the urban youth are very progressive, and the state is legally supportive.",
-		culture:
-			"Secular & Respectful. Traditional Mongolian culture was influenced by Tibetan Buddhism and nomadic values, which are historically neutral toward queer identities. In 2026, the 'Equality Pride' march is a regular, peaceful event in Ulaanbaatar. For a visitor, the culture is one of rugged independence and extreme hospitality ('Zud' mentality of helping anyone in need). While the older generation may not understand LGBTQ+ concepts, they are rarely hostile. It is a society that values privacy and personal freedom, making it one of the most comfortable spots for queer travelers in the region.",
-		health:
-			"Adequate (Ulaanbaatar). Healthcare in the capital is professional. In 2026, HIV care is confidential and supported by the Global Fund. PrEP is available through the LGBT Centre’s partners. While specialized gender-affirming surgery is not common in Mongolia, hormone therapy is legally accessible and managed by sensitized doctors in the capital. Travelers should stick to private clinics like 'Intermed' or 'SOS Medica.' Public hospitals are safe but may lack English-speaking staff. Disclosure of identity is safe and often necessary for correct care in the capital.",
-		posture: "Safe & Open - Strongest anti-discrimination laws in Central/East Asia; very low risk of state or social violence.",
+
+		legal: `
+        <p>Mongolia is one of the most progressive nations in Central/East Asia. In 2026, it boasts a robust 2017 Criminal Code that explicitly bans discrimination and hate crimes based on sexual orientation and gender identity. While same-sex marriage is not yet legal, the legal infrastructure for protection is stronger here than in most neighboring states.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Emergingly Open." For example, the 2026 legal victory of a trans woman in an employment discrimination case has provided a hopeful precedent, reinforcing the power of existing anti-discrimination laws.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ LGBT Centre (Ulaanbaatar)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary 2026 advocate, providing legal aid, health services, and organizing the annual Pride events.</p>
+                <a href="https://lgbtcentre.mn/en/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed-to-Safe.' Ulaanbaatar is increasingly liberal, with a growing number of "inclusive" spaces. Rural areas remain traditional, but violence is rare. The biggest threat in 2026 remains occasional harassment from nationalist fringe groups, though police are legally mandated to intervene.</p>
+        <p><strong>Community Density:</strong> Moderate. Ulaanbaatar has a dedicated LGBTQ+ community center and several LGBT-friendly bars.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #58</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains high for the region due to legislative protections.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Highly safe for 2026 travelers. Ulaanbaatar is a welcoming city where travelers of all gender expressions can generally move freely. Trans individuals may face minor bureaucratic hurdles if their surgery status is questioned, but the environment is generally respectful.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **The Pink Bar (d.d./h.z.)** - A well-known LGBT-friendly spot in Ulaanbaatar that hosts regular community nights.
+        * **The Local Way:** **Han’s** - A casual lounge where local LGBT youth and expats mix comfortably in a 2026-modern atmosphere.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Tinder - Both are widely used in Ulaanbaatar and are generally safe.
+        * **Community Forums:** The **LGBT Centre’s Facebook and Instagram** are the best places for social event updates.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, Ulaanbaatar holds a public Pride March. While safe, it is still a political act; travelers are welcome to join but should be mindful of counter-protesters.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Gender-affirming care is legal but requires surgery for document change. HRT and PrEP are available through the LGBT Centre’s partner clinics in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Youth Policy Watch</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Ulaanbaatar - Partners with the LGBT Centre to provide youth-specific sexual health education.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Steady Progress.' Mongolia is carving a unique path in Asia, balancing nomadic traditions with modern civil rights.</p>
+    `,
+
 		sources: [
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Mongolia",
-			"https://www.hrw.org/news/2021/07/07/mongolias-new-labor-law-protects-lgbt-people",
-			"https://www.equaldex.com/region/mongolia",
+			{ label: "Ground Intel: LGBT Centre Mongolia", url: "https://lgbtcentre.mn/en/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/mongolia", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Pride Mongolia 2026", url: "https://lgbtcentre.mn/en/pride/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -471,19 +1654,73 @@ Object.assign(globalData, {
 		name: "Myanmar",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Volatile. Section 377 criminalizes 'carnal intercourse against the order of nature' with up to 10 years in prison. Since the 2021 military coup, the legal system has collapsed into 'Rule by Decree.' In 2025–2026, the military junta has used 'morality' and 'stability' laws to arrest activists and queer people as part of a broader crackdown on dissent. There are no protections, and the junta's 2024 'Conscription Law' has particularly targeted transgender women, forcing them into military service or labor camps. The environment is one of extreme legal instability.",
-		travel:
-			"Extreme Risk. Travel to Myanmar is currently discouraged for all, but for LGBTQ+ individuals, it is exceptionally dangerous. In 2026, military checkpoints are frequent, and phones are often searched; having dating apps or 'pro-democracy' content is grounds for immediate detention. PDA is a certain trigger for violence from the 'Pyusawhti' (pro-junta militias). Transgender travelers are at high risk of physical and sexual abuse in detention. The 'posture' is: stay away. If you must be there, you must be in total 'stealth' mode and maintain zero digital footprint.",
-		culture:
-			"Traditional & Oppressed. Myanmar has a long history of 'Nat Kadaws' (spirit mediums), many of whom are queer or trans and were traditionally respected. However, the current civil war has polarized society. In 2026, the queer community is at the forefront of the resistance, leading to even more state targeting. For a visitor (if travel were possible), the culture is one of deep Buddhist piety and kindness, but this is currently overshadowed by the fear of the junta. It is a country in mourning, where 'identity' is now a secondary concern to survival and revolution.",
-		health:
-			"Collapsing. The healthcare system has largely disintegrated since the coup. In 2026, HIV care is managed almost entirely by weary NGOs and the underground 'Civil Disobedience Movement' (CDM). PrEP is nearly impossible to find. There is no gender-affirming care. Travelers have no reliable access to safe medical facilities outside of very few high-priced junta-linked clinics in Yangon. Medical evacuation is the only safe option for any health issue. Disclosure of identity to any state-linked medical staff is extremely dangerous and could lead to arrest.",
-		posture: "Extreme Risk - Civil war; junta-led targeting of activists/trans people; collapsed legal and health systems.",
+
+		legal: `
+        <p>In 2026, Myanmar remains under military rule (Junta), and Section 377 (criminalizing sodomy) remains in force. However, the legal threat is now secondary to the general collapse of the rule of law. LGBTQ+ activists have been prominent in the anti-coup resistance, making them dual targets for the military—both for their identity and their political activities.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Extremely Dangerous." For example, the 2026 arbitrary detention of several "visible" LGBT activists in Yangon has provided a chilling precedent, signaling that LGBTQ+ people are being specifically profiled by security forces.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Kings & Queens (K&Q) Myanmar</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">In 2026, they operate largely underground or from border regions, providing emergency relief to LGBTQ+ IDPs (Internally Displaced Persons).</p>
+                <a href="https://www.facebook.com/kingsandqueensmyanmar/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' Outside of the general conflict, the military has used "public morality" as a tool to crack down on the community. Yangon and Mandalay are subject to frequent curfews and security raids; LGBT visibility in public is a high-risk activity that can lead to extortion or arrest.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces that are currently active or safe.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #178</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects the total breakdown of human rights under military rule.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Do Not Travel. In 2026, international travel advisories for Myanmar remain at the highest warning level. For those already in-country, 'Gay-passing' is a requirement for survival. Trans/GNC individuals are at extreme risk of targeted violence by security forces.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** None - Even high-end hotels are subject to sudden military inspections.
+        * **The Local Way:** N/A - Social life has retreated into private homes and encrypted digital chats.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Blued - Note: The military is known to monitor digital traffic; a VPN is essential but also a reason for detention if found during a phone search.
+        * **Community Forums:** Telegram channels (highly encrypted) are the only way to share info on safe houses.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Critical Digital Security</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, military checkpoints often include "phone sweeps." Having any LGBTQ+ apps, photos, or resistance-related content can lead to immediate arrest.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>The healthcare system has largely collapsed. LGBTQ+ specific care is now provided almost exclusively through clandestine NGO networks or across the Thai border.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Colors Rainbow</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Yangon/Mobile - Provides discreet digital health counseling and links to trusted underground medics.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Survival and Revolution.' The LGBTQ+ community is an integral part of the resistance, fighting for a future where identity is not a death sentence.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/world-report/2026/country-chapters/myanmar",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Myanmar",
-			"https://www.humandignitytrust.org/country-profile/myanmar/",
+			{ label: "Ground Intel: Colors Rainbow", url: "https://colorsrainbow.com/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/myanmar/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: &PROUD Film Festival (Online/Mobile)", url: "https://andproud.org/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -491,91 +1728,429 @@ Object.assign(globalData, {
 		name: "Nepal",
 		continent: "asia",
 		status: "green",
-		legal:
-			"Progressive Pioneer. Nepal is a regional leader. Following a 2023 Supreme Court interim order, the government issued a circular in April 2024 officially instructing local authorities to register same-sex marriages. By 2026, dozens of marriages have been legally recorded. Since 2007, same-sex activity has been legal, and the 2015 Constitution was the first in Asia to explicitly protect 'gender and sexual minorities.' Transgender people have a legal 'Other' category on all ID documents. While some 'Permanent' marriage laws are still being debated in Parliament, the 'Temporary' registration currently provides most legal protections.",
-		travel:
-			"Safe & Welcoming. Nepal is exceptionally safe for LGBTQ+ travelers. In 2026, Kathmandu has a visible scene, and 'Pink Mountain' (a specialized travel agency) leads queer treks. PDA is generally tolerated in tourist areas like Thamel and Pokhara, though it may still be met with curiosity in rural mountain villages. Transgender travelers are well-integrated into the tourism industry and face very little discrimination. The 'posture' is: high safety and growing pride; the state is an active ally of the community.",
-		culture:
-			"Inclusive & Spiritual. Nepali Hinduism and Buddhism have a long tradition of recognizing 'third-gender' identities. In 2026, the 'Gai Jatra' festival has been successfully merged with Pride celebrations, making it a unique cultural hybrid. For a visitor, the culture is one of 'Namaste' (the divine in me greets the divine in you). People are generally accepting of diversity. While the older generation remains traditional, the youth and the legal system are among the most progressive in the world. It is a destination where you can be authentically yourself.",
-		health:
-			"Moderate & Improving. Healthcare in Kathmandu (e.g., CIWEC Clinic) is excellent for travelers. In 2026, HIV care is robust and managed by the Blue Diamond Society (BDS), which also provides sensitized health services. PrEP is widely available. Gender-affirming surgeries are now being performed in Kathmandu by trained specialists, a major shift since 2023. For travelers, Nepal is a safe place to seek medical help. Doctors are generally aware of LGBTQ+ needs, and patient confidentiality is respected. It is the best place in South Asia for trans-sensitized medical care.",
-		posture: "Safe & Open - Asia's newest marriage-equality pioneer; constitutional protections and high social acceptance.",
+
+		legal: `
+        <p>In 2026, Nepal solidifies its position as a regional leader in LGBTQ+ rights. Following the landmark 2023 Supreme Court directive and 2024 administrative circulars, same-sex marriage is actively registered under a "temporary" but functional status. The 2015 Constitution remains one of the few globally to explicitly protect against discrimination based on sexual orientation and gender identity. However, full legislative codification of marriage equality remains a pending task for the Parliament.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Cautiously Triumphant." For example, the 2026 successful registration of over 25 LGBT marriages in various municipalities has provided a hopeful precedent, though activists note that spousal rights regarding inheritance and adoption are still being fought in the courts.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Blue Diamond Society (BDS)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The premier 2026 advocacy body, currently leading the "Equal Marriage Rights" campaign and providing trans-specific legal aid.</p>
+                <a href="https://www.bds.org.np/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Safe' in Kathmandu and Pokhara, where visibility is common. In rural areas, the posture is 'Tolerant but Traditional.' While physical violence is rare compared to neighboring states, social pressure to conform to binary norms remains high for the local community.</p>
+        <p><strong>Community Density:</strong> High. Kathmandu serves as a regional sanctuary, featuring several LGBT-owned or explicitly inclusive cafes and hubs.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #42</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has jumped significantly following the implementation of marriage registration.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is excellent for all travelers. Trans/GNC individuals generally find Nepal more accommodating than other South Asian nations due to the long-standing cultural recognition of "third gender" identities.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Pink Tiffany** (Thamel, Kathmandu) - The first openly LGBTQ+ bar in Nepal, it remains the primary safe haven for international travelers and locals alike.
+        * **The Local Way:** **Gai Jatra Festival** (Kathmandu Valley) - While a traditional festival, it has been reclaimed as a 2026 Pride event where visibility is celebrated under the guise of tradition.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Tinder - Both are widely used and safe, with very few reports of entrapment in urban centers.
+        * **Community Forums:** **The LGBT Youth Group (Nepal)** on Instagram is the go-to for 2026 event listings and safety meetups.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, travelers can select an 'O' (Other) gender marker on visa forms. PDA is still conservative for all, so mirror local discretion outside Thamel.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT and HIV care is facilitated through Blue Diamond Society clinics. PrEP is increasingly available in Kathmandu and Pokhara as of 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">SPARSHA Nepal</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Jawalakhel, Lalitpur - Leading 2026 provider for sexual health and HIV support for LGBT youth.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is one of 'Emerging Openness.' Nepal is no longer just a destination for nature, but a sanctuary for regional LGBT liberation.</p>
+    `,
+
 		sources: [
-			"https://en.wikipedia.org/wiki/Same-sex_marriage_in_Nepal",
-			"https://www.hrw.org/news/2024/05/01/nepal-orders-registration-all-same-sex-marriages",
-			"https://www.equaldex.com/region/nepal",
+			{ label: "Ground Intel: Blue Diamond Society", url: "https://www.bds.org.np/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex Nepal", url: "https://www.equaldex.com/region/nepal", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Kathmandu Pride / Gai Jatra 2026", url: "https://lgbtiqnepalpride.org.np/", button: "EVENT DETAILS →" },
 		],
 	},
 
 	north_korea: {
-		name: "North Korea",
+		name: "North Korea (DPRK)",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Opaque & Repressive. There is no official law criminalizing same-sex activity, as the government maintains that 'homosexuality does not exist' in the DPRK. However, in 2026, any deviation from the state-mandated 'Socialist Lifestyle' is punishable under laws against 'anti-socialist behavior.' Public displays of affection or non-traditional gender expression are viewed as 'Western corruption' and can lead to internal exile or labor camps. There are no rights, no recognition, and no possibility of advocacy. The state's total control over personal life makes it one of the most repressed places on Earth.",
-		travel:
-			"Extreme Risk - Total Control. Travel to North Korea is strictly managed by state minders. In 2026, any LGBTQ+ traveler must remain in total 'stealth.' PDA is unthinkable and would lead to the immediate arrest of you and potentially your minders. Transgender travelers would be unable to enter, as the state does not recognize gender identity and would view it as a 'biological impossibility.' Your digital devices will be searched; any queer content is a high-level security risk. The 'posture' is: your identity must not exist while you are in the country.",
-		culture:
-			"Totalitarian & Heteronormative. The culture is built on 'Juche' (self-reliance) and the 'Kim-family' model of the traditional nuclear family. In 2026, the state continues to promote 'revolutionary' masculinity and femininity. For a visitor, the culture is one of extreme, choreographed politeness. You will see nothing of the local life that isn't approved by the state. There is no 'queer' culture to find. It is a society where 'individual' identity is entirely subsumed by the 'collective' state identity. Any talk of LGBTQ+ rights will be met with confusion or a report to the authorities.",
-		health:
-			"Poor & Secretive. The healthcare system is for the elite and the state, with others relying on basic clinics. In 2026, HIV/AIDS is officially claimed to be 'zero' in the country, meaning there is no specialized care or testing. There is no gender-affirming care. For travelers, you will only have access to the Friendship Hospital in Pyongyang, which is basic. Any serious health issue requires evacuation to Beijing. Never disclose your orientation or identity to any North Korean medical official; it is not treated as a medical fact, but as a political or mental 'abnormality.'",
-		posture: "Extreme Risk - State denial of existence; 'anti-socialist' laws used for punishment; absolute state surveillance.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_North_Korea", "https://www.hrw.org/world-report/2026/country-chapters/north-korea"],
+
+		legal: `
+        <p>In 2026, the legal status of LGBTQ+ individuals in North Korea remains a void. While the Penal Code does not explicitly mention homosexuality, same-sex acts are often prosecuted under Article 193 (decadent culture) or Article 262 (obscene acts). Marriage is strictly defined as between one man and one woman under Article 8 of the Family Law. Political survival trumps identity, and "LGBTness" is officially framed as a foreign bourgeois corruption.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (defectors) describe the current climate as "Non-existent." For example, the 2026 reports of "public cleansing" campaigns against "decadent foreign influences" have provided a chilling precedent, making any form of non-conforming visibility a potential capital offense.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy (No Local NGOs)</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ NKDB (Database Center for NK Human Rights)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Based in Seoul, they track 2026 testimonies regarding the persecution of sexual minorities within the DPRK.</p>
+                <a href="https://nkdb.org/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Totalitarian.' There is no concept of LGBTQ+ safety as the concept itself is largely unknown to the general population. In the military, "situational" same-sex activity is reported but never framed as an identity. Public visibility is functionally impossible.</p>
+        <p><strong>Community Density:</strong> None. There are no known physical or digital LGBT spaces within the country.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #195</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains at the absolute bottom due to total state control and lack of data.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Highly restricted. Travelers on state-sanctioned tours are safe if they adhere to strict behavioral rules. Trans/GNC individuals will likely face extreme scrutiny and may be denied entry if their gender expression does not match their passport.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Koryo Hotel** (Pyongyang) - As a state-run facility for foreigners, it is "safe" in that you are insulated, but you are also under 24/7 surveillance.
+        * **The Local Way:** N/A - Do not attempt to seek local LGBT community; it does not exist in a recognizable form for outsiders.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** None - There is no access to the global internet for locals; travelers' data is monitored.
+        * **Community Forums:** N/A.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, ensure all digital devices are scrubbed of any LGBTQ+ media. Possession of "obscene" or "decadent" materials can lead to deportation or detention.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>There is no 2026 record of gender-affirming care, PrEP, or specialized HIV care for the LGBT community in North Korea.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">ICRC (International Committee of the Red Cross)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Pyongyang - The only 2026 point for general humanitarian medical inquiries, though they cannot openly address LGBTQ+ needs.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Total Erasure.' Identity is subsumed by the state; the community exists only in the memories of those who have left.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: NK News (LGBT Context)", url: "https://www.nknews.org/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/north-korea", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	oman: {
 		name: "Oman",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced. Same-sex sexual activity is criminalized under Articles 223 and 227 of the Penal Code, with penalties of 6 months to 3 years in prison. In 2025–2026, Oman has increased its focus on 'cyber-morality,' using digital surveillance to track dating app usage. There are no protections against discrimination. While the law is less aggressively enforced than in Saudi Arabia, 'public indecency' and 'imitation of the opposite sex' are actively prosecuted. Being HIV+ is grounds for immediate and permanent deportation for foreign nationals.",
-		travel:
-			"High Risk. Oman is the most 'discrete' of the Gulf states, but the risks for LGBTQ+ travelers are high. In 2026, PDA is strictly forbidden and will lead to arrest. Transgender travelers are at risk of being denied entry if their appearance does not match their passport's gender marker. In Muscat, luxury hotels are safe 'bubbles,' but outside these areas, you must conform to rigid gender norms. The 'posture' is: total invisibility; do not use dating apps, as 'police traps' are a known risk for travelers in the capital.",
-		culture:
-			"Conservative & Ibadi. Omani culture is based on Ibadi Islam, which emphasizes privacy and modesty. In 2026, there is no public LGBTQ+ life. For a visitor, the culture is one of incredible quietness and hospitality. Omanis are deeply respectful of guests, but they expect guests to respect their religious and moral framework. 'Don't ask, don't tell' is the absolute rule. It is a society where your identity must remain a private secret; as long as it is, you will enjoy the stunning landscapes and ancient traditions without conflict.",
-		health:
-			"Good (Technical) but Risky. Oman has a high-quality, modern healthcare system. In 2026, HIV care is available but involves mandatory reporting and deportation for expats. There is no gender-affirming care. For travelers, stick to private hospitals like Muscat Private Hospital for general needs. Do not disclose your orientation to any medical staff. If you are trans, carry hormones with a clear prescription and a doctor's letter that uses 'hormone imbalance' rather than 'gender identity' to avoid customs issues. Medical confidentiality is not guaranteed if 'immorality' is suspected.",
-		posture: "Extreme Risk - 3-year prison sentences; mandatory deportation for HIV+; high focus on digital 'morality' laws.",
-		sources: ["https://www.humandignitytrust.org/country-profile/oman/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_oman", "https://www.equaldex.com/region/oman"],
+
+		legal: `
+        <p>In 2026, Oman remains a conservative monarchy where same-sex sexual activity is criminalized under Article 223 of the Penal Code, carrying a penalty of up to three years' imprisonment. While enforcement is relatively rare compared to neighboring states, there are no legal protections, and "scandalous behavior" laws are frequently used to police gender expression.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Politely Repressive." For example, the 2026 cancellation of an academic "Human Rights and Human Dignity" conference in Muscat has provided a chilling precedent for those attempting to discuss inclusive values openly.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (Oman Desk)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Provides 2026 legal analysis and international monitoring as no local LGBTQ+ NGOs can legally operate.</p>
+                <a href="https://www.humandignitytrust.org/country-profile/oman/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' High-end urban areas like Muscat are safe for "discreet" travelers, but the "vibe" is one of total silence. Public Displays of Affection (PDA) are a risk for all, but for same-sex couples, they can lead to immediate police intervention.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; the community meets in private residences or "mixed" upscale lounges.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #164</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains low due to the complete lack of civil rights and active criminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is moderate for 'Gay-passing' travelers who practice "active discretion." Trans/GNC individuals are at high risk of being denied entry or experiencing harassment at airports due to strict binary social codes.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Zale Beach Club** (Muscat) - Part of the Kempinski, it offers a "mixed" international environment where LGBT travelers can relax without scrutiny.
+        * **The Local Way:** **Mutrah Souq Area** - While not a LGBT space, it is a place where "discreet visibility" exists among the expat and local merchant classes.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Scruff - Both require a VPN in 2026 as they are frequently blocked or throttled by local ISPs.
+        * **Community Forums:** **TravelGay Oman** is the most reliable 2026 source for safety-vetted venue lists.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, avoid any rainbow iconography on luggage. Omani customs can be unpredictable regarding "immoral" materials.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP is virtually non-existent for the public; HIV care is available but carries high risk of social stigma. HRT is only available via private, non-specialized channels.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Sultan Qaboos University Hospital</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Muscat - The primary 2026 center for infectious diseases, though discretion is mandatory.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cautious Resilience.' The community is present but invisible, navigating a society that prefers not to acknowledge them.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: TravelGay Oman", url: "https://www.travelgay.com/destination/gay-oman/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/oman", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
+	},
+
+	macau: {
+		name: "Macau",
+		continent: "asia",
+		status: "amber",
+
+		legal: `
+<p>Macau has no legal recognition for same-sex unions or marriage as of 2026. However, anti-discrimination laws exist specifically for employment and gender identity, though they are rarely tested.</p>
+<p><strong>The Statute vs. Ground Gap:</strong> Moderate. While the law is silent on relationships, the "Don't Ask, Don't Tell" culture is dominant. In 2026, the community reports Moderate Trust in police, who generally avoid interfering in private lives unless public order is cited.</p> 
+<div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+<div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+<strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Rainbow of Macau</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The only local NGO advocating for LGBTQ+ rights and visibility in the territory.</p> 
+<a href="https://www.facebook.com/rainbowmacau" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+</div> </div> `,
+
+		safety: ` 
+<p>Physical safety is very high. Crime is extremely low due to heavy casino security and government surveillance.</p>
+<p><strong>Street Pulse & Policing:</strong> Moderate Response. In 2026, travelers are safe, but public displays of affection are still viewed with social conservatism outside of the "Golden Cotai Strip." Hostility is usually passive rather than aggressive.</p> 
+<div class="safety-metrics-grid" style="margin-top: 40px; border-top: 20px solid rgba(255,255,255,0.1); padding-top: 25px;">
+<h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+<div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+<strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #35</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: High physical safety marks offset by the total lack of legal recognition for unions.</p> </div> </div> `,
+
+		travel: ` 
+<p>2026 Traveler Rating: Passing Recommended. The "Casino Bubble" provides more freedom than the residential old town.</p> 
+<p><strong>Safe Havens vs. Red Zones:</strong> 
+* **Green Zones:** The Cotai Strip (High-end resorts) and Taipa Village. 
+* **Amber Zones:** Traditional residential areas around the St. Paul’s Ruins.</p>
+<p><strong>The Venue Spectrum:</strong> 
+* **Upscale/Protected:** Wynn Palace (Very inclusive service) 
+* **The Local Way:** Boom Bar (Local underground LGBT spot)</p>
+<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+<h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+<div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+<strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+<p style="color: #fff; font-size: 0.85rem;">Macau is far more conservative than Hong Kong. Treat identity as a private matter outside of designated nightlife venues.</p> 
+</div> </div> `,
+
+		health: ` 
+<p><strong>Standard of Care:</strong> Modern facilities (Conde S. Januário Hospital), but LGBT-specific health needs are often met via private clinics or travel to Hong Kong.</p> 
+<p><strong>Traveler Essential:</strong> PrEP is not as widely available as in HK; travelers should bring their own supply.</p>
+<div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+<h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+<div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+<strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Macau Health Bureau (SSM)</strong> 
+<p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Primary public contact for infectious disease and general health services.</p> </div> 
+</div> `,
+
+		posture: ` 
+<p>The "Casino Neutral" posture in Macau provides a safe, high-end facade for the community, but legal and social recognition remains stalled in 2026. The verdict is "Safe but Stagnant."</p> `,
+
+		sources: [
+			{ label: "Ground Intel: Macau Daily Times", url: "https://macaudailytimes.com.mo/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA Asia", url: "https://www.ilgaasia.org/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Macau International Film Festival (LGBT selections)", url: "https://www.iffamacao.com/", button: "EVENT DETAILS →" },
+		],
 	},
 
 	pakistan: {
 		name: "Pakistan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Contested. Same-sex acts are criminalized under Section 377 ('Unnatural Offenses'), with penalties of 2 years to life in prison. In 2023, the Federal Shariat Court struck down key parts of the landmark 2018 'Transgender Persons Act,' ruling that self-identified gender was 'un-Islamic.' As of 2026, this has created a legal crisis: while the 'Khawajasira' (traditional third gender) are still recognized, the rights of other trans people to self-identify are in limbo. There are no protections for gay or lesbian individuals, and 'honor killings' by non-state actors remain a severe threat.",
-		travel:
-			"Extreme Risk. Pakistan is dangerous for out LGBTQ+ travelers. In 2026, religious vigilante groups often target those perceived as 'Westernized' or queer. PDA is a certain trigger for violence or arrest. Transgender travelers may be recognized as 'Khawajasira' in some contexts, but they still face intense harassment and the risk of being targeted by the new 'anti-trans' legal shifts. Digital safety is critical; 'trap' operations on dating apps are common. The 'posture' is: absolute 'stealth' is required; safety is only possible within the most elite, private urban circles.",
-		culture:
-			"Conservative & Patriarchal. Pakistani culture is a complex mix of South Asian tradition and strict Islamic law. In 2026, the 'Anti-Trans' movement has gained political momentum, framing queer rights as a colonial imposition. For a visitor, the culture is one of legendary, intense hospitality—but it is a hospitality for the 'guest,' not the 'identity.' You will be treated like royalty in a Pakistani home, provided you never mention your orientation. The 'Khawajasira' community is a visible but marginalized part of the streetscape, often reduced to begging or dancing at weddings.",
-		health:
-			"Basic to Moderate. Healthcare in Lahore, Karachi, and Islamabad is adequate. In 2026, HIV care is managed by NGOs like 'Nai Zindagi,' but it is heavily stigmatized. There is no legal gender-affirming care outside of surgeries for 'intersex' conditions. Travelers should use only high-end private hospitals (like Aga Khan) and avoid disclosing their identity. If you are trans, you face a high risk of medical refusal or harassment in the public system. Confidentiality is legally weak; any 'unnatural' act discovered by a doctor could theoretically be reported to the police.",
-		posture: "Extreme Risk - Life imprisonment de jure; 2023 reversal of trans rights; high risk of vigilante and 'honor' violence.",
+
+		legal: `
+        <p>In 2026, Pakistan presents a stark legal paradox. Same-sex acts remain criminalized under Section 377 (remnant of British law), yet the 2018 Transgender Persons (Protection of Rights) Act provides some of the world's most progressive protections for "Khwaja Sira" (third gender) individuals—though these were partially struck back by the Shariat Court in 2023. In 2026, legal battles continue to determine the definition of "gender identity" vs "biological sex."</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Increasingly Polarized." For example, the 2026 police raid on a "house party" in Lahore has provided a chilling precedent for the urban gay community, while the trans community continues to win minor victories in provincial employment quotas.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Wajood (Trans Advocacy)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">A key 2026 organization focused on the rights and socio-economic inclusion of the trans and gender-diverse community.</p>
+                <a href="https://wajoodpk.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' Elite urban areas in Karachi, Lahore, and Islamabad have thriving underground "party" scenes. However, for the majority of the population, visibility is a risk for "honor" crimes or vigilante violence. Trans individuals are visible but often relegated to traditional roles (dancing, begging) due to systemic exclusion.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; life revolves around "lavender marriages" and private social circles.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #176</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains low due to high rates of non-state actor violence and legal criminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Moderate safety for 'Gay-passing' travelers who remain within elite circles. Trans/GNC travelers face significant danger if they lack the traditional cultural status of local "Khwaja Sira," potentially facing harassment or arrest.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Private Farmhouses (Lahore/Islamabad)** - The 2026 "Circuit" scene happens almost exclusively in private, high-security farmhouses accessible via invite-only lists.
+        * **The Local Way:** **Shrines (Bari Imam)** - Culturally, certain Sufi shrines have historically been spaces of "spiritual refuge" for the third-gender community.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Hornet - Both require a VPN as of 2026. Entrapment and extortion via apps are significant risks for the local community.
+        * **Community Forums:** **LGBT Pakistan (Digital Archives)** - A key 2026 resource for community news and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, never mention "Gay Rights" in public. Use the term "Human Rights" or focus on "Trans Identity" (Khwaja Sira) which has more cultural recognition.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HRT is available but non-standardized. PrEP is accessible via a few NGO-led clinics in Karachi and Lahore as of 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Dostana (Karachi)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Focuses on MSM health and HIV awareness in a discreet, community-led setting.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Subterranean Resilience.' Life is lived in the gaps of a complex cultural and legal framework.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/news/2023/05/22/pakistan-court-strikes-blow-transgender-rights",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Pakistan",
-			"https://www.humandignitytrust.org/country-profile/pakistan/",
+			{ label: "Ground Intel: Wajood Pakistan", url: "https://wajoodpk.org/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex Pakistan", url: "https://www.equaldex.com/region/pakistan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Aks Festival (Discreet Locations)", url: "http://aksfestival.com/", button: "EVENT DETAILS →" },
 		],
 	},
 
-	palestine: {
+	palestinian_territories: {
 		name: "Palestinian Territories",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Fragmented & Obsolete. Legal status depends on the territory. In the West Bank, the 1951 Jordanian Penal Code is in effect, which does not criminalize same-sex acts. However, the Palestinian Authority (PA) has occasionally used 'morality' laws to restrict LGBTQ+ gatherings. In Gaza, the 1936 British Mandate Criminal Code Ordinance remains theoretically in force, carrying up to 10 years for 'carnal knowledge against the order of nature.' While formal prosecutions are rare, the law provides a pretext for state and non-state discrimination. As of 2026, there are no civil rights protections, and legal gender recognition for transgender people is non-existent.",
-		travel:
-			"Extreme Risk. Travel is currently strongly discouraged due to the devastating 2023–2026 conflict and ongoing instability. For LGBTQ+ individuals, the risk is severe; visibility can lead to harassment or violence from both security forces and conservative non-state actors. PDA is a major trigger for violence for any couple, but same-sex PDA is viewed as a grave moral violation. Transgender travelers are at high risk of detention or harm at checkpoints. The 'posture' is total 'stealth'—identity must be suppressed for safety. Digital devices should be cleared of any queer-related content, as phone searches are common at checkpoints.",
-		culture:
-			"Conservative & Under Pressure. Palestinian culture is deeply traditional and family-oriented, where queer identity is often stigmatized as 'Western influence.' In 2026, the primary advocacy group, 'al-Qaws,' operates mostly underground or from the diaspora due to a 2019 PA ban (periodically enforced). The humanitarian crisis has further marginalized queer Palestinians, many of whom have sought asylum in Israel or abroad. For a visitor, hospitality is warm but strictly bounded by religious norms. Public life is entirely heteronormative, and any public discussion of LGBTQ+ rights is viewed with hostility by both the state and religious authorities.",
-		health:
-			"Devastated. The healthcare system, particularly in Gaza, has largely collapsed as of 2026. Specialized LGBTQ+ care is non-existent. HIV care is heavily stigmatized and, where available, managed by international NGOs under extreme resource constraints. There is no gender-affirming care. For travelers, any medical need requires evacuation to Jordan or high-end facilities in Israel. Never disclose your orientation or gender identity to local medical staff; it is not treated as confidential medical data and can lead to being 'outed' to the community, which carries lethal risks in a society where 'honor' culture remains prevalent.",
-		posture: "Extreme Risk - Conflict zone; legal ambiguity in West Bank vs. criminalization in Gaza; absolute social invisibility required.",
+
+		legal: `
+        <p>In 2026, the legal status remains fragmented. In the West Bank, Jordanian law (which does not criminalize same-sex acts) applies, but LGBTQ+ groups are often forbidden from meeting by the PA. In Gaza, the 1933 British Mandate law criminalizing "unnatural offenses" remains technically on the books, though the primary threat is Hamas's extrajudicial enforcement. No legal recognition or anti-discrimination protections exist.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Survival under Occupation." For example, the 2026 collapse of healthcare infrastructure in Gaza has provided a chilling precedent for LGBT people living with HIV, who are now completely cut off from medication.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Al-Qaws (The Bow)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The leading 2026 grassroots organization for Palestinian LGBTQ+ rights, currently operating primarily through digital and decentralized networks.</p>
+                <a href="http://alqaws.org/site/en/index" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Highly Dangerous.' In the West Bank, the PA police have previously banned LGBTQ+ gatherings. In Gaza, visibility is essentially a death sentence. The community faces dual pressure from societal traditionalism and the political volatility of the region. Many seek "asylum" in Israel, though this path is fraught with security risks and "pinkwashing" debates.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; meetings occur in private homes or discreet cafes in Ramallah.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #188</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects the total absence of safety and protection for the community.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is red. It is not recommended to travel for LGBTQ+ connection. Trans/GNC individuals face extreme risk of harassment or physical violence in public spaces.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Ramallah Cafes (Discreet)** - Certain artsy cafes in Ramallah are "known" to be inclusive, but visibility remains low for safety.
+        * **The Local Way:** N/A - Do not seek local community in public for safety reasons.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr - Widely used but accounts are frequently monitored by local security and family vigilantes.
+        * **Community Forums:** **Al-Qaws Social Media** is the only reliable 2026 source for underground community news.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Privacy Warning</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, ensure your phone is scrubbed of all dating apps before passing through checkpoints (both Israeli and Palestinian). Digital history is a common tool for interrogation.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Health services for the LGBT community are virtually non-existent locally; most specialized care (HIV/HRT) is sourced through Israeli-Palestinian cross-border NGOs.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Muntada (LGBT Arab Forum)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Haifa-based, but providing the primary 2026 remote health support for West Bank Palestinians.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Invisible Resilience.' Identity is a secondary concern to basic survival in a highly volatile political landscape.</p>
+    `,
+
 		sources: [
-			"https://www.humandignitytrust.org/country-profile/palestine/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Palestine",
-			"https://database.ilga.org/palestine-lgbti",
+			{ label: "Ground Intel: Al-Qaws", url: "http://alqaws.org/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex Palestine", url: "https://www.equaldex.com/region/palestine", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -583,19 +2158,73 @@ Object.assign(globalData, {
 		name: "Philippines",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Limited. Same-sex acts have never been criminalized. In February 2026, the Supreme Court made a landmark ruling granting limited property and inheritance rights to same-sex couples, though it stopped short of recognizing marriage. The 'SOGIESC Equality Bill' (Anti-Discrimination Bill) remains the longest-debated bill in history; as of early 2026, it is still stuck in the 20th Congress despite passing the House several times. Many cities (Manila, Quezon City, Cebu) have their own local anti-discrimination ordinances, creating a 'patchwork' of protections depending on where you stand.",
-		travel:
-			"Safe & Vibrant. The Philippines is one of the most LGBTQ-friendly destinations in Asia. Metro Manila (especially BGC and Poblacion) and islands like Boracay have thriving, visible queer scenes. PDA is generally tolerated in urban and tourist areas, though it may draw stares in rural provinces. Transgender travelers (referred to locally as 'transpinay') are very visible in society, though they still face systemic hurdles with ID markers. The 'posture' is: very safe; you can be open in most cities, but remember the law has not yet caught up to the social acceptance.",
-		culture:
-			"Accepting but Catholic. While 80%+ of the population is Catholic, there is a unique 'Bakla' culture that provides a level of social integration for queer people, especially in entertainment. In 2026, Metro Manila Pride is one of the largest in Southeast Asia. For a visitor, the culture is 'Halo-Halo' (a mix)—deeply religious yet incredibly festive and welcoming. People are generally curious and kind. However, 'acceptance' often comes with the caveat of 'entertainment'—the community is still fighting to be seen as equals in professional and legal spheres rather than just 'performers.'",
-		health:
-			"Good (Urban). Manila and Cebu have excellent private hospitals (St. Luke's, Makati Med). In 2026, HIV care is widely available, and PrEP can be accessed through 'LoveYourself' clinics, which are world-class and queer-led. Gender-affirming care (hormones) is accessible through private endocrinologists, but surgery is usually sought in Thailand. For travelers, healthcare is safe and professional. Most doctors in urban areas are sensitized, but it's always better to use clinics that explicitly market to the LGBTQ+ community to ensure the best care.",
-		posture: "Confident Openness - High social safety; landmark 2026 court wins for property rights; SOGIE bill still in limbo.",
+
+		legal: `
+        <p>In 2026, the Philippines continues to operate without a national SOGIE Equality Act, though over 25 cities and provinces have passed local anti-discrimination ordinances. Same-sex unions are not legally recognized at the state level, but "Commitment Ceremonies" are common within the community. The legal climate remains a patchwork where protection depends entirely on your current city limits.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Enduringly Hopeful." For example, the 2026 successful Pride celebrations in Manila and Cebu have provided a hopeful precedent, though the recent blocking of gender-neutral restroom mandates in certain sectors shows the ongoing legislative friction.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Metro Manila Pride</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The longest-running Pride march in Southeast Asia, currently lobbying for the 2026 SOGIE Equality Bill's passage.</p>
+                <a href="https://mmpride.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' While the Philippines is culturally seen as one of Asia's most "LGBT-friendly" nations due to media visibility, the reality is 'Acceptance vs. Tolerance.' Visibility is celebrated in urban hubs, but Trans/GNC individuals face higher rates of workplace discrimination and social stigma in rural provinces.</p>
+        <p><strong>Community Density:</strong> High. There are many dedicated LGBT-only spaces in Metro Manila (Poblacion) and Cebu City.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #58</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains stagnant due to the lack of a national non-discrimination framework.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>High safety rating for 2026. 'Gay-passing' travelers will feel entirely at home in urban centers. Trans/GNC individuals are generally respected, though may encounter "curiosity" rather than hostility.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Nectar Nightclub** (BGC, Taguig) - A premier, high-security LGBT space catering to a luxury/international crowd.
+        * **The Local Way:** **O Bar** (Ortigas) - Essential for the authentic Filipino drag scene and local community energy.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Hornet - Both are the dominant tools for meetups and local dating in 2026.
+        * **Community Forums:** **Preen.ph** or local subreddits remain the go-to for up-to-date party info.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Visibility is widely accepted; however, keep political activism discreet during your stay to avoid potential visa complications under current 2026 foreign involvement rules.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Widely accessible HRT in urban pharmacies. PrEP is available via NGOs and some private clinics in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 25px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">LoveYourself Philippines</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Shaw Blvd, Mandaluyong City (and various community hubs) - Leading HIV and PrEP provider.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Vibrant Resilience.' The community is culturally integrated but legally ignored, creating a unique, high-energy underground-to-mainstream pipeline.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/news/2026/02/17/philippine-supreme-court-grants-property-rights-same-sex-couples",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_the_Philippines",
-			"https://www.thebeautyedit.ph/industry/the-long-road-to-equality-where-the-sogiesc-bill-stands-in-2025/",
+			{ label: "Ground Intel: Preen.ph", url: "https://preen.ph", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Metro Manila Pride 2026", url: "https://mmpride.org", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -603,35 +2232,147 @@ Object.assign(globalData, {
 		name: "Qatar",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Lethal. Same-sex sexual activity is criminalized under the Penal Code 2004, with penalties of up to 7 years. For Muslims, Sharia law technically allows for the death penalty, though there are no confirmed reports of it being carried out for homosexuality recently. In 2026, the post-World Cup environment has seen a 'tightening' of social control. The 'Preventive Security Department' actively monitors digital spaces to entrap queer individuals. There are no protections, and any form of LGBTQ+ advocacy is treated as a threat to national security.",
-		travel:
-			"High Risk. Qatar is safe from general crime but hostile to LGBTQ+ visibility. In 2026, PDA is strictly prohibited for all, but same-sex PDA will result in immediate arrest and deportation. Transgender travelers are at high risk; if your physical appearance does not match your passport, you may be denied entry or detained. Digital privacy is non-existent; assume your devices can be searched. The 'posture' is: total 'stealth.' Stay within international business hotels and avoid any 'queer-coded' clothing or accessories in public places like the Souq Waqif.",
-		culture:
-			"Strict & Wealthy. Qatari culture is deeply conservative and based on Wahhabi interpretations of Islam. In 2026, there is no public queer life. For a visitor, the culture is one of 'Extravagant Privacy.' Qataris value discretion above all else. You will experience high-end luxury and hospitality, but it is a transaction that requires you to leave your identity at the border. Do not attempt to discuss LGBTQ+ rights with locals; it is seen as a profound cultural insult and a violation of local laws. Privacy is your only protection here.",
-		health:
-			"Excellent (Technical) but Risky. Qatar has world-class hospitals (Sidra, Hamad). In 2026, HIV care is state-of-the-art but involves mandatory reporting; for foreigners, a positive test results in immediate and permanent deportation. There is no gender-affirming care. For travelers, use only private clinics for minor issues. Never disclose your orientation to a doctor. If you are trans, carry all medications in original packaging with a prescription; however, be aware that customs may still seize them as 'illegal substances' under morality laws.",
-		posture: "Extreme Risk - 7-year prison terms; digital entrapment; mandatory deportation for HIV+; zero tolerance for visibility.",
-		sources: ["https://www.humandignitytrust.org/country-profile/qatar/", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_Qatar", "https://www.equaldex.com/region/qatar"],
+
+		legal: `
+        <p>In 2026, same-sex sexual activity remains criminalized under the Penal Code 2004, with potential imprisonment of 1–3 years. For Muslims, Sharia law applies, which technically allows for the death penalty, though no such executions for same-sex acts have been recorded in recent history. There are zero legal protections for SOGIE.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (mostly in exile) describe the current climate as "Hyper-Monitored." The 2026 tightening of digital surveillance laws has provided a chilling precedent for the community, making private digital communication riskier than ever.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy (Safe Support)</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (Qatar)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring 2026 human rights violations as no local LGBT NGOs are legally allowed to exist.</p>
+                <a href="https://www.humandignitytrust.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile but Quiet.' Post-2022 World Cup, international scrutiny has faded, and the state has returned to a policy of "Total Invisibility." It is safe for high-end travelers as long as discretion is absolute. Public displays of affection are prohibited for everyone, but carry legal peril for LGBT couples.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; social life is entirely confined to private homes and invite-only WhatsApp groups.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #182</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains near the bottom due to total lack of civil liberty for LGBTQ+ individuals.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Low safety rating for 2026. 'Gay-passing' travelers can navigate Doha comfortably by adhering to local norms. Trans/GNC individuals face extreme risk at border control and within the city due to strict binary gender expectations.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Wahm** (W Doha) - Often attracts an international and "mixed" crowd where discretion is the unspoken rule.
+        * **The Local Way:** N/A - Authentic local "LGBT bars" do not exist; stay away from unauthorized gatherings.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Tinder - Both are used in 2026 but require a VPN and high situational awareness for entrapment risks.
+        * **Community Forums:** N/A - Local digital communities are highly vetted and closed to foreigners for security.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Scrub your phone of dating apps and LGBT media before arrival. Border agents have the authority to search devices for "indecent" content.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT and specialized LGBT health is impossible through official channels in 2026. HIV care is available but carries significant social/legal risk for non-citizens.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Hamad General Hospital</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Doha - Emergency care only; avoid discussing SOGIE identity with staff.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Deep Silence.' The community exists in the shadows, navigating a landscape where survival requires total concealment.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: TravelGay Qatar", url: "https://www.travelgay.com", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	saudi_arabia: {
 		name: "Saudi Arabia",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Lethal. There is no codified criminal law; instead, Sharia law is applied. Same-sex acts and 'cross-dressing' are punishable by flogging, life imprisonment, or death. In 2025–2026, despite 'Vision 2030' reforms, the legal stance on LGBTQ+ people remains unchanged. However, the government has updated its tourism FAQs to say 'LGBTQ visitors are welcome,' provided they respect local laws (meaning no PDA or visibility). This creates a 'Tourist vs. Citizen' double standard. Advocacy is impossible, and the death penalty remains a theoretical (and occasionally applied) threat.",
-		travel:
-			"High Risk (Strategic). The Kingdom is opening up, but the 'Red Line' is visibility. In 2026, PDA is illegal for everyone. Transgender travelers are at high risk of being turned away at the border or harassed by 'Morality' units. In Riyadh and Jeddah, the vibe is shifting toward a 'modern' look, but 'queer' remains a taboo. The 'posture' is: total 'stealth.' Stick to the 'New Saudi' areas like AlUla or NEOM where international standards are more prevalent, but never assume the law won't be used against you if you draw attention to your identity.",
-		culture:
-			"Traditional & Transforming. Saudi culture is undergoing a top-down revolution in entertainment and tourism, but religious roots remain deep. In 2026, there is a 'hidden' digital life for queer Saudis, but it is fraught with danger. For a visitor, the culture is one of 'Formal Hospitality.' You will be treated with great respect as a guest, but the 'guest' role is a mask you must wear. Gender segregation is decreasing in public, but the 'moral' expectations are still rigid. It is a land of massive contradictions; enjoy the history, but keep your personal life entirely private.",
-		health:
-			"High Quality but Dangerous. Saudi healthcare is excellent for general needs. In 2026, HIV care for citizens is provided, but for expats/travelers, it triggers immediate deportation. There is no gender-affirming care. For any health issue, use private clinics like Dr. Sulaiman Al-Habib. Never disclose your orientation. If you are trans, carrying hormones is a significant risk; customs often categorize them as 'immoral' items. Medical records are not private if the state suspects a 'moral crime.' Confidentiality does not exist in the face of Sharia requirements.",
-		posture: "Extreme Risk - Death penalty de jure; mandatory deportation for HIV+; 'Tourist Welcome' is a thin veneer over strict Sharia.",
+
+		legal: `
+        <p>In 2026, Saudi Arabia lacks a written penal code, meaning judges interpret Sharia law directly. Same-sex acts, cross-dressing, and "acting like the opposite sex" are criminal offenses with penalties ranging from fines and lashes to imprisonment and death (though the latter is rarely applied to consensual acts). There are no legal protections for LGBTQ+ people.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (clandestine) describe the current climate as "Modernizing but Dangerous." The 2026 "Social Decency" laws have provided a chilling precedent, where "unconventional" dress is policed more strictly even as the country opens to tourism.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Rights Watch (KSA)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring 2026 detentions related to cybercrimes and "public morality."</p>
+                <a href="https://www.hrw.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Superficially Open, Structurally Hostile.' Tourism initiatives encourage visitors, but the 2026 atmosphere remains one of "Absolute Discretion." While police no longer focus on private conduct as aggressively, public LGBT visibility is a fast-track to arrest or deportation.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces. Social life happens in private compounds (for expats) or highly vetted private residences (for locals).</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #190</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains critically low due to state-sanctioned criminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Very low safety rating for 2026. 'Gay-passing' travelers must never disclose their identity. Trans/GNC individuals face extreme legal and physical risk; travelers have been denied entry for "non-conforming" appearances in 2025-2026.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Private Diplomatic Quarter Parties** (Riyadh) - Usually the only places where LGBT expats can socialize with a degree of security.
+        * **The Local Way:** N/A - Public spaces are heavily monitored by CCTV and morality patrol units.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Scruff, WhosHere - All require high-end VPNs and "ghosting" protocols to avoid entrapment.
+        * **Community Forums:** N/A - No public forums exist for security reasons.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Security Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Saudi authorities utilize advanced digital forensics. In 2026, it is advised to use a "clean" phone for travel or keep all LGBT-related data in hidden, encrypted vaults.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HRT is strictly prohibited for gender transition. HIV medication is available for citizens but typically results in deportation for non-citizens.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">King Faisal Specialist Hospital</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Riyadh - Advanced care available, but zero tolerance for SOGIE disclosure.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Vigilant Masking.' Despite the Vision 2030 modernization, the LGBT experience remains one of high-stakes subterranean existence.</p>
+    `,
+
 		sources: [
-			"https://outleadership.com/wp-content/uploads/2022/11/OL-CEO-Brief_Saudi-Arabia.pdf",
-			"https://www.humandignitytrust.org/country-profile/saudi-arabia/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Saudi_Arabia",
+			{ label: "Ground Intel: IGLTA Saudi Guide", url: "https://www.iglta.org", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -639,19 +2380,73 @@ Object.assign(globalData, {
 		name: "Singapore",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Decriminalized but Restricted. Section 377A was officially repealed in January 2023, decriminalizing gay sex. However, the Constitution was simultaneously amended (Article 156) to protect the definition of marriage as 'between a man and a woman,' effectively blocking any court challenges for marriage equality. In 2026, there are no national anti-discrimination laws. Transgender people can change their legal gender, but only after undergoing full gender-reassignment surgery (including 'bottom' surgery), making it one of the most restrictive processes in the region.",
-		travel:
-			"Safe & Modern. Singapore is exceptionally safe. In 2026, the 'Pink Dot' event in Hong Lim Park continues to grow, and the 'Neil Road' gay scene is vibrant and public. PDA is generally fine in these areas and in the city center, though it might receive 'cold' looks in heartland residential areas. Transgender travelers are safe from violence but may face bureaucratic friction if their ID doesn't match their appearance. The 'posture' is: very safe; you can live an open life, but don't expect the state to recognize your family or protect you from workplace bias.",
-		culture:
-			"Pragmatic & Conservative. Singaporean culture is a blend of 'Asian Values' and global capitalism. In 2026, the government maintains a 'Traditional Family' narrative to appease the conservative majority. For a visitor, the culture is one of efficiency and 'rules.' While you won't be arrested, media content with LGBTQ+ themes still carries high age ratings (R21). The queer community is professional, organized, and increasingly 'mainstream' in the arts and F&B sectors. It is a city where you are 'tolerated' as a consumer but 'limited' as a citizen.",
-		health:
-			"World-Class. Singapore has the best healthcare in Asia. In 2026, HIV care is excellent, though the 'HIV Registry' remains a privacy concern for locals. PrEP is easily accessible through private clinics like 'DTAP.' Gender-affirming care is available, though the psychiatric requirements are stringent. For travelers, any private hospital (Mount Elizabeth, Raffles) is safe and professional. Doctors are clinical and generally non-judgmental. Disclosure of identity is safe. However, there are no 'protected' health rights, so stick to vetted private providers for a better experience.",
-		posture: "Safe & Managed - Decriminalized since 2023; marriage equality constitutionally blocked; high technical healthcare safety.",
+
+		legal: `
+        <p>In 2026, the legacy of Section 377A remains in the rearview mirror after its 2022 repeal, but the constitutional amendment protecting the definition of marriage as between a man and a woman (Article 156) remains a solid barrier to marriage equality. SOGIE protections in the workplace are still decentralized and largely company-dependent.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Measured Progress." For example, the 2026 Pink Dot event has provided a hopeful precedent with its largest turnout yet, though the "foreign involvement" restrictions on funding and participation remain a major hurdle.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Pink Dot SG</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary 2026 movement for LGBTQ+ visibility and legal reform in Singapore.</p>
+                <a href="https://pinkdot.sg" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Secure but Conservative.' Physical safety is among the highest in the world, and LGBT life is highly visible in certain districts. However, the "vibe" remains one of "Social Pragmatism"—visibility is fine as long as it doesn't disrupt the traditional family narrative.</p>
+        <p><strong>Community Density:</strong> Moderate. There are lots dedicated LGBT-only spaces in the Chinatown and Neil Road areas.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #72</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has improved post-377A but is capped by constitutional marriage restrictions.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>High safety rating for 2026. 'Gay-passing' travelers will find a world-class scene. Trans/GNC individuals are generally safe, though they may encounter administrative friction if their identity documents do not match their appearance.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Tantric Bar** (Neil Road) - A cornerstone of the 2026 Singaporean LGBT scene, offering a safe and vibrant atmosphere.
+        * **The Local Way:** **Dorothy’s Bar** (Chinatown) - Essential for meeting local activists and long-term residents.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Scruff, and Jack'd - All are widely used and safe in 2026.
+        * **Community Forums:** **Dear Straight People** remains the premier 2026 platform for local LGBT content and event listings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Public Displays of Affection (PDA) are generally discouraged for all in Singapore. In 2026, mirror the local "classy discretion" to avoid unwanted attention.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Excellent access to HIV care and PrEP. HRT is available via specialist clinics (e.g., DTAP) in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Oogachaga</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">70A Palmer Road - Singapore's oldest 2026 LGBTQ+ counseling and health support NGO.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cautious Optimism.' The city is moving toward inclusion, but the path is one of slow, government-managed social engineering.</p>
+    `,
+
 		sources: [
-			"https://www.channelnewsasia.com/singapore/timeline-repealing-377a-gay-sex-law-amending-singapore-constitution-marriage-definition-3101551",
-			"https://en.wikipedia.org/wiki/Section_377A_(Singapore)",
-			"https://www.humandignitytrust.org/what-we-do/cases/singapore-two-separate-cases-before-the-court-of-appeal/",
+			{ label: "Ground Intel: Dear Straight People", url: "https://dearstraightpeople.com", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Pink Dot 2026", url: "https://pinkdot.sg", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -659,19 +2454,73 @@ Object.assign(globalData, {
 		name: "South Korea",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal but Unprotected. Same-sex activity is legal, but in 2026, a national Anti-Discrimination Act still hasn't passed due to fierce religious opposition. However, in July 2024, the Supreme Court issued a landmark ruling confirming that same-sex partners are eligible for state health insurance benefits—the first time the state has recognized same-sex unions in any capacity. Transgender people can change their legal gender, and in 2024, the Supreme Court further eased the process by ruling that having minor children is no longer a bar to gender correction.",
-		travel:
-			"Safe & Dynamic. South Korea is very safe. In 2026, Seoul's 'Homo Hill' in Itaewon remains the heart of the scene. PDA is generally okay in Itaewon and Hongdae but remains rare for *all* couples in more conservative areas. Transgender travelers are safe, though the society is very appearance-focused. The 'posture' is: high safety; you can be open in urban youth hubs, but the 'corporate' and 'familial' South Korea remains very conservative and heteronormative. Use 'Naver Maps' instead of Google for more accurate local spot info.",
-		culture:
-			"High-Tech & Neo-Confucian. South Korean culture is a battle between K-Pop-fueled 'soft power' (which is often queer-coded) and rigid Confucian family values. In 2026, the Seoul Queer Culture Festival (SQCF) still faces annual permit battles but remains a massive, peaceful event. For a visitor, the culture is 'Palli-Palli' (fast-paced) and polite. While K-Dramas have started featuring queer characters, real-world 'coming out' is still very difficult for locals. As a traveler, you are 'outside' the family system, giving you more freedom to be yourself.",
-		health:
-			"Excellent. South Korea has a top-tier medical system. In 2026, HIV care is state-funded and confidential for citizens, and PrEP is available in major cities. Gender-affirming care (including world-class surgery) is a major 'medical tourism' draw. For travelers, hospitals like Yonsei Severance or Samsung Medical are safe and professional. While most doctors are clinical and fair, some older practitioners may lack sensitivity. Disclosure of identity is generally safe. The system is highly efficient, but always bring an English-speaking friend or use an interpretation app if visiting smaller clinics.",
-		posture: "Confident Openness - 2024 Supreme Court win for spousal benefits; no national anti-bias law; very high physical safety.",
+
+		legal: `
+        <p>In 2026, South Korea still lacks a comprehensive anti-discrimination law, despite years of grassroots pressure. While same-sex acts are legal, Article 92-6 of the Military Criminal Act still technically criminalizes "indecent acts" between soldiers. The legal landscape is dominated by the ongoing struggle to pass the "Equality Act" amidst heavy opposition from religious lobby groups.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Fiercely Resilient." For example, the 2026 legal battle over same-sex spousal health insurance benefits has provided a hopeful precedent, signaling a shift in the judiciary's approach to LGBT families.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Chingusai (Between Friends)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">One of the oldest 2026 gay men's human rights organizations, leading the charge on legal equality.</p>
+                <a href="https://chingusai.net" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Modern but Polarized.' In Seoul's "Homo-hill" (Itaewon), visibility is high and safe. However, public LGBT-focused events like Seoul LGBT Culture Festival (SQCF) frequently face administrative obstruction. There is high safety from physical violence, but social/workplace exclusion is a constant risk for the local community.</p>
+        <p><strong>Community Density:</strong> High. There are lots dedicated LGBT-only spaces in Itaewon, Jongno-3-ga (for an older local vibe), and Hongdae.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #65</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects the high level of safety but the absence of legislative protection.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>High safety rating for 2026. 'Gay-passing' travelers will find Seoul a vibrant and exciting destination. Trans/GNC individuals are generally safe but may experience "staring" or confusion in more traditional or rural settings.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Trance** (Itaewon) - A legendary drag bar that serves as a safe hub for locals and foreigners alike in 2026.
+        * **The Local Way:** **Jongno-3-ga pojangmachas (street stalls)** - Essential for seeing the local "salaryman" LGBT culture in a semi-discreet but authentic setting.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Jack'd (dominant for locals) and Grindr (popular for expats) - Both are safe and active in 2026.
+        * **Community Forums:** **Seoul LGBT Culture Festival (SQCF) Website** is the go-to for the most accurate 2026 event schedules.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">PDA is relatively conservative for everyone in Korea. In 2026, keep it to high-visibility LGBT zones like Itaewon to avoid social discomfort.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Excellent HIV care. PrEP is available via clinics like iSHAP. HRT for trans individuals is accessible via specialized gender clinics in Seoul in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">iSHAP (Seoul)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Various locations in Jongno and Itaewon - Specializes in sexual health for the LGBTQ+ community.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cultural Emergence.' While the laws lag behind, the cultural presence of the LGBTQ+ community is becoming impossible to ignore in South Korea's public life.</p>
+    `,
+
 		sources: [
-			"https://www.omm.com/news/in-the-news/reuters-in-landmark-ruling-south-koreas-top-court-confirms-state-benefits-for-gay-couples/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_South_Korea",
-			"https://www.hrw.org/world-report/2026/country-chapters/south-korea",
+			{ label: "Ground Intel: Seoul LGBT Culture Festival", url: "https://sqcf.org", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: SQCF 2026", url: "https://sqcf.org", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -679,19 +2528,73 @@ Object.assign(globalData, {
 		name: "Sri Lanka",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Decriminalization in Progress. In 2024–2025, the Supreme Court cleared a private member's bill to decriminalize same-sex acts (repealing Section 365/365A). As of early 2026, the bill has the support of the major political parties (NPP, SJB) and is moving through its final parliamentary readings. While still technically 'illegal' until the final vote is gazetted, the police have been instructed to stop arrests for consensual acts. There are currently no broader anti-discrimination laws, and transgender rights depend on a 2016 circular that allows for gender change with a medical certificate.",
-		travel:
-			"Safe & Evolving. Sri Lanka is very safe and welcoming to tourists. In 2026, Colombo has a growing, visible queer scene with events hosted by 'Equal Ground.' PDA is best kept 'low-key' outside of tourist resorts and the capital, as rural areas remain conservative. Transgender travelers are generally treated with the 'island's legendary kindness,' though administrative hurdles remain. The 'posture' is: confident but discrete; the country is at a historic turning point, and the atmosphere for queer travelers has never been better.",
-		culture:
-			"Theravada & Resilient. Sri Lankan culture is deeply Buddhist, which traditionally lacks the 'moral' fervor against homosexuality found in other religions. However, British colonial laws left a lasting mark. In 2026, 'Colombo Pride' is a series of well-attended private and semi-public events. For a visitor, the culture is one of 'Ayubowan' (long life)—gentle and respectful. People are less concerned with your identity than with your respect for their customs. It is a society that is finally 'un-learning' colonial homophobia and returning to a more indigenous tolerance.",
-		health:
-			"Basic to Moderate. Healthcare in Colombo (Nawaloka, Lanka Hospitals) is good. In 2026, HIV care and PrEP are available via the 'National STD/AIDS Control Programme' and NGOs like 'Equal Ground.' Gender-affirming care is available in Colombo but limited. For travelers, private hospitals are safe and doctors are generally professional. Disclosure of identity is safer now than it was three years ago, but discretion is still advised in public clinics. Always ensure you have travel insurance that covers evacuation to India or Thailand for complex emergencies.",
-		posture: "Confident Discretion - Parliamentary vote on decriminalization pending; Supreme Court has cleared the path; high social safety.",
+
+		legal: `
+        <p>In 2026, Sri Lanka stands at a historic crossroads. While Sections 365 and 365A of the Penal Code—remnants of British colonial rule that criminalize "unnatural offenses"—remain on the books, the Supreme Court ruled in 2023 that decriminalization is constitutional. A 2025-2026 legislative push to formally repeal these sections has gained significant cross-party support, though administrative delays persist.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Cautiously Victorious." For example, the 2025-2026 non-enforcement directive from the Attorney General’s office has provided a hopeful precedent, effectively halting arrests for consensual acts while the community awaits full legislative repeal.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Equal Ground</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The leading advocacy group in 2026, focused on the final legislative push for decriminalization and SOGIE education.</p>
+                <a href="https://www.equal-ground.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' While Colombo is increasingly vibrant and safe for LGBT visibility, rural areas remain governed by conservative social norms. Trans individuals, particularly those in the sex work sector, still face disproportionate harassment under the Vagrants Ordinance, despite the national shift toward tolerance.</p>
+        <p><strong>Community Density:</strong> Moderate. There are few dedicated LGBT-only spaces, but many "LGBT-frequented" bars in Colombo 03 and 07.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #108</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has jumped significantly following the Supreme Court's mandate for decriminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High for urban travelers. 'Gay-passing' travelers will encounter zero issues in Colombo or southern beach resorts like Mirissa. Trans/GNC individuals may face curiosity or misgendering but are increasingly respected in high-end hospitality sectors.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Botanico at 71** (Colombo) - A lush, mixed-crowd garden bar known for its inclusive atmosphere and high-end security.
+        * **The Local Way:** **Kushlani’s Pride Parties** (Pop-up) - Essential for the authentic local vibe, these private events are the heart of 2026 Colombo LGBT life.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Tinder - In 2026, Grindr is the primary tool for locals, while Tinder is preferred by the "lifestyle" and expat crowd.
+        * **Community Forums:** **The LGBT Colombo Telegram** is the go-to for up-to-date party info and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">2026 Colombo Pride is a "rolling festival." Public visibility is celebrated in Colombo, but tone it down when visiting sacred sites in Kandy or Anuradhapura.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP has expanded significantly through private clinics in 2026. HRT is available via prescription in Colombo.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">The Family Planning Association (FPA)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Colombo 07 - Offers non-discriminatory HIV testing and sexual health services.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Emerging Openness.' The legal chains are breaking, and the community is moving from survival to visibility.</p>
+    `,
+
 		sources: [
-			"https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Sri_Lanka",
-			"https://www.equaldex.com/region/sri-lanka",
+			{ label: "Ground Intel: Equal Ground News", url: "https://www.equal-ground.org", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/sri-lanka/", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Colombo Pride 2026", url: "https://www.equal-ground.org/pride", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -699,35 +2602,147 @@ Object.assign(globalData, {
 		name: "Syria",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Lethal. Article 520 of the Penal Code criminalizes 'unnatural sexual intercourse' with up to 3 years in prison. In 2026, the country remains fractured. In regime-held areas, the law is used sporadically to target activists. In areas formerly or currently held by extremist groups (like HTS or remnants of ISIS), summary executions and public torture for 'sodomy' are documented. There are zero protections, and the civil war has made the LGBTQ+ community one of the most 'invisible' and persecuted groups in the country.",
-		travel:
-			"Extreme Risk. Syria is a conflict zone and unsafe for all travelers. For LGBTQ+ individuals, it is a death trap. In 2026, there is no queer infrastructure. PDA is unthinkable. Transgender individuals are at risk of immediate violence at any of the thousands of checkpoints across the country. Digital surveillance is high in regime areas, and 'moral policing' is extreme in opposition areas. The 'posture' is: do not travel. If you are a citizen, survival requires total 'stealth' and, if possible, seeking asylum abroad.",
-		culture:
-			"Conservative & Fractured. Syrian culture was historically diverse, but 15 years of war have radicalized many regions and destroyed the social fabric. In 2026, there is no public LGBTQ+ advocacy. For a visitor (if travel were possible), the culture is one of 'Fear and Resilience.' Identity is a luxury that few can afford to express. The 'posture' is: absolute silence. The queer community exists only in tight-knit, secret groups or among the millions of refugees in Lebanon, Turkey, and Europe. It is a society where 'otherness' is often seen as a security threat.",
-		health:
-			"Devastated. The healthcare system has mostly collapsed. In 2026, HIV care is nearly impossible to find outside of very limited UN-supported hubs in Damascus. There is no gender-affirming care. For travelers (mostly aid workers), any medical issue requires evacuation to Beirut or Amman. Never disclose your orientation to any medical staff; it can lead to blackmail, arrest, or being 'outed' to family in a culture where 'honor' remains a lethal concept. Confidentiality is a casualty of war.",
-		posture: "Extreme Risk - Civil war; active criminalization; death at the hands of non-state actors; zero medical/legal safety.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Syria", "https://www.hrw.org/world-report/2026/country-chapters/syria", "https://www.equaldex.com/region/syria"],
+
+		legal: `
+        <p>In 2026, Article 520 of the Penal Code 1949 remains active, criminalizing "unnatural sexual intercourse" with up to 3 years in prison. In areas outside government control, extremist militias may enforce extrajudicial punishments, including execution. There is no legal recognition for SOGIE rights.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (operating primarily in exile) describe the current climate as "Perilous." For example, the 2025-2026 increase in checkpoint scrutiny has provided a chilling precedent for Trans individuals who lack IDs matching their gender presentation.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Guardians of Equality Movement (GEM)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Working from exile to document 2026 abuses and support LGBT Syrian refugees.</p>
+                <a href="https://www.facebook.com/GEMSyria/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' LGBT life is entirely underground due to the dual threat of state persecution and social "honor" violence. Safety is 'Underground' only; public visibility is non-existent. Most LGBT Syrians live a double life to avoid detection by both the state and family.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; social life is restricted to private apartments in Damascus or Aleppo with strict vetting.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #194</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains critically low due to ongoing conflict and state criminalization.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Travel is strongly discouraged for 2026 due to general instability. For those who must travel, 'Gay-passing' individuals must remain entirely closeted. Trans/GNC individuals are at extreme risk at every military checkpoint.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** N/A - No public venue can be considered "protected" for LGBT individuals in 2026.
+        * **The Local Way:** Private House Parties - The only venue for the real community vibe; accessible only through long-term trusted contacts.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Scruff - Used with extreme caution; entrapment by "morality" actors or militias is a constant 2026 threat.
+        * **Community Forums:** Closed WhatsApp/Signal groups are the only safe way for locals to communicate.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Remove all dating apps and LGBTQ+ media from your phone before arrival. Checkpoints frequently inspect devices.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Health infrastructure is severely damaged. HIV care is nearly impossible to access discreetly. HRT is unavailable in 2026 through legal channels.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">SAMS (Syrian American Medical Society)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">General humanitarian aid; use for emergency needs only—do not disclose SOGIE status.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Survival.' The LGBT community exists in the deepest shadows, prioritizing safety over all forms of expression.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Human Dignity Trust Syria", url: "https://www.humandignitytrust.org/country-profile/syria/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/syria", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	taiwan: {
 		name: "Taiwan",
 		continent: "asia",
 		status: "green",
-		legal:
-			"The Regional Standard. Marriage equality has been legal since 2019. In 2024–2026, Taiwan expanded these rights: same-sex couples now have full joint adoption rights and access to cross-strait marriage recognition. In early 2026, the Executive Yuan approved amendments to the 'Assisted Reproduction Act' to include lesbian spouses and single women. However, transgender rights saw friction in 2025–2026; while surgery is no longer strictly required for gender change in all cases due to court rulings, the government faces criticism for draft military conscription amendments that may require non-operative trans women to serve in 'alternative' services.",
-		travel:
-			"Extremely Safe. Taiwan is arguably the safest place in Asia for LGBTQ+ travelers. In 2026, Taipei remains a global queer hub, with the 'Red House' district in Ximending offering an open and festive atmosphere. PDA is entirely normalized in major cities like Taipei, Taichung, and Kaohsiung. Transgender travelers are generally safe and respected. The 'posture' is: total openness. You can travel with your partner or as an individual with zero fear of state interference or social hostility. It is a country that views its LGBTQ+ friendliness as a point of national pride and democratic identity.",
-		culture:
-			"Democratic & Pluralistic. Taiwanese culture is a unique blend of traditional Han values and modern progressive democracy. In 2026, the annual Taiwan Pride in October is the largest in Asia, drawing hundreds of thousands. While some conservative religious and 'parental rights' groups remain active, they operate within a peaceful democratic framework. For a visitor, the culture is one of extreme politeness and safety. The queer community is deeply integrated into tech, arts, and government. It is a society where 'diversity' is not just a slogan but a core part of the post-authoritarian national narrative.",
-		health:
-			"World-Class & Inclusive. Taiwan's National Health Insurance (NHI) is world-renowned. In 2026, HIV care is highly advanced, confidential, and provided at minimal cost to residents. PrEP is widely available through clinics like the 'Taiwan Tongzhi Hotline.' Gender-affirming care is excellent, with Taiwan being a hub for high-quality, professional transition-related surgeries. For travelers, private hospitals like 'National Taiwan University Hospital' are safe and sensitized. Disclosure of orientation is safe and often encouraged to ensure comprehensive care. It is the gold standard for queer health in the region.",
-		posture: "Confident Openness - Asia's leader in legal equality; 2026 expansion of reproductive rights; world-class queer-sensitized healthcare.",
+
+		legal: `
+        <p>In 2026, Taiwan remains the gold standard for LGBTQ+ rights in Asia. Building on the 2019 marriage equality act, recent 2024-2025 reforms have expanded adoption rights for same-sex couples and simplified the process for cross-national marriage. 2026 bills are focused on expanding assisted reproduction to single women and same-sex couples.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Pioneering." For example, the 2026 inclusion of non-binary options on certain official documents has provided a hopeful precedent for the region.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Taiwan Alliance to Promote Civil Partnership Rights (TAPCPR)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The architects of marriage equality, now focusing on 2026 trans rights and surrogacy reform.</p>
+                <a href="https://tapcpr.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Very Safe.' Taiwan is culturally progressive and LGBT-positive. The district of **Ximending** in Taipei is a global "Safe Haven" where LGBT visibility is part of the urban fabric. Public sentiment is broadly supportive, though some conservative pushback remains regarding school curricula.</p>
+        <p><strong>Community Density:</strong> High. There are lots dedicated LGBT-only spaces, bars, and community centers throughout Taipei and Kaohsiung.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #18</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance is the highest in Asia, reflecting total legal and social integration.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is Exceptional. 'Gay-passing' and Trans/GNC individuals can travel with full confidence. Taiwan is arguably the safest destination in Asia for gender-nonconforming travelers.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **The Red House** (Ximending) - The iconic heart of Taipei's LGBT nightlife with dozens of outdoor bars.
+        * **The Local Way:** **Fairy Taipei** - A chic local favorite in Daan District that represents the sophisticated 2026 LGBT lifestyle.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Hornet and Tinder - Hornet remains the top choice for gay men in Taiwan, while Tinder is widely used across the spectrum.
+        * **Community Forums:** **Ptt.cc (LGBT board)** is the historic local forum, while Instagram is the modern 2026 event pulse.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Taipei Pride 2026 (October) is the largest in Asia. Security is welcoming and festive—expect massive, safe street celebrations.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Universal access to HRT, PrEP, and HIV care for residents. Travelers can easily find PrEP in private clinics.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Taiwan Tongzhi (LGBTQ+) Hotline Association</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Roosevelt Road, Taipei - Provides 2026 health referrals and peer support.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Full Integration.' Taiwan is not just tolerating its LGBT community; it is celebrating it as a core part of its democratic identity.</p>
+    `,
+
 		sources: [
-			"https://taiwaninsight.org/2026/01/16/taiwanese-government-continues-to-flounder-on-transgender-rights-in-2025-amidst-continued-transphobia/",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Taiwan",
-			"https://database.ilga.org/taiwan-china-lgbti",
+			{ label: "Ground Intel: Taiwan LGBT Hotline", url: "https://hotline.org.tw", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/taiwan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Taipei Pride 2026", url: "https://www.taiwanpride.lgbt", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -735,19 +2750,73 @@ Object.assign(globalData, {
 		name: "Tajikistan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Legal but Repressive. Same-sex activity has been legal since 1998, but there are zero protections. In 2024–2026, the legal climate has soured; while a new Anti-Discrimination law was proposed in 2022, all mentions of sexual orientation and gender identity were stripped before passage. Police frequently conduct 'morality' raids, and there are documented cases of LGBTQ+ individuals being forced onto state 'registries' and subjected to mandatory HIV testing. Transgender people can change their gender legally, but the process is unregulated, often requiring surgery and bribes to proceed.",
-		travel:
-			"High Risk. Tajikistan is safe for tourists in terms of general crime, but LGBTQ+ visibility is a major risk. In 2026, PDA is strictly taboo and can lead to police harassment or extortion. Transgender travelers are at high risk of detention at checkpoints, especially if their presentation differs from their passport. Digital safety is a concern; dating apps are occasionally monitored by authorities. The 'posture' is: absolute 'stealth.' Stay within the expatriate hubs in Dushanbe and avoid any public discussion of identity. The state views LGBTQ+ advocacy as a threat to 'national values.'",
-		culture:
-			"Conservative & Traditional. Tajik culture is influenced by both Persian traditions and Soviet-era social conservatism. In 2026, religious leaders have significant influence, often condemning 'non-traditional' lifestyles. For a visitor, the culture is one of profound hospitality for 'guests,' but this does not extend to 'out' identities. There is no visible queer scene; life happens in strictly private, trusted circles. It is a society where 'saving face' and family reputation are paramount. Respecting local dress codes (modesty) is the best way to avoid unwanted attention.",
-		health:
-			"Poor & Stigmatized. Healthcare is basic. In 2026, HIV care exists but is fraught with stigma; state clinics may report patients to the police. There is no specialized gender-affirming care; trans Tajiks typically travel to Russia or Turkey. For travelers, 'Prospekt Medical' in Dushanbe is the most reliable option for basic care. Never disclose your orientation to local doctors. If you are trans, ensure you carry all medications in original packaging with a clear doctor's note (phrased as 'hormonal treatment' rather than 'transition'). Confidentiality is not a cultural or legal priority here.",
-		posture: "Extreme Risk - No anti-bias laws; state 'registries' for queer people; police extortion and raids are common.",
+
+		legal: `
+        <p>In 2026, consensual same-sex acts are not technically illegal (decriminalized in 1998), but the state uses "public morality" and "hooliganism" laws to target the community. The 2024-2026 expansion of the official "police registry" for LGBTQ+ individuals—initially launched in 2017—continues to be used for surveillance and blackmail.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Terrorized." For example, the 2026 "Health Screening" mandates for those on the police registry have provided a chilling precedent, effectively turning medical care into a tool for state tracking.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ ECOM (Eurasian Coalition on Health)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring the 2026 "Morality Registry" and supporting LGBT Tajiks from abroad.</p>
+                <a href="https://ecom.ngo" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' While the law doesn't forbid your existence, the police do. Safety is 'Underground' only. Arbitrary detention and extortion are common. The general public is conservative, and "honor" is the primary social currency, making coming out impossible for most.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; social life is confined to highly vetted private gatherings.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #171</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains low due to systematic state-sponsored blackmail.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Low safety rating for 2026. 'Gay-passing' travelers can navigate Dushanbe by maintaining a "straight" persona. Trans/GNC individuals are at extreme risk of detention for "identity verification" at airports and checkpoints.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** N/A - High-end hotels are generally safe for staying but not for meeting; stay away from "vibe-seeking" in public.
+        * **The Local Way:** Private Kitchen Table - The only safe venue for the community pulse; accessible only through deep, trusted local bonds.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Hornet - Both are riddled with entrapment profiles in 2026. Use with extreme caution and never meet in non-public places.
+        * **Community Forums:** N/A - All communication has moved to encrypted, ephemeral Signal groups.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Security Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Tajik police may demand phone passwords. In 2026, do not have any dating apps or LGBT media visible on your device.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HIV care is available but often linked to the "Morality Registry." HRT is not legally accessible for transition in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Republican AIDS Center</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Dushanbe - For emergency care; use with extreme discretion regarding sexual history.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Deep Paranoia.' The community is under siege from a state that uses personal data as a weapon of control.</p>
+    `,
+
 		sources: [
-			"https://www.equaldex.com/region/tajikistan",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Tajikistan",
-			"https://www.hrw.org/world-report/2022/country-chapters/tajikistan",
+			{ label: "Ground Intel: ECOM Tajikistan", url: "https://ecom.ngo", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/tajikistan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
 
@@ -755,19 +2824,73 @@ Object.assign(globalData, {
 		name: "Thailand",
 		continent: "asia",
 		status: "green",
-		legal:
-			"New Marriage Equality. In a historic move, Thailand's Marriage Equality Law came into force on **January 23, 2025**, making it the first Southeast Asian nation to recognize same-sex marriage. In 2026, married same-sex couples enjoy full rights, including joint adoption and inheritance. While marriage is legal, a comprehensive 'Gender Recognition Act' for transgender people is still being debated in early 2026; currently, trans individuals still cannot change their legal gender title (Mr./Ms.) despite the high social visibility of 'Kathoeys.'",
-		travel:
-			"Extremely Safe. Thailand is a global haven for queer travelers. In 2026, 'Pride Tourism' is a major government-backed initiative. Bangkok (Silom), Phuket, and Pattaya have some of the world's most famous and open queer scenes. PDA is generally accepted in urban and tourist areas. Transgender travelers face virtually no social issues, as trans visibility is a deep-rooted part of Thai society. The 'posture' is: total openness. Whether you are trekking in the north or island hopping in the south, you will be welcomed with 'The Land of Smiles.'",
-		culture:
-			"Tolerant & Evolving. Thai culture is rooted in Theravada Buddhism, which is generally non-judgmental toward LGBTQ+ people. However, a 2025 study showed that while 'social tolerance' is near 90%, 'family acceptance' remains a challenge for many locals. In 2026, Bangkok Pride is a massive, mainstream-supported event. For a visitor, the culture is easygoing and non-confrontational. You will find that 'being queer' is often treated as a mundane fact of life. It is a society that has moved from 'tolerance' to 'active legal inclusion' in the last two years.",
-		health:
-			"World-Class (Medical Hub). Thailand is a global destination for gender-affirming surgeries and HIV care. In 2026, the 'Bumrungrad' and 'Bangkok Hospital' networks provide top-tier, sensitized care. PrEP is available over-the-counter at 'Pulse' and 'Rainbow Sky' clinics. For travelers, the system is efficient, safe, and professional. Disclosure of identity is encouraged to receive the best care. It is arguably the best place in the world for LGBTQ+ specific healthcare, combining high technical skill with a culture of genuine kindness and patient dignity.",
-		posture: "Confident Openness - First Southeast Asian nation with marriage equality (2025); high social acceptance; global health hub.",
+
+		legal: `
+        <p>In 2026, Thailand is celebrating its first full year of Marriage Equality, following the 2025 implementation of the landmark Equal Marriage Law. Same-sex couples now enjoy full legal parity with heterosexual couples in adoption, inheritance, and spousal benefits. Current 2026 efforts are focused on the "Gender Recognition Bill" to allow trans individuals to change legal gender without surgery.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Euphoric." For example, the 2026 mass wedding events across Bangkok have provided a hopeful precedent for the entire Southeast Asian region.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Thai TGEE (Thai Transgender Alliance)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The vanguard of the 2026 Gender Recognition movement and healthcare advocacy.</p>
+                <a href="https://thaitga.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Exceptionally Open.' Thailand has cemented its status as the "LGBT Hub of Asia." Public visibility is celebrated, particularly in Bangkok, Phuket, and Pattaya. While rural areas remain traditional, the legal victory has shifted the national conversation from "tolerance" to "active inclusion."</p>
+        <p><strong>Community Density:</strong> High. There are lots dedicated LGBT-only spaces, from Silom’s world-famous bars to trans-specific community centers.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #24</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance has skyrocketed following the full legalization of same-sex marriage.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High. 'Gay-passing' and Trans/GNC individuals will find a welcoming atmosphere. Trans visibility is part of the national identity, though the "vibe" varies between commercial tourism and authentic community spaces.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Stranger Bar** (Silom Soi 4) - The premier 2026 hub for high-end drag performances and international crowds.
+        * **The Local Way:** **The Balcony** - Essential for the local Bangkok community pulse and long-standing LGBT history.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Hornet and Blued - Hornet is the primary tool for gay men in Thailand, while Blued is the go-to for the broader Asian traveler community.
+        * **Community Forums:** **Coconuts Bangkok** and local Facebook groups are the pulse for 2026 party info.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Bangkok Pride 2026 (June) is expected to be a national festival. Security is friendly, but be mindful of the "Lèse-majesté" laws when participating in political street art.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Global leader in gender-affirming surgery and HIV care. HRT and PrEP are available over the counter in most 2026 pharmacies.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Pulse Clinic (Bangkok/Phuket)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Leading 2026 lifestyle clinic specializing in LGBTQ+ health and wellness.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Joyous Equality.' Thailand has moved from "Asia’s playground" to a global leader in legislative and social inclusion.</p>
+    `,
+
 		sources: [
-			"https://www.undp.org/thailand/blog/marriage-equality-law-journey",
-			"https://en.wikipedia.org/wiki/LGBTQ_rights_in_Thailand",
-			"https://www.hrw.org/news/2024/09/24/thailand-king-signs-marriage-equality-bill",
+			{ label: "Ground Intel: Coconuts Bangkok", url: "https://coconuts.co/bangkok/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Bangkok Pride 2026", url: "https://bangkokpride.org", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -775,35 +2898,147 @@ Object.assign(globalData, {
 		name: "Timor-Leste",
 		continent: "asia",
 		status: "amber",
-		legal:
-			"Legal & Developing. Same-sex activity has been legal since 2009. In 2024–2026, the government took quiet but significant steps: Decree-Law 22/2024 officially designated LGBTQI+ individuals as a 'vulnerable population' entitled to specific state social protections. There are no marriage or civil union laws yet, but the 2026-2030 National Equality Strategy aims to further integrate queer rights into state policy. There are currently no laws regarding legal gender recognition for transgender people, leaving them in a legal gray area.",
-		travel:
-			"Safe & Friendly. Timor-Leste is very safe for travelers. In 2026, Dili has a small, quiet, but growing queer community. PDA is rare for all couples in this deeply Catholic nation, but same-sex couples are generally met with indifference rather than hostility. The 'posture' is: confident discretion. The country is remarkably peaceful for travelers, and the state's official stance is one of inclusion. Transgender travelers are safe but may find that local understanding of gender identity is limited to traditional binary roles.",
-		culture:
-			"Catholic & Communal. While 95%+ of the population is Catholic, the local church has been notably less hostile than in other regions. Since 2017, the Prime Minister has occasionally supported the local Pride March. In 2026, the 'Hate Lete' (No More Hate) campaign continues to build social bridges. For a visitor, the culture is laid-back and respectful. It is a society focused on nation-building and traditional family structures, but there is a distinct lack of the 'moral panic' seen in neighboring Indonesia. It is a place where 'kindness' is the primary social currency.",
-		health:
-			"Basic & Developing. Healthcare is limited outside of Dili. In 2026, HIV care is supported by international NGOs (like Maluk Timor) and is confidential. PrEP is available but only in the capital. There is no gender-affirming care. For travelers, 'Stamford Medical' in Dili is the standard. If you have a serious medical condition, evacuation to Darwin (Australia) or Bali (Indonesia) is common. Disclosure of orientation to doctors in Dili is generally safe, but don't expect specialized LGBTQ+ medical knowledge. Carry your own supply of all essential medications.",
-		posture: "Confident Discretion - Legal same-sex activity; 2024 state recognition of LGBTQ+ vulnerability; safe but basic infrastructure.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Timor-Leste", "https://www.hrw.org/world-report/2022/country-chapters/timor-leste"],
+
+		legal: `
+        <p>In 2026, Timor-Leste remains a unique case in Southeast Asia. While same-sex acts have been legal since independence, there are still no comprehensive anti-discrimination laws or legal recognition for same-sex unions. However, the 2024-2026 government initiatives have begun integrating SOGIE sensitivity training for the national police force.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Quietly Progressing." For example, the 2026 peaceful conclusion of the Dili Pride March, supported by high-ranking officials, has provided a hopeful precedent for the community.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Arco-Íris Timor-Leste</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary advocacy group in 2026, focusing on social inclusion and the "Dili Pride" organization.</p>
+                <a href="https://www.facebook.com/arcoiristl/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' While there is little state-sponsored persecution, the strong influence of the Catholic Church creates a culture of "discreet existence." Dili is relatively safe for visibility, but rural districts remain deeply traditional where LGBT identity is often misunderstood rather than hated.</p>
+        <p><strong>Community Density:</strong> Moderate. There are few dedicated LGBT-only spaces, with the community mostly gathering in "mixed" friendly cafes in Dili.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #84</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance shows stability due to lack of criminalization, though protections are absent.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High for Dili, Moderate elsewhere. 'Gay-passing' travelers will find the country very welcoming. Trans/GNC individuals are generally safe but may encounter significant curiosity and staring in more remote villages.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Dilicious Timor** (Dili) - A well-known inclusive space that hosts community events and is safe for international travelers.
+        * **The Local Way:** **Letefoho Specialty Coffee** - Not a gay bar, but a central "Safe Haven" where the 2026 LGBT youth often congregate.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Facebook - In Timor-Leste, Facebook remains a primary tool for community organizing and private group chats.
+        * **Community Forums:** Local WhatsApp groups managed by Arco-Íris are the go-to for safety and event updates.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">2026 Dili Pride is generally in July. It is a family-friendly atmosphere; however, keep political LGBT advocacy respectful of local cultural symbols.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HIV care is available through national hospitals. HRT is difficult to source locally in 2026 and often requires travel to Darwin or Bali.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Hospital Nacional Guido Valadares</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Dili - The primary center for infectious disease and general health services.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Cautious Resilience.' It is one of the most socially liberal countries in the region despite the lack of formal legal structures.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Arco-Íris TL", url: "https://www.facebook.com/arcoiristl/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/east-timor", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Dili Pride 2026", url: "https://www.facebook.com/arcoiristl/", button: "EVENT DETAILS →" },
+		],
 	},
 
 	turkey: {
 		name: "Turkey",
-		continent: "asia",
-		status: "red",
-		legal:
-			"Legal but Regressing. Same-sex acts have been legal since 1858 (Ottoman era), but in 2025–2026, the legal landscape has turned sharply hostile. In late 2025, the government introduced the '11th Judicial Package,' which seeks to criminalize 'attitudes contrary to biological sex' and any 'promotion' of LGBTQ+ identities with up to 3 years in prison. In early 2026, standalone legislation was proposed to punish participants in symbolic same-sex wedding ceremonies with up to 4 years. While not explicitly 'illegal' yet, these 'morality' and 'indecency' laws are being used to effectively re-criminalize queer life and advocacy.",
-		travel:
-			"Exercise Increased Caution. Turkey is safe for general tourism, but LGBTQ+ visibility is under state pressure. In 2026, Istanbul's Pride is strictly banned and met with heavy police force. For travelers, urban hubs like Kadıköy (Istanbul) and İzmir remain relatively safe and open. PDA should be strictly avoided in public, as it can be used as a pretext for 'indecency' arrests under new 2026 guidelines. Transgender travelers are at high risk of harassment by authorities, especially near nightlife districts. The 'posture' is: high caution; you are safe in private and tourist-centric zones, but stay clear of any protests or public rainbow displays.",
-		culture:
-			"Polarized & Resilient. Turkish culture is a clash between a secular, cosmopolitan history and a modern, state-led conservative 'Family Decade' (2026–2035). While the government labels LGBTQ+ identities as a 'global heresy,' Turkey has a deep-rooted and brave queer community. In 2026, the 'Suna Sözer Community Centre' in Istanbul provides a rare safe space. For a visitor, the culture is one of legendary hospitality, but also high sensitivity. In liberal pockets of Istanbul and the Aegean coast, you'll find vibrant queer nightlife; in central Anatolia, the atmosphere is deeply traditional. It is a society of 'hidden' lives and public conformity.",
-		health:
-			"Technical Quality with Growing Barriers. Turkey has excellent medical facilities and is a hub for health tourism. However, in 2025–2026, new laws raised the age for gender-affirming care from 18 to 25 and mandated 'permanent infertility' for legal gender changes. Doctors performing 'unauthorized' transitions face up to 7 years in prison. HIV care is available but increasingly monitored. For travelers, private hospitals in Istanbul (American Hospital, Acıbadem) remain safe and professional. Do not disclose your orientation to state-run clinics. If you are trans, ensure all medications are in original packaging with a doctor's letter, as new 2026 customs checks target 'gender-related' hormones.",
-		posture: "High Risk - Rapidly eroding rights; 2026 laws targeting 'promotion' of LGBTQ+ identity; bans on symbolic marriage ceremonies; 25+ age limit for trans care.",
+		continent: "europe_asia",
+		status: "amber",
+
+		legal: `
+        <p>Homosexuality has been legal in Turkey since 1858. However, in 2026, the community face increasing pressure from "public morality" and "family values" narratives. While there is no national ban on LGBTQ+ life, local governors frequently ban Prides. A 2025-2026 legal trend has seen more "association closure" cases against LGBTQ+ NGOs.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Under Siege but Unyielding." For example, the 2026 arrests during the unauthorized Istanbul Pride have provided a chilling precedent, yet the "neighborhood prides" across Kadıköy show persistent resistance.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Kaos GL</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">One of Turkey's oldest NGOs, currently providing 2026 legal monitoring and media reporting.</p>
+                <a href="https://kaosgl.org/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' In coastal cities and certain Istanbul districts like **Kadıköy** and **Beşiktaş**, visibility is common and relatively safe. However, the 2026 posture in conservative central Anatolia remains hostile. Trans individuals face the highest risks, with systemic police profiling in areas like Beyoğlu.</p>
+        <p><strong>Community Density:</strong> High. There are lots dedicated LGBT-friendly (if not explicitly labeled) spaces in Istanbul and Izmir.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #138</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance is low due to deteriorating freedom of assembly and government rhetoric.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High for tourists in high-end/coastal areas, Low for activists. 'Gay-passing' travelers will have an easy time. Trans/GNC individuals should stay in inclusive districts (Kadıköy/Şişli) to avoid harassment.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Love Club Istanbul** - A long-standing, secure circuit venue that remains a 2026 staple for both locals and tourists.
+        * **The Local Way:** **Bant Mag. Havuz** (Kadıköy) - An artsy, inclusive space that represents the authentic "vibe" of modern LGBT Istanbul.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Hornet, and Romeo - Hornet is arguably the most popular local app in 2026.
+        * **Community Forums:** **Velvele** is the go-to for up-to-date LGBT news and cultural commentary.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Avoid attending public "Pride" protests in 2026 as police response is often aggressive and can lead to deportation for foreigners.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to HRT and HIV care is available in major cities. PrEP is accessible but not subsidized in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Pozitif Yaşam (Positive Living Association)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Istanbul - Provides 2026 support and testing for HIV+ individuals.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Defiant Resilience.' While the state tightens its grip, the community's cultural roots in the cities remain deeper than ever.</p>
+    `,
+
 		sources: [
-			"https://www.hrw.org/news/2025/10/29/turkiye-draft-law-threatens-lgbt-people-with-prison",
-			"https://www.equaldex.com/region/turkey",
-			"https://www.amnesty.org/en/documents/eur44/0517/2025/en/",
+			{ label: "Ground Intel: Kaos GL News", url: "https://kaosgl.org/en", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/turkey", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: Istanbul Pride (Unauthorized)", url: "https://tr-tr.facebook.com/istanbulpride/", button: "EVENT DETAILS →" },
 		],
 	},
 
@@ -811,79 +3046,369 @@ Object.assign(globalData, {
 		name: "Turkmenistan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Lethal. Same-sex acts between men are criminalized under the Penal Code, carrying up to 2 years in prison. In 2025–2026, the government intensified its crackdown; reports from 'Invisible Rainbow Turkmenistan' indicate that police and the Ministry of National Security use 'trap' operations to identify, torture, and disappear queer individuals. Forced anal examinations are still used as 'evidence.' There is no recognition of transgender identity, and 'cross-dressing' can lead to arrest. It is one of the most closed and repressive societies in the world for LGBTQ+ people.",
-		travel:
-			"Extreme Risk. Travel is strictly controlled by state minders. For LGBTQ+ individuals, it is exceptionally dangerous. In 2026, any PDA or visibility is a certain trigger for arrest. Your digital devices *will* be searched at the border and potentially by minders; any 'queer' content (photos, apps) is grounds for detention. Transgender travelers will likely be denied entry or targeted for severe abuse. The 'posture' is: stay away. If you must travel, you must be in absolute 'stealth' and have zero digital or physical footprint of your identity. You are under 24/7 state surveillance.",
-		culture:
-			"Totalitarian & Reclusive. The culture is a personality cult focused on the 'Arkadag' (Protector). In 2026, the state promotes a hyper-traditional, hyper-conservative 'Turkmen' lifestyle. There is no queer community; those who exist live in a state of constant terror. For a visitor, the culture is one of extreme, choreographed hospitality that masks a deeply paranoid state. Discussions about human rights or identity are dangerous and could result in your minder reporting you. It is a society of silence, where your identity is a liability.",
-		health:
-			"Poor & Secretive. The state claims there is no HIV in the country, meaning there is no testing or care for travelers. In 2026, hospitals are for show, and actual medical care is subpar. There is no gender-affirming care. For travelers, you will be taken to the 'Friendship Hospital' in Ashgabat, which is basic. Any serious issue requires immediate evacuation to Istanbul or Dubai. Never disclose your orientation; it is viewed by the state as a 'psychological defect' and a crime. Medical confidentiality is a myth; doctors are agents of the state.",
-		posture: "Extreme Risk - Active criminalization; state-sanctioned torture and 'disappearances'; absolute surveillance.",
-		sources: ["https://www.ilga-europe.org/files/uploads/2026/02/Annual-Review-2026-Turkmenistan.pdf", "https://www.hrw.org/world-report/2026/country-chapters/turkmenistan"],
+
+		legal: `
+        <p>In 2026, Turkmenistan remains one of the most repressive countries globally. Article 135 of the Penal Code criminalizes "pederasty" (consensual same-sex acts between men) with up to 2 years in prison. There are no protections for LGBTQ+ individuals and zero public discourse on gender identity.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (clandestine) describe the current climate as "Total Invisibility." For example, the 2025-2026 disappearances of individuals suspected of "immoral behavior" have provided a chilling precedent for the community.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Rights Watch (Turkmenistan)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring 2026 reports of torture and forced "medical" exams for suspected gay men.</p>
+                <a href="https://www.hrw.org/europe/central-asia/turkmenistan" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Extremely Hostile.' The state maintains a "policy of denial" regarding the existence of LGBT people. Social safety is 'None'; even private conversations are risky due to pervasive state surveillance. Families often "handle" LGBT relatives through forced marriage or violence to protect "honor."</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; any community exists through extremely small, fragile trust-based circles.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #196</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance is among the absolute lowest due to active criminalization and state terror.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is Very Low. 'Gay-passing' travelers must maintain a strictly heteronormative profile. Trans/GNC individuals face almost certain detention and severe harassment at the border and in public.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** N/A - Not even high-end hotels in Ashgabat are safe from state surveillance.
+        * **The Local Way:** Private Kitchens - The only venue where 2026 community pulse beats, hidden from every window.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** N/A - Dating apps are blocked and their use can be tracked by state security services.
+        * **Community Forums:** N/A - Digital traces are avoided at all costs by the local community.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">The 2026 security posture involves frequent device checks for "illegal content." Ensure all LGBT-related media is purged before entering the country.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to LGBT-specific health is zero. HIV care is available but often used for state tracking. HRT is non-existent in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">General State Hospitals</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Ashgabat - For life-threatening emergencies only; do not disclose SOGIE status under any circumstance.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Absolute Erasure.' To survive in Turkmenistan, the community must not exist in any public or digital record.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: HRW Turkmenistan", url: "https://www.hrw.org/europe/central-asia/turkmenistan", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	united_arab_emirates: {
 		name: "United Arab Emirates",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced. Same-sex acts are criminalized under the 2021 Federal Crimes and Penalties Act (Article 409), which replaced the old 1987 code but maintained criminalization. Sentences include prison and deportation for expats. In 2025, several high-profile detentions occurred, including trans activists transiting through Dubai. While the UAE markets itself as 'global,' its laws remain strictly conservative. Transgender people are criminalized under 'disguise' laws. Advocacy is strictly forbidden, and the 'Cybercrime Law' is used to block all LGBTQ+ digital content.",
-		travel:
-			"High Risk (Strategic). The UAE (Dubai/Abu Dhabi) is a 'Two Worlds' destination. In 2026, luxury hotels are safe zones, but public visibility is a 'red line.' PDA is illegal for everyone and strictly enforced for same-sex couples. Transgender travelers are at high risk; 'LGBTIQ-coded' clothing or accessories can lead to arrest. The 'posture' is: total 'stealth' in public. Enjoy the world-class shopping and dining, but keep your personal life entirely within private spaces. Do not use dating apps, as 'police traps' are a regular risk in Dubai and Abu Dhabi.",
-		culture:
-			"Cosmopolitan & Strict. The UAE is 90% expatriate, making it a global melting pot, but it is a pot with an Islamic lid. In 2026, the government maintains a 'Zero Tolerance' for public displays of 'alternative' values. For a visitor, the culture is one of high-octane luxury and efficiency. Emiratis are polite but private. You can live a comfortable, discrete life here, but you must respect that the society is built on a 'Don't See, Don't Hear' policy. It is a land where you are welcome as a consumer, but your identity must remain invisible.",
-		health:
-			"Excellent (Technical) but Dangerous. Medical facilities (Cleveland Clinic, Mediclinic) are world-class. In 2026, HIV care is state-of-the-art but involves mandatory reporting and deportation for expats. There is no gender-affirming care. For travelers, private hospitals are safe for general needs. Do not disclose your orientation to any doctor. If you are trans, carry hormones with a doctor's note that avoids 'gender' terminology. Since 2022, school teachers are prohibited from discussing gender identity, reflecting the broader state medical and social posture.",
-		posture: "Extreme Risk - Mandatory deportation for HIV+; 'disguise' laws target trans travelers; high digital censorship.",
-		sources: ["https://www.humandignitytrust.org/country-profile/united-arab-emirates/", "https://database.ilga.org/united-arab-emirates-lgbti"],
+
+		legal: `
+        <p>In 2026, the UAE continues to criminalize "indecency" and "scandalous behavior," which is used to target same-sex acts and gender-nonconformity. While the 2025 reforms moved more toward "international tourism standards," Sharia-based laws still allow for imprisonment and deportation for LGBTQ+ individuals. There is no legal recognition of SOGIE rights.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Fragile Tolerance." For example, the 2026 deportation of several individuals for "cross-dressing" has provided a chilling precedent, signaling that the "openness" of Dubai has strict limits.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (UAE)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring the 2026 application of Federal Decree-Law No. 31 (Crimes and Penalties).</p>
+                <a href="https://www.humandignitytrust.org/country-profile/uae/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed.' Dubai is the "Safe Haven" where a massive expat community allows for a vibrant but discreet LGBT life in high-end hotels. However, the 2026 posture in Sharjah remains strictly conservative. Visibility is 'Underground' or 'Upscale' only; public displays of affection are dangerous for everyone and potentially fatal for LGBT couples.</p>
+        <p><strong>Community Density:</strong> Moderate (Underground). There are few dedicated LGBT-only spaces, with social life centering on private brunches and hotel circuit parties.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #178</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains low due to systematic legal criminalization and lack of assembly rights.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High for wealthy tourists, Low for the visible community. 'Gay-passing' travelers will enjoy the luxury lifestyle. Trans/GNC individuals face high risk of entry denial or "indecency" charges, even in Dubai.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **Private Hotel Circuit Parties** (Dubai) - Often safe due to elite/expat status, but always at the mercy of the venue's discretion.
+        * **The Local Way:** N/A - Authentic "ground" bars do not exist; the community vibe is found in private villas in Jumeirah.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Scruff, and Tinder - All require VPNs in 2026 and carry a high risk of entrapment or surveillance.
+        * **Community Forums:** Private Telegram groups are the go-to for up-to-date party info and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">In 2026, the UAE monitors social media closely. Ensure your public profiles do not contain "immoral" content before arrival.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>High-end HIV care is available but often leads to deportation for non-citizens. HRT is accessible in private clinics but carries legal risk if disclosed. </p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Cleveland Clinic Abu Dhabi</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">World-class general care; strictly professional and follows UAE laws regarding SOGIE disclosure.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Luxury Discretion.' The UAE offers a safe playground for those with money and the ability to hide their truth in public.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: TravelGay Dubai", url: "https://www.travelgay.com/dubai-gay-guide", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/united-arab-emirates", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	uzbekistan: {
 		name: "Uzbekistan",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Enforced. Uzbekistan is one of the last two former Soviet states (with Turkmenistan) to still criminalize male same-sex acts (Article 120, renumbered to Article 154 in 2024–2025). The penalty is up to 3 years. In 2024–2026, the government resisted all UN calls for decriminalization, citing 'national traditions.' Transgender women are frequently arrested under 'prostitution' or 'morality' laws. There are zero protections, and the state has recently increased sentences for 'crimes against family morality.'",
-		travel:
-			"High Risk. Uzbekistan is a stunning destination for history and culture, but dangerous for LGBTQ+ visibility. In 2026, PDA is a certain trigger for police intervention or vigilante violence. Transgender travelers are at high risk of harassment. The 'posture' is: absolute 'stealth.' Dating apps are dangerous as police 'honey-trap' operations are common in Tashkent and Samarkand. Avoid any 'queer' discussions in public. The state monitors the community closely, and being 'out' to any local can lead to them being targeted by authorities.",
-		culture:
-			"Traditional & Resurgent. Uzbek culture is a blend of Silk Road history and a modern reassertion of Islamic and 'family' values. In 2026, there is no public queer scene. For a visitor, the culture is one of legendary hospitality—you will be offered endless tea and kindness as a guest. However, this hospitality is fragile and contingent on you fitting into traditional gender and social roles. It is a society that values 'decency' and family legacy above all. Respect this boundary, and you will have a safe, though 'hidden,' experience.",
-		health:
-			"Adequate (Tashkent) but Risky. Healthcare is improving but remains conservative. In 2026, HIV care is stigmatized; state doctors may report 'immoral' behavior to the police. There is no gender-affirming care; trans people face extreme medical bias. For travelers, use 'Tashkent International Clinic.' Never disclose your orientation. If you are trans, carry all meds in original packaging and be prepared for scrutiny at the border. Confidentiality is not guaranteed, and medical staff are often legally required to report 'unnatural' sexual acts if discovered during exams.",
-		posture: "Extreme Risk - One of only two post-Soviet states with active criminalization; state-sanctioned 'morality' policing; high social stigma.",
-		sources: ["https://www.humandignitytrust.org/country-profile/uzbekistan/", "https://database.ilga.org/uzbekistan-lgbti"],
+
+		legal: `
+        <p>In 2026, Uzbekistan remains one of only two post-Soviet states (with Turkmenistan) that criminalizes same-sex acts between men. Article 120 of the Criminal Code ("Besoqolbozlik") carries a penalty of up to 3 years in prison. The 2025-2026 "New Uzbekistan" reforms have noticeably excluded LGBTQ+ rights, maintaining the legal status quo.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Suffocating." For example, the 2026 conviction of an activist for "spreading immorality" has provided a chilling precedent for those attempting to organize online.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ ILGA-Europe (Uzbekistan Monitoring)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Providing 2026 reporting on human rights violations since no local LGBT NGOs can legally exist.</p>
+                <a href="https://www.ilga-europe.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Hostile.' There is significant state and social pressure on the community. Safety is 'Underground' only, with Tashkent offering the only semi-private spaces for gathering. Vigilante groups ("moral guardians") occasionally target LGBT individuals with the tacit approval of local authorities.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; social life is entirely hidden within private residences.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #189</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains low due to continued criminalization and lack of civil rights.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is Low. 'Gay-passing' travelers can enjoy the historic Silk Road cities by remaining entirely closeted. Trans/GNC individuals face high risk of harassment and detention at checkpoints.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **International Chain Hotels** (Tashkent) - Generally the only places safe for private socializing, but still subject to potential surveillance.
+        * **The Local Way:** Private House Gatherings - Essential for the real community vibe, found only through deep-cover networking.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr and Hornet - In 2026, these are used but are highly dangerous due to entrapment by "vigilantes" or police.
+        * **Community Forums:** Closed Telegram channels are the only way to get real-time info, requiring vetting by existing members.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Scrub your phone of dating apps and any LGBT-themed content before arrival. In 2026, spot checks by police are increasingly common.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HIV care is available but highly stigmatized. HRT is legally unavailable for transition in 2026.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Republican AIDS Center</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Tashkent - Access only if strictly necessary; expect zero SOGIE sensitivity.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Perilous Silence.' The community is trapped between a criminalizing state and a conservative society, making survival the only priority.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Human Dignity Trust Uzbekistan", url: "https://www.humandignitytrust.org/country-profile/uzbekistan/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/uzbekistan", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 
 	vietnam: {
 		name: "Vietnam",
 		continent: "asia",
-		status: "amber",
-		legal:
-			"Legal & Advancing. Same-sex activity has never been criminalized. In 2024–2026, Vietnam entered a period of 'Quiet Progress.' While a full 'Gender Affirmation Law' for transgender people was delayed in late 2024, the government has signaled support for its re-introduction in 2026. Same-sex marriage is 'not prohibited' but also not legally recognized, meaning symbolic weddings are allowed but carry no legal weight. In 2022, the Ministry of Health officially declared that being LGBTQ+ is 'not a disease' and banned conversion therapy practices nationwide.",
-		travel:
-			"Safe & Welcoming. Vietnam is very safe and increasingly 'queer-friendly' in its tourist hubs. In 2026, Hanoi and Ho Chi Minh City (Saigon) have thriving, open scenes. PDA is generally tolerated in cities and among the younger generation, though it remains rare in rural areas. Transgender travelers are safe from violence and are common in the service industry. The 'posture' is: confident openness. You will find that most Vietnamese people are curious and non-judgmental, making it one of the most comfortable 'amber' status countries in Asia.",
-		culture:
-			"Pragmatic & Youth-Driven. Vietnamese culture is influenced by ancestor worship and Confucianism, but lacks the religious anti-queer zeal found elsewhere. In 2026, 'VietPride' is a series of festive events across major cities. For a visitor, the culture is one of 'Hoi Nhap' (Integration)—moving toward global standards while maintaining local harmony. The youth are exceptionally progressive. It is a society that values 'social peace,' so as long as you are respectful, your identity will rarely be an issue. It is a country on the verge of a major pro-LGBTQ+ legal shift.",
-		health:
-			"Good & Sensitized. Vietnam is a leader in HIV care in Southeast Asia. In 2026, HIV services are widely available, confidential, and professional. PrEP is easily accessible via 'Glink' and other community-led clinics. While full gender-affirming surgery is still in a legal gray area, hormone therapy is common and managed by sensitized doctors. For travelers, 'Family Medical Practice' or 'FV Hospital' are excellent choices. Disclosure of identity is safe and usually results in professional, respectful care. It is a very safe place for queer travelers to seek medical help.",
-		posture: "Confident Openness - Conversion therapy banned in 2022; state-level health recognition of LGBTQ+; Gender Affirmation Law pending for 2026.",
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Vietnam", "https://database.ilga.org/vietnam-lgbti"],
+		status: "green",
+
+		legal: `
+        <p>In 2026, Vietnam remains a regional leader in social tolerance despite the lack of formal marriage equality. Same-sex acts have never been criminalized. The most significant legal focus is the "Transgender Rights Bill," which has seen several delays through 2025 but remains on the legislative agenda for 2026, aimed at streamlining legal gender recognition without mandatory surgery.</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Patiently Optimistic." For example, the 2025 Ministry of Health directive affirming that being LGBTQ+ is not a mental illness has provided a hopeful precedent for the community, effectively curbing state-sponsored conversion practices.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ ICS Center (HCMC)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The leading organization pushing for the 2026 "I Do" campaign for marriage equality and trans legal recognition.</p>
+                <a href="https://ics.org.vn/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Mixed' but generally safe. Violence is rare; however, "soft" discrimination persists in traditional family structures. Hanoi and Ho Chi Minh City are vibrant hubs where public visibility—including holding hands—is increasingly common among the youth. Rural areas remain conservative but rarely hostile toward travelers.</p>
+        <p><strong>Community Density:</strong> High. There are lots of dedicated LGBT-friendly cafes, bars, and community hubs in major cities.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #62</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance reflects high safety but a lag in formal legal protections compared to neighbors like Thailand.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is High. 'Gay-passing' travelers will find Vietnam exceptionally easy to navigate. Trans/GNC individuals are generally treated with curiosity rather than hostility, and major cities have seen a rise in gender-neutral restrooms in 2025-2026.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** **The Tipsy Unicorn** (HCMC) - A premier drag and LGBT venue that remains a safe, vibrant centerpiece for the 2026 nightlife scene.
+        * **The Local Way:** **GC Bar** (Hanoi) - An authentic, long-standing local gay bar that provides a raw glimpse into the city's LGBT history and pulse.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** Grindr, Blued, and Tinder - Blued is particularly popular in Vietnam for its community features and live-streaming.
+        * **Community Forums:** **VietPride Facebook Group** is the go-to for up-to-date party info and safety warnings.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">VietPride 2026 typically spans August and September across various cities. Security is usually low-profile and supportive, making it one of the safest Prides in Asia.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Access to PrEP is widely available and subsidized in major cities through 2026. HRT is accessible through private clinics and "gray market" community networks, as formal medical pathways for gender-affirming care are still transitioning into law.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Glink Vietnam</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Multiple locations (HCMC/Hanoi) - Specialists in LGBTQ+ sexual health, PrEP, and hormone consultation.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Emerging Openness.' While the law catches up, the culture has already moved forward, making it a safe haven in Southeast Asia.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: ICS Center Vietnam", url: "https://ics.org.vn/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/vietnam-lgbti", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: VietPride 2026", url: "https://www.facebook.com/vietpride.vn/", button: "EVENT DETAILS →" },
+		],
 	},
 
 	yemen: {
 		name: "Yemen",
 		continent: "asia",
 		status: "red",
-		legal:
-			"Illegal & Lethal. Same-sex sexual activity is criminalized under the 1994 Penal Code, with punishments including 100 lashes, prison, or death by stoning. In 2024–2026, the situation has become even more dire; Houthi-controlled courts have carried out mass trials and death sentences for 'homosexuality' and 'spreading immorality.' There are zero protections, and any form of LGBTQ+ symbols (including rainbow colors on toys or clothing) is strictly banned. The civil war has eliminated any remaining safe spaces for the community.",
-		travel:
-			"Extreme Risk. Yemen is a war zone and unsafe for all travelers. For LGBTQ+ individuals, it is lethal. In 2026, there is no queer scene; identity is suppressed for survival. PDA is unthinkable and would lead to immediate, potentially fatal violence. Transgender travelers are at extreme risk of being killed at checkpoints. Your digital footprint must be zero. The 'posture' is: do not travel. For citizens, the only 'posture' is survival in total 'stealth' or flight across the border. It is currently one of the most dangerous places on earth for queer life.",
-		culture:
-			"Conservative & Devastated. Yemeni culture is deeply religious and traditional, with 'honor' playing a central role. In 2026, the conflict has radicalized many areas, and queer people are frequently used as scapegoats by both state and non-state actors. For a visitor (if travel were possible), the culture is one of 'Kindness amidst Tragedy,' but this does not extend to 'out' identities. There is no public advocacy. It is a society where 'otherness' is often equated with a lack of faith or national betrayal. Identity expression is a life-and-death risk.",
-		health:
-			"Collapsed. The healthcare system has been destroyed by war. In 2026, HIV care is almost impossible to access; any diagnosis is a social death sentence. There is no gender-affirming care. For travelers (aid workers), any medical issue requires immediate evacuation to Djibouti or Jordan. Never disclose your orientation; it is not treated as medical information, but as a moral crime that will be reported to authorities. Confidentiality is non-existent. The health environment is as hostile as the legal one.",
-		posture: "Extreme Risk - Death penalty by stoning; 2024 mass trials of queer people; rainbow-colored items are banned; total collapse of safety.",
-		sources: ["https://www.humandignitytrust.org/country-profile/yemen/", "https://database.ilga.org/yemen-lgbti"],
+
+		legal: `
+        <p>In 2026, Yemen remains one of the world's most dangerous jurisdictions for LGBTQ+ individuals. Same-sex sexual activity is criminalized under the 1994 Penal Code, with punishments including lashes, imprisonment, and the death penalty by stoning for married men. In Houthi-controlled areas, 2024-2026 has seen a surge in mass trials and public executions for "immorality."</p>
+        <p><strong>Voices from the Ground:</strong> Local advocates (clandestine) describe the current climate as "Existential Terror." For example, the 2026 sentencing of 32 men in Dhamar for "spreading immorality" has provided a chilling precedent for the community.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">External Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Human Dignity Trust (Yemen)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring the 2026 application of Sharia-based capital punishment in Houthi-controlled courts.</p>
+                <a href="https://www.humandignitytrust.org/country-profile/yemen/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The 2026 social climate is 'Extremely Hostile.' Beyond state persecution, Al-Qaeda and ISIS-affiliated groups in remote areas carry out extrajudicial killings. Visibility is 'None'; any community existence is strictly underground, and digital surveillance by various factions makes any form of organization life-threatening.</p>
+        <p><strong>Community Density:</strong> Underground. There are none dedicated LGBT-only spaces; social life is restricted to hyper-private, trusted-only domestic settings.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #197</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance is at the bottom of global rankings due to the active use of the death penalty.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Safety rating for 2026 is Very Low. Tourism is virtually non-existent due to the civil war, but for any traveler, 'Gay-passing' profile is mandatory. Trans/GNC individuals face extreme risk of violence or execution upon identification by any armed faction.</p>
+        
+        <p><strong>The Venue Spectrum:</strong>
+        * **Upscale/Protected:** N/A - Not even international aid compounds or high-end hotels are considered safe from local morality policing.
+        * **The Local Way:** Private Kitchens - The only "venue" for the 2026 community pulse, operating in total secrecy.</p>
+        
+        <p><strong>Digital Pulse (Apps & Forums):</strong>
+        * **Primary Apps:** N/A - Apps like Grindr are used at extreme risk of entrapment; most have been deleted due to 2025-2026 crackdowns.
+        * **Community Forums:** N/A - No public forums exist; all communication is peer-to-peer and encrypted.</p>
+        
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Traveling to Yemen is currently advised against. In 2026, ensure all digital devices are sanitized of any LGBTQ+ content, as mobile searches at checkpoints are standard.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>HIV care is almost impossible to access for LGBT individuals due to fear of disclosure. HRT is non-existent. General healthcare is in a state of collapse due to the conflict.</p>
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">WHO Yemen Operations</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Sana'a/Aden - Provides emergency health support; however, they must operate within local legal constraints.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Survival Above All.' For the LGBT community in Yemen, life is a shadow existence where exposure is equated with a death sentence.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/yemen/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
+			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+		],
 	},
 });

@@ -84,73 +84,89 @@
 	text-shadow: 0px 0px 8px rgba(0, 184, 212, 0.8);
 }
 
-/* 3. The Modern Accordion */
+/* Accordion */ /* --- 3. THE RICH CONTENT ACCORDION --- */
+
 .news-accordion {
 	width: 100%;
-	display: flex;
-	flex-direction: column;
-	background: rgba(22, 7, 230, 0.3);
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
-	border-radius: 12px;
-	cursor: pointer;
+	margin-bottom: 20px;
+	background: rgba(22, 7, 230, 0.25);
+	backdrop-filter: blur(12px);
+	border-radius: 14px;
 	overflow: hidden;
-	transition: all 0.3s ease;
-	list-style: none;
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Status Borders (Matched to data.js) */
-.news-accordion.green {
-	border: 3px solid #22c55e;
-}
-.news-accordion.amber {
-	border: 3px solid #f59e0b;
-}
-.news-accordion.red {
-	border: 3px solid #ef4444;
-}
-
+/* The Clickable Header */
 .news-accordion summary {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	padding: 25px 30px;
 	list-style: none;
-	padding: 30px 20px;
-	width: 100%;
 	outline: none;
-	user-select: none;
-	flex-shrink: 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	transition: background 0.3s;
 }
 
-/* Hide default arrow */
 .news-accordion summary::-webkit-details-marker {
 	display: none;
 }
 
 .news-accordion h3 {
 	margin: 0;
-	font-size: 1.2rem;
-	color: #f6f7fa;
-	pointer-events: none;
+	font-size: 1.4rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	color: #ffffff;
 }
 
+/* --- THE EXPANDED STAGE --- */
 .news-content-expanded {
-	width: 100%;
-	color: #f6f7fa;
-	padding: 20px;
-	text-align: center;
-	background: rgba(22, 7, 230, 0.8);
+	padding: 40px;
+	background: rgba(10, 5, 100, 0.4);
 	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	text-align: left; /* Better for long 200-word reads */
 }
 
+/* Video Wrapper (16:9 Ratio) */
+.video-container {
+	position: relative;
+	width: 100%;
+	padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+	height: 0;
+	margin-bottom: 30px;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* The Double-Break Paragraph Rule */
+.news-content-expanded p {
+	margin-bottom: 2.2rem !important;
+	line-height: 1.8;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 1.1rem;
+}
+
+/* Hover & Open States */
 .news-accordion:hover {
-	background: rgba(247, 244, 244, 0.3);
+	background: rgba(22, 7, 230, 0.35);
+	transform: translateY(-2px);
 }
 
 .news-accordion[open] {
-	background: rgba(22, 7, 230, 0.3);
-	transform: scale(1.01);
+	background: rgba(22, 7, 230, 0.4);
+	border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .header-utility {
@@ -175,16 +191,6 @@
 	user-select: text !important;
 }
 
-/* Force links to be the "top" layer and interactive */
-.sources-list a,
-.news-content-expanded a {
-	position: relative;
-	z-index: 10;
-	pointer-events: auto !important;
-	cursor: pointer !important;
-	display: inline-block;
-}
-
 /* Fix for the Header Utility potentially blocking clicks in the viewport */
 .header-utility {
 	pointer-events: none;
@@ -192,34 +198,6 @@
 
 .header-utility * {
 	pointer-events: auto;
-}
-
-/* Container for the source links */
-.sources-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	gap: 12px;
-	margin-top: 15px;
-	padding: 10px;
-}
-
-/* Individual Link Styling */
-.sources-list a {
-	background: rgba(6, 233, 74, 0.7);
-	padding: 6px 12px;
-	border-radius: 6px;
-	font-size: 1rem;
-	color: #ffffff !important;
-	text-decoration: none;
-	border: 1px solid rgba(6, 233, 74, 0.3);
-	transition: all 0.2s ease;
-	white-space: wrap;
-}
-
-.sources-list a:hover {
-	background: rgba(11, 236, 4, 0.7);
-	transform: translateY(-2px);
 }
 
 /* --- LIVE UPDATE BADGE --- */
@@ -300,4 +278,97 @@
 	width: fit-content !important;
 	margin: 5px auto 0 auto !important;
 	grid-column: auto !important;
+}
+
+/* --- Professional Mono-Glow System --- */
+
+/* RED STATUS (Danger) */
+.status-red .glass-card {
+	border-left: 5px solid #ff3b3b;
+	box-shadow:
+		-10px 0 30px rgba(255, 59, 59, 0.2),
+		-2px 0 5px rgba(255, 59, 59, 0.4);
+}
+.status-red .rainbow-line.mini-line {
+	background: #ff3b3b;
+	box-shadow: 0 0 10px rgba(255, 59, 59, 0.5);
+}
+
+/* AMBER STATUS (Warning) */
+.status-warning .glass-card {
+	border-left: 5px solid #f39c12;
+	box-shadow:
+		-10px 0 30px rgba(243, 156, 18, 0.15),
+		-2px 0 5px rgba(243, 156, 18, 0.3);
+}
+.status-warning .rainbow-line.mini-line {
+	background: #f39c12;
+}
+
+/* GREEN STATUS (Stable) */
+.status-green .glass-card {
+	border-left: 5px solid #2ecc71;
+	box-shadow:
+		-10px 0 30px rgba(46, 204, 113, 0.1),
+		-2px 0 5px rgba(46, 204, 113, 0.2);
+}
+.status-green .rainbow-line.mini-line {
+	background: #2ecc71;
+}
+
+/* --- The Status Line (Replacing the Rainbow) --- */
+
+/* Base style for the line */
+.rainbow-line.mini-line {
+	height: 4px;
+	width: 100%;
+	margin-bottom: 15px;
+	border-radius: 2px;
+}
+
+/* Red Status Line */
+.status-red .rainbow-line.mini-line {
+	background: #ff3b3b;
+	box-shadow: 0 0 8px rgba(255, 59, 59, 0.5); /* Adds that slight glow you liked */
+}
+
+/* Warning (Amber) Status Line */
+.status-warning .rainbow-line.mini-line {
+	background: #f39c12;
+	box-shadow: 0 0 8px rgba(243, 156, 18, 0.4);
+}
+
+/* Green Status Line */
+.status-green .rainbow-line.mini-line {
+	background: #2ecc71;
+	box-shadow: 0 0 8px rgba(46, 204, 113, 0.3);
+}
+
+/* Target the "Voices from the Ground" links and other links in text */
+.news-content-expanded p a {
+	display: inline-block;
+	background: rgba(52, 152, 219, 0.1);
+	color: #8acaf5 !important; /* Forces the nice blue */
+	padding: 6px 14px;
+	margin-top: 10px;
+	border-radius: 6px;
+	border: 1px solid rgba(52, 152, 219, 0.3);
+	text-decoration: none !important; /* Removes the ugly underline */
+	font-size: 0.85rem;
+	font-weight: 600;
+	transition: all 0.2s ease-in-out;
+	cursor: pointer;
+}
+
+.news-content-expanded p a:hover {
+	background: rgba(52, 152, 219, 0.2);
+	border-color: #3498db;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styling for the arrow if you use one */
+.news-content-expanded p a::after {
+	content: " →";
+	font-size: 1rem;
 }

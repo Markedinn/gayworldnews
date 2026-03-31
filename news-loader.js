@@ -400,7 +400,7 @@ function detectCategories(text) {
 
 	// 1. IDENTITY GATEKEEPER: If it's not LGBTQ+, ignore it completely
 	const isLGBTQ =
-		/lgbt|sogie|sogiesc|gay|lesbian|bisexual|transgender|queer|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning|intersex|msm|wsw|same-gender|gender-affirming|identity-registry/.test(
+		/lgbt|sogie|sogiesc|gay|lesbian|bisexual|transgender|LGBT|non-binary|gender|same-sex|pride|homosex|sodomy|transitioning|intersex|msm|wsw|same-gender|gender-affirming|identity-registry/.test(
 			T,
 		);
 
@@ -538,7 +538,7 @@ async function fetchFeed(url) {
 const FEEDS = [
 	// --- MIDDLE EAST & NORTH AFRICA (MENA) ---
 	"https://wp.mykalimag.com/en/feed/", // MENA Region (Conceptual/Factual)
-	"https://www.iraqueer.org/blog/feed", // Iraq Specific (Legal/Safety)
+	"https://www.iraLGBT.org/blog/feed", // Iraq Specific (Legal/Safety)
 	"https://www.helem.net/category/news/feed", // Lebanon/Levant Legal Updates
 	// --- SOUTH & CENTRAL AMERICA (LGBT Only) ---
 	"https://agenciapresentes.org/en/feed/", // Regional Expert Agency
