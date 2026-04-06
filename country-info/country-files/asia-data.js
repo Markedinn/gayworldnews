@@ -6,7 +6,11 @@ Object.assign(globalData, {
 
 		legal: `
         <p>In 2026, the legal status is the most severe in the world. Under the current de facto authorities, same-sex acts are punishable by death. There are no protections, and the 2024-2025 "Vice and Virtue" laws have effectively criminalized any non-conforming existence.</p>
-        <p><strong>Voices from the Ground:</strong> Local activists operating in exile describe the 2026 climate as "Total Erasure." The recent 2025 ICC request for arrest warrants against Taliban leaders for gender persecution has intensified the regime's hostility toward anyone suspected of LGBTQ+ identity.</p>
+        
+        <h3>The Reality of Survival</h3>
+        <p>Afghanistan is dangerous for everyone. You only have to do the wrong thing and the punishments range from public floggings and corporal punishment to long-term imprisonment, amputations, and public executions. If you read the news, you’ll have heard all the stories.</p>
+
+        <p>But then there are the gay stories. The LGBT lives of terror that exist on the ground. If you are caught acting ‘gay’ or shaving your beard, you are open to beatings and they can be severe and immediate as you get seen sipping a tea in a cafe. If you are rumored to have had intimate moments with another man, you are in real trouble and a death sentence is possible depending on your status and the ‘judge’. And if death is brought to you, you can expect humiliation, torture and rape first. The irony of rape would be funny if we weren’t talking about human lives.</p>
         
         <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
@@ -20,8 +24,10 @@ Object.assign(globalData, {
 
 		safety: `
         <p>Social climate is 100% hostile. There is no distinction between high-end or local areas; the risk of extrajudicial violence or state execution is universal.</p>
-        <p><strong>Community Density:</strong> Invisible. There are zero public LGBT spaces. Community life is restricted to deep-web encrypted chats and immediate family circles if trusted.</p>
         
+        <h3>A Life in the Shadows</h3>
+        <p>To survive, you have to get married, have children and hide in the closet. Repress your sexuality or die. As a lesbian, you’ll be forced into marriage, and then raped at the whim of your husband. As a woman, you have no rights. If you are trans, you’d better grow a beard, wear male clothes and behave like a man or beatings will follow. There is no escape for most. The country is surrounded by criminal regimes that boast about the terrorism they inflict on gay people.</p>
+
         <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
             <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
@@ -32,21 +38,22 @@ Object.assign(globalData, {
     `,
 
 		travel: `
-        <p>Travel is strongly discouraged for all LGBTQ+ individuals. Disclosure of identity is life-threatening.</p>
+        <p><strong>Under no circumstances should you pass the borders into this country.</strong> If you must, then get in touch with organizations that might help you prepare for your ‘safety’.</p>
         
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** None. High-end hotels are monitored by intelligence services.
-        * **The Local Way:** None. Any "traditional" male-only spaces are under surveillance for "immoral" behavior.</p>
+        <h3>The Global Silence</h3>
+        <p>It saddens me that when people talk about Afghanistan in the media, they don’t talk about LGBT horror stories. While the media rightly highlights the oppression of women, the specific, targeted extermination of LGBTQ+ lives remains a silent genocide. Even in the LGBT mainstream media, these countries are generally ignored, or if there is a story, you have to scroll past the Mr Gay [name your country] and which celebrity said something about another.</p>
         
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** Use with extreme caution. Authorities are known to use **lure tactics** on apps like Grindr to locate and arrest individuals.
-        * **Community Forums:** Access is restricted. Most community interaction happens via **Telegram** and **Signal** through verified local networks only.</p>
+        <p>And I know that gay marriage is important to some people, but surely the lives of LGBT people living in terror, and it is terror, in so many countries are more important than getting married in a church. Surely, these stories should be making the top of the front page, not a snippet inside. There are of course the organizations who do the research, write the reports and gain a few minutes of publicity every year. We need to do better.</p>
         
         <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel & Horror Stories</h4>
             <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Security Tip</strong>
-                <p style="color: #fff; font-size: 0.85rem;">Scrub all dating apps and LGBTQ+ content from devices before arrival. Use "Hidden Folders" or dual-boot phones if entry is mandatory.</p>
+                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
+                    <li style="margin-bottom: 10px;"><a href="https://outrightinternational.org/Afghanistan-Report2023" target="_blank" style="color: #fff;">• Stories from LGBT victims (2023)</a></li>
+                    <li style="margin-bottom: 10px;"><a href="https://www.hrw.org/report/2022/01/26/even-if-you-go-skies-well-find-you/lgbt-people-afghanistan-after-taliban-takeover" target="_blank" style="color: #fff;">• Even if you go to the skies, we'll find you (2022)</a></li>
+                    <li style="margin-bottom: 10px;"><a href="https://www.ohchr.org/en/press-releases/2026/03/afghanistan-un-experts-condemn-talibans-surging-use-corporal-punishment" target="_blank" style="color: #fff;">• Flogged in public (2026)</a></li>
+                    <li><a href="https://www.humandignitytrust.org/country-profile/afghanistan/" target="_blank" style="color: #fff;">• Punishments for LGBT ‘Criminals’ (2025)</a></li>
+                </ul>
             </div>
         </div>
     `,
@@ -63,7 +70,7 @@ Object.assign(globalData, {
     `,
 
 		posture: `
-        <p>The 2026 vibe is 'State-Sustained Terror.' There is no visible openness; only a silent, resilient underground fighting for survival.</p>
+        <p>The 2026 vibe is 'State-Sustained Terror.' There is no visible openness; only a silent, resilient underground fighting for survival under a <strong>terrorist regime.</strong></p>
     `,
 
 		sources: [
