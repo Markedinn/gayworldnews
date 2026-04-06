@@ -145,6 +145,98 @@ Object.assign(globalData, {
 		],
 	},
 
+	bangladesh: {
+		name: "Bangladesh",
+		continent: "asia",
+		status: "red",
+
+		legal: `
+        <p>In 2026, the legal landscape in Bangladesh remains defined by Section 377 of the Penal Code, which criminalizes "carnal intercourse against the order of nature." While actual prosecutions are rare, the law serves as a primary tool for police extortion and systemic harassment of the LGBTQ+ community.</p>
+        
+        <p><strong>The Hijra Recognition Paradox:</strong> High. While the government officially recognized 'Hijra' as a third gender in 2013, the 2026 reality remains one of "recognition without rights." Without clear standard operating procedures for legal gender recognition, most trans and gender-diverse individuals remain excluded from inheritance, formal employment, and housing protections.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Bandhu Social Welfare Society</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary organization providing legal aid and health services. In 2026, they focus on documenting human rights violations and providing emergency legal counsel for those detained under "suspicion" of queer activity.</p>
+                <a href="https://www.bandhu-bd.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Current Posture: 'High Alert / Undercurrent.' The brutal 2016 assassinations of prominent activists still cast a long shadow over 2026 safety protocols. Public visibility is non-existent; the community exists entirely in digital "bubbles" and private underground spaces.</p>
+        
+        <p><strong>Street Pulse & Policing:</strong> High Risk. Arbitrary arrests under the Digital Security Act (and its 2025/26 iterations) are frequent. Travelers and locals alike must practice extreme digital hygiene—police "mobile phone sweeps" for dating apps (Grindr/Scruff) are a documented tactic for entrapment and blackmail in Dhaka and Chittagong.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #158 (Critical)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Safety is entirely dependent on 'passing' or invisibility. Foreign nationals are generally protected by diplomatic status but are advised against any form of public advocacy.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+    <div class="regional-directory">
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Dhaka</h2>
+            <p><em>In 2026, Dhaka is a city of invisible lines. There are no "gay bars" or "LGBT clubs." The scene is exclusively private, revolving around invitation-only house parties and discreet cafe meetups in neighborhoods like Gulshan and Banani.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Community Navigational Advice</h4>
+            <p>Direct public directories do not exist for safety reasons. Most connections are made via verified social media groups. Travelers should prioritize high-end international hotels for social gatherings as these offer a higher buffer of privacy.</p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Ahsan Manzil (Pink Palace), Lalbagh Fort, and the National Parliament House. <a href="https://www.visitbangladesh.gov.bd" target="_blank">Official City Guide →</a></p>
+            
+            <p><strong>Safety Warning:</strong> Public displays of affection (PDA) are socially taboo for heterosexual couples and dangerous for same-sex pairs. "Brotherly" hand-holding is culturally common among men, but any romantic context will trigger immediate hostility.</p>
+        </div>
+
+        <div class="city-block">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Sylhet & Cox's Bazar</h2>
+            <p><em>Sylhet is deeply conservative; extreme discretion is required. Cox's Bazar, being a tourist hub, offers slightly more anonymity, but the 2026 religious climate remains restrictive.</em></p>
+            <p><strong>Top Sightseeing:</strong> The tea gardens of Sylhet and the world's longest natural sea beach at Cox's Bazar.</p>
+        </div>
+    </div>
+`,
+
+		health: `
+        <p>LGBT-competent healthcare is virtually non-existent in the public sector. Most queer individuals fear "outing" themselves to doctors due to potential moral judgment or breach of confidentiality. For HIV care, the state relies heavily on international NGO funding, which is increasingly precarious in 2026.</p>
+        
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
+
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Bandhu Health Centers (Dhaka/Regional)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Providing sexual health screenings and mental health support specifically for MSM and Hijra communities. These are the only truly "safe" clinical spaces in the country.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Survivalist Silence.' While a resilient underground art and poetry scene exists in Dhaka, the structural reality is a state that uses LGBTQ+ identity as a political scapegoat whenever convenient.</p>
+    `,
+
+		sources: [
+			{
+				label: "Human Rights Watch: Bangladesh Country Report 2026",
+				url: "https://www.hrw.org/asia/bangladesh",
+				button: "VIEW HUMAN RIGHTS DATA →",
+			},
+			{
+				label: "Bandhu: Human Rights Watch Annual Report",
+				url: "https://www.bandhu-bd.org/publications/",
+				button: "READ COMMUNITY REPORTS →",
+			},
+			{
+				label: "ILGA World: State-Sponsored Homophobia Index",
+				url: "https://ilga.org/state-sponsored-homophobia-report",
+				button: "LEGAL MAPS →",
+			},
+		],
+	},
+
 	bhutan: {
 		name: "Bhutan",
 		continent: "asia",

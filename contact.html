@@ -24,7 +24,7 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=6" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=3.1" />
+		<link rel="stylesheet" href="index.css?v=3.2" />
 
 		<style>
 			/* 1. THE MASTER LAYOUT */
@@ -62,13 +62,19 @@
 			}
 
 			.glass-mission-card {
-				background: rgba(22, 7, 230, 0.8);
-				border: 2px solid rgba(255, 255, 255, 0.2);
+				background: rgba(255, 255, 255, 0.6) !important;
+				backdrop-filter: blur(15px) saturate(180%);
+				-webkit-backdrop-filter: blur(15px) saturate(180%);
+				border: 1px solid rgba(255, 255, 255, 0.3) !important;
+				transition:
+					transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+					background 0.4s ease,
+					box-shadow 0.5s ease;
 				border-radius: 20px;
 				padding: 30px;
 				width: 100%; /* Ensures it fills the 600px max-width */
 				box-sizing: border-box;
-				box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+				box-shadow: 0 20px 40px rgba(160, 157, 157, 0.3);
 				max-height: 60vh;
 				overflow-y: auto;
 				text-align: center;
@@ -83,7 +89,7 @@
 			}
 
 			.form-group label {
-				color: white;
+				color: #000000;
 				font-weight: 600;
 				margin-bottom: 5px;
 				display: block;
@@ -91,20 +97,20 @@
 
 			.contact-form input::placeholder,
 			.contact-form textarea::placeholder {
-				color: rgba(255, 255, 255, 0.8) !important;
+				color: #000000;
 				font-style: italic;
-				font-weight: 300;
-				opacity: 1; /* Firefox fix: ensures the color isn't washed out */
+				font-weight: 500;
+				opacity: 1;
 			}
 
 			.contact-form input,
 			.contact-form textarea {
 				width: 100%;
-				background: rgba(37, 37, 37, 0.8);
-				border: 1px solid rgb(255, 255, 255);
+				background: white;
+				border: 2px solid rgb(16, 193, 216);
 				border-radius: 8px;
 				padding: 12px;
-				color: #ffffff;
+				color: #000000;
 				font-weight: 500;
 				box-sizing: border-box;
 			}
@@ -112,10 +118,10 @@
 			/* 3.5 THE BUTTON STYLING */
 
 			.submit-btn {
-				background: rgba(22, 7, 230, 0.3);
-				color: white;
+				background: white;
+				color: black;
 				padding: 15px;
-				border: 2px solid rgb(255, 255, 255);
+				border: 2px solid rgb(16, 193, 216);
 				border-radius: 8px;
 				font-weight: 800;
 				font-size: 1rem;
@@ -126,13 +132,6 @@
 				letter-spacing: 1px;
 			}
 
-			.submit-btn:hover {
-				background: #ff3399 !important;
-				transform: translateY(-2px);
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-				border-color: white;
-			}
-
 			.submit-btn:active {
 				transform: translateY(0);
 			}
@@ -140,9 +139,8 @@
 			/* 3.5 THE BUTTON STYLING */
 
 			.submit-btn:hover {
-				background: #ff4b2b; /* The Red hover you liked */
+				background: rgb(16, 193, 216);
 				transform: translateY(-2px);
-				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 				border-color: white;
 			}
 
@@ -217,6 +215,7 @@
 				.main-title {
 					font-size: 1.5rem;
 					margin-bottom: 10px;
+					color: #000000;
 				}
 
 				.contact-form input,
@@ -235,10 +234,9 @@
 			</div>
 
 			<div class="glass-mission-card">
-				<h1 class="main-title" style="margin-bottom: 20px">Write To Us</h1>
-				<p style="color: white; margin-bottom: 20px">Your opinion matters.</p>
+				<h1 class="main-title" style="margin-bottom: 20px; color: #000000">Write To Us</h1>
 
-				<div id="form-status-success" class="status-msg success-msg" style="display: none"><i class="fas fa-check-circle"></i> Message sent successfully!</div>
+				<div id="form-status-success" class="status-msg success-msg" style="display: none"><i class="fas fa-check-circle"></i> Sent! Thank you for sharing.</div>
 
 				<div id="form-status-error" class="status-msg error-msg" style="display: none"><i class="fas fa-exclamation-triangle"></i> Something went wrong. Please try again.</div>
 
@@ -250,12 +248,12 @@
 
 					<div class="form-group">
 						<label>Message</label>
-						<textarea name="message" rows="4" required placeholder="Hi! I have an update for you..."></textarea>
+						<textarea name="message" rows="4" required placeholder="Hi! Your sharing makes this site special."></textarea>
 					</div>
 
 					<button type="submit" class="submit-btn">SEND MESSAGE</button>
 
-					<div class="privacy-note" style="color: rgba(255, 255, 255, 0.7); font-size: 0.8rem; margin-top: 15px; text-align: center">🔒 We will never share your data.</div>
+					<div class="privacy-note" style="color: #000000; font-size: 0.8rem; margin-top: 15px; text-align: center">🔒 We will never share your data.</div>
 				</form>
 			</div>
 		</div>

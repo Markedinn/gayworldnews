@@ -13,14 +13,14 @@
 		<meta property="og:description" content="Explore the official GWN interactive map for LGBTQ+ Legal Travel Health and Safety." />
 		<meta property="og:url" content="https://www.gayworldnews.com/lgbt_risk_map.html" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Gay World News | Interactive LGBTQ+ Travel Risk Map" />
 		<meta name="twitter:description" content="Explore the official GWN interactive map for LGBTQ+ Legal Travel Health and Safety." />
-		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.0" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -30,11 +30,11 @@
 			window.globalData = {};
 		</script>
 
-		<script src="country-info/country-files/africa-data.js?v=1.5"></script>
-		<script src="country-info/country-files/americas-data.js?v=1.5"></script>
-		<script src="country-info/country-files/asia-data.js?v=1.5"></script>
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
+		<script src="country-info/country-files/africa-data.js?v=1.6"></script>
+		<script src="country-info/country-files/americas-data.js?v=1.6"></script>
+		<script src="country-info/country-files/asia-data.js?v=1.6"></script>
+		<script src="country-info/country-files/europe-data.js?v=1.6"></script>
+		<script src="country-info/country-files/oceania-data.js?v=1.6"></script>
 
 		<style>
 			html,
@@ -330,72 +330,108 @@
 		</footer>
 
 		<script>
-			// Prevents mobile browsers from "pulling down to refresh" while using the map
-			document.body.addEventListener(
-				"touchmove",
-				function (e) {
-					e.preventDefault();
-				},
-				{ passive: false },
-			);
-			const map = L.map("map", {
-				renderer: L.canvas(), // <--- This makes the countries stay "drawn" in memory
-				zoomSnap: 0.1,
-				attributionControl: false,
-				zoomControl: false,
-				inertia: true, // Makes the "flick" feel smoother
-				inertiaFraction: 0.5,
-			}).setView([15, 0], 2);
+    // Prevents mobile browsers from "pulling down to refresh" while using the map
+    document.body.addEventListener(
+        "touchmove",
+        function (e) {
+            e.preventDefault();
+        },
+        { passive: false },
+    );
 
-			// 1. Check if data files loaded
-			console.log("Data Status:", window.globalData ? "Loaded" : "Missing!");
+    const map = L.map("map", {
+        renderer: L.canvas(),
+        zoomSnap: 0.1,
+        attributionControl: false,
+        zoomControl: false,
+        inertia: true,
+        inertiaFraction: 0.5,
+    }).setView([15, 0], 2);
 
-			// 2. Fetch the world shapes
-			fetch("world.geojson.txt")
-				.then((res) => {
-					if (!res.ok) throw new Error("File not found!");
-					return res.json();
-				})
-				.then((geo) => {
-					L.geoJSON(geo, {
-						style: function (feature) {
-							// GeoJSON uses .ADMIN or .name. We check both.
-							const rawName = feature.properties.ADMIN || feature.properties.name || "";
-							const key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+    // 1. Translation Manual: Matches GeoJSON names to your JS data keys
+   const countryNameOverrides = {
+    // Africa Fixes
+    "united_republic_of_tanzania": "tanzania",
+    "congo_the_democratic_republic_of_the": "democratic_republic_of_the_congo",
+    "gambia_the": "gambia",
+    "the_gambia": "gambia",
+    "swaziland": "eswatini",
 
-							const country = window.globalData ? window.globalData[key] : null;
-							let status = country ? country.status.toLowerCase() : "gray";
+    "guineabissau": "guinea_bissau", // Map often removes the hyphen
+    "guinea_bissau": "guinea_bissau",
+    "sahrawi_arab_democratic_republic": "western_sahara",
 
-							let color = "#94a3b8"; // Default gray
-							if (status === "green") color = "#22c55e";
-							else if (status === "amber") color = "#eab308";
-							else if (status === "red" || status === "danger") color = "#ef4444";
-							else if (status === "black") color = "#1a1a1a";
-							else if (status === "ice" || status === "advisory") color = "#00e5ff";
+    // Middle East & Asia Fixes
+"palestine": "palestinian_territories",
+    "west_bank": "palestinian_territories",
+    "gaza_strip": "palestinian_territories",
+    "bangladesh": "bangladesh",
 
-							return {
-								fillColor: color,
-								// THE TRICK: Match the border to the sea (#1a2b56)
-								// A darker blue border makes the map look high-end
-								color: "rgb(15, 100, 150)",
-								weight: 0.7,
-								fillOpacity: 1.0, // Full opacity for the richest colors possible
-							};
-						},
-						onEachFeature: (feature, layer) => {
-							const rawName = feature.properties.ADMIN || feature.properties.name || "";
-							const key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+    // Europe & Others
+    "russian_federation": "russia"
+};
 
-							layer.on("click", () => {
-								window.location.href = `country.html?c=${key}`;
-							});
-						},
-					}).addTo(map);
-				})
-				.catch((err) => {
-					console.error("MAP ERROR:", err);
-					alert("The map couldn't load the country shapes. If you are testing this locally, please upload it to your web server first!");
-				});
+    console.log("Data Status:", window.globalData ? "Loaded" : "Missing!");
+
+    // 2. Fetch the world shapes
+    fetch("world.geojson.txt")
+        .then((res) => {
+            if (!res.ok) throw new Error("File not found!");
+            return res.json();
+        })
+        .then((geo) => {
+            L.geoJSON(geo, {
+                style: function (feature) {
+                    const rawName = feature.properties.ADMIN || feature.properties.name || "";
+                    let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+
+                    // Apply the translation if it exists in our manual list
+                    if (countryNameOverrides[key]) {
+                        key = countryNameOverrides[key];
+                    }
+
+                    const country = window.globalData ? window.globalData[key] : null;
+                    let status = country ? country.status.toLowerCase() : "gray";
+
+                    // Debugging: If a country is gray, find out what the key was
+                    if (status === "gray" && rawName !== "") {
+                        console.log("Unmatched Country:", rawName, "-> Key attempted:", key);
+                    }
+
+                    let color = "#94a3b8"; // Default gray
+                    if (status === "green") color = "#22c55e";
+                    else if (status === "amber") color = "#eab308";
+                    else if (status === "red" || status === "danger") color = "#ef4444";
+                    else if (status === "black") color = "#1a1a1a";
+                    else if (status === "ice" || status === "advisory") color = "#00e5ff";
+
+                    return {
+                        fillColor: color,
+                        color: "rgb(15, 100, 150)",
+                        weight: 0.7,
+                        fillOpacity: 1.0,
+                    };
+                },
+                onEachFeature: (feature, layer) => {
+                    const rawName = feature.properties.ADMIN || feature.properties.name || "";
+                    let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+
+                    // Ensure the click also uses the override logic
+                    if (countryNameOverrides[key]) {
+                        key = countryNameOverrides[key];
+                    }
+
+                    layer.on("click", () => {
+                        window.location.href = `country.html?c=${key}`;
+                    });
+                },
+            }).addTo(map);
+        })
+        .catch((err) => {
+            console.error("MAP ERROR:", err);
+            alert("The map couldn't load the country shapes.");
+        });
+</script>
 			function toggleLegend() {
 				const legend = document.getElementById("legend");
 				legend.classList.toggle("legend-collapsed");

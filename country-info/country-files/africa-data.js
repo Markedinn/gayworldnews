@@ -245,6 +245,82 @@ Object.assign(globalData, {
 		sources: ["https://database.ilga.org/benin-lgbti", "https://www.equaldex.com/region/benin", "https://www.humandignitytrust.org/country-profile/benin/"],
 	},
 
+	bir_tawil: {
+		name: "Bir Tawil",
+		continent: "africa",
+		status: "red",
+
+		legal: `
+        <p>Bir Tawil is the only "Terra Nullius" (No Man's Land) on Earth. Because neither Egypt nor Sudan claims the territory, there is no functioning legal system, no constitution, and no recognized government in 2026. Consequently, there are no laws criminalizing—or protecting—LGBTQ+ individuals.</p>
+
+        <p><strong>The Sovereignty Vacuum:</strong> Total. While various individuals have attempted to claim the land as a "Micronation" (such as the Kingdom of North Sudan), these claims are unrecognized by the UN. Legal protection is non-existent because the concept of "law" does not apply to this 2,060 square kilometer patch of desert.</p>
+        
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Status Note</h4>
+            <div class="legal-card" style="background: rgba(255, 255, 255, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #94a3b8;">
+                <strong style="display: block; font-size: 1.1rem; color: #94a3b8; margin-bottom: 5px;">🏳️ Terra Nullius</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">As of 2026, no international body recognizes any legal authority over this region. It is effectively a lawless zone.</p>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>Current Posture: 'Extreme Danger.' Safety in Bir Tawil is not a matter of social prejudice, but of physical survival. There is no water, no electricity, and no emergency services. The only inhabitants are nomadic Ababda tribes and occasional gold miners who operate outside any regulatory framework.</p>
+
+        <p><strong>Physical Risks:</strong> The 2026 environment is increasingly unstable due to artisanal gold mining conflicts. For LGBTQ+ travelers, the risk is the same as for any traveler: kidnapping, heatstroke, or being caught in cross-border skirmishes between unofficial militias. There is no "safe" way to exist here.</p>
+        
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: Unranked</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Excluded from all safety indices due to lack of a state. It is considered a "high-risk wilderness zone."</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+    <div class="regional-directory">
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">The Triangle</h2>
+            <p><em>Bir Tawil contains no cities, no permanent settlements, and no paved roads. It is a desert plateau of sand and rock.</em></p>
+            
+            <p><strong>Travel Logistics:</strong> Entry usually requires crossing from Egypt via the Hala'ib Triangle (heavily militarized) or from Sudan. Both neighboring countries have strict anti-LGBT laws, so any traveler attempting to reach Bir Tawil would be subject to the laws of the transit country before reaching the "lawless" zone.</p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Mount Bartazuga and the dry wadis. There are no tourist facilities, hotels, or shops. You must carry 100% of your own life-support (water, fuel, satellite comms).</p>
+        </div>
+    </div>
+`,
+
+		health: `
+        <p>There are no medical facilities in Bir Tawil. The nearest hospital is several hundred kilometers away in Egypt or Sudan. In 2026, any medical emergency—including a basic infection or injury—is potentially fatal due to the lack of transport infrastructure.</p>
+        
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Clinical Note</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">No Medical Access</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Travelers are advised that satellite phones are the only method of communication, and MedEvac services are extremely difficult to coordinate in unclaimed territory.</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>The 2026 Vibe is 'Existential Isolation.' Bir Tawil is a reminder of what the world looks like without social or legal contracts. For the LGBTQ+ community, it offers neither persecution nor peace—only the harsh indifference of the Sahara.</p>
+    `,
+
+		sources: [
+			{
+				label: "Geographic Analysis: The Bir Tawil Dispute",
+				url: "https://www.cia.gov/the-world-factbook/countries/egypt/",
+				button: "VIEW BORDER DATA →",
+			},
+			{
+				label: "UN Status: Terra Nullius Reports",
+				url: "https://www.un.org/en/about-us/member-states",
+				button: "READ SOVEREIGNTY STATS →",
+			},
+		],
+	},
+
 	botswana: {
 		name: "Botswana",
 		continent: "africa",
@@ -4344,14 +4420,12 @@ Object.assign(globalData, {
 		name: "Tanzania",
 		continent: "africa",
 		status: "red",
-
 		legal: `
         <p>As of 2026, Tanzania continues to strictly criminalize same-sex acts under Section 154 of the Penal Code, which provides for life imprisonment for "carnal knowledge of any person against the order of nature." ILGA World reports that while enforcement varies, the threat of long-term incarceration remains a primary legal reality for the LGBTQ+ community.</p>
 
         <p>There is no legal recognition of same-sex marriage, civil unions, or adoption. In 2025, legislative discussions in Dodoma reinforced the state's commitment to "traditional values," effectively blocking any path toward civil rights. Human Dignity Trust notes that the legal climate has remained stagnantly hostile over the last two years.</p>
 
-        <p>Gender identity is not legally recognized, and there is no administrative process for changing gender markers. Transgender individuals are frequently targeted under "public indecency" or "vagrancy" laws. 
-        Voices from the Ground: <a href="https://www.panafrica-ilga.org/" target="_blank">Pan-Africa ILGA</a> advocates describe the current legal pressure as a "sustained effort to erase LGBT visibility from the public sphere."</p>
+        <p>Gender identity is not legally recognized, and there is no administrative process for changing gender markers. Transgender individuals are frequently targeted under "public indecency" or "vagrancy" laws. <br>Voices from the Ground: <a href="https://www.panafrica-ilga.org/" target="_blank">Pan-Africa ILGA</a> advocates describe the current legal pressure as a "sustained effort to erase LGBT visibility from the public sphere."</p>
 
         <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Primary Legal Documentation</h4>
@@ -4360,37 +4434,29 @@ Object.assign(globalData, {
                 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary statute criminalizing consensual same-sex relations with sentences up to life imprisonment.</p>
                 <a href="https://database.ilga.org/tanzania-lgbti" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Source</a>
             </div>
-        </div>
-    `,
-
+        </div>`,
 		safety: `
         <p>The current posture is "High Vigilance." 2025/2026 polling data suggests that while there is a quiet, burgeoning youth movement in urban centers like Dar es Salaam, public support for LGBTQ+ rights remains statistically low. Most LGBT Tanzanians live in a state of "strategic invisibility" to ensure personal safety.</p>
 
         <p>The social shift has trended toward increased state surveillance rather than genuine inclusion. Community rights are frequently framed by political leaders as a threat to national stability rather than a pillar of it. Social media monitoring by authorities has increased in 2026, leading to several high-profile arrests for "promoting" LGBTQ+ content.</p>
 
-        <p>Police protection is generally non-existent for the community; contact with authorities regarding hate crimes often results in the victim being investigated for their orientation. Visibility in the highest levels of government is zero. 
-        Voices from the Ground: <a href="https://www.outrightinternational.org/" target="_blank">Outright International</a> reports suggest activists view the current police posture as "antagonistic by default."</p>
+        <p>Police protection is generally non-existent for the community; contact with authorities regarding hate crimes often results in the victim being investigated for their orientation. Visibility in the highest levels of government is zero. <br>Voices from the Ground: <a href="https://www.outrightinternational.org/" target="_blank">Outright International</a> reports suggest activists view the current police posture as "antagonistic by default."</p>
 
         <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
             <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
                 <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #172</strong>
                 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Performance in the Spartacus Gay Travel Index 2026 remains in the bottom tier due to state-sponsored homophobia.</p>
-                
                 <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-top: 15px; margin-bottom: 5px;">🛡️ Key Indicator</strong>
                 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Active enforcement of "Morality Clauses" in business licensing for venues perceived to be gay-friendly.</p>
             </div>
-        </div>
-    `,
-
+        </div>`,
 		travel: `
         <p>Tanzania is a major tourism hub, yet LGBTQ+ travelers must practice "Strict Discretion." While the tourism sector in Zanzibar and Arusha is accustomed to international visitors, any overt display of affection can lead to harassment or legal intervention. The general rating is "Proceed with Extreme Caution."</p>
 
         <p>There are no officially recognized gay-friendly districts. In Zanzibar, the social climate is particularly conservative due to religious influences, though high-end resorts often offer a "bubble" of privacy. Rural areas are significantly less tolerant than Dar es Salaam.</p>
 
-        <p>Cis-gay travelers should avoid all PDA and keep social media profiles private. Trans/Non-Binary travelers face high risk at airport security; 2026 biometric checks and local ID laws do not recognize non-binary markers, often leading to secondary questioning. 
-        Safe Haven: No specific districts exist, but the "Oyster Bay" area in Dar es Salaam is considered the most liberal pocket. 
-        Voices from the Ground: <a href="https://iglta.org/" target="_blank">IGLTA</a> notes that "discretion is the only currency for LGBT travelers in Tanzania."</p>
+        <p>Cis-gay travelers should avoid all PDA and keep social media profiles private. Trans/Non-Binary travelers face high risk at airport security; 2026 biometric checks and local ID laws do not recognize non-binary markers, often leading to secondary questioning. <br>Safe Haven: No specific districts exist, but the "Oyster Bay" area in Dar es Salaam is considered the most liberal pocket. <br>Voices from the Ground: <a href="https://iglta.org/" target="_blank">IGLTA</a> notes that "discretion is the only currency for LGBT travelers in Tanzania."</p>
 
         <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Safety</h4>
@@ -4398,16 +4464,13 @@ Object.assign(globalData, {
                 <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility</strong>
                 <p style="color: #fff; font-size: 0.85rem;">Customs may scrutinize luggage for "obscene material" including LGBT literature or pride symbols.</p>
             </div>
-        </div>
-    `,
-
+        </div>`,
 		health: `
         <p>Availability of LGBTQ-specific healthcare is non-existent in the public sector. Most community members rely on a secretive network of private providers. General safety for foreigners in medical facilities is adequate, provided their identity is not disclosed.</p>
 
         <p>Access to HRT is extremely limited and requires private consultation. PrEP and HIV care are available through international NGO-funded programs, though domestic clinics often lack inclusivity training. In 2025, several health centers were raided under the guise of "investigating illegal activities."</p>
 
-        <p>There are no inclusive emergency protocols. Medical staff are not legally protected if they provide gender-affirming care to locals. 
-        Voices from the Ground: <a href="https://www.alturi.org/" target="_blank">Alturi</a> reports emphasize the need for "underground healthcare infrastructure."</p>
+        <p>There are no inclusive emergency protocols. Medical staff are not legally protected if they provide gender-affirming care to locals. <br>Voices from the Ground: <a href="https://www.alturi.org/" target="_blank">Alturi</a> reports emphasize the need for "underground healthcare infrastructure."</p>
 
         <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
             <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Medical Contacts</h4>
@@ -4415,15 +4478,11 @@ Object.assign(globalData, {
                 <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Data Not Found</strong>
                 <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">No verified LGBTQ-inclusive facilities are officially listed to ensure the safety of the providers.</p>
             </div>
-        </div>
-    `,
-
+        </div>`,
 		posture: `
         <p>Tanzania remains a deeply conservative state where LGBTQ+ rights are systematically suppressed. The current security posture requires total anonymity for survival and travel.</p>
 
-        <p>While the tourism industry is vital, it does not offer legal immunity for LGBT travelers. Sources include ILGA World and Equaldex.</p>
-    `,
-
+        <p>While the tourism industry is vital, it does not offer legal immunity for LGBT travelers. Sources include ILGA World and Equaldex.</p>`,
 		sources: ["https://database.ilga.org/tanzania-lgbti", "https://www.humandignitytrust.org/country-profile/tanzania/", "https://equaldex.com/region/tanzania"],
 	},
 

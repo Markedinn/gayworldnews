@@ -1,6 +1,67 @@
 window.globalData = window.globalData || {};
 
 Object.assign(window.globalData, {
+	american_samoa: {
+		name: "American Samoa",
+		continent: "oceania",
+		status: "amber",
+
+		legal: `
+    <p>American Samoa remains a legal anomaly in 2026. While most U.S. territories were covered by <em>Obergefell v. Hodges</em>, American Samoa has successfully argued that its unique "unincorporated" status and <em>Fa'asamoa</em> (Samoan way of life) allow it to bypass federal marriage mandates. It is currently the only U.S. jurisdiction to explicitly refuse to perform same-sex marriages, though it must recognize those performed elsewhere as of the 2022 Respect for Marriage Act.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> High. Legally, protections are sparse. However, the <em>Fa'afafine</em> (third gender) are a culturally integrated and respected part of Samoan society. In 2026, the community reports high trust in traditional family structures for protection, but low trust in government legal reform.</p>
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Sosaiete o Fa’afafine i Amerika Samoa (SOFIAS)</strong>
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Dedicated to the empowerment and traditional recognition of Fa'afafine and LGBTQ+ individuals in the territory.</p>
+    <a href="https://www.facebook.com/SOFIAS.Inc/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Community Update →</a>
+    </div>
+    </div> `,
+
+		safety: `
+    <p>Current Posture: Culturally Tolerant but Socially Conservative. Physical safety is generally high due to a low-crime environment, but visible "Western" LGBTQ+ identity (outside of the Fa'afafine tradition) can meet with confusion or religious pushback.</p>
+    <p><strong>Street Pulse & Policing:</strong> Moderate Response. In 2026, public displays of affection (PDA) are discouraged for all couples but can trigger specific harassment for same-sex pairs in rural villages.</p>
+    <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics</h4>
+    <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #68</strong>
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">High domestic stability but zero statutory hate-crime protection.</p>
+    </div>
+    </div> `,
+
+		travel: `
+    <p>2026 Traveler Rating: Amber. Safe for those who respect local <em>tapu</em> (taboos). Visible gender-non-conforming travelers will often be categorized as Fa'afafine, which offers a degree of social "cushioning."</p>
+    <p><strong>Safe Havens vs. Red Zones:</strong>
+    * **Green Zones:** Pago Pago Harbor area and major hotel resorts.
+    * **Amber Zones:** Rural villages during Sunday <em>Sā</em> (prayer time), where strict dress codes and behavior are enforced.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The Sunday Sā Rule</strong>
+    <p style="color: #fff; font-size: 0.85rem;">Be extremely mindful of the evening prayer curfew (Sā). In many villages, all movement is prohibited for 10-20 minutes. Disrespecting this as a visible LGBTQ+ person can lead to significant local friction.</p>
+    </div>
+    </div> `,
+
+		health: `
+    <p><strong>Standard of Care:</strong> Limited. Specialized LGBTQ+ health services are virtually non-existent on-island. Most residents travel to Hawaii for gender-affirming care or complex HIV management.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Ground Health Contacts</h4>
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">LBJ Tropical Medical Center</strong>
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Pago Pago - The primary facility. Does not have a dedicated queer wing; travelers are advised to bring a full supply of HRT/PrEP.</p>
+    </div>
+    </div> `,
+
+		posture: `
+    <p>Culturally Inclusive, Legally Stagnant. A place where "third gender" traditions thrive but modern legislative equality is blocked by the church.</p>
+    `,
+
+		sources: [
+			{ label: "Ground Intel: SOFIAS Facebook", url: "https://www.facebook.com/SOFIAS.Inc/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Equaldex American Samoa", url: "https://www.equaldex.com/region/american-samoa", button: "VIEW LEGAL DATA →" },
+		],
+	},
+
 	antarctica: {
 		name: "Antarctica",
 		continent: "oceania",
@@ -274,6 +335,61 @@ Object.assign(window.globalData, {
         `,
 
 		sources: ["https://database.ilga.org/fiji-lgbti", "https://www.equaldex.com/region/fiji"],
+	},
+
+	french_polynesia: {
+		name: "French Polynesia",
+		continent: "oceania",
+		status: "green",
+
+		legal: `
+    <p>As an overseas collectivity of France, French Polynesia enjoys full French legal protections, including marriage equality (since 2013) and robust anti-discrimination laws. Gender-affirming care is legal and covered under French health regulations.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> Low. The 2026 vibe in Papeete is highly aligned with French mainland values. The <em>Mahu</em> (traditional third gender) and <em>Rae-rae</em> (modern trans identity) are highly visible.</p>
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy</h4>
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Association Cousins Cousines</strong>
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary LGBTQ+ organization in Tahiti, providing support and organizing local events since the 1990s.</p>
+    <a href="https://www.facebook.com/cousinscousinestahiti/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+    </div>
+    </div> `,
+
+		safety: `
+    <p>Current Posture: Safe and Welcoming. Tahiti and Bora Bora are top-tier destinations for LGBTQ+ honeymooners.</p>
+    <p><strong>Street Pulse & Policing:</strong> High Response. Police follow French standards. In 2026, the only caution is the divide between tourist-heavy islands and more conservative, remote archipelagoes.</p>
+    `,
+
+		travel: `
+    <p>2026 Traveler Rating: Green. Highly recommended for all visible identities.</p>
+    <p><strong>Safe Havens:</strong>
+    * **Papeete (Tahiti):** Nightlife is inclusive, with <em>Rae-rae</em> shows being a mainstream cultural staple.
+    * **Bora Bora/Moorea:** Luxury resorts are 100% inclusive safe zones.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The Mahu Distinction</strong>
+    <p style="color: #fff; font-size: 0.85rem;">Understand that <em>Mahu</em> is a respected traditional role, while <em>Rae-rae</em> is a more modern trans identity. Respecting this cultural lineage opens doors to deep local acceptance.</p>
+    </div>
+    </div> `,
+
+		health: `
+    <p><strong>Standard of Care:</strong> High. French social security (CPS) covers gender-affirming care. PrEP is available through local infectious disease specialists in Papeete.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Health Contacts</h4>
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Centre Hospitalier de Polynésie Française (CHPF)</strong>
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Pirae, Tahiti - The best facility in the South Pacific for specialized care.</p>
+    </div>
+    </div> `,
+
+		posture: `
+    <p>French Legal Might meets Polynesian Soul. A safe, celebratory environment for queer travelers.</p>
+    `,
+
+		sources: [
+			{ label: "Community: Cousins Cousines Tahiti", url: "https://www.facebook.com/cousinscousinestahiti/", button: "EVENT DETAILS →" },
+			{ label: "Ground Intel: Tahiti Tourisme LGBTQ+", url: "https://tahititourisme.com/", button: "TRAVEL GUIDE →" },
+		],
 	},
 
 	guam: {
@@ -1504,5 +1620,35 @@ Object.assign(window.globalData, {
     `,
 
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Vanuatu", "https://www.equaldex.com/region/vanuatu"],
+	},
+
+	wallis_and_futuna: {
+		name: "Wallis and Futuna",
+		continent: "oceania",
+		status: "amber",
+
+		legal: `
+    <p>Legally part of France, meaning same-sex marriage and anti-discrimination laws apply on paper. However, the territory is governed by three traditional kingdoms alongside French law.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> Very High. In practice, traditional and Catholic authorities hold immense power. There are no known public LGBTQ+ venues or organizations on the islands in 2026.</p>
+    `,
+
+		safety: `
+    <p>Current Posture: Discreet. Physical violence is rare, but social exclusion is a significant risk for locals. Travelers will be treated with "island hospitality" as long as they remain discreet.</p>
+    <p><strong>Street Pulse:</strong> Low visibility. PDA is strictly taboo for all, and "coming out" in a traditional village can lead to family shunning.</p>
+    `,
+
+		travel: `
+    <p>2026 Traveler Rating: Amber. Safe for travel, but this is not a "destination" for LGBTQ+ visibility. Discretion is required.</p>
+    `,
+
+		health: `
+    <p><strong>Standard of Care:</strong> Basic. For any specialized care (HIV/HRT), patients are evacuated to New Caledonia or Australia.</p>
+    `,
+
+		posture: `
+    <p>Legally French, Culturally Traditional. A quiet, religious territory where the law says "yes" but the village says "not here."</p>
+    `,
+
+		sources: [{ label: "Official Index: Equaldex Wallis & Futuna", url: "https://www.equaldex.com/region/wallis-and-futuna", button: "VIEW LEGAL DATA →" }],
 	},
 });

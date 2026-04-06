@@ -21,7 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 						if (matchesSearch && matchesContinent) {
 							const link = document.createElement("a");
-							link.href = `country.html?c=${key}`;
+
+							// MANUAL OVERRIDE FOR HUMAN PAGES (Add others here as you build them)
+							if (key === "albania") {
+								link.href = `europe/albania.html`;
+							} else {
+								link.href = `country.html?c=${key}`;
+							}
 
 							let s = (country.status || "warning").toLowerCase();
 							if (s === "danger" || s === "black") s = "red";
@@ -36,46 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	}
+}); // <--- This now correctly closes the DOMContentLoaded function
 
-	// --- AUTOMATIC COUNTRY LIST (FIXED & ALPHABETICAL) ---
-	const listContainer = document.getElementById("countryGrid");
-	if (listContainer) {
-		let homeAttempts = 0;
-		const waitForHomeData = setInterval(() => {
-			homeAttempts++;
-
-			if (typeof globalData !== "undefined" && Object.keys(globalData).length > 0) {
-				clearInterval(waitForHomeData);
-				listContainer.innerHTML = "";
-
-				// THIS IS WHERE THE ALPHABETICAL SORT HAPPENS
-				Object.keys(globalData)
-					.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
-					.forEach((key) => {
-						const country = globalData[key];
-						if (!targetContinent || country.continent === targetContinent) {
-							const card = document.createElement("a");
-							card.href = `country.html?c=${key}`;
-
-							let s = (country.status || "warning").toLowerCase();
-							if (s === "danger" || s === "black") s = "red";
-
-							card.className = `country-card ${s}`;
-							card.innerHTML = `${country.name}`;
-							listContainer.appendChild(card);
-						}
-					});
-			}
-
-			if (homeAttempts > 50) {
-				clearInterval(waitForHomeData);
-				console.error("Home Data failed to load.");
-			}
-		}, 100);
-	}
-});
-
-// ESC KEY EXIT
+// ESC KEY EXIT (Lives outside the DOM listener so it's always ready)
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") window.location.replace("https://www.youtube.com");
 });

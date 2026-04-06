@@ -4,32 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Gay World News | oceania 2026 Guide</title>
+		<title>Gay World News | LGBTQ+ News in Asia: Thailand, Japan, India & Vietnam</title>
+		<meta name="description" content="LGBTQ+ Legal Travel Safety and Health updates across Asia, including Thailand, Japan, India, Vietnam, and the Philippines." />
+
+		<link rel="canonical" href="https://www.gayworldnews.com/asia.html" />
+
+		<meta property="og:title" content="Gay World News | Asia LGBTQ+ Legal Health Safety & Travel Guide" />
+		<meta property="og:description" content="Legal Travel Health and Safety Guide for the LGBTQ+ community across Asia, Thailand, Japan, and India." />
+		<meta property="og:url" content="https://www.gayworldnews.com/asia.html" />
+		<meta property="og:type" content="article" />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Gay World News | Asia LGBTQ+ Legal Health Safety & Travel Guide" />
+		<meta name="twitter:description" content="Legal Travel Health and Safety Guide for the LGBTQ+ community across Asia." />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
 
 		<link rel="stylesheet" href="index.css?v=3.2" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<script>
 			window.globalData = window.globalData || {};
 		</script>
-		<script src="country-info/country-files/oceania-data.js"></script>
 
-		<!-- <script src="index.js" defer></script> -->
+		<script src="country-info/country-files/asia-data.js"></script>
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp" />
+		<script src="index.js" defer></script>
 	</head>
-	<body data-continent="oceania">
+	<body data-continent="asia">
 		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
-
 		<div class="master-grid-container">
 			<header class="main-header">
 				<a href="/" style="text-decoration: none">
-					<h1 class="main-title">Oceania</h1>
+					<h1 class="main-title">Asia</h1>
 				</a>
 				<div class="rainbow-line"></div>
 			</header>
 
 			<div class="three-search-container">
-				<div id="translator-anchor"></div>
+				<div id="translator-anchor">
+					<div id="google_translate_element"></div>
+				</div>
 
 				<div class="landing-search-wrap">
 					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
@@ -45,71 +61,7 @@
 				</a>
 			</div>
 
-			<section class="bento-grid" id="countryGrid">
-				<a href="country.html?c=australia" class="country-card green">
-					<span>AUSTRALIA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=cook_islands" class="country-card amber">
-					<span>COOK ISLANDS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=fiji" class="country-card green">
-					<span>FIJI <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=kiribati" class="country-card red">
-					<span>KIRIBATI <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=marshall_islands" class="country-card amber">
-					<span>MARSHALL ISLANDS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=micronesia" class="country-card amber">
-					<span>MICRONESIA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=nauru" class="country-card amber">
-					<span>NAURU <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=new_zealand" class="country-card green">
-					<span>NEW ZEALAND <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=niue" class="country-card amber">
-					<span>NIUE <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=palau" class="country-card amber">
-					<span>PALAU <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=papua_new_guinea" class="country-card red">
-					<span>PAPUA NEW GUINEA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=samoa" class="country-card red">
-					<span>SAMOA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=solomon_islands" class="country-card red">
-					<span>SOLOMON ISLANDS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=tonga" class="country-card red">
-					<span>TONGA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=tuvalu" class="country-card red">
-					<span>TUVALU <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=vanuatu" class="country-card amber">
-					<span>VANUATU <small>(AI)</small></span>
-				</a>
-			</section>
+			<section class="bento-grid" id="countryGrid"></section>
 		</div>
 
 		<footer class="site-footer">
@@ -119,6 +71,7 @@
 						<span class="gwn-logo">GWN</span>
 					</a>
 				</div>
+
 				<div class="footer-card">
 					<a href="about.html" class="social-pill neutral" aria-label="Learn more about Gay World News"> <i class="fas fa-info-circle"></i> <span>About</span> </a>
 				</div>
@@ -155,7 +108,7 @@
 				default_language: "en",
 				detect_browser_language: true,
 				wrapper_selector: "#translator-anchor",
-				type: "nicedropdown",
+				type: "dropdown",
 			};
 
 			// This "forces" the text because the widget settings sometimes fail

@@ -14,29 +14,29 @@
 		<meta property="og:url" content="https://www.gayworldnews.com/" />
 		<meta property="og:title" content="Interactive LGBTQ+ World Map | Live Breaking News: Legal Travel Health & Security" />
 		<meta property="og:description" content="Global LGBTQ+ Dashboard & Map for Real-Time Updates, including Legal Travel Health Security & Live Breaking News." />
-		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?" />
 		<meta property="og:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:url" content="https://www.gayworldnews.com/" />
 		<meta name="twitter:title" content="Interactive LGBTQ+ World Map | Live Breaking News" />
 		<meta name="twitter:description" content="Real-time Global updates for LGBTQ+ Legal Travel, Health & Security." />
-		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?" />
 		<meta name="twitter:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
 
 		<script>
 			// Check if the screen width is 480px or less (standard mobile)
-			if (window.innerWidth < 1024) {
+			if (window.innerWidth < 1100) {
 				// Redirect to the mobile version
 				window.location.href = "mobile.html";
 			}
 		</script>
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=5" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=5" />
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="index.css?v=3.1" />
+		<link rel="stylesheet" href="index.css?v=3.2" />
 
 		<script>
 			window.globalData = {};
@@ -48,15 +48,34 @@
 		<script src="country-info/country-files/americas-data.js" defer></script>
 		<script src="country-info/country-files/oceania-data.js" defer></script>
 		<script src="index.js" defer></script>
+
+		<script>
+			// THE OLYMPIC TRACKER: Update these numbers as you finish countries
+			window.gwnProgress = {
+				humanCount: 3, // Currently: UK, Albania, Tunisia
+				totalOlympic: 206, // The Olympic Standard
+				color: "#2ecc71", // Your requested Green
+			};
+		</script>
 	</head>
 
 	<body>
 		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
-		<main class="master-grid-container">
+		<main class="master-grid-container" id="main-content">
 			<header class="main-header home-hero">
 				<h1 class="main-title">Gay World News</h1>
 				<div class="subtitle-group">
 					<p class="subtitle">Legal Health Travel & Safety</p>
+				</div>
+				<div class="mission-progress-wrap">
+					<div class="progress-labels">
+						<span>Human Verification Progress</span>
+						<span id="percent-text">0%</span>
+					</div>
+					<div class="progress-track">
+						<div id="progress-fill" class="progress-fill"></div>
+					</div>
+					<p class="progress-sub-count"><span id="display-human">0</span> Verified | 206 Total Countries</p>
 				</div>
 			</header>
 
@@ -150,5 +169,24 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const data = window.gwnProgress;
+				if (!data) return;
+
+				const percent = Math.round((data.humanCount / data.totalOlympic) * 100);
+
+				// Update text
+				document.getElementById("percent-text").textContent = percent + "%";
+				document.getElementById("display-human").textContent = data.humanCount;
+
+				// Animate bar
+				setTimeout(() => {
+					const fill = document.getElementById("progress-fill");
+					fill.style.width = percent + "%";
+				}, 800);
+			});
+		</script>
 	</body>
 </html>

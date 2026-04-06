@@ -3,67 +3,179 @@ Object.assign(globalData, {
 		name: "Albania",
 		continent: "europe",
 		status: "amber",
+		isHuman: true, // <--- Only add this to the "Manual" pages
 
-		legal: `
-            <p>Consensual same-sex activity has been legal since 1995. While comprehensive anti-discrimination laws covering sexual orientation and gender identity have existed since 2010, Albania still lacks legal recognition for same-sex unions in 2026.</p>
-            <p><strong>The Statute vs. Ground Gap:</strong> High. While the law prohibits discrimination in employment and healthcare, the daily enforcement is inconsistent. In 2026, the community reports a Low-to-Moderate level of trust in local authorities, as bias-motivated crimes often go unprosecuted outside of the capital.</p>
-            <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-                <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Aleanca LGBT</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Leading 2026 advocacy for marriage equality and legal gender recognition in Tirana.</p>
-                    <a href="https://aleancalgbt.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-                </div>
+		report: `
+        <div class="news-article-view">
+            
+            <div class="badge-container">
+                <div class="badge-video">Video</div>
+                <div class="badge-type">Article</div>
             </div>
-        `,
-		safety: `
-            <p>Posture: Cautious. Legal safety is established in Tirana, but physical safety remains a concern in rural regions where traditional 'Kanun' values persist.</p>
-            <p><strong>Street Pulse & Policing:</strong> Moderate Response. In 2026, visible travelers should be aware of verbal harassment in public squares outside Tirana. Contrastingly, Tirana offers an emerging sense of social harmony within the youth-led Blloku district.</p>
-            <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
-                <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #54</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: High discrepancy between Tirana (Safe) and the North (High Risk).</p>
-                </div>
-            </div>
-        `,
-		travel: `
-            <p>2026 Traveler Rating: Amber. Safe for 'Passing' travelers; those with high visibility should remain in the capital.</p>
-            <p><strong>Safe Havens vs. Red Zones:</strong>
-            * **Green Zones:** The **Blloku District** in Tirana is the epicenter of LGBT-friendly nightlife and café culture.
-            * **Amber Zones:** Tourist hubs like Sarandë; legal rights exist but public hostility is present—discretion is advised.</p>
-            <p><strong>The Venue Spectrum:</strong>
-            * **Upscale/Protected:** Radio Bar Tirana (Highly Inclusive)
-            * **The Local Way:** Destil Creative Hub</p>
-            <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong>
-                    <p style="color: #fff; font-size: 0.85rem;">Public displays of affection are rare even for hetero couples; discretion is the cultural norm for all in 2026.</p>
-                </div>
-            </div>
-        `,
-		health: `
-            <p><strong>Standard of Care:</strong> Access to PrEP is available through NGOs but remains limited in public hospitals. Waiting lists for HRT are significant, and care is often privatized.</p>
-            <p><strong>Traveler Essential:</strong> Travelers should ensure they have travel insurance which includes public liability for unforeseen accidents. Specialized clinics like Streha are essential for competent care.</p>
-            <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-                <a href="http://www.streha-center.org/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;">
-                    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                        <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Streha Center</strong>
-                        <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Tirana - Provides the only specialized LGBT-competent health referrals and shelter in the region.</p>
-                    </div>
+            
+            <h1 class="article-headline">Albania 2026</h1>
+            
+<div class="identity-status-container">
+    <div class="identity-status-bar">
+        <span class="area-label">CITY</span>
+        <div class="id-item"><span>L</span> <span class="id-dot status-green"></span></div>
+        <div class="id-item"><span>G</span> <span class="id-dot status-green"></span></div>
+        <div class="id-item"><span>B</span> <span class="id-dot status-green"></span></div>
+        <div class="id-item"><span>T</span> <span class="id-dot status-amber"></span></div>
+    </div>
+
+    <div class="identity-status-bar">
+        <span class="area-label">RURAL</span>
+        <div class="id-item"><span>L</span> <span class="id-dot status-amber"></span></div>
+        <div class="id-item"><span>G</span> <span class="id-dot status-amber"></span></div>
+        <div class="id-item"><span>B</span> <span class="id-dot status-red"></span></div>
+        <div class="id-item"><span>T</span> <span class="id-dot status-red"></span></div>
+    </div>
+</div>
+
+            <p class="article-lead">
+                As an LGBT tourist, you are going to love it here and I’m going to tell you why you should definitely go at the end, so stay with me. Beautiful beaches and bars and clubs that accept you with smiles and warmth. Wait, it says this is an 'Alternative Bar'. Really? But it’s a gay bar. I think everyone here is gay. It’s a gay bar, right? 
+            </p>
+
+            <p>
+                Of course it is!
+            </p>
+
+            <p>
+                You’re out for a walk and you sense the odd stare or maybe, I mean, were they staring at us when I gave you a hug? I'm sure they smiled when I looked back. It’s fine. You're totally safe. It's nice here and everyone's having a great time. A really great time.
+            </p>
+
+            <p>
+                Everyone's having a great time.
+            </p>
+
+            <p>
+                You sense something. Okay, let’s look at the figures for hate crimes committed against the LGBT community in Albania. The recent data tells us that this is a super-safe environment: reported hate crimes against the LGBT community, 7 to 9 cases per year. Wow! With a population of over 2 million, that’s amazingly low. Unbelievable. To put that into context, <a href="https://www.west-midlands.police.uk/your-options/hate-crime" target="_blank" style="color: #007bff; text-decoration: underline;">Birmingham in the UK</a>, which is a little over half the population of Albania, had over 1,200 reported hate crimes against our community in 2025.
+            </p>
+
+            <h3 class="article-subhead">Facts Vs Fiction</h3>
+            <p>
+                According to <a href="https://www.aleancalgbt.org/" target="_blank" style="color: #007bff; text-decoration: underline;">Aleanca LGBTI</a> and <a href="https://www.ilga-europe.org/report/annual-review-2026/" target="_blank" style="color: #007bff; text-decoration: underline;">ILGA-Europe</a>, 61% of LGBT people ‘experienced/witnessed’ violence in 2025. 88% of the community didn’t trust the police. Only 11.6% of ‘serious’ incidents ever get reported. Only 1 report resulted in conviction over the last two years. 90% never report any incidents to the police because of fear.
+            </p>
+
+            <p>
+                For your entertainment, and because I’m better at make-up than maths, I asked Gemini to take that contested figure of 10% of the human race being LGBT in some way, apply it to these statistics and find out how many crimes would be reported if people didn't live in fear.
+            </p>
+        <div class="table-scroll-container">
+    <table class="briefing-table">
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Population / Count</th>
+                <th>Source / Assumption</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Total Population</td>
+                <td>2,000,000</td>
+                <td>Baseline</td>
+            </tr>
+            <tr>
+                <td>Estimated LGBT Population</td>
+                <td>200,000</td>
+                <td>10% Assumption</td>
+            </tr>
+            <tr>
+                <td>Victims of Violence</td>
+                <td>122,000</td>
+                <td>61% (Aleanca/ILGA Data)</td>
+            </tr>
+            <tr>
+                <td>Expected Reports (Low-End)</td>
+                <td>12,200</td>
+                <td>Based on 10% non-fear reporting</td>
+            </tr>
+            <tr>
+                <td>Expected Reports (High-End)</td>
+                <td>14,152</td>
+                <td>Based on 11.6% "Serious" incidents</td>
+            </tr>
+            <tr class="highlight-row">
+                <td>Actual Police Reports</td>
+                <td>7 to 9</td>
+                <td>Official Government Data</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+            <h3 class="article-subhead">Why would our community be afraid to report crimes?</h3>
+            <p>
+                In the rural north, the 15th-Century social code takes precedence and within that is the <a href="https://www.asylumlawdatabase.eu/en/content/country-guidance-albania" target="_blank" style="color: #007bff; text-decoration: underline;">Concept of Nderi</a>, a traditional and cultural idea of a family’s honor being the only currency. In this system, your sexuality or trans status will be a direct threat to the family’s honor within the clan. This is an existential issue for the family, their lifestyle and income. Repercussions against the family are expected if the family takes no action.
+            </p>
+
+            <p>
+                Once you are outed, even with the slim chance that your family might accept you, you will feel safer leaving for your own protection. The clans' laws rule and, as the local police are often part of the clan, they will in all likelihood defer to clan law and ignore national equality laws. You won’t know if you are reporting to a good cop or a bad one. Our sources state that most police in rural communities believe an LGBT incident is a family matter and none of their business.
+            </p>
+
+            <blockquote class="article-quote">
+                "The state gives me a lawyer in Tirana, but the village gives me a 'Besa' (honor-vow) that I won't survive the night if I stay."
+                <br>
+                <span>— <a href="https://www.unhcr.org/uk/publications/legal-guidance-sexual-orientation-and-gender-identity-claims-albania" target="_blank">UNHCR Evidence SOGI 2025</a></span>
+            </blockquote>
+
+            <h3 class="article-subhead">Why should you go?</h3>
+            <p>
+                Your very existence and visibility gives hope to the local community. You are going to have a great time and have no need to feel any guilt because when you visit you are supporting the LGBT community whose only place of sanctuary may be in the tourist areas and the city which rely on your presence. As a tourist you'll be totally safe and welcomed wherever you go. Just do be aware that in rural areas it is best not to show any PDA, but that's the same just about everywhere.
+            </p>
+
+            <p>
+                To see where to go, check out our travel section for the best LGBT travel links and a map if we can find one.
+            </p>
+
+            <h3 class="article-subhead">More Information</h3>
+
+        <div class="resource-container">
+                <a href="https://www.era-partnership.org/countries/albania/" target="_blank" class="resource-card">
+                    <span class="resource-title">Ylberofilia 2026: LGBT Health Report</span>
+                    <span class="resource-desc">A deep dive into administrative barriers and health disparities in modern Albania.</span>
+                </a>
+
+                <a href="https://hatecrime.osce.org/reporting/albania/2024" target="_blank" class="resource-card">
+                    <span class="resource-title">OSCE Annual Hate Crime Audit</span>
+                    <span class="resource-desc">Official audit proving the massive discrepancy between reported crimes and lived reality.</span>
+                </a>
+
+                <a href="https://www.researchgate.net/publication/353017921_Social_Representations_and_Women_Who_Live_as_Men_in_Northern_Albania" target="_blank" class="resource-card">
+                    <span class="resource-title">The Sworn Virgins & Gender Paradox</span>
+                    <span class="resource-desc">Sociological study on historical gender-bending vs. modern identity rejection.</span>
+                </a>
+
+                <a href="https://www.youtube.com/watch?v=pJQPbMraGFE" target="_blank" class="resource-card">
+                    <span class="resource-title">Documentary: The Last Sworn Virgins</span>
+                    <span class="resource-desc">Visual testimony of the Burrnesha tradition and the rigid gender codes of the North.</span>
                 </a>
             </div>
-        `,
-		posture: `
-            <p>'Culturally Conservative but Legally Lagging.' Albania is moving toward Western norms in Tirana while the countryside remains a decade behind.</p>
-        `,
-		sources: [
-			{ label: "Ground Intel: Nomadic Boys Albania", url: "https://nomadicboys.com/gay-albania/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA Europe", url: "https://rainbowmap.ilga-europe.org/countries/albania/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Tirana Pride 2026", url: "https://pinkembassy.al/", button: "EVENT DETAILS →" },
-		],
+
+            <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+                GWN | April 2026
+            </p>
+        </div>
+    `,
+
+		health: `
+        <div class="emergency-guide">
+            <h3 style="color: #0c0c0c;">Updated: April 2026</h3>
+            <br>
+            <p><strong>Status:</strong> Reported PrEP Scarcity.</p>
+            <p>If you lose your medication, do not waste time at a local pharmacy. Go directly to <strong>Mother Teresa University Hospital</strong> in Tirana.</p>
+            
+            
+        </div>
+    `,
+
+		travel: `
+        <div>
+            <h4>Nightlife & The Scene</h4><br>
+            <p>Skip the "Gay Map"—it doesn't exist. Look for <strong>'Alternative'</strong> spaces in Tirana. Radio Bar and Destil are your anchors.</p>
+            <a href="#" class="map-btn">📍 Open Live Scene Map</a>
+        </div>
+    `,
 	},
 
 	andorra: {
@@ -1092,21 +1204,55 @@ Object.assign(globalData, {
 `,
 
 		travel: `
-    <p>Germany is universally regarded as a "Global Sanctuary" for LGBTQ+ travelers in 2026. Berlin, particularly the Schöneberg and Neukölln districts, continues to serve as the historic and modern heart of European LGBT life. Cologne, with its massive "Christopher Street Day" (Pride) celebration, remains a premier destination where LGBT visibility is part of the city’s civic pride. Public Displays of Affection (PDA) are 100% normalized in all major urban centers and are increasingly common in university towns like Leipzig and Münster.</p>
+    <div class="regional-directory">
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Berlin</h2>
+            <p><em>The world's hedonistic capital. Nightlife here is a marathon, not a sprint.</em></p>
 
-    <p>For transgender and non-binary travelers, the 2024 Self-Determination Act has had a visible impact on the hospitality sector. Hotel staff, airport security, and public service employees are generally well-trained in modern gender identity standards, making ID checks and administrative interactions seamless. The "posture" of the nation is one of confident openness. Even in the smaller municipalities of Bavaria or the Black Forest, travelers can expect a high standard of professional respect and safety from the local population.</p>
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">At-A-Glance Bar Map</h4>
+            <p><a href="https://www.siegessaeule.de/map/@52.5111539,13.3989015,11.8z/?f=bars" target="_blank">Siegessäule: Interactive Berlin Bar & Club Map</a></p>
 
-    <p>While some far-right sentiment persists in specific rural pockets of the East, the actual risk of physical hostility for foreign travelers is statistically negligible. Major railway stations (Deutsche Bahn) and airports maintain high-security standards and have clear protocols for reporting harassment. Solo travelers and LGBT families will find Germany to be an exceptionally low-stress environment. The 2026 verdict is "Total Security," where safety is not just a policy but a deeply ingrained social norm in the majority of the country.</p>
-
-    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-        <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Sanctuaries & Survival</h4>
-        <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; margin-bottom: 15px; border: 1px solid rgba(52, 152, 219, 0.3);">
-            <strong style="display: block; font-size: 1.1rem; color: #3498db;">🏰 Schwules Museum Berlin</strong>
-            <a href="https://www.schwulesmuseum.de/en/" target="_blank" style="color: #fff; font-size: 0.85rem;">Visit the World's First Gay Museum</a>
+            <p style="margin-top: 20px;"><strong>The Scene:</strong> Schöneberg is the historic heart (try <strong>Prinzknecht</strong>); Neukölln/Kreuzberg is for the edgy crowd (try <strong>Möbel Olfe</strong>). <strong>Berghain</strong> and <strong>Lab.oratory</strong> remain the ultimate techno and fetish destinations.</p>
         </div>
-        <div class="safety-card" style="background: rgba(46, 204, 113, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(46, 204, 113, 0.3);">
-            <strong style="display: block; font-size: 1.1rem; color: #2ecc71;">✅ Berlin Travel Safety Guide</strong>
-            <a href="https://www.visitberlin.de/en/lgbtiq" target="_blank" style="color: #fff; font-size: 0.85rem;">Official City Safety Portal</a>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Hamburg</h2>
+            <p><em>A mix of maritime grit and high-energy nightlife across St. Georg and St. Pauli.</em></p>
+
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">At-A-Glance Bar Map</h4>
+            <p><a href="https://www.patroc.com/gay/hamburg/bars.html" target="_blank">Patroc Hamburg: Direct Bar & Club Directory</a></p>
+
+            <p style="margin-top: 20px;"><strong>The Scene:</strong> <strong>WunderBar</strong> (St. Pauli) is the high-energy anchor, while <strong>Café Gnosa</strong> (St. Georg) is the essential social hub for coffee or cocktails.</p>
+        </div>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Cologne (Köln)</h2>
+            <p><em>The friendliest scene in Germany, split between pop-parties and deep leather tradition.</em></p>
+
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Tonight's Events & Maps</h4>
+            <p><a href="https://pinksider.com/en/cologne/clubs-bars/" target="_blank">Pinksider Cologne: Live Bar & Party Guide</a></p>
+
+            <p style="margin-top: 20px;"><strong>The Scene:</strong> Head to Schaafenstraße for pop and dancing (<strong>EXILE</strong>); hit the Altstadt for the legendary leather scene at <strong>Pullermanns</strong>.</p>
+        </div>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Munich (München)</h2>
+            <p><em>Polished Bavarian style with a world-famous, traditional leather backbone.</em></p>
+
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">At-A-Glance Bar Map</h4>
+            <p><a href="https://www.patroc.com/gay/munich/bars.html" target="_blank">Patroc Munich: Full Scene Directory & Map</a></p>
+
+            <p style="margin-top: 20px;"><strong>The Scene:</strong> Center your trip on the Glockenbachviertel. <strong>Ochsengarten</strong> is a leather institution, while <strong>Deutsche Eiche</strong> is a world-class bathhouse and social landmark.</p>
+        </div>
+
+        <div class="city-block">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Frankfurt & Leipzig</h2>
+            <p><em>Frankfurt offers a compact, intense scene, while Leipzig is the rising star of indie-arts nightlife.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Regional Directories</h4>
+            <p><a href="https://www.patroc.com/gay/frankfurt/bars.html" target="_blank">Patroc Frankfurt: Bar Guide</a> | <a href="https://www.patroc.com/gay/leipzig/bars.html" target="_blank">Patroc Leipzig: Bar Guide</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Picks:</strong> <strong>Switchboard</strong> (Frankfurt) for community vibes; <strong>TwentyOne</strong> (Leipzig) for a major dance floor.</p>
         </div>
     </div>
 `,
@@ -3237,19 +3383,97 @@ Object.assign(globalData, {
     `,
 
 		travel: `
-        <p>2026 Traveler Rating: Amber. Safe for 'passing' individuals, but Trans/GNC travelers face significant risk of verbal and physical targeting in non-central urban areas.</p>
-        <p><strong>Safe Havens vs. Red Zones:</strong>
-        * **Green Zones:** Soho (London), The Village (Manchester), and Brighton—remain high-visibility safe harbors.
-        * **Amber Zones:** Outer London boroughs and satellite cities where policing is sparse and local ideological tensions are high.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 20px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong>
-                <p style="color: #fff; font-size: 0.85rem;">Galop warns that 91% of serious incidents go unreported. Do not rely on police visibility for safety; stick to well-lit, busy areas and utilize community-verified venues in London.</p>
-            </div>
+    <div class="regional-directory">
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">London</h2>
+            <p><em>In 2026, London feels super gay-friendly, fast‑paced, and culturally layered. Soho thrives as the historic heart, Vauxhall pulses with late-night clubbing, and East London (Dalston/Hackney) drives the alternative LGBT scene. Best time to visit: May–September to be able to enjoy the parks when winding down.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://www.qxmagazine.com" target="_blank">QX Magazine (Primary London Guide)</a></p>
+            <p><a href="https://www.timeout.com/london/nightlife/the-best-gay-bars-in-london" target="_blank">TimeOut London LGBT Directory</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> The British Museum, Tower of London, and the Sky Garden. <a href="https://www.timeout.com/london/things-to-do" target="_blank">Full City Guide →</a></p>
+            
+            <p><strong>The Clubs:</strong> Heaven (Charing Cross) – London’s flagship gay superclub; Fire (Vauxhall) – Late-night house and techno institution.</p>
+            
+            <p><strong>The Bars:</strong> Royal Vauxhall Tavern – Iconic cabaret and performance hub; Admiral Duncan – Historic Soho pub with nightly drag.</p>
+            
+            <p><strong>Inclusivity (Lesbian):</strong> She Soho – The primary basement bar for queer women; La Camionera – Popular East London hangout.</p>
+            
+            <p><strong>Inclusivity (Trans/NB):</strong> The Divine (Dalston) – Premier venue for trans-led performance; VFD – Experimental LGBT arts space.</p>
+            
+            <p><strong>Sauna & Cafe:</strong> The Pleasuredrome (Vauxhall) / Dalston Superstore (LGBT brunch & art).</p>
         </div>
-    `,
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Brighton</h2>
+            <p><em>Effortlessly gay-friendly, beachy, and relaxed. Kemptown leads the scene with a high density of LGBT venues, while the Lanes offer indie shopping and charm. Best time: June–August.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://gayborhood.com/guide/united-kingdom/brighton/" target="_blank">Brighton Gayborhood Directory</a></p>
+            <p><a href="https://www.visitbrighton.com/lgbtq" target="_blank">Official Brighton LGBT Guide</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Royal Pavilion, Palace Pier, and the i360 Viewing Tower. <a href="https://www.visitbrighton.com" target="_blank">Full City Guide →</a></p>
+            
+            <p><strong>The Clubs:</strong> Club Revenge – Multi-level party HQ; Legends Basement – Seafront nightlife staple.</p>
+            
+            <p><strong>The Bars:</strong> Charles Street Tap – Modern bar with drag shows; Affinity Bar – Stylish lounge popular with locals.</p>
+            
+            <p><strong>Inclusivity:</strong> The Marlborough (Lesbian-focused programming); The Queery (Trans-run library & cafe).</p>
+        </div>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Manchester</h2>
+            <p><em>Bold, communal, and nightlife-heavy. Canal Street remains the UK's most famous pedestrianized gay village, safe and vibrant day and night.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://canal-st.co.uk/" target="_blank">Canal St Online (Comprehensive Guide)</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Manchester Art Gallery, Science & Industry Museum, John Rylands Library. <a href="https://www.visitmanchester.com" target="_blank">Full City Guide →</a></p>
+            
+            <p><strong>The Clubs:</strong> BarPop – High-energy drag and pop; New York New York – Famous cabaret-first venue.</p>
+            
+            <p><strong>The Bars:</strong> Via – Canal St staple with mixed crowds; The Eagle – Renowned men-focused alternative bar.</p>
+            
+            <p><strong>Inclusivity:</strong> Vanilla – Manchester's premier lesbian bar; Feel Good Club – Incredibly trans-inclusive wellness cafe.</p>
+        </div>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Birmingham</h2>
+            <p><em>The Gay Village around Hurst Street is compact, friendly, and lively. Known for a strong community feel and massive Pride celebrations.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://www.visitbirmingham.com/things-to-do/lgbt" target="_blank">Birmingham LGBT Hub</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Birmingham Museum, Library of Birmingham, and the Canal Quarter. <a href="https://visitbirmingham.com" target="_blank">Full City Guide →</a></p>
+            
+            <p><strong>The Nightlife:</strong> The Nightingale (Superclub); Missing Bar (Social hub); The Fox Bar (Historic lesbian pub).</p>
+        </div>
+
+        <div class="city-block" style="margin-bottom: 50px;">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Scotland (Edinburgh & Glasgow)</h2>
+            <p><em>Edinburgh offers an artsy, refined vibe centered near the 'Pink Triangle.' Glasgow is gritty, creative, and unapologetically bold with its nightlife.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://www.outsavvy.com/" target="_blank">OutSavvy Scotland (Live Event & Venue Guide)</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Picks:</strong> CC Blooms (Edinburgh) – Legendary club; The Polo Lounge (Glasgow) – Scotland's flagship gay venue.</p>
+            
+            <p><strong>Inclusivity:</strong> Category Is Books (Glasgow) – Vital trans-inclusive bookstore and community space.</p>
+        </div>
+
+        <div class="city-block">
+            <h2 style="color: #f1c40f; margin-bottom: 10px;">Wales & NI (Cardiff & Belfast)</h2>
+            <p><em>Cardiff's Charles Street and Belfast's Cathedral Quarter offer tight-knit, welcoming scenes that are rapidly evolving.</em></p>
+            
+            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Full list of venues</h4>
+            <p><a href="https://www.visitcardiff.com/lgbtq" target="_blank">Visit Cardiff LGBT</a></p>
+            <p><a href="https://visitbelfast.com/article/lgbtq-belfast/" target="_blank">Visit Belfast LGBT</a></p>
+
+            <p style="margin-top: 20px;"><strong>Top Picks:</strong> The Golden Cross (Cardiff) – Historic pub; Kremlin (Belfast) – High-theatricality superclub.</p>
+        </div>
+    </div>
+`,
 
 		health: `
         <p>The 2026 healthcare landscape is stark. While HIV care remains functional (though moving toward a generic-only, annual-check model), the wider NHS is in crisis. A&E waits of 12+ hours are the norm. Most critically, **NHS dentistry is now almost non-existent** for new patients; 32% of people in England have been forced to pay for private dental care in 2025/26 just to receive basic treatment.</p>
@@ -3368,6 +3592,258 @@ Object.assign(globalData, {
 		sources: [
 			"https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20231218_fiducia-supplicans_en.html",
 			"https://www.thevaticantickets.com/rules-regulations/",
+		],
+	},
+
+	england: {
+		name: "England",
+		continent: "europe",
+		status: "amber",
+
+		legal: `
+    <p>England maintains a Tier 1 legal framework (Equality Act 2010), but 2026 is defined by a severe "protection vs. practice" gap. While same-sex rights are stable, transgender rights are under intense legislative and social pressure, with active moves to restrict "biological sex" definitions in law.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> High. In 2026, the Galop "Invisible Hate" report confirms that over 90% of anti-LGBTQ+ incidents in England go unreported. Community trust in the Metropolitan Police (London) and West Midlands Police is at a historic low due to documented failures in recording and investigating hate crimes.</p> 
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Galop (National)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Specializing in anti-abuse and hate crime support where official systems are failing victims in 2026.</p> 
+    <a href="https://www.galop.org.uk" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+    </div> </div> `,
+
+		safety: ` 
+    <p>Current Posture: 'Socially Fracturing.' England is a checkerboard of safety. While major city centers are visible, there is a rising trend of "exclusion zones" where queer visibility—particularly for Trans and BIPOC individuals—triggers verbal or physical hostility.</p>
+    <p><strong>Street Pulse & Policing:</strong> Low Response. The 2026 "Policed by Consent" model is under strain. Travelers should exercise caution in outer London boroughs and post-industrial towns in the North/Midlands where local ideological tensions have spiked. Street harassment is common late at night near transit hubs.</p> 
+    <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+    <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #22 (Down from #14)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Reflects the high level of unreported violence and the collapse of community trust in urban policing.</p> </div> </div> `,
+
+		travel: ` 
+    <p>2026 Traveler Rating: Amber. Safe for 'passing' individuals; Trans/GNC travelers face high risk of targeting in non-tourist areas.</p> 
+    <p><strong>Safe Havens vs. Red Zones:</strong> 
+    Green Zones: Soho (London), The Village (Manchester), Kemp Town (Brighton)—high-visibility "bubbles." 
+    Amber Zones: Outer London boroughs (e.g., Croydon, Newham) and West Midlands satellite towns—discretion strongly advised.</p>
+    <p><strong>The Venue Spectrum:</strong> 
+    Most Popular Club: Heaven
+    Bars: Ku Bar. Comptons. The Village. 
+    The Local Way: Royal Vauxhall Tavern (London) - A resilient community stronghold.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+    <p style="color: #fff; font-size: 0.85rem;">Avoid the "False Security" of flags. Even in Brighton, stick to well-lit areas. Galop reports 91% of serious incidents go unreported; stay vigilant.</p>
+    </div> 
+
+<div class="travel-resource-bar" style="margin-top: 30px; display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+        <a href="https://www.gaytimes.com/nightlife/" target="_blank" style="background: #e61b1b; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">GAY TIMES: UK NIGHTLIFE HUB →</a>
+        <a href="https://www.qxmagazine.com/" target="_blank" style="background: #3498db; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">QX MAGAZINE: LONDON ONLY →</a>
+        <a href="https://www.attitude.co.uk/culture/music/" target="_blank" style="background: #000; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.85rem;">ATTITUDE: SCENE & CULTURE →</a>
+    </div>
+
+    <div class="travel-resource-grid" style="margin-top: 25px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;">
+        <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">National Nightlife Intel</h4>
+        <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+            <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Destination" Shift</strong>
+            <p style="color: #fff; font-size: 0.85rem;">With 77% of local venues closing in the last few years, the 2026 scene has moved toward "Destination Events." Follow **Gay Times** for large-scale warehouse raves in Manchester and Bristol that offer high-security, community-vetted environments.</p>
+        </div>
+    
+    </div> `,
+
+		health: ` 
+    <p><strong>Standard of Care:</strong> The 2026 NHS is in "Survival Mode." A&E waits of 12+ hours are standard. HIV care is moving toward generic-only, annual-check models. **NHS Dentistry is functionally extinct** for new patients; 32% of people in England are now forced into high-cost private dental care.</p> 
+    <p><strong>Traveler Essential:</strong> Do not rely on "Standard" NHS walk-ins. Specialized queer clinics are the only way to ensure competent care without discrimination or extreme delays.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+    <a href="https://www.dean.st/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;"> 
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">56 Dean Street (Soho)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">World-class HIV/STI care and 56T (Trans support). Essential where general NHS services are failing.</p> </div> </a> 
+    </div> `,
+
+		posture: ` <p>Legally Advanced but Structurally Frayed. A two-tier society where safety is increasingly tied to private resources.</p> `,
+
+		sources: [
+			{ label: "Ground Intel: Galop Report 2026", url: "https://www.galop.org.uk/news/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Healthwatch Dental 2026", url: "https://www.healthwatch.co.uk/", button: "VIEW DENTAL DATA →" },
+		],
+	},
+
+	scotland: {
+		name: "Scotland",
+		continent: "europe",
+		status: "amber",
+
+		legal: `
+    <p>Scotland often portrays itself as a progressive beacon, but 2026 is marked by the fallout of the blocked Gender Recognition Reform. The "vibe" has shifted from pioneering to political stalemate.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> Moderate. While the Hate Crime and Public Order Act (2021) is in effect, enforcement is patchy. In 2026, community activists report that "Inclusive Education" is facing localized pushback in rural councils.</p> 
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Equality Network</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Working to maintain Scotland’s distinct human rights path amid UK-wide polarization in 2026.</p> 
+    <a href="https://www.equality-network.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+    </div> </div> `,
+
+		safety: ` 
+    <p>Current Posture: 'Culturally Warm but Socially Tense.' Glasgow and Edinburgh remain safe hubs, but there is a noticeable rise in trans-exclusionary rhetoric in public spaces.</p>
+    <p><strong>Street Pulse & Policing:</strong> Moderate Response. Police Scotland is generally more LGBTQ+ literate than the Met, but 2026 budget cuts have reduced "community safety" patrols in queer districts like Glasgow’s Merchant City.</p> 
+    <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+    <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #19 (Regional Context)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Reflects the rise in public attacks against the LGBTQ+ community documented in the 2025 Scottish Government reports.</p> </div> </div> `,
+
+		travel: ` 
+    <p>2026 Traveler Rating: Amber. Safer than England for general visibility, but 'Amber' caution is still required for Trans travelers in rural Highlands/Islands.</p> 
+    <p><strong>Safe Havens vs. Red Zones:</strong> 
+    * **Green Zones:** Merchant City (Glasgow), Broughton St (Edinburgh). 
+    * **Amber Zones:** Small coastal towns during peak tourist season—conservative social norms can lead to "staring" or verbal friction.</p>
+    <p><strong>The Venue Spectrum:</strong> 
+    * **Upscale/Protected:** Kimpton Charlotte Square 
+    * **The Local Hearth:** The Waterloo Bar (Glasgow) - A safe, traditional community pub.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+    <p style="color: #fff; font-size: 0.85rem;">Scotland is "Legally Tier 1" but "Socially Exhausted." Expect political debate even in queer spaces. Avoid highly public trans-rights activism in rural areas.</p>
+    </div> </div> `,
+
+		health: ` 
+    <p><strong>Standard of Care:</strong> The Sandyford Clinic (Glasgow) remains the primary site for gender services but wait times are now measured in years, not months. General A&E waits match the UK-wide crisis.</p> 
+    <p><strong>Traveler Essential:</strong> LGBT Health and Wellbeing (NGO) is vital for navigating the frayed NHS system in Scotland.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+    <a href="https://www.lgbthealth.org.uk/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;"> 
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">LGBT Health and Wellbeing</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Edinburgh/Glasgow - Specialist support for navigating the health crisis.</p> </div> </a> 
+    </div> `,
+
+		posture: ` <p>Progressive Aspirations vs. Practical Fraying. Culturally warm but currently stuck in a political and medical gridlock.</p> `,
+
+		sources: [
+			{ label: "Ground Intel: Equality Network Scotland", url: "https://www.equality-network.org/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Gov.Scot LGBTQI+ Policy", url: "https://www.gov.scot/policies/lgbti/", button: "VIEW LEGAL DATA →" },
+		],
+	},
+
+	northern_ireland: {
+		name: "Northern Ireland",
+		continent: "europe",
+		status: "amber",
+
+		legal: `
+    <p>Marriage equality is legal (2020), but Northern Ireland lacks the comprehensive Gender Recognition reforms and conversion therapy bans seen elsewhere. 2026 is marked by "Human Rights Commission" warnings regarding gender-based discrimination.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> High. In 2026, a significant gap remains in assisted human reproduction and surrogacy for LGBTQ+ families. Religious exemptions in services remain a point of legal friction.</p> 
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ The Rainbow Project</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary site for legal advocacy and anti-discrimination support in the North for 2026.</p> 
+    <a href="https://www.rainbow-project.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+    </div> </div> `,
+
+		safety: ` 
+    <p>Current Posture: 'Sensitive & Sectarian.' Safety is often dictated by the "politics of identity." While Belfast is a safe hub, rural areas remain governed by traditional, often religious, conservatism.</p>
+    <p><strong>Street Pulse & Policing:</strong> Moderate Response. The PSNI is literate in hate-crime law, but visible travelers should avoid displaying LGBTQ+ identifiers (flags/pins) in neighborhoods with sectarian murals, where identity is a trigger for hostility.</p> 
+    <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+    <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #28 (Regional Context)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 focus: Decisive action needed to protect rights across poverty and discrimination lines.</p> </div> </div> `,
+
+		travel: ` 
+    <p>2026 Traveler Rating: Amber. High safety in the "Cathedral Quarter" bubble; discretion required elsewhere.</p> 
+    <p><strong>Safe Havens vs. Red Zones:</strong> 
+    * **Green Zones:** Cathedral Quarter (Belfast), University areas. 
+    * **Amber Zones:** Rural border towns and sectarian "interface" areas where outsiders are viewed with suspicion.</p>
+    <p><strong>The Venue Spectrum:</strong> 
+    * **Upscale/Protected:** The Merchant Hotel 
+    * **The Local Hearth:** Union Street Bar (Belfast) - The community's safe center.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+    <p style="color: #fff; font-size: 0.85rem;">Don't confuse "Peace" with "Acceptance." Sectarian neighborhoods often remain socially stagnant regarding queer rights. Stick to known tourist corridors.</p>
+    </div> </div> `,
+
+		health: ` 
+    <p><strong>Standard of Care:</strong> The NHS NI is under extreme pressure. PrEP access is functional but mental health wait times for the LGBTQ+ community have hit a crisis point in 2026.</p> 
+    <p><strong>Traveler Essential:</strong> The Rainbow Project provides the only reliable national helpline for verified referrals to safe clinics.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+    <a href="https://www.rainbow-project.org/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;"> 
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">The Rainbow Project</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Belfast/Derry - Providing peer-led care where public health is buckling.</p> </div> </a> 
+    </div> `,
+
+		posture: ` <p>Legally Lagging, Socially Sensitive. A community built on resilience amid sectarian tension.</p> `,
+
+		sources: [
+			{ label: "Ground Intel: NI Human Rights Commission", url: "https://nihrc.org/", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Rainbow Project NI", url: "https://www.rainbow-project.org/", button: "VIEW LEGAL DATA →" },
+		],
+	},
+
+	wales: {
+		name: "Wales",
+		continent: "europe",
+		status: "amber",
+
+		legal: `
+    <p>The Welsh "LGBTQ+ Action Plan" (2023-2026) aims for total inclusion, but the 2025/26 update reveals that staff consistently report poorer experiences and high rates of discrimination, particularly trans staff.</p>
+    <p><strong>The Statute vs. Ground Gap:</strong> Moderate. The government is a "Champion," but the 2026 NatCen evaluation shows that workplace and public sector discrimination remains entrenched despite statutory guidance.</p> 
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4> 
+    <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Pride Cymru</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Monitoring the 2026 implementation of the Action Plan and providing victim advocacy.</p> 
+    <a href="https://www.pridecymru.com/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
+    </div> </div> `,
+
+		safety: ` 
+    <p>Current Posture: 'Striving but Struggling.' Cardiff is safe, but rural Valleys areas report a "stagnation" in safety perceptions. Aggravated offences motivated by hostility are under closer scrutiny in 2026.</p>
+    <p><strong>Street Pulse & Policing:</strong> High Response (Urban). South Wales Police are proactive, but 2026 data shows LGBTQ+ individuals have lower confidence in "speaking up" compared to heterosexual peers.</p> 
+    <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+    <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4> 
+    <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;"> 
+    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #17 (Regional Context)</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Performance is bolstered by political intent but dragged down by recorded rates of abuse in public sectors.</p> </div> </div> `,
+
+		travel: ` 
+    <p>2026 Traveler Rating: Amber. Excellent in Cardiff Bay/City center; discretion advised in the Valleys.</p> 
+    <p><strong>Safe Havens vs. Red Zones:</strong> 
+    * **Green Zones:** Charles Street (Cardiff), Pontcanna. 
+    * **Amber Zones:** Rural Valleys towns where "Old School" masculinity can lead to verbal friction for visible GNC travelers.</p>
+    <p><strong>The Venue Spectrum:</strong> 
+    * **Upscale/Protected:** St David's Hotel 
+    * **The Local Way:** The Golden Cross (Cardiff) - Still the safest spot in the capital.</p>
+    <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4> 
+    <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);"> 
+    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong> 
+    <p style="color: #fff; font-size: 0.85rem;">The government is on your side, but the street might not be. Trust the Cardiff hubs; be careful on late-night trains between South Wales and London.</p>
+    </div> </div> `,
+
+		health: ` 
+    <p><strong>Standard of Care:</strong> Wales leads on PrEP access, but 2026 healthcare waits in A&E and for specialized trans care are significant. The 10-Year Health Plan is only just starting to address systemic barriers.</p> 
+    <p><strong>Traveler Essential:</strong> Sexual Health Wales (SHW) is the most efficient way to find verified, safe clinics outside of the capital.</p>
+    <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
+    <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4> 
+    <a href="https://www.shwales.org.uk/" target="_blank" style="text-decoration: none; display: block; margin-bottom: 15px;"> 
+    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;"> 
+    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Sexual Health Wales</strong> 
+    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">National portal for inclusive care across the nation.</p> </div> </a> 
+    </div> `,
+
+		posture: ` <p>Ambitiously Inclusive but Socially Lagging. A nation fighting to stay ahead of a UK-wide regression.</p> `,
+
+		sources: [
+			{ label: "Ground Intel: Welsh Gov Progress Update", url: "https://www.gov.wales/lgbtq-action-plan-wales-progress-update", button: "READ RECENT UPDATES →" },
+			{ label: "Official Index: Pride Cymru Advocacy", url: "https://www.pridecymru.com/", button: "VIEW LEGAL DATA →" },
 		],
 	},
 });

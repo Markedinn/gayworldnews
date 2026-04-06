@@ -6,8 +6,16 @@
 	padding: 0;
 }
 
+* {
+	scrollbar-width: thin;
+	scrollbar-color: transparent transparent;
+}
 *::-webkit-scrollbar {
-	display: none;
+	width: 6px;
+}
+*::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
 }
 
 body {
@@ -17,6 +25,7 @@ body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	margin: 0;
 	overflow-x: hidden;
+	background-color: #000;
 }
 
 body::before {
@@ -29,17 +38,17 @@ body::before {
 	z-index: -1;
 	background: url("images/world_img.webp") center/cover no-repeat;
 	filter: brightness(0.8) contrast(1.6) saturate(1.6);
-	background-color: rgba(10, 158, 238, 0.3);
+	background-color: rgba(10, 158, 238, 0.05);
 	background-blend-mode: multiply;
 	pointer-events: none;
 }
 
 #update-status {
-	color: #ffffff !important;
+	color: #ffffff;
 	font-size: 1rem;
 	font-weight: 600;
 	text-align: center;
-	margin: 15px 0 5px 0 !important;
+	margin: 15px 0 5px 0;
 	padding: 5px 0;
 	width: 100%;
 	display: block;
@@ -154,12 +163,13 @@ h2 {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 1);
-	border: 1px solid rgb(228, 82, 191);
-	border-left: 3px solid rgb(228, 82, 191);
+	background: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-top: 4px solid rgba(255, 255, 255, 0.8);
 	border-radius: 50px !important;
-	border-radius: 50px;
-	color: rgba(22, 7, 230, 1);
+	color: #000000 !important;
 	font-weight: 800;
 	text-transform: uppercase;
 	transition: 0.3s ease;
@@ -177,26 +187,21 @@ h2 {
 	text-align-last: center;
 	outline: none;
 	cursor: pointer;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #translator-anchor select option {
-	background: rgba(22, 7, 230, 0.93) !important;
-	color: #ffffff !important;
-	padding: 12px !important;
-	font-size: 1.1rem;
+	background: #ffffff !important;
+	color: #000000 !important;
+	padding: 15px !important;
+	font-size: 1rem !important;
+	font-weight: 800 !important;
 }
 
 #translator-anchor select:hover {
-	background: rgba(22, 7, 230, 1) !important;
-	border-color: #ffffff !important;
-	color: #ffffff !important;
-	box-shadow:
-		0 8px 15px rgba(12, 12, 12, 0.3),
-		inset 0 3px 5px rgba(255, 255, 255, 0.4);
-	transform: translateY(-2px);
-	transition: all 0.2s ease-out;
+	background: rgb(255, 255, 255, 0.5) !important; /* Flips to Deep Blue */
+	color: #000000 !important;
+	border: 3px solid rgba(255, 255, 255, 0.8) !important;
+	transform: translateY(-3px) scale(1.02);
 }
 
 /* THE SEARCH AND MAP PILLS */
@@ -210,28 +215,28 @@ h2 {
 	justify-content: center !important;
 	padding: 0 20px !important;
 	border-radius: 50px;
-	background: rgba(255, 255, 255, 1);
-	letter-spacing: 2px;
-	text-decoration: none;
-	border: 1px solid rgb(228, 82, 191);
-	border-left: 3px solid rgb(228, 82, 191);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	font-size: 16px;
-	color: rgba(22, 7, 230, 1);
+	background: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-top: 4px solid rgba(255, 255, 255, 0.8);
+	border-radius: 50px !important;
+	color: #000000 !important;
+	font-size: 1rem;
 	font-weight: 800;
 	text-align: center;
+	text-decoration: none;
 	outline: none;
 	caret-color: #ffffff;
 }
 
 .landing-search-wrap input::placeholder {
-	color: rgba(22, 7, 230, 1);
+	color: #000000;
 	letter-spacing: 2px;
 }
 
 .landing-search-wrap input:hover::placeholder {
-	color: #ffffff !important;
+	color: #000000;
 }
 
 /* --- DROPDOWN MENU--- */
@@ -245,8 +250,8 @@ h2 {
 	display: none;
 	flex-direction: column;
 	z-index: 2000;
-	background: rgba(22, 7, 230, 0.993) !important;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.5) !important;
+	border: 3px solid rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	border-radius: 12px;
@@ -262,8 +267,13 @@ h2 {
 
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-5px);
-	background: rgba(22, 7, 230, 1);
-	border-bottom: 1px solid #ffffff;
+	background: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-top: 4px solid rgba(255, 255, 255, 0.8);
+	border-radius: 50px !important;
+	color: #000000 !important;
 	border-radius: 50px;
 	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 	z-index: 10;
@@ -275,36 +285,56 @@ h2 {
 	width: 100%;
 }
 
+/* Unified Hover Effect for Search and Map Pills */
 .landing-search-wrap input:hover,
 .search-map-link:hover {
-	background: rgba(22, 7, 230, 1) !important;
-	color: #ffffff !important;
-	border-color: #ffffff !important;
-	transform: translateY(-2px);
+	/* Match the Translator's transform and scale */
+	transform: translateY(-3px) scale(1.02);
+
+	/* Match the Translator's background transparency */
+	background: rgba(255, 255, 255, 0.5) !important;
+
+	/* Match the Translator's thicker border */
+	border: 3px solid rgba(255, 255, 255, 0.8) !important;
+
+	/* Enhanced shadow for the "lifted" look */
 	box-shadow:
-		0 8px 15px rgba(12, 12, 12, 0.3),
-		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+		0 12px 20px rgba(0, 0, 0, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.2);
+
+	/* Smooth out the color transition */
+	color: #000000 !important;
+}
+
+/* Ensure the base state has the transition property for the new scale/border */
+.landing-search-wrap input,
+.search-map-link {
+	transition:
+		transform 0.3s ease,
+		background 0.3s ease,
+		border 0.3s ease,
+		box-shadow 0.3s ease;
+	will-change: transform;
 }
 
 /* Country Cards */
 
 .country-card {
 	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
+	align-items: center !important; /* Centers Inner Pill on Y-axis */
+	justify-content: center !important; /* Centers Inner Pill on X-axis */
 	margin: 12px auto !important;
-	padding: 10px !important;
+	padding: 10px !important; /* Space between color frame and blue box */
 	border-radius: 15px !important;
 	text-decoration: none !important;
-	min-height: 70px !important;
+	min-height: 70px !important; /* Ensures consistent height */
 	border: none !important;
-	background: rgba(22, 7, 230, 0.95) !important;
 	color: #ffffff !important;
 	width: 100% !important;
 	padding: 12px 5px !important;
 	border-radius: 10px !important;
 	text-align: center !important;
-	font-size: 1.2rem !important;
+	font-size: 1.2rem !important; /* Bigger letters */
 	font-weight: 600 !important;
 	letter-spacing: 0.5px !important;
 	text-transform: uppercase !important;
@@ -331,26 +361,26 @@ h2 {
 
 /* --- THE ANTARCTICA ICE CARD --- */
 .country-card.ice {
+	/* A crisp, frozen blue-grey at 0.89 opacity */
 	background-color: rgba(102, 207, 241, 0.966) !important;
 	border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 
 .country-card:hover {
-	transform: translateY(-3px);
-	filter: brightness(1.15);
+	transform: translateY(-3px); /* Subtle lift up */
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 	cursor: pointer;
 }
 
 /* Make the inner blue box pop even more on hover */
 .country-card:hover span {
-	background: rgba(22, 7, 230, 1) !important;
+	/* background: rgba(22, 7, 230, 1) !important;  */
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Specific Red Glow for Danger */
 .country-card.red:hover {
-	box-shadow: 0 0 20px rgba(200, 0, 0, 0.6);
+	box-shadow: 0 0 20px rgb(247, 1, 1);
 }
 
 /* Tap Effect (Mobile/All) */
@@ -376,8 +406,8 @@ h2 {
 	position: absolute;
 	top: 10px;
 	right: 15px;
-	background: rgba(22, 7, 230, 0.3);
-	color: #ffffff;
+	background: #ffffff;
+	color: #000000;
 	font-size: 0.65rem;
 	font-weight: 800;
 	padding: 3px 8px;
@@ -392,17 +422,20 @@ h2 {
 /* THE MAIN BOX: */
 .news-accordion,
 .manual-pinned {
-	background: rgba(22, 7, 230, 0.88);
-	backdrop-filter: blur(15px) saturate(150%);
-	-webkit-backdrop-filter: blur(15px) saturate(150%);
-	border: 1px solid rgba(255, 255, 255, 0.877);
-	border-radius: 12px;
-	margin-bottom: 20px;
-	overflow: hidden;
-	transition: all 0.3s ease;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+	width: 100%;
+	margin-bottom: 25px;
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	/* CLEAN TRANSITION HERE */
+	transition:
+		transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+		background 0.4s ease,
+		box-shadow 0.5s ease;
+	will-change: transform;
 	text-align: center;
-	cursor: pointer;
 }
 
 .news-accordion summary::-webkit-details-marker {
@@ -432,6 +465,7 @@ h2 {
 .country-label {
 	order: 1;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .tag-bar {
@@ -441,6 +475,7 @@ h2 {
 
 .news-date-full,
 .date-manual {
+	color: #000000;
 	order: 3;
 	margin-top: 5px;
 }
@@ -450,7 +485,7 @@ h2 {
 	content: "▼";
 	display: block;
 	color: #ff3399;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	margin: 15px auto 0 auto;
 }
 
@@ -466,34 +501,31 @@ h2 {
 
 /* Smooth Hover */
 .news-accordion:not([open]):hover summary::after {
-	color: #ff66b2;
+	color: #ff3399;
 	transform: scale(1.3);
-	animation: none; /* Stops pulsing when the user is hovering to click */
 }
 
 /* TEXT STYLING */
 
 .news-accordion .country-label {
-	display: inline-block !important;
-	color: #ffffff !important;
-	font-weight: 900 !important;
+	display: inline-block;
+	color: #000000;
+	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 1.3rem;
-	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 	margin-bottom: 8px;
 	position: relative;
 	z-index: 5;
 }
 
 .country-label.manual-red-title {
-	display: inline-block !important;
-	color: #ff3366 !important;
-	font-weight: 900 !important;
+	display: inline-block;
+	color: #000000;
+	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 1.3rem;
-	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 	margin-bottom: 8px;
 	position: relative;
 	z-index: 5;
@@ -502,19 +534,19 @@ h2 {
 .news-accordion h3,
 .news-date-full,
 .country-label {
-	color: #ffffff;
+	color: #000000;
 	text-decoration: none;
 	margin: 5px 0;
 	opacity: 1;
 }
 
 .news-accordion h3 {
-	display: inline-block !important;
-	font-weight: 500 !important;
+	display: inline-block;
+	font-weight: 500;
 	text-transform: uppercase;
+	text-align: center;
 	letter-spacing: 0.8px;
 	font-size: 1.3rem;
-	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 	margin-bottom: 8px;
 	position: relative;
 	z-index: 5;
@@ -526,7 +558,7 @@ h2 {
 }
 
 .news-content-expanded p {
-	color: #ffffff;
+	color: #000000;
 	font-size: 1.2rem;
 	line-height: 1.7;
 	margin-bottom: 25px;
@@ -534,43 +566,36 @@ h2 {
 	padding: 0 30px;
 }
 
+/* ADD THIS: Makes the pods lift and glow on hover */
+.news-accordion:not([open]):hover,
+.manual-pinned:hover {
+	transform: translateY(-5px) scale(1.01);
+	background: rgba(255, 255, 255, 0.8); /* Becomes slightly more solid */
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+	border-color: rgba(255, 255, 255, 0.5);
+}
+
 /* THE BUTTON: White Glass Effect */
 .news-accordion .news-content-expanded a,
 .manual-pinned .news-content-expanded a {
-	display: inline-block !important;
-
-	/* 1. THE GLASS EFFECT */
-	background: rgba(22, 7, 230, 0.99);
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
-
-	/* 2. THE BORDER & TEXT (Frozen Blue) */
-	color: #ffffff !important;
-	border: 1.5px solid rgba(255, 255, 255, 0.993) !important;
-
-	/* 3. THE SIZE (Refined) */
-	padding: 10px 24px !important;
-	font-size: 0.8rem !important;
+	background-color: #ff0000;
+	color: #ffffff;
+	padding: 8px 15px;
+	border-radius: 50px;
+	font-size: 0.8rem;
 	font-weight: 800;
 	text-transform: uppercase;
-	letter-spacing: 1.5px;
-	border-radius: 50px;
-
-	/* 4. THE SPACING */
-	margin-top: 15px !important;
-	margin-bottom: 35px !important;
-
-	text-decoration: none !important;
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	cursor: pointer !important;
+	letter-spacing: 0.5px;
+	text-decoration: none;
+	margin-left: 30px;
 }
 
 /* THE HOVER: "Glowing Glass" */
 .news-accordion .news-content-expanded a:hover,
 .manual-pinned .news-content-expanded a:hover {
-	background: rgba(22, 7, 230, 0.99);
-	border-color: #ffffff !important;
-	color: #ffffff !important;
+	background: rgba(255, 255, 255, 0.9);
+	border-color: #ffffff;
+	color: #000000;
 	transform: translateY(-3px) scale(1.05);
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
@@ -589,9 +614,9 @@ h2 {
 .tag {
 	position: relative;
 	z-index: 10;
-	opacity: 1 !important;
+	opacity: 1;
 	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-	background-image: none !important;
+	background-image: none;
 	padding: 4px 12px;
 	border-radius: 50px;
 	font-size: 0.7rem;
@@ -635,9 +660,9 @@ h2 {
    ============================================ */
 
 .news-date-full {
-	color: #ffffff;
+	color: #000000;
 	font-size: 1.05rem;
-	font-weight: 500;
+	font-weight: 600;
 	margin-top: 10px;
 	opacity: 1;
 	text-transform: none;
@@ -646,9 +671,9 @@ h2 {
 }
 
 .date-manual {
-	color: #ffffff;
+	color: #000000;
 	font-size: 1.05rem;
-	font-weight: 500;
+	font-weight: 600;
 	margin-top: 10px;
 	opacity: 1;
 	text-transform: none;
@@ -675,12 +700,14 @@ h2 {
 
 .site-footer {
 	width: 100%;
-	background: rgba(22, 7, 230, 0.9);
-	border-top: 1px solid rgba(252, 248, 248, 0.8);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	background: rgba(22, 7, 230, 0.2);
+	backdrop-filter: blur(15px) saturate(160%);
+	border-top: 4px solid rgba(255, 255, 255, 0.3);
 	margin-top: auto;
-	z-index: 100;
-	padding: 10px 0 10px 0;
+	padding: 20px 0;
+	transition:
+		transform 0.4s ease,
+		background 0.4s ease;
 }
 
 .footer-container {
@@ -695,7 +722,7 @@ h2 {
 
 .footer-card a {
 	text-decoration: none;
-	color: #ffffff;
+	color: #ffffff; /* Improved contrast */
 	font-weight: 800;
 	font-size: 0.8rem;
 }
@@ -720,7 +747,7 @@ h2 {
 
 .neutral span,
 .neutral i {
-	color: #faf2f2 !important;
+	color: #faf2f2;
 }
 
 .neutral:hover {
@@ -751,7 +778,7 @@ h2 {
 	text-decoration: none;
 	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	border: 1px solid rgba(255, 255, 255, 0.4);
-	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-left: 3px solid rgba(255, 255, 255, 0.8);
 	box-shadow:
 		0 4px 10px rgba(0, 0, 0, 0.2),
 		inset 0 0 8px rgba(255, 255, 255, 0.1);
@@ -823,28 +850,241 @@ h2 {
 	transform: translateY(-4px);
 }
 
-/* ============================================
-   MOBILE GUTTER FIX (Phones)
-   ============================================ */
+@media screen and (max-width: 480px) {
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: url("images/world_img_mobile.webp") center/cover no-repeat;
+		background-size: 100% 100%;
+		filter: brightness(0.7) contrast(1.6) saturate(1.8);
+		background-color: rgba(25, 1, 241, 0.281);
+		background-blend-mode: multiply;
+	}
 
+	.master-grid-container {
+		display: flex !important;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 10px;
+		gap: 15px;
+		z-index: 10;
+	}
+
+	.landing-search-wrap {
+		position: relative !important;
+		overflow: visible !important;
+		width: 100% !important;
+		z-index: 20;
+	}
+
+	.search-results-floating {
+		position: absolute !important;
+		top: 50px !important;
+		left: 0 !important;
+		width: 100% !important;
+		z-index: 1000 !important;
+		display: none;
+	}
+
+	#translator-anchor {
+		display: flex !important;
+		justify-content: center !important;
+		align-items: center !important;
+		width: 100% !important;
+		max-width: 100% !important;
+	}
+
+	.bento-grid {
+		display: grid !important;
+		grid-template-columns: 1fr !important;
+		width: 100% !important;
+		gap: 15px;
+		position: relative;
+		z-index: 10;
+	}
+
+	.master-grid-container > *,
+	.country-card,
+	#manual-news-portal,
+	.u-u-link,
+	.main-header,
+	#info-display-area {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 auto !important;
+		box-sizing: border-box;
+	}
+
+	.footer-container {
+		display: flex !important;
+		flex-direction: column !important;
+		align-items: center !important;
+		gap: 15px !important;
+	}
+
+	.news-accordion .news-content-expanded a,
+	.manual-pinned .news-content-expanded a {
+		margin-left: 0;
+	}
+}
+
+/* --- MOBILE GUTTER FIX --- */
 @media (max-width: 600px) {
 	.master-grid-container {
 		width: 100%;
-		padding: 0 10px;
-	}
-
-	#manual-news-portal,
-	#automated-news-feed {
-		width: 96%;
-		gap: 15px;
+		max-width: 100vw;
+		padding: 0 15px;
 	}
 
 	.news-accordion summary {
-		padding: 15px 10px;
-		min-height: 120px;
+		padding: 20px 15px;
 	}
 
-	.news-content-expanded {
-		padding: 20px 15px;
+	.news-content-expanded p {
+		padding: 0 15px;
+		font-size: 1.1rem;
+	}
+	.news-accordion .news-content-expanded a,
+	.manual-pinned .news-content-expanded a {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	body::before {
+		background: url("images/world_img_mobile.webp") center/cover no-repeat !important;
+		background-size: 100% 100% !important;
+		filter: brightness(0.7) contrast(1.6) saturate(1.8) !important;
+		background-color: rgba(25, 1, 241, 0.281) !important;
+		background-blend-mode: multiply !important;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 1100px) {
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: url("images/world_img_mobile.webp") center/cover no-repeat;
+		background-size: 100% 100%;
+		filter: brightness(0.7) contrast(1.6) saturate(1.8);
+		background-color: rgba(25, 1, 241, 0.281);
+		background-blend-mode: multiply;
+	}
+
+	.master-grid-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 0 30px 40px 30px;
+	}
+
+	#translator-anchor.landing-pill-style {
+		width: 100% !important;
+		position: relative !important;
+		height: 50px !important;
+	}
+
+	.goog-te-gadget-simple {
+		width: 100% !important;
+		height: 50px !important;
+		display: flex !important;
+		align-items: center !important;
+		padding: 0 15px 0 15px !important;
+		box-sizing: border-box !important;
+		border: none !important;
+		background: white !important;
+		border-radius: 50px !important;
+		position: absolute !important;
+		left: 0 !important;
+		top: 0 !important;
+	}
+
+	/* 4. Hide the Google Logo/Trash that causes shifting */
+	.goog-te-gadget-icon,
+	.goog-te-menu-value img,
+	.goog-te-menu-value span:nth-child(3) {
+		display: none !important;
+	}
+
+	.bento-grid {
+		grid-template-columns: repeat(3, 1fr) !important;
+		gap: 20px !important;
+		gap: 20px !important;
+	}
+
+	/* Fix the Translator on wider portrait screens */
+	#translator-anchor,
+	.landing-search-wrap,
+	.search-map-link {
+		width: 100% !important;
+		max-width: 500px !important;
+		margin: 0 auto !important;
+	}
+
+	/* Isolate the translator when it is inside the three-pill stack */
+	.three-search-container #translator-anchor {
+		grid-column: 1 / -1 !important;
+		width: 100% !important;
+		max-width: 500px !important;
+		margin: 0 auto !important;
+		display: flex !important;
+	}
+
+	.footer-container {
+		display: grid;
+		/* Create 3 equal columns */
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		justify-items: center;
+		align-items: center;
+	}
+
+	.footer-card {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	/* Optional: If you want the pills to be 
+       consistent widths in the grid */
+	.social-pill {
+		width: 100%;
+		max-width: 160px;
+		justify-content: center;
+	}
+}
+
+/* 27" Monitor "Studio Mode" */
+@media (min-width: 1700px) {
+	.home-hero {
+		margin-top: 6vh !important;
+		text-align: center;
+	}
+
+	.home-hero .main-title {
+		font-size: 5rem !important;
+	}
+}
+
+/* 30" Monitor "Studio Mode" */
+@media (min-width: 2000px) {
+	.home-hero {
+		margin-top: 17vh !important;
+		text-align: center;
+	}
+
+	.home-hero .main-title {
+		font-size: 5rem !important;
 	}
 }

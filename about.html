@@ -24,7 +24,7 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=3.1" />
+		<link rel="stylesheet" href="index.css?v=3.2" />
 
 		<style>
 			/* THE MAP BACKGROUND */
@@ -46,19 +46,41 @@
 
 			/* THE FROSTED GLASS RECTANGLE */
 			.glass-mission-card {
-				background: rgba(22, 7, 230, 0.99);
-				border: 1px solid rgba(255, 255, 255, 0.2);
-				border-radius: 20px;
-				padding: 40px;
-				margin: 20px auto;
-				box-shadow: 0 25px 50px rgba(10, 10, 10, 0.3);
+				width: 100%;
+				margin-bottom: 25px;
+				padding: 40px 50px;
+				border-radius: 14px;
+				overflow: visible !important;
+				position: relative;
+				display: block;
+				background: rgba(255, 255, 255, 0.6) !important;
+				backdrop-filter: blur(15px) saturate(180%);
+				-webkit-backdrop-filter: blur(15px) saturate(180%);
+				border: 1px solid rgba(255, 255, 255, 0.3) !important;
+				transition:
+					transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+					background 0.4s ease,
+					box-shadow 0.5s ease;
 			}
 
 			.glass-mission-card p {
 				line-height: 1.8;
 				font-size: 1.1rem;
-				color: white;
+				color: #000000;
 				margin-bottom: 20px;
+				font-family:
+					"Inter",
+					-apple-system,
+					BlinkMacSystemFont,
+					"Segoe UI",
+					Roboto,
+					sans-serif;
+				color: #000000 !important;
+				font-weight: 500;
+				font-size: 1.15rem;
+				line-height: 1.6;
+				margin-bottom: 2.2rem !important;
+				text-align: left;
 			}
 
 			/* Add this to your main CSS for single-column pages */
@@ -99,22 +121,34 @@
 				}
 			}
 
-			@media (max-width: 600px) {
+			/* THE FROSTED GLASS RECTANGLE - Desktop Default */
+			.glass-mission-card {
+				width: 100%;
+				margin-bottom: 25px;
+				border-radius: 14px;
+				padding: 40px 50px; /* 50px side padding for big screens */
+				background: rgba(255, 255, 255, 0.6) !important;
+				backdrop-filter: blur(15px) saturate(180%);
+				-webkit-backdrop-filter: blur(15px) saturate(180%);
+				border: 1px solid rgba(255, 255, 255, 0.3) !important;
+			}
+
+			/* MOBILE FIX */
+			@media (max-width: 768px) {
 				.glass-mission-card {
-					/* Reduce padding so there's more room for text on small screens */
-					padding: 25px 20px;
-
-					/* The Magic Move: 90% width keeps 5% 'air' on each side */
-					width: 100%;
-					margin: 20px 0;
-
-					/* Ensure the border-radius doesn't look too 'aggressive' on small screens */
-					border-radius: 15px;
+					padding: 30px 20px; /* Reduces side padding to 20px on mobile */
+					margin-top: 20px;
+					margin-bottom: 20px;
 				}
 
 				.glass-mission-card p {
-					line-height: 1.6;
-					font-size: 1.1rem;
+					font-size: 1.05rem; /* Slightly smaller text for better mobile fit */
+					line-height: 1.5;
+					margin-bottom: 1.5rem !important;
+				}
+
+				.page-container {
+					width: 95%; /* Use more of the screen width on tiny devices */
 				}
 			}
 		</style>
@@ -132,41 +166,23 @@
 				<h1 class="main-title" style="margin-bottom: 30px; text-align: center">Our Mission</h1>
 
 				<p>
-					This website aims to keep ourselves and the LGBT community safe in a volatile and changing world. Whether you are looking for assistance in the country you live or
-					traveling or relocating to, we do our best to provide up-to-date advice on not only the nightlife and interesting places to visit and stay, and most importantly, the
-					security, legal status, and healthcare accessibility in every country that we can source data on - We especially seek to provide a focus on available HIV medical services
-					and other LGBT care.
-				</p>
-
-				<p>
-					We aim to keep our global community up to date and create awareness about the safety and security of persecuted LGBTQ+ people who face discrimination, violence, torture,
-					imprisonment, and even death because of their sexual orientation. We focus first on the right to live and love freely before other concerns. We filter out gossip or
-					sensationalist stories that, while important in progressive countries, can inadvertently smother the deadly societal and government-led crackdowns against LGBTQ+ people
-					that are increasing at an alarming rate in countries and territories around the world. We do allow our Breaking News page to stream more mainstream media stories, while
-					keeping the major breaking news pinned to the top.
+					This website's purpose is to present accessible and important LGBT news and emergency health, legal and safety contacts for all of our community, whether they are local,
+					expat or traveling through. Apart from the website, we will also be making weekly news videos on all the important LGBT news.
 				</p>
 				<p>
-					To understand the full impact of discrimination, we talk to local LGBTQ+ people about their experiences. Here are a couple of examples from early 2026: In Tunisia, a
-					popular destination which happily accepts money from gay tourists, police are actively hunting down members of the local community, searching their phones, and handing
-					out sentences of up to three years in prison just because of their suspected LGBTQ+ status. Our source recently served six months in prison in Tunisia for the crime of
-					having a popular gay chat app on his phone. We verified this report in February 2026. In Senegal, on March 11th, 2026, a new law was passed with overwhelming support to
-					double the prison sentence for same-sex acts from five to ten years. Our Senegalese source is terrified of exposure and arrest, and we are working to help him find
-					safety.
+					As begin this journey, we have initially used AI generated content to populate the site, but we are moving through the countries one by one and giving each country the
+					attention it deserves with the most up-to-date news and information that you deserve. It will be worth it. All our AI pages are marked so you know who/what is providing
+					the information. Please watch our progress bar and support our researchers and writers, and why not become one too? Feel free to contact us and help to make the community
+					more aware and safer in a troubled world.
 				</p>
 				<p>
-					If you are planning a trip and need the best up-to-date information, we are here to help and will soon be offering guides with both written articles and video guides to
-					as many countries as possible. I'm sure you can understand that with over 200 countries and territories, it is impossible to independently verify everything, so we invite
-					LGBTQ+ people from across the world who are willing to share their stories. In video or text, help us help you to get your word out to the international LGBTQ+ community.
-				</p>
-
-				<p>
-					These are our goals and this is our mission and until we have covered every single country and territory, we will share what knowledge we have while also using tough AI
-					filters to strip away the smoke and mirrors of sensationalism and gossip and bypass the noise to bring you the hidden, vital news that our community deserves.
+					Although we do provide travel information, we do not pretend to be expert travel guides. We provide a hub-type experience to provide our experience as well as the best
+					links to fabulous travel guides such as the Nomadic Boys who provide a fun and professional user experience for where to go and what to do in many countries.
 				</p>
 			</div>
 
 			<div class="glass-mission-card">
-				<h2 style="margin-bottom: 30px; color: #ff3399; text-align: center">Privacy & Safety</h2>
+				<h2 style="margin-bottom: 30px; color: #000000; text-align: center">Privacy & Safety</h2>
 
 				<p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.9)">
 					<strong>Your Data:</strong> We do not track your personal identity. Our search tools and maps are designed for anonymous use. <br /><br />

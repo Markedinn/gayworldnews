@@ -24,6 +24,7 @@ body {
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	margin: 0;
 	padding: 20px 0 0 0;
+	background-color: #1a1a1a;
 }
 
 body::before {
@@ -80,43 +81,46 @@ body::before {
 	line-height: 1.4;
 }
 
-/* --- U=U BANNER --- */
-
-.u-u-link {
-	grid-column: 1 / -1;
-	text-decoration: none;
-	transition: transform 0.2s ease;
-	position: relative;
-	z-index: 10;
-	display: block;
+.mission-progress-wrap {
+	width: 100%;
+	max-width: 600px; /* Adjust to match your sub-title width */
+	margin: 50px auto 0 auto; /* Pulls it up closer to the title */
+	font-family: "Inter", sans-serif;
 }
 
-#u-u-notice {
-	background: #ffffff !important;
-	backdrop-filter: none !important;
-	-webkit-backdrop-filter: none !important;
-	border-left: 3px solid #f544b1;
-	/* border-right: 6px solid #f544b1; */
-	padding: 15px 20px;
-	border-radius: 12px;
-	text-align: center;
-	color: rgba(22, 7, 230);
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-	transition:
-		transform 0.2s ease,
-		background 0.2s ease;
-	cursor: pointer;
-}
-
-#u-u-notice h4 {
+.progress-labels {
+	display: flex;
+	justify-content: space-between;
+	font-size: 0.85rem;
+	font-weight: 700;
+	color: #ffffff;
+	margin-bottom: 6px;
 	text-transform: uppercase;
-	margin-bottom: 5px;
-	font-weight: 800;
+	letter-spacing: 0.5px;
 }
 
-#u-u-notice:hover {
-	transform: scale(1.01);
-	background: #fafafa !important;
+.progress-track {
+	width: 100%;
+	height: 8px; /* Sleek and thin */
+	background: #ffffff; /* Light groove in the glass */
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.progress-fill {
+	width: 0%; /* Starts at 0, script moves it */
+	height: 100%;
+	background: #2ecc71; /* Clean Green */
+	border-radius: 10px;
+	transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.progress-sub-count {
+	font-size: 0.75rem !important;
+	text-align: center;
+	margin-top: 8px !important;
+	color: #ffffff !important;
+	font-weight: 600;
 }
 
 /* --- TRANSLATOR, BENTO & SEARCH CARDS --- */
@@ -161,58 +165,48 @@ body::before {
 	z-index: 10;
 }
 
-/* --- DESKTOP TRANSLATOR DROPDOWN --- */
-
 #translator-anchor select {
 	width: 100%;
+	height: 50px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 1) !important;
-	border: 1px solid rgb(228, 82, 191);
-	border-left: 3px solid rgb(228, 82, 191);
+	background: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-top: 4px solid rgba(255, 255, 255, 0.8);
 	border-radius: 50px !important;
-	color: rgba(22, 7, 230, 1) !important;
+	color: #000000 !important;
 	font-weight: 800;
 	text-transform: uppercase;
-	cursor: pointer;
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
 	appearance: none;
-	font-size: 1rem;
-	font-family: inherit;
-	letter-spacing: 1px;
-	text-decoration: none;
-	line-height: normal;
-	height: 50px;
-	padding: 8px 15px !important;
+	cursor: pointer;
 	text-align: center;
 	text-align-last: center;
 	outline: none;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	box-shadow: 0 4px 15px rgba(228, 82, 191, 0.2);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* THE DROPDOWN LIST (The "Command Menu") */
+
 #translator-anchor select option {
-	background: rgba(22, 7, 230, 0.93) !important;
-	color: #ffffff !important;
-	padding: 12px !important;
-	font-size: 1.1rem;
+	background: #ffffff !important;
+	color: #000000 !important;
+	padding: 15px !important;
+	font-size: 1rem !important;
+	font-weight: 800 !important;
 }
 
 #translator-anchor select:hover {
-	background: rgba(22, 7, 230, 1) !important;
-	border-color: #ffffff !important;
-	color: #ffffff !important;
-	box-shadow:
-		0 8px 15px rgba(12, 12, 12, 0.3),
-		inset 0 3px 5px rgba(255, 255, 255, 0.4);
-	transform: translateY(-2px);
-	transition: all 0.2s ease-out;
+	background: rgb(255, 255, 255, 0.5) !important; /* Flips to Deep Blue */
+	color: #000000 !important;
+	border: 3px solid rgba(255, 255, 255, 0.8) !important;
+	transform: translateY(-3px) scale(1.02);
 }
-
-/* #translator-anchor .gt_selector img {
-	margin-top: -2px !important;
-	margin-right: 8px !important;
-} */
 
 /* THE SEARCH AND MAP PILLS */
 
@@ -223,30 +217,41 @@ body::before {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
-	padding: 0 20px !important;
+	padding: 0 25px !important;
 	border-radius: 50px;
-	background: rgba(255, 255, 255, 1);
-	letter-spacing: 2px;
-	text-decoration: none;
-	border: 1px solid rgb(228, 82, 191);
-	border-left: 3px solid rgb(228, 82, 191);
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-	font-size: 16px;
-	color: rgba(22, 7, 230, 1);
+
+	/* 1. MATCH TRANSLATOR OPACITY & BLUR */
+	background: rgba(255, 255, 255, 0.8) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	/* 2. MATCH THE L-SHAPE PINK BORDERS */
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	border-left: 5px solid rgba(255, 255, 255, 0.8);
+	border-top: 4px solid rgba(255, 255, 255, 0.8);
+
+	/* 3. TEXT STYLES */
+	color: #000000;
 	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	letter-spacing: 1.5px;
 	text-align: center;
 	outline: none;
-	caret-color: #ffffff;
+
+	/* 4. MATCH TRANSLATOR TRANSITION */
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	cursor: pointer;
+	text-decoration: none;
 }
 
 .landing-search-wrap input::placeholder {
-	color: rgba(22, 7, 230, 1);
+	color: #000000;
 	letter-spacing: 2px;
 }
 
 .landing-search-wrap input:hover::placeholder {
-	color: #ffffff !important;
+	color: #000000 !important;
 }
 
 /* --- DROPDOWN MENU--- */
@@ -260,8 +265,8 @@ body::before {
 	display: none;
 	flex-direction: column;
 	z-index: 2000;
-	background: rgba(22, 7, 230, 0.993) !important;
-	border: 1px solid rgba(255, 255, 255, 0.1);
+	background: rgba(255, 255, 255, 0.5) !important;
+	border: 3px solid rgba(255, 255, 255, 0.8);
 	backdrop-filter: blur(15px);
 	-webkit-backdrop-filter: blur(15px);
 	border-radius: 12px;
@@ -277,10 +282,9 @@ body::before {
 
 .search-results-floating .country-card.search-item-card:hover {
 	transform: scale(1.02) translateY(-5px);
-	background: rgba(22, 7, 230, 1);
-	border-bottom: 1px solid #ffffff;
+	background: rgb(243, 243, 247);
+	border: 3px solid rgba(255, 255, 255, 0.8) !important;
 	border-radius: 50px;
-	box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
 	z-index: 10;
 }
 
@@ -290,15 +294,36 @@ body::before {
 	width: 100%;
 }
 
+/* Unified Hover Effect for Search and Map Pills */
 .landing-search-wrap input:hover,
 .search-map-link:hover {
-	background: rgba(22, 7, 230, 1) !important;
-	color: #ffffff !important;
-	border-color: #ffffff !important;
-	transform: translateY(-2px);
+	/* Match the Translator's transform and scale */
+	transform: translateY(-3px) scale(1.02);
+
+	/* Match the Translator's background transparency */
+	background: rgba(255, 255, 255, 0.5) !important;
+
+	/* Match the Translator's thicker border */
+	border: 3px solid rgba(255, 255, 255, 0.8) !important;
+
+	/* Enhanced shadow for the "lifted" look */
 	box-shadow:
-		0 8px 15px rgba(12, 12, 12, 0.3),
-		inset 0 3px 5px rgba(255, 255, 255, 0.4);
+		0 12px 20px rgba(0, 0, 0, 0.3),
+		inset 0 3px 5px rgba(255, 255, 255, 0.2);
+
+	/* Smooth out the color transition */
+	color: #000000 !important;
+}
+
+/* Ensure the base state has the transition property for the new scale/border */
+.landing-search-wrap input,
+.search-map-link {
+	transition:
+		transform 0.3s ease,
+		background 0.3s ease,
+		border 0.3s ease,
+		box-shadow 0.3s ease;
+	will-change: transform;
 }
 
 .bento-grid {
@@ -311,45 +336,51 @@ body::before {
 }
 
 .bento-card {
-	background: rgba(22, 7, 230, 0.8);
-	backdrop-filter: blur(9px);
-	-webkit-backdrop-filter: blur(9px);
-	border: 1px solid rgba(255, 255, 255, 0.8);
+	background: rgba(255, 255, 255, 0.7);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	transition:
+		transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+		background 0.4s ease,
+		box-shadow 0.5s ease;
 	border-left: 3px solid rgba(255, 255, 255, 0.8);
 	border-radius: 12px;
-	box-shadow:
-		0 4px 12px rgba(0, 0, 0, 0.25),
-		inset 0 -3px 8px rgba(0, 0, 0, 0.3);
 	will-change: transform;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	color: #ffffff;
-	font-weight: 700;
+	color: #000000;
+	font-size: 0.9rem;
+	font-weight: 800;
+	letter-spacing: 1.5px;
 	text-transform: uppercase;
 	text-decoration: none;
-	transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+	/* ALIGNMENT FIX */
+	text-align: center;
+	line-height: 1.2;
 }
 
 .bento-card:hover {
 	transform: translateY(-5px);
-	background: rgba(22, 7, 230, 0.7);
-	border-color: rgba(255, 255, 255, 0.9);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+	background: rgba(255, 255, 255, 0.9);
+	border-color: rgba(255, 255, 255, 0.99);
 }
 
 .bento-card.breaking-red {
-	background: rgba(228, 3, 3, 0.8);
+	background: rgba(228, 3, 3, 0.7);
+	backdrop-filter: blur(15px) saturate(180%);
+	-webkit-backdrop-filter: blur(15px) saturate(180%);
+	color: #ffffff;
 	border: 1px solid rgba(255, 255, 255, 0.8);
 	border-left: 3px solid rgba(255, 255, 255, 0.8);
-	box-shadow: 0 4px 15px rgba(228, 3, 3, 0.3);
 }
 
 .bento-card.breaking-red:hover {
-	background: rgba(228, 3, 3, 0.9);
+	background: rgba(228, 3, 3, 0.99);
 	border-color: #ffffff;
-	box-shadow: 0 8px 20px rgba(228, 3, 3, 0.6);
 }
 
 /* Country Cards */
@@ -364,7 +395,6 @@ body::before {
 	text-decoration: none !important;
 	min-height: 70px !important; /* Ensures consistent height */
 	border: none !important;
-	background: rgba(22, 7, 230, 0.95) !important; /* Your signature blue */
 	color: #ffffff !important;
 	width: 100% !important;
 	padding: 12px 5px !important;
@@ -404,20 +434,19 @@ body::before {
 
 .country-card:hover {
 	transform: translateY(-3px); /* Subtle lift up */
-	filter: brightness(1.15); /* Slight highlight */
 	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 	cursor: pointer;
 }
 
 /* Make the inner blue box pop even more on hover */
 .country-card:hover span {
-	background: rgba(22, 7, 230, 1) !important; /* Solid blue on hover */
+	/* background: rgba(22, 7, 230, 1) !important;  */
 	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 /* Specific Red Glow for Danger */
 .country-card.red:hover {
-	box-shadow: 0 0 20px rgba(200, 0, 0, 0.6);
+	box-shadow: 0 0 20px rgb(247, 1, 1);
 }
 
 /* Tap Effect (Mobile/All) */
@@ -452,12 +481,22 @@ body::before {
 
 .site-footer {
 	width: 100%;
-	background: rgba(22, 7, 230, 0.9);
-	border-top: 1px solid rgba(252, 248, 248, 0.8);
-	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	/* 1. LOWER OPACITY for the Glass effect (0.75 is the sweet spot) */
+	background: rgba(22, 7, 230, 0.2) !important;
+
+	/* 2. THE GLASS MAGIC */
+	backdrop-filter: blur(15px) saturate(160%);
+	-webkit-backdrop-filter: blur(15px) saturate(160%);
+
+	/* 3. THE ACCENT BORDER (Match your top utility bars) */
+	border-top: 4px solid rgba(255, 255, 255, 0.3);
+
+	/* 4. LAYOUT & DEPTH */
 	margin-top: auto;
-	z-index: 100;
-	padding: 10px 0 10px 0;
+	z-index: 1000; /* Bumping this up to stay above the map */
+	padding: 20px 0;
+	box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3);
+	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .footer-container {
@@ -768,23 +807,27 @@ body::before {
 		display: flex !important;
 	}
 
-	/* ---  TABLET FOOTER --- */
 	.footer-container {
-		display: flex !important;
-		flex-wrap: wrap !important;
-		justify-content: center !important;
-		align-items: center !important;
-		gap: 15px 20px !important;
-		max-width: 800px;
-		margin: 0 auto;
-		padding: 10px 20px !important;
+		display: grid;
+		/* Create 3 equal columns */
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		justify-items: center;
+		align-items: center;
 	}
 
 	.footer-card {
-		display: flex !important;
-		justify-content: center !important;
-		flex: 0 1 auto !important;
-		width: auto !important;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	/* Optional: If you want the pills to be 
+       consistent widths in the grid */
+	.social-pill {
+		width: 100%;
+		max-width: 160px;
+		justify-content: center;
 	}
 }
 
