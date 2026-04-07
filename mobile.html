@@ -23,17 +23,17 @@
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 		<meta name="twitter:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
 
-		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2.7" />
-		<link rel="apple-touch-icon" href="images/favicon.webp?v=2.7" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp" />
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 		<script>
 			window.globalData = {};
 		</script>
-		<script src="country-info/country-files/africa-data.js" defer></script>
-		<script src="country-info/country-files/asia-data.js" defer></script>
-		<script src="country-info/country-files/europe-data.js" defer></script>
-		<script src="country-info/country-files/americas-data.js" defer></script>
-		<script src="country-info/country-files/oceania-data.js" defer></script>
+		<script src="country-info/country-files/africa-data.js?v=0.1" defer></script>
+		<script src="country-info/country-files/asia-data.js?v=0.1" defer></script>
+		<script src="country-info/country-files/europe-data.js?v=0.1" defer></script>
+		<script src="country-info/country-files/americas-data.js?v=0.1" defer></script>
+		<script src="country-info/country-files/oceania-data.js?v=0.1" defer></script>
 		<script src="index.js" defer></script>
 
 		<style>
@@ -276,6 +276,7 @@
 				z-index: 2000;
 			}
 
+			/* 1. THE ANCHOR - Strip the globe icon */
 			#translator-anchor {
 				width: 100%;
 				font-weight: 700;
@@ -286,181 +287,126 @@
 				position: relative;
 			}
 
+			/* 2. REMOVE THE GLOBE COMPLETELY */
 			#translator-anchor::after {
-				content: "";
-				position: absolute;
-				right: 18px;
-				top: 50%;
-				transform: translateY(-50%);
-				width: 22px;
-				height: 22px;
-				background-image: url("images/globe-icon.svg");
-				background-repeat: no-repeat;
-				background-size: contain;
-				filter: invert(12%) sepia(95%) saturate(5453%) hue-rotate(244deg) brightness(85%) contrast(148%);
-				pointer-events: none;
-				z-index: 10;
+				display: none !important; /* This kills the globe icon */
 			}
 
 			#translator-anchor select {
-				width: 100%;
-				height: 50px;
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
+				width: 100% !important;
+				height: 50px !important;
 				background: rgba(255, 255, 255, 0.8) !important;
 				backdrop-filter: blur(10px);
-				border: 1px solid rgba(255, 255, 255, 0.8);
-				border-left: 5px solid rgba(255, 255, 255, 0.8);
-				border-top: 4px solid rgba(255, 255, 255, 0.8);
+
+				/* THE CHEAT: An invisible 15px border to push the arrow in */
+				border-right: 20px solid rgba(255, 255, 255, 0.01) !important;
+				/* Resetting the other borders to keep the GWN look */
+				border-left: 5px solid rgba(255, 255, 255, 0.8) !important;
+				border-top: 4px solid rgba(255, 255, 255, 0.8) !important;
+				border-bottom: 1px solid rgba(255, 255, 255, 0.8) !important;
+
 				border-radius: 50px !important;
-				color: #000000 !important;
-				font-weight: 800;
-				text-transform: uppercase;
-				font-size: 0.9rem;
-				letter-spacing: 1.5px;
-				appearance: none;
-				cursor: pointer;
-				text-align: center;
-				text-align-last: center;
-				outline: none;
-				transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-			}
 
-			/* THE DROPDOWN LIST (The "Command Menu") */
+				/* Keep appearance auto so the arrow stays */
+				appearance: auto !important;
+				-webkit-appearance: auto !important;
 
-			#translator-anchor select option {
-				background: #ffffff !important;
-				color: #000000 !important;
-				padding: 15px !important;
-				font-size: 1rem !important;
+				/* Text alignment */
+				padding-left: 25px !important;
+				padding-right: 0 !important; /* The border handles the right spacing now */
+				text-align: center !important;
+				text-align-last: center !important;
+
+				color: #000 !important;
 				font-weight: 800 !important;
-			}
-
-			#translator-anchor select:hover {
-				background: rgb(255, 255, 255, 0.5) !important; /* Flips to Deep Blue */
-				color: #000000 !important;
-				border: 3px solid rgba(255, 255, 255, 0.8) !important;
-				transform: translateY(-3px) scale(1.02);
-			}
-
-			/* THE SEARCH AND MAP PILLS */
-
-			.landing-search-wrap input,
-			.search-map-link {
-				width: 100%;
-				height: 50px;
-				display: flex !important;
-				align-items: center !important;
-				justify-content: center !important;
-				padding: 0 25px !important;
-				border-radius: 50px;
-
-				/* 1. MATCH TRANSLATOR OPACITY & BLUR */
-				background: rgba(255, 255, 255, 0.8) !important;
-				backdrop-filter: blur(10px);
-				-webkit-backdrop-filter: blur(10px);
-
-				/* 2. MATCH THE L-SHAPE PINK BORDERS */
-				border: 1px solid rgba(255, 255, 255, 0.8);
-				border-left: 5px solid rgba(255, 255, 255, 0.8);
-				border-top: 4px solid rgba(255, 255, 255, 0.8);
-
-				/* 3. TEXT STYLES */
-				color: #000000;
-				font-weight: 800;
 				text-transform: uppercase;
 				font-size: 0.9rem;
 				letter-spacing: 1.5px;
-				text-align: center;
-				outline: none;
-
-				/* 4. MATCH TRANSLATOR TRANSITION */
-				transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 				cursor: pointer;
-				text-decoration: none;
+				outline: none !important;
 			}
 
-			.landing-search-wrap input::placeholder {
-				color: #000000;
-				letter-spacing: 2px;
-			}
-
-			.landing-search-wrap input:hover::placeholder {
-				color: #000000 !important;
-			}
-
-			/* --- DROPDOWN MENU--- */
-
-			.search-results-floating {
-				position: absolute;
-				top: 80%;
-				top: auto !important;
-				left: 0;
-				width: 100%;
-				display: none;
-				flex-direction: column;
-				z-index: 2000;
+			/* Hover effect to match the search bar */
+			#translator-anchor select:hover {
+				transform: translateY(-3px) scale(1.02);
 				background: rgba(255, 255, 255, 0.5) !important;
-				border: 3px solid rgba(255, 255, 255, 0.8);
-				backdrop-filter: blur(15px);
-				-webkit-backdrop-filter: blur(15px);
-				border-radius: 12px;
-				padding: 10px;
-				gap: 0;
-				overflow-y: auto;
-				overflow-x: hidden;
-				border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-				margin-top: 1px;
-				max-height: 45vh;
-				text-decoration: none !important;
-				color: white !important;
-			}
-
-			.search-results-floating .country-card.search-item-card:hover {
-				transform: scale(1.02) translateY(-5px);
 				border: 3px solid rgba(255, 255, 255, 0.8) !important;
-				border-radius: 50px;
-				z-index: 10;
+				border-right: 20px solid rgba(255, 255, 255, 0.01) !important;
 			}
 
-			.landing-search-wrap,
-			.search-map-link {
+			/* --- THE SEARCH PILL --- */
+			.landing-search-wrap {
 				position: relative;
 				width: 100%;
 			}
 
-			/* Unified Hover Effect for Search and Map Pills */
-			.landing-search-wrap input:hover,
-			.search-map-link:hover {
-				/* Match the Translator's transform and scale */
-				transform: translateY(-3px) scale(1.02);
-
-				/* Match the Translator's background transparency */
-				background: rgba(255, 255, 255, 0.5) !important;
-
-				/* Match the Translator's thicker border */
-				border: 3px solid rgba(255, 255, 255, 0.8) !important;
-
-				/* Enhanced shadow for the "lifted" look */
-				box-shadow:
-					0 12px 20px rgba(0, 0, 0, 0.3),
-					inset 0 3px 5px rgba(255, 255, 255, 0.2);
-
-				/* Smooth out the color transition */
-				color: #000000 !important;
+			.landing-search-wrap input {
+				width: 100%;
+				height: 50px;
+				padding: 0 45px 0 25px;
+				border-radius: 50px;
+				cursor: pointer;
+				box-sizing: border-box;
+				background: rgba(255, 255, 255, 0.8);
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+				border: 1px solid rgba(255, 255, 255, 0.8);
+				border-left: 5px solid rgba(255, 255, 255, 0.8);
+				border-top: 4px solid rgba(255, 255, 255, 0.8);
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m3 4.5 3 3 3-3'/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-position: right 20px center;
+				background-size: 14px;
+				color: #000;
+				font-weight: 800;
+				text-transform: uppercase;
+				font-size: 0.9rem;
+				letter-spacing: 1.5px;
+				text-align: center;
+				outline: none;
+				transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 			}
 
-			/* Ensure the base state has the transition property for the new scale/border */
-			.landing-search-wrap input,
-			.search-map-link {
-				transition:
-					transform 0.3s ease,
-					background 0.3s ease,
-					border 0.3s ease,
-					box-shadow 0.3s ease;
-				will-change: transform;
+			.landing-search-wrap input::placeholder {
+				color: #000;
+				letter-spacing: 2px;
+			}
+
+			/* --- SHARED HOVER FOR BOTH PILLS --- */
+			.landing-search-wrap input:hover,
+			.search-map-link:hover {
+				transform: translateY(-3px) scale(1.02);
+				background: rgba(255, 255, 255, 0.5);
+				border: 3px solid rgba(255, 255, 255, 0.8);
+				box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+				color: #000;
+			}
+
+			.search-close-btn {
+				position: sticky;
+				top: 20px;
+				margin: 0 auto 20px auto;
+				display: block;
+
+				width: 60px;
+				height: 60px;
+				line-height: 60px;
+
+				background: rgba(255, 255, 255, 0.2);
+				border-radius: 50%;
+				color: #fff !important;
+				font-size: 40px;
+				text-align: center;
+				text-decoration: none !important;
+
+				z-index: 10000;
+				cursor: pointer;
+			}
+
+			/* Show X if it's a sibling OR a child of the active search */
+			.search-results-floating.active ~ .search-close-btn,
+			.search-results-floating.active .search-close-btn {
+				display: block;
 			}
 
 			.country-card {
@@ -526,6 +472,72 @@
 				filter: brightness(0.9);
 			}
 
+			/* map link pill */
+
+			.search-map-link {
+				width: 100%;
+				height: 50px;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+				padding: 0 25px !important;
+				border-radius: 50px;
+
+				/* 1. MATCH TRANSLATOR OPACITY & BLUR */
+				background: rgba(255, 255, 255, 0.8) !important;
+				backdrop-filter: blur(10px);
+				-webkit-backdrop-filter: blur(10px);
+
+				/* 2. MATCH THE L-SHAPE PINK BORDERS */
+				border: 1px solid rgba(255, 255, 255, 0.8);
+				border-left: 5px solid rgba(255, 255, 255, 0.8);
+				border-top: 4px solid rgba(255, 255, 255, 0.8);
+
+				/* 3. TEXT STYLES */
+				color: #000000;
+				font-weight: 800;
+				text-transform: uppercase;
+				font-size: 0.9rem;
+				letter-spacing: 1.5px;
+				text-align: center;
+				outline: none;
+
+				/* 4. MATCH TRANSLATOR TRANSITION */
+				transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+				cursor: pointer;
+				text-decoration: none;
+			}
+
+			/* Unified Hover Effect for Search and Map Pills */
+			.search-map-link:hover {
+				/* Match the Translator's transform and scale */
+				transform: translateY(-3px) scale(1.02);
+
+				/* Match the Translator's background transparency */
+				background: rgba(255, 255, 255, 0.5) !important;
+
+				/* Match the Translator's thicker border */
+				border: 3px solid rgba(255, 255, 255, 0.8) !important;
+
+				/* Enhanced shadow for the "lifted" look */
+				box-shadow:
+					0 12px 20px rgba(0, 0, 0, 0.3),
+					inset 0 3px 5px rgba(255, 255, 255, 0.2);
+
+				/* Smooth out the color transition */
+				color: #000000 !important;
+			}
+
+			/* Ensure the base state has the transition property for the new scale/border */
+			.search-map-link {
+				transition:
+					transform 0.3s ease,
+					background 0.3s ease,
+					border 0.3s ease,
+					box-shadow 0.3s ease;
+				will-change: transform;
+			}
+
 			/* --- FOOTER --- */
 
 			.main-footer {
@@ -548,31 +560,22 @@
 				text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 			}
 
-			@media (max-height: 500px) and (orientation: landscape) {
-				.side-menu {
-					padding-top: 120px;
+			.close-icon {
+				position: absolute;
+				top: 15px;
+				right: 20px;
+				font-size: 55px;
+			}
 
-					display: block;
-					background: rgba(22, 70, 96, 0.4);
-				}
-
-				.close-icon {
-					position: absolute;
-					top: 15px;
-					right: 20px;
-					font-size: 55px;
-				}
-
-				.bento-grid {
-					margin-top: 0;
-					padding-bottom: 40px;
-				}
+			.bento-grid {
+				margin-top: 0;
+				padding-bottom: 40px;
 			}
 
 			.mission-progress-wrap {
-				width: 100%;
-				max-width: 600px; /* Adjust to match your sub-title width */
-				margin: 50px auto 0 auto; /* Pulls it up closer to the title */
+				width: 90dvw;
+				max-width: 600px;
+				margin: clamp(20px, 5dvh, 50px) auto 0 auto;
 				font-family: "Inter", sans-serif;
 			}
 
@@ -610,6 +613,137 @@
 				color: #ffffff !important;
 				font-weight: 600;
 			}
+
+			@media (max-height: 500px) and (orientation: landscape) {
+				.side-menu {
+					padding-top: 120px;
+
+					display: block;
+					background: rgba(22, 70, 96, 0.4);
+				}
+			}
+
+			/* --- MOBILE UI TIGHTENING (Real-World Browser Fix) --- */
+			@media (max-width: 480px) {
+				.menu-toggle {
+					/* Reduced from 10vh to 60px to stay clear of the Quick Exit but remain high */
+					padding-top: 65px !important;
+					margin-right: 8%;
+				}
+
+				.main-header {
+					/* Pulling the title up so it's visible even with an address bar present */
+					margin-top: 20px !important;
+					margin-bottom: 25px !important;
+				}
+
+				.main-title {
+					/* Slightly smaller on very small screens to save vertical space */
+					font-size: clamp(2rem, 10vw, 3rem) !important;
+				}
+
+				.subtitle {
+					font-size: 1.1rem !important;
+					letter-spacing: 1px !important;
+				}
+
+				.three-search-container {
+					/* Brings the search pills closer to the header */
+					margin: 20px auto !important;
+					gap: 12px !important;
+				}
+
+				.mission-progress-wrap {
+					/* Tightens the gap between the subtitle and the bar */
+					margin-top: 15px !important;
+				}
+
+				body {
+					/* Reduce the "spring" space in the middle to pull the footer up */
+					grid-template-rows: auto auto auto auto auto;
+					gap: 10px;
+				}
+
+				.main-footer {
+					padding: 10px 20px 30px 20px !important; /* Shave off the bottom padding */
+				}
+			}
+
+			/* --- FULL-SCREEN SEARCH OVERLAY (Google Translate Style) --- */
+			.search-results-floating {
+				position: fixed; /* Fixes it to the viewport */
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100dvh;
+				background: rgba(22, 70, 96, 0.95) !important; /* Deep brand blue with transparency */
+				backdrop-filter: blur(20px) saturate(160%);
+				-webkit-backdrop-filter: blur(20px) saturate(160%);
+				z-index: 10000; /* Above everything else */
+				display: none; /* Controlled by JS */
+				flex-direction: column;
+				padding: 80px 20px 40px 20px; /* Top padding to clear the search bar/exit button */
+				overflow-y: auto;
+				gap: 10px;
+				border: none;
+				border-radius: 0;
+			}
+
+			/* Make the country cards inside look like Bento pieces */
+			.search-results-floating .country-card {
+				margin: 4px 0;
+				width: 100%;
+				min-height: 60px;
+				font-size: 1.1rem;
+				border-radius: 12px; /* Square-ish bento look */
+				border-left: 6px solid rgba(255, 255, 255, 0.3);
+			}
+
+			/* Show class for JS to toggle */
+			.search-results-floating.active {
+				display: flex !important;
+			}
+
+			/* Close Button for Search */
+			.search-close-btn {
+				position: fixed;
+				top: 30px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 70px;
+				height: 70px;
+				background-color: #ffffff;
+				border-radius: 50%;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+				color: #000000 !important;
+				font-size: 50px;
+				font-family: Arial, sans-serif;
+				display: none;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				cursor: pointer;
+				z-index: 1000002;
+				transition: all 0.3s ease;
+				line-height: 1;
+				padding-top: 10px;
+			}
+
+			.search-close-btn:hover {
+				transform: translateX(-50%) translateY(-2px) scale(1.05);
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+				background-color: #f0f0f0;
+			}
+
+			.search-close-btn:active {
+				transform: translateX(-50%) scale(0.97);
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Push the country cards down further so the X has its own "lane" */
+			.search-results-floating {
+				padding-top: 120px !important;
+			}
 		</style>
 
 		<script>
@@ -624,6 +758,12 @@
 
 	<body>
 		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
+
+		<div class="search-results-floating" id="searchWindow" style="display: none">
+			<a href="mobile.html" class="search-close-btn" id="manualCloseX">&times;</a>
+			<div id="results-area"></div>
+		</div>
+
 		<div id="sideMenu" class="side-menu">
 			<div class="close-icon" onclick="toggleMenu()">&times;</div>
 
@@ -648,7 +788,7 @@
 			<p class="subtitle">Legal Health Travel & Safety</p>
 			<div class="mission-progress-wrap">
 				<div class="progress-labels">
-					<span>GWN Verification Progress</span>
+					<span>GWN Team Progress</span>
 					<span id="percent-text">0%</span>
 				</div>
 				<div class="progress-track">
@@ -687,36 +827,65 @@
 
 			document.addEventListener("DOMContentLoaded", () => {
 				const globalInput = document.getElementById("globalSearch");
-				const globalResults = document.getElementById("searchResults");
+				const globalWindow = document.getElementById("searchWindow");
+				const resultsArea = document.getElementById("results-area");
+				// Find the X that is already in your HTML
+				const closeBtn = document.querySelector(".search-close-btn");
+
+				const closeSearch = (e) => {
+					if (e && e.target.tagName === "A") return; // Don't close if clicking a country link
+					globalWindow.classList.remove("active");
+					if (closeBtn) closeBtn.style.display = "none";
+					globalInput.value = "";
+					globalInput.blur();
+
+					if (window.location.hash === "#search") {
+						history.replaceState(null, "", window.location.pathname + window.location.search);
+					}
+				};
+
+				// Attach click to the X
+				if (closeBtn) closeBtn.onclick = closeSearch;
 
 				globalInput.addEventListener("input", (e) => {
 					const value = e.target.value.toLowerCase().trim();
-					globalResults.innerHTML = "";
+
+					// Clear ONLY the country cards, not the X button
+					if (resultsArea) resultsArea.innerHTML = "";
+
 					if (value.length > 0 && typeof globalData !== "undefined") {
-						globalResults.style.display = "flex";
+						globalWindow.classList.add("active");
+						if (closeBtn) closeBtn.style.display = "block";
+
+						if (window.location.hash !== "#search") {
+							history.pushState({ search: true }, "", "#search");
+						}
+
 						Object.keys(globalData)
 							.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
 							.forEach((key) => {
 								if (globalData[key].name.toLowerCase().startsWith(value)) {
+									let s = (globalData[key].status || "warning").toLowerCase();
+									if (s === "danger" || s === "black") s = "red";
+
 									const link = document.createElement("a");
 									link.href = `country.html?c=${key}`;
 									link.className = `country-card ${s}`;
-									let s = (globalData[key].status || "warning").toLowerCase();
-									if (s === "danger" || s === "black") s = "red";
 									link.innerHTML = globalData[key].name;
-									globalResults.appendChild(link);
+
+									// Inject into the inner area
+									if (resultsArea) resultsArea.appendChild(link);
 								}
 							});
 					} else {
-						globalResults.style.display = "none";
+						closeSearch();
 					}
 				});
-			});
 
-			document.addEventListener("click", (e) => {
-				if (!document.querySelector(".landing-search-wrap").contains(e.target)) {
-					document.getElementById("searchResults").style.display = "none";
-				}
+				// Close if clicking the blue background (but not the cards)
+				globalWindow.addEventListener("mousedown", (e) => {
+					if (e.target === globalWindow || e.target === resultsArea) closeSearch();
+				});
 			});
 
 			window.gtranslateSettings = {
