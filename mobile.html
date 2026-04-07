@@ -29,11 +29,11 @@
 		<script>
 			window.globalData = {};
 		</script>
-		<script src="country-info/country-files/africa-data.js?v=0.1" defer></script>
-		<script src="country-info/country-files/asia-data.js?v=0.1" defer></script>
-		<script src="country-info/country-files/europe-data.js?v=0.1" defer></script>
-		<script src="country-info/country-files/americas-data.js?v=0.1" defer></script>
-		<script src="country-info/country-files/oceania-data.js?v=0.1" defer></script>
+		<script src="country-info/country-files/africa-data.js?v=0.2" defer></script>
+		<script src="country-info/country-files/asia-data.js?v=0.2" defer></script>
+		<script src="country-info/country-files/europe-data.js?v=0.2" defer></script>
+		<script src="country-info/country-files/americas-data.js?v=0.2" defer></script>
+		<script src="country-info/country-files/oceania-data.js?v=0.2" defer></script>
 		<script src="index.js" defer></script>
 
 		<style>
@@ -661,6 +661,8 @@
 				z-index: 10000; /* Above everything else */
 				display: none; /* Controlled by JS */
 				flex-direction: column;
+				justify-content: flex-start !important;
+				align-items: center;
 				padding: 80px 20px 40px 20px; /* Top padding to clear the search bar/exit button */
 				overflow-y: auto;
 				gap: 10px;
@@ -732,8 +734,6 @@
 				transform: translateX(-50%) !important;
 				z-index: 10000000 !important; /* Extremely high to stay above all cards */
 				display: none; /* Script will toggle this to 'flex' */
-
-				/* Ensuring it looks like a centered circle */
 				width: 70px;
 				height: 70px;
 				background-color: #ffffff;
@@ -744,7 +744,7 @@
 				justify-content: center;
 				text-decoration: none;
 				font-size: 50px;
-				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+				padding-bottom: 8px;
 			}
 		</style>
 
@@ -808,7 +808,12 @@
 
 			<div class="landing-search-wrap">
 				<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-				<div id="searchResults" class="search-results-floating"></div>
+			</div>
+
+			<div class="search-results-floating" id="searchWindow" style="display: none">
+				<div id="blank-space-filler" style="min-height: 100vh; width: 100%; display: flex; flex-direction: column; align-items: center">
+					<div id="results-area" style="width: 90%; max-width: 500px"></div>
+				</div>
 			</div>
 
 			<a href="lgbt_risk_map.html" class="search-map-link">
@@ -832,45 +837,45 @@
 
 			document.addEventListener("DOMContentLoaded", () => {
 				const globalInput = document.getElementById("globalSearch");
+				// This ID now matches your HTML
 				const globalWindow = document.getElementById("search-results-floating");
 				const resultsArea = document.getElementById("results-area");
-				// Find the X that is already in your HTML
-				const closeBtn = document.querySelector(".search-close-btn");
+				const closeBtn = document.getElementById("manualCloseX");
 
-				const closeSearch = (e) => {
-					// If we click a country card, do nothing and let the link work
-					if (e && e.target.classList.contains("country-card")) return;
-
-					// Otherwise, reset the UI
-					globalWindow.style.display = "none";
+				const closeSearch = () => {
+					// Hide overlay and button
+					globalWindow.classList.remove("active");
 					if (closeBtn) closeBtn.style.display = "none";
-					globalInput.value = "";
 
-					// Send user back to mobile.html
+					// Reset input and send home
+					globalInput.value = "";
 					window.location.href = "mobile.html";
 				};
 
-				// Make sure the X button explicitly goes to mobile.html
+				// Handle X Button Click
 				if (closeBtn) {
-					closeBtn.onclick = () => {
-						window.location.href = "mobile.html";
+					closeBtn.onclick = (e) => {
+						e.preventDefault();
+						closeSearch();
 					};
 				}
 
 				globalInput.addEventListener("input", (e) => {
 					const value = e.target.value.toLowerCase().trim();
-					const closeBtn = document.getElementById("manualCloseX"); // Get by ID
-					// Clear ONLY the country cards, not the X button
+
 					if (resultsArea) resultsArea.innerHTML = "";
 
 					if (value.length > 0 && typeof globalData !== "undefined") {
+						// Show the overlay (using the class for the blur/color)
 						globalWindow.classList.add("active");
 						if (closeBtn) closeBtn.style.display = "flex";
 
+						// Push state for the back button
 						if (window.location.hash !== "#search") {
 							history.pushState({ search: true }, "", "#search");
 						}
 
+						// Alpha-sort and Filter
 						Object.keys(globalData)
 							.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
 							.forEach((key) => {
@@ -883,29 +888,24 @@
 									link.className = `country-card ${s}`;
 									link.innerHTML = globalData[key].name;
 
-									// Inject into the inner area
 									if (resultsArea) resultsArea.appendChild(link);
 								}
 							});
 					} else {
-						closeSearch();
+						// If input is cleared, hide the window
+						globalWindow.classList.remove("active");
+						if (closeBtn) closeBtn.style.display = "none";
 					}
 				});
 
-				// Close if clicking the blue background (but not the cards)
-				globalWindow.addEventListener("mousedown", (e) => {
-					if (e.target === globalWindow || e.target === resultsArea) closeSearch();
+				// Close if clicking the blue background/filler (the 'Blank Space' fix)
+				globalWindow.addEventListener("click", (e) => {
+					// If the user clicks the background OR the filler div, but NOT a result card
+					if (e.target === globalWindow || e.target.id === "blank-space-filler") {
+						closeSearch();
+					}
 				});
 			});
-
-			// Dedicated script for the "Blank Space" click
-			document.getElementById("search-results-floating").addEventListener("click", function (e) {
-				// If the thing clicked was the background wrapper OR the window itself
-				if (e.target.id === "search-results-floating" || e.target.id === "blank-space-filler") {
-					window.location.href = "mobile.html";
-				}
-			});
-
 			window.gtranslateSettings = {
 				default_language: "en",
 				detect_browser_language: true,
