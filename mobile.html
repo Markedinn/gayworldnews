@@ -382,27 +382,6 @@
 				color: #000;
 			}
 
-			.search-close-btn {
-				position: sticky;
-				top: 20px;
-				margin: 0 auto 20px auto;
-				display: block;
-
-				width: 60px;
-				height: 60px;
-				line-height: 60px;
-
-				background: rgba(255, 255, 255, 0.2);
-				border-radius: 50%;
-				color: #fff !important;
-				font-size: 40px;
-				text-align: center;
-				text-decoration: none !important;
-
-				z-index: 10000;
-				cursor: pointer;
-			}
-
 			/* Show X if it's a sibling OR a child of the active search */
 			.search-results-floating.active ~ .search-close-btn,
 			.search-results-floating.active .search-close-btn {
@@ -676,7 +655,7 @@
 				left: 0;
 				width: 100vw;
 				height: 100dvh;
-				background: rgba(22, 70, 96, 0.95) !important; /* Deep brand blue with transparency */
+				background: rgba(59, 58, 58, 0.99) !important; /* Deep brand blue with transparency */
 				backdrop-filter: blur(20px) saturate(160%);
 				-webkit-backdrop-filter: blur(20px) saturate(160%);
 				z-index: 10000; /* Above everything else */
@@ -744,6 +723,29 @@
 			.search-results-floating {
 				padding-top: 120px !important;
 			}
+
+			/* This forces the X to stay at the top of the screen regardless of scrolling */
+			#manualCloseX {
+				position: fixed !important; /* "Fixed" relative to the viewport/screen */
+				top: 30px !important; /* Distance from the top of the phone */
+				left: 50% !important;
+				transform: translateX(-50%) !important;
+				z-index: 10000000 !important; /* Extremely high to stay above all cards */
+				display: none; /* Script will toggle this to 'flex' */
+
+				/* Ensuring it looks like a centered circle */
+				width: 70px;
+				height: 70px;
+				background-color: #ffffff;
+				color: #000000 !important;
+				border-radius: 50%;
+				display: none;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				font-size: 50px;
+				box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+			}
 		</style>
 
 		<script>
@@ -759,9 +761,12 @@
 	<body>
 		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
 
-		<div class="search-results-floating" id="searchWindow" style="display: none">
-			<a href="mobile.html" class="search-close-btn" id="manualCloseX">&times;</a>
-			<div id="results-area"></div>
+		<a href="mobile.html" class="search-close-btn" id="manualCloseX">&times;</a>
+
+		<div class="search-results-floating" id="search-results-floating" style="display: none">
+			<div id="blank-space-filler" style="min-height: 100vh; width: 100%">
+				<div id="results-area"></div>
+			</div>
 		</div>
 
 		<div id="sideMenu" class="side-menu">
@@ -827,35 +832,40 @@
 
 			document.addEventListener("DOMContentLoaded", () => {
 				const globalInput = document.getElementById("globalSearch");
-				const globalWindow = document.getElementById("searchWindow");
+				const globalWindow = document.getElementById("search-results-floating");
 				const resultsArea = document.getElementById("results-area");
 				// Find the X that is already in your HTML
 				const closeBtn = document.querySelector(".search-close-btn");
 
 				const closeSearch = (e) => {
-					if (e && e.target.tagName === "A") return; // Don't close if clicking a country link
-					globalWindow.classList.remove("active");
+					// If we click a country card, do nothing and let the link work
+					if (e && e.target.classList.contains("country-card")) return;
+
+					// Otherwise, reset the UI
+					globalWindow.style.display = "none";
 					if (closeBtn) closeBtn.style.display = "none";
 					globalInput.value = "";
-					globalInput.blur();
 
-					if (window.location.hash === "#search") {
-						history.replaceState(null, "", window.location.pathname + window.location.search);
-					}
+					// Send user back to mobile.html
+					window.location.href = "mobile.html";
 				};
 
-				// Attach click to the X
-				if (closeBtn) closeBtn.onclick = closeSearch;
+				// Make sure the X button explicitly goes to mobile.html
+				if (closeBtn) {
+					closeBtn.onclick = () => {
+						window.location.href = "mobile.html";
+					};
+				}
 
 				globalInput.addEventListener("input", (e) => {
 					const value = e.target.value.toLowerCase().trim();
-
+					const closeBtn = document.getElementById("manualCloseX"); // Get by ID
 					// Clear ONLY the country cards, not the X button
 					if (resultsArea) resultsArea.innerHTML = "";
 
 					if (value.length > 0 && typeof globalData !== "undefined") {
 						globalWindow.classList.add("active");
-						if (closeBtn) closeBtn.style.display = "block";
+						if (closeBtn) closeBtn.style.display = "flex";
 
 						if (window.location.hash !== "#search") {
 							history.pushState({ search: true }, "", "#search");
@@ -886,6 +896,14 @@
 				globalWindow.addEventListener("mousedown", (e) => {
 					if (e.target === globalWindow || e.target === resultsArea) closeSearch();
 				});
+			});
+
+			// Dedicated script for the "Blank Space" click
+			document.getElementById("search-results-floating").addEventListener("click", function (e) {
+				// If the thing clicked was the background wrapper OR the window itself
+				if (e.target.id === "search-results-floating" || e.target.id === "blank-space-filler") {
+					window.location.href = "mobile.html";
+				}
 			});
 
 			window.gtranslateSettings = {
