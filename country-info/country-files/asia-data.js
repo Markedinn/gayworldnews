@@ -3,6 +3,7 @@ Object.assign(globalData, {
 		name: "Afghanistan",
 		continent: "asia",
 		status: "red",
+		path: "asia/afghanistan.html",
 
 		legal: `
         <p>In 2026, the legal status is the most severe in the world. Under the current de facto authorities, same-sex acts are punishable by death. There are no protections, and the 2024-2025 "Vice and Virtue" laws have effectively criminalized any non-conforming existence.</p>

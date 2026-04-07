@@ -3,6 +3,7 @@ Object.assign(globalData, {
 		name: "Albania",
 		continent: "europe",
 		status: "amber",
+		path: "europe/albania.html",
 		isHuman: true, // <--- Only add this to the "Manual" pages
 
 		report: `

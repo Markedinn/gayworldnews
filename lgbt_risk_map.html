@@ -422,8 +422,18 @@
                     }
 
                     layer.on("click", () => {
-                        window.location.href = `country.html?c=${key}`;
-                    });
+						// 1. Check if the country exists in our data
+						const countryData = window.globalData ? window.globalData[key] : null;
+
+						// 2. If it has a manual path (like 'europe/albania.html'), go there!
+						if (countryData && countryData.path) {
+							window.location.href = countryData.path;
+						} 
+						// 3. Otherwise, use the standard AI template page
+						else {
+							window.location.href = `country.html?c=${key}`;
+						}
+					});
                 },
             }).addTo(map);
         })
