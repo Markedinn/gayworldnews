@@ -1400,6 +1400,90 @@ Object.assign(globalData, {
 		],
 	},
 
+	greenland: {
+		name: "Greenland",
+		continent: "americas",
+		status: "green",
+		path: "europe/greenland.html",
+
+		legal: `
+        <p>As of 2026, Greenland operates under a legal framework that is fully aligned with Danish human rights standards, providing some of the most robust LGBTQ+ protections in the Arctic. Consensual same-sex acts are legal, and comprehensive anti-discrimination laws are strictly enforced.</p>
+
+        <p>Marriage equality has been legal since 2016. Same-sex couples enjoy the same rights as heterosexual couples, including adoption and access to fertility treatments. Voices from the Ground: <a href="https://www.equaldex.com/region/greenland" target="_blank">Equaldex</a> highlights that Greenland has successfully localized Danish progressive values.</p>
+
+        <p>Gender identity laws allow for legal change of name and gender marker based on self-determination, matching the 2014 Danish model. In 2025, administrative processes were further simplified for the Inuit community. Voices from the Ground: <a href="https://database.ilga.org/greenland-lgbti" target="_blank">ILGA World Database</a> confirms the 2026 status of full legal autonomy.</p>
+
+        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Primary Legal Documentation</h4>
+            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">📜 Inatsisartut Act on Marriage 2016</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The local legislation that adopted the Danish marriage equality law.</p>
+                <a href="https://database.ilga.org/greenland-lgbti" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Source</a>
+            </div>
+        </div>
+    `,
+
+		safety: `
+        <p>The current posture is "Quiet Inclusion." 2025/2026 social climate data indicates high levels of acceptance within the small, close-knit population of Nuuk. Public support for LGBTQ+ rights is treated as a natural extension of Greenlandic communal values.</p>
+
+        <p>There are few standalone "LGBT Third Spaces" like bookstores due to the small economy, but the "Katuaq" Cultural Center in Nuuk acts as a de facto "Safe Haven" and inclusive art gallery. Intersectionality is high, with local spaces being fully inclusive of Inuit QPOC. The community is integrated, and "Safe Havens" are inclusive of all sub-sectors of the rainbow.</p>
+
+        <p>Police protection is professional and adheres to Danish sensitivity standards. Visibility in the 2026 government is notable, with several openly LGBT figures in administrative roles. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/greenland/" target="_blank">Human Dignity Trust</a> notes the absence of any criminalization or state-sanctioned discrimination.</p>
+
+        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
+            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #12</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Reflecting the high Nordic standards of safety and equality in 2026.</p>
+                
+                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-top: 15px; margin-bottom: 5px;">🛡️ Key Indicator</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Strong legal protections against hate speech in the Greenlandic Criminal Code.</p>
+            </div>
+        </div>
+    `,
+
+		travel: `
+        <p>Greenland is "Extremely Safe" for LGBTQ+ travelers. Public PDA is accepted. The "De Facto" social reality is one of respectful indifference to sexual orientation. Travelers are welcomed as part of the growing eco-tourism sector.</p>
+
+        <p>Cis-gay and Trans/Non-Binary travelers face no hurdles; airport security in Nuuk and Kangerlussuaq is professional and follows European standards. The capital city, Nuuk, is the primary "Safe Haven."</p>
+
+        <p>Events: Nuuk Pride occurs in August 2026. The 2025 security posture was "Very Safe," with the event being a festive, family-oriented parade through the city center. Voices from the Ground: <a href="https://www.iglta.org/" target="_blank">IGLTA</a> notes that Greenland is an ideal destination for LGBT travelers seeking remote safety. </p>
+
+        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Safety</h4>
+            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
+                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility</strong>
+                <p style="color: #fff; font-size: 0.85rem;">Professional customs entry. High visibility is normal in Nuuk. No specific behavior restrictions exist.</p>
+            </div>
+        </div>
+    `,
+
+		health: `
+        <p>Healthcare is provided by the Queen Ingrid's Hospital in Nuuk and is LGBTQ-inclusive. It follows Danish standards of care. Foreigners are advised to have travel insurance.</p>
+
+        <p>Access to PrEP and HRT is available via the hospital system, though travelers should bring their own supplies due to the remote nature of the island. There are no legal restrictions for medical staff.</p>
+
+        <p>Emergency protocols are standard. Inclusivity levels are high. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a> suggests Nuuk as the only reliable medical hub for the territory. Emergency: 112.</p>
+
+        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Medical Contacts</h4>
+            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
+                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Queen Ingrid's Hospital (Dronning Ingrids Hospital)</strong>
+                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Nuuk, Greenland</p>
+                <p style="margin: 5px 0 0 0; font-weight: bold; color: #fff;">📞 Contact: +299 34 40 00</p>
+            </div>
+        </div>
+    `,
+
+		posture: `
+        <p>Greenland maintains a "Green" posture in 2026. It offers a safe, Arctic sanctuary with world-class legal protections and a social environment that is welcoming to all LGBTQ+ travelers.</p>
+
+        <p>The 2025 social climate remained stable and progressive. Sources: ILGA World, Equaldex, and Danish Government human rights reports.</p>
+    `,
+
+		sources: ["https://database.ilga.org/greenland-lgbti", "https://www.equaldex.com/region/greenland", "https://www.humandignitytrust.org/country-profile/greenland/"],
+	},
+
 	hungary: {
 		name: "Hungary",
 		continent: "europe",

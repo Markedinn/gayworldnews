@@ -249,6 +249,8 @@ Object.assign(globalData, {
 		name: "Bir Tawil",
 		continent: "africa",
 		status: "red",
+		path: "africa/bir_tawil.html",
+		isHuman: true,
 
 		legal: `
         <p>Bir Tawil is the only "Terra Nullius" (No Man's Land) on Earth. Because neither Egypt nor Sudan claims the territory, there is no functioning legal system, no constitution, and no recognized government in 2026. Consequently, there are no laws criminalizing—or protecting—LGBTQ+ individuals.</p>

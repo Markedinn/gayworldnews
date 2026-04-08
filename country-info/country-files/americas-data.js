@@ -2115,6 +2115,7 @@ Object.assign(globalData, {
 		name: "Greenland",
 		continent: "americas",
 		status: "green",
+		path: "americas/greenland.html",
 
 		legal: `
         <p>As of 2026, Greenland operates under a legal framework that is fully aligned with Danish human rights standards, providing some of the most robust LGBTQ+ protections in the Arctic. Consensual same-sex acts are legal, and comprehensive anti-discrimination laws are strictly enforced.</p>
