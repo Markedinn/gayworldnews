@@ -549,6 +549,7 @@ const FEEDS = [
 	"https://equal-eyes.org/explore?format=rss", // High-quality Global South digest
 
 	// --- GLOBAL HUMAN RIGHTS & LEGAL ---
+	"https://monitor.ilga.org/",
 	"https://www.openlynews.com/feed", // Reuters (Dry, factual reporting)
 	"https://76crimes.com/feed/", // Decriminalization focus
 	"https://www.erasing76crimes.com/feed/", // Africa/Caribbean focus

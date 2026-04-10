@@ -30,11 +30,11 @@
 			window.globalData = {};
 		</script>
 
-		<script src="country-info/country-files/africa-data.js?v=1.6"></script>
-		<script src="country-info/country-files/americas-data.js?v=1.6"></script>
-		<script src="country-info/country-files/asia-data.js?v=1.6"></script>
-		<script src="country-info/country-files/europe-data.js?v=1.6"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.6"></script>
+		<script src="country-info/country-files/africa-data.js?v=1.7"></script>
+		<script src="country-info/country-files/americas-data.js?v=1.7"></script>
+		<script src="country-info/country-files/asia-data.js?v=1.7"></script>
+		<script src="country-info/country-files/europe-data.js?v=1.7"></script>
+		<script src="country-info/country-files/oceania-data.js?v=1.7"></script>
 
 		<style>
 			html,
@@ -61,15 +61,20 @@
 			}
 
 			#hoverBox {
-				position: absolute;
-				background: white;
-				padding: 8px 12px;
-				border-radius: 6px;
+				position: fixed; /* Use fixed for better screen tracking */
+				background: rgba(0, 0, 0, 0.85);
+				color: white;
+				padding: 6px 12px;
+				border-radius: 4px;
 				pointer-events: none;
 				display: none;
-				z-index: 10000;
-				border: 1px solid #ccc;
-				font-size: 14px;
+				z-index: 10001;
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				font-size: 13px;
+				font-weight: 600;
+				backdrop-filter: blur(4px);
+				box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+				pointer-events: none; /* This is vital! */
 			}
 
 			#legend {
@@ -263,7 +268,7 @@
 
 			/* The vertical bar styling */
 			.footer-divider {
-				color: rgba(255, 255, 255, 0.3);
+				color: #ffffff;
 				font-size: 20px;
 				font-weight: 100;
 				/* Ensures the space is no bigger than the character itself */
@@ -272,16 +277,35 @@
 			}
 
 			.home-btn {
-				color: #ff3399;
+				color: #fd3097;
 				font-weight: 800;
-				font-size: 12px;
-				letter-spacing: 1px;
-				text-align: center;
-				/* cursor: pointer; */
+				font-size: 14px; /* Slightly smaller for a premium feel */
+				letter-spacing: 1.2px;
+				text-transform: uppercase;
 			}
 
-			.home-btn-logo {
-				text-decoration: none;
+			/* Optional: Make the chevrons slightly lighter or white to contrast the pink text */
+			.home-btn span {
+				color: #ffffff;
+				padding: 0 4px;
+			}
+
+			/* Hide labels by default */
+			.country-label {
+				background: transparent !important;
+				border: none !important;
+				box-shadow: none !important;
+				color: white;
+				font-weight: 600;
+				font-size: 11px;
+				text-shadow: 1px 1px 2px #000;
+				pointer-events: none;
+				display: none; /* Hidden at start */
+			}
+
+			/* Show labels only when we add the 'zoom-active' class via JS */
+			.zoom-active .country-label {
+				display: block;
 			}
 		</style>
 	</head>
@@ -311,6 +335,8 @@
 			</div>
 		</div>
 
+		<div id="hoverBox"></div>
+
 		<div id="map"></div>
 
 		<footer class="site-footer">
@@ -321,127 +347,140 @@
 					</a>
 				</div>
 
-				<span class="footer-divider">|</span>
+				<span class="footer-divider"> </span>
 
 				<div class="footer-section">
-					<span class="home-btn">TAP COUNTRY TO OPEN</span>
+					<span class="home-btn"> Zoom Me <span class="footer-divider">|</span> Click Me</span>
 				</div>
 			</div>
 		</footer>
 
 		<script>
-    // Prevents mobile browsers from "pulling down to refresh" while using the map
-    document.body.addEventListener(
-        "touchmove",
-        function (e) {
-            e.preventDefault();
-        },
-        { passive: false },
-    );
+			// Prevents mobile browsers from "pulling down to refresh"
+			document.body.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
 
-    const map = L.map("map", {
-        renderer: L.canvas(),
-        zoomSnap: 0.1,
-        attributionControl: false,
-        zoomControl: false,
-        inertia: true,
-        inertiaFraction: 0.5,
-    }).setView([15, 0], 2);
+			const map = L.map("map", {
+				renderer: L.canvas(),
+				zoomSnap: 0.1,
+				attributionControl: false,
+				zoomControl: false,
+				inertia: true,
+				inertiaFraction: 0.5,
+			}).setView([15, 0], 2);
 
-    // 1. Translation Manual: Matches GeoJSON names to your JS data keys
-   const countryNameOverrides = {
-    // Africa Fixes
-    "united_republic_of_tanzania": "tanzania",
-    "congo_the_democratic_republic_of_the": "democratic_republic_of_the_congo",
-    "gambia_the": "gambia",
-    "the_gambia": "gambia",
-    "swaziland": "eswatini",
+			const countryNameOverrides = {
+				united_republic_of_tanzania: "tanzania",
+				congo_the_democratic_republic_of_the: "democratic_republic_of_the_congo",
+				gambia_the: "gambia",
+				the_gambia: "gambia",
+				swaziland: "eswatini",
+				guineabissau: "guinea_bissau",
+				guinea_bissau: "guinea_bissau",
+				sahrawi_arab_democratic_republic: "western_sahara",
+				palestine: "palestinian_territories",
+				west_bank: "palestinian_territories",
+				gaza_strip: "palestinian_territories",
+				russian_federation: "russia",
+			};
 
-    "guineabissau": "guinea_bissau", // Map often removes the hyphen
-    "guinea_bissau": "guinea_bissau",
-    "sahrawi_arab_democratic_republic": "western_sahara",
+			fetch("world.geojson.txt")
+				.then((res) => {
+					if (!res.ok) throw new Error("File not found!");
+					return res.json();
+				})
+				.then((geo) => {
+					L.geoJSON(geo, {
+						style: function (feature) {
+							const rawName = feature.properties.ADMIN || feature.properties.name || "";
+							let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+							if (countryNameOverrides[key]) {
+								key = countryNameOverrides[key];
+							}
+							const country = window.globalData ? window.globalData[key] : null;
+							let status = country ? country.status.toLowerCase() : "gray";
 
-    // Middle East & Asia Fixes
-"palestine": "palestinian_territories",
-    "west_bank": "palestinian_territories",
-    "gaza_strip": "palestinian_territories",
-    "bangladesh": "bangladesh",
+							let color = "#94a3b8";
+							if (status === "green") color = "#22c55e";
+							else if (status === "amber") color = "#eab308";
+							else if (status === "red" || status === "danger") color = "#ef4444";
+							else if (status === "ice" || status === "advisory") color = "#00e5ff";
 
-    // Europe & Others
-    "russian_federation": "russia"
-};
+							return {
+								fillColor: color,
+								color: "rgba(255, 255, 255, 0.4)",
+								weight: 0.8,
+								fillOpacity: 0.9,
+							};
+						},
+						onEachFeature: (feature, layer) => {
+							const rawName = feature.properties.ADMIN || feature.properties.name || "";
+							let tooltipOffset = [0, 0]; // Default: no move
 
-    console.log("Data Status:", window.globalData ? "Loaded" : "Missing!");
+							if (rawName === "Israel") {
+								tooltipOffset = [-10, 25]; // [Horizontal, Vertical]
+							} else if (rawName === "Palestine" || rawName === "West Bank") {
+								tooltipOffset = [-15, 0];
+							}
 
-    // 2. Fetch the world shapes
-    fetch("world.geojson.txt")
-        .then((res) => {
-            if (!res.ok) throw new Error("File not found!");
-            return res.json();
-        })
-        .then((geo) => {
-            L.geoJSON(geo, {
-                style: function (feature) {
-                    const rawName = feature.properties.ADMIN || feature.properties.name || "";
-                    let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+							layer.bindTooltip(rawName, {
+								permanent: true,
+								direction: "center",
+								offset: tooltipOffset, // Apply the nudge
+								className: "country-label",
+							});
 
-                    // Apply the translation if it exists in our manual list
-                    if (countryNameOverrides[key]) {
-                        key = countryNameOverrides[key];
-                    }
+							layer.on({
+								mouseover: (e) => {
+									const currentLayer = e.target;
+									currentLayer.setStyle({
+										weight: 2,
+										color: "#ffffff",
+										fillOpacity: 1,
+									});
+									hoverBox.innerText = rawName;
+									hoverBox.style.display = "block";
+								},
+								mousemove: (e) => {
+									hoverBox.style.left = e.originalEvent.clientX + 15 + "px";
+									hoverBox.style.top = e.originalEvent.clientY - 35 + "px";
+								},
+								mouseout: (e) => {
+									e.target.setStyle({
+										weight: 0.8,
+										color: "rgba(255, 255, 255, 0.4)",
+										fillOpacity: 0.9,
+									});
+									hoverBox.style.display = "none";
+								},
+								click: () => {
+									let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
+									if (countryNameOverrides[key]) {
+										key = countryNameOverrides[key];
+									}
+									const countryData = window.globalData ? window.globalData[key] : null;
+									if (countryData && countryData.path) {
+										window.location.href = countryData.path;
+									} else {
+										window.location.href = `country.html?c=${key}`;
+									}
+								},
+							});
+						},
+					}).addTo(map);
+				})
+				.catch((err) => console.error("MAP ERROR:", err));
 
-                    const country = window.globalData ? window.globalData[key] : null;
-                    let status = country ? country.status.toLowerCase() : "gray";
+			// 2. ADD ZOOM LISTENER (To show/hide labels)
+			map.on("zoomend", function () {
+				const currentZoom = map.getZoom();
+				const mapContainer = document.getElementById("map");
+				if (currentZoom >= 3) {
+					mapContainer.classList.add("zoom-active");
+				} else {
+					mapContainer.classList.remove("zoom-active");
+				}
+			});
 
-                    // Debugging: If a country is gray, find out what the key was
-                    if (status === "gray" && rawName !== "") {
-                        console.log("Unmatched Country:", rawName, "-> Key attempted:", key);
-                    }
-
-                    let color = "#94a3b8"; // Default gray
-                    if (status === "green") color = "#22c55e";
-                    else if (status === "amber") color = "#eab308";
-                    else if (status === "red" || status === "danger") color = "#ef4444";
-                    else if (status === "black") color = "#1a1a1a";
-                    else if (status === "ice" || status === "advisory") color = "#00e5ff";
-
-                    return {
-                        fillColor: color,
-                        color: "rgb(15, 100, 150)",
-                        weight: 0.7,
-                        fillOpacity: 1.0,
-                    };
-                },
-                onEachFeature: (feature, layer) => {
-                    const rawName = feature.properties.ADMIN || feature.properties.name || "";
-                    let key = rawName.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
-
-                    // Ensure the click also uses the override logic
-                    if (countryNameOverrides[key]) {
-                        key = countryNameOverrides[key];
-                    }
-
-                    layer.on("click", () => {
-						// 1. Check if the country exists in our data
-						const countryData = window.globalData ? window.globalData[key] : null;
-
-						// 2. If it has a manual path (like 'europe/albania.html'), go there!
-						if (countryData && countryData.path) {
-							window.location.href = countryData.path;
-						} 
-						// 3. Otherwise, use the standard AI template page
-						else {
-							window.location.href = `country.html?c=${key}`;
-						}
-					});
-                },
-            }).addTo(map);
-        })
-        .catch((err) => {
-            console.error("MAP ERROR:", err);
-            alert("The map couldn't load the country shapes.");
-        });
-</script>
 			function toggleLegend() {
 				const legend = document.getElementById("legend");
 				legend.classList.toggle("legend-collapsed");
