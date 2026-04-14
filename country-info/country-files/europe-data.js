@@ -817,7 +817,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Cyprus", "https://www.equaldex.com/region/cyprus"],
 	},
 
-	czechia: {
+	czech_republic: {
 		name: "Czechia",
 		continent: "europe",
 		status: "green",
@@ -3017,7 +3017,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Russia", "https://www.themoscowtimes.com/2023/11/30/russia-bans-lgbt-movement-as-extremist-a83262"],
 	},
 
-	republic_of_serbia: {
+	serbia: {
 		name: "Serbia",
 		continent: "europe",
 		status: "amber",
