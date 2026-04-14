@@ -201,35 +201,10 @@ body {
 	margin: 0;
 }
 
-.neutral {
-	background-color: rgba(0, 230, 0, 0.8);
-}
-
-.neutral span,
-.neutral i {
-	color: #faf2f2 !important;
-}
-
-.neutral:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-	filter: brightness(1.1);
-}
-
-.neutral:hover i,
-.neutral:hover span {
-	color: #ffffff;
-}
-
-.social-pill i {
-	margin: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+/* --- CONSOLIDATED SOCIAL PILLS --- */
 
 .social-pill {
-	display: flex;
+	display: inline-flex; /* Use inline-flex so they sit side-by-side naturally */
 	align-items: center;
 	justify-content: center;
 	width: 130px;
@@ -244,13 +219,56 @@ body {
 		inset 0 0 8px rgba(255, 255, 255, 0.1);
 	position: relative;
 	overflow: hidden;
+	padding: 0 10px;
 }
 
+/* 1. THE SVG FIX - Explicitly capping the size */
+.social-pill svg {
+	width: 20px !important; /* !important ensures it overrides any global SVG styles */
+	height: 20px !important;
+	min-width: 20px; /* Prevents squishing */
+	flex-shrink: 0;
+	fill: white;
+	transition: transform 0.3s ease;
+}
+
+/* 2. SPECIFIC YOUTUBE TWEAK */
+.social-pill.youtube svg {
+	width: 24px !important;
+	height: 24px !important;
+}
+
+/* 3. TEXT FIX */
 .social-pill span {
-	font-size: 1rem;
+	font-size: 0.85rem;
 	font-weight: 700;
 	color: white;
 	margin-left: 8px;
+	white-space: nowrap;
+}
+
+/* 4. HOVER FEEDBACK */
+.social-pill:hover {
+	transform: translateY(-3px) scale(1.02);
+	border-color: rgba(255, 255, 255, 1);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+	filter: brightness(1.1);
+}
+
+.social-pill:hover svg {
+	transform: scale(1.1);
+}
+
+/* ... keep your .facebook, .x-twitter, .youtube background colors below ... */
+
+.neutral {
+	background-color: rgba(0, 230, 0, 0.8);
+}
+
+.neutral:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	filter: brightness(1.1);
 }
 
 .facebook {
@@ -262,31 +280,6 @@ body {
 }
 .youtube {
 	background-color: #ff0000;
-}
-
-.social-pill:hover {
-	transform: translateY(-3px) scale(1.02);
-	border-color: rgba(255, 255, 255, 1);
-	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-	filter: brightness(1.1);
-}
-
-.social-icon {
-	width: 24px; /* Fixed width */
-	height: 24px; /* Fixed height */
-	display: inline-block;
-	vertical-align: middle;
-	transition: transform 0.3s ease;
-}
-
-/* Fix for the "tiny" YouTube look */
-.social-pill a[href*="youtube"] .social-icon {
-	width: 28px;
-	height: 28px;
-}
-
-.social-pill:hover .social-icon {
-	transform: scale(1.1);
 }
 
 .gwn-logo {
