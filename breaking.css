@@ -834,6 +834,24 @@ h2 {
 	filter: brightness(1.1);
 }
 
+.social-icon {
+	width: 24px; /* Fixed width */
+	height: 24px; /* Fixed height */
+	display: inline-block;
+	vertical-align: middle;
+	transition: transform 0.3s ease;
+}
+
+/* Fix for the "tiny" YouTube look */
+.social-pill a[href*="youtube"] .social-icon {
+	width: 28px;
+	height: 28px;
+}
+
+.social-pill:hover .social-icon {
+	transform: scale(1.1);
+}
+
 .gwn-logo {
 	position: relative;
 	font-size: 2rem;

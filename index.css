@@ -271,22 +271,22 @@ body {
 	filter: brightness(1.1);
 }
 
-/* UNIFYING SOCIAL ICON SIZES */
-.social-pill i {
-	font-size: 1.1rem; /* Sets a base size for all footer icons */
-	width: 24px; /* Gives them a consistent "footprint" so they align */
-	text-align: center;
-}
-
-/* SPECIFIC BUMP FOR YOUTUBE */
-.social-pill .fa-youtube {
-	font-size: 1.4rem; /* Bumping it up slightly to match the "weight" of the others */
-}
-
-/* HOVER REFINEMENT */
-.social-pill:hover i {
-	transform: scale(1.1);
+.social-icon {
+	width: 24px; /* Fixed width */
+	height: 24px; /* Fixed height */
+	display: inline-block;
+	vertical-align: middle;
 	transition: transform 0.3s ease;
+}
+
+/* Fix for the "tiny" YouTube look */
+.social-pill a[href*="youtube"] .social-icon {
+	width: 28px;
+	height: 28px;
+}
+
+.social-pill:hover .social-icon {
+	transform: scale(1.1);
 }
 
 .gwn-logo {
