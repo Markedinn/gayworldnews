@@ -62,6 +62,7 @@ const flagMap = {
 	fiji: "fj",
 	finland: "fi",
 	france: "fr",
+	french_guiana: "gf",
 	gabon: "ga",
 	gambia: "gm",
 	georgia: "ge",

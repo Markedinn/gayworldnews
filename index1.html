@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title>Gay World News | Interactive LGBTQ+ Map & Dashboard for Live Breaking News</title>
+		<meta name="description" content="Global LGBTQ+ Interactive Map & Dashboard with Live Breaking News for Legal Travel, Health & Security." />
+
+		<link rel="canonical" href="https://www.gayworldnews.com/" />
+		<link rel="alternate" media="only screen and (max-width: 1100px)" href="https://www.gayworldnews.com/mobile.html" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.gayworldnews.com/" />
+		<meta property="og:title" content="Interactive LGBTQ+ World Map | Live Breaking News: Legal Travel Health & Security" />
+		<meta property="og:description" content="Global LGBTQ+ Dashboard & Map for Real-Time Updates, including Legal Travel Health Security & Live Breaking News." />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?" />
+		<meta property="og:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://www.gayworldnews.com/" />
+		<meta name="twitter:title" content="Interactive LGBTQ+ World Map | Live Breaking News" />
+		<meta name="twitter:description" content="Real-time Global updates for LGBTQ+ Legal Travel, Health & Security." />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?" />
+		<meta name="twitter:image:alt" content="Gay World News logo over a vibrant rainbow-colored global map background" />
+
+		<script>
+			// Check if the screen width is 480px or less (standard mobile)
+			if (window.innerWidth < 1100) {
+				// Redirect to the mobile version
+				window.location.href = "mobile.html";
+			}
+		</script>
+
+		<link rel="icon" type="image/webp" href="images/favicon.webp" />
+
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
+
+		<link rel="stylesheet" href="index.css?v=3.56" />
+
+		<script>
+			window.globalData = {};
+		</script>
+
+		<script src="country-info/country-files/africa-data.js" defer></script>
+		<script src="country-info/country-files/asia-data.js" defer></script>
+		<script src="country-info/country-files/europe-data.js" defer></script>
+		<script src="country-info/country-files/americas-data.js" defer></script>
+		<script src="country-info/country-files/oceania-data.js" defer></script>
+		<script src="index.js" defer></script>
+
+		<script>
+			// THE OLYMPIC TRACKER: Update these numbers as you finish countries
+			window.gwnProgress = {
+				humanCount: 3,
+				totalOlympic: 231,
+				color: "#2ecc71",
+			};
+		</script>
+	</head>
+
+	<body>
+		<a href="https://www.google.com" class="exit-btn" title="Exit this site immediately">QUICK EXIT</a>
+		<main class="master-grid-container" id="main-content">
+			<header class="main-header home-hero">
+				<h1 class="main-title">Gay World News</h1>
+				<div class="subtitle-group">
+					<p class="subtitle">Legal Health Travel & Safety</p>
+				</div>
+				<div class="mission-progress-wrap">
+					<div class="progress-labels">
+						<span>GWN Research Progress Bar</span>
+						<span id="percent-text">0%</span>
+					</div>
+					<div class="progress-track">
+						<div id="progress-fill" class="progress-fill"></div>
+					</div>
+					<p class="progress-sub-count"><span id="display-human">0</span>Total Countries / Territories: 231</p>
+				</div>
+			</header>
+
+			<div class="three-search-container">
+				<div id="translator-anchor" data-nosnippet></div>
+
+				<div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+				<a href="lgbt_risk_map.html" class="search-map-link">
+					<div class="search-map-bar">
+						<div class="search-map-content">
+							<span class="search-map-text">INTERACTIVE MAP</span>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<nav class="bento-grid">
+				<a href="breaking.html" class="bento-card breaking-red">BREAKING NEWS</a>
+				<a href="americas.html" class="bento-card">AMERICAS</a>
+				<a href="europe.html" class="bento-card">EUROPE</a>
+				<a href="asia.html" class="bento-card">ASIA</a>
+				<a href="africa.html" class="bento-card">AFRICA</a>
+				<a href="oceania.html" class="bento-card">OCEANIA</a>
+			</nav>
+		</main>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="/" class="home-btn-logo" title="Gay World News - Home">
+						<span class="gwn-logo">GWN</span>
+					</a>
+				</div>
+				<div class="footer-card">
+					<a href="about.html" class="social-pill neutral" aria-label="Learn more about Gay World News"> <i class="fas fa-info-circle"></i> <span>About</span> </a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
+						<i class="fab fa-facebook-f"></i> <span>Facebook</span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
+						<i class="fab fa-x-twitter"></i> <span>X</span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
+						<i class="fab fa-youtube"></i> <span>YouTube</span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="contact.html" class="social-pill neutral" aria-label="Contact Gay World News"> <i class="fas fa-envelope"></i> <span>Connect</span> </a>
+				</div>
+			</div>
+			<div class="footer-bottom-bar">
+				<p class="footer-copyright">© 2026 Gay World News (GWN)</p>
+			</div>
+		</footer>
+
+		<script>
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				type: "nicedropdown",
+			};
+
+			// This "forces" the text because the widget settings sometimes fail
+			window.addEventListener("load", function () {
+				setTimeout(function () {
+					var select = document.querySelector("#translator-anchor select");
+					if (select) {
+						// Creates a new "Select Language" option at the very top
+						var opt = document.createElement("option");
+						opt.value = "";
+						opt.innerHTML = "Select Language";
+						opt.selected = true;
+						opt.disabled = true;
+						select.insertBefore(opt, select.firstChild);
+					}
+				}, 1000); // Waits 1 second for the widget to finish loading
+			});
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const data = window.gwnProgress;
+				if (!data) return;
+
+				const percent = Math.round((data.humanCount / data.totalOlympic) * 100);
+
+				// Update text
+				document.getElementById("percent-text").textContent = percent + "%";
+				document.getElementById("display-human").textContent = data.humanCount;
+
+				// Animate bar
+				setTimeout(() => {
+					const fill = document.getElementById("progress-fill");
+					fill.style.width = percent + "%";
+				}, 800);
+			});
+		</script>
+	</body>
+</html>

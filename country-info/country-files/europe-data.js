@@ -1055,6 +1055,48 @@ Object.assign(globalData, {
 		sources: ["https://www.iglyo.org/database/france-2023", "https://en.wikipedia.org/wiki/LGBTQ_rights_in_France"],
 	},
 
+	french_guiana: {
+		name: "French Guiana",
+		continent: "south_america",
+		status: "green",
+
+		legal: `
+    <p>French Guiana, as an overseas department of France (DROM), operates under the exact same legal framework as mainland France. This means marriage equality, adoption rights, and IVF access for lesbian couples and single women are fully legalized and protected as of 2026. The "National Plan Against LGBT+ Hatred" applies here as well, though the local implementation focuses heavily on the unique multi-cultural and geographic challenges of the Amazonian region.</p>
+
+    <p>While the laws are European, the judicial system in Cayenne handles anti-discrimination cases with the same vigor as Paris. Legal gender changes are permitted without surgery, following the standard French court procedures. For LGBTQ+ individuals, the legal posture is "Continental Protection," providing a unique island of European-style human rights within the South American continent.</p>
+
+    <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
+        <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Territorial Framework</h4>
+        <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
+            <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">📜 Overseas Equality Extension</strong>
+            <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Full application of the French Civil Code across the Amazonian territory.</p>
+        </div>
+    </div>
+`,
+
+		travel: `
+    <p>Travel for LGBTQ+ individuals in French Guiana is generally safe and characterized by "Amazonian Hospitality." Cayenne and Kourou are the most open areas, where the presence of the European Space Agency (ESA) brings a highly international and tolerant demographic. Public displays of affection are common in the capital, though a bit more discretion is advised in remote jungle outposts where traditional community structures are stronger.</p>
+
+    <p>The "posture" for travelers is "Adventurous but Protected." While the infrastructure isn't as tailored for "gay tourism" as the Marais in Paris, the lack of hostility and the solid legal backing make it a top-tier destination for LGBT eco-tourists. The 2026 verdict is "Secure & Tropical," offering a safe gateway into the Amazonian wilderness.</p>
+`,
+
+		culture: `
+    <p>Cultural life in French Guiana is a blend of French Republicanism and Caribbean/Amazonian influences. The local LGBTQ+ community is visible, especially during the vibrant Carnival season, where gender fluidity and expression are traditionally part of the festivities. Unlike some neighboring South American nations, the influence of the French state ensures that "Laïcité" (secularism) keeps religious opposition to a minimum in the public sphere.</p>
+
+    <p>For a visitor, the culture feels relaxed and diverse. In 2026, there is a growing local movement to ensure that LGBTQ+ residents from Indigenous and Maroon communities are included in the wider equality framework. The cultural verdict is "Diverse Resilience," where the French identity provides a shield for a multifaceted local community.</p>
+`,
+
+		health: `
+    <p>Healthcare in French Guiana is part of the French national system, though it faces more logistical hurdles than the mainland. Cayenne General Hospital provides state-of-the-art HIV care, and PrEP is available and covered under the same national insurance rules as Paris. For gender-affirming care, many residents still coordinate with multidisciplinary teams in mainland France, though initial consultations and hormone therapy are managed locally.</p>
+
+    <p>Travelers can expect professional care, though specialized LGBT health services are concentrated in the urban hubs. The 2026 verdict for health is "Reliable & Standardized," ensuring that your medical needs are met with European ethical standards in a tropical setting.</p>
+`,
+		posture: `
+    <p>The "Amazonian Republic" posture in French Guiana offers a "Stable & Anchored" environment. In 2026, the territory stands out in the region for its sophisticated legal protections. For travelers, the strategy is "Informed Exploration." The 2026 verdict is "Tropical Outpost of Equality," where the law of France creates a safe harbor in the heart of the Amazon.</p>
+`,
+		sources: ["https://www.france.fr/en/news/article/lgbt-france", "https://en.wikipedia.org/wiki/LGBT_rights_in_French_Guiana"],
+	},
+
 	georgia: {
 		name: "Georgia",
 		continent: "europe",
