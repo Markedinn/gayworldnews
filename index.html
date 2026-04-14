@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-	<head>
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +28,11 @@
     <link rel="icon" type="image/webp" href="images/favicon.webp" />
     <link rel="apple-touch-icon" href="images/favicon.webp" />
 
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="i_map.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?v=1.0" />
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
@@ -35,11 +40,18 @@
         window.globalData = {};
     </script>
 
-    <script src="country-info/country-files/africa-data.js?v=1.7" defer></script>
-    <script src="country-info/country-files/americas-data.js?v=1.7" defer></script>
-    <script src="country-info/country-files/asia-data.js?v=1.7" defer></script>
-    <script src="country-info/country-files/europe-data.js?v=1.7" defer></script>
-    <script src="country-info/country-files/oceania-data.js?v=1.7" defer></script>
+    <script src="country-info/country-files/africa-data.js?v=1.8" defer></script>
+    <script src="country-info/country-files/americas-data.js?v=1.8" defer></script>
+    <script src="country-info/country-files/asia-data.js?v=1.8" defer></script>
+    <script src="country-info/country-files/europe-data.js?v=1.8" defer></script>
+    <script src="country-info/country-files/oceania-data.js?v=1.8" defer></script>
+
+    <script src="i_territories.js" defer></script>
+
+    <script src="i_map.js" defer></script>
+
+    <script src="index.js" defer></script>
+
 
 	<script type="application/ld+json">
 {
@@ -62,900 +74,10 @@
 }
 </script>
 
-<style>
-			/* --- 1. GLOBAL & LAYOUT --- */
-
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden !important;
-    font-family: "Inter", sans-serif;
-    background-color: #096ae9;
-}
-
-#map {
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 125vh !important;
-    height: 125dvh !important;
-    background-image: url("images/world_img.webp");
-    filter: brightness(0.9) contrast(1.5) saturate(1.8);
-    background-color: rgba(73, 73, 68, 0.141);
-    background-blend-mode: multiply;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    z-index: 1;
-}
-
-/* --- 2. LEAFLET & MAP UI --- */
-.leaflet-overlay-pane {
-    z-index: 10 !important;
-}
-
-.leaflet-tile-container {
-    background: transparent !important;
-    will-change: transform;
-    pointer-events: none;
-}
-
-.leaflet-zoom-animated {
-    backface-visibility: hidden;
-}
-
-.leaflet-interactive {
-    transition:
-        fill 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-        fill-opacity 0.4s ease,
-        stroke 0.4s ease;
-    outline: none;
-}
-
-.country-label {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-    color: white;
-    font-weight: 600;
-    font-size: 11px;
-    text-shadow: 1px 1px 2px #000;
-    pointer-events: none;
-    display: none;
-}
-
-.zoom-active .country-label {
-    display: block;
-}
-
-#hoverBox {
-    position: fixed;
-    background: rgba(15, 23, 42, 0.6);
-    color: white;
-    padding: 8px 14px;
-    border-radius: 8px;
-    backdrop-filter: blur(8px) saturate(180%);
-    -webkit-backdrop-filter: blur(8px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    pointer-events: none;
-    display: none;
-    z-index: 20;
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-/* --- 3. TOP NAVIGATION & GLASS UI --- */
-.glass-nav {
-    position: absolute;
-    top: 10px;
-    left: 20px;
-    right: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px 0 40px;
-    background: transparent;
-    z-index: 110;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-.central-header-wrapper {
-    position: fixed;
-    top: 85px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 5;
-    pointer-events: none;
-    text-align: center;
-    width: 100%;
-}
-
-.main-site-title {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 12px;
-    color: rgba(255, 255, 255, 0.6);
-    text-transform: uppercase;
-    text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.main-site-subtitle {
-    margin-top: 10px;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 8px;
-    color: rgba(255, 255, 255, 0.582);
-    text-transform: uppercase;
-}
-
-/* --- 4. DROPDOWN COMPONENTS --- */
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.risk-dropdown,
-.region-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.risk-dropdown::after,
-.region-dropdown::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 20px;
-    display: block;
-}
-
-.dropbtn {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    margin-right: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 0;
-    line-height: inherit;
-    text-transform: uppercase;
-    transition:
-        transform 0.3s ease,
-        letter-spacing 0.3s ease,
-        text-shadow 0.3s ease,
-        opacity 0.3s ease;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    color: white;
-    background: rgba(243, 240, 240, 0.9);
-    background-color: rgba(247, 242, 242, 0.15); /* Fallback/Blend */
-    backdrop-filter: blur(10px);
-    min-width: 200px;
-    z-index: 120;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
-    margin-top: 15px;
-    text-align: left;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
-    overflow: hidden;
-}
-
-.nav-left .dropdown-content {
-    left: 0;
-    right: auto;
-}
-
-.dropdown-content a {
-    color: white;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    font-size: 0.8rem;
-}
-
-.dropdown-content a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.risk-dropdown:hover .dropdown-content,
-.region-dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* --- 5. LEGEND & BUTTONS --- */
-.left-ui-group {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    pointer-events: auto;
-}
-
-.legend-row {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    color: white;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: default;
-}
-
-.color-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    flex-shrink: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.breaking-news-btn {
-    display: inline-flex;
-    max-width: 240px;
-    background-color: #f52121;
-    color: white !important;
-    padding: 8px 44px;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    text-decoration: none;
-    box-shadow: 0px 4px 10px rgba(231, 76, 60, 0.3);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.breaking-news-btn:hover {
-    background-color: #f50505;
-    transform: scale(1.1) !important;
-    opacity: 1 !important;
-}
-
-/* --- 6. HAMBURGER & SIDE MENUS --- */
-.menu-toggle {
-    position: absolute;
-    cursor: pointer;
-    padding: 10px;
-}
-
-.bar {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 5px 0;
-    transition: 0.4s;
-}
-
-.side-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 460px;
-    max-width: 460px;
-	height: 100vh;
-    max-height: 100%;
-    background: rgba(22, 70, 96, 0.4) !important;
-    backdrop-filter: blur(8px) saturate(150%);
-    -webkit-backdrop-filter: blur(12px) saturate(150%);
-    border-left: 3px solid rgba(255, 255, 255, 0.582);
-    z-index: 130;
-    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    display: block;
-    padding: 100px 40px 40px 40px;
-    visibility: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-	padding: 80px 30px 150px 30px;
-}
-
-/* 1. Hide for Chrome, Safari, and newer Edge */
-#sideMenu::-webkit-scrollbar {
-    display: none;
-    width: 0 !important;
-}
-
-/* 2. Hide for Firefox */
-#sideMenu {
-    scrollbar-width: none;
-    
-    /* 3. Hide for Internet Explorer/Legacy Edge */
-    -ms-overflow-style: none;
-}
-
-/* If the side menu is open, make the map ignore the mouse/touch */
-#sideMenu.open, 
-#sideMenu.active {
-    pointer-events: auto !important;
-}
-
-
-.side-menu.open {
-    right: 0;
-    visibility: visible;
-}
-
-.slider-content {
-    padding: 100px 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* --- 7. MOBILE SPECIFIC UI --- */
-.mobile-nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-.mobile-nav-links a {
-    color: white !important;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: opacity 0.3s;
-    margin-left: 0rem;
-}
-
-.mobile-nav-links a[href="breaking.html"] {
-    background-color: #f52121;
-    color: white !important;
-    padding: 12px 20px;
-    border-radius: 6px;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(245, 33, 33, 0.3);
-    margin-bottom: 10px;
-    display: inline-block;
-    width: fit-content;
-}
-
-.mobile-nav-links a[href="breaking.html"]:active {
-    background-color: #d41b1b;
-    transform: scale(0.98);
-}
-
-.mobile-nav-links a:hover {
-    opacity: 0.7;
-}
-.mobile-legend-dropdown {
-    position: relative;
-    margin-top: 15px;
-}
-
-.mobile-legend-btn {
-    background: none;
-    border: none;
-    color: #ffeb3b; /* Your requested yellow */
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 1.2rem; /* Slightly larger for readability */
-    letter-spacing: 1.5px;
-    padding: 10px 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-align: left;
-    margin-left: 0rem;
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.mobile-legend-content {
-    display: none; 
-    position: absolute;
-    top: 100%;
-    left: 0;
-    color: #000000;
-    background: rgba(250, 247, 247, 0.99); 
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    
-    min-width: 200px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    margin-top: 5px;
-    z-index: 2000; /* High enough to stay above the map layers */
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-}
-
-/* Using a class to trigger display */
-.mobile-legend-content.show {
-    display: block !important;
-}
-
-.legend-row {
-    color: black;
-    padding: 12px 15px;
-    font-size: 0.75rem; /* Standardized size */
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    letter-spacing: 0.5px;
-}
-
-.legend-row:last-child {
-    border-bottom: none;
-}
-
-/* --- 8. TRANSLATOR --- */
-#translator-anchor {
-    position: absolute;
-    z-index: 250; 
-    transition: all 0.3s ease;
-    width: 240;
-}
-
-#translator-anchor select {
-    width: 100%;
-    height: 30px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 255, 255, 0.8) !important;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 6px !important;
-    color: #000000 !important;
-    font-weight: 800;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1.5px;
-    appearance: none;
-    cursor: pointer;
-    text-align: center;
-    outline: none;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-#translator-anchor select option {
-    background: #ffffff !important;
-    color: #000000 !important;
-    padding: 15px !important;
-    font-size: 1rem !important;
-    font-weight: 800 !important;
-}
-
-#translator-anchor select:hover {
-    background: rgb(255, 255, 255, 0.5) !important;
-    color: #424141 !important;
-    border: 3px solid rgba(255, 255, 255, 0.8) !important;
-    transform: translateY(-3px) scale(1.02);
-}
-
-
-
-/* --- 9. FOOTER --- */
-.site-footer {
-    position: fixed !important;
-    bottom: 0 !important;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.2) !important;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid rgba(231, 221, 221, 0.1);
-    transition: all 0.3s ease;
-	padding: 0 20px;
-}
-
-.footer-container {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    height: 100%;
-}
-
-.footer-branding-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-}
-
-.footer-branding-wrapper h1 {
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    display: block;
-}
-
-.branding-link {
-    font-size: 1.6rem;
-    font-weight: 500;
-    letter-spacing: 7px;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-left: 7px;
-}
-
-.footer-link {
-	display: flex;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-	margin-bottom: 0 !important;
-}
-
-.footer-utility-links {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    height: auto; /* Ensure it doesn't stretch */
-}
-
-.footer-link:hover {
-    color: #ffffff;
-}
-
-.footer-divider {
-    color: rgba(255, 255, 255, 0.3);
-    font-size: 0.8rem;
-}
-
-/* --- 3. RESPONSIVE MEDIA QUERIES --- */
-
-/* --- DESKTOP (min-width: 1101px) --- */
-@media (min-width: 1101px) {
- 
-    .mobile-legend-btn {
-        display: none !important;
-    }
-
-
-    .menu-toggle {
-        position:absolute;
-        right: 5rem;
-        top: 2.7rem;
-        transform: scale(1);
-        padding: 5px;
-		z-index: 200;
-    }
-#translator-anchor {
-    top: 3rem;
-        right: 12rem; /* Sits on the right like usual */
-        width: 240px;
-    }
-
-    .glass-nav {
-        top: 2rem;
-        left: 1.5rem;
-    }
-
-}
-
-/* --- ALL TABLET & MOBILE (max-width: 1100px) --- */
-@media (max-width: 1400px) {
-    .map-overlay .main-title,
-    .map-overlay .subtitle,
-    .glass-nav {
-        display: none !important;
-    }
-
-    .menu-toggle {
-        position:absolute;
-        right: 2rem;
-        top: 3rem;
-        transform: scale(1);
-        padding: 5px;
-		z-index: 200;
-    }
-
-    .bar {
-        width: 35px;
-        height: 4px;
-        margin: 6px 0;
-    }
-
-    .mobile-utility-links {
-        padding-bottom: 40px;
-    }
-
-    .footer-container {
-        display: flex !important;
-    }
-
-    #translator-anchor {
-        top: 4rem; 
-        left: 4rem;
-        right: auto;
-        width: 150px
-    }
-
-    .mobile-legend-dropdown {
-        display: block !important;
-        width: 100%;
-        visibility: visible;
-    }
-
-    /* 2. Style the button specifically for this breakpoint */
-    .mobile-legend-btn {
-        display: flex !important; /* Force it to show if it was hidden */
-        color: #ffeb3b !important;
-        font-size: 1.2rem; /* Adjusting for tablet readability */
-    }
-
-    /* 3. Ensure the glassy content can actually overflow the side menu */
-    #mobileLegendContent {
-        z-index: 200; /* Must be higher than the sideMenu z-index */
-        background: rgba(250, 248, 248, 0.99);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-    }
-}
-
-/* --- STRICT TABLET (768px to 1100px) --- */
-@media (max-width: 1100px) and (min-width: 768px) {
-    .main-site-title {
-        font-size: 2.4rem; /* Specific scale-up for high-res tablet */
-        letter-spacing: 10px;
-        top: 75px;
-    }
-
-    .main-site-subtitle {
-        font-size: 1rem;
-        letter-spacing: 6px;
-        margin-top: 8px;
-        opacity: 0.9;
-    }
-
-    .site-footer {
-        bottom: 0;
-		height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-		z-index: 100;
-    }
-
-    .footer-link {
-        font-size: 1rem;
-        letter-spacing: 3px;
-        padding: 10px 15px;
-
-    }
-
-    .branding-link {
-        font-size: 28px;
-        letter-spacing: 5px;
-    }
-
-    #translator-anchor {
-        top: 2.5rem; 
-        left: 3rem;
-        right: auto;
-        width: 150px
-    }
-
-	.menu-toggle {
-        top: 1.8rem; 
-        right: 3rem;
-        display: block;
-        transform: scale(1);
-        padding: 5px;
-		z-index: 200;
-    }
-
-    .menu-toggle .bar {
-        width: 30px;
-        height: 3px;
-        margin: 5px 0;
-    }
-
-	.side-menu {
-		display: block;
-		max-height: 100%;
-		overflow-y: auto; 
-		overflow-x: hidden;
-		scroll-behavior: smooth;
-		-webkit-overflow-scrolling: touch; 
-		padding-top: env(safe-area-inset-top); 
-        width: 60%;
-        padding: 80px 30px 150px 30px;
-    }
-
- 
-    .slider-content {
-        min-height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-   .mobile-nav-links a {
-        font-size: 1.2rem !important;
-        margin-left: 0rem;
-    }
-
-.mobile-legend-btn {
-    background: none;
-    border: none;
-    color: #ffeb3b; /* Your requested yellow */
-    font-family: inherit;
-    font-weight: bold;
-    font-size: 1rem; /* Slightly larger for readability */
-    letter-spacing: 1.5px;
-    padding: 10px 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    text-align: left;
-    margin-left: 0;
-    width: 100%;
-}
-
-}
-
-/* --- MOBILE (max-width: 768px) --- */
-@media (max-width: 768px) {
-
-    body {
-        background-image: url('images/world_img_mobile.webp');
-        background-size: cover;
-        background-attachment: fixed; 
-    }
-
-    .main-site-title {
-        font-size: 1.2rem;
-        letter-spacing: 6px;
-        top: 60px;
-    }
-
-    .left-ui-group {
-        z-index: 100;
-    }
-
-    .site-footer {
-        height: 65px !important; /* Slightly shorter for a cleaner look */
-        padding: 0; 
-        display: flex;
-        align-items: center; 
-    }
-
-    .footer-link {
-        font-size: 0.8rem;
-        letter-spacing: 2px;
-        padding: 0 15px; /* Remove that huge bottom padding */
-        margin: 0; /* Let flexbox handle the centering */
-        line-height: 1;
-    }
-    
-    .footer-divider {
-        display: inline-block;
-    }
-
-    .portal-text-link {
-        font-size: 14px;
-        letter-spacing: 1.5px;
-    }
-
-    .menu-toggle {
-        position: absolute;
-        right: 2rem;
-        top: 1.7rem;
-        display: block;
-        transform: scale(1);
-		z-index: 200;
-    }
-
-    .bar {
-        width: 30px;
-        height: 4px;
-        margin: 5px 0;
-    }
-
-        #translator-anchor {
-        top: 2rem; 
-        left: 1.5rem;
-        right: auto;
-        width: 150px;
-        font-size: 0.5rem;
-        font-weight: 300;
-    }
-
-    #translator-anchor select {
-        letter-spacing: 1.5px;
-        font-size: 0.8rem;
-        font-weight: 800;
-    }
-
-    .side-menu {
-		display: block;
-    flex-direction: column;
-    max-height: 100vh;
-    overflow-y: auto; /* Ensures scrolling is enabled */
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile */
-    padding-top: env(safe-area-inset-top); 
-        width: 60%;
-        padding: 80px 30px 150px 30px;
-    }
-
-    .mobile-nav-links a {
-        font-size: 1.2rem !important;
-        margin-left: 0rem;
-    }
-
-    .desktop-only {
-        display: none !important;
-    }
-
-    .home-btn {
-        font-size: 13px;
-    }
-
-    .central-header-wrapper {
-        top: auto;
-        bottom: 80px; /* Moves header to bottom on mobile */
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-    }
-
-    .main-site-title {
-        font-size: 1rem;
-        letter-spacing: 5px;
-        font-weight: 500;
-    }
-
-    .main-site-subtitle {
-        font-size: 0.55rem;
-        letter-spacing: 3px;
-        margin-top: 4px;
-    }
-
-
-    /* 2. Target the wrapper holding your translator */
-    .nav-right {
-        position: absolute;
-        left: 15px; /* Move to the left edge */
-        right: auto;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-}
-		</style>
 	</head>
 	<body>
+        	<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+
             <div id="translator-anchor"></div>
 
 			<div class="menu-toggle" onclick="toggleMenu()">
@@ -966,6 +88,13 @@ html, body {
 
 		<div id="sideMenu" class="side-menu">
 			<div class="mobile-nav-links" style="margin-top: 15dvh; margin-left: 0rem;">
+
+                <div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
                 
 				<div class="mobile-legend-dropdown">
 					<button class="mobile-legend-btn" onclick="toggleMobileLegend()" style="margin-left: 0rem; font-size: 1.2rem;">LEGEND<i class="fas fa-chevron-down"></i></button>
@@ -981,7 +110,8 @@ html, body {
 				<a href="asia.html">ASIA</a>
 				<a href="europe.html">EUROPE</a>
 				<a href="oceania.html">OCEANIA</a>
-                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
             </div>
 				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
 					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">Map Information & FAQ</h2>
@@ -1018,8 +148,8 @@ html, body {
 					<button class="dropbtn" style="color: #ffeb3b; font-size: 1rem; letter-spacing: 6.5px;">Legend <i class="fas fa-chevron-down"></i></button>
 					<div class="dropdown-content">
 						<div class="legend-row" style="background-color: rgba(90, 88, 88, 0.24); font-weight: 600; color: white;"><span class="color-dot" style="background-color: #2e7d32"></span> LOW RISK</div>
-						<div class="legend-row" style="background-color: rgba(90, 88, 88, 0.24); font-weight: 600; color: white;""><span class="color-dot" style="background-color: #ffa000"></span> CAUTION</div>
-						<div class="legend-row" style="background-color: rgba(90, 88, 88, 0.24); font-weight: 600; color: white;""><span class="color-dot" style="background-color: #d32f2f"></span> DANGER</div>
+						<div class="legend-row" style="background-color: rgba(90, 88, 88, 0.24); font-weight: 600; color: white;"><span class="color-dot" style="background-color: #ffa000"></span> CAUTION</div>
+						<div class="legend-row" style="background-color: rgba(90, 88, 88, 0.24); font-weight: 600; color: white;"><span class="color-dot" style="background-color: #d32f2f"></span> DANGER</div>
 					</div>
 				</div>
 				<a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
@@ -1031,7 +161,7 @@ html, body {
 		</nav>
 
 
-</div>
+
 		<div id="hoverBox"></div>
 
 	<div class="central-header-wrapper">
@@ -1042,272 +172,54 @@ html, body {
 		<div id="map"></div>
 
 <footer class="site-footer">
-    <div class="footer-utility-links">
-        <a href="about.html" class="footer-link">About Us</a>
-        <span class="footer-divider">|</span>
-        <a href="contact.html" class="footer-link">Contact</a>
-    </div>
-</footer>
+			<div class="footer-container">
+
+
+				<div class="footer-card">
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
+						<i class="fab fa-facebook-f"></i> <span></span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
+						<i class="fab fa-x-twitter"></i> <span></span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
+						<i class="fab fa-youtube"></i> <span></span>
+					</a>
+				</div>
+
+		</footer>
 
 		<script>
-    // 1. GLOBAL SETTINGS & MAP INIT
-    // document.body.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+			window.gtranslateSettings = {
+				default_language: "en",
+				detect_browser_language: true,
+				wrapper_selector: "#translator-anchor",
+				type: "nicedropdown",
+			};
 
-    const map = L.map("map", {
-        renderer: L.canvas(),
-        zoomSnap: 0.1,
-        attributionControl: false,
-        zoomControl: false,
-        inertia: true,
-        inertiaFraction: 0.5,
-    }).setView([15, 0], 2);
-
-    // Add Scale Line (Minimalist)
-    L.control.scale({ imperial: true, metric: true, position: 'bottomleft' }).addTo(map);
-
-    const countryNameOverrides = {
-        united_republic_of_tanzania: "tanzania",
-        congo_the_democratic_republic_of_the: "democratic_republic_of_the_congo",
-        gambia_the: "gambia",
-        the_gambia: "gambia",
-        swaziland: "eswatini",
-        guineabissau: "guinea_bissau",
-        guinea_bissau: "guinea_bissau",
-        sahrawi_arab_democratic_republic: "western_sahara",
-        palestine: "palestinian_territories",
-        west_bank: "palestinian_territories",
-        gaza_strip: "palestinian_territories",
-        russian_federation: "russia",
-    };
-
-    function getCleanKey(name) {
-        let key = name.toLowerCase().replace(/\s+/g, "_").replace(/[^\w]/g, "");
-        return countryNameOverrides[key] || key;
-    }
-
-    // 2. GEOJSON PROCESSING & LOADING
-    fetch("world.geojson.txt")
-        .then((res) => {
-            if (!res.ok) throw new Error("File not found!");
-            return res.json();
-        })
-        .then((geo) => {
-            const fixedFeatures = [];
-
-            geo.features.forEach((feature) => {
-                const rawName = feature.properties.name || feature.properties.ADMIN || "";
-
-                // --- ANTARCTICA SQUISH ---
-                if (rawName === "Antarctica") {
-                    feature.geometry.coordinates.forEach((polygon) => {
-                        polygon[0].forEach((coord) => {
-                            if (coord[1] < -80) coord[1] = -80;
-                        });
-                    });
-                    fixedFeatures.push(feature);
-                    return;
-                }
-
-                // --- RUSSIA SURGERY ---
-                if (rawName === "Russia" || rawName === "Russian Federation") {
-                    const mainRussia = JSON.parse(JSON.stringify(feature));
-                    const peninsulaPart = JSON.parse(JSON.stringify(feature));
-
-                    mainRussia.geometry.coordinates = mainRussia.geometry.coordinates.filter(p => p[0][0][0] > 0);
-                    fixedFeatures.push(mainRussia);
-
-                    peninsulaPart.geometry.coordinates = peninsulaPart.geometry.coordinates
-                        .filter(p => p[0][0][0] < 0)
-                        .map(p => p.map(ring => ring.map(coord => [coord[0] + 360, coord[1]])));
-
-                    if (peninsulaPart.geometry.coordinates.length > 0) fixedFeatures.push(peninsulaPart);
-                    return;
-                }
-
-                // --- FRANCE / GUIANA SPLIT ---
-                if (rawName === "France" && feature.geometry.type === "MultiPolygon") {
-                    feature.geometry.coordinates.forEach((polygonCoords) => {
-                        const newPart = JSON.parse(JSON.stringify(feature));
-                        newPart.geometry.type = "Polygon";
-                        newPart.geometry.coordinates = polygonCoords;
-                        const lon = polygonCoords[0][0][0];
-                        if (lon < -30) {
-                            newPart.properties.name = "French Guiana";
-                            newPart.properties.ADMIN = "French Guiana";
-                        }
-                        fixedFeatures.push(newPart);
-                    });
-                } else {
-                    fixedFeatures.push(feature);
-                }
-            });
-
-            geo.features = fixedFeatures;
-
-            // 3. DRAW MAP & INTERACTIONS
-            L.geoJSON(geo, {
-                filter: (f) => f.properties.name !== "Antarctica",
-                style: (f) => {
-                    const name = f.properties.name || f.properties.ADMIN || "Unknown";
-                    const key = getCleanKey(name);
-                    const country = window.globalData ? window.globalData[key] : null;
-                    let status = country ? country.status.toLowerCase() : "gray";
-
-                    let color = "#cbd5e1"; // Gray
-                    if (status === "green") color = "#2ecc71";
-                    else if (status === "amber") color = "#ffeb3b";
-                    else if (status === "red" || status === "danger") color = "#c0392b";
-                    else if (status === "ice" || status === "advisory") color = "#cffafe";
-
-                    return {
-                        fillColor: color,
-                        color: "rgba(255, 255, 255, 0.4)",
-                        weight: 0.5,
-                        fillOpacity: 0.6,
-                        lineJoin: "round",
-                    };
-                },
-                onEachFeature: (feature, layer) => {
-                    const name = feature.properties.name || feature.properties.ADMIN || "Unknown";
-                    const key = getCleanKey(name);
-
-                    layer.bindTooltip(name, { permanent: true, direction: "center", className: "country-label" });
-
-                    layer.on({
-                        mouseover: (e) => {
-                            const cur = e.target;
-                            if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) cur.bringToFront();
-                            cur.setStyle({ fillOpacity: 0.7 });
-                            if (cur._path) cur._path.style.filter = "drop-shadow(0px 0px 8px rgba(255,255,255,0.5))";
-                            hoverBox.innerText = name;
-                            hoverBox.style.display = "block";
-                        },
-                        mousemove: (e) => {
-                            hoverBox.style.left = e.originalEvent.clientX + 15 + "px";
-                            hoverBox.style.top = e.originalEvent.clientY - 35 + "px";
-                        },
-                        mouseout: (e) => {
-                            const geojsonLayer = e.target._eventParents;
-                            Object.values(geojsonLayer)[0].resetStyle(e.target);
-                            if (e.target._path) e.target._path.style.filter = "none";
-                            hoverBox.style.display = "none";
-                        },
-                        click: () => {
-                            const countryData = window.globalData ? window.globalData[key] : null;
-                            window.location.href = countryData?.path ? countryData.path : `country.html?c=${key}`;
-                        },
-                    });
-                },
-            }).addTo(map);
-        })
-        .catch((err) => console.error("MAP ERROR:", err));
-
-    // 4. ZOOM LOGIC (Labels & Branding)
-    map.on("zoomend", function () {
-        const currentZoom = map.getZoom();
-        const mapContainer = document.getElementById("map");
-        const heroHeader = document.getElementById("map-hero-branding");
-        const body = document.body;
-
-        if (currentZoom >= 3) mapContainer.classList.add("zoom-active");
-        else mapContainer.classList.remove("zoom-active");
-
-        if (currentZoom >= 1 && heroHeader) {
-            heroHeader.classList.add("hero-hidden");
-            body.classList.add("user-is-zoomed");
-        } else if (heroHeader) {
-            heroHeader.classList.remove("hero-hidden");
-            body.classList.remove("user-is-zoomed");
-        }
-    });
-
-    // 5. UI TOGGLES & EVENT LISTENERS
-    function toggleMenu() {
-        document.getElementById("sideMenu").classList.toggle("open");
-    }
-
-    function toggleDesktopMenu() {
-        const slider = document.getElementById("desktopSlider");
-        if (slider) slider.classList.toggle("active");
-    }
-
-    function toggleMobileLegend() {
-        const content = document.getElementById("mobileLegendContent");
-        const sideMenu = document.getElementById("sideMenu");
-        if (content) content.classList.toggle("show");
-        if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
-    }
-
-    function toggleMobileLegend(event) {
-    // If you pass 'event' from the HTML, this stops the 'flash'
-    if (event) event.stopPropagation();
-    
-    const content = document.getElementById("mobileLegendContent");
-    content.classList.toggle("show");
-}
-
-    document.addEventListener("click", (e) => {
-        const sideMenu = document.getElementById("sideMenu");
-        const menuToggle = document.querySelector(".menu-toggle");
-        const legendDropdown = document.querySelector(".mobile-legend-dropdown");
-  
-        // Close Side Menu
-        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-            sideMenu.classList.remove("open");
-        }
-        // Close Legend
-        if (legendDropdown && !legendDropdown.contains(e.target)) {
-            document.getElementById("mobileLegendContent")?.classList.remove("show");
-        }
-        // Close Desktop Slider
-        if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-            desktopSlider.classList.remove("active");
-        }
-    });
-
-
-</script>
-
-<script>
-    window.gtranslateSettings = {
-        default_language: "en",
-        detect_browser_language: true,
-        wrapper_selector: "#translator-anchor",
-        type: "nicedropdown",
-    };
-
-    window.addEventListener("load", function () {
-        setTimeout(function () {
-            var select = document.querySelector("#translator-anchor select");
-            if (select) {
-                var opt = document.createElement("option");
-                opt.value = "";
-                opt.innerHTML = "Language";
-                opt.selected = true;
-                opt.disabled = true;
-                select.insertBefore(opt, select.firstChild);
-            }
-        }, 1000);
-    });
-</script>
-
-<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const now = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    const dateString = now.toLocaleDateString('en-US', options);
-
-    // Target the mobile ID
-    const mobileEl = document.getElementById('last-updated-mobile');
-    if (mobileEl) mobileEl.textContent = dateString;
-
-    // Target the desktop ID
-    const desktopEl = document.getElementById('last-updated-desktop');
-    if (desktopEl) desktopEl.textContent = dateString;
-});
-</script>
+			// This "forces" the text because the widget settings sometimes fail
+			window.addEventListener("load", function () {
+				setTimeout(function () {
+					var select = document.querySelector("#translator-anchor select");
+					if (select) {
+						// Creates a new "Select Language" option at the very top
+						var opt = document.createElement("option");
+						opt.value = "";
+						opt.innerHTML = "Language";
+						opt.selected = true;
+						opt.disabled = true;
+						select.insertBefore(opt, select.firstChild);
+					}
+				}, 1000); // Waits 1 second for the widget to finish loading
+			});
+		</script>
+		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 
 </body>
 </html>

@@ -24,7 +24,9 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=3.56" />
+		<link rel="stylesheet" href="index.css" />
+		<link rel="stylesheet" href="regions.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?v=1.0" />
 
 		<style>
 			/* THE MAP BACKGROUND */
@@ -44,29 +46,33 @@
 				margin: 0 auto; /* This centers the whole track */
 			}
 
-			/* THE FROSTED GLASS RECTANGLE */
+			/* THE PERFECT FROSTED GLASS CARD */
 			.glass-mission-card {
 				width: 100%;
 				margin-bottom: 25px;
 				padding: 40px 50px;
 				border-radius: 14px;
-				overflow: visible !important;
 				position: relative;
 				display: block;
-				background: rgba(255, 255, 255, 0.6) !important;
-				backdrop-filter: blur(15px) saturate(180%);
-				-webkit-backdrop-filter: blur(15px) saturate(180%);
-				border: 1px solid rgba(255, 255, 255, 0.3) !important;
+
+				/* The Secret Sauce: Low Alpha (0.2) + Blur */
+				background: rgba(255, 255, 255, 0.2) !important;
+				backdrop-filter: blur(12px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%);
+
+				/* Subtle border makes the glass edge "pop" */
+				border: 1px solid rgba(255, 255, 255, 0.4) !important;
+
+				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 				transition:
-					transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-					background 0.4s ease,
+					transform 0.5s ease,
 					box-shadow 0.5s ease;
 			}
 
 			.glass-mission-card p {
 				line-height: 1.8;
 				font-size: 1.1rem;
-				color: #000000;
+				color: #ffffff;
 				margin-bottom: 20px;
 				font-family:
 					"Inter",
@@ -75,12 +81,17 @@
 					"Segoe UI",
 					Roboto,
 					sans-serif;
-				color: #000000 !important;
-				font-weight: 500;
+				font-weight: 400;
 				font-size: 1.15rem;
 				line-height: 1.6;
 				margin-bottom: 2.2rem !important;
 				text-align: left;
+			}
+
+			.glass-mission-card p,
+			.glass-mission-card h1,
+			.glass-mission-card h2 {
+				color: #ffffff;
 			}
 
 			/* Add this to your main CSS for single-column pages */
@@ -121,18 +132,6 @@
 				}
 			}
 
-			/* THE FROSTED GLASS RECTANGLE - Desktop Default */
-			.glass-mission-card {
-				width: 100%;
-				margin-bottom: 25px;
-				border-radius: 14px;
-				padding: 40px 50px; /* 50px side padding for big screens */
-				background: rgba(255, 255, 255, 0.6) !important;
-				backdrop-filter: blur(15px) saturate(180%);
-				-webkit-backdrop-filter: blur(15px) saturate(180%);
-				border: 1px solid rgba(255, 255, 255, 0.3) !important;
-			}
-
 			/* MOBILE FIX */
 			@media (max-width: 768px) {
 				.glass-mission-card {
@@ -154,7 +153,7 @@
 		</style>
 	</head>
 	<body class="about-page">
-		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
+		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
 		<div class="page-container">
 			<div class="centered-utility-wrap">
@@ -182,7 +181,7 @@
 			</div>
 
 			<div class="glass-mission-card">
-				<h2 style="margin-bottom: 30px; color: #000000; text-align: center">Privacy & Safety</h2>
+				<h2 style="margin-bottom: 30px; text-align: center">Privacy & Safety</h2>
 
 				<p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.9)">
 					<strong>Your Responsibility:</strong> While we do our absolute best to verify all information is correct at time of writing, things change quickly and mistakes can be
@@ -196,6 +195,41 @@
 				<p style="font-size: 0.8rem; color: rgba(255, 255, 255, 0.6); font-style: italic">Last Updated: March 2026</p>
 			</div>
 		</div>
+
+		<footer class="site-footer">
+			<div class="footer-container">
+				<div class="footer-card">
+					<a href="/" class="home-btn-logo" title="Gay World News - Home">
+						<span class="gwn-logo">GWN</span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
+						<i class="fab fa-facebook-f"></i> <span></span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
+						<i class="fab fa-x-twitter"></i> <span></span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
+						<i class="fab fa-youtube"></i> <span>YouTube</span>
+					</a>
+				</div>
+
+				<div class="footer-card">
+					<a href="contact.html" class="social-pill neutral" aria-label="Contact Gay World News"> <i class="fas fa-envelope"></i> <span>Connect</span> </a>
+				</div>
+			</div>
+			<div class="footer-bottom-bar">
+				<p class="footer-copyright">© 2026 Gay World News (GWN)</p>
+			</div>
+		</footer>
 		<script>
 			window.gtranslateSettings = {
 				default_language: "en",
@@ -221,39 +255,5 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-		<footer class="site-footer">
-			<div class="footer-container">
-				<div class="footer-card">
-					<a href="/" class="home-btn-logo" title="Gay World News - Home">
-						<span class="gwn-logo">GWN</span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
-						<i class="fab fa-facebook-f"></i> <span>Facebook</span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
-						<i class="fab fa-x-twitter"></i> <span>X</span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
-						<i class="fab fa-youtube"></i> <span>YouTube</span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="contact.html" class="social-pill neutral" aria-label="Contact Gay World News"> <i class="fas fa-envelope"></i> <span>Connect</span> </a>
-				</div>
-			</div>
-			<div class="footer-bottom-bar">
-				<p class="footer-copyright">© 2026 Gay World News (GWN)</p>
-			</div>
-		</footer>
 	</body>
 </html>

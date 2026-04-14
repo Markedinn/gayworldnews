@@ -691,7 +691,7 @@ Object.assign(globalData, {
 	indonesia: {
 		name: "Indonesia",
 		continent: "asia",
-		status: "amber",
+		status: "red",
 
 		legal: `
         <p>In 2026, the legal landscape is a "Checkered Flag." Consensual same-sex acts are not nationally illegal, but the **2023 Penal Code** (fully active as of 2026) includes vague "morality" and "cohabitation" clauses. For travelers, this rarely results in arrest, but it is frequently used as a pretext for police to raid private parties or budget "local" saunas to "maintain public order."</p>
@@ -3067,10 +3067,11 @@ Object.assign(globalData, {
 		],
 	},
 
-	timor_leste: {
+	east_timor: {
 		name: "Timor-Leste",
 		continent: "asia",
 		status: "amber",
+		path: "asia/east_timor.html",
 
 		legal: `
         <p>In 2026, Timor-Leste remains a unique case in Southeast Asia. While same-sex acts have been legal since independence, there are still no comprehensive anti-discrimination laws or legal recognition for same-sex unions. However, the 2024-2026 government initiatives have begun integrating SOGIE sensitivity training for the national police force.</p>
