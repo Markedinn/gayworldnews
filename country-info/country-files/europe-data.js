@@ -821,6 +821,13 @@ Object.assign(globalData, {
 		name: "Czechia",
 		continent: "europe",
 		status: "green",
+		path: "country.html?c=czechia",
+	},
+
+	czechia: {
+		name: "Czechia",
+		continent: "europe",
+		status: "green",
 
 		legal: `
     <p>Czechia enters 2026 having just crossed a major legislative threshold. On **January 1, 2025**, the landmark "Partnership" law officially replaced the outdated 2006 registered partnership system. This new legal status grants same-sex couples almost every right afforded to married couples, including joint property ownership, inheritance rights, and access to widow's pensions. While the law stopped short of using the word "marriage" and currently restricts joint adoption to step-child adoption (which is now fully legal), it represents the most significant leap toward equality in Central Europe to date.</p>
@@ -3017,7 +3024,7 @@ Object.assign(globalData, {
 		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Russia", "https://www.themoscowtimes.com/2023/11/30/russia-bans-lgbt-movement-as-extremist-a83262"],
 	},
 
-	serbia: {
+	republic_of_serbia: {
 		name: "Serbia",
 		continent: "europe",
 		status: "amber",

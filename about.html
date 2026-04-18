@@ -15,40 +15,62 @@
 		<meta property="og:description" content="Learn how GWN is working to keep the LGBTQ+ community safe and informed across the globe." />
 		<meta property="og:url" content="https://www.gayworldnews.com/about.html" />
 		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="Gay World News | Our Mission" />
 		<meta name="twitter:description" content="Empowering the LGBTQ+ community through global safety data and legal advocacy." />
-		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<link rel="stylesheet" href="index.css?v=1.0" />
-		<link rel="stylesheet" href="regions.css" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css?v=1.2" />
+
+		<link rel="stylesheet" href="index.css?v=0.1" />
+
 
 		<style>
-			/* THE MAP BACKGROUND */
-			body.about-page {
-				background: url("images/world-map.webp");
-				background-size: cover;
-				background-attachment: fixed;
+			
+		body.about-page {
+			display: flex;
+			flex-direction: column;
+			align-items: center;    /* Centers horizontally */
+			justify-content: flex-start; /* Allows the page to scroll naturally */
+			min-height: 100vh;
+			margin-top: 6rem;
+			padding: 0;
+		}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background-image: url("images/world_img.webp");
+				filter: brightness(0.9) contrast(1.5) saturate(1.8);
+				background-color: rgba(73, 73, 68, 0.141);
+				background-blend-mode: multiply;
+				background-repeat: no-repeat;
 				background-position: center;
-				display: flex;
-				flex-direction: column;
-				min-height: 100vh;
+				background-size: cover;
+				pointer-events: none;
 			}
 
 			.page-container {
-				width: 92%; /* This creates the side 'air' (gutters) */
-				max-width: 800px; /* This matches your card's max width */
-				margin: 0 auto; /* This centers the whole track */
+				width: 92%;
+				max-width: 800px;
+				margin: 0 auto; 
+				display: flex;
+				flex-direction: column;
+				align-items: center; /* Ensures cards stay centered inside the container */
 			}
 
 			/* THE PERFECT FROSTED GLASS CARD */
 			.glass-mission-card {
-				width: 100%;
+				width: 90%;
+				margin-top: 9rem;
 				margin-bottom: 25px;
 				padding: 40px 50px;
 				border-radius: 14px;
@@ -56,9 +78,9 @@
 				display: block;
 
 				/* The Secret Sauce: Low Alpha (0.2) + Blur */
-				background: rgba(255, 255, 255, 0.2) !important;
+				/* background: rgba(255, 255, 255, 0.2) !important;
 				backdrop-filter: blur(12px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%);
+				-webkit-backdrop-filter: blur(12px) saturate(180%); */
 
 				/* Subtle border makes the glass edge "pop" */
 				border: 1px solid rgba(255, 255, 255, 0.4) !important;
@@ -94,34 +116,17 @@
 				color: #ffffff;
 			}
 
-			/* Add this to your main CSS for single-column pages */
-			.centered-utility-wrap {
-				max-width: 500px; /* Adjust this to match your search bar width */
-				margin: 40px auto 20px auto;
-				width: 100%;
-			}
 
-			/* Align the About Page Translator to match the Homepage/Regions */
-			#translator-anchor {
-				display: flex;
-				justify-content: center;
-				width: 100%;
-				margin-top: 60px !important;
-			}
 
 			/* Ensure the GTranslate dropdown doesn't hug the left side */
 			.gt_container {
 				margin: 0 auto !important;
 			}
 
-			.exit-btn {
-				margin-bottom: 20px;
-			}
-
 			@media (max-width: 1024px) {
 				.glass-mission-card {
 					padding: 30px 20px; /* Slightly more padding for tablets */
-					width: 100%;
+					width: 90%;
 					margin: 40px 0; /* Vertical gap only */
 					border-radius: 15px;
 				}
@@ -136,7 +141,7 @@
 			@media (max-width: 768px) {
 				.glass-mission-card {
 					padding: 30px 20px; /* Reduces side padding to 20px on mobile */
-					margin-top: 20px;
+					margin-top: 120px;
 					margin-bottom: 20px;
 				}
 
@@ -153,13 +158,79 @@
 		</style>
 	</head>
 	<body class="about-page">
-		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
-		<div class="page-container">
-			<div class="centered-utility-wrap">
-				<div id="translator-anchor" class="landing-pill-style">
-					<div id="google_translate_element"></div>
+		<main class="page-container">
+<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+			<a href="/" class="home-btn">HOME</a>
+            <div id="translator-anchor"></div>
+
+
+			<div class="menu-toggle" onclick="toggleMenu()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+
+<div id="sideMenu" class="side-menu">
+    
+    <div class="slider-content">
+        <nav class="mobile-nav-links">
+				<div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+					<div id="searchResults" class="search-results-floating"></div>
 				</div>
+                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+
+				<a href="../africa.html">AFRICA</a>
+				<a href="../americas.html">AMERICAS</a>
+				<a href="../asia.html">ASIA</a>
+				<a href="../europe.html">EUROPE</a>
+				<a href="../oceania.html">OCEANIA</a>
+                <a href="../about.html">ABOUT</a>
+                <a href="../contact.html">CONTACT</a>
+        </nav>
+		<div class="social-pill-container">
+				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+				</a>
+
+				<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+				</a>
+
+				<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+				</a>
+			</div>
+
+			
+				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">Map Information & FAQ</h2>
+
+					<div class="faq-item" style="margin-bottom: 20px;">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How do I use this interactive map?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">
+							<span style="color: rgba(255,255,255,0.9); font-weight: 700;">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other source information, further links and reading.
+						</p>
+					</div>
+
+					<div class="faq-item" style="margin-bottom: 20px;">
+						
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for planning a holiday?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Gay World News acts as a hub for the best guides so you don't have to look through tens of search results to find a decent review and we also look for both reading and video content if available. We recommend also checking specific country alerts for detailed health and security protocols before departing.</p>
+					</div>
+					
+					<div class="faq-item" style="margin-bottom: 20px;">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How is the LGBTQ+ Risk level determined?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating for the community.</p>
+					</div>
+
+				</div>
+
+					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
+					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+					</p>
+                </div>
 			</div>
 			<div class="glass-mission-card">
 				<h1 class="main-title" style="margin-bottom: 30px; text-align: center">Our Mission</h1>
@@ -196,46 +267,37 @@
 			</div>
 		</div>
 
-		<footer class="site-footer">
-			<div class="footer-container">
-				<div class="footer-card">
-					<a href="/" class="home-btn-logo" title="Gay World News - Home">
-						<span class="gwn-logo">GWN</span>
-					</a>
-				</div>
+		<div class="footer-branding-wrapper">
+    <div class="footer-site-title">Gay World News</div>
+    <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+</div>
+</main>
+		<script>
+			(function () {
+				const params = new URLSearchParams(window.location.search);
+				// Your code uses "c" in some places and "country" in others. This checks both.
+				const rawC = params.get("c") || params.get("country") || "";
+				const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
+				const underscoredKey = slug.replace(/[\s-]/g, "_");
 
-				<div class="footer-card">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
-						<i class="fab fa-facebook-f"></i> <span></span>
-					</a>
-				</div>
+				if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
+					const data = window.globalData[underscoredKey];
+					// If a manual path exists, redirect immediately!
+					if (data.path) {
+						window.location.href = data.path;
+					}
+				}
+			})();
+		</script>
 
-				<div class="footer-card">
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
-						<i class="fab fa-x-twitter"></i> <span></span>
-					</a>
-				</div>
 
-				<div class="footer-card">
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
-						<i class="fab fa-youtube"></i> <span></span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="contact.html" class="social-pill neutral" aria-label="Contact Gay World News"> <i class="fas fa-envelope"></i> <span>Connect</span> </a>
-				</div>
-			</div>
-			<div class="footer-bottom-bar">
-				<p class="footer-copyright">© 2026 Gay World News (GWN)</p>
-			</div>
-		</footer>
+		<script src="country-info/country-loader.js?v=1.5"></script>
 		<script>
 			window.gtranslateSettings = {
 				default_language: "en",
 				detect_browser_language: true,
 				wrapper_selector: "#translator-anchor",
-				type: "dropdown",
+				type: "nicedropdown",
 			};
 
 			// This "forces" the text because the widget settings sometimes fail
@@ -246,7 +308,7 @@
 						// Creates a new "Select Language" option at the very top
 						var opt = document.createElement("option");
 						opt.value = "";
-						opt.innerHTML = "Select Language";
+						opt.innerHTML = "Language";
 						opt.selected = true;
 						opt.disabled = true;
 						select.insertBefore(opt, select.firstChild);
@@ -255,5 +317,102 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+		<script>
+			// 1. Function to update the tags
+			function updateMetadata(countryName) {
+				const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
+				const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
+				const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
+
+				// Update the Browser Tab
+				document.title = siteTitle;
+
+				// Update Standard Meta
+				const metaDesc = document.querySelector('meta[name="description"]');
+				if (metaDesc) metaDesc.setAttribute("content", siteDesc);
+
+				// Update Open Graph (Social Media)
+				const ogTitle = document.querySelector('meta[property="og:title"]');
+				const ogDesc = document.querySelector('meta[property="og:description"]');
+				const ogUrl = document.querySelector('meta[property="og:url"]');
+
+				if (ogTitle) ogTitle.setAttribute("content", siteTitle);
+				if (ogDesc) ogDesc.setAttribute("content", siteDesc);
+				if (ogUrl) ogUrl.setAttribute("content", pageUrl);
+
+				console.log(`Metadata updated for: ${countryName}`);
+			}
+
+			// 2. Logic to detect the country from the URL and run the update
+			window.addEventListener("DOMContentLoaded", () => {
+				const urlParams = new URLSearchParams(window.location.search);
+				const countryParam = urlParams.get("country"); // Looks for ?country=Name
+
+				if (countryParam) {
+					// Clean up the name (e.g., "New_Zealand" to "New Zealand")
+					const formattedName = countryParam.replace(/_/g, " ");
+					updateMetadata(formattedName);
+				}
+			});
+		</script>
+
+		<script>
+// 5. UI TOGGLES & EVENT LISTENERS
+function toggleMenu() {
+	document.getElementById("sideMenu").classList.toggle("open");
+}
+
+function toggleDesktopMenu() {
+	const slider = document.getElementById("desktopSlider");
+	if (slider) slider.classList.toggle("active");
+}
+
+function toggleMobileLegend() {
+	const content = document.getElementById("mobileLegendContent");
+	const sideMenu = document.getElementById("sideMenu");
+	if (content) content.classList.toggle("show");
+	if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
+}
+
+function toggleMobileLegend(event) {
+	// If you pass 'event' from the HTML, this stops the 'flash'
+	if (event) event.stopPropagation();
+
+	const content = document.getElementById("mobileLegendContent");
+	content.classList.toggle("show");
+}
+
+document.addEventListener("click", (e) => {
+	const sideMenu = document.getElementById("sideMenu");
+	const menuToggle = document.querySelector(".menu-toggle");
+
+	// Close Side Menu
+	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+		sideMenu.classList.remove("open");
+	}
+	// Close Legend
+	if (legendDropdown && !legendDropdown.contains(e.target)) {
+		document.getElementById("mobileLegendContent")?.classList.remove("show");
+	}
+	// Close Desktop Slider
+	if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
+		desktopSlider.classList.remove("active");
+	}
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+	const now = new Date();
+	const options = { year: "numeric", month: "long", day: "numeric" };
+	const dateString = now.toLocaleDateString("en-US", options);
+
+	// Target the mobile ID
+	const mobileEl = document.getElementById("last-updated-mobile");
+	if (mobileEl) mobileEl.textContent = dateString;
+
+	// Target the desktop ID
+	const desktopEl = document.getElementById("last-updated-desktop");
+	if (desktopEl) desktopEl.textContent = dateString;
+});
+</script>
 	</body>
 </html>

@@ -19,21 +19,92 @@
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<!-- <link rel="stylesheet" href="index.css?v=1.0"> -->
-		<link rel="stylesheet" href="country.css?v=0.1" />
+		<!-- <link rel="stylesheet" href="index.css?v=0.1"> -->
+		<link rel="stylesheet" href="country.css" />
+		<link rel="stylesheet" href="index.css?v=0.1" />
 
 	</head>
 	<body class="standard-page">
-		<a href="https://youtube.com" class="exit-btn">QUICK EXIT</a>
+
+			<div id="translator-anchor"></div>
+
+			<div class="hamburger" onclick="toggleMenu()">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+
+<div id="sideMenu" class="side-menu">
+    <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+    
+    <div class="slider-content">
+        <nav class="mobile-nav-links">
+				<a href="africa.html">AFRICA</a>
+				<a href="americas.html">AMERICAS</a>
+				<a href="asia.html">ASIA</a>
+				<a href="europe.html">EUROPE</a>
+				<a href="oceania.html">OCEANIA</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
+        </nav>
+		<div class="social-pill-container">
+				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
+				</a>
+
+				<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+				</a>
+
+				<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+				</a>
+			</div>
+
+			
+				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">Map Information & FAQ</h2>
+
+					<div class="faq-item" style="margin-bottom: 20px;">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How do I use this interactive map?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">
+							<span style="color: rgba(255,255,255,0.9); font-weight: 700;">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other source information, further links and reading.
+						</p>
+					</div>
+					
+					<div class="faq-item" style="margin-bottom: 20px;">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How is the LGBTQ+ Risk level determined?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.</p>
+					</div>
+
+				</div>
+
+					<div class="faq-item" style="margin-bottom: 20px;">
+						
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for legal travel planning?</h3>
+						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.</p>
+					</div>
+					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
+					<strong>Status:</strong> Live Data | <span class="last-updated"></span>
+					</p>
+                </div>
+			</div>
+		</div>
+
+		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+        
+		<a href="/" class="home-btn">HOME</a>
+	
 
 		<div class="master-grid-container">
+
 			<header class="main-header">
 				<h1 id="country-name" class="main-title">Loading...</h1>
 				<div class="rainbow-line"></div>
 			</header>
 
 			<div class="top-utility-stack">
-				<div id="translator-anchor"></div>
+				
 
 				<a href="https://www.preventionaccess.org" target="_blank" class="u-u-link">
 					<div id="u-u-notice">
@@ -51,31 +122,11 @@
 			<div id="info-display-area" style="grid-column: 1 / -1"></div>
 		</div>
 
-		<footer class="site-footer">
+<!-- <footer class="site-footer">
 			<div class="footer-container">
-
-
-				<div class="footer-card">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Follow Gay World News on Facebook">
-						<svg viewBox="0 0 24 24" class="social-icon facebook-f">
-    <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/>
-</svg></i> <span></span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="Follow Gay World News on X">
-						<svg viewBox="0 0 24 24" class="social-icon"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> <span></span>
-					</a>
-				</div>
-
-				<div class="footer-card">
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="Follow Gay World News on YouTube">
-						<svg viewBox="0 0 24 24" class="social-icon"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> <span></span>
-					</a>
-				</div>
-
-		</footer>
+				<p class="footer-copyright">&copy; 2026 Gay World News</p>
+			</div>
+		</footer> -->
 
 		<script>
 			window.globalData = window.globalData || {};
@@ -108,7 +159,6 @@
 			})();
 		</script>
 
-		<script src="country-info/country-loader.js?v=1.5"></script>
 
 		<script src="country-info/country-loader.js?v=1.5"></script>
 		<script>
@@ -116,7 +166,7 @@
 				default_language: "en",
 				detect_browser_language: true,
 				wrapper_selector: "#translator-anchor",
-				type: "dropdown",
+				type: "nicedropdown",
 			};
 
 			// This "forces" the text because the widget settings sometimes fail
@@ -127,7 +177,7 @@
 						// Creates a new "Select Language" option at the very top
 						var opt = document.createElement("option");
 						opt.value = "";
-						opt.innerHTML = "Select Language";
+						opt.innerHTML = "Language";
 						opt.selected = true;
 						opt.disabled = true;
 						select.insertBefore(opt, select.firstChild);
@@ -174,5 +224,38 @@
 				}
 			});
 		</script>
+
+		<script>
+			function toggleMenu() {
+				const menu = document.getElementById("sideMenu");
+				menu.classList.toggle("open");
+			}
+
+			// Close menu if user clicks outside of the slider
+			window.addEventListener('click', function(e) {
+				const menu = document.getElementById("sideMenu");
+				const hamburger = document.querySelector(".hamburger");
+				if (menu.classList.contains("open") && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+					toggleMenu();
+				}
+			});
+
+			// Get the current date/time
+			const now = new Date();
+			const formattedDate = now.toLocaleDateString('en-GB', {
+				day: '2-digit',
+				month: 'short',
+				year: 'numeric'
+			});
+
+			// Find EVERY element with that class and update it
+			const updateElements = document.querySelectorAll('.last-updated');
+
+			updateElements.forEach(el => {
+				el.textContent = formattedDate;
+			});
+
+		</script>
+
 	</body>
 </html>

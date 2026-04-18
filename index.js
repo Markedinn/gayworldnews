@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 							let s = (country.status || "warning").toLowerCase();
 							if (s === "danger" || s === "black") s = "red";
 
-							link.className = `country-card search-item-card ${s}`;
+							link.className = `side-country-card ${s}`;
 							link.innerHTML = `${country.name}`;
 							globalResults.appendChild(link);
 						}
