@@ -162,7 +162,7 @@ body {
 	background: rgba(3, 74, 228, 0.9);
 	backdrop-filter: blur(10px);
 	-webkit-backdrop-filter: blur(10px);
-	color: #ffeb3b;
+	color: #ffffff;
 
 	/* The Fix: Vertical (10px) and Horizontal (22px) padding */
 	padding: 12px 42px;
@@ -175,7 +175,7 @@ body {
 	justify-content: center;
 	font-family: "Inter", sans-serif;
 
-	font-weight: 600; /* Made slightly bolder to match your site's style */
+	font-weight: 400; /* Made slightly bolder to match your site's style */
 	font-size: 0.8rem;
 	letter-spacing: 1px;
 	text-transform: uppercase;

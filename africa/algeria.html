@@ -18,12 +18,28 @@
 		<link rel="apple-touch-icon" href="../images/favicon.webp" />
 
 		<link rel="stylesheet" href="../country.css" />
-		<link rel="stylesheet" href="../index.css?v=4.2" />
+		<link rel="stylesheet" href="../index.css?v=4.3" />
+
+
+		<script>window.globalData = {};</script>
+
+		<script src="../country-info/country-files/africa-data.js" defer></script>
+		<script src="../country-info/country-files/americas-data.js" defer></script>
+		<script src="../country-info/country-files/asia-data.js" defer></script>
+		<script src="../country-info/country-files/europe-data.js" defer></script>
+		<script src="../country-info/country-files/oceania-data.js" defer></script>
+
+  
+
+    <script src="../index.js" defer></script>
 
 	</head>
 
+	<div id="translator-anchor"></div>
+
 	<body class="standard-page">
-<div class="hamburger" onclick="toggleMenu()">
+
+			<div class="menu-toggle" onclick="toggleMenu()">
 				<div class="bar"></div>
 				<div class="bar"></div>
 				<div class="bar"></div>
@@ -34,6 +50,13 @@
     
     <div class="slider-content">
         <nav class="mobile-nav-links">
+			
+                <div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 				<a href="../africa.html">AFRICA</a>
 				<a href="../americas.html">AMERICAS</a>
 				<a href="../asia.html">ASIA</a>
@@ -42,6 +65,7 @@
                 <a href="../about.html">ABOUT</a>
                 <a href="../contact.html">CONTACT</a>
         </nav>
+		
 		<div class="social-pill-container">
 				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
 					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
@@ -504,6 +528,11 @@
 					</div>
 				</details>
 			</div>
+		</div>
+
+		<div class="footer-branding-wrapper">
+			<div class="footer-site-title" style="margin-top: 5rem;">Gay World News</div>
+			<p class="footer-site-subtitle">Legal Travel Health & Security</p>
 		</div>
 
 		<script>

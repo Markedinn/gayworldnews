@@ -22,11 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
 						if (matchesSearch && matchesContinent) {
 							const link = document.createElement("a");
 
-							// MANUAL OVERRIDE FOR HUMAN PAGES (Add others here as you build them)
-							if (key === "albania") {
-								link.href = `europe/albania.html`;
+							// AUTOMATIC PATHFINDER
+							if (country.path) {
+								// If the data has a path, use it.
+								// We add '/' to the start to make sure it works from subfolders!
+								link.href = "/" + country.path;
 							} else {
-								link.href = `country.html?c=${key}`;
+								// Fallback for countries that don't have their own .html file yet
+								link.href = `/country.html?c=${key}`;
 							}
 
 							let s = (country.status || "warning").toLowerCase();

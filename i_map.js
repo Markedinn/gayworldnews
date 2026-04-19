@@ -10,6 +10,41 @@ const map = L.map("map", {
 	inertiaFraction: 0.5,
 }).setView([15, 0], 2);
 
+const hoverBox = document.getElementById("hoverBox") || document.createElement("div");
+if (!document.getElementById("hoverBox")) {
+	hoverBox.id = "hoverBox";
+	hoverBox.className = "hover-box";
+	document.body.appendChild(hoverBox);
+}
+
+// This function is what your HTML 'onclick="toggleMenu()"' calls
+function toggleMenu() {
+	const sideMenu = document.getElementById("sideMenu");
+	if (sideMenu) sideMenu.classList.toggle("open");
+}
+
+function toggleMobileLegend(event) {
+	if (event) event.stopPropagation();
+	const content = document.getElementById("mobileLegendContent");
+	if (content) content.classList.toggle("show");
+}
+
+// "CLICK OUTSIDE TO CLOSE" LOGIC
+document.addEventListener("click", (e) => {
+	const sideMenu = document.getElementById("sideMenu");
+	const menuToggle = document.querySelector(".menu-toggle"); // Using your CLASS here
+	const legendDropdown = document.querySelector(".mobile-legend-dropdown");
+
+	// Close Side Menu if clicking outside of the menu AND the toggle button
+	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+		sideMenu.classList.remove("open");
+	}
+
+	// Close Legend if clicking outside
+	if (legendDropdown && !legendDropdown.contains(e.target)) {
+		document.getElementById("mobileLegendContent")?.classList.remove("show");
+	}
+});
 // Add Scale Line (Minimalist)
 L.control.scale({ imperial: true, metric: true, position: "bottomleft" }).addTo(map);
 
@@ -165,44 +200,6 @@ fetch("world.geojson.txt")
 					else if (complexity > 2000) sizeClass = "size-medium"; // UK, Chile
 				}
 
-				// 2. BIND TOOLTIP
-				// layer.bindTooltip(name, {
-				// 	permanent: true,
-				// 	direction: "center",
-				// 	className: `country-label ${sizeClass}`,
-				// });
-
-				// 3. YOUR NUDGES (Keep these exactly as they are)
-				if (key === "united_kingdom" || key === "gbr") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([52.5, -1.5]);
-					}, 100);
-				} else if (key === "spain" || key === "esp") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([40.4, -3.7]);
-					}, 100);
-				} else if (key === "portugal" || key === "prt") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([39.5, -8.2]);
-					}, 100);
-				} else if (key === "france" || key === "fra") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([46.6, 2.2]);
-					}, 100);
-				} else if (key === "united_states_of_america" || key === "usa") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([39.7, -104.9]);
-					}, 100);
-				} else if (key === "russia" || key === "rus") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([60.0, 95.0]);
-					}, 100);
-				} else if (key === "ireland" || key === "irl") {
-					setTimeout(() => {
-						if (layer.getTooltip()) layer.getTooltip().setLatLng([53.2, -7.8]);
-					}, 100);
-				}
-
 				// ... (Your mouseover/click code stays here)
 				layer.on({
 					mouseover: (e) => {
@@ -272,94 +269,50 @@ fetch("world.geojson.txt")
 	})
 	.catch((err) => console.error("MAP ERROR:", err));
 
-// 4. ZOOM LOGIC (Labels & Branding)
-map.on("zoomend", function () {
-	const currentZoom = map.getZoom();
-	const mapContainer = document.getElementById("map");
-	const heroHeader = document.getElementById("map-hero-branding");
-	const body = document.body;
-
-	if (currentZoom >= 4) mapContainer.classList.add("zoom-active");
-	else mapContainer.classList.remove("zoom-active");
-
-	if (currentZoom >= 1 && heroHeader) {
-		heroHeader.classList.add("hero-hidden");
-		body.classList.add("user-is-zoomed");
-	} else if (heroHeader) {
-		heroHeader.classList.remove("hero-hidden");
-		body.classList.remove("user-is-zoomed");
-	}
-});
-
 // 5. UI TOGGLES & EVENT LISTENERS
+
+// Toggle the Side Menu
 function toggleMenu() {
-	document.getElementById("sideMenu").classList.toggle("open");
-}
-
-function toggleDesktopMenu() {
-	const slider = document.getElementById("desktopSlider");
-	if (slider) slider.classList.toggle("active");
-}
-
-function toggleMobileLegend() {
-	const content = document.getElementById("mobileLegendContent");
 	const sideMenu = document.getElementById("sideMenu");
-	if (content) content.classList.toggle("show");
-	if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
+	if (sideMenu) sideMenu.classList.toggle("open");
 }
 
+// Toggle the Mobile Legend (Consolidated)
 function toggleMobileLegend(event) {
-	// If you pass 'event' from the HTML, this stops the 'flash'
-	if (event) event.stopPropagation();
-
+	if (event) event.stopPropagation(); // Prevents the click from immediately reaching document
 	const content = document.getElementById("mobileLegendContent");
-	content.classList.toggle("show");
+	if (content) content.classList.toggle("show");
 }
 
 document.addEventListener("click", (e) => {
 	const sideMenu = document.getElementById("sideMenu");
 	const menuToggle = document.querySelector(".menu-toggle");
-	const legendDropdown = document.querySelector(".mobile-legend-dropdown");
 
-	// Close Side Menu
-	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+	// Select the whole legend container (button + content)
+	const legendContainer = document.querySelector(".mobile-legend-dropdown");
+	const legendContent = document.getElementById("mobileLegendContent");
+
+	// 1. Close Side Menu: if open AND click is outside menu AND click is not the toggle
+	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
 		sideMenu.classList.remove("open");
 	}
-	// Close Legend
-	if (legendDropdown && !legendDropdown.contains(e.target)) {
-		document.getElementById("mobileLegendContent")?.classList.remove("show");
-	}
-	// Close Desktop Slider
-	if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-		desktopSlider.classList.remove("active");
+
+	// 2. Close Legend: if show AND click is outside the entire legend container
+	// This ensures clicking the "up" content or the button doesn't accidentally trigger a close
+	if (legendContent?.classList.contains("show") && legendContainer && !legendContainer.contains(e.target)) {
+		legendContent.classList.remove("show");
 	}
 });
 
+// Update Dates
 document.addEventListener("DOMContentLoaded", function () {
 	const now = new Date();
 	const options = { year: "numeric", month: "long", day: "numeric" };
 	const dateString = now.toLocaleDateString("en-US", options);
 
-	// Target the mobile ID
 	const mobileEl = document.getElementById("last-updated-mobile");
 	if (mobileEl) mobileEl.textContent = dateString;
 
-	// Target the desktop ID
 	const desktopEl = document.getElementById("last-updated-desktop");
 	if (desktopEl) desktopEl.textContent = dateString;
-});
-
-map.on("zoomend", function () {
-	const currentZoom = map.getZoom();
-	const labels = document.querySelectorAll(".country-label");
-
-	labels.forEach((label) => {
-		// If we are zoomed out (Level 2 or less), hide the names
-		// If we are zoomed in (Level 3 or more), show them
-		if (currentZoom <= 2.5) {
-			label.style.opacity = "0";
-		} else {
-			label.style.opacity = "1";
-		}
-	});
 });

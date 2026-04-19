@@ -3585,4 +3585,11 @@ Object.assign(globalData, {
 			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
 		],
 	},
+
+	east_timor: {
+		name: "East Timor",
+		continent: "asia",
+		status: "amber",
+		path: "asia/east_timor.html",
+	},
 });

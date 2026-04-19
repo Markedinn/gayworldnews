@@ -64,10 +64,20 @@ const worldTerritories = {
 		{ name: "French Guiana", lat: [2, 6], lng: [-55, -51] },
 	],
 	"United Kingdom": [
+		// Home Nations
+		{ name: "Scotland", lat: [54.6, 60.9], lng: [-8.7, -0.7] },
+		{ name: "Northern Ireland", lat: [54.0, 55.3], lng: [-8.2, -5.3] },
+		{ name: "Wales", lat: [51.3, 53.5], lng: [-5.5, -2.5] },
+		{ name: "England", lat: [49.8, 55.9], lng: [-6.5, 1.8] },
+
+		// Overseas Territories
 		{ name: "Bermuda", lat: [32.2, 32.4], lng: [-64.9, -64.6] },
 		{ name: "Cayman Islands", lat: [19.2, 19.8], lng: [-81.4, -79.7] },
 		{ name: "Falkland Islands", lat: [-53, -51], lng: [-62, -57] },
 		{ name: "Gibraltar", lat: [36.1, 36.2], lng: [-5.4, -5.3] },
+		{ name: "British Virgin Islands", lat: [18.3, 18.5], lng: [-64.9, -64.2] },
+		{ name: "Montserrat", lat: [16.6, 16.8], lng: [-62.3, -62.1] },
+		{ name: "Turks and Caicos", lat: [21.0, 22.0], lng: [-72.5, -71.0] },
 	],
 	"United States of America": [
 		{ name: "Puerto Rico", lat: [17.8, 18.5], lng: [-67.3, -65.2] },

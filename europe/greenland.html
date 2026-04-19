@@ -19,15 +19,31 @@
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?" />
 		<link rel="icon" type="image/webp" href="../images/favicon.webp" />
 		<link rel="apple-touch-icon" href="../images/favicon.webp" />
-		<!-- <link rel="stylesheet" href="../index.css?v=4.2index.css?v=4.2?v=3.57 /> -->
+		<!-- <link rel="stylesheet" href="../index.css?v=4.3index.css?v=4.3?v=3.57 /> -->
 		<link rel="stylesheet" href="../country.css" />
-		<link rel="stylesheet" href="../index.css?v=4.2" />
+		<link rel="stylesheet" href="../index.css?v=4.3" />
+
+
+				<script>window.globalData = {};</script>
+
+		<script src="../country-info/country-files/africa-data.js" defer></script>
+		<script src="../country-info/country-files/americas-data.js" defer></script>
+		<script src="../country-info/country-files/asia-data.js" defer></script>
+		<script src="../country-info/country-files/europe-data.js" defer></script>
+		<script src="../country-info/country-files/oceania-data.js" defer></script>
+
+  
+
+    <script src="../index.js" defer></script>
+
 	</head>
 
-	<body class="standard-page">
-<div id="translator-anchor"></div>
 
-			<div class="hamburger" onclick="toggleMenu()">
+	<body class="standard-page">
+
+			<div id="translator-anchor"></div>
+
+			<div class="menu-toggle" onclick="toggleMenu()">
 				<div class="bar"></div>
 				<div class="bar"></div>
 				<div class="bar"></div>
@@ -35,23 +51,22 @@
 
 <div id="sideMenu" class="side-menu">
     <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-
-	                <div class="landing-search-wrap">
+    
+    <div class="slider-content">
+        <nav class="mobile-nav-links">
+			                <div class="landing-search-wrap">
 					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
 
                 <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
-    
-    <div class="slider-content">
-        <nav class="mobile-nav-links">
-				<a href="../africa.html">AFRICA</a>
-				<a href="../americas.html">AMERICAS</a>
-				<a href="../asia.html">ASIA</a>
-				<a href="../europe.html">EUROPE</a>
-				<a href="../oceania.html">OCEANIA</a>
-                <a href="../about.html">ABOUT</a>
-                <a href="../contact.html">CONTACT</a>
+				<a href="africa.html">AFRICA</a>
+				<a href="americas.html">AMERICAS</a>
+				<a href="asia.html">ASIA</a>
+				<a href="europe.html">EUROPE</a>
+				<a href="oceania.html">OCEANIA</a>
+                <a href="about.html">ABOUT</a>
+                <a href="contact.html">CONTACT</a>
         </nav>
 		<div class="social-pill-container">
 				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
@@ -469,6 +484,11 @@
 			</div>
 		</div>
 
+		<div class="footer-branding-wrapper">
+			<div class="footer-site-title" style="margin-top: 5rem;">Gay World News</div>
+			<p class="footer-site-subtitle">Legal Travel Health & Security</p>
+		</div>		
+
 		<script>
 			window.globalData = window.globalData || {};
 		</script>
@@ -572,11 +592,14 @@ function toggleMenu() {
     menu.classList.toggle("open");
 }
 
-// Close menu if user clicks outside of the slider
 window.addEventListener('click', function(e) {
     const menu = document.getElementById("sideMenu");
-    const hamburger = document.querySelector(".hamburger");
-    if (menu.classList.contains("open") && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+    // Change ".hamburger" to ".menu-toggle"
+    const menuToggle = document.querySelector(".menu-toggle");
+
+    // We check if menu exists and is open, then check if the click was 
+    // NOT on the menu and NOT on the toggle button itself
+    if (menu && menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
         toggleMenu();
     }
 });

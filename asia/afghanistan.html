@@ -21,12 +21,27 @@
 		<link rel="apple-touch-icon" href="../images/favicon.webp" />
 
 		<link rel="stylesheet" href="../country.css" />
-		<link rel="stylesheet" href="../index.css?v=4.2" />
+		<link rel="stylesheet" href="../index.css?v=4.3" />
+
+		<script>window.globalData = {};</script>
+
+		<script src="../country-info/country-files/africa-data.js" defer></script>
+		<script src="../country-info/country-files/americas-data.js" defer></script>
+		<script src="../country-info/country-files/asia-data.js" defer></script>
+		<script src="../country-info/country-files/europe-data.js" defer></script>
+		<script src="../country-info/country-files/oceania-data.js" defer></script>
+
+  
+
+    <script src="../index.js" defer></script>
 
 	</head>
 
+	<div id="translator-anchor"></div>
+
 	<body class="standard-page">
-<div class="hamburger" onclick="toggleMenu()">
+
+			<div class="menu-toggle" onclick="toggleMenu()">
 				<div class="bar"></div>
 				<div class="bar"></div>
 				<div class="bar"></div>
@@ -37,6 +52,13 @@
     
     <div class="slider-content">
         <nav class="mobile-nav-links">
+			
+                <div class="landing-search-wrap">
+					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+					<div id="searchResults" class="search-results-floating"></div>
+				</div>
+
+                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 				<a href="../africa.html">AFRICA</a>
 				<a href="../americas.html">AMERICAS</a>
 				<a href="../asia.html">ASIA</a>
@@ -103,7 +125,6 @@
 			</header>
 
 			<div class="top-utility-stack">
-				<div id="translator-anchor"></div>
 
 				<a href="https://www.preventionaccess.org" target="_blank" class="u-u-link">
 					<div id="u-u-notice">
@@ -328,6 +349,10 @@
 				
 			</div>
 		</div>
+				<div class="footer-branding-wrapper">
+    <div class="footer-site-title" style="margin-top: 5rem;">Gay World News</div>
+    <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+</div>
 
 		<script>
 			window.globalData = window.globalData || {};
@@ -435,8 +460,8 @@ function toggleMenu() {
 // Close menu if user clicks outside of the slider
 window.addEventListener('click', function(e) {
     const menu = document.getElementById("sideMenu");
-    const hamburger = document.querySelector(".hamburger");
-    if (menu.classList.contains("open") && !menu.contains(e.target) && !hamburger.contains(e.target)) {
+    const menuToggle = document.querySelector(".menu-toggle");
+    if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
         toggleMenu();
     }
 });

@@ -36,7 +36,7 @@ body {
 }
 
 .main-title {
-	color: white;
+	color: #fdf8f89d;
 	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 	font-size: clamp(2rem, 8vw, 4rem);
 	font-weight: bold;
@@ -159,28 +159,6 @@ body {
 	text-decoration: none;
 }
 
-/* .search-results-floating .side-country-card.search-item-card:hover {
-	transform: scale(1.02) translateY(-2px);
-	background: rgba(0, 0, 0, 0.05) !important; 
-	border: 1px solid rgba(0, 0, 0, 0.1) !important;
-	border-radius: 8px; 
-}
-
-.search-results-floating .side-country-card.search-item-card {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
-	padding: 12px 10px; 
-	transition: background 0.3s ease;
-}
-
-.search-results-floating .side-country-card.search-item-card:last-child {
-	border-bottom: none !important;
-}
-
-.search-results-floating .side-country-card.search-item-card:hover {
-	background: rgba(0, 0, 0, 0.9) !important;
-	border-bottom-color: transparent !important;
-} */
-
 .side-country-card {
 	display: flex !important;
 	align-items: center !important;
@@ -214,15 +192,6 @@ body {
 	border-bottom: none !important;
 }
 
-/* .search-results-floating {
-    display: none; 
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.98) !important;
-    backdrop-filter: blur(15px);
-    border-radius: 8px;
-    margin-top: 5px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-} */
 /* --- 6. HAMBURGER & SIDE MENUS --- */
 
 .menu-toggle {
@@ -237,7 +206,7 @@ body {
 	width: 30px;
 	height: 4px;
 	background-color: white;
-	margin: 5px 0;
+	margin: 7px 0;
 	transition: 0.4s;
 }
 
@@ -363,38 +332,39 @@ body {
 
 #translator-anchor select {
 	width: 100%;
-	height: 30px;
+	height: 35px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(255, 255, 255, 0.8) !important;
+	background: rgba(3, 74, 228, 0.9) !important;
 	backdrop-filter: blur(10px);
 	border: 1px solid rgba(255, 255, 255, 0.8);
 	border-radius: 6px !important;
-	color: #000000 !important;
-	font-weight: 800;
+	color: #ffffff !important;
+	font-weight: 400;
 	text-transform: uppercase;
 	font-size: 0.9rem;
 	letter-spacing: 1.5px;
 	appearance: none;
 	cursor: pointer;
-	text-align: center;
+	text-align: left;
 	outline: none;
 	transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #translator-anchor select option {
-	background: #ffffff !important;
+	background: rgba(3, 74, 228, 0.9) !important;
 	color: #000000 !important;
 	padding: 15px !important;
 	font-size: 1rem !important;
-	font-weight: 800 !important;
+	font-weight: 900 !important;
+	text-align: center !important;
 }
 
 #translator-anchor select:hover {
-	background: rgb(255, 255, 255, 0.5) !important;
-	color: #424141 !important;
-	border: 3px solid rgba(255, 255, 255, 0.8) !important;
+	background: rgba(3, 74, 228, 1) !important;
+	color: #ffffff !important;
+	border: 1px solid rgba(255, 255, 255, 0.6) !important;
 	transform: translateY(-3px) scale(1.02);
 }
 
@@ -506,14 +476,14 @@ body {
 	color: white;
 
 	/* Pill shape is better for thumb-tapping */
-	padding: 12px 24px;
+	padding: 10px 40px;
 	border-radius: 50px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
 
 	/* Typography */
-	font-weight: 700;
+	font-weight: 500;
 	font-size: 0.8rem;
-	letter-spacing: 1px;
+	letter-spacing: 1.2px;
 	text-transform: uppercase;
 	text-decoration: none;
 
@@ -784,7 +754,7 @@ body {
 	}
 
 	.home-btn {
-		font-size: 13px;
+		font-size: 12px;
 	}
 
 	.central-header-wrapper {
