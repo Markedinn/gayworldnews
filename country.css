@@ -45,6 +45,17 @@ body::before {
 	pointer-events: none;
 }
 
+.standard-page {
+	margin: 0;
+	width: 100vw;
+	padding: 5rem 0;
+	background-color: #0a0a0a;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh; /* Ensures background covers full screen */
+}
+
 .exit-btn {
 	position: fixed;
 	/* Positioned bottom-right above the footer/social pills */
@@ -1273,16 +1284,6 @@ body::before {
 
 .article-header-row .badge-container {
 	margin: 0 !important;
-}
-
-/* 1. Define the Standard Page behavior */
-.standard-page {
-	margin: 0;
-	padding: 0;
-	background-color: #0a0a0a;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 }
 
 /* 2. Fix the Container */
