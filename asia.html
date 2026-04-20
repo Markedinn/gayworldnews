@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="../index.css?v=4.4" />
 		<link rel="stylesheet" href="../regions.css" />
 
-				<script>
+		<script>
 			window.globalData = {};
 		</script>
 		<script src="country-info/country-files/africa-data.js" defer></script>
@@ -20,86 +20,97 @@
 		<script src="country-info/country-files/americas-data.js" defer></script>
 		<script src="country-info/country-files/oceania-data.js" defer></script>
 		<script src="index.js" defer></script>
-
 	</head>
 	<body>
-			<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
-			<a href="/" class="home-btn">HOME</a>
-            <div id="translator-anchor"></div>
+		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+		<a href="/" class="home-btn">HOME</a>
+		<div id="translator-anchor"></div>
 
+		<div class="menu-toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
 
-			<div class="menu-toggle" onclick="toggleMenu()">
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-			</div>
+		<div id="sideMenu" class="side-menu">
+			<div class="slider-content">
+				<nav class="mobile-nav-links">
+					<div class="landing-search-wrap">
+						<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+						<div id="searchResults" class="search-results-floating"></div>
+					</div>
+					<a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 
-<div id="sideMenu" class="side-menu">
-    
-    <div class="slider-content">
-        <nav class="mobile-nav-links">
-				<div class="landing-search-wrap">
-					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-					<div id="searchResults" class="search-results-floating"></div>
+					<a href="../africa.html">AFRICA</a>
+					<a href="../americas.html">AMERICAS</a>
+					<a href="../asia.html">ASIA</a>
+					<a href="../europe.html">EUROPE</a>
+					<a href="../oceania.html">OCEANIA</a>
+					<a href="../about.html">ABOUT</a>
+					<a href="../contact.html">CONTACT</a>
+				</nav>
+				<div class="social-pill-container">
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+						<svg viewBox="0 0 24 24">
+							<path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+						</svg>
+					</a>
+
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+						<svg viewBox="0 0 24 24">
+							<path
+								fill="currentColor"
+								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+						</svg>
+					</a>
+
+					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+						<svg viewBox="0 0 24 24">
+							<path
+								fill="currentColor"
+								d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+						</svg>
+					</a>
 				</div>
-                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 
-				<a href="../africa.html">AFRICA</a>
-				<a href="../americas.html">AMERICAS</a>
-				<a href="../asia.html">ASIA</a>
-				<a href="../europe.html">EUROPE</a>
-				<a href="../oceania.html">OCEANIA</a>
-                <a href="../about.html">ABOUT</a>
-                <a href="../contact.html">CONTACT</a>
-        </nav>
-		<div class="social-pill-container">
-				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
-				</a>
+				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
 
-				<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-				</a>
-
-				<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-				</a>
-			</div>
-
-			
-				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">Map Information & FAQ</h2>
-
-					<div class="faq-item" style="margin-bottom: 20px;">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How do I use this interactive map?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">
-							<span style="color: rgba(255,255,255,0.9); font-weight: 700;">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other source information, further links and reading.
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+							<span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+							advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+							source information, further links and reading.
 						</p>
 					</div>
 
-					<div class="faq-item" style="margin-bottom: 20px;">
-						
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for planning a holiday?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">Gay World News acts as a hub for the best guides so you don't have to look through tens of search results to find a decent review and we also look for both reading and video content if available. We recommend also checking specific country alerts for detailed health and security protocols before departing.</p>
-					</div>
-					
-					<div class="faq-item" style="margin-bottom: 20px;">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How is the LGBTQ+ Risk level determined?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating for the community.</p>
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for planning a holiday?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+							Gay World News acts as a hub for the best guides so you don't have to look through tens of search results to find a decent review and we also look for both reading
+							and video content if available. We recommend also checking specific country alerts for detailed health and security protocols before departing.
+						</p>
 					</div>
 
-				</div>
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+							Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating
+							for the community.
+						</p>
+					</div>
 
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
-					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+						<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
 					</p>
-                </div>
+				</div>
 			</div>
 		</div>
 
 		<div class="master-grid-container">
 			<header class="main-header">
-					<h1 class="main-title">Asia</h1>
+				<h1 class="main-title">Asia</h1>
 			</header>
 
 			<section class="bento-grid" id="countryGrid">
@@ -298,11 +309,11 @@
 		</div>
 
 		<div class="footer-branding-wrapper">
-    <div class="footer-site-title">Gay World News</div>
-    <p class="footer-site-subtitle">Legal Travel Health & Security</p>
-</div>
+			<div class="footer-site-title">Gay World News</div>
+			<p class="footer-site-subtitle">Legal Travel Health & Security</p>
+		</div>
 
-<script>
+		<script>
 			window.globalData = window.globalData || {};
 		</script>
 
@@ -332,7 +343,6 @@
 				}
 			})();
 		</script>
-
 
 		<script src="country-info/country-loader.js?v=1.5"></script>
 		<script>
@@ -400,62 +410,62 @@
 		</script>
 
 		<script>
-// 5. UI TOGGLES & EVENT LISTENERS
-function toggleMenu() {
-	document.getElementById("sideMenu").classList.toggle("open");
-}
+			// 5. UI TOGGLES & EVENT LISTENERS
+			function toggleMenu() {
+				document.getElementById("sideMenu").classList.toggle("open");
+			}
 
-function toggleDesktopMenu() {
-	const slider = document.getElementById("desktopSlider");
-	if (slider) slider.classList.toggle("active");
-}
+			function toggleDesktopMenu() {
+				const slider = document.getElementById("desktopSlider");
+				if (slider) slider.classList.toggle("active");
+			}
 
-function toggleMobileLegend() {
-	const content = document.getElementById("mobileLegendContent");
-	const sideMenu = document.getElementById("sideMenu");
-	if (content) content.classList.toggle("show");
-	if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
-}
+			function toggleMobileLegend() {
+				const content = document.getElementById("mobileLegendContent");
+				const sideMenu = document.getElementById("sideMenu");
+				if (content) content.classList.toggle("show");
+				if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
+			}
 
-function toggleMobileLegend(event) {
-	// If you pass 'event' from the HTML, this stops the 'flash'
-	if (event) event.stopPropagation();
+			function toggleMobileLegend(event) {
+				// If you pass 'event' from the HTML, this stops the 'flash'
+				if (event) event.stopPropagation();
 
-	const content = document.getElementById("mobileLegendContent");
-	content.classList.toggle("show");
-}
+				const content = document.getElementById("mobileLegendContent");
+				content.classList.toggle("show");
+			}
 
-document.addEventListener("click", (e) => {
-	const sideMenu = document.getElementById("sideMenu");
-	const menuToggle = document.querySelector(".menu-toggle");
+			document.addEventListener("click", (e) => {
+				const sideMenu = document.getElementById("sideMenu");
+				const menuToggle = document.querySelector(".menu-toggle");
 
-	// Close Side Menu
-	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-		sideMenu.classList.remove("open");
-	}
-	// Close Legend
-	if (legendDropdown && !legendDropdown.contains(e.target)) {
-		document.getElementById("mobileLegendContent")?.classList.remove("show");
-	}
-	// Close Desktop Slider
-	if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-		desktopSlider.classList.remove("active");
-	}
-});
+				// Close Side Menu
+				if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+					sideMenu.classList.remove("open");
+				}
+				// Close Legend
+				if (legendDropdown && !legendDropdown.contains(e.target)) {
+					document.getElementById("mobileLegendContent")?.classList.remove("show");
+				}
+				// Close Desktop Slider
+				if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
+					desktopSlider.classList.remove("active");
+				}
+			});
 
-document.addEventListener("DOMContentLoaded", function () {
-	const now = new Date();
-	const options = { year: "numeric", month: "long", day: "numeric" };
-	const dateString = now.toLocaleDateString("en-US", options);
+			document.addEventListener("DOMContentLoaded", function () {
+				const now = new Date();
+				const options = { year: "numeric", month: "long", day: "numeric" };
+				const dateString = now.toLocaleDateString("en-US", options);
 
-	// Target the mobile ID
-	const mobileEl = document.getElementById("last-updated-mobile");
-	if (mobileEl) mobileEl.textContent = dateString;
+				// Target the mobile ID
+				const mobileEl = document.getElementById("last-updated-mobile");
+				if (mobileEl) mobileEl.textContent = dateString;
 
-	// Target the desktop ID
-	const desktopEl = document.getElementById("last-updated-desktop");
-	if (desktopEl) desktopEl.textContent = dateString;
-});
-</script>
+				// Target the desktop ID
+				const desktopEl = document.getElementById("last-updated-desktop");
+				if (desktopEl) desktopEl.textContent = dateString;
+			});
+		</script>
 	</body>
 </html>

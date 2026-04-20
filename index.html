@@ -1,173 +1,178 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>LGBTQ+ Safety & Risk Map 2026 | Gay World News Travel Dashboard</title>
-    <meta name="title" content="LGBTQ+ Safety & Risk Map 2026 | Gay World News Travel Dashboard" />
-    <meta name="description" content="Explore the 2026 Interactive LGBTQ+ Global Risk Map. Real-time updates on legal rights, travel guide, health, and security for the community worldwide." />
-    <meta name="keywords" content="LGBTQ map, gay travel risk, LGBT rights map 2026, lgbt safety dashboard, gay world news, travel health security" />
+		<title>LGBTQ+ Safety & Risk Map 2026 | Gay World News Travel Dashboard</title>
+		<meta name="title" content="LGBTQ+ Safety & Risk Map 2026 | Gay World News Travel Dashboard" />
+		<meta
+			name="description"
+			content="Explore the 2026 Interactive LGBTQ+ Global Risk Map. Real-time updates on legal rights, travel guide, health, and security for the community worldwide." />
+		<meta name="keywords" content="LGBTQ map, gay travel risk, LGBT rights map 2026, lgbt safety dashboard, gay world news, travel health security" />
 
-    <link rel="canonical" href="https://www.gayworldnews.com/" />
+		<link rel="canonical" href="https://www.gayworldnews.com/" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.gayworldnews.com/" />
-    <meta property="og:title" content="Interactive LGBTQ+ Global Security Map | Gay World News" />
-    <meta property="og:description" content="The definitive real-time dashboard for LGBTQ+ Legal Travel, Health, and Security. View risk levels by country." />
-    <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
-    <meta property="og:image:alt" content="Gay World News interactive travel map showing global LGBTQ safety levels." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.gayworldnews.com/" />
+		<meta property="og:title" content="Interactive LGBTQ+ Global Security Map | Gay World News" />
+		<meta property="og:description" content="The definitive real-time dashboard for LGBTQ+ Legal Travel, Health, and Security. View risk levels by country." />
+		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+		<meta property="og:image:alt" content="Gay World News interactive travel map showing global LGBTQ safety levels." />
 
-    <meta name="twitter:card" content="summary_large_ima
-    <meta name="twitter:url" content="https://www.gayworldnews.com/" />
-    <meta name="twitter:title" content="2026 LGBTQ+ Travel & Safety Map | Gay World News" />
-    <meta name="twitter:description" content="Real-time global updates for LGBTQ+ legal rights, health, and security." />
-    <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="https://www.gayworldnews.com/" />
+		<meta name="twitter:title" content="2026 LGBTQ+ Travel & Safety Map | Gay World News" />
+		<meta name="twitter:description" content="Real-time global updates for LGBTQ+ legal rights, health, and security." />
+		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-    <link rel="icon" type="image/webp" href="images/favicon.webp" />
-    <link rel="apple-touch-icon" href="images/favicon.webp" />
+		<link rel="icon" type="image/webp" href="images/favicon.webp" />
+		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-	<link rel="stylesheet" href="index.css?v=4.4" />
-    <link rel="stylesheet" href="i_map.css?v=4.4" />
+		<link rel="stylesheet" href="index.css?v=4.4" />
+		<link rel="stylesheet" href="i_map.css?v=4.4" />
 
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+		<script>
+			window.globalData = {};
+		</script>
 
-    <script>
-        window.globalData = {};
-    </script>
+		<script src="country-info/country-files/africa-data.js?v=4.4" defer></script>
+		<script src="country-info/country-files/americas-data.js?v=4.4" defer></script>
+		<script src="country-info/country-files/asia-data.js?v=4.4" defer></script>
+		<script src="country-info/country-files/europe-data.js?v=4.4" defer></script>
+		<script src="country-info/country-files/oceania-data.js?v=4.4" defer></script>
 
-    <script src="country-info/country-files/africa-data.js?v=4.4" defer></script>
-    <script src="country-info/country-files/americas-data.js?v=4.4" defer></script>
-    <script src="country-info/country-files/asia-data.js?v=4.4" defer></script>
-    <script src="country-info/country-files/europe-data.js?v=4.4" defer></script>
-    <script src="country-info/country-files/oceania-data.js?v=4.4" defer></script>
+		<script src="i_territories.js?v=4.4" defer></script>
 
-    <script src="i_territories.js?v=4.4" defer></script>
+		<script src="i_map.js?v=4.4" defer></script>
 
-    <script src="i_map.js?v=4.4" defer></script>
+		<script src="index.js?v=4.4" defer></script>
 
-    <script src="index.js?v=4.4" defer></script>
-
-
-	<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "Gay World News Interactive LGBTQ+ Risk Map",
-  "url": "https://www.gayworldnews.com/",
-  "description": "A real-time interactive map tracking global LGBTQ+ legal rights, travel safety, and health risks.",
-  "applicationCategory": "TravelApplication",
-  "operatingSystem": "Web",
-  "author": {
-    "@type": "Organization",
-    "name": "Gay World News"
-  },
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  }
-}
-</script>
-
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebApplication",
+				"name": "Gay World News Interactive LGBTQ+ Risk Map",
+				"url": "https://www.gayworldnews.com/",
+				"description": "A real-time interactive map tracking global LGBTQ+ legal rights, travel safety, and health risks.",
+				"applicationCategory": "TravelApplication",
+				"operatingSystem": "Web",
+				"author": {
+					"@type": "Organization",
+					"name": "Gay World News"
+				},
+				"offers": {
+					"@type": "Offer",
+					"price": "0",
+					"priceCurrency": "USD"
+				}
+			}
+		</script>
 	</head>
 	<body>
-        	<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
-<button class="legend-btn" onclick="toggleMobileLegend()">
-    LEGEND
-    <div id="mobileLegendContent" class="mobile-legend-content">
-        <div class="legend-row"><span class="color-dot" style="background-color: #2e7d32"></span> LOW RISK</div>
-        <div class="legend-row"><span class="color-dot" style="background-color: #ffa000"></span> CAUTION</div>
-        <div class="legend-row"><span class="color-dot" style="background-color: #d32f2f"></span> DANGER</div>
-    </div>
-</button>
-
-            <div id="translator-anchor"></div>
-
-			<div class="menu-toggle" onclick="toggleMenu()">
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
+		<button class="legend-btn" onclick="toggleMobileLegend()">
+			LEGEND
+			<div id="mobileLegendContent" class="mobile-legend-content">
+				<div class="legend-row"><span class="color-dot" style="background-color: #2e7d32"></span> LOW RISK</div>
+				<div class="legend-row"><span class="color-dot" style="background-color: #ffa000"></span> CAUTION</div>
+				<div class="legend-row"><span class="color-dot" style="background-color: #d32f2f"></span> DANGER</div>
 			</div>
+		</button>
+
+		<div id="translator-anchor"></div>
+
+		<div class="menu-toggle" onclick="toggleMenu()">
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+		</div>
 
 		<div id="sideMenu" class="side-menu">
-			<div class="mobile-nav-links" style="margin-top: 15dvh; margin-left: 0rem;">
+			<div class="slider-content">
+				<nav class="mobile-nav-links">
+					<div class="landing-search-wrap">
+						<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+						<div id="searchResults" class="search-results-floating"></div>
+					</div>
+					<a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 
-                <div class="landing-search-wrap">
-					<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-					<div id="searchResults" class="search-results-floating"></div>
+					<a href="africa.html">AFRICA</a>
+					<a href="americas.html">AMERICAS</a>
+					<a href="asia.html">ASIA</a>
+					<a href="europe.html">EUROPE</a>
+					<a href="oceania.html">OCEANIA</a>
+					<a href="about.html">ABOUT</a>
+					<a href="contact.html">CONTACT</a>
+				</nav>
+
+				<div class="social-pill-container">
+					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+						<svg viewBox="0 0 24 24">
+							<path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+						</svg>
+					</a>
+
+					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+						<svg viewBox="0 0 24 24">
+							<path
+								fill="currentColor"
+								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+						</svg>
+					</a>
+
+					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+						<svg viewBox="0 0 24 24">
+							<path
+								fill="currentColor"
+								d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+						</svg>
+					</a>
 				</div>
 
-                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
-                
+				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
 
-            
-				<a href="africa.html">AFRICA</a>
-				<a href="americas.html">AMERICAS</a>
-				<a href="asia.html">ASIA</a>
-				<a href="europe.html">EUROPE</a>
-				<a href="oceania.html">OCEANIA</a>
-                <a href="about.html" class="info">ABOUT</a>
-                <a href="contact.html" class="info">CONTACT</a>
-            </div>
-
-			<div class="social-pill-container">
-				<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg>
-				</a>
-
-				<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-				</a>
-
-				<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
-					<svg viewBox="0 0 24 24"><path fill="currentColor" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-				</a>
-			</div>
-
-			
-				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
-					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase;">Map Information & FAQ</h2>
-
-					<div class="faq-item" style="margin-bottom: 20px;">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How do I use this interactive map?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">
-							<span style="color: rgba(255,255,255,0.9); font-weight: 700;">Zoom in, mouse over or touch for country name and click/touch for any Country page. </span>Here you will find the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other source information, further links and reading.
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+							<span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in, mouse over or touch for country name and click/touch for any Country page. </span>Here you
+							will find the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in
+							every country world-wide, as well as a host of other source information, further links and reading.
 						</p>
 					</div>
-					
-					<div class="faq-item" style="margin-bottom: 20px;">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px;">How is the LGBTQ+ Risk level determined?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.</p>
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+							Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
+						</p>
 					</div>
 
-				</div>
-
-					<div class="faq-item" style="margin-bottom: 20px;">
-						
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for legal travel planning?</h3>
-						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.</p>
+					<div class="faq-item" style="margin-bottom: 20px">
+						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
+						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+							This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
+						</p>
 					</div>
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
-					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+						<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
 					</p>
-                </div>
-            </div>
-        </div>
-
+				</div>
+			</div>
+		</div>
 
 		<div id="hoverBox"></div>
 
-	<div class="central-header-wrapper">
-    <h1 class="main-site-title">Gay World News</h1>
-	<p class="main-site-subtitle">Legal Travel Health & Security</p>
-</div>
+		<div class="central-header-wrapper">
+			<h1 class="main-site-title">Gay World News</h1>
+			<p class="main-site-subtitle">Legal Travel Health & Security</p>
+		</div>
 
 		<div id="map"></div>
-
 
 		<script>
 			window.gtranslateSettings = {
@@ -194,7 +199,5 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-
-</body>
+	</body>
 </html>
-
