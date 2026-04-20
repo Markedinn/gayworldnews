@@ -1454,7 +1454,7 @@ Object.assign(globalData, {
 	lebanon: {
 		name: "Lebanon",
 		continent: "asia",
-		status: "amber",
+		status: "red",
 
 		legal: `
         <p>Lebanon exists in a legal gray area in 2026. While Article 534 (punishing acts "contrary to nature") remains, several court rulings have declared it does not apply to same-sex acts. However, 2025-2026 has seen a surge in political rhetoric targeting "LGBTQ+ propaganda," leading to frequent administrative bans on community gatherings.</p>

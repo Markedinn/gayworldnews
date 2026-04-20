@@ -25,7 +25,19 @@
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="index.css?v=4.3" />
+		<link rel="stylesheet" href="index.css?v=4.4" />
+
+		
+				<script>
+			window.globalData = {};
+		</script>
+		<script src="country-info/country-files/africa-data.js" defer></script>
+		<script src="country-info/country-files/asia-data.js" defer></script>
+		<script src="country-info/country-files/europe-data.js" defer></script>
+		<script src="country-info/country-files/americas-data.js" defer></script>
+		<script src="country-info/country-files/oceania-data.js" defer></script>
+		<script src="index.js" defer></script>
+
 
 
 		<style>
@@ -36,7 +48,7 @@
 			align-items: center;    /* Centers horizontally */
 			justify-content: flex-start; /* Allows the page to scroll naturally */
 			min-height: 100vh;
-			margin-top: 6rem;
+			margin-top: 4rem;
 			padding: 0;
 		}
 
@@ -70,22 +82,17 @@
 			/* THE PERFECT FROSTED GLASS CARD */
 			.glass-mission-card {
 				width: 90%;
-				margin-top: 9rem;
+				margin-top: 4rem;
 				margin-bottom: 25px;
 				padding: 40px 50px;
 				border-radius: 14px;
 				position: relative;
 				display: block;
-
-				/* The Secret Sauce: Low Alpha (0.2) + Blur */
-				/* background: rgba(255, 255, 255, 0.2) !important;
-				backdrop-filter: blur(12px) saturate(180%);
-				-webkit-backdrop-filter: blur(12px) saturate(180%); */
-
-				/* Subtle border makes the glass edge "pop" */
+				background: #faf9f6; 
+				opacity: 0.9;
 				border: 1px solid rgba(255, 255, 255, 0.4) !important;
 
-				box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+				box-shadow: 15px 15px 32px 5px rgba(37, 37, 37, 0.9);
 				transition:
 					transform 0.5s ease,
 					box-shadow 0.5s ease;
@@ -94,7 +101,7 @@
 			.glass-mission-card p {
 				line-height: 1.8;
 				font-size: 1.1rem;
-				color: #ffffff;
+				color: #000000;
 				margin-bottom: 20px;
 				font-family:
 					"Inter",
@@ -110,49 +117,48 @@
 				text-align: left;
 			}
 
-			.glass-mission-card p,
 			.glass-mission-card h1,
 			.glass-mission-card h2 {
-				color: #ffffff;
+				color: #8b0000;
 			}
 
 
 
-			/* Ensure the GTranslate dropdown doesn't hug the left side */
+			
 			.gt_container {
 				margin: 0 auto !important;
 			}
 
 			@media (max-width: 1024px) {
 				.glass-mission-card {
-					padding: 30px 20px; /* Slightly more padding for tablets */
+					padding: 30px 20px; 
 					width: 90%;
-					margin: 40px 0; /* Vertical gap only */
+					margin: 4rem 0; 
 					border-radius: 15px;
 				}
 
 				.glass-mission-card p {
 					line-height: 1.6;
-					font-size: 1.15rem; /* Better readability for the Pro screen */
+					font-size: 1.15rem;
 				}
 			}
 
 			/* MOBILE FIX */
 			@media (max-width: 768px) {
 				.glass-mission-card {
-					padding: 30px 20px; /* Reduces side padding to 20px on mobile */
-					margin-top: 120px;
+					padding: 30px 20px; 
+					margin-top: 4rem;
 					margin-bottom: 20px;
 				}
 
 				.glass-mission-card p {
-					font-size: 1.05rem; /* Slightly smaller text for better mobile fit */
+					font-size: 1.05rem; 
 					line-height: 1.5;
 					margin-bottom: 1.5rem !important;
 				}
 
 				.page-container {
-					width: 95%; /* Use more of the screen width on tiny devices */
+					width: 95%; 
 				}
 			}
 		</style>
@@ -254,7 +260,7 @@
 			<div class="glass-mission-card">
 				<h2 style="margin-bottom: 30px; text-align: center">Privacy & Safety</h2>
 
-				<p style="font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.9)">
+				<p style="font-size: 0.9rem; line-height: 1.6;">
 					<strong>Your Responsibility:</strong> While we do our absolute best to verify all information is correct at time of writing, things change quickly and mistakes can be
 					made. As with any media organization, we cannot take responsibility for your actions based on a possible error we have made during our research. <br /><br />
 					<strong>Your Data:</strong> We do not track your personal identity. Our search tools and maps are designed for anonymous use. <br /><br />
@@ -267,7 +273,7 @@
 			</div>
 		</div>
 
-		<div class="footer-branding-wrapper">
+		<div class="footer-branding-wrapper" style="margin-top: 3rem;">
     <div class="footer-site-title">Gay World News</div>
     <p class="footer-site-subtitle">Legal Travel Health & Security</p>
 </div>

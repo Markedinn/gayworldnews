@@ -26,8 +26,8 @@
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
 
-		<link rel="stylesheet" href="regions.css" />
-		<link rel="stylesheet" href="index.css?v=4.3" />
+		<link rel="stylesheet" href="regions.css?v=4.4" />
+		<link rel="stylesheet" href="index.css?v=4.4" />
 
 		
 				<script>
@@ -38,7 +38,7 @@
 		<script src="country-info/country-files/europe-data.js" defer></script>
 		<script src="country-info/country-files/americas-data.js" defer></script>
 		<script src="country-info/country-files/oceania-data.js" defer></script>
-		<script src="index.js" defer></script>
+		<script src="index.js?v=4.4" defer></script>
 
 
 <style>
@@ -79,34 +79,35 @@ body.contact-page {
 .glass-mission-card {
     margin-top: 8rem;
     width: 100%; 
-    /* This is the desktop size - wide but readable */
     max-width: 800px; 
     padding: 40px 60px;
     border-radius: 14px;
     position: relative;
-    background: rgba(255, 255, 255, 0.1) !important;
-    backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
-    border: 1px solid rgba(240, 238, 127, 0.6) !important;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+	background: rgba(250, 249, 246, 0.15) !important; 
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+	border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
+
+
 
 /* 4. RESPONSIVE FIXES */
 
-/* TABLET SPECIFIC (Bigger presence) */
+
 @media (min-width: 481px) and (max-width: 1024px) {
     .page-container {
-        width: 85%; /* Let it breathe a bit more on the sides */
+        width: 85%; 
     }
     
     .glass-mission-card {
-        width: 90%; /* Take up most of the container */
+        width: 90%; 
         padding: 50px;
         margin-top: 6rem;
     }
     
     .main-title {
-        font-size: 2.5rem; /* Make header pop on tablets */
+        font-size: 2.5rem; 
     }
 }
 
@@ -120,7 +121,7 @@ body.contact-page {
     .glass-mission-card {
         padding: 25px 20px;
         margin-top: 3rem;
-        width: 100%; /* Important: prevents overflow */
+        width: 100%; 
     }
 
     .contact-form input,
@@ -139,7 +140,7 @@ body.contact-page {
     .glass-mission-card {
         margin-top: 20px;
         margin-bottom: 60px;
-        max-height: none; /* Ensure it doesn't clip content */
+        max-height: none; 
     }
 }
 
@@ -147,7 +148,7 @@ body.contact-page {
 .contact-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
     width: 100%; /* Ensures form fills the glass box */
 }
 
@@ -159,17 +160,17 @@ body.contact-page {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    background: white;
-    border: 2px solid rgb(16, 193, 216);
+    background: #faf9f6; /* Solid Sand for the input fields makes them pop */
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: 8px;
     padding: 12px;
-    color: #000;
+    color: #1a1a1a;
     font-weight: 500;
-    font-family: inherit;
+    transition: border 0.3s ease;
 }
 
 .submit-btn {
-    background: white;
+    background: #faf9f6;
     color: black;
     padding: 15px;
     border: 2px solid rgb(16, 193, 216);
@@ -209,11 +210,10 @@ body.contact-page {
 
     .contact-form input,
     .contact-form textarea {
-        font-size: 16px; /* Prevents mobile zoom-in */
+        font-size: 16px; 
     }
 }
 
-/* Landscape Mode (The "Tight" Fix) */
 @media (max-height: 500px) and (orientation: landscape) {
     .page-container {
         justify-content: flex-start;
@@ -303,7 +303,7 @@ body.contact-page {
 		</div>
 
 			<div class="glass-mission-card">
-				<h1 class="main-title" style="margin-bottom: 20px; color: #ffffff; text-align: center">Write To Us</h1>
+				<h1 class="main-title" style="margin-bottom: 20px; text-align: center">Write To Us</h1>
 
 				<div id="form-status-success" class="status-msg success-msg" style="display: none"><i class="fas fa-check-circle"></i> Sent! Thank you for sharing.</div>
 
@@ -311,18 +311,18 @@ body.contact-page {
 
 				<form id="gwn-custom-form" action="send_mail.php" method="POST" class="contact-form">
 					<div class="form-group">
-						<label style="color: #ffffff;">Email</label>
-						<input type="email" name="email" required placeholder="YourSpecialName@email.com" />
+						<label style="color: #faf9f6;">Email</label>
+						<input type="email" name="email" required placeholder="YouAreSpecial@email.com" />
 					</div>
 
 					<div class="form-group">
-						<label style="color: #ffffff;">Message</label>
-						<textarea name="message" rows="4" required placeholder="Hi! Thanks for sharing."></textarea>
+						<label style="color: #faf9f6;">Message</label>
+						<textarea name="message" rows="4" required placeholder="Hi! We can't wait to hear from you."></textarea>
 					</div>
 
 					<button type="submit" class="submit-btn">SEND MESSAGE</button>
 
-					<div class="privacy-note" style="color: #ffffff; font-size: 0.8rem; margin-top: 15px; text-align: center">🔒 We will never share your data.</div>
+					<div class="privacy-note" style="color: #faf9f6; font-size: 0.8rem; margin-top: 15px; text-align: center">🔒 We will never share your data.</div>
 				</form>
 			</div>
 		</div>

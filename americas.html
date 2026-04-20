@@ -8,7 +8,7 @@
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="../index.css?v=4.3" />
+		<link rel="stylesheet" href="../index.css?v=4.4" />
 		<link rel="stylesheet" href="../regions.css" />
 
 				<script>
@@ -131,6 +131,10 @@
 					<span>BRAZIL <small>(AI)</small></span>
 				</a>
 
+				<a href="country.html?c=british_virgin_islands" class="country-card amber">
+					<span>BRITISH VIRGIN ISLANDS <small>(AI)</small></span>
+				</a>				
+
 				<a href="country.html?c=canada" class="country-card green">
 					<span>CANADA <small>(AI)</small></span>
 				</a>
@@ -239,6 +243,10 @@
 
 				<a href="country.html?c=united_states" class="country-card green">
 					<span>UNITED STATES <small>(AI)</small></span>
+				</a>
+
+				<a href="country.html?c=united_states_virgin_islands" class="country-card amber">
+					<span>UNITED STATES VIRGIN ISLANDS <small>(AI)</small></span>
 				</a>
 
 				<a href="country.html?c=uruguay" class="country-card green">
@@ -365,20 +373,7 @@ function toggleDesktopMenu() {
 	if (slider) slider.classList.toggle("active");
 }
 
-function toggleMobileLegend() {
-	const content = document.getElementById("mobileLegendContent");
-	const sideMenu = document.getElementById("sideMenu");
-	if (content) content.classList.toggle("show");
-	if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
-}
 
-function toggleMobileLegend(event) {
-	// If you pass 'event' from the HTML, this stops the 'flash'
-	if (event) event.stopPropagation();
-
-	const content = document.getElementById("mobileLegendContent");
-	content.classList.toggle("show");
-}
 
 document.addEventListener("click", (e) => {
 	const sideMenu = document.getElementById("sideMenu");
@@ -388,14 +383,8 @@ document.addEventListener("click", (e) => {
 	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
 		sideMenu.classList.remove("open");
 	}
-	// Close Legend
-	if (legendDropdown && !legendDropdown.contains(e.target)) {
-		document.getElementById("mobileLegendContent")?.classList.remove("show");
-	}
-	// Close Desktop Slider
-	if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-		desktopSlider.classList.remove("active");
-	}
+
+
 });
 
 document.addEventListener("DOMContentLoaded", function () {

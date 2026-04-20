@@ -49,6 +49,9 @@ document.addEventListener("click", (e) => {
 L.control.scale({ imperial: true, metric: true, position: "bottomleft" }).addTo(map);
 
 const countryNameOverrides = {
+	united_states_of_america: "united_states",
+	america: "united_states",
+	usa: "united_states",
 	united_republic_of_tanzania: "tanzania",
 	congo_the_democratic_republic_of_the: "democratic_republic_of_the_congo",
 	gambia_the: "gambia",
@@ -247,25 +250,28 @@ fetch("world.geojson.txt")
 							hoverBox.style.display = "none";
 						}
 					},
+					// If it's a mouse click, or the second tap on mobile/tablet, navigate
 					click: (e) => {
-						// Detect if this was a touch interaction
 						const isTouch = e.originalEvent.pointerType === "touch" || e.originalEvent.touches;
 
-						// If it's a touch and the box isn't already showing THIS country, just show the name
 						if (isTouch && hoverBox.getAttribute("data-active") !== key) {
 							hoverBox.setAttribute("data-active", key);
-							// Ensure it's visible (the mouseover usually does this, but we're being safe)
 							hoverBox.style.display = "block";
 							return;
 						}
 
-						// If it's a mouse click, or the second tap on mobile/tablet, navigate
 						const countryData = window.globalData ? window.globalData[key] : null;
-						window.location.href = countryData?.path ? countryData.path : `country.html?c=${key}`;
+
+						// This is the specific fix for the "Folder Mess"
+						if (countryData?.path) {
+							window.location.href = "/" + countryData.path;
+						} else {
+							window.location.href = `/country.html?c=${key}`;
+						}
 					},
-				});
-			},
-		}).addTo(map);
+				}); // Closes layer.on({
+			}, // Closes onEachFeature: (feature, layer) => {
+		}).addTo(map); // Closes L.geoJSON(geo, {
 	})
 	.catch((err) => console.error("MAP ERROR:", err));
 

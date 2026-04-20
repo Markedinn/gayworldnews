@@ -47,29 +47,8 @@ body::before {
 	pointer-events: none;
 }
 
-/* 3. Mobile ONLY (Strictly enforced) */
-@media screen and (max-width: 760px) {
-	body::before {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background: url("images/world_img_mobile.webp") center/cover no-repeat !important;
-		filter: brightness(0.9) contrast(1.5) saturate(1.8);
-		background-color: rgba(73, 73, 68, 0.141);
-		background-blend-mode: multiply;
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		pointer-events: none;
-	}
-}
-
 #update-status {
-	color: #cfcec5;
+	color: #fdf8f89d;
 	font-size: 1rem;
 	font-weight: 600;
 	text-align: center;
@@ -119,78 +98,6 @@ h2 {
 	line-height: 1.4;
 }
 
-/* Country Cards */
-
-.country-card {
-	display: flex !important;
-	align-items: center !important; /* Centers Inner Pill on Y-axis */
-	justify-content: center !important; /* Centers Inner Pill on X-axis */
-	margin: 12px auto !important;
-	padding: 10px !important; /* Space between color frame and blue box */
-	border-radius: 15px !important;
-	text-decoration: none !important;
-	min-height: 70px !important; /* Ensures consistent height */
-	border: none !important;
-	color: #ffffff !important;
-	width: 100% !important;
-	padding: 12px 5px !important;
-	border-radius: 10px !important;
-	text-align: center !important;
-	font-size: 1.2rem !important; /* Bigger letters */
-	font-weight: 600 !important;
-	letter-spacing: 0.5px !important;
-	text-transform: uppercase !important;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* 3. Status Backgrounds (Slightly Transparent) */
-.country-card.green {
-	background-color: rgba(0, 180, 0, 0.9) !important;
-	color: #ffffff;
-	border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-.country-card.amber {
-	background-color: rgba(223, 157, 16, 0.9) !important;
-	color: #ffffff;
-	border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-
-.country-card.red {
-	background-color: rgba(200, 0, 0, 0.9) !important;
-	color: #ffffff;
-	border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-
-/* --- THE ANTARCTICA ICE CARD --- */
-.country-card.ice {
-	/* A crisp, frozen blue-grey at 0.89 opacity */
-	background-color: rgba(102, 207, 241, 0.966) !important;
-	border: 1px solid rgba(255, 255, 255, 0.5) !important;
-}
-
-.country-card:hover {
-	transform: translateY(-3px); /* Subtle lift up */
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-	cursor: pointer;
-}
-
-/* Make the inner blue box pop even more on hover */
-.country-card:hover span {
-	/* background: rgba(22, 7, 230, 1) !important;  */
-	box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Specific Red Glow for Danger */
-.country-card.red:hover {
-	box-shadow: 0 0 20px rgb(247, 1, 1);
-}
-
-/* Tap Effect (Mobile/All) */
-.country-card:active {
-	transform: scale(0.97);
-	filter: brightness(0.9);
-}
-
 .news-feed-wrapper {
 	grid-column: 1 / -1;
 	width: 95%;
@@ -204,11 +111,10 @@ h2 {
 }
 
 .manual-pinned::before {
-	content: "📌 PINNED";
+	content: "📌 REVIEWED";
 	position: absolute;
 	top: 10px;
 	right: 15px;
-	background: #ffffff;
 	color: #000000;
 	font-size: 0.65rem;
 	font-weight: 800;
@@ -221,23 +127,88 @@ h2 {
 	text-transform: uppercase;
 }
 
-/* THE MAIN BOX: */
+/* THE MAIN BOX: Stone Background */
 .news-accordion,
 .manual-pinned {
 	width: 100%;
 	margin-bottom: 25px;
 	border-radius: 14px;
-	background: rgba(29, 30, 31, 0.4) !important;
-	backdrop-filter: blur(8px) saturate(150%);
-	-webkit-backdrop-filter: blur(12px) saturate(150%);
-	border-left: 3px solid rgba(255, 255, 255, 0.582);
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	background: #faf9f6;
+	opacity: 0.9;
+	/* Subtle shadow to make the "paper" lift off the world map */
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
 
 	text-align: center;
+	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+	overflow: hidden; /* Keeps the inner content within the rounded corners */
 }
 
-.news-accordion summary::-webkit-details-marker {
-	display: none;
+/* 1. MAIN TITLES & DATES - Forced to Black for Visibility */
+.news-accordion h3,
+.news-date-full,
+.date-manual {
+	color: #000000 !important;
+	text-shadow: none;
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* 2. COUNTRY LABEL */
+.news-accordion .country-label,
+.country-label.manual-red-title {
+	color: #8b0000 !important;
+	font-weight: 900;
+	letter-spacing: 2px;
+	font-size: 1.3rem;
+	margin-bottom: 8px;
+	display: inline-block;
+}
+
+/* 3. DATE SPECIFICS  */
+.news-date-full,
+.date-manual {
+	font-size: 1.05rem;
+	font-weight: 600;
+	margin-top: 10px;
+	display: block;
+	width: 100%;
+}
+
+/* 4. THE ARROW  */
+.news-accordion summary::after {
+	content: "▼";
+	display: block;
+	color: #ff3399;
+	font-size: 1.4rem;
+	margin: 15px auto 0 auto;
+}
+
+/* 5. THE EXPANDED TEXT  */
+.news-content-expanded p {
+	color: #1a1a1a;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	background: rgba(255, 255, 255, 0.4); /* Subtle contrast lift */
+	padding: 25px 30px;
+	margin: 0;
+	text-align: left;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* THE BUTTON */
+.news-accordion .news-content-expanded a,
+.manual-pinned .news-content-expanded a {
+	display: inline-block;
+	background-color: #8b0000;
+	color: #cfcec5; /* Inverted: Stone text on dark background */
+	padding: 10px 22px;
+	margin: 20px 0 25px 30px;
+	border-radius: 6px;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.2s ease;
 }
 
 /* THE GLOBAL ACCORDION ENGINE */
@@ -273,7 +244,7 @@ h2 {
 
 .news-date-full,
 .date-manual {
-	color: #cfcec5;
+	color: #000000;
 	order: 3;
 	margin-top: 5px;
 }
@@ -329,15 +300,6 @@ h2 {
 	z-index: 5;
 }
 
-.news-accordion h3,
-.news-date-full,
-.country-label {
-	color: #cfcec5;
-	text-decoration: none;
-	margin: 5px 0;
-	opacity: 1;
-}
-
 .news-accordion h3 {
 	display: inline-block;
 	font-weight: 500;
@@ -350,52 +312,10 @@ h2 {
 	z-index: 5;
 }
 
-.news-date-full {
+.news-date-full,
+.date-manual {
 	font-size: 1.1rem;
 	font-weight: 400;
-}
-
-.news-content-expanded p {
-	color: #cfcec5;
-	font-size: 1.2rem;
-	line-height: 1.7;
-	margin-bottom: 25px;
-	text-align: left;
-	padding: 0 30px;
-}
-
-/* ADD THIS: Makes the pods lift and glow on hover */
-.news-accordion:not([open]):hover,
-.manual-pinned:hover {
-	transform: translateY(-5px) scale(1.01);
-	background: rgba(255, 255, 255, 0.8); /* Becomes slightly more solid */
-	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-	border-color: rgba(255, 255, 255, 0.5);
-}
-
-/* THE BUTTON: White Glass Effect */
-.news-accordion .news-content-expanded a,
-.manual-pinned .news-content-expanded a {
-	background-color: #ff0000;
-	color: #ffffff;
-	padding: 8px 15px;
-	border-radius: 50px;
-	font-size: 0.8rem;
-	font-weight: 800;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
-	text-decoration: none;
-	margin-left: 30px;
-}
-
-/* THE HOVER: "Glowing Glass" */
-.news-accordion .news-content-expanded a:hover,
-.manual-pinned .news-content-expanded a:hover {
-	background: rgba(255, 255, 255, 1);
-	border-color: #ffffff;
-	color: #000000;
-	transform: translateY(-3px) scale(1.05);
-	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* ============================================
@@ -457,8 +377,9 @@ h2 {
    DATE STYLING (Solid White & Same Size)
    ============================================ */
 
-.news-date-full {
-	color: #cfcec5;
+.news-date-full,
+.date-manual {
+	color: #000000;
 	font-size: 1.05rem;
 	font-weight: 600;
 	margin-top: 10px;
@@ -481,7 +402,8 @@ h2 {
 }
 
 .news-accordion summary *,
-.news-date-full {
+.news-date-full,
+.date-manual {
 	text-decoration: none;
 }
 
@@ -496,7 +418,7 @@ h2 {
 
 @media screen and (max-width: 480px) {
 	.master-grid-container {
-		display: flex !important;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		width: 100%;
@@ -506,23 +428,22 @@ h2 {
 	}
 
 	.bento-grid {
-		display: grid !important;
-		grid-template-columns: 1fr !important;
-		width: 100% !important;
+		display: grid;
+		grid-template-columns: 1fr;
+		width: 100%;
 		gap: 15px;
 		position: relative;
 		z-index: 10;
 	}
 
 	.master-grid-container > *,
-	.country-card,
 	#manual-news-portal,
 	.u-u-link,
 	.main-header,
 	#info-display-area {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 auto !important;
+		width: 100%;
+		max-width: 100%;
+		margin: 0 auto;
 		box-sizing: border-box;
 	}
 
@@ -554,6 +475,27 @@ h2 {
 	}
 }
 
+/* 3. Mobile ONLY (Strictly enforced) */
+@media screen and (max-width: 760px) {
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: url("images/world_img_mobile.webp") center/cover no-repeat;
+		filter: brightness(0.9) contrast(1.5) saturate(1.8);
+		background-color: rgba(73, 73, 68, 0.141);
+		background-blend-mode: multiply;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		pointer-events: none;
+	}
+}
+
 @media (min-width: 780px) and (max-width: 1100px) {
 	.master-grid-container {
 		display: flex;
@@ -563,32 +505,32 @@ h2 {
 	}
 
 	.bento-grid {
-		grid-template-columns: repeat(3, 1fr) !important;
-		gap: 20px !important;
-		gap: 20px !important;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+		gap: 20px;
 	}
 }
 
 /* 27" Monitor "Studio Mode" */
 @media (min-width: 1700px) {
 	.home-hero {
-		margin-top: 6vh !important;
+		margin-top: 6vh;
 		text-align: center;
 	}
 
 	.home-hero .main-title {
-		font-size: 5rem !important;
+		font-size: 5rem;
 	}
 }
 
 /* 30" Monitor "Studio Mode" */
 @media (min-width: 2000px) {
 	.home-hero {
-		margin-top: 17vh !important;
+		margin-top: 17vh;
 		text-align: center;
 	}
 
 	.home-hero .main-title {
-		font-size: 5rem !important;
+		font-size: 5rem;
 	}
 }

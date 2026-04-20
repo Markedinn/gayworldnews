@@ -4070,7 +4070,7 @@ Object.assign(globalData, {
 		],
 	},
 
-	united_states_of_america: {
+	united_states: {
 		name: "United States of America",
 		continent: "americas",
 		status: "amber",

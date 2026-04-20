@@ -165,8 +165,8 @@ body {
 	color: #ffffff;
 
 	/* The Fix: Vertical (10px) and Horizontal (22px) padding */
-	padding: 12px 42px;
-	border-radius: 50px;
+	padding: 10px 32px;
+	border-radius: 6px;
 	border: 1px solid rgba(255, 255, 255, 0.4);
 
 	/* Typography & Alignment */
@@ -190,10 +190,6 @@ body {
 	transform: scale(1.05);
 	background: rgba(3, 74, 228, 1);
 	box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
-}
-
-.exit-btn:active {
-	transform: scale(0.95);
 }
 
 /* --- THE POP-UP CONTENT (Upward Dropdown) --- */
