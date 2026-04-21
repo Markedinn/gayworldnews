@@ -942,6 +942,44 @@ body::before {
 	font-weight: 700;
 }
 
+/* The container */
+.table-scroll-container {
+	position: relative;
+	overflow-x: auto;
+	width: 100%;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 25px; /* Extra space for the bar and text */
+}
+
+/* Force the scrollbar to be visible in Webkit (Chrome/Safari/iOS) */
+.table-scroll-container::-webkit-scrollbar {
+	height: 6px;
+	display: block !important; /* Forces existence */
+}
+
+.table-scroll-container::-webkit-scrollbar-track {
+	background: rgba(128, 128, 128, 0.15); /* Light grey track */
+	border-radius: 10px;
+}
+
+.table-scroll-container::-webkit-scrollbar-thumb {
+	background: #888888; /* Solid grey thumb */
+	border-radius: 10px;
+}
+
+/* The "Scroll Me" Label */
+.scroll-indicator-text {
+	display: block;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #888888;
+	text-align: left;
+	margin-top: 5px; /* Pulls it into the padding area of the container */
+	padding-bottom: 2rem;
+	pointer-events: none;
+}
+
 /* 4. THE HIGHLIGHT ROW (The 7-9 Reports) */
 .briefing-table .highlight-row td {
 	color: #e40303 !important;
@@ -1210,6 +1248,12 @@ body::before {
 }
 
 /* --- MOBILE & TABLET BACKGROUND --- */
+
+@media only screen and (min-width: 481px) {
+	.scroll-indicator-text {
+		display: none;
+	}
+}
 
 @media (max-width: 480px) {
 	.article-header-row {

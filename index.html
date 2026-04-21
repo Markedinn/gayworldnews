@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-GSGX0B7ZB3");
+		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -29,8 +40,8 @@
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="index.css?v=4.5" />
-		<link rel="stylesheet" href="i_map.css?v=4.5" />
+		<link rel="stylesheet" href="index.css?v=4.6" />
+		<link rel="stylesheet" href="i_map.css?v=4.6" />
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
@@ -39,17 +50,17 @@
 			window.globalData = {};
 		</script>
 
-		<script src="country-info/country-files/africa-data.js?v=4.5" defer></script>
-		<script src="country-info/country-files/americas-data.js?v=4.5" defer></script>
-		<script src="country-info/country-files/asia-data.js?v=4.5" defer></script>
-		<script src="country-info/country-files/europe-data.js?v=4.5" defer></script>
-		<script src="country-info/country-files/oceania-data.js?v=4.5" defer></script>
+		<script src="country-info/country-files/africa-data.js?v=4.6" defer></script>
+		<script src="country-info/country-files/americas-data.js?v=4.6" defer></script>
+		<script src="country-info/country-files/asia-data.js?v=4.6" defer></script>
+		<script src="country-info/country-files/europe-data.js?v=4.6" defer></script>
+		<script src="country-info/country-files/oceania-data.js?v=4.6" defer></script>
 
-		<script src="i_territories.js?v=4.5" defer></script>
+		<script src="i_territories.js?v=4.6" defer></script>
 
-		<script src="i_map.js?v=4.5" defer></script>
+		<script src="i_map.js?v=4.6" defer></script>
 
-		<script src="index.js?v=4.5" defer></script>
+		<script src="index.js?v=4.6" defer></script>
 
 		<script type="application/ld+json">
 			{
@@ -73,6 +84,12 @@
 		</script>
 	</head>
 	<body>
+		<div id="safety-toast" class="safety-toast">
+			<span>🕵️ <strong>Incognito</strong></span>
+			<span class="divider">|</span>
+			<span>🔴 <strong>Quick Exit</strong></span>
+		</div>
+
 		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
 		<button class="legend-btn" onclick="toggleMobileLegend()">
@@ -141,9 +158,12 @@
 						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
 						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
 							<span style="color: rgba(255, 255, 255, 0.9); font-weight: 700"
-								>Zoom in, Mouse over/Touch for country name and Click/Touch for any Country page. Note: We are just at the beginning of verifying the reviewing the data on the
-								pages. If GWN it has been done, otherwise it has been constructed by Ai. We are progressing, but it's a lot of work. If you can't find what you are looking for,
-								please come back in a couple of months. </span
+								>Zoom in, Mouse over/Touch for country name and Click/Touch for any Country page. Note: We are just at the beginning of verifying and reviewing the data on the
+								pages as well as putting videos together and everything we think you will need. We are also in the process of finding the best and most reliable sources. If GWN
+								shows in the country lists in the region pages, that means the basics been done and it's worth a read, otherwise it has been constructed by Ai using some very
+								specific criteria but it is not good enough and we will do a better job for you. We are progressing, and we hope to be at the start of an amazing interactive
+								website, but it's a lot of work and it will take some time. If you can't find what you are looking for, please come back in a couple of months and stay with us. We
+								need your support. </span
 							>Here you will find the best travel guides and links, legal advice, Health - medication and clinic locations as well as emergency contacts, safety and security
 							awareness in every country world-wide, as well as a host of other source information, further links and reading.
 						</p>

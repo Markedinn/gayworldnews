@@ -1,6 +1,15 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GSGX0B7ZB3');
+</script>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Breaking News | Gay World News</title>
@@ -9,8 +18,8 @@
 			window.globalData = {};
 		</script>
 
-		<link rel="stylesheet" href="breaking.css?v=4.5" />
-		<link rel="stylesheet" href="index.css?v=4.5" />
+		<link rel="stylesheet" href="breaking.css?v=4.6" />
+		<link rel="stylesheet" href="index.css?v=4.6" />
 
 		<script src="news-loader.js" defer></script>
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
@@ -38,7 +47,6 @@
 						<div id="searchResults" class="search-results-floating"></div>
 					</div>
 
-					<!-- <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a> -->
 					<a href="../africa.html">AFRICA</a>
 					<a href="../americas.html">AMERICAS</a>
 					<a href="../asia.html">ASIA</a>
@@ -103,6 +111,13 @@
 			</div>
 		</div>
 
+		<div id="safety-toast" class="safety-toast">
+			<span>🕵️ <strong>Incognito</strong></span>
+			<span class="divider">|</span>
+			<span>🔴 <strong>Quick Exit</strong></span>
+		</div>
+
+
 		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
 		<a href="/" class="home-btn">HOME</a>
@@ -115,26 +130,37 @@
 			</header>
 
 			<main class="news-feed-wrapper">
-				<div id="manual-news-portal">
-					<details class="news-accordion manual-pinned">
-						<summary>
-							<div class="tag-bar">
-								<span class="tag tag-safety">Digital Safety</span>
-								<span class="tag tag-down">Rights Trend: Declining</span>
-							</div>
-							<div class="country-label manual-red-title">LEBANON (Digital Crackdown)</div>
-							<h3>Security Forces Increase Use of Social Media Entrapment Against LGBTQ+ Individuals</h3>
-							<div class="date-manual">March 18, 2026</div>
-						</summary>
-						<div class="news-content-expanded">
-							<p>
-								A new report from the Maharat Foundation highlights a dangerous surge in security forces using "digital targeting" tactics in Lebanon. Authorities are increasingly
-								using dating apps and social media to entrap, harass, and arbitrarily detain members of the community. Activists are urging users to exercise extreme caution with
-								their digital footprints as legal restrictions on journalists and activists continue to tighten across the MENA region.
-							</p>
-							<a href="https://ifex.org/issue/gender-and-sexual-diversity/" target="_blank">Read Article</a>
-						</div>
-					</details>
+    <div id="manual-news-portal">
+        <details class="news-accordion manual-pinned">
+			
+            <summary>
+                <div class="tag-bar">
+                    <span class="tag tag-safety">Digital Safety</span>
+                    <span class="tag tag-down">Rights Trend: Declining</span>
+                </div>
+                <div class="country-label manual-red-title">LEBANON (Digital Crackdown)</div>
+                <h3>Security Forces Increase Use of Social Media Entrapment Against LGBTQ+ Individuals</h3>
+                <div class="date-manual">March 18, 2026</div>
+            </summary>
+            <div class="news-content-expanded">
+             
+                <!-- 1. ADDED BUTTON -->
+                <div class="audio-controls" style="margin-bottom: 15px;">
+				<button class="play-news-btn">
+					<span class="play-icon">▶</span> 
+					<span class="button-text"> Article</span>
+				</button>
+
+                <!-- 2. ADDED ID TO PARAGRAPH -->
+                <p class="news-text">
+                    A new report from the Maharat Foundation highlights a dangerous surge in security forces using "digital targeting" tactics in Lebanon. Authorities are increasingly
+                    using dating apps and social media to entrap, harass, and arbitrarily detain members of the community. Activists are urging users to exercise extreme caution with
+                    their digital footprints as legal restrictions on journalists and activists continue to tighten across the MENA region.
+                </p>
+                <a href="https://ifex.org/issue/gender-and-sexual-diversity/" target="_blank">Read Article</a>
+            </div>
+        </details>
+
 
 					<details class="news-accordion manual-pinned">
 						<summary>
@@ -147,11 +173,17 @@
 							<div class="date-manual">March 12, 2026</div>
 						</summary>
 						<div class="news-content-expanded">
-							<p>
+
+						<div class="audio-controls" style="margin-bottom: 15px;">
+						<button class="play-news-btn">
+							<span class="play-icon">▶</span> 
+							<span class="button-text"> Article</span>
+						</button>
+							<p class="news-text">
 								The introduction of the bill comes in the backdrop of increased arrests on charges of same-sex conduct, mostly targeting men. In February 2026, 12 men, including
 								two Senegalese public figures, media presenter Pape Chinch Diallo and musician Djiby Dramé, were arrested and charged with, among other things, unnatural acts...
 							</p>
-							<p><strong>Source:</strong> OUTRIGHT INTERNATIONAL / Reuters</p>
+							<p>Source: Outright International / Reuters</p>
 							<div>
 								<a href="https://outrightinternational.org/insights/escalating-threats-lgbtq-people-senegal-legal-reform-moral-panic-and-devastating" target="_blank"
 									>READ article</a
@@ -171,7 +203,13 @@
 							<div class="date-manual">March 11, 2026</div>
 						</summary>
 						<div class="news-content-expanded">
-							<p>
+
+						<div class="audio-controls" style="margin-bottom: 15px;">
+						<button class="play-news-btn">
+							<span class="play-icon">▶</span> 
+							<span class="button-text"> Article</span>
+						</button>
+							<p class="news-text">
 								In a decision hailed as a "sign of hope" for the East African community, a Kenyan court has sentenced two individuals to 15 years in prison for a violent robbery
 								and assault targeting gay men. Activists note that the severity of the sentence reflects a growing judicial intolerance for hate-motivated violence, even as the
 								country's legislative landscape remains challenging.
@@ -318,5 +356,60 @@
 				if (desktopEl) desktopEl.textContent = dateString;
 			});
 		</script>
+
+<script>
+    document.addEventListener('click', function (e) {
+        const btn = e.target.closest('.play-news-btn');
+        if (!btn) return;
+
+        const synth = window.speechSynthesis;
+        const card = btn.closest('.news-content-expanded');
+        const textToRead = card.querySelector('.news-text').innerText;
+        const buttonText = btn.querySelector('.button-text');
+        const playIcon = btn.querySelector('.play-icon');
+
+        if (synth.speaking) {
+            synth.cancel();
+            resetButton(btn, buttonText, playIcon);
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+
+        // --- THE "HUMAN" TRICK ---
+        // We wait for the voices to load, then pick the best one
+        const voices = synth.getVoices();
+        
+        // Priority list: Look for "Natural" or "Google" voices first
+const bestVoice = 
+    voices.find(v => v.name === 'Google español de Estados Unidos (es-US)') || 
+    // voices.find(v => v.name === 'Google español (es-ES)') || 
+    // voices.find(v => v.name === 'Google UK English Male (en-GB)') ||
+    voices[0];
+
+        utterance.voice = bestVoice;
+        utterance.rate = 0.9;  // Slightly slower = more human
+        utterance.pitch = 1.9; 
+
+        utterance.onstart = () => {
+            // buttonText.innerText = 'Stop Listening';
+            playIcon.innerText = '⏹';
+        };
+
+        utterance.onend = () => resetButton(btn, buttonText, playIcon);
+
+        synth.speak(utterance);
+    });
+
+    function resetButton(btn, label, icon) {
+        label.innerText = ' Article';
+        icon.innerText = '▶';
+    }
+
+    // This "pre-warms" the voices so they are ready the second the user clicks
+    window.speechSynthesis.getVoices();
+</script>
+
+
 	</body>
 </html>

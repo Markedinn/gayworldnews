@@ -1454,77 +1454,8 @@ Object.assign(globalData, {
 	lebanon: {
 		name: "Lebanon",
 		continent: "asia",
-		status: "red",
-
-		legal: `
-        <p>Lebanon exists in a legal gray area in 2026. While Article 534 (punishing acts "contrary to nature") remains, several court rulings have declared it does not apply to same-sex acts. However, 2025-2026 has seen a surge in political rhetoric targeting "LGBTQ+ propaganda," leading to frequent administrative bans on community gatherings.</p>
-
-        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Fragile." For example, the 2026 judicial push to formally repeal Article 534 has provided a hopeful but contested precedent for the community.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Helem</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The first LGBTQ+ organization in the Arab world, Helem continues to provide 2026 legal aid and safety net services in Beirut.</p>
-                <a href="https://www.helem.net/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>The 2026 social climate is 'Mixed.' Beirut (specifically Mar Mikhael and Hamra) remains a regional safe haven, but political instability has made the community a frequent scapegoat. Security posture at events is high, often requiring "secret" locations to avoid conservative protests.</p>
-
-        <p><strong>Community Density:</strong> Moderate. Beirut has several well-known (though often unmarked) LGBT bars and cafes.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #104</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance remains stagnant due to the lack of formal legal repeal.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-        <p>Beirut is a 2026 highlight for LGBT travelers in the Middle East, though the situation can change rapidly. Trans/GNC individuals face higher scrutiny at checkpoints, but the city’s underground scene is exceptionally welcoming.</p>
-        
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** **B018** (Beirut) - While not exclusively LGBT, it is a world-class venue where the community is deeply integrated and safe.
-        * **The Local Way:** **Kaleidoscope** - A community-focused space that host regular drag events and safe social nights in 2026.</p>
-        
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** Grindr and Scruff (active but used with awareness of potential state monitoring).
-        * **Community Forums:** Leb-LGBT Telegram groups are the 2026 pulse for real-time safety and party info.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
-                <p style="color: #fff; font-size: 0.85rem;">Public "Pride" displays (flags/posters) are frequently banned by the Ministry of Interior in 2026. Keep visibility to private or vetted venues.</p>
-            </div>
-        </div>
-    `,
-
-		health: `
-        <p>Beirut remains a regional hub for LGBTQ+ health. Organizations like Marsa provide confidential, high-quality sexual health care and HRT referrals in 2026.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Marsa Sexual Health Center</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Hamra, Beirut - The gold standard for safe, non-judgmental healthcare.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 Vibe is 'Defiant Resilience.' Despite political attacks, the Lebanese community remains the most organized and visible in the region.</p>
-    `,
-
-		sources: [
-			{ label: "Ground Intel: Helem", url: "https://www.helem.net/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/lebanon/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Beirut Pride (Unannounced)", url: "#", button: "CHECK LOCAL CHANNELS →" },
-		],
+		status: "amber",
+		path: "asia/lebanon.html",
 	},
 
 	laos: {

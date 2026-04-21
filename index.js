@@ -51,3 +51,26 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("keydown", (e) => {
 	if (e.key === "Escape") window.location.replace("https://www.youtube.com");
 });
+
+document.querySelector(".exit-btn").addEventListener("click", function (e) {
+	e.preventDefault();
+
+	// This replaces the CURRENT page in history with Google
+	// Tapping 'Back' will now skip your site entirely
+	window.location.replace("https://google.com");
+});
+
+// When the user leaves the tab or clicks exit, change the title
+window.addEventListener("blur", () => {
+	document.title = "Google Search";
+});
+
+// Change it back when they return
+window.addEventListener("focus", () => {
+	document.title = "Home"; // Or your original title
+});
+document.querySelector(".exit-btn").addEventListener("click", function (e) {
+	e.preventDefault();
+	document.title = "Google"; // Instant title change
+	window.location.replace("https://google.com");
+});
