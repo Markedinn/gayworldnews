@@ -4,27 +4,42 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title id="dynamic-title">Country LGBTQ+ Safety & Travel Guide | Gay World News</title>
-		<meta id="meta-desc" name="description" content="Detailed LGBTQ+ legal, health, and travel safety data for countries worldwide. Select a country to see real-time updates." />
+		<title id="dynamic-title">LGBT Travel Guide 2026 | Traveling, Fun, The Law and the Risks</title>
 
+		<meta
+			id="meta-desc"
+			name="description"
+			content="Explore real-time LGBT safety data, legal status, and travel risks for countries worldwide. Our 2026 global map provides essential safety insights and community resources." />
+
+		<meta name="keywords" content="LGBT travel safety 2026, global gay travel map, international LGBT laws, travel risk assessment, gay world news safety, LGBTQ legal status" />
+
+		<meta name="language" content="English" />
+		<link rel="alternate" hreflang="en" href="https://www.gayworldnews.com/country.html" />
 		<link rel="canonical" id="canonical-link" href="https://www.gayworldnews.com/country.html" />
 
-		<meta property="og:title" id="og-title" content="LGBTQ+ Global Safety & Travel Guide" />
-		<meta property="og:description" id="og-desc" content="Real-time legal updates and travel safety data for the global LGBTQ+ community." />
+		<meta property="og:type" content="website" />
 		<meta property="og:url" id="og-url" content="https://www.gayworldnews.com/country.html" />
+		<meta property="og:title" id="og-title" content="2026 Global LGBT Safety & Travel Risk Map" />
+		<meta
+			property="og:description"
+			id="og-desc"
+			content="Select any country to view real-time legal updates, travel safety ratings, and local community resources for the LGBTQ+ community." />
 		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+		<meta property="og:locale" content="en_US" />
 
-		<meta name="twitter:title" id="twitter-title" content="LGBTQ+ Global Safety & Travel Guide" />
-		<meta name="twitter:description" id="twitter-desc" content="Comprehensive safety and health data for LGBTQ+ travelers." />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" id="twitter-title" content="2026 Global LGBT Travel Safety Guide" />
+		<meta name="twitter:description" id="twitter-desc" content="Comprehensive legal and safety data for every country. Know the laws before you go." />
 		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=2" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
-		<!-- <link rel="stylesheet" href="index.css?v=4.6"> -->
+
 		<link rel="stylesheet" href="country.css" />
 		<link rel="stylesheet" href="index.css?v=4.6" />
 
 		<script>
-			window.globalData = {};
+			window.globalData = window.globalData || {};
 		</script>
 
 		<script src="country-info/country-files/africa-data.js" defer></script>
@@ -32,7 +47,6 @@
 		<script src="country-info/country-files/asia-data.js" defer></script>
 		<script src="country-info/country-files/europe-data.js" defer></script>
 		<script src="country-info/country-files/oceania-data.js" defer></script>
-
 		<script src="index.js" defer></script>
 	</head>
 	<body class="standard-page">
@@ -152,19 +166,6 @@
 		</div>
 
 		<script>
-			window.globalData = window.globalData || {};
-		</script>
-
-		<script src="country-info/country-files/africa-data.js?v=1.5"></script>
-		<script src="country-info/country-files/americas-data.js?v=1.5"></script>
-		<script src="country-info/country-files/asia-data.js?v=1.5"></script>
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-		<script>
 			(function () {
 				const params = new URLSearchParams(window.location.search);
 				// Your code uses "c" in some places and "country" in others. This checks both.
@@ -274,6 +275,29 @@
 				// Target the desktop ID
 				const desktopEl = document.getElementById("last-updated-desktop");
 				if (desktopEl) desktopEl.textContent = dateString;
+			});
+
+			// Dynamic Click-to-Close via Event Delegation
+			document.getElementById("info-display-area").addEventListener("click", (e) => {
+				// 1. Find if the click happened inside a .news-content-expanded div
+				const container = e.target.closest(".news-content-expanded");
+
+				if (container) {
+					// 2. Define tags that SHOULD NOT trigger a close (interactive elements)
+					const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
+
+					// 3. If they clicked the container, but NOT a link/button/resource-card
+					if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
+						const parentDetails = container.closest("details");
+
+						if (parentDetails && parentDetails.open) {
+							parentDetails.removeAttribute("open");
+
+							// Keep the user focused on the closed header
+							parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+						}
+					}
+				}
 			});
 		</script>
 	</body>
