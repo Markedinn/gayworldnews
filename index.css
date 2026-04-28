@@ -137,14 +137,6 @@ body {
 	max-height: 45vh;
 }
 
-/* .search-results-floating .side-country-card.search-item-card:hover {
-	transform: scale(1.02) translateY(-5px);
-	background: rgb(243, 243, 247);
-	border: 3px solid rgba(255, 255, 255, 0.8) !important;
-	border-radius: 50px;
-	z-index: 10;
-} */
-
 .landing-search-wrap {
 	position: relative;
 	width: 90%;
@@ -589,6 +581,10 @@ body {
 	opacity: 0.3;
 }
 
+.article-image-link-container a:hover img {
+	opacity: 0.8;
+}
+
 @keyframes fadeInOut {
 	0% {
 		opacity: 0;
@@ -834,5 +830,3 @@ body {
 		margin-top: 4px;
 	}
 }
-
-/* THE SEARCH COUNTRY BUTTON - MATCHING BREAKING NEWS STYLE */

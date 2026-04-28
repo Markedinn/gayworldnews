@@ -675,6 +675,7 @@ body::before {
 .news-content-expanded strong {
 	color: #000000 !important;
 	font-weight: 800;
+	margin-bottom: 1.5rem;
 }
 
 /* --- CLEAN INLINE LINKS (No Boxes) --- */
@@ -794,7 +795,7 @@ body::before {
 .news-content-expanded table {
 	width: 100%;
 	border-collapse: collapse;
-	margin: 25px 0;
+	margin: 2rem 0;
 	font-size: 1rem;
 	background-color: #ffffff;
 	border-radius: 8px;
