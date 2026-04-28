@@ -1,17 +1,6 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-GSGX0B7ZB3");
-		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -40,8 +29,8 @@
 		<link rel="icon" type="image/webp" href="images/favicon.webp" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
 
-		<link rel="stylesheet" href="index.css?v=4.8" />
-		<link rel="stylesheet" href="i_map.css?v=4.8" />
+		<link rel="stylesheet" href="index.css?v=4.9" />
+		<link rel="stylesheet" href="i_map.css?v=4.9" />
 
 		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 		<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
@@ -49,18 +38,6 @@
 		<script>
 			window.globalData = {};
 		</script>
-
-		<script src="country-info/country-files/africa-data.js?v=4.8" defer></script>
-		<script src="country-info/country-files/americas-data.js?v=4.8" defer></script>
-		<script src="country-info/country-files/asia-data.js?v=4.8" defer></script>
-		<script src="country-info/country-files/europe-data.js?v=4.8" defer></script>
-		<script src="country-info/country-files/oceania-data.js?v=4.8" defer></script>
-
-		<script src="i_territories.js?v=4.8" defer></script>
-
-		<script src="i_map.js?v=4.8" defer></script>
-
-		<script src="index.js?v=4.8" defer></script>
 
 		<script type="application/ld+json">
 			{
@@ -84,12 +61,6 @@
 		</script>
 	</head>
 	<body>
-		<div id="safety-toast" class="safety-toast">
-			<span>🕵️ <strong>Incognito</strong></span>
-			<span class="divider">|</span>
-			<span>🔴 <strong>Quick Exit</strong></span>
-		</div>
-
 		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
 		<button class="legend-btn" onclick="toggleMobileLegend()">
@@ -222,5 +193,45 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+
+		<script src="country-info/country-files/africa-data.js?v=4.9" defer></script>
+		<script src="country-info/country-files/americas-data.js?v=4.9" defer></script>
+		<script src="country-info/country-files/asia-data.js?v=4.9" defer></script>
+		<script src="country-info/country-files/europe-data.js?v=4.9" defer></script>
+		<script src="country-info/country-files/oceania-data.js?v=4.9" defer></script>
+
+		<script src="i_territories.js?v=4.9" defer></script>
+
+		<script src="i_map.js?v=4.9" defer></script>
+
+		<script src="index.js?v=4.9" defer></script>
+
+		<script>
+			(function () {
+				const loadGA = () => {
+					if (window.gaLoaded) return;
+					window.gaLoaded = true;
+
+					// Load the Google script
+					var script = document.createElement("script");
+					script.async = true;
+					script.src = "https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3";
+					document.head.appendChild(script);
+
+					// Initialize the tracking
+					window.dataLayer = window.dataLayer || [];
+					function gtag() {
+						dataLayer.push(arguments);
+					}
+					gtag("js", new Date());
+					gtag("config", "G-GSGX0B7ZB3");
+				};
+
+				// This waits for the user to move, click, or touch before starting Google
+				["mouseover", "keydown", "touchstart", "scroll"].forEach((event) => {
+					window.addEventListener(event, loadGA, { once: true });
+				});
+			})();
+		</script>
 	</body>
 </html>

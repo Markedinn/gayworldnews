@@ -49,15 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // ESC KEY EXIT (Lives outside the DOM listener so it's always ready)
 document.addEventListener("keydown", (e) => {
-	if (e.key === "Escape") window.location.replace("https://www.youtube.com");
-});
-
-document.querySelector(".exit-btn").addEventListener("click", function (e) {
-	e.preventDefault();
-
-	// This replaces the CURRENT page in history with Google
-	// Tapping 'Back' will now skip your site entirely
-	window.location.replace("https://google.com");
+	if (e.key === "Escape") window.location.replace("https://www.google.com");
 });
 
 // When the user leaves the tab or clicks exit, change the title
