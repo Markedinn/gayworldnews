@@ -111,7 +111,7 @@ h2 {
 }
 
 .manual-pinned::before {
-	content: "📌 REVIEWED";
+	content: "📌 PINNED";
 	position: absolute;
 	top: 10px;
 	right: 15px;
@@ -157,7 +157,7 @@ h2 {
 /* 2. COUNTRY LABEL */
 .news-accordion .country-label,
 .country-label.manual-red-title {
-	color: #3704f1 !important;
+	color: #fd0303 !important;
 	font-weight: 900;
 	letter-spacing: 2px;
 	font-size: 1.3rem;
@@ -349,30 +349,16 @@ h2 {
 	border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
-.tag-legal {
-	background-color: #0b63f1;
-}
-.tag-discrimination {
-	background-color: #f59e0b;
-}
-.tag-living {
-	background-color: #14b8a6;
-}
-.tag-travel {
-	background-color: #06b6d4;
-}
-.tag-health {
-	background-color: #15cf5a;
-}
-.tag-safety {
-	background-color: #ef4444;
-}
 .tag-down {
-	background-color: #ef4444;
+	background-color: #ff0000;
 }
+
 .tag-unchanged {
-	background-color: #a39802;
+	background-color: yellow;
+	color: #000; /* Keeps it readable */
+	font-weight: bold;
 }
+
 .tag-up {
 	background-color: #05bd49;
 }
@@ -470,6 +456,52 @@ h2 {
 .play-news-btn.speaking {
 	background-color: #d9534f; /* Changes to red when "Stop" is available */
 	animation: pulse 2s infinite;
+}
+
+/* --- RESOURCE SECTION --- */
+
+.resource-container {
+	display: grid;
+	gap: 20px;
+	margin-top: 30px;
+}
+
+.resource-container .resource-card {
+	display: block;
+	padding: 10px 0 10px 20px;
+	background: transparent !important;
+	border-left: 5px solid #0894f1 !important;
+	text-decoration: none !important;
+	border-radius: 4px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	transition: all 0.2s ease;
+}
+
+/* THE TITLE - Electric Blue */
+/* Change this in your CSS */
+.resource-container a.resource-card .resource-title {
+	display: block;
+	color: #0894f1 !important;
+	font-size: 1.2rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	margin-bottom: 12px;
+}
+
+/* THE DESCRIPTION - Clean Black */
+.resource-container a.resource-card .resource-desc {
+	display: block;
+	font-size: 1rem;
+	color: #000000 !important;
+	line-height: 1.6;
+	margin-bottom: 0; /* No extra space at the bottom of the card */
+}
+
+.resource-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+	background: #ffffff !important; /* Flips to white on hover */
 }
 
 @keyframes pulse {

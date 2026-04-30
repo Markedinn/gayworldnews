@@ -640,12 +640,6 @@ function renderCard(it) {
 	const tagHTML = cats
 		.map((c) => {
 			const map = {
-				safety: "SAFETY",
-				legal: "LEGAL",
-				discrimination: "DISCRIMINATION",
-				health: "HEALTH",
-				travel: "TRAVEL SAFETY",
-				living: "LIVING CONDITIONS",
 				"trend-up": "RIGHTS TREND: UP",
 				"trend-down": "RIGHTS TREND: DOWN",
 				"trend-stable": "RIGHTS TREND: UNCHANGED",
@@ -692,4 +686,21 @@ function renderCard(it) {
    SECTION 12 — INIT
    ================================================================ */
 
-document.addEventListener("DOMContentLoaded", fetchLGBTQNews);
+/* ================================================================
+   SECTION 12 — INIT (REWRITTEN FOR "LOAD ON DEMAND")
+   ================================================================ */
+
+document.addEventListener("DOMContentLoaded", () => {
+	const startBtn = document.getElementById("activate-feed-btn");
+
+	if (startBtn) {
+		startBtn.addEventListener("click", function () {
+			// Change button state to show it's working
+			this.disabled = true;
+			this.innerHTML = "<span>⌛</span> <span>SCANNING SATELLITES...</span>";
+
+			// Trigger the actual fetch
+			fetchLGBTQNews();
+		});
+	}
+});
