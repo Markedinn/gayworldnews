@@ -549,6 +549,8 @@ const FEEDS = [
 	"https://equal-eyes.org/explore?format=rss", // High-quality Global South digest
 
 	// --- GLOBAL HUMAN RIGHTS & LEGAL ---
+	"https://minorityaze.org/en/category/world/feed/", // General World/LGBT News
+	"https://minorityaze.org/en/feed/",
 	"https://monitor.ilga.org/",
 	"https://www.openlynews.com/feed", // Reuters (Dry, factual reporting)
 	"https://76crimes.com/feed/", // Decriminalization focus

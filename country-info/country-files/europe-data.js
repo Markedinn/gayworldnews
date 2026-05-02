@@ -249,68 +249,8 @@ Object.assign(globalData, {
 	armenia: {
 		name: "Armenia",
 		continent: "europe",
-		status: "red",
-
-		legal: `
-            <p>Consensual same-sex sex was decriminalized in 2003, but same-sex marriage is constitutionally banned. There are zero comprehensive anti-discrimination laws in 2026.</p>
-            <p><strong>The Statute vs. Ground Gap:</strong> High. While homosexuality is not a crime, police often fail to investigate hate crimes. In 2026, the community reports Extreme Distrust in authorities, with many activists facing surveillance.</p>
-            <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-                <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Pink Armenia</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary human rights defender NGO in Armenia. Essential for safety alerts in 2026.</p>
-                    <a href="https://www.pinkarmenia.org/en/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-                </div>
-            </div>
-        `,
-		safety: `
-            <p>Posture: Dangerous. Public visibility is likely to result in physical or verbal assault.</p>
-            <p><strong>Street Pulse & Policing:</strong> Low Response. In 2026, the 'Street Pulse' is one of high stigma. Police inaction or abuse continues to deter reporting of hate crimes. travelers should avoid any outward symbols of identity.</p>
-            <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 20px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
-                <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #168</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: One of the lowest in Europe for social acceptance and state protection.</p>
-                </div>
-            </div>
-        `,
-		travel: `
-            <p>2026 Traveler Rating: Red. Visibility is strictly discouraged. Safety lies in 'Passing'.</p>
-            <p><strong>Safe Havens vs. Red Zones:</strong>
-            * **Green Zones:** None. Even in Yerevan, visibility is restricted to private 'Safe Haven' gatherings.
-            * **Amber Zones:** Yerevan City Center (Higher tolerance, but PDAs are unsafe).</p>
-            <p><strong>The Venue Spectrum:</strong>
-            * **Upscale/Protected:** None (Dedicated).
-            * **The Local Way:** Private apartment networks organized via encrypted apps.</p>
-            <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Street Awareness Tip</strong>
-                    <p style="color: #fff; font-size: 0.85rem;">Digital privacy is paramount. Ensure all 'dating' apps are hidden or locked before entering the country.</p>
-                </div>
-            </div>
-        `,
-		health: `
-            <p><strong>Standard of Care:</strong> HIV care is available but heavily stigmatized in public settings. Specialized LGBT healthcare is almost non-existent outside of NGO referrals.</p>
-            <p><strong>Traveler Essential:</strong> Specialized NGO clinics are the only safe option for competent care without fear of 'outing'.</p>
-            <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-                <a href="https://www.pinkarmenia.org/" target="_blank" style="text-decoration: none; display: block;">
-                    <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                        <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Pink Armenia Health Referrals</strong>
-                        <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Provides verified referrals to safe clinics/doctors across Yerevan.</p>
-                    </div>
-                </a>
-            </div>
-        `,
-		posture: `
-            <p>'Culturally Hostile & Legally Deficient.' An invisible community surviving through underground networks.</p>
-        `,
-		sources: [
-			{ label: "Ground Intel: Pink Armenia News", url: "https://pinkarmenia.org/en/news-events/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Human Rights Watch Armenia", url: "https://www.hrw.org/europe/central-asia/armenia", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Pink Armenia Community Day", url: "https://www.pinkarmenia.org/", button: "EVENT DETAILS →" },
-		],
+		status: "amber",
+		path: "asia/armenia.html",
 	},
 
 	austria: {
@@ -383,74 +323,8 @@ Object.assign(globalData, {
 	azerbaijan: {
 		name: "Azerbaijan",
 		continent: "europe",
-		status: "red",
-
-		legal: `
-<p>In 2026, Azerbaijan remains one of the most challenging legal environments in the Council of Europe. While same-sex activity was decriminalized in 2000, there is zero legal recognition for same-sex partnerships or marriage. Anti-discrimination laws are non-existent, leaving LGBT individuals vulnerable in employment and housing.</p>
-
-<p><strong>The Statute vs. Ground Gap:</strong> Extreme. Despite being a member of the Council of Europe, the state frequently ignores ECHR rulings. In late 2025 and early 2026, a massive crackdown on "unethical behavior" led to the arbitrary detention of over 100 individuals in Baku. The 2026 verdict is "State-Sanctioned Hostility."</p>
-
-<div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-<div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-<strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Minority Azerbaijan</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary digital platform for LGBT news and support within the country, operating under high surveillance.</p>
-<a href="https://minorityaze.org/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-</div>
-</div> `,
-
-		safety: `
-<p>Physical safety for LGBT travelers is "High Risk." While the capital, Baku, appears cosmopolitan, police raids on known LGBT-friendly venues are common. In January 2026, reports emerged of detainees being subjected to physical violence and forced medical testing during a raid on a Baku nightclub.</p>
-
-<p><strong>Street Pulse & Policing:</strong> Very Low Response. Policing is often the primary threat rather than a source of protection. Public displays of affection (PDA) are strictly discouraged for all travelers, but can lead to immediate detention or extortion for same-sex couples. The 2026 vibe is "Underground and Vigilant."</p>
-
-<div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
-<div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #148</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Ranked at the bottom of European safety charts due to frequent arbitrary arrests and lack of hate-crime legislation.</p>
-</div>
-</div> `,
-
-		travel: `
-<p>2026 Traveler Rating: Discretion Mandatory. Safe for tourism if your identity remains private, but high-risk for those seeking "the scene."</p>
-
-<p><strong>Safe Havens vs. Red Zones:</strong>
-* **Green Zones:** International hotel chains (e.g., Marriott, Hilton) in Baku are generally safe and professional.
-* **Red Zones:** Public parks at night and local "underground" clubs, which are frequent targets for police stings.</p>
-
-<p><strong>The Venue Spectrum:</strong>
-* **Upscale/Protected:** Four Seasons Hotel Baku
-* **The Local Way:** No specific local LGBT venues are currently "safe" to recommend due to 2026 police activity.</p>
-
-<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-<div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-<strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Privacy Tip</strong>
-<p style="color: #fff; font-size: 0.85rem;">Police in Baku have been known to confiscate phones and search for dating apps. It is highly recommended to use a "clean" device or hide such apps when in public.</p>
-</div>
-</div> `,
-
-		health: `
-<p><strong>Standard of Care:</strong> Medical facilities in Baku are modern, but cultural competency regarding LGBT health is nearly non-existent. Stigma in the healthcare sector often leads to refusal of service for trans individuals.</p>
-
-<p><strong>Traveler Essential:</strong> Accessing PrEP or HIV medication locally is risky due to mandatory reporting requirements. Ensure you carry your own supply. In an emergency, international clinics like SOS International are the only vetted options for privacy.</p>
-
-<div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-<div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-<strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Republican AIDS Center</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Baku - Provides basic HIV services, but discretion and privacy are not guaranteed.</p>
-</div>
-</div> `,
-
-		posture: `
-<p>The "Invisible Minority" posture in Azerbaijan describes a 2026 climate where the LGBT community is forced into deep digital and physical secrecy to survive state pressure. The vibe is "Extreme Discretion."</p> `,
-
-		sources: [
-			{ label: "Ground Intel: Human Rights Watch Azerbaijan", url: "https://www.hrw.org/europe/central-asia/azerbaijan", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Minority Magazine", url: "https://minorityaze.org/en", button: "VIEW COMMUNITY DATA →" },
-		],
+		status: "amber",
+		path: "europe/azerbaijan.html",
 	},
 
 	belarus: {
@@ -2972,56 +2846,7 @@ Object.assign(globalData, {
 		name: "Russia",
 		continent: "europe",
 		status: "red",
-		legal: `
-        <p>Total Criminalization. In **November 2023**, the Russian Supreme Court designated the 'International LGBT Movement' as a **terrorist and extremist organization**. In 2026, this means that even displaying a rainbow flag or identifying as LGBT in public can lead to years of imprisonment under 'terrorism' or 'extremism' charges.</p>
-        
-        <p>In **July 2023**, a total ban on gender-affirming care and legal gender change was enacted. There is no legal protection; rather, the state actively hunts and prosecutes LGBTQ+ individuals and activists. It is currently one of the most dangerous countries in the world for the community.</p>
-        
-        <p>The legal framework has been effectively turned into a weapon of the state. Activists are regularly added to 'terrorist lists,' and legal defense for LGBTQ+ individuals is almost non-existent. The state’s posture is one of active elimination of LGBT visibility and identity from all public life.</p>
-
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Primary Legal Documentation</h4>
-            <div class="legal-card" style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📜 Supreme Court Ruling</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The 2023 designation of the "LGBT Movement" as a terrorist organization.</p>
-            </div>
-        </div>
-    `,
-		travel: `
-        <p>Do Not Travel. The risk of arrest, state-sponsored violence, and 'vigilante' attacks is extreme. In 2026, authorities frequently raid private LGBT spaces and parties. Being outed as a traveler can result in immediate deportation or detention under 'propaganda' or 'extremism' laws.</p>
-        
-        <p>Transgender travelers are at particularly high risk due to the 2023 medical and legal bans. The "posture" is: total avoidance. Russia is a 'No-Go' zone for anyone identifying as LGBTQ+ or an ally. Physical safety cannot be guaranteed, and consular assistance may be limited.</p>
-        
-        <p>Even travelers from 'friendly' nations are not exempt from these laws. The environment is one of high surveillance and unpredictability. It is strongly advised to scrub all LGBT-related content from digital devices before entering the country, though avoiding travel entirely is the only safe option.</p>
-
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Emergency Warning</h4>
-            <div class="safety-card" style="background: rgba(231, 76, 60, 0.2); padding: 20px; border-radius: 8px; border: 2px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c;">🚨 NO-GO ZONE</strong>
-                <p style="color: #fff; font-size: 0.85rem;">Travel to Russia poses a direct threat to the life and liberty of LGBTQ+ persons.</p>
-            </div>
-        </div>
-    `,
-		health: `
-        <p>Dangerous. Accessing care as an LGBTQ+ person in Russia is now fraught with legal danger. In 2026, doctors are fearful of providing care that could be interpreted as 'promoting' forbidden identities. Gender-affirming care is totally illegal and punishable by law.</p>
-        
-        <p>HIV care is available but often linked to state surveillance, making it a high-risk interaction for many. For travelers, disclosing identity to a medical professional could lead to a police report. The medical environment has been effectively weaponized against the community.</p>
-        
-        <p>Standard medical confidentiality does not apply to "extremist" activities, which now include being LGBTQ+. If an emergency arises, travelers should be extremely careful with the information they share. Access to hormones for transgender people is completely cut off through legal channels.</p>
-
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Direct Medical & Support Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Coming Out (LGBT Group)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">*Operational Status: High Risk/Underground*</p>
-                <a href="https://comingoutspb.com/en/" target="_blank" style="color: #fff; font-size: 0.85rem; text-decoration: underline;">Visit Archive/Info</a>
-            </div>
-        </div>
-    `,
-		posture: `
-    <p>The "Total Lockdown" posture in Russia in 2026 is defined by extreme state-led repression and the "extremist" designation of LGBT life. The vibe is "Invisible & Undercover," where the community has been forced into deep secrecy for survival. For travelers, the strategy is "Absolute Discretion/Avoidance." The 2026 verdict is "The Fortress," a high-risk zone where visibility is treated as a criminal act.</p>
-`,
-		sources: ["https://en.wikipedia.org/wiki/LGBTQ_rights_in_Russia", "https://www.themoscowtimes.com/2023/11/30/russia-bans-lgbt-movement-as-extremist-a83262"],
+		path: "europe/russia.html",
 	},
 
 	republic_of_serbia: {

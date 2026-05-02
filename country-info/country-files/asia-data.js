@@ -4,153 +4,13 @@ Object.assign(globalData, {
 		continent: "asia",
 		status: "red",
 		path: "asia/afghanistan.html",
-
-		legal: `
-        <p>In 2026, the legal status is the most severe in the world. Under the current de facto authorities, same-sex acts are punishable by death. There are no protections, and the 2024-2025 "Vice and Virtue" laws have effectively criminalized any non-conforming existence.</p>
-        
-        <h3>The Reality of Survival</h3>
-        <p>Afghanistan is dangerous for everyone. You only have to do the wrong thing and the punishments range from public floggings and corporal punishment to long-term imprisonment, amputations, and public executions. If you read the news, you’ll have heard all the stories.</p>
-
-        <p>But then there are the gay stories. The LGBT lives of terror that exist on the ground. If you are caught acting ‘gay’ or shaving your beard, you are open to beatings and they can be severe and immediate as you get seen sipping a tea in a cafe. If you are rumored to have had intimate moments with another man, you are in real trouble and a death sentence is possible depending on your status and the ‘judge’. And if death is brought to you, you can expect humiliation, torture and rape first. The irony of rape would be funny if we weren’t talking about human lives.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Afghanistan LGBT Organization (ALO)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Operating primarily from exile in 2026, providing emergency relocation and digital safety training for those still inside.</p>
-                <a href="https://afghanistanlgbt.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>Social climate is 100% hostile. There is no distinction between high-end or local areas; the risk of extrajudicial violence or state execution is universal.</p>
-        
-        <h3>A Life in the Shadows</h3>
-        <p>To survive, you have to get married, have children and hide in the closet. Repress your sexuality or die. As a lesbian, you’ll be forced into marriage, and then raped at the whim of your husband. As a woman, you have no rights. If you are trans, you’d better grow a beard, wear male clothes and behave like a man or beatings will follow. There is no escape for most. The country is surrounded by criminal regimes that boast about the terrorism they inflict on gay people.</p>
-
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #197</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Ranked as the most dangerous country for LGBTQ+ individuals in 2026.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-        <p><strong>Under no circumstances should you pass the borders into this country.</strong> If you must, then get in touch with organizations that might help you prepare for your ‘safety’.</p>
-        
-        <h3>The Global Silence</h3>
-        <p>It saddens me that when people talk about Afghanistan in the media, they don’t talk about LGBT horror stories. While the media rightly highlights the oppression of women, the specific, targeted extermination of LGBTQ+ lives remains a silent genocide. Even in the LGBT mainstream media, these countries are generally ignored, or if there is a story, you have to scroll past the Mr Gay [name your country] and which celebrity said something about another.</p>
-        
-        <p>And I know that gay marriage is important to some people, but surely the lives of LGBT people living in terror, and it is terror, in so many countries are more important than getting married in a church. Surely, these stories should be making the top of the front page, not a snippet inside. There are of course the organizations who do the research, write the reports and gain a few minutes of publicity every year. We need to do better.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel & Horror Stories</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <ul style="list-style: none; padding: 0; font-size: 0.9rem;">
-                    <li style="margin-bottom: 10px;"><a href="https://outrightinternational.org/Afghanistan-Report2023" target="_blank" style="color: #fff;">• Stories from LGBT victims (2023)</a></li>
-                    <li style="margin-bottom: 10px;"><a href="https://www.hrw.org/report/2022/01/26/even-if-you-go-skies-well-find-you/lgbt-people-afghanistan-after-taliban-takeover" target="_blank" style="color: #fff;">• Even if you go to the skies, we'll find you (2022)</a></li>
-                    <li style="margin-bottom: 10px;"><a href="https://www.ohchr.org/en/press-releases/2026/03/afghanistan-un-experts-condemn-talibans-surging-use-corporal-punishment" target="_blank" style="color: #fff;">• Flogged in public (2026)</a></li>
-                    <li><a href="https://www.humandignitytrust.org/country-profile/afghanistan/" target="_blank" style="color: #fff;">• Punishments for LGBT ‘Criminals’ (2025)</a></li>
-                </ul>
-            </div>
-        </div>
-    `,
-
-		health: `
-        <p>No LGBTQ-specific healthcare exists. Trans individuals and those with HIV face total exclusion or persecution if their status is discovered.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">None Available Internally</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Contact ALO (abroad) for remote tele-health advice.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 vibe is 'State-Sustained Terror.' There is no visible openness; only a silent, resilient underground fighting for survival under a <strong>terrorist regime.</strong></p>
-    `,
-
-		sources: [
-			{ label: "Ground Intel: Rainbow Railroad", url: "https://www.rainbowrailroad.org/", button: "RELOCATION NEWS →" },
-			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/", button: "LEGAL DATA →" },
-		],
 	},
 
-	azerbaijan: {
-		name: "Azerbaijan",
+	armenia: {
+		name: "Armenia",
 		continent: "europe",
-		status: "red",
-
-		legal: `
-<p>In 2026, Azerbaijan remains one of the most challenging legal environments in the Council of Europe. While same-sex activity was decriminalized in 2000, there is zero legal recognition for same-sex partnerships or marriage. Anti-discrimination laws are non-existent, leaving LGBT individuals vulnerable in employment and housing.</p>
-
-<p><strong>The Statute vs. Ground Gap:</strong> Extreme. Despite being a member of the Council of Europe, the state frequently ignores ECHR rulings. In late 2025 and early 2026, a massive crackdown on "unethical behavior" led to the arbitrary detention of over 100 individuals in Baku. The 2026 verdict is "State-Sanctioned Hostility."</p>
-
-<div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-<div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-<strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Minority Azerbaijan</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary digital platform for LGBT news and support within the country, operating under high surveillance.</p>
-<a href="https://minorityaze.org/en" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-</div>
-</div> `,
-
-		safety: `
-<p>Physical safety for LGBT travelers is "High Risk." While the capital, Baku, appears cosmopolitan, police raids on known LGBT-friendly venues are common. In January 2026, reports emerged of detainees being subjected to physical violence and forced medical testing during a raid on a Baku nightclub.</p>
-
-<p><strong>Street Pulse & Policing:</strong> Very Low Response. Policing is often the primary threat rather than a source of protection. Public displays of affection (PDA) are strictly discouraged for all travelers, but can lead to immediate detention or extortion for same-sex couples. The 2026 vibe is "Underground and Vigilant."</p>
-
-<div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
-<div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-<strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #148</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Ranked at the bottom of European safety charts due to frequent arbitrary arrests and lack of hate-crime legislation.</p>
-</div>
-</div> `,
-
-		travel: `
-<p>2026 Traveler Rating: Discretion Mandatory. Safe for tourism if your identity remains private, but high-risk for those seeking "the scene."</p>
-
-<p><strong>Safe Havens vs. Red Zones:</strong>
-* **Green Zones:** International hotel chains (e.g., Marriott, Hilton) in Baku are generally safe and professional.
-* **Red Zones:** Public parks at night and local "underground" clubs, which are frequent targets for police stings.</p>
-
-<p><strong>The Venue Spectrum:</strong>
-* **Upscale/Protected:** Four Seasons Hotel Baku
-* **The Local Way:** No specific local LGBT venues are currently "safe" to recommend due to 2026 police activity.</p>
-
-<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-<div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-<strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Digital Privacy Tip</strong>
-<p style="color: #fff; font-size: 0.85rem;">Police in Baku have been known to confiscate phones and search for dating apps. It is highly recommended to use a "clean" device or hide such apps when in public.</p>
-</div>
-</div> `,
-
-		health: `
-<p><strong>Standard of Care:</strong> Medical facilities in Baku are modern, but cultural competency regarding LGBT health is nearly non-existent. Stigma in the healthcare sector often leads to refusal of service for trans individuals.</p>
-
-<p><strong>Traveler Essential:</strong> Accessing PrEP or HIV medication locally is risky due to mandatory reporting requirements. Ensure you carry your own supply. In an emergency, international clinics like SOS International are the only vetted options for privacy.</p>
-
-<div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-<h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-<div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-<strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Republican AIDS Center</strong>
-<p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Baku - Provides basic HIV services, but discretion and privacy are not guaranteed.</p>
-</div>
-</div> `,
-
-		posture: `
-<p>The "Invisible Minority" posture in Azerbaijan describes a 2026 climate where the LGBT community is forced into deep digital and physical secrecy to survive state pressure. The vibe is "Extreme Discretion."</p> `,
-
-		sources: [
-			{ label: "Ground Intel: Human Rights Watch Azerbaijan", url: "https://www.hrw.org/europe/central-asia/azerbaijan", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Minority Magazine", url: "https://minorityaze.org/en", button: "VIEW COMMUNITY DATA →" },
-		],
+		status: "amber",
+		path: "asia/armenia.html",
 	},
 
 	bangladesh: {
@@ -243,6 +103,13 @@ Object.assign(globalData, {
 				button: "LEGAL MAPS →",
 			},
 		],
+	},
+
+	bahrain: {
+		name: "Bahrain",
+		continent: "asia",
+		status: "amber",
+		path: "asia/bahrain.html",
 	},
 
 	bhutan: {

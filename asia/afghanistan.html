@@ -1,3 +1,6 @@
+<!doctype html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,7 +41,7 @@
     <link rel="apple-touch-icon" href="../images/favicon.webp" />
 
     <link rel="stylesheet" href="../country.css" />
-    <link rel="stylesheet" href="../index.css?v=5.0" />
+    <link rel="stylesheet" href="../index.css?v=5.1" />
 
     <script>window.globalData = {};</script>
 
@@ -72,7 +75,7 @@
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
 
-                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+                <a href="../breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 				<a href="../africa.html">AFRICA</a>
 				<a href="../americas.html">AMERICAS</a>
 				<a href="../asia.html">ASIA</a>
@@ -611,37 +614,55 @@
 					updateMetadata(formattedName);
 				}
 			});
-			</script>
+		</script>
 
-			<script>
-			function toggleMenu() {
-				const menu = document.getElementById("sideMenu");
-				menu.classList.toggle("open");
-			}
+		<script>
+function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    menu.classList.toggle("open");
+}
 
-			// Close menu if user clicks outside of the slider
-			window.addEventListener('click', function(e) {
-				const menu = document.getElementById("sideMenu");
-				const menuToggle = document.querySelector(".menu-toggle");
-				if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-					toggleMenu();
-				}
-			});
+// Close menu if user clicks outside of the slider
+window.addEventListener('click', function(e) {
+    const menu = document.getElementById("sideMenu");
+    const menuToggle = document.querySelector(".menu-toggle");
+    if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+        toggleMenu();
+    }
+});
 
-			document.addEventListener("DOMContentLoaded", function () {
-				const now = new Date();
-				const options = { year: "numeric", month: "long", day: "numeric" };
-				const dateString = now.toLocaleDateString("en-US", options);
+document.addEventListener("DOMContentLoaded", function () {
+	const now = new Date();
+	const options = { year: "numeric", month: "long", day: "numeric" };
+	const dateString = now.toLocaleDateString("en-US", options);
 
-				// Target the mobile ID
-				const mobileEl = document.getElementById("last-updated-mobile");
-				if (mobileEl) mobileEl.textContent = dateString;
+	// Target the mobile ID
+	const mobileEl = document.getElementById("last-updated-mobile");
+	if (mobileEl) mobileEl.textContent = dateString;
 
-				// Target the desktop ID
-				const desktopEl = document.getElementById("last-updated-desktop");
-				if (desktopEl) desktopEl.textContent = dateString;
-			});
+	// Target the desktop ID
+	const desktopEl = document.getElementById("last-updated-desktop");
+	if (desktopEl) desktopEl.textContent = dateString;
+});
 
-			</script>
+document.querySelectorAll('.news-content-expanded').forEach(container => {
+    container.addEventListener('click', (e) => {
+        // Define tags that SHOULD NOT trigger a close (interactive elements)
+        const interactiveTags = ['A', 'BUTTON', 'IMG', 'IFRAME', 'TABLE', 'TH', 'TD', 'SPAN'];
+        
+        // If the user clicks the "white space" (not an interactive element)
+        if (!interactiveTags.includes(e.target.tagName) && !e.target.closest('.resource-card')) {
+            const parentDetails = container.closest('details');
+            
+            if (parentDetails && parentDetails.open) {
+                parentDetails.removeAttribute('open');
+                
+                // Optional: Smooth scroll back to the summary so the user isn't disoriented
+                parentDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+    });
+});
+</script>
 	</body>
 </html>
