@@ -1264,6 +1264,35 @@ body::before {
 	animation: reveal-content 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
+/* Article Image Container - Global Styling */
+.article-image-container {
+	max-width: 850px; /* Prevents images from overwhelming the text */
+	margin: 2.5rem auto; /* Creates that clean empty line break top/bottom */
+	padding: 0 1rem; /* Prevents touching screen edges on mobile */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.article-main-img {
+	width: 100%; /* Fills the container width */
+	height: auto; /* Maintains aspect ratio */
+	border-radius: 4px; /* Softens the look to match your glass-cards */
+	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4); /* Adds depth */
+	display: block;
+	object-fit: cover;
+}
+
+.image-caption {
+	margin-top: 12px;
+	font-size: 0.9rem;
+	line-height: 1.4;
+	color: #666; /* Subtle text for the caption */
+	font-style: italic;
+	text-align: center;
+	max-width: 90%; /* Keeps long captions from looking blocky */
+}
+
 /* --- MOBILE & TABLET BACKGROUND --- */
 
 @media only screen and (min-width: 481px) {

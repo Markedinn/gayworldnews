@@ -1,427 +1,71 @@
 Object.assign(globalData, {
 	afghanistan: {
-		name: "Afghanistan",
-		continent: "asia",
-		status: "red",
-		path: "asia/afghanistan.html",
+		name: 'Afghanistan',
+		continent: 'asia',
+		status: 'red',
+		path: 'asia/afghanistan.html',
 	},
 
 	armenia: {
-		name: "Armenia",
-		continent: "europe",
-		status: "amber",
-		path: "asia/armenia.html",
+		name: 'Armenia',
+		continent: 'europe',
+		status: 'amber',
+		path: 'asia/armenia.html',
 	},
 
 	bangladesh: {
-		name: "Bangladesh",
-		continent: "asia",
-		status: "red",
-
-		legal: `
-        <p>In 2026, the legal landscape in Bangladesh remains defined by Section 377 of the Penal Code, which criminalizes "carnal intercourse against the order of nature." While actual prosecutions are rare, the law serves as a primary tool for police extortion and systemic harassment of the LGBTQ+ community.</p>
-        
-        <p><strong>The Hijra Recognition Paradox:</strong> High. While the government officially recognized 'Hijra' as a third gender in 2013, the 2026 reality remains one of "recognition without rights." Without clear standard operating procedures for legal gender recognition, most trans and gender-diverse individuals remain excluded from inheritance, formal employment, and housing protections.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ Bandhu Social Welfare Society</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary organization providing legal aid and health services. In 2026, they focus on documenting human rights violations and providing emergency legal counsel for those detained under "suspicion" of queer activity.</p>
-                <a href="https://www.bandhu-bd.org" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>Current Posture: 'High Alert / Undercurrent.' The brutal 2016 assassinations of prominent activists still cast a long shadow over 2026 safety protocols. Public visibility is non-existent; the community exists entirely in digital "bubbles" and private underground spaces.</p>
-        
-        <p><strong>Street Pulse & Policing:</strong> High Risk. Arbitrary arrests under the Digital Security Act (and its 2025/26 iterations) are frequent. Travelers and locals alike must practice extreme digital hygiene—police "mobile phone sweeps" for dating apps (Grindr/Scruff) are a documented tactic for entrapment and blackmail in Dhaka and Chittagong.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Enforcement</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #158 (Critical)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Safety is entirely dependent on 'passing' or invisibility. Foreign nationals are generally protected by diplomatic status but are advised against any form of public advocacy.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-    <div class="regional-directory">
-        <div class="city-block" style="margin-bottom: 50px;">
-            <h2 style="color: #f1c40f; margin-bottom: 10px;">Dhaka</h2>
-            <p><em>In 2026, Dhaka is a city of invisible lines. There are no "gay bars" or "LGBT clubs." The scene is exclusively private, revolving around invitation-only house parties and discreet cafe meetups in neighborhoods like Gulshan and Banani.</em></p>
-            
-            <h4 style="color: #3498db; font-size: 0.9rem; text-transform: uppercase; margin: 20px 0 10px 0;">Community Navigational Advice</h4>
-            <p>Direct public directories do not exist for safety reasons. Most connections are made via verified social media groups. Travelers should prioritize high-end international hotels for social gatherings as these offer a higher buffer of privacy.</p>
-
-            <p style="margin-top: 20px;"><strong>Top Sightseeing:</strong> Ahsan Manzil (Pink Palace), Lalbagh Fort, and the National Parliament House. <a href="https://www.visitbangladesh.gov.bd" target="_blank">Official City Guide →</a></p>
-            
-            <p><strong>Safety Warning:</strong> Public displays of affection (PDA) are socially taboo for heterosexual couples and dangerous for same-sex pairs. "Brotherly" hand-holding is culturally common among men, but any romantic context will trigger immediate hostility.</p>
-        </div>
-
-        <div class="city-block">
-            <h2 style="color: #f1c40f; margin-bottom: 10px;">Sylhet & Cox's Bazar</h2>
-            <p><em>Sylhet is deeply conservative; extreme discretion is required. Cox's Bazar, being a tourist hub, offers slightly more anonymity, but the 2026 religious climate remains restrictive.</em></p>
-            <p><strong>Top Sightseeing:</strong> The tea gardens of Sylhet and the world's longest natural sea beach at Cox's Bazar.</p>
-        </div>
-    </div>
-`,
-
-		health: `
-        <p>LGBT-competent healthcare is virtually non-existent in the public sector. Most queer individuals fear "outing" themselves to doctors due to potential moral judgment or breach of confidentiality. For HIV care, the state relies heavily on international NGO funding, which is increasingly precarious in 2026.</p>
-        
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px; color: #ffffff;">Bandhu Health Centers (Dhaka/Regional)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Providing sexual health screenings and mental health support specifically for MSM and Hijra communities. These are the only truly "safe" clinical spaces in the country.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 Vibe is 'Survivalist Silence.' While a resilient underground art and poetry scene exists in Dhaka, the structural reality is a state that uses LGBTQ+ identity as a political scapegoat whenever convenient.</p>
-    `,
-
-		sources: [
-			{
-				label: "Human Rights Watch: Bangladesh Country Report 2026",
-				url: "https://www.hrw.org/asia/bangladesh",
-				button: "VIEW HUMAN RIGHTS DATA →",
-			},
-			{
-				label: "Bandhu: Human Rights Watch Annual Report",
-				url: "https://www.bandhu-bd.org/publications/",
-				button: "READ COMMUNITY REPORTS →",
-			},
-			{
-				label: "ILGA World: State-Sponsored Homophobia Index",
-				url: "https://ilga.org/state-sponsored-homophobia-report",
-				button: "LEGAL MAPS →",
-			},
-		],
+		name: 'Bangladesh',
+		continent: 'asia',
+		status: 'red',
+		path: 'asia/bangladesh.html',
 	},
 
 	bahrain: {
-		name: "Bahrain",
-		continent: "asia",
-		status: "amber",
-		path: "asia/bahrain.html",
+		name: 'Bahrain',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/bahrain.html',
 	},
 
 	bhutan: {
-		name: "Bhutan",
-		continent: "asia",
-		status: "amber",
-
-		legal: `
-        <p>In 2026, Bhutan is a regional beacon of progress. Since the formal decriminalization of same-sex acts on February 17, 2021, the government has moved toward active inclusion. The **2023-2025 National Strategic Framework** integrated LGBTQ+ protections into healthcare and education mandates.</p>
-        <p><strong>Voices from the Ground:</strong> Local activists from <strong>LGBT Voices of Bhutan</strong> describe the current climate as "Quietly Optimistic." While same-sex marriage is not yet legal in 2026, the Ministry of Education has implemented anti-bullying procedures specifically protecting gender identity in schools.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ LGBT Voices of Bhutan (QVB)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary 2026 advocacy body, focusing on legal gender recognition and rural community outreach.</p>
-                <a href="https://www.facebook.com/LGBTVoicesofBhutan/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Page →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>Bhutanese culture is generally non-confrontational. In 2026, travelers face little to no risk of violence, though public displays of affection (PDA) remain rare for all couples, regardless of orientation.</p>
-        <p><strong>Community Density:</strong> Moderate. There are no dedicated "Gay Bars," but the capital, Thimphu, has a growing circuit of LGBT-friendly "Mixed" lounges where the community gathers openly.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #74</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index reflects a massive jump in safety since decriminalization.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-        <p>Safe for all LGBTQ+ travelers. Trans and GNC individuals will find Bhutan more accepting than many neighboring countries, though "official" gender markers on travel documents should match your visa for ease of entry.</p>
-        
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** **Thimphu Deluxe Hotels** - Bars at the Le Méridien or Taj Tashi are safe, high-end "Mixed" environments frequented by the local LGBT elite and expats.
-        * **The Local Way:** **Ambient Cafe** (Thimphu) - Long known as a de facto safe space for the artistic and LGBT community to gather during the day.</p>
-        
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** **Tinder** and **Grindr** are the most used. In Thimphu, these apps are quite active and safe to use.
-        * **Community Forums:** **QVB’s social media** is the heartbeat of the local scene, often announcing "secret" meetups or film screenings.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Cultural Gaze"</strong>
-                <p style="color: #fff; font-size: 0.85rem;">In 2026, curiosity is more common than hostility. Travelers are encouraged to support local LGBT-owned businesses, which are slowly emerging in the capital's craft and cafe sector.</p>
-            </div>
-        </div>
-    `,
-
-		health: `
-        <p>Access to PrEP is expanding in Thimphu as of 2026. HIV care is integrated into the national health system with a high degree of confidentiality for a small nation.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Lhaksam (HIV/AIDS Support)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Thimphu - The leading NGO for sexual health and peer support in Bhutan.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 vibe is 'Enlightened Transition.' Bhutan is proving that traditional Himalayan values and modern LGBT rights can coexist peacefully.</p>
-    `,
-
-		sources: [
-			{ label: "Ground Intel: LGBT Voices of Bhutan", url: "https://www.facebook.com/queerVoicesofBhutan/", button: "COMMUNITY UPDATES →" },
-			{ label: "Official Index: Equaldex Bhutan", url: "https://www.equaldex.com/region/bhutan", button: "VIEW LEGAL DATA →" },
-		],
+		name: 'Bhutan',
+		continent: 'asia',
+		status: 'green',
+		path: 'asia/bhutan.html',
 	},
 
 	brunei: {
-		name: "Brunei",
-		continent: "asia",
-		status: "red",
-
-		legal: `
-        <p>Brunei’s **Sharia Penal Code (SPCO)**, fully implemented in 2019, remains the law of the land in 2026. This includes de jure death by stoning for male-to-male sex and 40 lashes/10 years prison for women.</p>
-        <p><strong>Voices from the Ground:</strong> Local activists operate in deep anonymity. While a **moratorium on the death penalty** remains in place as of early 2026, the "Chilling Effect" is absolute. Any form of advocacy is treated as a threat to the Islamic monarchy.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ The Brunei Project (Exile)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Based outside Brunei, this is the only reliable 2026 monitor of human rights abuses within the Sultanate.</p>
-                <a href="https://www.thebruneiproject.com/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>Brunei is a high-surveillance state. LGBTQ+ life is strictly a "Private-Room" reality. In 2026, the government continues to monitor digital communications for "immoral content."</p>
-        <p><strong>Community Density:</strong> Underground. There are zero public LGBT spaces, festivals, or even "friendly" mixed venues. The scene exists entirely in private residences behind heavy security.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #194</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">One of the most legally repressive regimes globally in 2026.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-        <p>Travel is discouraged for activists or highly visible individuals. For general travelers, absolute discretion is mandatory. Any "LGBT" content on your phone can be grounds for detention if searched at the border.</p>
-        
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** **Bandar Seri Begawan High-End Hotels** - Places like The Empire are safe for general tourism, but offer no "LGBT" protection. They are monitored by state security.
-        * **The Local Way:** None. The risk of police entrapment makes even informal meetups in local cafes dangerous.</p>
-        
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** **Grindr** is used, but carries high risk. Users often use blank profiles and demand immediate off-app verification.
-        * **Community Forums:** None. Most locals use **Telegram with disappearing messages** to communicate within trusted circles.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Digital Scrub"</strong>
-                <p style="color: #fff; font-size: 0.85rem;">In 2026, it is standard practice for LGBT travelers to delete all dating apps and related media before landing in BSB. Use a VPN for any web browsing.</p>
-            </div>
-        </div>
-    `,
-
-		health: `
-        <p>Access to PrEP is non-existent for the general public. HIV testing is available but carries the risk of state reporting. Most LGBT Bruneians seek medical care in nearby **Kuala Lumpur** or **Singapore**.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Seek Care Abroad</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">No safe, LGBT-specific medical infrastructure exists in Brunei as of 2026.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 vibe is 'Oppressive Silence.' The Sultanate maintains an outward face of stability while the community survives in the deepest shadows of the digital world.</p>
-    `,
-
-		sources: [
-			{ label: "Ground Intel: The Brunei Project", url: "https://www.thebruneiproject.com/", button: "MONITORING UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/brunei/", button: "LEGAL DATA →" },
-		],
+		name: 'Brunei',
+		continent: 'asia',
+		status: 'red',
+		path: 'asia/brunei.html',
 	},
 
 	cambodia: {
-		name: "Cambodia",
-		continent: "asia",
-		status: "amber",
-
-		legal: `
-            <p>In 2026, Cambodia remains a legal paradox. While there are no laws against same-sex acts, there are also no explicit protections. This "legal vacuum" allows local authorities to interpret "public order" or "morality" laws however they see fit during raids.</p>
-
-            <p><strong>Voices from the Ground:</strong> Local advocates at **RoCK** warn that the biggest threat isn't a prison sentence, but **public shaming**. Authorities sometimes coordinate with local TV stations during "inspections" to film patrons, often forcing them to sit in the street or cover their faces while being broadcast as part of a "social cleanup."</p>
-
-            <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-                <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                    <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ RoCK (Rainbow Community Kampuchea)</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The primary NGO providing support for those targeted by police shaming or family-based discrimination.</p>
-                    <a href="https://rockcambodia.org/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-                </div>
-            </div>
-        `,
-
-		safety: `
-            <p>Socially, Cambodia is welcoming, but the "2026 Posture" is one of **Selective Enforcement**. While tourists are rarely the primary targets, being in a venue during a raid can lead to involuntary media exposure.</p>
-
-            <p><strong>Community Density:</strong> High. The scene is anchored by established spots like **Blue Chilli**, **POC**, and **Space Bar**, but travelers should be aware that "Mixed" venues in the Tuol Kork or Daun Penh districts are occasionally raided under the guise of "drug prevention" or "morality checks."</p>
-
-            <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Critical Warning: Media Shaming</h4>
-                <div class="metrics-card" style="background: rgba(231, 76, 60, 0.1); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                    <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">⚠️ RAID ADVISORY</strong>
-                    <p style="margin: 0; font-size: 0.95rem; color: #fff;">Police raids often involve local news crews. If a venue is raided, **do not resist**, but keep your face covered if cameras are present. Authorities may use these recordings for "social education" broadcasts.</p>
-                </div>
-            </div>
-        `,
-
-		travel: `
-            <p>Phnom Penh and Siem Reap are the twin pillars of the scene. **Barcode** in Siem Reap is a "Safe Anchor," while the capital's scene is more spread out and integrated into the nightlife districts.</p>
-
-            <p><strong>Underground Pulse & Anchors:</strong> 
-            * **Blue Chilli** (Street 130) and **POC (Pride of Cambodia)** are the primary community hubs.
-            * **Arthur & Paul (A&P)** on Street 71 is the premier gay-run hotel and sauna/bar hub. 
-            * **Heart of Darkness** (Street 51) is a mixed industrial-style club that is an institution on the gay scene.
-            * **Space Hair Salon and Bar** remains a safer, more "neighborhood" vibe that is less likely to draw high-profile police attention.</p>
-
-            <p><strong>Underground Saunas:** Beyond A&P, there are several "Local-only" or "Underground" saunas that you would have to find via a local. Massage spots (like **Paradise**) operate with zero external signage. These spots are safe but require you to "read the room" and follow local etiquette regarding noise and visibility.</p>
-
-			<div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Street 130/172" Circuit</strong>
-                    <p style="color: #fff; font-size: 0.85rem;">Phnom Penh’s gay life is highly walkable. Start at Space Bar for a sunset drink, move to Blue Chilli for the 10 PM drag show, and end your night at POC or Heart of Darkness for dancing.</p>
-                </div>
-            </div>
-
-            <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                    <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
-                    <p style="color: #fff; font-size: 0.85rem;">Carry a digital copy of your passport. In the event of a raid, police will check IDs. Foreigners are usually allowed to leave after a document check, but being polite and compliant is the fastest way out.</p>
-                </div>
-            </div>
-        `,
-
-		health: `
-            <p>Healthcare is accessible through **MHSS (Men’s Health Social Service)**. They are the only ones providing truly "stigma-free" care in 2026.</p>
-
-            <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-                <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-                <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                    <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Men's Health Social Service (MHSS)</strong>
-                    <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Phnom Penh & Siem Reap</p>
-                </div>
-            </div>
-        `,
-
-		posture: `
-            <p>Cambodia in 2026 is a land of "Visible Resilience." The community is out, proud, and running businesses, but they are always mindful of the "morality lens" of the local authorities.</p>
-        `,
-
-		sources: [
-			{ label: "Ground Intel: Khmer LGBT Network", url: "https://khmer.lgbt/", button: "VIEW 2026 EVENTS →" },
-			{ label: "Travel Intel: The Gay Passport", url: "https://thegaypassport.com/explore/gay-map-phnom-penh/", button: "2026 CITY GUIDE →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/cambodia", button: "LEGAL DATA →" },
-		],
+		name: 'Cambodia',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/cambodia.html',
 	},
 
 	china: {
-		name: "China",
-		continent: "asia",
-		status: "amber",
+		name: 'China',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/china.html',
+	},
 
-		legal: `
-        <p>In 2026, China remains in a state of "Legal Stagnation." While homosexuality was decriminalized in 1997 and removed from the list of mental illnesses in 2001, there are zero legal protections against discrimination, and same-sex marriage is not recognized.</p>
-
-        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "The Great Digital Shrinking." Following the 2024-2025 closure of several major university LGBTQ+ associations, the 2026 sentencing of digital activists under "picking quarrels and provoking trouble" statutes has pushed advocacy into small, private offline circles.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ PFLAG China (Exile/Digital)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Despite domestic restrictions, they remain the primary 2026 network for family support and regional community building via decentralized channels.</p>
-                <a href="https://www.pflag.org.cn/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-		safety: `
-        <p>The 2026 social climate is "Socially Tolerant, Politically Hostile." Violence is rare, but state-sponsored censorship of "effeminate" or "non-traditional" aesthetics in media is at an all-time high.</p>
-
-        <p><strong>Community Density:</strong> Moderate to High in Tier-1 cities. Dedicated LGBT-only spaces have largely been replaced by "LGBT-Friendly Mixed" venues to avoid regulatory scrutiny.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #124</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">The 2026 index reflects a decline due to the total ban on "Pride" branding and restricted assembly.</p>
-            </div>
-        </div>
-    `,
-
-		travel: `
-        <p>Generally safe for travelers. Trans and GNC individuals may face confusion or invasive questions at transit hubs, but physical safety is rarely a concern in major cities like Shanghai or Chengdu.</p>
-        
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** **ROXIE** (Shanghai) or **Destination** (Beijing) - These are established anchors. While Destination has faced "renovation" closures in the past for political reasons, it remains the upscale heart of Beijing's scene.
-        * **The Local Way:** **Chengdu Scene** - Chengdu is the "Gay Capital." Bars in the **Jinjiang District** provide the most authentic, relaxed local community vibe in the country.</p>
-        
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** **HeeSay** (formerly Blued) is the dominant app. **Allo** is also gaining traction for its privacy features in 2026.
-        * **Community Forums:** **WeChat Groups** are the true forums, but they are highly invitation-only and heavily monitored. Use coded language.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 The "Pink Scrutiny" Tip</strong>
-                <p style="color: #fff; font-size: 0.85rem;">In 2026, avoid wearing explicitly political LGBT symbols (like protest slogans) in public. Standard rainbow accessories are usually ignored, but anything suggesting "organization" or "activism" can trigger unwanted police attention.</p>
-            </div>
-        </div>
-    `,
-
-		health: `
-        <p>Access to HIV care and PrEP is available in major cities through "Blue Map" clinics. HRT for Trans individuals is becoming more restricted under 2025 medical guidelines, often requiring "Underground" referrals within the community.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">Beijing Gender Health Education Institute</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">A critical node for LGBTQ+ health resources and sexual education in North China.</p>
-            </div>
-        </div>
-    `,
-
-		posture: `
-        <p>The 2026 vibe is 'Quiet Resilience.' The community is massive and tech-savvy, but they have learned to live 'between the lines' of state control.</p>
-    `,
-
-		sources: [
-			{ label: "Ground Intel: China Digital Times", url: "https://chinadigitaltimes.net/chinese/tag/lgbtq/", button: "CENSORSHIP UPDATES →" },
-			{ label: "Official Index: Equaldex China", url: "https://www.equaldex.com/region/china", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Chengdu Underground", url: "https://www.travelgay.com/chengdu-gay-bars-and-dance-clubs", button: "CITY GUIDE →" },
-		],
+	east_timor: {
+		name: 'East Timor',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/east_timor.html',
 	},
 
 	hong_kong: {
-		name: "Hong Kong",
-		continent: "asia",
-		status: "amber",
+		name: 'Hong Kong',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
 <p>2026 marks a complex era following landmark court rulings for civil partnerships and trans-identity rights on IDs, though full marriage equality remains absent.</p>
@@ -473,16 +117,16 @@ Object.assign(globalData, {
 <p>The "Resilient Cosmopolitan" posture in Hong Kong shows a community that is winning legal rights in the courts while navigating a complex political landscape. The 2026 verdict is "Vibrant but Careful."</p> `,
 
 		sources: [
-			{ label: "Ground Intel: HK Free Press", url: "https://hongkongfp.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Pink Alliance", url: "https://pinkalliance.hk/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Pink Dot HK 2026", url: "https://pinkdot.hk/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: HK Free Press', url: 'https://hongkongfp.com/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Pink Alliance', url: 'https://pinkalliance.hk/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Pink Dot HK 2026', url: 'https://pinkdot.hk/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	india: {
-		name: "India",
-		continent: "asia",
-		status: "amber",
+		name: 'India',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, India's legal landscape is a study in "High-Level Progress vs. Grassroots Erasure." While the 2018 decriminalization of Section 377 remains a bedrock, the 2023 Supreme Court refusal to legalize same-sex marriage has shifted the battle to "attainable rights" like the Right to Cohabitation and joint bank accounts. 2026 has seen a significant push for a comprehensive Anti-Discrimination Bill, though it remains stalled in committee.</p>
@@ -549,16 +193,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Gaysi Family", url: "https://gaysifamily.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex India", url: "https://www.equaldex.com/region/india", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Mumbai Pride (KASHISH)", url: "http://mumbaiqueerfest.com/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Gaysi Family', url: 'https://gaysifamily.com/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex India', url: 'https://www.equaldex.com/region/india', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Mumbai Pride (KASHISH)', url: 'http://mumbaiqueerfest.com/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	indonesia: {
-		name: "Indonesia",
-		continent: "asia",
-		status: "red",
+		name: 'Indonesia',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, the legal landscape is a "Checkered Flag." Consensual same-sex acts are not nationally illegal, but the **2023 Penal Code** (fully active as of 2026) includes vague "morality" and "cohabitation" clauses. For travelers, this rarely results in arrest, but it is frequently used as a pretext for police to raid private parties or budget "local" saunas to "maintain public order."</p>
@@ -629,15 +273,15 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: The Closet Jakarta", url: "https://www.instagram.com/thecloset.jkt/", button: "FOLLOW FOR PARTIES →" },
-			{ label: "Travel Intel: Travel Gay Jakarta", url: "https://www.travelgay.com/jakarta-gay-bars-and-dance-clubs", button: "2026 CLUB LIST →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/indonesia", button: "LEGAL DATA →" },
+			{ label: 'Ground Intel: The Closet Jakarta', url: 'https://www.instagram.com/thecloset.jkt/', button: 'FOLLOW FOR PARTIES →' },
+			{ label: 'Travel Intel: Travel Gay Jakarta', url: 'https://www.travelgay.com/jakarta-gay-bars-and-dance-clubs', button: '2026 CLUB LIST →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/indonesia', button: 'LEGAL DATA →' },
 		],
 	},
 	iran: {
-		name: "Iran",
-		continent: "asia",
-		status: "red",
+		name: 'Iran',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Iran remains one of the most legally hostile environments for LGBTQ+ individuals. Consensual same-sex acts are capital offenses under the Islamic Penal Code. While the state recognizes binary transgender transitions (following a 1987 fatwa), this is often used as a tool for "forced re-assignment" to fit the heteronormative legal framework.</p>
@@ -704,16 +348,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: JoopeA", url: "https://joopea.info/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: JoopeA', url: 'https://joopea.info/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	iraq: {
-		name: "Iraq",
-		continent: "asia",
-		status: "red",
+		name: 'Iraq',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>Following the 2024 Anti-Prostitution Law amendments, same-sex relations carry up to 15 years in prison. In 2026, legal protections are non-existent, and the state actively uses "public morality" laws to target LGBTQ+ expression.</p>
@@ -780,16 +424,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: IraLGBT News", url: "https://www.iraqueer.org/", button: "SECURITY UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: IraLGBT News', url: 'https://www.iraqueer.org/', button: 'SECURITY UPDATES →' },
+			{ label: 'Official Index: Human Dignity Trust', url: 'https://www.humandignitytrust.org/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	israel: {
-		name: "Israel",
-		continent: "asia",
-		status: "green",
+		name: 'Israel',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>In 2026, Israel maintains the most advanced LGBTQ+ protections in the Middle East. While same-sex marriage cannot be performed in-country, foreign marriages are recognized, and adoption rights are established. 2025-2026 saw increased legal battles to secure these rights against conservative legislative shifts.</p>
@@ -856,16 +500,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: WDG News", url: "https://wdg.co.il/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex Israel", url: "https://www.equaldex.com/region/israel", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Tel Aviv Pride", url: "https://www.visit-tel-aviv.com/en/pride/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: WDG News', url: 'https://wdg.co.il/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex Israel', url: 'https://www.equaldex.com/region/israel', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Tel Aviv Pride', url: 'https://www.visit-tel-aviv.com/en/pride/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	japan: {
-		name: "Japan",
-		continent: "asia",
-		status: "amber",
+		name: 'Japan',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, Japan is in a state of "Judicial Transition." While same-sex marriage is not yet legal at the national level, over 80% of the population lives in municipalities with partnership certificates. 2025-2026 court rulings have consistently found the ban on same-sex marriage "unconstitutional," putting immense pressure on the Diet to act.</p>
@@ -932,16 +576,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Marriage For All", url: "https://marriageforall.jp/en/", button: "LEGAL UPDATES →" },
-			{ label: "Official Index: Equaldex Japan", url: "https://www.equaldex.com/region/japan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Tokyo Rainbow Pride", url: "https://tokyorainbowpride.com/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Marriage For All', url: 'https://marriageforall.jp/en/', button: 'LEGAL UPDATES →' },
+			{ label: 'Official Index: Equaldex Japan', url: 'https://www.equaldex.com/region/japan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Tokyo Rainbow Pride', url: 'https://tokyorainbowpride.com/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	jordan: {
-		name: "Jordan",
-		continent: "asia",
-		status: "amber",
+		name: 'Jordan',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>Homosexuality was decriminalized in 1951, making Jordan unique in the region. However, there are zero anti-discrimination laws. In 2026, the state uses "public decency" and "cybercrime" laws to restrict LGBT expression, and social/familial pressure remains the primary legislative force.</p>
@@ -1008,16 +652,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: My.Kali Magazine", url: "https://www.mykalimag.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: My.Kali Magazine', url: 'https://www.mykalimag.com/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Human Dignity Trust', url: 'https://www.humandignitytrust.org/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	kazakhstan: {
-		name: "Kazakhstan",
-		continent: "asia",
-		status: "red",
+		name: 'Kazakhstan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Kazakhstan’s legal landscape has darkened significantly. While same-sex acts have been legal since 1998, the government implemented a sweeping "Anti-LGBTQ Propaganda" law in March 2026, prohibiting the "promotion of non-traditional sexual relations" in media and online platforms. This law effectively criminalizes public advocacy and visibility.</p>
@@ -1084,16 +728,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Feminita", url: "https://feminita.kz/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/kazakhstan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: LGBT Studies Astana 2026", url: "https://conferencealerts.co.in/event/100771102", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Feminita', url: 'https://feminita.kz/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/kazakhstan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: LGBT Studies Astana 2026', url: 'https://conferencealerts.co.in/event/100771102', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	kuwait: {
-		name: "Kuwait",
-		continent: "asia",
-		status: "red",
+		name: 'Kuwait',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>Kuwait criminalizes same-sex sexual activity between men with up to seven years' imprisonment. While the 2022 overturning of Article 198 (criminalizing "imitation of the opposite sex") was a win, 2025 and 2026 have seen a massive backlash, including the deportation of thousands of perceived trans individuals under "public morals" clauses.</p>
@@ -1160,16 +804,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/kuwait/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/kuwait", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Human Dignity Trust', url: 'https://www.humandignitytrust.org/country-profile/kuwait/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/kuwait', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	kyrgyzstan: {
-		name: "Kyrgyzstan",
-		continent: "asia",
-		status: "red",
+		name: 'Kyrgyzstan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Kyrgyzstan has shifted toward a repressive legal framework similar to Russia’s. A "Propaganda of non-traditional sexual relations" law was fully enacted by early 2026, targeting any information deemed "harmful to children," effectively banning all LGBTQ+ advocacy and public life.</p>
@@ -1236,16 +880,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Labrys News", url: "https://labrys.kg/en", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA-Europe", url: "https://www.ilga-europe.org/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Labrys News', url: 'https://labrys.kg/en', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA-Europe', url: 'https://www.ilga-europe.org/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	laos: {
-		name: "Laos",
-		continent: "asia",
-		status: "amber",
+		name: 'Laos',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>Laos has no laws criminalizing same-sex sexual activity, but it also has no protections. In 2026, the government remains largely indifferent, though strict control over assembly and media means organized LGBTQ+ advocacy is restricted to state-approved health frameworks.</p>
@@ -1312,23 +956,23 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Proud to Be Us", url: "https://www.facebook.com/proudtobeuslaos/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/laos", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Vientiane Pride (Pop-up)", url: "#", button: "CHECK LOCAL NEWS →" },
+			{ label: 'Ground Intel: Proud to Be Us', url: 'https://www.facebook.com/proudtobeuslaos/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/laos', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Vientiane Pride (Pop-up)', url: '#', button: 'CHECK LOCAL NEWS →' },
 		],
 	},
 
 	lebanon: {
-		name: "Lebanon",
-		continent: "asia",
-		status: "amber",
-		path: "asia/lebanon.html",
+		name: 'Lebanon',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/lebanon.html',
 	},
 
 	laos: {
-		name: "Laos",
-		continent: "asia",
-		status: "amber",
+		name: 'Laos',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, Laos remains one of the few Southeast Asian nations where same-sex sexual activity has never been explicitly criminalized. However, the legal landscape is characterized by a "void of protection"—there are no anti-discrimination laws or legal recognitions for same-sex unions. While the government maintains a policy of indifference, it strictly regulates any organized assembly not aligned with state interests.</p>
@@ -1393,16 +1037,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Proud To Be Us Laos", url: "https://www.facebook.com/proudtobeuslaos/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/laos", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Vientiane Pride (Public Health Focus)", url: "https://www.travelgay.com/vientiane-gay-pride/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Proud To Be Us Laos', url: 'https://www.facebook.com/proudtobeuslaos/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://database.ilga.org/en/countries/laos', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Vientiane Pride (Public Health Focus)', url: 'https://www.travelgay.com/vientiane-gay-pride/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	malaysia: {
-		name: "Malaysia",
-		continent: "asia",
-		status: "red",
+		name: 'Malaysia',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Malaysia maintains a dual-track legal system that criminalizes LGBTQ+ existence. Federal law (Section 377A) penalizes sodomy with up to 20 years' imprisonment, while State-level Sharia laws target "musahaqah" (lesbianism) and gender non-conformity. Recent years have seen increased raids on "morality" grounds and the banning of rainbow-themed merchandise under the Printing Presses and Publications Act.</p>
@@ -1467,16 +1111,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: LGBT Lapis", url: "https://www.queerlapis.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex Malaysia", url: "https://www.equaldex.com/region/malaysia", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: George Town Festival (Inclusive Spaces)", url: "https://georgetownfestival.com/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: LGBT Lapis', url: 'https://www.queerlapis.com/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex Malaysia', url: 'https://www.equaldex.com/region/malaysia', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: George Town Festival (Inclusive Spaces)', url: 'https://georgetownfestival.com/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	maldives: {
-		name: "Maldives",
-		continent: "asia",
-		status: "red",
+		name: 'Maldives',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>The Maldives is a Sharia-compliant state where same-sex sexual activity is strictly illegal, punishable by fines, lashings, or up to eight years' imprisonment. In 2026, the legal environment remains one of total non-recognition; there are no protections, and the Penal Code specifically targets "indecent behavior" which is widely interpreted to include LGBTQ+ identities.</p>
@@ -1541,16 +1185,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: TravelGay Maldives", url: "https://www.travelgay.com/destination/gay-maldives/", button: "READ TRAVEL UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/maldives", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Int. Conference on LGBT Politics 2026", url: "https://conferencealerts.co.in/event/100788260", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: TravelGay Maldives', url: 'https://www.travelgay.com/destination/gay-maldives/', button: 'READ TRAVEL UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/maldives', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Int. Conference on LGBT Politics 2026', url: 'https://conferencealerts.co.in/event/100788260', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	mongolia: {
-		name: "Mongolia",
-		continent: "asia",
-		status: "green",
+		name: 'Mongolia',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>Mongolia is one of the most progressive nations in Central/East Asia. In 2026, it boasts a robust 2017 Criminal Code that explicitly bans discrimination and hate crimes based on sexual orientation and gender identity. While same-sex marriage is not yet legal, the legal infrastructure for protection is stronger here than in most neighboring states.</p>
@@ -1615,16 +1259,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: LGBT Centre Mongolia", url: "https://lgbtcentre.mn/en/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/mongolia", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Pride Mongolia 2026", url: "https://lgbtcentre.mn/en/pride/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: LGBT Centre Mongolia', url: 'https://lgbtcentre.mn/en/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/mongolia', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Pride Mongolia 2026', url: 'https://lgbtcentre.mn/en/pride/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	myanmar: {
-		name: "Myanmar",
-		continent: "asia",
-		status: "red",
+		name: 'Myanmar',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Myanmar remains under military rule (Junta), and Section 377 (criminalizing sodomy) remains in force. However, the legal threat is now secondary to the general collapse of the rule of law. LGBTQ+ activists have been prominent in the anti-coup resistance, making them dual targets for the military—both for their identity and their political activities.</p>
@@ -1689,16 +1333,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Colors Rainbow", url: "https://colorsrainbow.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/myanmar/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: &PROUD Film Festival (Online/Mobile)", url: "https://andproud.org/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Colors Rainbow', url: 'https://colorsrainbow.com/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Human Dignity Trust', url: 'https://www.humandignitytrust.org/country-profile/myanmar/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: &PROUD Film Festival (Online/Mobile)', url: 'https://andproud.org/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	nepal: {
-		name: "Nepal",
-		continent: "asia",
-		status: "green",
+		name: 'Nepal',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>In 2026, Nepal solidifies its position as a regional leader in LGBTQ+ rights. Following the landmark 2023 Supreme Court directive and 2024 administrative circulars, same-sex marriage is actively registered under a "temporary" but functional status. The 2015 Constitution remains one of the few globally to explicitly protect against discrimination based on sexual orientation and gender identity. However, full legislative codification of marriage equality remains a pending task for the Parliament.</p>
@@ -1763,16 +1407,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Blue Diamond Society", url: "https://www.bds.org.np/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex Nepal", url: "https://www.equaldex.com/region/nepal", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Kathmandu Pride / Gai Jatra 2026", url: "https://lgbtiqnepalpride.org.np/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Blue Diamond Society', url: 'https://www.bds.org.np/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex Nepal', url: 'https://www.equaldex.com/region/nepal', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Kathmandu Pride / Gai Jatra 2026', url: 'https://lgbtiqnepalpride.org.np/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	north_korea: {
-		name: "North Korea (DPRK)",
-		continent: "asia",
-		status: "red",
+		name: 'North Korea (DPRK)',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, the legal status of LGBTQ+ individuals in North Korea remains a void. While the Penal Code does not explicitly mention homosexuality, same-sex acts are often prosecuted under Article 193 (decadent culture) or Article 262 (obscene acts). Marriage is strictly defined as between one man and one woman under Article 8 of the Family Law. Political survival trumps identity, and "LGBTness" is officially framed as a foreign bourgeois corruption.</p>
@@ -1837,16 +1481,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: NK News (LGBT Context)", url: "https://www.nknews.org/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/north-korea", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: NK News (LGBT Context)', url: 'https://www.nknews.org/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://database.ilga.org/en/countries/north-korea', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	oman: {
-		name: "Oman",
-		continent: "asia",
-		status: "red",
+		name: 'Oman',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Oman remains a conservative monarchy where same-sex sexual activity is criminalized under Article 223 of the Penal Code, carrying a penalty of up to three years' imprisonment. While enforcement is relatively rare compared to neighboring states, there are no legal protections, and "scandalous behavior" laws are frequently used to police gender expression.</p>
@@ -1911,16 +1555,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: TravelGay Oman", url: "https://www.travelgay.com/destination/gay-oman/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/en/countries/oman", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: TravelGay Oman', url: 'https://www.travelgay.com/destination/gay-oman/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://database.ilga.org/en/countries/oman', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	macau: {
-		name: "Macau",
-		continent: "asia",
-		status: "amber",
+		name: 'Macau',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
 <p>Macau has no legal recognition for same-sex unions or marriage as of 2026. However, anti-discrimination laws exist specifically for employment and gender identity, though they are rarely tested.</p>
@@ -1971,16 +1615,16 @@ Object.assign(globalData, {
 <p>The "Casino Neutral" posture in Macau provides a safe, high-end facade for the community, but legal and social recognition remains stalled in 2026. The verdict is "Safe but Stagnant."</p> `,
 
 		sources: [
-			{ label: "Ground Intel: Macau Daily Times", url: "https://macaudailytimes.com.mo/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA Asia", url: "https://www.ilgaasia.org/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Macau International Film Festival (LGBT selections)", url: "https://www.iffamacao.com/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Macau Daily Times', url: 'https://macaudailytimes.com.mo/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA Asia', url: 'https://www.ilgaasia.org/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Macau International Film Festival (LGBT selections)', url: 'https://www.iffamacao.com/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	pakistan: {
-		name: "Pakistan",
-		continent: "asia",
-		status: "red",
+		name: 'Pakistan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Pakistan presents a stark legal paradox. Same-sex acts remain criminalized under Section 377 (remnant of British law), yet the 2018 Transgender Persons (Protection of Rights) Act provides some of the world's most progressive protections for "Khwaja Sira" (third gender) individuals—though these were partially struck back by the Shariat Court in 2023. In 2026, legal battles continue to determine the definition of "gender identity" vs "biological sex."</p>
@@ -2045,16 +1689,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Wajood Pakistan", url: "https://wajoodpk.org/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex Pakistan", url: "https://www.equaldex.com/region/pakistan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Aks Festival (Discreet Locations)", url: "http://aksfestival.com/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Wajood Pakistan', url: 'https://wajoodpk.org/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex Pakistan', url: 'https://www.equaldex.com/region/pakistan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Aks Festival (Discreet Locations)', url: 'http://aksfestival.com/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	palestinian_territories: {
-		name: "Palestinian Territories",
-		continent: "asia",
-		status: "red",
+		name: 'Palestinian Territories',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, the legal status remains fragmented. In the West Bank, Jordanian law (which does not criminalize same-sex acts) applies, but LGBTQ+ groups are often forbidden from meeting by the PA. In Gaza, the 1933 British Mandate law criminalizing "unnatural offenses" remains technically on the books, though the primary threat is Hamas's extrajudicial enforcement. No legal recognition or anti-discrimination protections exist.</p>
@@ -2119,16 +1763,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Al-Qaws", url: "http://alqaws.org/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex Palestine", url: "https://www.equaldex.com/region/palestine", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Al-Qaws', url: 'http://alqaws.org/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex Palestine', url: 'https://www.equaldex.com/region/palestine', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	philippines: {
-		name: "Philippines",
-		continent: "asia",
-		status: "amber",
+		name: 'Philippines',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, the Philippines continues to operate without a national SOGIE Equality Act, though over 25 cities and provinces have passed local anti-discrimination ordinances. Same-sex unions are not legally recognized at the state level, but "Commitment Ceremonies" are common within the community. The legal climate remains a patchwork where protection depends entirely on your current city limits.</p>
@@ -2193,16 +1837,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Preen.ph", url: "https://preen.ph", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Metro Manila Pride 2026", url: "https://mmpride.org", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Preen.ph', url: 'https://preen.ph', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Metro Manila Pride 2026', url: 'https://mmpride.org', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	qatar: {
-		name: "Qatar",
-		continent: "asia",
-		status: "red",
+		name: 'Qatar',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, same-sex sexual activity remains criminalized under the Penal Code 2004, with potential imprisonment of 1–3 years. For Muslims, Sharia law applies, which technically allows for the death penalty, though no such executions for same-sex acts have been recorded in recent history. There are zero legal protections for SOGIE.</p>
@@ -2267,16 +1911,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: TravelGay Qatar", url: "https://www.travelgay.com", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: TravelGay Qatar', url: 'https://www.travelgay.com', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	saudi_arabia: {
-		name: "Saudi Arabia",
-		continent: "asia",
-		status: "red",
+		name: 'Saudi Arabia',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Saudi Arabia lacks a written penal code, meaning judges interpret Sharia law directly. Same-sex acts, cross-dressing, and "acting like the opposite sex" are criminal offenses with penalties ranging from fines and lashes to imprisonment and death (though the latter is rarely applied to consensual acts). There are no legal protections for LGBTQ+ people.</p>
@@ -2341,16 +1985,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: IGLTA Saudi Guide", url: "https://www.iglta.org", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: IGLTA Saudi Guide', url: 'https://www.iglta.org', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	singapore: {
-		name: "Singapore",
-		continent: "asia",
-		status: "amber",
+		name: 'Singapore',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, the legacy of Section 377A remains in the rearview mirror after its 2022 repeal, but the constitutional amendment protecting the definition of marriage as between a man and a woman (Article 156) remains a solid barrier to marriage equality. SOGIE protections in the workplace are still decentralized and largely company-dependent.</p>
@@ -2415,16 +2059,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Dear Straight People", url: "https://dearstraightpeople.com", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Pink Dot 2026", url: "https://pinkdot.sg", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Dear Straight People', url: 'https://dearstraightpeople.com', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Pink Dot 2026', url: 'https://pinkdot.sg', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	south_korea: {
-		name: "South Korea",
-		continent: "asia",
-		status: "amber",
+		name: 'South Korea',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, South Korea still lacks a comprehensive anti-discrimination law, despite years of grassroots pressure. While same-sex acts are legal, Article 92-6 of the Military Criminal Act still technically criminalizes "indecent acts" between soldiers. The legal landscape is dominated by the ongoing struggle to pass the "Equality Act" amidst heavy opposition from religious lobby groups.</p>
@@ -2489,16 +2133,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Seoul LGBT Culture Festival", url: "https://sqcf.org", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: SQCF 2026", url: "https://sqcf.org", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Seoul LGBT Culture Festival', url: 'https://sqcf.org', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: SQCF 2026', url: 'https://sqcf.org', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	sri_lanka: {
-		name: "Sri Lanka",
-		continent: "asia",
-		status: "amber",
+		name: 'Sri Lanka',
+		continent: 'asia',
+		status: 'amber',
 
 		legal: `
         <p>In 2026, Sri Lanka stands at a historic crossroads. While Sections 365 and 365A of the Penal Code—remnants of British colonial rule that criminalize "unnatural offenses"—remain on the books, the Supreme Court ruled in 2023 that decriminalization is constitutional. A 2025-2026 legislative push to formally repeal these sections has gained significant cross-party support, though administrative delays persist.</p>
@@ -2563,16 +2207,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Equal Ground News", url: "https://www.equal-ground.org", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/sri-lanka/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Colombo Pride 2026", url: "https://www.equal-ground.org/pride", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Equal Ground News', url: 'https://www.equal-ground.org', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Human Dignity Trust', url: 'https://www.humandignitytrust.org/country-profile/sri-lanka/', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Colombo Pride 2026', url: 'https://www.equal-ground.org/pride', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	syria: {
-		name: "Syria",
-		continent: "asia",
-		status: "red",
+		name: 'Syria',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Article 520 of the Penal Code 1949 remains active, criminalizing "unnatural sexual intercourse" with up to 3 years in prison. In areas outside government control, extremist militias may enforce extrajudicial punishments, including execution. There is no legal recognition for SOGIE rights.</p>
@@ -2637,16 +2281,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Human Dignity Trust Syria", url: "https://www.humandignitytrust.org/country-profile/syria/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/syria", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Human Dignity Trust Syria', url: 'https://www.humandignitytrust.org/country-profile/syria/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/syria', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	taiwan: {
-		name: "Taiwan",
-		continent: "asia",
-		status: "green",
+		name: 'Taiwan',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>In 2026, Taiwan remains the gold standard for LGBTQ+ rights in Asia. Building on the 2019 marriage equality act, recent 2024-2025 reforms have expanded adoption rights for same-sex couples and simplified the process for cross-national marriage. 2026 bills are focused on expanding assisted reproduction to single women and same-sex couples.</p>
@@ -2711,16 +2355,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Taiwan LGBT Hotline", url: "https://hotline.org.tw", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/taiwan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Taipei Pride 2026", url: "https://www.taiwanpride.lgbt", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Taiwan LGBT Hotline', url: 'https://hotline.org.tw', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/taiwan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Taipei Pride 2026', url: 'https://www.taiwanpride.lgbt', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	tajikistan: {
-		name: "Tajikistan",
-		continent: "asia",
-		status: "red",
+		name: 'Tajikistan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, consensual same-sex acts are not technically illegal (decriminalized in 1998), but the state uses "public morality" and "hooliganism" laws to target the community. The 2024-2026 expansion of the official "police registry" for LGBTQ+ individuals—initially launched in 2017—continues to be used for surveillance and blackmail.</p>
@@ -2785,16 +2429,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: ECOM Tajikistan", url: "https://ecom.ngo", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/tajikistan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: ECOM Tajikistan', url: 'https://ecom.ngo', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/tajikistan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	thailand: {
-		name: "Thailand",
-		continent: "asia",
-		status: "green",
+		name: 'Thailand',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>In 2026, Thailand is celebrating its first full year of Marriage Equality, following the 2025 implementation of the landmark Equal Marriage Law. Same-sex couples now enjoy full legal parity with heterosexual couples in adoption, inheritance, and spousal benefits. Current 2026 efforts are focused on the "Gender Recognition Bill" to allow trans individuals to change legal gender without surgery.</p>
@@ -2859,17 +2503,17 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Coconuts Bangkok", url: "https://coconuts.co/bangkok/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Bangkok Pride 2026", url: "https://bangkokpride.org", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Coconuts Bangkok', url: 'https://coconuts.co/bangkok/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Bangkok Pride 2026', url: 'https://bangkokpride.org', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	east_timor: {
-		name: "Timor-Leste",
-		continent: "asia",
-		status: "amber",
-		path: "asia/east_timor.html",
+		name: 'Timor-Leste',
+		continent: 'asia',
+		status: 'amber',
+		path: 'asia/east_timor.html',
 
 		legal: `
         <p>In 2026, Timor-Leste remains a unique case in Southeast Asia. While same-sex acts have been legal since independence, there are still no comprehensive anti-discrimination laws or legal recognition for same-sex unions. However, the 2024-2026 government initiatives have begun integrating SOGIE sensitivity training for the national police force.</p>
@@ -2934,16 +2578,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Arco-Íris TL", url: "https://www.facebook.com/arcoiristl/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/east-timor", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Dili Pride 2026", url: "https://www.facebook.com/arcoiristl/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Arco-Íris TL', url: 'https://www.facebook.com/arcoiristl/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/east-timor', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Dili Pride 2026', url: 'https://www.facebook.com/arcoiristl/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	turkey: {
-		name: "Turkey",
-		continent: "europe_asia",
-		status: "amber",
+		name: 'Turkey',
+		continent: 'europe_asia',
+		status: 'amber',
 
 		legal: `
         <p>Homosexuality has been legal in Turkey since 1858. However, in 2026, the community face increasing pressure from "public morality" and "family values" narratives. While there is no national ban on LGBTQ+ life, local governors frequently ban Prides. A 2025-2026 legal trend has seen more "association closure" cases against LGBTQ+ NGOs.</p>
@@ -3008,16 +2652,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Kaos GL News", url: "https://kaosgl.org/en", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/turkey", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Istanbul Pride (Unauthorized)", url: "https://tr-tr.facebook.com/istanbulpride/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: Kaos GL News', url: 'https://kaosgl.org/en', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/turkey', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: Istanbul Pride (Unauthorized)', url: 'https://tr-tr.facebook.com/istanbulpride/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	turkmenistan: {
-		name: "Turkmenistan",
-		continent: "asia",
-		status: "red",
+		name: 'Turkmenistan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Turkmenistan remains one of the most repressive countries globally. Article 135 of the Penal Code criminalizes "pederasty" (consensual same-sex acts between men) with up to 2 years in prison. There are no protections for LGBTQ+ individuals and zero public discourse on gender identity.</p>
@@ -3082,16 +2726,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: HRW Turkmenistan", url: "https://www.hrw.org/europe/central-asia/turkmenistan", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: HRW Turkmenistan', url: 'https://www.hrw.org/europe/central-asia/turkmenistan', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	united_arab_emirates: {
-		name: "United Arab Emirates",
-		continent: "asia",
-		status: "red",
+		name: 'United Arab Emirates',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, the UAE continues to criminalize "indecency" and "scandalous behavior," which is used to target same-sex acts and gender-nonconformity. While the 2025 reforms moved more toward "international tourism standards," Sharia-based laws still allow for imprisonment and deportation for LGBTQ+ individuals. There is no legal recognition of SOGIE rights.</p>
@@ -3156,16 +2800,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: TravelGay Dubai", url: "https://www.travelgay.com/dubai-gay-guide", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/united-arab-emirates", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: TravelGay Dubai', url: 'https://www.travelgay.com/dubai-gay-guide', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/united-arab-emirates', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	uzbekistan: {
-		name: "Uzbekistan",
-		continent: "asia",
-		status: "red",
+		name: 'Uzbekistan',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Uzbekistan remains one of only two post-Soviet states (with Turkmenistan) that criminalizes same-sex acts between men. Article 120 of the Criminal Code ("Besoqolbozlik") carries a penalty of up to 3 years in prison. The 2025-2026 "New Uzbekistan" reforms have noticeably excluded LGBTQ+ rights, maintaining the legal status quo.</p>
@@ -3230,16 +2874,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Human Dignity Trust Uzbekistan", url: "https://www.humandignitytrust.org/country-profile/uzbekistan/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex", url: "https://www.equaldex.com/region/uzbekistan", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Human Dignity Trust Uzbekistan', url: 'https://www.humandignitytrust.org/country-profile/uzbekistan/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: Equaldex', url: 'https://www.equaldex.com/region/uzbekistan', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
 	},
 
 	vietnam: {
-		name: "Vietnam",
-		continent: "asia",
-		status: "green",
+		name: 'Vietnam',
+		continent: 'asia',
+		status: 'green',
 
 		legal: `
         <p>In 2026, Vietnam remains a regional leader in social tolerance despite the lack of formal marriage equality. Same-sex acts have never been criminalized. The most significant legal focus is the "Transgender Rights Bill," which has seen several delays through 2025 but remains on the legislative agenda for 2026, aimed at streamlining legal gender recognition without mandatory surgery.</p>
@@ -3304,16 +2948,16 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: ICS Center Vietnam", url: "https://ics.org.vn/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://database.ilga.org/vietnam-lgbti", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: VietPride 2026", url: "https://www.facebook.com/vietpride.vn/", button: "EVENT DETAILS →" },
+			{ label: 'Ground Intel: ICS Center Vietnam', url: 'https://ics.org.vn/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://database.ilga.org/vietnam-lgbti', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: VietPride 2026', url: 'https://www.facebook.com/vietpride.vn/', button: 'EVENT DETAILS →' },
 		],
 	},
 
 	yemen: {
-		name: "Yemen",
-		continent: "asia",
-		status: "red",
+		name: 'Yemen',
+		continent: 'asia',
+		status: 'red',
 
 		legal: `
         <p>In 2026, Yemen remains one of the world's most dangerous jurisdictions for LGBTQ+ individuals. Same-sex sexual activity is criminalized under the 1994 Penal Code, with punishments including lashes, imprisonment, and the death penalty by stoning for married men. In Houthi-controlled areas, 2024-2026 has seen a surge in mass trials and public executions for "immorality."</p>
@@ -3378,16 +3022,9 @@ Object.assign(globalData, {
     `,
 
 		sources: [
-			{ label: "Ground Intel: Human Dignity Trust", url: "https://www.humandignitytrust.org/country-profile/yemen/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: ILGA World", url: "https://ilga.org", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
+			{ label: 'Ground Intel: Human Dignity Trust', url: 'https://www.humandignitytrust.org/country-profile/yemen/', button: 'READ RECENT UPDATES →' },
+			{ label: 'Official Index: ILGA World', url: 'https://ilga.org', button: 'VIEW LEGAL DATA →' },
+			{ label: 'Community Event: N/A', url: '#', button: 'NO PUBLIC EVENTS →' },
 		],
-	},
-
-	east_timor: {
-		name: "East Timor",
-		continent: "asia",
-		status: "amber",
-		path: "asia/east_timor.html",
 	},
 });
