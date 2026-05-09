@@ -1,409 +1,411 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-		<title>Gay World News | americas 2026 Guide</title>
-
-		<link rel="icon" type="image/webp" href="images/favicon.webp" />
-
-		<link rel="stylesheet" href="../index.css?v=5.1" />
-		<link rel="stylesheet" href="../regions.css?v=5.1" />
-
-		<script>
-			window.globalData = {};
-		</script>
-		<script src="country-info/country-files/africa-data.js" defer></script>
-		<script src="country-info/country-files/asia-data.js" defer></script>
-		<script src="country-info/country-files/europe-data.js" defer></script>
-		<script src="country-info/country-files/americas-data.js" defer></script>
-		<script src="country-info/country-files/oceania-data.js" defer></script>
-		<script src="index.js" defer></script>
-	</head>
-	<body>
-		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
-		<a href="/" class="home-btn">HOME</a>
-		<div id="translator-anchor"></div>
-
-		<div class="menu-toggle" onclick="toggleMenu()">
-			<div class="bar"></div>
-			<div class="bar"></div>
-			<div class="bar"></div>
-		</div>
-
-		<div id="sideMenu" class="side-menu">
-			<div class="slider-content">
-				<nav class="mobile-nav-links">
-					<div class="landing-search-wrap">
-						<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-						<div id="searchResults" class="search-results-floating"></div>
-					</div>
-					<a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
-
-					<a href="../africa.html">AFRICA</a>
-					<a href="../americas.html">AMERICAS</a>
-					<a href="../asia.html">ASIA</a>
-					<a href="../europe.html">EUROPE</a>
-					<a href="../oceania.html">OCEANIA</a>
-					<a href="../about.html">ABOUT</a>
-					<a href="../contact.html">CONTACT</a>
-				</nav>
-				<div class="social-pill-container">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
-						<svg viewBox="0 0 24 24">
-							<path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
-						</svg>
-					</a>
-
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
-						<svg viewBox="0 0 24 24">
-							<path
-								fill="currentColor"
-								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-						</svg>
-					</a>
-
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
-						<svg viewBox="0 0 24 24">
-							<path
-								fill="currentColor"
-								d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-						</svg>
-					</a>
-				</div>
-
-				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
-					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
-							<span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
-							advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
-							source information, further links and reading.
-						</p>
-					</div>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for planning a holiday?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
-							Gay World News acts as a hub for the best guides so you don't have to look through tens of search results to find a decent review and we also look for both reading
-							and video content if available. We recommend also checking specific country alerts for detailed health and security protocols before departing.
-						</p>
-					</div>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
-							Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating
-							for the community.
-						</p>
-					</div>
-
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
-						<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-		<div class="master-grid-container">
-			<header class="main-header">
-				<h1 class="main-title">Americas</h1>
-			</header>
-
-			<section class="bento-grid" id="countryGrid">
-				<a href="country.html?c=antigua_and_barbuda" class="country-card green">
-					<span>ANTIGUA & BARBUDA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=argentina" class="country-card green">
-					<span>ARGENTINA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=bahamas" class="country-card amber">
-					<span>BAHAMAS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=barbados" class="country-card green">
-					<span>BARBADOS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=belize" class="country-card green">
-					<span>BELIZE <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=bolivia" class="country-card amber">
-					<span>BOLIVIA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=brazil" class="country-card green">
-					<span>BRAZIL <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=british_virgin_islands" class="country-card amber">
-					<span>BRITISH VIRGIN ISLANDS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=canada" class="country-card green">
-					<span>CANADA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=chile" class="country-card green">
-					<span>CHILE <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=colombia" class="country-card green">
-					<span>COLOMBIA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=costa_rica" class="country-card green">
-					<span>COSTA RICA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=cuba" class="country-card green">
-					<span>CUBA <small>(AI)</small></span>
-				</a>
-				<a href="country.html?c=dominica" class="country-card green">
-					<span>DOMINICA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=dominican_republic" class="country-card amber">
-					<span>DOMINICAN REPUBLIC <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=ecuador" class="country-card green">
-					<span>ECUADOR <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=falkland_islands" class="country-card green">
-					<span>Falkland Islands <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=french_guiana" class="country-card green">
-					<span>French Guiana <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=grenada" class="country-card amber">
-					<span>GRENADA <small>(AI)</small></span>
-				</a>
-
-				<a href="europe/greenland.html" class="country-card green">
-					<span>Greenland <small>(GWN)</small></span>
-				</a>
-
-				<a href="country.html?c=guatemala" class="country-card amber">
-					<span>GUATEMALA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=guyana" class="country-card red">
-					<span>GUYANA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=haiti" class="country-card red">
-					<span>HAITI <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=honduras" class="country-card amber">
-					<span>HONDURAS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=jamaica" class="country-card red">
-					<span>JAMAICA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=mexico" class="country-card green">
-					<span>MEXICO <small>(AI)</small></span>
-				</a>
-				<a href="country.html?c=nicaragua" class="country-card amber">
-					<span>NICARAGUA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=panama" class="country-card amber">
-					<span>PANAMA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=paraguay" class="country-card amber">
-					<span>PARAGUAY <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=peru" class="country-card amber">
-					<span>PERU <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=saint_kitts_and_nevis" class="country-card green">
-					<span>ST. KITTS & NEVIS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=saint_lucia" class="country-card green">
-					<span>SAINT LUCIA <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=saint_vincent_and_the_grenadines" class="country-card red">
-					<span>ST. VINCENT & GREN. <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=suriname" class="country-card green">
-					<span>SURINAME <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=trinidad_and_tobago" class="country-card red">
-					<span>TRINIDAD & TOBAGO <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=united_states" class="country-card green">
-					<span>UNITED STATES <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=united_states_virgin_islands" class="country-card amber">
-					<span>UNITED STATES VIRGIN ISLANDS <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=uruguay" class="country-card green">
-					<span>URUGUAY <small>(AI)</small></span>
-				</a>
-
-				<a href="country.html?c=venezuela" class="country-card amber">
-					<span>VENEZUELA <small>(AI)</small></span>
-				</a>
-			</section>
-		</div>
-
-		<div class="footer-branding-wrapper">
-			<div class="footer-site-title">Gay World News</div>
-			<p class="footer-site-subtitle">Legal Travel Health & Security</p>
-		</div>
-
-		<script>
-			window.globalData = window.globalData || {};
-		</script>
-
-		<script src="country-info/country-files/africa-data.js?v=1.5"></script>
-		<script src="country-info/country-files/americas-data.js?v=1.5"></script>
-		<script src="country-info/country-files/asia-data.js?v=1.5"></script>
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-		<script>
-			(function () {
-				const params = new URLSearchParams(window.location.search);
-				// Your code uses "c" in some places and "country" in others. This checks both.
-				const rawC = params.get("c") || params.get("country") || "";
-				const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-				const underscoredKey = slug.replace(/[\s-]/g, "_");
-
-				if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-					const data = window.globalData[underscoredKey];
-					// If a manual path exists, redirect immediately!
-					if (data.path) {
-						window.location.href = data.path;
-					}
-				}
-			})();
-		</script>
-
-		<script src="country-info/country-loader.js?v=1.5"></script>
-		<script>
-			window.gtranslateSettings = {
-				default_language: "en",
-				detect_browser_language: true,
-				wrapper_selector: "#translator-anchor",
-				type: "nicedropdown",
-			};
-
-			// This "forces" the text because the widget settings sometimes fail
-			window.addEventListener("load", function () {
-				setTimeout(function () {
-					var select = document.querySelector("#translator-anchor select");
-					if (select) {
-						// Creates a new "Select Language" option at the very top
-						var opt = document.createElement("option");
-						opt.value = "";
-						opt.innerHTML = "Language";
-						opt.selected = true;
-						opt.disabled = true;
-						select.insertBefore(opt, select.firstChild);
-					}
-				}, 1000); // Waits 1 second for the widget to finish loading
-			});
-		</script>
-		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-		<script>
-			// 1. Function to update the tags
-			function updateMetadata(countryName) {
-				const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
-				const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
-				const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
-
-				// Update the Browser Tab
-				document.title = siteTitle;
-
-				// Update Standard Meta
-				const metaDesc = document.querySelector('meta[name="description"]');
-				if (metaDesc) metaDesc.setAttribute("content", siteDesc);
-
-				// Update Open Graph (Social Media)
-				const ogTitle = document.querySelector('meta[property="og:title"]');
-				const ogDesc = document.querySelector('meta[property="og:description"]');
-				const ogUrl = document.querySelector('meta[property="og:url"]');
-
-				if (ogTitle) ogTitle.setAttribute("content", siteTitle);
-				if (ogDesc) ogDesc.setAttribute("content", siteDesc);
-				if (ogUrl) ogUrl.setAttribute("content", pageUrl);
-
-				console.log(`Metadata updated for: ${countryName}`);
-			}
-
-			// 2. Logic to detect the country from the URL and run the update
-			window.addEventListener("DOMContentLoaded", () => {
-				const urlParams = new URLSearchParams(window.location.search);
-				const countryParam = urlParams.get("country"); // Looks for ?country=Name
-
-				if (countryParam) {
-					// Clean up the name (e.g., "New_Zealand" to "New Zealand")
-					const formattedName = countryParam.replace(/_/g, " ");
-					updateMetadata(formattedName);
-				}
-			});
-		</script>
-
-		<script>
-			// 5. UI TOGGLES & EVENT LISTENERS
-			function toggleMenu() {
-				document.getElementById("sideMenu").classList.toggle("open");
-			}
-
-			function toggleDesktopMenu() {
-				const slider = document.getElementById("desktopSlider");
-				if (slider) slider.classList.toggle("active");
-			}
-
-			document.addEventListener("click", (e) => {
-				const sideMenu = document.getElementById("sideMenu");
-				const menuToggle = document.querySelector(".menu-toggle");
-
-				// Close Side Menu
-				if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-					sideMenu.classList.remove("open");
-				}
-			});
-
-			document.addEventListener("DOMContentLoaded", function () {
-				const now = new Date();
-				const options = { year: "numeric", month: "long", day: "numeric" };
-				const dateString = now.toLocaleDateString("en-US", options);
-
-				// Target the mobile ID
-				const mobileEl = document.getElementById("last-updated-mobile");
-				if (mobileEl) mobileEl.textContent = dateString;
-
-				// Target the desktop ID
-				const desktopEl = document.getElementById("last-updated-desktop");
-				if (desktopEl) desktopEl.textContent = dateString;
-			});
-		</script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Gay World News | americas 2026 Guide</title>
+
+    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+
+    <link rel="stylesheet" href="../index.css?v=5.2" />
+    <link rel="stylesheet" href="../regions.css?v=5.2" />
+
+    <script>
+      window.globalData = {};
+    </script>
+    <script src="country-info/country-files/africa-data.js" defer></script>
+    <script src="country-info/country-files/asia-data.js" defer></script>
+    <script src="country-info/country-files/europe-data.js" defer></script>
+    <script src="country-info/country-files/americas-data.js" defer></script>
+    <script src="country-info/country-files/oceania-data.js" defer></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+    <a href="/" class="home-btn">HOME</a>
+    <div id="translator-anchor"></div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div id="sideMenu" class="side-menu">
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <div class="landing-search-wrap">
+            <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+            <div id="searchResults" class="search-results-floating"></div>
+          </div>
+          <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+
+          <a href="../africa.html">AFRICA</a>
+          <a href="../americas.html">AMERICAS</a>
+          <a href="../asia.html">ASIA</a>
+          <a href="../europe.html">EUROPE</a>
+          <a href="../oceania.html">OCEANIA</a>
+          <a href="../about.html">ABOUT</a>
+          <a href="../contact.html">CONTACT</a>
+        </nav>
+        <div class="social-pill-container">
+          <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+
+          <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+              advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+              source information, further links and reading.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for planning a holiday?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+              Gay World News acts as a hub for the best guides so you don't have to look through tens of search results to find a decent review and we also look for both reading
+              and video content if available. We recommend also checking specific country alerts for detailed health and security protocols before departing.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating
+              for the community.
+            </p>
+          </div>
+
+          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+            <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="master-grid-container">
+      <header class="main-header">
+        <h1 class="main-title">Americas</h1>
+      </header>
+
+      <section class="bento-grid" id="countryGrid">
+        <a href="country.html?c=antigua_and_barbuda" class="country-card green">
+          <span>ANTIGUA & BARBUDA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=argentina" class="country-card green">
+          <span>ARGENTINA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=bahamas" class="country-card amber">
+          <span>BAHAMAS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=barbados" class="country-card green">
+          <span>BARBADOS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=belize" class="country-card green">
+          <span>BELIZE <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=bolivia" class="country-card amber">
+          <span>BOLIVIA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=brazil" class="country-card green">
+          <span>BRAZIL <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=british_virgin_islands" class="country-card amber">
+          <span>BRITISH VIRGIN ISLANDS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=canada" class="country-card green">
+          <span>CANADA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=chile" class="country-card green">
+          <span>CHILE <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=colombia" class="country-card green">
+          <span>COLOMBIA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=costa_rica" class="country-card green">
+          <span>COSTA RICA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=cuba" class="country-card green">
+          <span>CUBA <small>(AI)</small></span>
+        </a>
+        <a href="country.html?c=dominica" class="country-card green">
+          <span>DOMINICA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=dominican_republic" class="country-card amber">
+          <span>DOMINICAN REPUBLIC <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=ecuador" class="country-card green">
+          <span>ECUADOR <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=falkland_islands" class="country-card green">
+          <span>Falkland Islands <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=french_guiana" class="country-card green">
+          <span>French Guiana <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=grenada" class="country-card amber">
+          <span>GRENADA <small>(AI)</small></span>
+        </a>
+
+        <a href="europe/greenland.html" class="country-card green">
+          <span>Greenland <small>(GWN)</small></span>
+        </a>
+
+        <a href="country.html?c=guatemala" class="country-card amber">
+          <span>GUATEMALA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=guyana" class="country-card red">
+          <span>GUYANA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=haiti" class="country-card red">
+          <span>HAITI <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=honduras" class="country-card amber">
+          <span>HONDURAS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=jamaica" class="country-card red">
+          <span>JAMAICA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=mexico" class="country-card green">
+          <span>MEXICO <small>(AI)</small></span>
+        </a>
+        <a href="country.html?c=nicaragua" class="country-card amber">
+          <span>NICARAGUA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=panama" class="country-card amber">
+          <span>PANAMA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=paraguay" class="country-card amber">
+          <span>PARAGUAY <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=peru" class="country-card amber">
+          <span>PERU <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=saint_kitts_and_nevis" class="country-card green">
+          <span>ST. KITTS & NEVIS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=saint_lucia" class="country-card green">
+          <span>SAINT LUCIA <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=saint_vincent_and_the_grenadines" class="country-card red">
+          <span>ST. VINCENT & GREN. <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=suriname" class="country-card green">
+          <span>SURINAME <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=trinidad_and_tobago" class="country-card red">
+          <span>TRINIDAD & TOBAGO <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=united_states" class="country-card green">
+          <span>UNITED STATES <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=united_states_virgin_islands" class="country-card amber">
+          <span>UNITED STATES VIRGIN ISLANDS <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=uruguay" class="country-card green">
+          <span>URUGUAY <small>(AI)</small></span>
+        </a>
+
+        <a href="country.html?c=venezuela" class="country-card amber">
+          <span>VENEZUELA <small>(AI)</small></span>
+        </a>
+      </section>
+    </div>
+
+    <div class="footer-branding-wrapper">
+      <div class="footer-site-title">Gay World News</div>
+      <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+    </div>
+
+    <script>
+      window.globalData = window.globalData || {};
+    </script>
+
+    <script src="country-info/country-files/africa-data.js?v=1.5"></script>
+    <script src="country-info/country-files/americas-data.js?v=1.5"></script>
+    <script src="country-info/country-files/asia-data.js?v=1.5"></script>
+    <script src="country-info/country-files/europe-data.js?v=1.5"></script>
+    <script src="country-info/country-files/oceania-data.js?v=1.5"></script>
+
+    <script src="country-info/country-files/europe-data.js?v=1.5"></script>
+    <script src="country-info/country-files/oceania-data.js?v=1.5"></script>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        // Your code uses "c" in some places and "country" in others. This checks both.
+        const rawC = params.get("c") || params.get("country") || "";
+        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
+        const underscoredKey = slug.replace(/[\s-]/g, "_");
+
+        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
+          const data = window.globalData[underscoredKey];
+          // If a manual path exists, redirect immediately!
+          if (data.path) {
+            window.location.href = data.path;
+          }
+        }
+      })();
+    </script>
+
+    <script src="country-info/country-loader.js?v=1.5"></script>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: "#translator-anchor",
+        type: "nicedropdown",
+      };
+
+      // This "forces" the text because the widget settings sometimes fail
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var select = document.querySelector("#translator-anchor select");
+          if (select) {
+            // Creates a new "Select Language" option at the very top
+            var opt = document.createElement("option");
+            opt.value = "";
+            opt.innerHTML = "Language";
+            opt.selected = true;
+            opt.disabled = true;
+            select.insertBefore(opt, select.firstChild);
+          }
+        }, 1000); // Waits 1 second for the widget to finish loading
+      });
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+    <script>
+      // 1. Function to update the tags
+      function updateMetadata(countryName) {
+        const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
+        const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
+        const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
+
+        // Update the Browser Tab
+        document.title = siteTitle;
+
+        // Update Standard Meta
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", siteDesc);
+
+        // Update Open Graph (Social Media)
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+
+        if (ogTitle) ogTitle.setAttribute("content", siteTitle);
+        if (ogDesc) ogDesc.setAttribute("content", siteDesc);
+        if (ogUrl) ogUrl.setAttribute("content", pageUrl);
+
+        console.log(`Metadata updated for: ${countryName}`);
+      }
+
+      // 2. Logic to detect the country from the URL and run the update
+      window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const countryParam = urlParams.get("country"); // Looks for ?country=Name
+
+        if (countryParam) {
+          // Clean up the name (e.g., "New_Zealand" to "New Zealand")
+          const formattedName = countryParam.replace(/_/g, " ");
+          updateMetadata(formattedName);
+        }
+      });
+    </script>
+
+    <script>
+      // 5. UI TOGGLES & EVENT LISTENERS
+      function toggleMenu() {
+        document.getElementById("sideMenu").classList.toggle("open");
+      }
+
+      function toggleDesktopMenu() {
+        const slider = document.getElementById("desktopSlider");
+        if (slider) slider.classList.toggle("active");
+      }
+
+      document.addEventListener("click", (e) => {
+        const sideMenu = document.getElementById("sideMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        // Close Side Menu
+        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          sideMenu.classList.remove("open");
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const now = new Date();
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        const dateString = now.toLocaleDateString("en-US", options);
+
+        // Target the mobile ID
+        const mobileEl = document.getElementById("last-updated-mobile");
+        if (mobileEl) mobileEl.textContent = dateString;
+
+        // Target the desktop ID
+        const desktopEl = document.getElementById("last-updated-desktop");
+        if (desktopEl) desktopEl.textContent = dateString;
+      });
+    </script>
+  </body>
 </html>

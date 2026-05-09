@@ -1,10 +1,11 @@
 Object.assign(globalData, {
-	anguilla: {
-		name: "Anguilla",
-		continent: "americas",
-		status: "amber",
+  anguilla: {
+    name: "Anguilla",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Anguilla maintains a legal framework influenced by its status as a British Overseas Territory. While same-sex sexual activity was decriminalized via the Caribbean Territories (Rescission of Criminal Provisions) Order 2000, there remains a significant lack of constitutional protections explicitly prohibiting discrimination based on sexual orientation or gender identity.</p>
 
         <p>Marriage equality and civil unions are not currently recognized under Anguillian law. Local advocates, including those cited by the Human Dignity Trust, describe the legal environment as stagnant, with no active legislative sessions in 2025 aimed at adoption rights or relationship recognition for LGBTQ+ couples.</p>
@@ -22,7 +23,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is one of "Discrete Tolerance." Public support for LGBTQ+ rights in Anguilla remains low according to 2025 regional polling data from Equaldex, with social life for the local community largely remaining private to avoid social friction.</p>
 
         <p>There has not been a significant social shift toward genuine inclusion in the public sector; however, the tourism-heavy economy has fostered a "don't ask, don't tell" culture that provides a layer of stability for visitors. Local activists report that while violence is rare, verbal harassment and systemic exclusion remain common.</p>
@@ -42,7 +43,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>For 2026, the general safety rating for LGBTQ+ travelers is high, provided that Public Displays of Affection (PDA) are kept to a minimum in non-resort areas. The "De Facto" reality is that tourists are insulated from local social stigma, particularly within international hotel chains.</p>
 
         <p>There are no specific "Safe Haven" neighborhoods like a 'Castro,' but the Sandy Ground area is known for a more relaxed, international vibe. Cis-gay travelers experience little friction, while Trans/Non-Binary travelers may face confusion or scrutiny during airport security if gender presentation does not align with outdated ID laws.</p>
@@ -58,7 +59,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is extremely limited on the island. While general emergency care is available to foreigners, there are no clinics specializing in LGBT health. Travelers are advised to bring a full supply of any necessary medications.</p>
 
         <p>Access to HRT or PrEP is not guaranteed locally. The 2025 European Commission reports on overseas territories indicate that HIV care is accessible but subject to local stigma, which may deter residents from seeking treatment. Emergency protocols are binary-gender focused.</p>
@@ -76,26 +77,27 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Anguilla in 2026 remains a destination of contrasts: high physical safety for tourists alongside a total absence of legal protections for its local LGBTQ+ citizens. The posture is one of "Resort Acceptance," where the economic value of tourism outweighs traditional social conservatism within the confines of luxury spaces.</p>
 
         <p>Travelers should remain aware that the local community operates underground, and advocating for rights publicly can lead to social repercussions. Sources: ILGA World, Human Dignity Trust, and Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/anguilla-lgbti",
-			"https://www.humandignitytrust.org/country-profile/anguilla/",
-			"https://www.equaldex.com/region/anguilla",
-			"https://spartacus.gayguide.travel/gaytravelindex.pdf",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/anguilla-lgbti",
+      "https://www.humandignitytrust.org/country-profile/anguilla/",
+      "https://www.equaldex.com/region/anguilla",
+      "https://spartacus.gayguide.travel/gaytravelindex.pdf",
+    ],
+  },
 
-	antigua_and_barbuda: {
-		name: "Antigua and Barbuda",
-		continent: "americas",
-		status: "amber",
+  antigua_and_barbuda: {
+    name: "Antigua and Barbuda",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In a landmark 2022 ruling, the Eastern Caribbean Supreme Court struck down the "Buggery" and "Indecency" laws, effectively decriminalizing same-sex acts. However, by 2026, the government has yet to codify these changes into comprehensive anti-discrimination statutes or constitutional amendments.</p>
 
         <p>Marriage equality and civil unions are not recognized as of 2026. The government continues to define marriage as a union between a man and a woman. Adoption rights for same-sex couples remain "Data Not Found" in authorized databases, as no legal framework currently exists to support such applications.</p>
@@ -113,7 +115,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture in 2026 is "Cautious Transition." Public sentiment is slowly shifting following decriminalization, but a 2025 Equaldex survey suggests that over 60% of the population still holds conservative views on LGBTQ+ visibility.</p>
 
         <p>The community is beginning to emerge from total secrecy, but "Safe Havens" are still confined to private villa rentals or high-end tourism zones like English Harbour. Intersectionality is a challenge, as local spaces remain heavily male-centric (G-mapped), with little visibility for local QPOC women.</p>
@@ -133,7 +135,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Travelers in 2026 find Antigua a welcoming destination within the "tourist bubble." While the law is no longer a threat, the social reality in St. John’s is one of traditional gender norms. PDA is generally accepted within resorts but may draw unwanted attention in public squares.</p>
 
         <p>Trans and Non-Binary travelers should note that airport security remains traditional. In 2025, minor incidents of "misgendering" during customs were reported. English Harbour is the most 'vibe-friendly' area for LGBT travelers due to its international yachting community.</p>
@@ -150,7 +152,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is largely provided through NGOs like the Caribbean Vulnerable Communities (CVC) coalition rather than state hospitals. General medical care is adequate for emergencies, but sensitivity toward trans patients is low.</p>
 
         <p>Access to PrEP has increased in 2025 through private clinics in St. John's. HRT is difficult to source locally and is not covered by insurance. 2026 health statistics show a gap in mental health services for LGBT youth.</p>
@@ -168,26 +170,27 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Antigua and Barbuda is a nation in mid-shift. The 2022 decriminalization has removed the "De Jure" threat of arrest, but the "De Facto" social stigma remains a significant hurdle for locals. For travelers, it is one of the safer Caribbean options, provided visibility is balanced with local cultural awareness.</p>
 
         <p>Intersectionality is progressing slowly, with 'Safe Havens' still largely focused on the international traveler experience. Sources: Equaldex, Human Dignity Trust, and ILGA World.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/antigua-and-barbuda-lgbti",
-			"https://www.humandignitytrust.org/country-profile/antigua-and-barbuda/",
-			"https://www.equaldex.com/region/antigua-and-barbuda",
-			"https://spartacus.gayguide.travel/gaytravelindex.pdf",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/antigua-and-barbuda-lgbti",
+      "https://www.humandignitytrust.org/country-profile/antigua-and-barbuda/",
+      "https://www.equaldex.com/region/antigua-and-barbuda",
+      "https://spartacus.gayguide.travel/gaytravelindex.pdf",
+    ],
+  },
 
-	argentina: {
-		name: "Argentina",
-		continent: "americas",
-		status: "green",
+  argentina: {
+    name: "Argentina",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Argentina remains a global leader in LGBTQ+ legal protections as of 2026. Same-sex marriage was legalized in 2010, and the country provides full adoption rights and constitutional protections against discrimination based on sexual orientation and gender identity.</p>
 
         <p>In 2025, the government reinforced the Gender Identity Law (Ley de Identidad de Género), which remains one of the most progressive in the world, allowing for gender changes on all official documents without medical or psychological diagnosis. Non-binary "X" markers on IDs are fully implemented.</p>
@@ -205,7 +208,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Confident Openness." Public support for the community is high, particularly in urban centers. 2025 polling data from The Trevor Project/Equaldex shows that over 80% of urban Argentines support equal rights.</p>
 
         <p>The social shift from tolerance to inclusion is deeply rooted, with LGBTQ+ rights treated as a pillar of democratic stability. Visibility is high in all levels of government, including specialized departments for diversity within the Ministry of Women, Genders, and Diversity.</p>
@@ -225,7 +228,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Argentina is exceptionally safe for all LGBTQ+ travelers. Buenos Aires is often called the "Gay Capital of Latin America." PDA is widely accepted in the capital, Rosario, and Mendoza. Rural areas are more conservative but generally respectful of tourists.</p>
 
         <p>Cis-gay, Trans, and Non-Binary travelers experience smooth entry; airport staff are trained on the "X" marker gender identity laws. 'Safe Haven' neighborhoods include Palermo (specifically 'Palermo Soho') and San Telmo in Buenos Aires.</p>
@@ -242,7 +245,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is world-class for LGBTQ+ individuals. Argentina's public healthcare system provides gender-affirming care, including HRT and surgery, free of charge to both citizens and residents, with high sensitivity training for staff.</p>
 
         <p>PrEP is widely available through the "Programa Nacional de Lucha contra los Virus Inmunotransmisibles." HIV care is protected by the "Ley de Respuesta Integral al VIH," ensuring confidentiality and free treatment across the country.</p>
@@ -260,26 +263,27 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Argentina in 2026 is a bastion of equality. It offers a "De Jure" and "De Facto" environment of total safety and legal recognition that is rarely matched globally. For travelers, it is a primary destination where the LGBT community is not just tolerated but integrated into the national identity.</p>
 
         <p>From the 'LGBT Tango' halls of San Telmo to the progressive health clinics, Argentina provides a comprehensive safe haven for all sub-sectors of the rainbow. Sources: Equaldex, ILGA World, and IGLTA.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/argentina-lgbti",
-			"https://www.equaldex.com/region/argentina",
-			"https://www.iglta.org/destinations/argentina/",
-			"https://spartacus.gayguide.travel/gaytravelindex.pdf",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/argentina-lgbti",
+      "https://www.equaldex.com/region/argentina",
+      "https://www.iglta.org/destinations/argentina/",
+      "https://spartacus.gayguide.travel/gaytravelindex.pdf",
+    ],
+  },
 
-	aruba: {
-		name: "Aruba",
-		continent: "americas",
-		status: "green",
+  aruba: {
+    name: "Aruba",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Aruba experienced a historic legal shift on July 12, 2024, when the Dutch Supreme Court ruled that same-sex marriage must be legal in both Aruba and Curaçao. By 2026, marriage equality is fully implemented and recognized as a constitutional right, aligning with the standards of the Kingdom of the Netherlands.</p>
 
         <p>The 2025 legislative sessions finalized adoption and civil union rights to ensure complete parity with heterosexual couples. Discrimination based on sexual orientation is strictly prohibited in the labor market and housing sectors as per the updated civil code.</p>
@@ -297,7 +301,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Relaxed Inclusion." Aruba has long been one of the most LGBTQ-friendly islands in the Caribbean, and the recent legalization of marriage has bolstered public support. 2025 polling shows a high level of acceptance, particularly among the youth and tourism sector.</p>
 
         <p>LGBTQ+ individuals are increasingly visible in high-level hospitality management and local government. Police proactivity is high, with no reported state-sponsored discrimination. The island's motto "One Happy Island" is treated as inclusive of the LGBT community.</p>
@@ -317,7 +321,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Aruba is extremely safe for LGBTQ+ travelers. PDA is generally accepted in most tourist areas and Oranjestad. The island is one of the few Caribbean destinations where Trans and Non-Binary travelers experience minimal friction at airport security.</p>
 
         <p>Oranjestad features several LGBTQ+ owned or friendly 'LGBT Third Spaces' such as '7 West' and 'Jimmy's Place.' While there isn't a dedicated "gay district," Palm Beach is known for its radical inclusivity in its beachfront bars and art galleries.</p>
@@ -334,7 +338,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is of a high standard, benefiting from the Kingdom of the Netherlands' health protocols. LGBTQ-specific healthcare is available through local GPs who are trained in inclusive care. Foreigners can access emergency care with ease.</p>
 
         <p>Access to PrEP and HRT is available through prescriptions at local pharmacies (Boticas). HIV care is managed with high confidentiality and follows Dutch medical standards for treatment and prevention.</p>
@@ -352,26 +356,27 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Aruba in 2026 has successfully moved from being "gay-friendly" to being "gay-equal." The 2024 marriage ruling was the final piece of the puzzle, making Aruba a premier destination for LGBTQ+ couples and travelers seeking safety and luxury in the Caribbean.</p>
 
         <p>The "One Happy Island" branding is a reality for the LGBT community, both local and international. Sources: Dutch Supreme Court Records, Equaldex, and IGLTA.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/aruba-lgbti",
-			"https://www.equaldex.com/region/aruba",
-			"https://www.iglta.org/destinations/aruba/",
-			"https://spartacus.gayguide.travel/gaytravelindex.pdf",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/aruba-lgbti",
+      "https://www.equaldex.com/region/aruba",
+      "https://www.iglta.org/destinations/aruba/",
+      "https://spartacus.gayguide.travel/gaytravelindex.pdf",
+    ],
+  },
 
-	bahamas: {
-		name: "Bahamas",
-		continent: "americas",
-		status: "amber",
+  bahamas: {
+    name: "Bahamas",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Same-sex sexual activity was decriminalized in the Bahamas in 1991, but 2026 data shows a persistent lack of constitutional protections. There are no laws prohibiting discrimination based on sexual orientation or gender identity in employment, housing, or public accommodations.</p>
 
         <p>Marriage equality is not recognized, and the 2016 referendum failed to provide a path for constitutional gender equality, which activists argue further marginalized the LGBTQ+ community. There are no provisions for same-sex civil unions or joint adoption as of early 2026.</p>
@@ -389,7 +394,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Social Conservatism." Public support for LGBTQ+ rights remains low, particularly due to strong influence from religious institutions. 2025 polling suggests a climate of "conditional tolerance" where LGBT individuals are accepted so long as they remain private.</p>
 
         <p>Visibility is low outside of the tourism sector. There have been no major social shifts toward inclusion in 2026. Police protection is available but reports of "mockery" or lack of sensitivity toward LGBTQ+ victims remain a concern for local advocates.</p>
@@ -409,7 +414,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Travelers in the Bahamas should "Exercise Caution" regarding public displays of affection, particularly in Nassau. While the "De Facto" experience for tourists in high-end resorts like Atlantis or Baha Mar is safe, the social reality in local neighborhoods is conservative.</p>
 
         <p>Trans and Non-Binary travelers may face significant scrutiny at airport security and customs. There are no designated "Safe Havens" or gay districts. The community gathers in 'LGBT Third Spaces' that are usually private events or underground telegram groups.</p>
@@ -426,7 +431,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is virtually non-existent in state institutions. While emergency care for foreigners is of high quality, trans-specific care is not provided. Visitors should ensure they have travel insurance that covers evacuation if specialized care is needed.</p>
 
         <p>Access to PrEP is limited but growing through NGOs such as 'Bahamas United.' HRT is not legally categorized for gender-affirming care, making it difficult to access locally. Confidentiality for HIV care is legally mandated but social stigma remains high.</p>
@@ -444,26 +449,27 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The Bahamas in 2026 presents a "Resort Safety" model. It is a top-tier destination for luxury travel where LGBT tourists are safe as long as they adhere to "De Jure" norms. However, for local LGBTQ+ people, the lack of protective laws and high religious influence creates a climate of invisibility.</p>
 
         <p>The security posture remains stable but cautious. Sources: ILGA World, Human Dignity Trust, and Equaldex.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/bahamas-lgbti",
-			"https://www.humandignitytrust.org/country-profile/bahamas/",
-			"https://www.equaldex.com/region/bahamas",
-			"https://spartacus.gayguide.travel/gaytravelindex.pdf",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/bahamas-lgbti",
+      "https://www.humandignitytrust.org/country-profile/bahamas/",
+      "https://www.equaldex.com/region/bahamas",
+      "https://spartacus.gayguide.travel/gaytravelindex.pdf",
+    ],
+  },
 
-	barbados: {
-		name: "Barbados",
-		continent: "americas",
-		status: "amber",
+  barbados: {
+    name: "Barbados",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Barbados maintains the legal progress achieved in late 2022 when the High Court Decriminalized same-sex sexual activity by striking down colonial-era "buggery" and "serious indecency" laws. However, there is currently no explicit constitutional protection against discrimination based on sexual orientation or gender identity.</p>
 
         <p>Same-sex marriage and civil unions are not recognized under Barbadian law in 2026. While the government has discussed the possibility of a referendum on the matter, no legislative sessions in 2025 resulted in a formal change. Joint adoption rights for same-sex couples also remain unavailable. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/barbados/" target="_blank">Human Dignity Trust</a> notes that while the "threat of prison is gone, the shield of equality is missing."</p>
@@ -480,7 +486,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is one of "Cautious Openness." Following the 2022 decriminalization, 2025 polling data from Equaldex indicates a slow but steady increase in public acceptance, though rural sentiment remains heavily influenced by traditional religious values.</p>
 
         <p>The social shift is characterized by "tolerance at a distance." While the community is safer from state persecution, rights are not yet seen as a "pillar of stability" in the same vein as more progressive neighbors. LGBTQ+ individuals are becoming more visible in the arts and tourism sectors, though higher government offices remain largely cis-heteronormative.</p>
@@ -499,7 +505,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Barbados is generally safe for LGBTQ+ travelers, particularly in tourist-heavy areas like the Platinum Coast. For 2026, the advice is "Open but Discreet." While you are unlikely to face official trouble, excessive PDA in non-resort areas like Oistins or rural parishes may result in verbal hostility.</p>
 
         <p>Cis-gay travelers often find the island very welcoming in high-end venues. Trans and Non-Binary travelers may face more "curiosity" or scrutiny at airport security, as local ID laws do not recognize non-binary identities. St. Lawrence Gap is a known "Safe Haven" with several inclusive bars and cafes.</p>
@@ -515,7 +521,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided primarily through NGOs rather than state-led initiatives. Foreigners have access to high-quality general healthcare in private clinics. Sensitivity training for state nurses is currently an ongoing project led by local advocacy groups.</p>
 
         <p>PrEP is available in Barbados through the Ladymeade Reference Unit and private pharmacies. HRT is available but often requires private consultation and is not subsidized for non-residents. 2025 reports indicate that HIV care remains robust, though stigma occasionally prevents local uptake.</p>
@@ -532,21 +538,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Barbados is in a transitional state in 2026. While the legal threat of the "buggery law" is a thing of the past, the social fabric remains conservative, requiring travelers and locals to navigate space with a degree of discretion. It is currently the safest it has ever been for the community, but "full equality" is still a legislative goal rather than a reality.</p>
 
         <p>The island offers a unique blend of Caribbean tradition and emerging LGBT visibility, making it a "watch-zone" for positive growth. Sources: ILGA World, Spartacus Index 2026, and Human Dignity Trust.</p>
     `,
 
-		sources: ["https://database.ilga.org/barbados-lgbti", "https://www.humandignitytrust.org/country-profile/barbados/", "https://www.equaldex.com/region/barbados"],
-	},
+    sources: ["https://database.ilga.org/barbados-lgbti", "https://www.humandignitytrust.org/country-profile/barbados/", "https://www.equaldex.com/region/barbados"],
+  },
 
-	belize: {
-		name: "Belize",
-		continent: "americas",
-		status: "amber",
+  belize: {
+    name: "Belize",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Belize continues to be governed by the landmark 2016 Caleb Orozco case which decriminalized same-sex acts. While the Constitution was interpreted to include "sexual orientation" under the protection of "sex," there are still no specific statutory laws passed by the National Assembly to explicitly ban discrimination in employment or housing.</p>
 
         <p>Marriage equality is not legal in Belize. Civil unions and adoption for same-sex couples also remain unrecognized as of early 2026. Legislative focus in 2025 was primarily on economic issues, with no significant movement on family law for the LGBTQ+ community. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/belize/" target="_blank">Human Dignity Trust</a> notes that Belize remains a judicial pioneer with a hesitant legislature.</p>
@@ -563,7 +570,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Stable Discretion." Public support is divided; 2025 polling shows high acceptance in the tourism hubs of San Pedro and Caye Caulker, but persistent conservative social pressure in more rural southern districts.</p>
 
         <p>The shift toward inclusion is slow. While open hostility is rare in public, the community is not yet integrated into the "pillar of stability" framework seen in more progressive states. Visibility is rising among younger generations in Belize City and Belmopan.</p>
@@ -582,7 +589,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Belize is very safe for travelers who stay in the island districts (Ambergris Caye and Caye Caulker). The 2026 advice is "Resort-Centric Visibility." On the mainland, especially in Belize City, it is safer to be discreet with PDA.</p>
 
         <p>Trans and Non-Binary travelers are advised that while Belize is legally decriminalized, administrative systems remain binary. Airport security is professional but traditional. Safe Havens include San Pedro, which has several inclusive boutique hotels and bars.</p>
@@ -598,7 +605,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Health services for LGBTQ+ individuals are primarily managed through the Ministry of Health's HIV/AIDS program and UNIBAM. Private healthcare in the Cayes is inclusive, though specialized trans healthcare is essentially non-existent in-country.</p>
 
         <p>PrEP is available in Belize through specific wellness centers and NGOs. Access to HRT is extremely limited and usually sourced through private arrangements from neighboring Mexico or Guatemala. 2026 emergency protocols are standard but lack SOGI-specific inclusivity.</p>
@@ -615,21 +622,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Belize in 2026 remains the most progressive Central American nation of former British descent. Its judicial decriminalization provides a baseline of safety that allows for a flourishing (if discreet) local community and a very welcoming environment for international tourists in its island paradises.</p>
 
         <p>The dichotomy between the open Cayes and the conservative mainland defines the LGBT experience here. Sources: Spartacus 2026, ILGA World, and Caleb Orozco legal archives.</p>
     `,
 
-		sources: ["https://database.ilga.org/belize-lgbti", "https://www.humandignitytrust.org/country-profile/belize/", "https://www.equaldex.com/region/belize"],
-	},
+    sources: ["https://database.ilga.org/belize-lgbti", "https://www.humandignitytrust.org/country-profile/belize/", "https://www.equaldex.com/region/belize"],
+  },
 
-	bermuda: {
-		name: "Bermuda",
-		continent: "americas",
-		status: "amber",
+  bermuda: {
+    name: "Bermuda",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Bermuda's legal landscape in 2026 is defined by the Privy Council's 2022 ruling which effectively ended the right to same-sex marriage. Currently, same-sex couples have access to Domestic Partnerships, which provide equivalent legal rights to marriage but remain separate in name and status.</p>
 
         <p>Adoption rights and constitutional protections against discrimination based on sexual orientation are active in 2026. However, the lack of "marriage" status remains a point of contention for local advocates who view it as a "separate but equal" doctrine. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/bermuda/" target="_blank">Human Dignity Trust</a> notes Bermuda's status as a rare example of marriage rights being granted and then partially retracted.</p>
@@ -646,7 +654,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Professional Politeness." Public support is moderately high in the business and tourism sectors, but 2025 polling suggests a conservative core remains within the local population regarding the definition of marriage.</p>
 
         <p>Social inclusion is high in the capital, Hamilton, where the LGBTQ+ community is active in the international business sector. The rights of the community are generally respected as a pillar of economic stability, given Bermuda's reliance on high-end tourism and finance.</p>
@@ -665,7 +673,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Bermuda is extremely safe for LGBTQ+ travelers. The 2026 advice is "Confident Inclusion." PDA is generally accepted in Hamilton and major resort areas. De Facto safety is very high; tourists are treated with the utmost professionalism.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers will find the entry process smooth. Bermuda's international airport is modern and staff are generally well-trained. A specific Safe Haven district is the "Front Street" area of Hamilton, known for its inclusive bars and high-end dining.</p>
@@ -681,7 +689,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Bermuda offers high-quality healthcare. LGBTQ-specific needs are generally understood by private practitioners in Hamilton. Foreigners can expect professional and inclusive treatment in most medical institutions.</p>
 
         <p>PrEP is available in Bermuda through private clinics and the government health department. Access to HRT is available for residents and visitors with valid prescriptions. 2026 emergency protocols are highly inclusive and staff are trained in patient confidentiality.</p>
@@ -698,21 +706,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Bermuda in 2026 is a safe, high-end destination that currently navigates a "Domestic Partnership" middle ground. While the local community continues to fight for the word "marriage," the practical safety and legal rights for LGBT travelers and residents are among the highest in the Atlantic/Caribbean region.</p>
 
         <p>Travelers will find a welcoming, sophisticated environment. Sources: IGLTA, ILGA World, and Bermuda Domestic Partnership Act filings.</p>
     `,
 
-		sources: ["https://database.ilga.org/bermuda-lgbti", "https://www.humandignitytrust.org/country-profile/bermuda/", "https://www.equaldex.com/region/bermuda"],
-	},
+    sources: ["https://database.ilga.org/bermuda-lgbti", "https://www.humandignitytrust.org/country-profile/bermuda/", "https://www.equaldex.com/region/bermuda"],
+  },
 
-	bolivia: {
-		name: "Bolivia",
-		continent: "americas",
-		status: "amber",
+  bolivia: {
+    name: "Bolivia",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Bolivia remains in a complex legal state. While the 2009 Constitution prohibits discrimination based on sexual orientation and gender identity, the 2023 Constitutional Court ruling (0076/2023) has created hurdles for the full implementation of same-sex civil unions. However, same-sex "Living Unions" (unión libre) remain technically legal through specific judicial wins.</p>
 
         <p>Marriage equality is not recognized in Bolivia as of early 2026. Adoption for same-sex couples is also not legal. Legislative sessions in late 2025 saw heavy debate but no finality on a comprehensive civil union bill. Voices from the Ground: <a href="https://database.ilga.org/bolivia-lgbti" target="_blank">ILGA World</a> describes Bolivia as having strong "paper protections" but weak legislative follow-through.</p>
@@ -729,7 +738,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Vigilant Presence." Public support is growing in cities like La Paz and Santa Cruz, but 2025 polling shows deep conservatism in the Altiplano and rural indigenous communities. Intersectionality is a major theme, with the "Gay-Aymara" movement gaining visibility.</p>
 
         <p>The shift toward inclusion is stalled by religious influence. While the community has constitutional rights, they are not yet a "pillar of stability" in the social fabric. LGBT Third Spaces include "The Little Bookstore" (El Librito) in La Paz and several underground inclusive art galleries.</p>
@@ -748,7 +757,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Travelers in Bolivia should exercise "Moderate Discretion." The 2026 advice is "Urban Inclusion, Rural Caution." PDA is accepted in parts of La Paz (Sopocachi district) but can lead to confrontation in Santa Cruz or El Alto.</p>
 
         <p>Cis-gay travelers often find La Paz welcoming. Trans/Non-Binary travelers are advised that despite the identity law, administrative systems frequently fail to recognize non-binary markers. Safe Havens include the Sopocachi neighborhood in La Paz, known for its bohemian and LGBT-friendly vibe.</p>
@@ -764,7 +773,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided by local NGOs like ADESPROC Libertad. State healthcare is inclusive on paper, but trans-sensitivity in public hospitals in 2026 remains a major issue. Foreigners should seek private clinics in La Paz.</p>
 
         <p>PrEP is available in Bolivia primarily through private wellness centers and specific international aid programs. Access to HRT is legal but sourcing consistent quality often requires navigating the private market. 2026 emergency protocols are generally binary-centric.</p>
@@ -781,21 +790,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Bolivia in 2026 is a country of constitutional highs and legislative lows. While the law on the books is among the most progressive in the world regarding discrimination, the daily social reality for the LGBT community—especially those from indigenous backgrounds—is one of careful navigation and persistent struggle for visibility.</p>
 
         <p>Travelers will find a beautiful, complex environment where discretion is the key to safety. Sources: Equaldex, ILGA World, and local NGO ADESPROC Libertad.</p>
     `,
 
-		sources: ["https://database.ilga.org/bolivia-lgbti", "https://www.equaldex.com/region/bolivia", "https://www.humandignitytrust.org/country-profile/bolivia/"],
-	},
+    sources: ["https://database.ilga.org/bolivia-lgbti", "https://www.equaldex.com/region/bolivia", "https://www.humandignitytrust.org/country-profile/bolivia/"],
+  },
 
-	bonaire_saba_sint_eustatius: {
-		name: "Bonaire, Saba, & Sint Eustatius (BES Islands)",
-		continent: "americas",
-		status: "green",
+  bonaire_saba_sint_eustatius: {
+    name: "Bonaire, Saba, & Sint Eustatius (BES Islands)",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
 <p>As special municipalities of the Netherlands, these islands enjoy full marriage equality and some of the world's strongest anti-discrimination protections as of 2026.</p>
 <p><strong>The Statute vs. Ground Gap:</strong> Low. The legal system is Dutch-run, ensuring consistent rights. In 2026, the community reports High Trust in the Dutch Caribbean Police Force (KPCN).</p> 
 <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -806,7 +816,7 @@ Object.assign(globalData, {
 <a href="https://www.facebook.com/eqbonaire/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
 </div> </div> `,
 
-		safety: ` 
+    safety: ` 
 <p>Legal safety is absolute; physical safety is high. The islands are very laid-back, though Saba is notably the most progressive per capita.</p>
 <p><strong>Street Pulse & Policing:</strong> High Response. In 2026, visible travelers are welcomed, particularly in the dive communities. Unlike some other Caribbean nations, there is no state-sanctioned hostility. Social harmony is the norm, especially in the capital of Kralendijk.</p> 
 <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -815,7 +825,7 @@ Object.assign(globalData, {
 <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #18</strong> 
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Strong performance due to the direct application of Dutch Civil Law.</p> </div> </div> `,
 
-		travel: ` 
+    travel: ` 
 <p>2026 Traveler Rating: Highly Visible. These are the "Blue Zones" of the Caribbean for LGBTQ+ people.</p> 
 <p><strong>Safe Havens vs. Red Zones:</strong> 
 * **Green Zones:** Kralendijk (Bonaire), Windwardside (Saba), and Oranjestad (Statia). 
@@ -830,7 +840,7 @@ Object.assign(globalData, {
 <p style="color: #fff; font-size: 0.85rem;">Saba is particularly famous for being "The Unspoiled Queen" and is exceptionally inclusive for its tiny size.</p> 
 </div> </div> `,
 
-		health: ` 
+    health: ` 
 <p><strong>Standard of Care:</strong> Excellent medical facilities linked to the Dutch system. PrEP and HIV care are easily accessible.</p> 
 <p><strong>Traveler Essential:</strong> Ensure your insurance covers the BES islands specifically, as they are not part of the EU's Schengen healthcare zone directly.</p>
 <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
@@ -840,22 +850,23 @@ Object.assign(globalData, {
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Bonaire - High-quality care with Dutch medical standards and sensitive staff.</p> </div> 
 </div> `,
 
-		posture: ` 
+    posture: ` 
 <p>The "Dutch Tropical" posture in the BES islands offers a unique blend of Caribbean relaxation and European legal certainty. The 2026 verdict is "Caribbean Sanctuary."</p> `,
 
-		sources: [
-			{ label: "Ground Intel: BES Reporter", url: "https://bes-reporter.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: Equaldex (Bonaire)", url: "https://www.equaldex.com/region/bonaire", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Bonaire Pride", url: "https://bonairepride.com/", button: "EVENT DETAILS →" },
-		],
-	},
+    sources: [
+      { label: "Ground Intel: BES Reporter", url: "https://bes-reporter.com/", button: "READ RECENT UPDATES →" },
+      { label: "Official Index: Equaldex (Bonaire)", url: "https://www.equaldex.com/region/bonaire", button: "VIEW LEGAL DATA →" },
+      { label: "Community Event: Bonaire Pride", url: "https://bonairepride.com/", button: "EVENT DETAILS →" },
+    ],
+  },
 
-	brazil: {
-		name: "Brazil",
-		continent: "americas",
-		status: "green",
+  brazil: {
+    name: "Brazil",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Brazil continues its status as a legal safe haven in 2026. Same-sex marriage has been recognized since 2013 via the National Council of Justice ruling, and the Supreme Court (STF) ruled in 2019 that homophobia and transphobia are crimes equivalent to racism.</p>
 
         <p>Constitutional protections are strong, with the STF consistently upholding LGBTQ+ rights as fundamental human rights. Adoption for same-sex couples is fully legal. In 2025, the government established the National Secretary for the Rights of LGBTQ+ People to oversee inclusive public policies.</p>
@@ -872,7 +883,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Vibrant but Vigilant." While public support is very high in urban centers (São Paulo, Rio, Salvador), Brazil remains a nation with high rates of violence against transgender individuals. 2025 polling shows a sharp divide between liberal cities and conservative interior regions.</p>
 
         <p>The social shift toward inclusion is a "pillar of stability" in the metropolitan cultural fabric. LGBTQ+ individuals are visible in the highest levels of government, including the first trans deputies in Congress. LGBT Third Spaces abound, from the "Balaio" art collective in São Paulo to the LGBT bookstores of Rio.</p>
@@ -891,7 +902,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Brazil is a world-class destination for LGBTQ+ travelers. The 2026 advice is "Celebrate Urbanely." PDA is widely accepted in São Paulo, Rio (Ipanema/Farme de Amoedo), and Salvador. De Jure and De Facto safety for tourists is very high.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers experience smooth entry. Safe Havens include the Frei Caneca district in São Paulo and the Santa Teresa neighborhood in Rio. For travelers, the "Tourist Police" are generally very helpful and LGBTQ-literate.</p>
@@ -907,7 +918,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Brazil's Unified Health System (SUS) provides comprehensive LGBTQ-specific care, including free gender-affirming surgeries and HRT for citizens. Foreigners have access to excellent private healthcare in the main cities.</p>
 
         <p>PrEP and PEP are available free of charge through the SUS network across the country. HIV care in Brazil is a global model, providing universal access to ART. 2026 emergency protocols are highly inclusive and prioritize patient self-identification.</p>
@@ -924,21 +935,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Brazil in 2026 is a powerhouse of LGBTQ+ culture and legal rights. While it faces internal challenges regarding transphobia in specific regions, the urban centers offer a level of freedom and celebration that is virtually unmatched globally. It is a must-visit for any LGBT traveler, provided they stay within the well-mapped safety zones of the major cities.</p>
 
         <p>The dichotomy between judicial brilliance and local social struggle continues to define the nation. Sources: IGLTA, ILGA World, and Spartacus 2026.</p>
     `,
 
-		sources: ["https://database.ilga.org/brazil-lgbti", "https://www.equaldex.com/region/brazil", "https://www.iglta.org/destinations/brazil/"],
-	},
+    sources: ["https://database.ilga.org/brazil-lgbti", "https://www.equaldex.com/region/brazil", "https://www.iglta.org/destinations/brazil/"],
+  },
 
-	british_virgin_islands: {
-		name: "British Virgin Islands",
-		continent: "americas",
-		status: "amber",
+  british_virgin_islands: {
+    name: "British Virgin Islands",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, the British Virgin Islands (BVI) remains a jurisdiction where consensual same-sex sexual activity is legal, a status maintained since the UK's Caribbean Territories (Criminal Law) Order 2000. While the 2007 Constitution provides a general protection against discrimination, it does not explicitly cite sexual orientation as a protected category, leaving a significant legal gap in private-sector employment and housing.</p>
 
         <p>Same-sex marriage is not legal in the BVI. Despite various legal challenges across the British Overseas Territories, the BVI government has not moved to implement marriage equality or civil unions as of early 2026. Adoption rights for same-sex couples are also not recognized under current local law. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/british-virgin-islands/" target="_blank">Human Dignity Trust</a> notes that the lack of constitutional clarity continues to marginalize the local community.</p>
@@ -955,7 +967,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Polite Discretion." While public violence is rare, 2025 polling suggests a conservative social climate influenced by religious traditionalism. Public support for LGBTQ+ rights remains low among the local population, although the community is generally tolerated in the context of the territory's high-end tourism industry.</p>
 
         <p>The social shift toward inclusion is minimal. Rights are not yet viewed as a "pillar of stability" by the local government, and visibility remains low. "LGBT Third Spaces" are virtually non-existent; the community primarily gathers in private homes or via secure Telegram groups to maintain safety and privacy.</p>
@@ -974,7 +986,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>The BVI is generally safe for LGBTQ+ travelers who maintain discretion. The 2026 advice is "Resort-Centric Visibility." While major resorts on Virgin Gorda are welcoming, public displays of affection (PDA) in Road Town or on public ferries can draw unwanted negative attention.</p>
 
         <p>Cis-gay travelers typically face no issues, while Trans/Non-Binary travelers may face scrutiny during airport security or ferry boarding due to binary-focused ID laws. There are no designated "Safe Haven" districts, though the community-led "BVI Pride" events (often small and semi-private) saw a "Moderate" security posture in 2025.</p>
@@ -990,7 +1002,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>General healthcare in the BVI is adequate, but LGBTQ-specific healthcare is extremely limited. There are no dedicated LGBT clinics, and foreigners should rely on private medical facilities for higher levels of confidentiality.</p>
 
         <p>Access to HRT and Prep is limited; most local community members source these medications through private pharmacies or via travel to the US Virgin Islands. There are no legal restrictions for medical staff, but sensitivity toward LGBTQ+ issues varies significantly.</p>
@@ -1007,25 +1019,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The BVI in 2026 presents a "wait and see" security posture. While physically safe for the community, the lack of progress in family law and identity recognition means that the local LGBT experience is largely one of invisibility. Travelers are welcomed for their economic contribution but are expected to adhere to a social code of discretion.</p>
 
         <p>Progress in 2025 was limited to private advocacy, with no major legislative shifts recorded. Sources: ILGA World, Spartacus Index 2026, and Human Dignity Trust.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/british-virgin-islands-lgbti",
-			"https://www.humandignitytrust.org/country-profile/british-virgin-islands/",
-			"https://www.equaldex.com/region/british-virgin-islands",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/british-virgin-islands-lgbti",
+      "https://www.humandignitytrust.org/country-profile/british-virgin-islands/",
+      "https://www.equaldex.com/region/british-virgin-islands",
+    ],
+  },
 
-	canada: {
-		name: "Canada",
-		continent: "americas",
-		status: "green",
+  canada: {
+    name: "Canada",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Canada continues to be a global leader in LGBTQ+ legal frameworks in 2026. The Canadian Charter of Rights and Freedoms provides robust protections against discrimination based on sexual orientation and gender identity or expression. Conversion therapy has been strictly banned nationwide since 2022.</p>
 
         <p>Marriage equality has been legal since the Civil Marriage Act of 2005. Same-sex couples enjoy full adoption rights and access to reproductive technologies. 2025 legislative sessions in provinces like Ontario and British Columbia further strengthened protections for LGBT parents. Voices from the Ground: <a href="https://www.equaldex.com/region/canada" target="_blank">Equaldex</a> highlights Canada as one of the few nations with consistent "triple-A" legal ratings.</p>
@@ -1042,7 +1055,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Confident Openness." 2025/2026 polling data from the European Commission Reports and local firms indicate that over 85% of Canadians support LGBTQ+ equality. Rights are treated as a foundational pillar of Canadian social stability and multiculturalism.</p>
 
         <p>The social shift from tolerance to inclusion is deeply rooted. LGBT Third Spaces are abundant, including the "Glad Day Bookshop" in Toronto (the world's oldest LGBTQ+ bookstore) and numerous inclusive community cafes. Intersectionality is a priority, with dedicated spaces and funding for QPOC and Indigenous (Two-Spirit) individuals.</p>
@@ -1061,7 +1074,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Canada is arguably the safest destination in the world for LGBTQ+ travelers. The 2026 advice is "Total Visibility." PDA is common and accepted in all urban areas. Even in rural areas, travelers can expect high levels of safety and respect.</p>
 
         <p>Both Cis-Gay and Trans/Non-Binary travelers face zero issues with airport security or local ID laws. "Safe Haven" neighborhoods like "The Village" (Toronto), "Le Village" (Montreal), and "Davie Village" (Vancouver) are world-famous. Montreal Pride in August 2026 is a significant event, with a "Peaceful and Celebratory" security posture recorded in 2025.</p>
@@ -1077,7 +1090,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Canada offers world-class, LGBTQ-specific healthcare. Public health clinics in major cities provide specialized care for the community, including comprehensive trans-focused services. Foreigners have access to these services, though costs vary by province.</p>
 
         <p>HRT, Prep, and HIV care are widely available and often subsidized through provincial programs. In 2026, many provinces have removed wait times for Prep. There are no legal restrictions for medical staff regarding the provision of gender-affirming care.</p>
@@ -1094,21 +1107,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Canada in 2026 remains a global sanctuary for the LGBTQ+ community. With ironclad legal protections and a society that largely views diversity as its greatest strength, the nation provides a security posture of absolute confidence. Recent 2025 updates have focused on protecting trans youth and expanding healthcare access.</p>
 
         <p>Whether traveling to the urban hubs or exploring the wilderness, the community can expect a level of safety and inclusion that sets the global pace. Sources: ILGA World, IGLTA, and the Spartacus Index 2026.</p>
     `,
 
-		sources: ["https://database.ilga.org/canada-lgbti", "https://www.equaldex.com/region/canada", "https://www.iglta.org/destinations/canada/"],
-	},
+    sources: ["https://database.ilga.org/canada-lgbti", "https://www.equaldex.com/region/canada", "https://www.iglta.org/destinations/canada/"],
+  },
 
-	cayman_islands: {
-		name: "Cayman Islands",
-		continent: "americas",
-		status: "amber",
+  cayman_islands: {
+    name: "Cayman Islands",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, the Cayman Islands maintains the legalization of civil unions through the Civil Partnership Act 2020, which was enacted by the Governor following a complex legal battle. While this provides same-sex couples with rights equivalent to marriage, the term "marriage" remains legally reserved for heterosexual couples under the current Constitution.</p>
 
         <p>Discrimination based on sexual orientation is prohibited in public-sector employment under the Bill of Rights, but protections in the private sector remain inconsistent. Joint adoption by same-sex couples is legal. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/cayman-islands/" target="_blank">Human Dignity Trust</a> notes that while legal hurdles have been cleared, legislative hostility remains a theme in 2025 reports.</p>
@@ -1125,7 +1139,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Reserved Tolerance." Public support is growing within the younger demographic and the expatriate business community, but 2025 polling shows persistent social conservatism among the older Caymanian population. The islands are physically safe but socially discreet.</p>
 
         <p>A social shift toward inclusion is visible in the corporate finance sector, where many firms have established LGBTQ+ inclusion networks. However, "LGBT Third Spaces" are limited to small, semi-public inclusive art galleries in George Town; most community activity is "G-mapped" and focused on private social gatherings.</p>
@@ -1144,7 +1158,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>The Cayman Islands is one of the safest Caribbean destinations for LGBTQ+ travelers. The 2026 advice is "Polished Discretion." PDA is generally fine within major resorts on Seven Mile Beach but is discouraged in more rural areas or traditional churches.</p>
 
         <p>Cis-gay travelers face no administrative issues. Trans/Non-Binary travelers are advised that binary gender markers are the standard for all local services; airport security is professional but follows traditional protocols. "Safe Haven" areas include the luxury resorts of Seven Mile Beach.</p>
@@ -1160,7 +1174,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>The Cayman Islands has a high standard of private healthcare. While there are no LGBTQ-specific clinics, medical professionals are generally trained in international standards of patient confidentiality. Foreigners should utilize private hospitals in George Town.</p>
 
         <p>Access to HRT and Prep is available through private pharmacies with a valid prescription. HIV care is available and managed with a high degree of privacy. In 2026, there are no legal restrictions for medical staff regarding LGBTQ+ care.</p>
@@ -1177,25 +1191,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The Cayman Islands in 2026 offers a security posture of "High Physical Safety, Low Social Visibility." For travelers, it is a stable and welcoming luxury destination. For locals, the Civil Partnership Act remains the primary anchor of legal status, though the social climate continues to evolve slowly toward genuine inclusion.</p>
 
         <p>Recent reports from 2025 highlight the success of corporate inclusion programs as a driver for social shift. Sources: ILGA World, IGLTA, and the Spartacus Index 2026.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/cayman-islands-lgbti",
-			"https://www.humandignitytrust.org/country-profile/cayman-islands/",
-			"https://www.equaldex.com/region/cayman-islands",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/cayman-islands-lgbti",
+      "https://www.humandignitytrust.org/country-profile/cayman-islands/",
+      "https://www.equaldex.com/region/cayman-islands",
+    ],
+  },
 
-	chile: {
-		name: "Chile",
-		continent: "americas",
-		status: "green",
+  chile: {
+    name: "Chile",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Chile maintains a robust legal framework for LGBTQ+ rights in 2026. The Law Against Discrimination (Ley Zamudio) provides a solid foundation for protecting the community. Consensual same-sex sexual activity has been legal since 1999, with a uniform age of consent established in 2022.</p>
 
         <p>Marriage equality has been fully legal since 2022, including full adoption rights for same-sex couples. 2025 legislative sessions saw further efforts to streamline bureaucratic hurdles for LGBT families. Voices from the Ground: <a href="https://www.equaldex.com/region/chile" target="_blank">Equaldex</a> highlights Chile's rapid legal progress over the last five years as a regional benchmark.</p>
@@ -1212,7 +1227,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Progressive Inclusion." 2025/2026 polling data from local agencies and European Commission reports suggest over 70% public support for LGBTQ+ rights. Rights are increasingly treated as a pillar of social stability and democratic health.</p>
 
         <p>Social inclusion is highly visible in Santiago and Valparaíso. "LGBT Third Spaces" like the "Centro Cultural Manuel Rojas" and various inclusive cafes in the Bellas Artes district are thriving. Intersectionality is a growing focus, with local NGOs emphasizing the inclusion of QPOC and feminine-presenting individuals.</p>
@@ -1231,7 +1246,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Chile is very safe for LGBTQ+ travelers. The 2026 advice is "Open Visibility." PDA is common and accepted in Santiago's Bellavista and Lastarria neighborhoods. De Jure and De Facto safety for tourists are well-aligned.</p>
 
         <p>Cis-gay travelers face no issues. Trans/Non-Binary travelers are advised that while identity laws are progressive, administrative speed can vary; however, airport security is professional. "Safe Haven" districts include Bellavista (Santiago) and the Alegre hill in Valparaíso.</p>
@@ -1247,7 +1262,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Chile offers specialized LGBTQ-specific healthcare through clinics like "Hospital Clínico San Borja Arriarán." General healthcare is high-quality, and foreigners can access professional care in private clinics across major cities.</p>
 
         <p>HRT, Prep, and HIV care are widely available. In 2026, access to Prep has been expanded through the public health system. There are no legal restrictions for medical staff regarding the provision of inclusive care.</p>
@@ -1264,21 +1279,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Chile in 2026 presents a security posture of "Stable and Progressive." With comprehensive legal rights and a society that increasingly embraces diversity, the nation is one of the safest for the community in Latin America. Recent 2025 updates have focused on expanding trans rights and family protections.</p>
 
         <p>Travelers can expect a welcoming environment in urban centers and a respectful atmosphere throughout the country. Sources: ILGA World, IGLTA, and the Spartacus Index 2026.</p>
     `,
 
-		sources: ["https://database.ilga.org/chile-lgbti", "https://www.equaldex.com/region/chile", "https://www.iglta.org/destinations/chile/"],
-	},
+    sources: ["https://database.ilga.org/chile-lgbti", "https://www.equaldex.com/region/chile", "https://www.iglta.org/destinations/chile/"],
+  },
 
-	colombia: {
-		name: "Colombia",
-		continent: "americas",
-		status: "green",
+  colombia: {
+    name: "Colombia",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Colombia maintains its position as one of the most legally progressive nations for LGBTQ+ rights in 2026. The Constitutional Court has been a primary driver, with landmark rulings protecting against discrimination based on sexual orientation and gender identity since the late 1990s.</p>
 
         <p>Marriage equality has been legal since 2016, and same-sex couples enjoy full adoption rights. 2025 legislative updates focused on streamlining the recognition of LGBT parents in the national registry. Voices from the Ground: <a href="https://www.equaldex.com/region/colombia" target="_blank">Equaldex</a> highlights the Constitutional Court's consistent protection of the community as a regional safeguard.</p>
@@ -1295,7 +1311,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Vibrant but Vigilant." While public support is very high in urban centers like Bogotá and Medellín, 2025/2026 polling indicates persistent social challenges in rural areas. Rights are treated as a pillar of democratic stability in the cities, but safety concerns for trans women remain a priority.</p>
 
         <p>Social inclusion is highly visible in "LGBT Third Spaces" like "Theatron" in Bogotá (the largest LGBTQ+ club in Latin America) and numerous inclusive cafes in Medellín's El Poblado. Intersectionality is a key focus for local NGOs like "Colombia Diversa," emphasizing the needs of QPOC and trans individuals.</p>
@@ -1314,7 +1330,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Colombia is a safe and welcoming destination for LGBTQ+ travelers. The 2026 advice is "City-Centric Confidence." PDA is common and accepted in Bogotá's Chapinero district and Medellín's El Poblado. De Jure safety is high, though travelers should exercise standard urban caution.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers face no administrative issues; identity laws are very inclusive. "Safe Haven" districts include "Chapinero" (Bogotá) and "El Poblado" (Medellín). Bogotá Pride in June 2026 is a massive event, with a "Safe and Protected" security posture recorded in 2025.</p>
@@ -1330,7 +1346,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Colombia offers high-quality, LGBTQ-specific healthcare through clinics like "Emaus" in Bogotá. General healthcare is excellent in major cities, and foreigners can access professional care in private institutions.</p>
 
         <p>HRT, Prep, and HIV care are widely available. In 2026, the public health system has streamlined the provision of gender-affirming care. There are no legal restrictions for medical staff regarding inclusive practices.</p>
@@ -1347,21 +1363,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Colombia in 2026 presents a security posture of "Vibrant Potential." With some of the world's most progressive laws and a thriving LGBT culture in its cities, it is a destination that truly celebrates diversity. Recent 2025 updates have focused on expanding trans and non-binary rights.</p>
 
         <p>While urban centers are safe and welcoming, the community should remain aware of standard safety protocols in rural zones. Sources: ILGA World, IGLTA, and the Spartacus Index 2026.</p>
     `,
 
-		sources: ["https://database.ilga.org/colombia-lgbti", "https://www.equaldex.com/region/colombia", "https://www.iglta.org/destinations/colombia/"],
-	},
+    sources: ["https://database.ilga.org/colombia-lgbti", "https://www.equaldex.com/region/colombia", "https://www.iglta.org/destinations/colombia/"],
+  },
 
-	costa_rica: {
-		name: "Costa Rica",
-		continent: "americas",
-		status: "green",
+  costa_rica: {
+    name: "Costa Rica",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Costa Rica remains a regional leader in LGBTQ+ legal frameworks within Central America. Following the landmark 2020 legalization of marriage equality, the constitutional protections for sexual orientation are robust, primarily driven by the Inter-American Court of Human Rights (IACHR) rulings which the state recognizes as binding. There are no criminalization laws, and anti-discrimination protections are active in both public and private sectors as of early 2026.</p>
 
         <p>Marriage equality is fully implemented, allowing same-sex couples the same rights as heterosexual couples regarding civil unions, tax benefits, and inheritance. Adoption rights for same-sex couples are legally recognized, though local advocates from 2025 reports note that administrative processes can still face bureaucratic delays compared to opposite-sex pairs. Voices from the Ground: <a href="https://www.equaldex.com/region/costa-rica" target="_blank">Equaldex</a> highlights the 2020 shift as the "point of no return" for legal equality in the nation.</p>
@@ -1378,7 +1395,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is one of "Confident Openness," especially in the Central Valley (San José). 2025/2026 polling data indicates that public support for LGBTQ+ rights has stabilized at approximately 60%, with higher acceptance among citizens under 40. The nation’s "Pura Vida" philosophy has largely absorbed LGBT visibility as a component of social stability and tourism growth.</p>
 
         <p>The social shift from tolerance to inclusion is evident in the presence of "LGBT Third Spaces" like "Lula’s Café" and various inclusive art galleries in Barrio Escalante. While rural areas remain more conservative, urban centers have moved toward genuine inclusion, with spaces being largely inclusive of QPOC and feminine-presenting individuals. The "Safe Havens" in San José are diverse and not strictly "G-mapped."</p>
@@ -1397,7 +1414,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Costa Rica is rated as "Very Safe" for LGBTQ+ travelers in 2026. Travelers are encouraged to be open in San José and Manuel Antonio. While the law is progressive (De Jure), visitors should note that De Facto acceptance in remote northern regions may still require moderate discretion regarding PDA.</p>
 
         <p>Differentiating between identities: Cis-Gay travelers face high levels of visibility. Trans/Non-Binary travelers benefit from a 2025 update to airport security protocols that recognize non-binary markers on foreign passports. Safe Haven neighborhoods include "Barrio Escalante" and "San Pedro" in San José, and the entirety of "Manuel Antonio" in Quepos.</p>
@@ -1413,7 +1430,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is accessible in San José through the "Caja" (CCSS) for residents and high-quality private clinics like "CIMA" for foreigners. 2026 data shows that medical institutions in the capital have high SOGI competency levels.</p>
 
         <p>Access to Prep and HRT is available through private pharmacies without significant legal hurdles for foreigners. HIV care is state-subsidized for citizens, and private care is efficient for travelers. There are no legal restrictions for medical staff providing gender-affirming care as of 2026.</p>
@@ -1430,21 +1447,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Costa Rica presents a "Green" security posture in 2026, serving as a beacon of legal and social progress in Central America. Travelers can expect a high level of physical safety and a welcoming atmosphere in most urban and coastal destinations.</p>
 
         <p>Advocates from organizations like "Diversidad" emphasize that while legal battles are largely won, the focus for 2026 is on social education in rural areas. Sources: Spartacus Index 2026, ILGA World, and Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/costa-rica-lgbti", "https://www.equaldex.com/region/costa-rica", "https://www.iglta.org/destinations/costa-rica/"],
-	},
+    sources: ["https://database.ilga.org/costa-rica-lgbti", "https://www.equaldex.com/region/costa-rica", "https://www.iglta.org/destinations/costa-rica/"],
+  },
 
-	cuba: {
-		name: "Cuba",
-		continent: "americas",
-		status: "amber",
+  cuba: {
+    name: "Cuba",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Cuba’s legal landscape is defined by the revolutionary 2022 Family Code, which remains one of the most progressive in the Caribbean. Consensual same-sex acts are legal, and the 2019 Constitution explicitly prohibits discrimination based on sexual orientation and gender identity, a rare level of constitutional protection for the region.</p>
 
         <p>Marriage equality is fully legal under the 2022 Code, which also permits same-sex couples to adopt children and access assisted reproduction. However, 2025 reports from independent activists suggest that while the law is advanced, implementation in rural judicial circuits can still be uneven. Voices from the Ground: <a href="https://www.equaldex.com/region/cuba" target="_blank">Equaldex</a> notes that the Family Code was a "tectonic shift" in Cuban civil rights.</p>
@@ -1461,7 +1479,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture in 2026 is "Regulated Inclusion." Public support is high within state-sanctioned events, but independent activism remains under heavy surveillance. Polling from CENESEX in late 2025 shows a significant rise in acceptance of same-sex parenting among the general population, though political tension colors all forms of public gathering.</p>
 
         <p>The social shift is state-driven. "LGBT Third Spaces" beyond bars are primarily found in Havana, such as the "FAC" (Fábrica de Arte Cubano) which acts as an inclusive art space. Private community gatherings often happen in "Casas Particulares" to avoid state scrutiny of independent groups. Intersectionality is officially promoted but local activists describe it as a "work in progress," where QPOC visibility is high but political autonomy for these groups is low.</p>
@@ -1480,7 +1498,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Cuba is "Safe but Monitored" for LGBTQ+ travelers. Travelers in Havana and Varadero can be generally open. PDA is accepted in tourist zones. However, independent activism or political statements related to LGBT rights can lead to deportation or detention in 2026.</p>
 
         <p>Cis-Gay travelers face little friction in high-end hotels. Trans/Non-Binary travelers may face gender-binary questioning at smaller provincial airports, despite federal laws. Safe Haven neighborhoods include "Vedado" in Havana, which remains the epicenter of Cuban LGBT life. The Malecón in Vedado is a de facto gathering point at night.</p>
@@ -1496,7 +1514,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ+ specific healthcare is provided through CENESEX in Havana. Foreigners generally use "Clínica Cira García" for specialized care. Availability of medical supplies remains a challenge in 2026 due to the economic situation, regardless of legal rights.</p>
 
         <p>Access to Prep and HRT is theoretically available but inconsistent in supply. Travelers should bring a full supply of personal medications. There are no legal restrictions for medical staff, and gender-affirming surgeries have been state-funded for citizens since 2008.</p>
@@ -1513,21 +1531,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Cuba presents an "Amber" posture in 2026 due to the friction between advanced family laws and limited political freedoms. It is one of the most legally progressive islands in the Caribbean for family rights, yet traveler experience is impacted by the country's economic instability and political monitoring.</p>
 
         <p>Local activists describe the situation as a "paradox of progress," where one can marry but not independently protest. Sources: CENESEX 2025 Reports, ILGA World, and Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/cuba-lgbti", "https://www.equaldex.com/region/cuba", "https://www.humandignitytrust.org/country-profile/cuba/"],
-	},
+    sources: ["https://database.ilga.org/cuba-lgbti", "https://www.equaldex.com/region/cuba", "https://www.humandignitytrust.org/country-profile/cuba/"],
+  },
 
-	curacao: {
-		name: "Curaçao",
-		continent: "americas",
-		status: "green",
+  curacao: {
+    name: "Curaçao",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of 2026, Curaçao has entered a new legal era following the landmark 2024 ruling by the Dutch Supreme Court which mandated that marriage equality must be available on the island. Consensual same-sex sexual activity is legal, and the island now adheres to the high legal standards of the Kingdom of the Netherlands regarding civil rights and non-discrimination.</p>
 
         <p>Marriage equality is fully legal as of 2025, allowing same-sex couples the same civil rights as opposite-sex couples. This includes joint adoption and residency rights. Voices from the Ground: <a href="https://www.equaldex.com/region/curacao" target="_blank">Equaldex</a> highlights that the 2024 ruling ended years of legal uncertainty, though local social conservative resistance remains present in 2026.</p>
@@ -1544,7 +1563,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Respectful Pluralism." 2025/2026 polling data shows that while the religious community remains significant, approximately 55% of the population supports the new marriage laws. The island’s economy, heavily dependent on Dutch and American tourism, has rapidly adapted to inclusive safety standards.</p>
 
         <p>The social shift is visible in "LGBT Third Spaces" like "Floris Suite Hotel" and various inclusive galleries in Pietermaai. These spaces are notably intersectional, welcoming QPOC and Dutch-Antillean LGBT individuals. While some "G-mapped" focus remains, the shift toward "Safe Havens" for the entire rainbow is palpable in the 2026 social landscape.</p>
@@ -1563,7 +1582,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Curaçao is "Extremely Safe" for LGBTQ+ travelers in 2026. PDA is generally accepted in Willemstad and beach resorts. The "De Facto" safety has aligned with "De Jure" laws, making it a premier Caribbean hub for LGBT travelers.</p>
 
         <p>Travel intel: Cis-Gay travelers have a long-standing established scene. Trans/Non-Binary travelers benefit from Dutch-standard passport recognition. The primary "Safe Haven" neighborhood is "Pietermaai" in Willemstad, known for its inclusive vibe and boutique hospitality.</p>
@@ -1579,7 +1598,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is integrated into the Dutch-Caribbean health system. Foreigners have access to excellent facilities like the "Curaçao Medical Center" (CMC). SOGI competency is standard among younger medical professionals in 2026.</p>
 
         <p>Access to Prep and HRT is high, with Dutch-standard pharmaceutical supplies available. There are no legal restrictions for medical staff. HIV care is comprehensive and follows European protocols.</p>
@@ -1596,21 +1615,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Curaçao represents a "Green" posture in 2026, solidifying its place as a legal and social sanctuary for the LGBTQ+ community in the Caribbean. The transition to marriage equality has been remarkably smooth, supported by both judicial mandate and tourism interests.</p>
 
         <p>Local advocates from "Curaçao Pride" report that the island is now a primary destination for LGBT destination weddings in 2026. Sources: Dutch Supreme Court 2024 Archive, Spartacus Index 2026, and IGLTA.</p>
     `,
 
-		sources: ["https://database.ilga.org/curacao-lgbti", "https://www.equaldex.com/region/curacao", "https://www.iglta.org/destinations/curacao/"],
-	},
+    sources: ["https://database.ilga.org/curacao-lgbti", "https://www.equaldex.com/region/curacao", "https://www.iglta.org/destinations/curacao/"],
+  },
 
-	dominica: {
-		name: "Dominica",
-		continent: "americas",
-		status: "amber",
+  dominica: {
+    name: "Dominica",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Dominica has undergone a historic legal transformation following the April 2024 High Court ruling that decriminalized consensual same-sex sexual activity. The court struck down sections of the Sexual Offences Act that had previously criminalized "buggery," marking a definitive end to colonial-era anti-gay laws on the island.</p>
 
         <p>Despite decriminalization, there are no laws for marriage equality, civil unions, or same-sex adoption as of early 2026. Anti-discrimination protections in the private sector are still "Data Not Found" in the 2025 legislative sessions. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/dominica/" target="_blank">Human Dignity Trust</a> notes that the 2024 ruling was a monumental victory but that statutory protections are still lagging.</p>
@@ -1627,7 +1647,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Transition." 2025/2026 social sentiment is mixed; while the law has changed, social conservatism remains deeply rooted in religious institutions. Polling data from late 2025 suggests a slow rise in tolerance among the youth, but the broader community still prioritizes discretion.</p>
 
         <p>The social shift toward genuine inclusion is in its infancy. There are no dedicated public "LGBT Third Spaces" like bars or cafes. The community gathers privately via underground Telegram groups or "secret house parties." Intersectionality is currently "G-mapped," with almost no visible spaces for feminine-presenting or trans QPOC individuals in the public sphere.</p>
@@ -1646,7 +1666,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Dominica is "Safe but Discreet" for LGBTQ+ travelers in 2026. The 2024 decriminalization means no legal risk for tourists, but PDA is strongly discouraged in public spaces like Roseau. De Jure (law) is now neutral, but De Facto (social) practice remains conservative.</p>
 
         <p>Travel intel: Cis-Gay travelers face little issue if maintaining discretion. Trans/Non-Binary travelers are advised that binary-gendered social norms are standard; airport security is professional but operates on a binary basis. There are no specific "Safe Haven" neighborhoods, though high-end eco-resorts are universally inclusive.</p>
@@ -1662,7 +1682,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent in the public sector. Foreigners should rely on private medical contacts. 2026 reports suggest medical staff in Roseau are generally professional but may lack specific SOGI training.</p>
 
         <p>Access to Prep and HRT is limited and usually requires private import or specialized prescriptions from neighboring islands like Martinique. HIV care is available through national programs, but confidentiality concerns are cited by local advocates in 2025.</p>
@@ -1679,21 +1699,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Dominica presents an "Amber" posture in 2026. While the 2024 decriminalization removed the threat of arrest, the island is currently in a state of social flux. It is no longer a "no-go" zone, but the community remains largely underground to avoid social friction.</p>
 
         <p>Travelers are welcomed but encouraged to prioritize discretion outside of private resorts. Sources: High Court Ruling 2024, ILGA World, and Human Dignity Trust.</p>
     `,
 
-		sources: ["https://database.ilga.org/dominica-lgbti", "https://www.humandignitytrust.org/country-profile/dominica/", "https://www.equaldex.com/region/dominica"],
-	},
+    sources: ["https://database.ilga.org/dominica-lgbti", "https://www.humandignitytrust.org/country-profile/dominica/", "https://www.equaldex.com/region/dominica"],
+  },
 
-	dominican_republic: {
-		name: "Dominican Republic",
-		continent: "americas",
-		status: "amber",
+  dominican_republic: {
+    name: "Dominican Republic",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, the Dominican Republic remains a nation with a dual identity: consensual same-sex acts are legal, but constitutional protections are restricted. The 2010 Constitution specifically defines marriage as a union between a man and a woman, effectively banning marriage equality. No comprehensive anti-discrimination laws exist that specifically name sexual orientation or gender identity.</p>
 
         <p>Marriage, civil unions, and adoption rights for same-sex couples are non-existent in 2026. Legislative sessions in 2025 saw a failure to pass an updated Penal Code that would have included hate crime protections, largely due to pressure from religious sectors. Voices from the Ground: <a href="https://www.equaldex.com/region/dominican-republic" target="_blank">Equaldex</a> describes the legal environment as stagnant and "hostile to progress."</p>
@@ -1710,7 +1731,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Vigilant Tolerance." 2025/2026 polling indicates that while 45% of the youth support LGBTQ+ visibility, the national sentiment is heavily influenced by the Catholic and Evangelical churches. The country is safe for the community within specific tourism bubbles, but public visibility can lead to verbal harassment.</p>
 
         <p>The social shift is confined to "LGBT Third Spaces" in Santo Domingo’s Zona Colonial, such as "La Alpargatería" (an inclusive shoe shop/cafe) and "Espacio Libre." Intersectionality is a challenge; spaces are often "G-mapped," though inclusive of QPOC. Trans individuals, especially feminine-presenting, face significant safety risks and social exclusion. Private gathering via Telegram is the norm for safety.</p>
@@ -1729,7 +1750,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>The Dominican Republic is "Safe for Tourists, Cautious for Activists" in 2026. PDA is generally tolerated in Punta Cana and the Zona Colonial (Santo Domingo) but can be risky in rural towns. De Jure laws are non-existent, and De Facto safety depends entirely on location.</p>
 
         <p>Travel intel: Cis-Gay travelers face little issue in luxury resorts. Trans/Non-Binary travelers should expect binary-based processing at airports; some 2025 reports mentioned "secondary screening" for trans individuals whose IDs did not match their presentation. The primary "Safe Haven" neighborhood is the "Zona Colonial" in Santo Domingo.</p>
@@ -1745,7 +1766,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided primarily by local NGOs like "Cotuí Diversa" and "TRANSSA." Public hospitals lack SOGI training in 2026. Foreigners should use private clinics like "Centro de Diagnóstico Medicina Avanzada" (CEDIMAT).</p>
 
         <p>Access to Prep and HRT is available through private channels and NGOs, though availability fluctuates. HIV care is available but often stigmatized in public clinics. There are no legal restrictions for medical staff, but personal bias is reported by 2025 activists.</p>
@@ -1762,25 +1783,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The Dominican Republic presents an "Amber" posture in 2026. While it is a safe and welcoming destination for LGBT tourists within resort bubbles, the local community remains legally vulnerable and socially marginalized. There is a sharp divide between the "tourist experience" and the "local reality."</p>
 
         <p>Progress in 2026 is driven by tourism economic pressure rather than domestic legislative will. Sources: ILGA World, Spartacus Index 2026, and TRANSSA 2025 Reports.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/dominican-republic-lgbti",
-			"https://www.equaldex.com/region/dominican-republic",
-			"https://www.humandignitytrust.org/country-profile/dominican-republic/",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/dominican-republic-lgbti",
+      "https://www.equaldex.com/region/dominican-republic",
+      "https://www.humandignitytrust.org/country-profile/dominican-republic/",
+    ],
+  },
 
-	ecuador: {
-		name: "Ecuador",
-		continent: "americas",
-		status: "amber",
+  ecuador: {
+    name: "Ecuador",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Ecuador maintains one of the more progressive constitutional frameworks in the Andean region as of 2026. Article 11 of the Constitution explicitly prohibits discrimination based on sexual orientation and gender identity. While the legal foundation is strong, 2025 reports from local activists indicate that enforcement remains a challenge in rural provinces.</p>
 
         <p>Marriage equality has been legal since the landmark 2019 Constitutional Court ruling. Same-sex couples enjoy full rights to civil unions and inheritance; however, adoption remains a contested legal area with significant administrative barriers. Voices from the Ground: <a href="https://www.equaldex.com/region/ecuador" target="_blank">Equaldex</a> notes that despite legal parity, "de facto" discrimination in adoption persists.</p>
@@ -1797,7 +1819,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Openness." While urban centers like Quito and Guayaquil have visible LGBT communities, 2025/2026 polling suggests a divide: 58% of urban youth support inclusion, whereas rural sentiment remains heavily influenced by traditional religious values.</p>
 
         <p>Social shifts are moving toward inclusion in "LGBT Third Spaces" like "Casa Somos" and various inclusive art galleries in Quito’s La Mariscal district. These spaces are generally inclusive of QPOC and feminine-presenting individuals, though many "Safe Havens" in Guayaquil remain predominantly "G-mapped" (cis-gay male focused) due to historical networking patterns.</p>
@@ -1816,7 +1838,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Ecuador is generally safe for LGBTQ+ travelers who stick to major cities. Discretion is advised in rural Amazonian or Andean villages. In 2026, the social reality in Quito's "La Mariscal" district is one of open acceptance, contrasting with the conservative "De Facto" climate in smaller towns.</p>
 
         <p>Cis-gay travelers often find the nightlife in Quito vibrant. Trans/Non-Binary travelers should be aware that while ID laws are progressive, airport security and hotel staff may still operate on binary assumptions. The "Safe Haven" neighborhood of choice is "La Mariscal" in Quito.</p>
@@ -1832,7 +1854,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is primarily found in Quito through NGOs like "Fundación Equidad." Public healthcare is inclusive by law, but specialized SOGI training is inconsistent among staff in 2026.</p>
 
         <p>Access to PrEP and HRT is available in major cities, though supply chains in 2025 were occasionally disrupted. HIV care is state-provided but local advocates warn of "confidentiality leaks" in smaller clinics.</p>
@@ -1849,21 +1871,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Ecuador in 2026 presents a landscape of "High Legal Protection vs. Moderate Social Resistance." It is a safe destination for travelers who remain culturally aware of the urban-rural divide.</p>
 
         <p>The 2025 social climate was marked by increased trans visibility, though legislative progress has slowed since the marriage equality win. Sources: ILGA World, Spartacus Index 2026, and Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/ecuador-lgbti", "https://www.equaldex.com/region/ecuador", "https://www.humandignitytrust.org/country-profile/ecuador/"],
-	},
+    sources: ["https://database.ilga.org/ecuador-lgbti", "https://www.equaldex.com/region/ecuador", "https://www.humandignitytrust.org/country-profile/ecuador/"],
+  },
 
-	el_salvador: {
-		name: "El Salvador",
-		continent: "americas",
-		status: "red",
+  el_salvador: {
+    name: "El Salvador",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, the legal status of LGBTQ+ individuals in El Salvador is precarious. While consensual same-sex acts are legal, there are no constitutional protections against discrimination based on sexual orientation or gender identity. The 2025-2026 legislative sessions have seen a further retrenchment of conservative values.</p>
 
         <p>Marriage equality is not recognized, and the government has explicitly moved to block any discussion of civil unions. Adoption for same-sex couples is prohibited. Voices from the Ground: <a href="https://www.equaldex.com/region/el-salvador" target="_blank">Equaldex</a> notes that the current administration has actively removed "gender perspective" from state policies.</p>
@@ -1880,7 +1903,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Hostile Oversight." 2025/2026 polling data shows a decline in public support for LGBT rights, coinciding with state-led rhetoric prioritizing "traditional family structures." Physical safety for the community is significantly compromised by both state and non-state actors.</p>
 
         <p>There are no public "LGBT Third Spaces" like bookstores or cafes; even bars operate under high discretion. The community gathers privately via "underground telegram groups." Local activists describe "Safe Havens" as virtually non-existent, with most spaces being "G-mapped" and extremely exclusive due to security concerns. Intersectionality is a luxury the community currently cannot afford to publicly manifest.</p>
@@ -1899,7 +1922,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>El Salvador is rated "High Risk" for LGBTQ+ travelers. Extreme discretion is advised. While the law is not "restrictive" regarding acts (De Jure), the "De Facto" social reality is one of targeted violence. Tourists are less likely to be targets than locals but are not immune.</p>
 
         <p>Cis-gay travelers should avoid all PDA. Trans/Non-Binary travelers face extreme risks at airport security and in public, as local ID laws do not recognize their identity. There are no "Safe Haven" districts; the upscale "Escalón" area in San Salvador is the only place where some discretion can be lowered within private clubs.</p>
@@ -1915,7 +1938,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent in state facilities. Local NGOs like "Entre Amigos" provide limited, underground medical support. Public institutional inclusivity is non-existent in 2026.</p>
 
         <p>Access to PrEP and HRT is extremely limited and largely depends on international donations through NGOs. Medical staff are not legally restricted from providing care, but social stigma often prevents it.</p>
@@ -1932,21 +1955,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>El Salvador in 2026 is a "Red" zone for LGBTQ+ persons. The rapid erosion of civil liberties has specifically targeted the LGBT community, making it one of the most repressive non-criminalized nations in the world.</p>
 
         <p>Advocates from "COMCAVIS" report that 2025 saw a record number of LGBTQ+ Salvadorans seeking asylum abroad. Sources: ILGA World, Spartacus Index 2026, and Human Dignity Trust.</p>
     `,
 
-		sources: ["https://database.ilga.org/el-salvador-lgbti", "https://www.humandignitytrust.org/country-profile/el-salvador/", "https://www.equaldex.com/region/el-salvador"],
-	},
+    sources: ["https://database.ilga.org/el-salvador-lgbti", "https://www.humandignitytrust.org/country-profile/el-salvador/", "https://www.equaldex.com/region/el-salvador"],
+  },
 
-	falkland_islands: {
-		name: "Falkland Islands",
-		continent: "americas",
-		status: "green",
+  falkland_islands: {
+    name: "Falkland Islands",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>The Falkland Islands (Malvinas) operate under a legal framework that mirrors the United Kingdom, offering some of the strongest LGBTQ+ protections in the South Atlantic as of 2026. Consensual same-sex acts are legal, and comprehensive anti-discrimination laws are in effect.</p>
 
         <p>Marriage equality has been legal since 2017. Same-sex couples have the same rights as heterosexual couples, including adoption. Voices from the Ground: <a href="https://www.equaldex.com/region/falkland-islands" target="_blank">Equaldex</a> notes that the legislative alignment with the UK ensures a stable legal environment for LGBT families.</p>
@@ -1963,7 +1987,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Open Acceptance." Due to the very small population (approx. 3,500), the community is integrated into the general social fabric. 2025/2026 social climate is described as friendly and inclusive.</p>
 
         <p>There are no specific "LGBT Third Spaces" like bookstores due to the small scale of the economy, but all public spaces in Stanley are considered "Safe Havens." Intersectionality is high, as the community is too small for sub-sector segregation. Local sentiment is one of genuine inclusion, treating rights as a pillar of their British-aligned democratic values.</p>
@@ -1982,7 +2006,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>The Falkland Islands are "Extremely Safe" for LGBTQ+ travelers. Public PDA is accepted. The "De Facto" social reality matches the "De Jure" laws. Discretion is rarely needed in Stanley.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers face no unique hurdles; airport security is professional and follows international standards. The entire town of Stanley is a "Safe Haven."</p>
@@ -1998,7 +2022,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is provided through the King Edward VII Memorial Hospital. It is LGBTQ-inclusive and mirrors UK NHS standards. Foreigners have access to professional care.</p>
 
         <p>Access to PrEP and HRT is available, though travelers are advised to bring their own supplies due to the island's remote supply chain. There are no legal restrictions for medical staff.</p>
@@ -2015,25 +2039,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The Falkland Islands maintain a "Green" posture in 2026. It is one of the safest locations in the Southern Hemisphere for LGBTQ+ individuals, benefitting from strong UK-aligned legal protections.</p>
 
         <p>While the scene is quiet, the atmosphere is universally welcoming. Sources: ILGA World, Equaldex, and UK Foreign Office reports.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/falkland-islands-lgbti",
-			"https://www.equaldex.com/region/falkland-islands",
-			"https://www.humandignitytrust.org/country-profile/falkland-islands/",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/falkland-islands-lgbti",
+      "https://www.equaldex.com/region/falkland-islands",
+      "https://www.humandignitytrust.org/country-profile/falkland-islands/",
+    ],
+  },
 
-	french_guiana: {
-		name: "French Guiana",
-		continent: "americas",
-		status: "green",
+  french_guiana: {
+    name: "French Guiana",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>French Guiana, as an overseas department of France, is fully integrated into the French legal system as of 2026. This means LGBTQ+ individuals enjoy the same constitutional protections as citizens in Paris. Article 1 of the French Constitution and subsequent anti-discrimination laws are in full effect.</p>
 
         <p>Marriage equality has been legal since 2013 (Loi Taubira). Same-sex couples have full adoption rights and access to medically assisted reproduction (PMA). Voices from the Ground: <a href="https://www.equaldex.com/region/french-guiana" target="_blank">Equaldex</a> notes that the legal framework is significantly more advanced than neighboring South American nations.</p>
@@ -2050,7 +2075,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Progressive but Localized." 2025/2026 polling suggests that while French laws are respected, local social sentiment can be more conservative than in mainland France. However, safety for the community is generally high.</p>
 
         <p>Social inclusion is visible in Cayenne, though "LGBT Third Spaces" are often integrated into broader cultural hubs rather than being standalone LGBTQ+ businesses. "Safe Havens" are inclusive of QPOC, as the region is majority-POC. Intersectionality is a natural part of the local LGBT experience. The community gathers openly in cafes and inclusive art spaces in Cayenne.</p>
@@ -2069,7 +2094,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>French Guiana is "Very Safe" for LGBTQ+ travelers. Public PDA is accepted in Cayenne and Kourou. The "De Facto" social reality is one of quiet acceptance. Travelers are advised to follow the same common-sense safety protocols as in France.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers benefit from French passport and ID recognition standards. Airport security is professional. The "Safe Haven" neighborhood of choice is the city center of Cayenne.</p>
@@ -2085,7 +2110,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is provided under the French national system. Facilities in Cayenne are LGBTQ-inclusive. Foreigners with EU cards have easy access; others are advised to have insurance.</p>
 
         <p>Access to PrEP and HRT is high and follows French medical protocols. There are no legal restrictions for medical staff. HIV care is comprehensive and state-funded for citizens.</p>
@@ -2102,22 +2127,23 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>French Guiana represents a "Green" posture in 2026, offering a unique intersection of European legal rights and Amazonian culture. It remains the most legally secure region for LGBTQ+ people in South America.</p>
 
         <p>While the LGBT scene is more understated than in Paris, the safety and legal protections are absolute. Sources: French Ministry of Justice, ILGA World, and Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/french-guiana-lgbti", "https://www.equaldex.com/region/french-guiana", "https://www.humandignitytrust.org/country-profile/french-guiana/"],
-	},
+    sources: ["https://database.ilga.org/french-guiana-lgbti", "https://www.equaldex.com/region/french-guiana", "https://www.humandignitytrust.org/country-profile/french-guiana/"],
+  },
 
-	greenland: {
-		name: "Greenland",
-		continent: "americas",
-		status: "green",
-		path: "americas/greenland.html",
+  greenland: {
+    name: "Greenland",
+    continent: "americas",
+    status: "green",
+    path: "americas/greenland.html",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of 2026, Greenland operates under a legal framework that is fully aligned with Danish human rights standards, providing some of the most robust LGBTQ+ protections in the Arctic. Consensual same-sex acts are legal, and comprehensive anti-discrimination laws are strictly enforced.</p>
 
         <p>Marriage equality has been legal since 2016. Same-sex couples enjoy the same rights as heterosexual couples, including adoption and access to fertility treatments. Voices from the Ground: <a href="https://www.equaldex.com/region/greenland" target="_blank">Equaldex</a> highlights that Greenland has successfully localized Danish progressive values.</p>
@@ -2134,7 +2160,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Quiet Inclusion." 2025/2026 social climate data indicates high levels of acceptance within the small, close-knit population of Nuuk. Public support for LGBTQ+ rights is treated as a natural extension of Greenlandic communal values.</p>
 
         <p>There are few standalone "LGBT Third Spaces" like bookstores due to the small economy, but the "Katuaq" Cultural Center in Nuuk acts as a de facto "Safe Haven" and inclusive art gallery. Intersectionality is high, with local spaces being fully inclusive of Inuit QPOC. The community is integrated, and "Safe Havens" are inclusive of all sub-sectors of the rainbow.</p>
@@ -2153,7 +2179,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Greenland is "Extremely Safe" for LGBTQ+ travelers. Public PDA is accepted. The "De Facto" social reality is one of respectful indifference to sexual orientation. Travelers are welcomed as part of the growing eco-tourism sector.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers face no hurdles; airport security in Nuuk and Kangerlussuaq is professional and follows European standards. The capital city, Nuuk, is the primary "Safe Haven."</p>
@@ -2169,7 +2195,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is provided by the Queen Ingrid's Hospital in Nuuk and is LGBTQ-inclusive. It follows Danish standards of care. Foreigners are advised to have travel insurance.</p>
 
         <p>Access to PrEP and HRT is available via the hospital system, though travelers should bring their own supplies due to the remote nature of the island. There are no legal restrictions for medical staff.</p>
@@ -2186,21 +2212,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Greenland maintains a "Green" posture in 2026. It offers a safe, Arctic sanctuary with world-class legal protections and a social environment that is welcoming to all LGBTQ+ travelers.</p>
 
         <p>The 2025 social climate remained stable and progressive. Sources: ILGA World, Equaldex, and Danish Government human rights reports.</p>
     `,
 
-		sources: ["https://database.ilga.org/greenland-lgbti", "https://www.equaldex.com/region/greenland", "https://www.humandignitytrust.org/country-profile/greenland/"],
-	},
+    sources: ["https://database.ilga.org/greenland-lgbti", "https://www.equaldex.com/region/greenland", "https://www.humandignitytrust.org/country-profile/greenland/"],
+  },
 
-	grenada: {
-		name: "Grenada",
-		continent: "americas",
-		status: "amber",
+  grenada: {
+    name: "Grenada",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Grenada remains a complex legal environment. While Section 431 of the Criminal Code—which criminalizes "unnatural connection"—technically remains on the books, legal experts from Human Dignity Trust note that it is rarely enforced against consenting adults in private. There are currently no constitutional protections explicitly mentioning sexual orientation or gender identity.</p>
 
         <p>Marriage equality and civil unions are not recognized under Grenadian law. Local advocacy groups, such as GrenCHAP, continue to lobby for the repeal of colonial-era buggery laws, describing the current legislative stance as a "lingering shadow of the past" (Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/grenada/" target="_blank">Human Dignity Trust</a>).</p>
@@ -2217,7 +2244,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Discreet Tolerance." 2025 polling indicates that while younger generations in St. George’s show increasing support for inclusion, the general public remains socially conservative. Public support for LGBTQ+ rights is not yet a political pillar, though there is a marked decrease in state-sponsored homophobic rhetoric compared to the previous decade.</p>
 
         <p>LGBT Third Spaces are virtually non-existent in a public capacity; there are no dedicated LGBTQ+ bookstores or cafes. The community primarily gathers privately through closed social media groups or underground house parties. Sentiment regarding intersectionality is largely "G-mapped" (cis-gay male focused), with feminine-presenting and trans individuals facing higher rates of social scrutiny.</p>
@@ -2236,7 +2263,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Grenada is generally safe for LGBTQ+ travelers as long as a high degree of discretion is maintained. The 2026 social reality in tourist hubs like Grand Anse is one of quiet acceptance for foreigners, but PDA is strongly discouraged for all travelers.</p>
 
         <p>Cis-gay travelers typically navigate the island without incident by adhering to local social norms. Trans/Non-Binary travelers may face more scrutiny at airport security or during ID checks, as 2026 protocols do not yet recognize non-binary markers. There are no designated "Safe Haven" neighborhoods, though high-end resorts are considered inclusive bubbles.</p>
@@ -2252,7 +2279,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is limited. HIV/AIDS services are available through the Ministry of Health, but social stigma can make these spaces uncomfortable for LGBT patients. General safety for foreigners in medical institutions is high, though specialized SOGI-sensitive care is rare.</p>
 
         <p>Access to PrEP has improved in 2025-2026 through regional partnerships, though HRT remains difficult to source locally. Medical staff are not legally prohibited from treating LGBTQ+ patients, but personal biases can affect the quality of care. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2269,21 +2296,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Grenada in 2026 is a destination characterized by "Legal Stagnation vs. Social Evolution." While laws remain restrictive on paper, the island is increasingly open to the global LGBT community through its tourism sector.</p>
 
         <p>Security for the local community remains dependent on discretion, but the absence of active prosecution provides a window for grassroots advocacy. Sources: Human Dignity Trust, Equaldex, Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/grenada/", "https://www.equaldex.com/region/grenada", "https://database.ilga.org/grenada-lgbti"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/grenada/", "https://www.equaldex.com/region/grenada", "https://database.ilga.org/grenada-lgbti"],
+  },
 
-	guadeloupe: {
-		name: "Guadeloupe",
-		continent: "americas",
-		status: "green",
+  guadeloupe: {
+    name: "Guadeloupe",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As an overseas department of France, Guadeloupe is governed by the French Constitution and the European Convention on Human Rights. In 2026, LGBTQ+ individuals enjoy full constitutional protections, including strict laws against discrimination in employment, housing, and public services based on sexual orientation or gender identity.</p>
 
         <p>Marriage equality has been legal since the 2013 "Loi Taubira." Same-sex couples have full access to joint adoption and medically assisted reproduction (PMA), which was expanded under French law in 2021. Local advocates describe the legal framework as "the strongest shield in the Caribbean" (Voices from the Ground: <a href="https://www.equaldex.com/region/guadeloupe" target="_blank">Equaldex</a>).</p>
@@ -2300,7 +2328,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Open Acceptance with Regional Nuances." 2025 European Commission reports indicate high levels of legal safety, though social attitudes in rural areas can remain traditional. Public support is stable, and the community's rights are treated as a foundational element of the French Republic’s stability.</p>
 
         <p>LGBT Third Spaces include inclusive art galleries in Pointe-à-Pitre and gay-friendly beach clubs in Le Gosier. Sentiment regarding intersectionality is very positive; spaces are inclusive of QPOC and feminine-presenting individuals, reflecting the archipelago’s diverse demographic. "Safe Havens" are generally inclusive of the entire rainbow rather than being exclusively "G-mapped."</p>
@@ -2319,7 +2347,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Guadeloupe is "Very Safe" for LGBTQ+ travelers. Unlike many of its neighbors, the social climate is one of visibility. PDA is generally accepted in tourist areas like Saint-François and Le Gosier. De Jure and De Facto safety are closely aligned.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers face minimal issues; French ID laws allow for X-markers on passports which are recognized at Pôle Caraïbes Airport. The "Safe Haven" district is widely considered to be the coastal strip of Le Gosier. Airport security follows standard EU protocols.</p>
@@ -2335,7 +2363,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is integrated into the French universal system. Public hospitals provide inclusive care for foreigners. SOGI-sensitive training is standard for medical professionals under national health mandates.</p>
 
         <p>Access to HRT, PrEP, and HIV care is high and affordable. There are no legal restrictions for medical staff providing gender-affirming care. Emergency protocols follow French national standards, ensuring inclusive treatment in all medical institutions.</p>
@@ -2352,21 +2380,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Guadeloupe in 2026 remains a premier "Green" destination for LGBTQ+ travelers in the Caribbean. Its status as a French department provides a legal and social security net that is unique to the region.</p>
 
         <p>The 2025 social climate saw increased visibility for the trans community during public festivals. Sources: European Commission, ILGA World, Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/guadeloupe-lgbti", "https://www.equaldex.com/region/guadeloupe", "https://www.humandignitytrust.org/country-profile/guadeloupe/"],
-	},
+    sources: ["https://database.ilga.org/guadeloupe-lgbti", "https://www.equaldex.com/region/guadeloupe", "https://www.humandignitytrust.org/country-profile/guadeloupe/"],
+  },
 
-	guatemala: {
-		name: "Guatemala",
-		continent: "americas",
-		status: "amber",
+  guatemala: {
+    name: "Guatemala",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Guatemala presents a challenging legal landscape. While same-sex acts are not criminalized, there is a total lack of constitutional protection against discrimination. The 2024-2025 legislative cycle saw several attempts to introduce restrictive "Life and Family Protection" laws, though activists have successfully stalled their implementation in the courts.</p>
 
         <p>Marriage equality, civil unions, and adoption for same-sex couples are not recognized. Legal experts from Equaldex describe the current climate as "stagnant," with the state actively promoting a traditionalist agenda. Voices from the Ground: <a href="https://www.equaldex.com/region/guatemala" target="_blank">Equaldex</a> notes that local advocates describe the new political environment as a "hostile stalemate."</p>
@@ -2383,7 +2412,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Presence." 2025 polling shows a sharp divide between the conservative rural highlands and the more progressive youth in Guatemala City. Public support is low, and the community's rights are frequently used as a political wedge issue by the state.</p>
 
         <p>LGBT Third Spaces exist primarily in Guatemala City’s Zone 1 and Zone 4, including inclusive coffee shops and underground art collectives. Sentiment regarding intersectionality is mixed; while Zone 4 is inclusive of QPOC and feminine-presenting individuals, many spaces remain "G-mapped." In areas where safety is a concern, the community gathers through private Telegram groups or invite-only house parties.</p>
@@ -2402,7 +2431,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Guatemala is generally safe for travelers who maintain discretion. The 2026 social reality in Antigua is one of quiet acceptance as long as one is a tourist, but the De Jure safety is non-existent. Travelers should avoid PDA in public spaces.</p>
 
         <p>Cis-gay travelers typically stay in Zone 4 (Guatemala City) or Antigua. Trans/Non-Binary travelers face significant risks at airport security and during police interactions, as ID laws are not inclusive. The "Safe Haven" neighborhood is Zone 4, known for its creative and inclusive vibe. Airport security in 2026 remains strictly binary.</p>
@@ -2418,7 +2447,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided primarily by NGOs like CAS (Colectivo Amigos contra el SIDA). Public hospitals are technically open to all, but 2026 reports suggest frequent discrimination against trans patients. Foreigners should utilize private clinics.</p>
 
         <p>Access to PrEP and HRT is limited to specialized clinics and private pharmacies. There are no direct legal bans on medical staff treating LGBTQ+ individuals, but "conscientious objection" is frequently cited in public facilities. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2435,21 +2464,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Guatemala in 2026 is an "Amber" destination defined by "Resilient Activism vs. State Conservatism." Safety is largely dependent on location and the level of visibility displayed.</p>
 
         <p>The 2025 social climate saw a rise in organized opposition to LGBT visibility, balanced by a growing underground scene in the capital. Sources: Human Dignity Trust, Equaldex, Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: ["https://www.equaldex.com/region/guatemala", "https://database.ilga.org/guatemala-lgbti", "https://www.humandignitytrust.org/country-profile/guatemala/"],
-	},
+    sources: ["https://www.equaldex.com/region/guatemala", "https://database.ilga.org/guatemala-lgbti", "https://www.humandignitytrust.org/country-profile/guatemala/"],
+  },
 
-	guyana: {
-		name: "Guyana",
-		continent: "americas",
-		status: "red",
+  guyana: {
+    name: "Guyana",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Guyana remains the only country in South America that criminalizes consensual same-sex acts as of early 2026. Sections 351 to 353 of the Criminal Law (Offences) Act prohibit "gross indecency" and "buggery," carrying potential life imprisonment, although prosecutions are extremely rare in the 2020s.</p>
 
         <p>Marriage equality and civil unions are strictly prohibited. In 2025, the High Court of Guyana continued to deliberate on various challenges to these colonial-era laws, but legislative progress remains stalled. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/guyana/" target="_blank">Human Dignity Trust</a> notes that local advocates describe the law as a "constant threat to dignity."</p>
@@ -2466,7 +2496,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Hostile Oversight." 2025/2026 polling suggests that while younger urban populations are becoming more tolerant, social hostility remains high. Public support is minimal, and the state does not treat LGBTQ+ rights as a pillar of stability.</p>
 
         <p>LGBT Third Spaces are non-existent; there are no public gay bars or bookstores. The community gathers privately via underground Telegram groups and secret house parties. Sentiment regarding intersectionality is struggling; "Safe Havens" are extremely rare and mostly "G-mapped," with trans women of color being the most vulnerable demographic. Police protection is often non-existent or actively predatory.</p>
@@ -2485,7 +2515,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Guyana is "High Risk" for LGBTQ+ travelers. Extreme discretion is required. While tourists are rarely prosecuted, the 2026 social reality is one of potential violence if visibility is high. De Jure safety is absent, and De Facto safety is precarious.</p>
 
         <p>Cis-gay travelers must avoid all PDA. Trans/Non-Binary travelers face extreme risks at airport security and in public, as local laws do not recognize their identity and customs officials can be hostile. There are no "Safe Haven" neighborhoods; travelers are advised to stay in high-security international hotels in Georgetown. Airport security in 2026 remains aggressive toward gender-non-conforming individuals.</p>
@@ -2501,7 +2531,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent in the public sector. SASOD provides some confidential referrals. Public hospitals are generally safe for routine emergencies, but SOGI-sensitive care is absent. Discrimination is a significant risk for those seeking HIV care.</p>
 
         <p>Access to PrEP and HRT is extremely limited and largely restricted to private, underground channels. Medical staff are not legally barred from treating LGBTQ+ patients, but social stigma often results in sub-standard care. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2518,21 +2548,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Guyana in 2026 is a "Red" zone. It is the most legally repressive country in South America for the LGBTQ+ community, where colonial laws continue to stifle visibility and safety.</p>
 
         <p>The 2025 social climate remained hostile, with activists focused on survival rather than expansion. Sources: Human Dignity Trust, ILGA World, Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/guyana/", "https://database.ilga.org/guyana-lgbti/", "https://www.equaldex.com/region/guyana"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/guyana/", "https://database.ilga.org/guyana-lgbti/", "https://www.equaldex.com/region/guyana"],
+  },
 
-	haiti: {
-		name: "Haiti",
-		continent: "americas",
-		status: "red",
+  haiti: {
+    name: "Haiti",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Haiti operates in a legal state of uncertainty. While same-sex acts are not technically criminalized, there is a complete absence of legal protection. The 2017 Senate bill banning same-sex marriage and "public demonstration of support" for LGBTQ+ rights—while not fully enacted—continues to influence judicial sentiment and police behavior.</p>
 
         <p>Marriage equality, civil unions, and adoption are not recognized. Legal experts from Equaldex describe the legislative environment as "vulnerable to extreme traditionalism." Voices from the Ground: <a href="https://www.equaldex.com/region/haiti" target="_blank">Equaldex</a> notes that local advocates describe the law as "a weapon of silence."</p>
@@ -2549,7 +2580,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Extreme Hostility." 2025 reports indicate that the ongoing security crisis in Haiti has disproportionately affected the LGBTQ+ community, who are often targeted by gangs and vigilante groups. Public support is non-existent, and rights are viewed as "foreign impositions."</p>
 
         <p>LGBT Third Spaces do not exist publicly. The community gathers in high-security private residences or through underground Telegram groups. Sentiment regarding intersectionality is non-existent; survival is the priority. "Safe Havens" are nonexistent, and the few protected spaces are exclusively "G-mapped" for affluent individuals. Police protection is non-existent; police are frequently cited as perpetrators of harassment.</p>
@@ -2568,7 +2599,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Haiti is "Extreme Risk" for all travelers, and specifically dangerous for LGBTQ+ individuals. Discretion is not enough; visibility can be life-threatening. The 2026 reality is a total absence of De Jure and De Facto safety.</p>
 
         <p>Cis-gay travelers must remain completely closeted. Trans/Non-Binary travelers face extreme risks of violence and detention at all points of entry. There are no "Safe Haven" neighborhoods. Travellers are advised to avoid all non-essential travel to Haiti in 2026. Airport security is chaotic and hostile toward gender non-conformity.</p>
@@ -2584,7 +2615,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent. General healthcare is in a state of collapse. NGOs like SEROvie provide some services, but their facilities are frequently targeted or forced to close due to insecurity. Inclusivity in medical institutions is zero.</p>
 
         <p>Access to PrEP and HRT is non-existent through formal channels. Medical staff are often influenced by religious extremism, and discrimination is the norm. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2601,21 +2632,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Haiti in 2026 is a "Red" zone and represents one of the most perilous environments for LGBTQ+ individuals globally. The intersection of state failure and social conservatism has created a vacuum where LGBT rights have been entirely erased.</p>
 
         <p>The 2025 social climate was marked by the displacement of the few remaining LGBT activist groups. Sources: Human Dignity Trust, ILGA World, Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/haiti/", "https://database.ilga.org/haiti-lgbti", "https://www.equaldex.com/region/haiti"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/haiti/", "https://database.ilga.org/haiti-lgbti", "https://www.equaldex.com/region/haiti"],
+  },
 
-	honduras: {
-		name: "Honduras",
-		continent: "americas",
-		status: "red",
+  honduras: {
+    name: "Honduras",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Honduras maintains a legal framework that is structurally hostile toward the LGBTQ+ community. While consensual same-sex acts are not criminalized, the 2021 constitutional reform—which effectively "locked" the ban on same-sex marriage and abortion by requiring a three-quarters majority in Congress for repeal—remains a significant barrier to equality.</p>
 
         <p>Marriage equality and civil unions are strictly prohibited. Local advocates from Cattrachas describe the 2025 legislative environment as one of "entrenched resistance," noting that despite a 2021 Inter-American Court of Human Rights ruling regarding state responsibility for the murder of trans activist Vicky Hernández, domestic law has been slow to adopt broad non-discrimination protections. Voices from the Ground: <a href="https://www.cattrachas.org/" target="_blank">Red Lésbica Cattrachas</a>.</p>
@@ -2632,7 +2664,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "High Vulnerability." 2025 polling data suggests that public sentiment remains deeply influenced by conservative religious groups. While there is a visible activist presence in Tegucigalpa, the level of state-sponsored protection is low, and hate crimes against the community, particularly trans women, remain a critical concern in 2026.</p>
 
         <p>LGBT Third Spaces are largely private or semi-clandestine due to safety risks. While some "inclusive" art galleries exist in the capital, most community gathering occurs via encrypted messaging apps or private house parties. Sentiment regarding intersectionality is strained; while local NGOs strive for QPOC inclusivity, the broader social climate is primarily "G-mapped" and exclusionary toward feminine-presenting individuals.</p>
@@ -2651,7 +2683,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for LGBTQ+ travelers is rated as "Low." The 2026 social reality is one of necessary discretion; while tourists are rarely targeted by official state action, public displays of affection can trigger hostile reactions from the public. 'De Jure' safety is absent, and 'De Facto' safety is highly dependent on staying within high-end, secure tourist enclaves.</p>
 
         <p>Cis-gay travelers may navigate major cities like San Pedro Sula with caution, but Trans/Non-Binary travelers face significantly higher risks, particularly at airport security and during ID checks, as 2026 protocols do not recognize non-binary identities. The "Safe Haven" concept is limited to specific gated hotels rather than public neighborhoods.</p>
@@ -2667,7 +2699,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare is extremely limited and mostly confined to NGO-run clinics in the capital. General healthcare facilities in Honduras are often under-resourced and may harbor medical staff with discriminatory attitudes toward the community.</p>
 
         <p>Access to HRT and PrEP is available through private providers and specific advocacy organizations, but legal protections for patients' privacy are weak. HIV care is often siloed and stigmatized. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a> reports that rural access is virtually non-existent.</p>
@@ -2684,21 +2716,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Honduras in 2026 remains an environment of high physical and legal risk. The community is resilient, but the intersection of gang violence and state conservatism makes it a "Red" status destination for most LGBT travelers.</p>
 
         <p>Security shifts in 2025 indicated a rise in digital targeting of activists, emphasizing the need for digital as well as physical safety protocols. Sources: Human Dignity Trust, Equaldex, ILGA World.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/honduras/", "https://database.ilga.org/honduras-lgbti", "https://www.equaldex.com/region/honduras"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/honduras/", "https://database.ilga.org/honduras-lgbti", "https://www.equaldex.com/region/honduras"],
+  },
 
-	jamaica: {
-		name: "Jamaica",
-		continent: "americas",
-		status: "red",
+  jamaica: {
+    name: "Jamaica",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Jamaica continues to criminalize consensual same-sex acts between men under the 1864 Offences Against the Person Act. Sections 76, 77, and 79—commonly known as the "Buggery Laws"—remain in effect in 2026, despite years of international pressure and domestic litigation led by groups like J-FLAG.</p>
 
         <p>Same-sex marriage is constitutionally prohibited, and there are no legal recognitions for civil unions. Local advocates describe the 2025 legislative sessions as "defensive," focusing on preventing further erosion of human rights rather than gaining new ones. Voices from the Ground: <a href="https://jflag.org/" target="_blank">J-FLAG Jamaica</a>.</p>
@@ -2715,7 +2748,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Hostile Resistance." 2025/2026 polling indicates that while homophobic attitudes are slowly softening among urban youth, the majority of the population remains opposed to LGBTQ+ rights. State officials rarely offer police protection, and the community's rights are often framed as a threat to national culture.</p>
 
         <p>LGBT Third Spaces are virtually non-existent in public; there are no LGBTQ+ bookstores or cafes. Gathering occurs in secret, often through "underground" parties in Kingston or private Telegram groups. Intersectionality is a challenge; the few safe spaces that exist are often "G-mapped" and can be exclusionary toward QPOC from lower socioeconomic backgrounds or trans individuals.</p>
@@ -2734,7 +2767,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Jamaica is a destination where 'De Jure' risk is high, but 'De Facto' safety for tourists is manageable through total discretion. In tourist-heavy districts like Negril or Montego Bay, foreigners are generally tolerated as long as they adhere to the "don't ask, don't tell" social norm.</p>
 
         <p>Cis-gay travelers should avoid all PDA and LGBTQ+ symbols. Trans/Non-Binary travelers face extreme risk; airport security and local authorities in 2026 are not trained on gender diversity, and ID discrepancies can lead to detention. There are no "Safe Haven" neighborhoods, though some IGLTA-vetted resorts offer a bubble of safety. Public PDA is a "red line" for locals.</p>
@@ -2750,7 +2783,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided almost exclusively by NGOs like J-FLAG or the Jamaica AIDS Support for Life (JASL). Public clinics are often spaces of high stigma for LGBT men and trans people.</p>
 
         <p>Access to PrEP has improved slightly in 2025 due to regional health initiatives, but HRT is difficult to source and legal restrictions for medical staff regarding gender-affirming care are vague but discouraging. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2767,21 +2800,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Jamaica in 2026 remains one of the most culturally conservative countries in the Caribbean. For the LGBTQ+ community, it is an environment of strategic silence and hidden resistance.</p>
 
         <p>The security posture is static, with no major legislative shifts expected in 2026. Sources: Human Dignity Trust, Spartacus Gay Travel Index, J-FLAG.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/jamaica/", "https://database.ilga.org/jamaica-lgbti", "https://www.equaldex.com/region/jamaica"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/jamaica/", "https://database.ilga.org/jamaica-lgbti", "https://www.equaldex.com/region/jamaica"],
+  },
 
-	martinique: {
-		name: "Martinique",
-		continent: "americas",
-		status: "green",
+  martinique: {
+    name: "Martinique",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As an overseas department of France, Martinique follows all French national laws. In 2026, the legal status of LGBTQ+ individuals is one of full equality, with constitutional protections against discrimination based on sexual orientation and gender identity fully enforced.</p>
 
         <p>Marriage equality has been in effect since 2013, and same-sex couples have full rights to joint adoption and access to Medically Assisted Procreation (PMA). Local advocates note that while the law is perfect, social implementation continues to evolve. Voices from the Ground: <a href="https://www.equaldex.com/region/martinique" target="_blank">Equaldex Martinique</a>.</p>
@@ -2798,7 +2832,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Open Acceptance." 2025 polling data reflects a strong alignment with mainland French values of secularism and individual rights. Public support for LGBTQ+ visibility is a pillar of local stability, particularly in urban centers like Fort-de-France.</p>
 
         <p>LGBT Third Spaces include inclusive cafes and "Pride-friendly" beach clubs in Le Diamant. Sentiment regarding intersectionality is very positive; local "Safe Havens" are inclusive of QPOC and feminine-presenting individuals, moving away from being strictly "G-mapped."</p>
@@ -2817,7 +2851,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Martinique is "Highly Recommended" for LGBTQ+ travelers. The social climate is one of visibility, and PDA is common and accepted in tourist areas. Both 'De Jure' and 'De Facto' safety are exceptionally high for the Caribbean region.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers experience few issues; airport security follows French national guidelines which include gender-neutral scanning protocols. The "Safe Haven" district of note is Schoelcher and parts of Fort-de-France. Public behavior is governed by the same norms as mainland France.</p>
@@ -2833,7 +2867,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is integrated into the French national health system (Sécurité sociale). Public hospitals provide inclusive care, and foreigners can access services with travel insurance or EU health cards.</p>
 
         <p>Access to HRT, PrEP, and HIV care is high and follows European clinical guidelines. There are no legal restrictions for medical staff regarding LGBTQ+ care. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2850,21 +2884,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Martinique in 2026 is a "Green" status leader in the Caribbean. Its legal and social alignment with France provides a secure environment that is unique for the region.</p>
 
         <p>The 2025 social climate saw increased integration of LGBT themes into local cultural festivals. Sources: European Commission, ILGA World, Spartacus Gay Travel Index.</p>
     `,
 
-		sources: ["https://database.ilga.org/martinique-lgbti", "https://www.equaldex.com/region/martinique", "https://www.humandignitytrust.org/country-profile/martinique/"],
-	},
+    sources: ["https://database.ilga.org/martinique-lgbti", "https://www.equaldex.com/region/martinique", "https://www.humandignitytrust.org/country-profile/martinique/"],
+  },
 
-	mexico: {
-		name: "Mexico",
-		continent: "americas",
-		status: "green",
+  mexico: {
+    name: "Mexico",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Mexico stands as one of the most legally progressive nations in Latin America. Constitutional protections against discrimination based on sexual orientation are nationwide. Marriage equality has been legal across all 32 states since late 2022, following a series of Supreme Court rulings that solidified the right to equal union.</p>
 
         <p>Same-sex couples have full rights to civil unions and joint adoption nationwide. 2025 saw further refinement in labor laws, specifically protecting LGBTQ+ workers from harassment in the private sector. Voices from the Ground: <a href="https://www.equaldex.com/region/mexico" target="_blank">Equaldex Mexico</a>.</p>
@@ -2881,7 +2916,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Confident Inclusion" in urban areas, contrasted with "Traditional Tolerance" in rural districts. 2025/2026 polling by the European Commission (International reports) indicates a high level of public support for marriage rights, though social shifts vary by geography.</p>
 
         <p>LGBT Third Spaces are abundant, ranging from LGBTQ+ bookstores in Mexico City’s Juarez neighborhood to inclusive art galleries in Guadalajara. Sentiment regarding intersectionality is strong; Mexico City's "Safe Havens" are notably inclusive of QPOC and trans-feminine individuals. Most spaces are moving away from being strictly "G-mapped."</p>
@@ -2900,7 +2935,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Mexico is "Very Safe" for LGBTQ+ travelers in major hubs like Mexico City, Puerto Vallarta, and Cancun. The social climate in these areas is one of vibrant visibility. 'De Jure' and 'De Facto' safety are generally aligned, though caution is advised in rural northern states.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers experience a welcoming atmosphere in "Zona Rosa" (Mexico City) or "Romantic Zone" (Puerto Vallarta). 2026 airport security is increasingly inclusive, recognizing X-markers on international documents. The "Safe Haven" district par excellence is the Juarez/Roma/Condesa corridor in Mexico City. Public PDA is common and accepted in these districts.</p>
@@ -2916,7 +2951,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare is high in Mexico City and Guadalajara, with specialized clinics like Clinica Condesa providing world-class care for locals and foreigners. Public institutions are legally required to be inclusive.</p>
 
         <p>Access to HRT, PrEP, and HIV care is widespread in urban areas. 2025 federal health initiatives significantly increased the availability of PrEP in public pharmacies. Medical staff are prohibited from discriminatory practices. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -2933,21 +2968,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Mexico in 2026 is a "Green" status leader in North America. Its combination of strong legal frameworks and vibrant LGBT culture makes it a primary safe haven for the community.</p>
 
         <p>The 2025 social climate was marked by a continued expansion of trans rights in state legislatures. Sources: ILGA World, Equaldex, Spartacus Gay Travel Index.</p>
     `,
 
-		sources: ["https://database.ilga.org/mexico-lgbti", "https://www.equaldex.com/region/mexico", "https://www.humandignitytrust.org/country-profile/mexico/"],
-	},
+    sources: ["https://database.ilga.org/mexico-lgbti", "https://www.equaldex.com/region/mexico", "https://www.humandignitytrust.org/country-profile/mexico/"],
+  },
 
-	montserrat: {
-		name: "Montserrat",
-		continent: "americas",
-		status: "amber",
+  montserrat: {
+    name: "Montserrat",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As a British Overseas Territory, Montserrat has a complex legal standing in 2026. Consensual same-sex acts have been legal since 2000, and the 2010 Constitution includes broad non-discrimination clauses that are interpreted to include sexual orientation.</p>
 
         <p>Marriage equality is not recognized under local law, nor are civil unions. While the UK has pushed for marriage equality in its territories, Montserrat has yet to implement it as of early 2026. Local advocates describe the situation as a "legal limbo" where basic safety is guaranteed but full equality remains distant. Voices from the Ground: <a href="https://www.equaldex.com/region/montserrat" target="_blank">Equaldex Montserrat</a>.</p>
@@ -2964,7 +3000,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Quiet Tolerance." 2025 reports indicate a small, tight-knit community where safety is maintained through discretion rather than overt pride. Public support for LGBTQ+ rights is not a major political topic, but there is no state-sponsored hostility.</p>
 
         <p>LGBT Third Spaces do not exist in a public form; there are no LGBTQ+ bars or cafes. Community gathering is entirely private and social-circle based. Sentiment regarding intersectionality is largely unaddressed due to the small population; spaces are primarily "G-mapped" or focused on small groups of friends. Visibility is low, but police protection is available and follows UK-influenced standards.</p>
@@ -2983,7 +3019,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Montserrat is "Safe" for LGBTQ+ travelers who prefer a low-key, discreet experience. The 2026 social reality is one of politeness; PDA is not common even for heterosexual couples and is discouraged for LGBT travelers. 'De Jure' safety is high due to UK influence, but 'De Facto' safety relies on discretion.</p>
 
         <p>Cis-gay travelers face no major issues. Trans/Non-Binary travelers may encounter confusion at airport security as local protocols are not yet modernized for gender diversity. There are no specific "Safe Haven" neighborhoods due to the island's small size. Travelers are welcomed as part of the general tourist demographic.</p>
@@ -2999,7 +3035,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare is non-existent. General healthcare is provided at Glendon Hospital, where inclusivity is high in terms of professional ethics but limited in terms of specialized LGBT medical knowledge.</p>
 
         <p>Access to HRT and PrEP is not locally available through public channels and must be imported or sought via private regional providers. There are no legal restrictions for medical staff treating the community. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3016,21 +3052,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Montserrat in 2026 is an "Amber" destination characterized by "Legal Protection without Social Visibility." It is a safe but quiet environment for the LGBT community.</p>
 
         <p>The 2025 social climate remained static, with a focus on post-volcano reconstruction rather than social policy shifts. Sources: Human Dignity Trust, Equaldex, Spartacus Gay Travel Index.</p>
     `,
 
-		sources: ["https://database.ilga.org/montserrat-lgbti", "https://www.equaldex.com/region/montserrat", "https://www.humandignitytrust.org/country-profile/montserrat/"],
-	},
+    sources: ["https://database.ilga.org/montserrat-lgbti", "https://www.equaldex.com/region/montserrat", "https://www.humandignitytrust.org/country-profile/montserrat/"],
+  },
 
-	nicaragua: {
-		name: "Nicaragua",
-		continent: "americas",
-		status: "red",
+  nicaragua: {
+    name: "Nicaragua",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, the legal framework in Nicaragua remains stagnant and increasingly restrictive due to the broader political climate. While consensual same-sex acts were decriminalized in the 2008 Penal Code, there are no constitutional protections explicitly citing sexual orientation or gender identity as protected classes.</p>
 
         <p>Marriage equality, civil unions, and adoption rights for same-sex couples do not exist. Legislative sessions throughout 2025 focused on "Family Values" rhetoric, further distancing any hope for inclusive reform. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/nicaragua/" target="_blank">Human Dignity Trust</a>.</p>
@@ -3047,7 +3084,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Repressive Silence." 2025 polling indicates a sharp decline in public LGBTQ+ visibility as the community fears being targeted by state surveillance. Public support is difficult to measure as civil society organizations have been largely dismantled.</p>
 
         <p>LGBT Third Spaces have moved entirely underground. There are no public LGBTQ+ bookstores or galleries; gathering occurs via secret house parties coordinated through encrypted Signal groups. Local advocates describe the climate as "primarily G-mapped" in its few surviving private pockets, with QPOC and trans individuals facing the highest levels of intersectional marginalization.</p>
@@ -3066,7 +3103,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is "Precarious." While tourists are generally exempt from local political targeting, LGBTQ+ PDA is highly discouraged. 'De Jure' decriminalization does not translate to 'De Facto' safety in public spaces.</p>
 
         <p>Cis-gay travelers may navigate tourist hubs like Granada or San Juan del Sur with extreme discretion. Trans/Non-Binary travelers face high risk at airport security; 2026 customs protocols are rigid regarding gender presentation and ID markers. There are no recognized 'Safe Haven' neighborhoods. Travelers are advised to avoid all political or social activism.</p>
@@ -3082,7 +3119,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare has collapsed as local NGOs were shuttered. State-run hospitals offer no specialized care and medical staff may be hostile or report patients to authorities.</p>
 
         <p>Access to HRT, PrEP, and HIV care is severely limited and largely dependent on black-market sourcing or cross-border travel. Legal restrictions on medical staff prevent them from providing gender-affirming care. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3099,21 +3136,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Nicaragua in 2026 is a high-risk zone where the LGBTQ+ community is forced into total invisibility. The intersection of authoritarianism and social conservatism makes it a "Red" status country.</p>
 
         <p>The 2025 security environment was marked by the exile of the last remaining LGBT rights defenders. Sources: Outright International, ILGA World.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/nicaragua/", "https://database.ilga.org/nicaragua-lgbti", "https://www.equaldex.com/region/nicaragua"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/nicaragua/", "https://database.ilga.org/nicaragua-lgbti", "https://www.equaldex.com/region/nicaragua"],
+  },
 
-	panama: {
-		name: "Panama",
-		continent: "americas",
-		status: "amber",
+  panama: {
+    name: "Panama",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Panama occupies a middle-ground in Latin American LGBTQ+ rights. While same-sex acts are legal, the country does not recognize same-sex marriage, following a 2023 Supreme Court ruling that declared marriage is not a human right in the Panamanian context.</p>
 
         <p>Marriage equality and civil unions remain blocked. 2025 legislative efforts to introduce limited partnership rights were met with heavy opposition from religious sectors. Voices from the Ground: <a href="https://www.equaldex.com/region/panama" target="_blank">Equaldex Panama</a>.</p>
@@ -3130,7 +3168,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Tolerance." 2025/2026 polling shows that urban residents in Panama City are increasingly supportive of non-discrimination, though rural sentiment remains conservative.</p>
 
         <p>LGBT Third Spaces exist in Panama City, including inclusive art galleries in Casco Viejo and community cafes. These spaces are generally inclusive of QPOC, but 'Safe Havens' remain primarily 'G-mapped' and concentrated in high-income neighborhoods. Feminine-presenting individuals report feeling "tolerated but not prioritized."</p>
@@ -3149,7 +3187,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Panama is "Safe for Tourists" provided PDA is kept to a minimum outside of Panama City. 'De Jure' laws are restrictive, but 'De Facto' social reality in the capital is one of quiet acceptance.</p>
 
         <p>Cis-gay travelers find many options in Panama City. Trans/Non-Binary travelers face challenges; 2026 airport security still relies on binary gender markers, and ID checks can be intrusive. 'Safe Haven' neighborhood: Casco Viejo and El Cangrejo. Practical advice: Dress codes in high-end clubs can be gender-rigid.</p>
@@ -3165,7 +3203,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is available through private clinics in Panama City. General safety for foreigners is high, though public facilities lack specific SOGI training.</p>
 
         <p>Access to PrEP and HIV care is stable in the capital. HRT is available but often requires private consultation due to the lack of specialized public endocrinology. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3182,21 +3220,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Panama in 2026 is an "Amber" destination. It is a hub of international business and inclusive tourism that still struggles with domestic legal equality.</p>
 
         <p>The 2025 social climate saw increased visibility in corporate sectors, signaling a shift toward economic inclusion. Sources: Equaldex, Human Dignity Trust, Spartacus.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/panama/", "https://database.ilga.org/panama-lgbti", "https://www.equaldex.com/region/panama"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/panama/", "https://database.ilga.org/panama-lgbti", "https://www.equaldex.com/region/panama"],
+  },
 
-	paraguay: {
-		name: "Paraguay",
-		continent: "americas",
-		status: "red",
+  paraguay: {
+    name: "Paraguay",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Paraguay remains one of the most legally conservative countries in South America. There are no laws protecting against discrimination based on sexual orientation or gender identity, and Article 49 of the Constitution explicitly limits marriage to "one man and one woman."</p>
 
         <p>Marriage equality, civil unions, and adoption rights are strictly non-existent. 2025 saw the "Resolution 29.664" continue to restrict LGBTQ+ content in educational settings, a move decried by local advocates as a "censorship mandate." Voices from the Ground: <a href="https://www.aireana.org.py/" target="_blank">Aireana - Grupo por la derecha de las lesbianas</a>.</p>
@@ -3213,7 +3252,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Conservative Hostility." 2025/2026 polling data shows high levels of societal opposition to LGBTQ+ rights, heavily influenced by religious institutions. Rights are often framed as "foreign ideologies" that threaten stability.</p>
 
         <p>LGBT Third Spaces are rare and mostly located in Asunción. While a few inclusive cafes exist, they avoid overt branding for safety. Sentiment regarding intersectionality is poor; spaces are heavily 'G-mapped' and often exclusionary toward feminine-presenting individuals and QPOC from rural areas. Gathering often relies on private house parties.</p>
@@ -3232,7 +3271,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Paraguay is a "High Discretion" destination. Travelers should avoid all PDA and LGBTQ+ symbols. 'De Jure' status is one of non-protection, and 'De Facto' safety in public is low outside of specific upscale hotels.</p>
 
         <p>Cis-gay travelers should remain low-profile. Trans/Non-Binary travelers face extreme risk; 2026 security protocols at Silvio Pettirossi International Airport are not gender-sensitive and often involve intrusive questioning. There are no recognized 'Safe Haven' neighborhoods. Practical advice: Avoid discussing LGBTQ+ topics with locals unless in a trusted private setting.</p>
@@ -3248,7 +3287,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is virtually non-existent in the public sector. Foreigners should use private clinics, though medical staff rarely have specialized SOGI training.</p>
 
         <p>Access to HRT and PrEP is available only through a few private providers in Asunción. Legal restrictions on "LGBTQ+ propaganda" make it difficult for doctors to provide inclusive education. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3265,21 +3304,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Paraguay in 2026 is a difficult environment for the LGBTQ+ community, marked by systemic exclusion and strong religious influence. It remains a "Red" status destination.</p>
 
         <p>The 2025 environment was characterized by the expansion of "Pro-Family" municipal declarations that further marginalize LGBT residents. Sources: Aireana, Human Dignity Trust, Spartacus.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/paraguay/", "https://database.ilga.org/paraguay-lgbti", "https://www.equaldex.com/region/paraguay"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/paraguay/", "https://database.ilga.org/paraguay-lgbti", "https://www.equaldex.com/region/paraguay"],
+  },
 
-	peru: {
-		name: "Peru",
-		continent: "americas",
-		status: "amber",
+  peru: {
+    name: "Peru",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of 2026, Peru’s legal status for LGBTQ+ people is defined by persistent legislative pushback. While same-sex acts are legal, marriage equality and civil unions remain unconstitutional. 2025 saw several failed attempts to pass "Unión Civil," blocked by conservative blocks in Congress.</p>
 
         <p>Marriage and adoption rights are non-existent. A controversial 2024-2025 executive decree classified "transsexuality" as a mental illness for insurance purposes—a move activists are fighting to repeal in 2026, labeling it a "human rights regression." Voices from the Ground: <a href="https://www.promsex.org/" target="_blank">PROMSEX</a>.</p>
@@ -3296,7 +3336,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Tense Tolerance." 2025 polling indicates a growing urban-rural divide; Lima's youth are increasingly inclusive, but national public support remains low due to influential religious lobbies.</p>
 
         <p>LGBT Third Spaces are present in Lima, specifically LGBTQ+ bookstores and community centers in Miraflores and Barranco. Sentiment regarding intersectionality is improving; 'Safe Havens' are increasingly inclusive of trans individuals and QPOC, though the mainstream scene remains 'G-mapped' and focused on cis-gay men.</p>
@@ -3315,7 +3355,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Peru is "Safe for Tourists" in major hubs like Lima and Cusco, but discretion is key. 'De Jure' status is one of non-recognition, while 'De Facto' reality in Miraflores is relatively open.</p>
 
         <p>Cis-gay travelers find Miraflores and Barranco welcoming. Trans/Non-Binary travelers face obstacles; 2026 airport security still operates on binary logic, and the 2024 pathologization decree has made interactions with medical/legal authorities more difficult. 'Safe Haven' neighborhood: Miraflores. Practical advice: Limit PDA in historic centers.</p>
@@ -3331,7 +3371,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is primarily found in Lima through private clinics and NGOs. The pathologization decree has created a "hostile medical climate" in 2026.</p>
 
         <p>Access to HRT and PrEP is stable in private sectors but stigmatized in public health. HIV care is available but often under-resourced. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3348,21 +3388,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Peru in 2026 is a nation in transition, where legal regressions clash with a vibrant, growing urban LGBT culture. It remains an "Amber" status destination due to legislative instability.</p>
 
         <p>The 2025 climate was marked by intense mobilization against the pathologization of trans lives. Sources: PROMSEX, ILGA World, Equaldex.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/peru/", "https://database.ilga.org/peru-lgbti", "https://www.equaldex.com/region/peru"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/peru/", "https://database.ilga.org/peru-lgbti", "https://www.equaldex.com/region/peru"],
+  },
 
-	puerto_rico: {
-		name: "Puerto Rico",
-		continent: "americas",
-		status: "green",
+  puerto_rico: {
+    name: "Puerto Rico",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Puerto Rico maintains a strong legal framework for LGBTQ+ rights as a U.S. Territory. All federal protections, including the 2015 Obergefell v. Hodges decision, are fully enforced. Discrimination based on sexual orientation and gender identity is prohibited in employment and housing.</p>
 
         <p>Marriage equality, civil unions, and adoption rights are settled law. 2025 saw further local measures to protect LGBTQ+ youth from conversion therapy, reinforcing its status as a Caribbean safe haven. Voices from the Ground: <a href="https://www.equaldex.com/region/puerto-rico" target="_blank">Equaldex Puerto Rico</a>.</p>
@@ -3379,7 +3420,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Confident Openness." 2025/2026 polling shows that Puerto Rico is one of the most inclusive regions in the Caribbean, with high levels of public support for LGBTQ+ visibility, particularly in San Juan.</p>
 
         <p>LGBT Third Spaces abound, including LGBTQ+ bookstores in Santurce and inclusive art galleries. Sentiment regarding intersectionality is very high; 'Safe Havens' are explicitly inclusive of QPOC and trans individuals. While San Juan has a vibrant 'G-mapped' nightlife, many spaces are now 'rainbow-inclusive.' </p>
@@ -3398,7 +3439,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Puerto Rico is "Highly Recommended" for LGBTQ+ travelers. The social climate is welcoming, and PDA is common and accepted in tourist areas. Both 'De Jure' and 'De Facto' safety are exceptionally high.</p>
 
         <p>Cis-gay and Trans/Non-Binary travelers experience a high level of inclusion. 2026 airport security follows TSA guidelines, which include gender-neutral screening. 'Safe Haven' neighborhoods: Santurce and Condado in San Juan. Practical advice: Enjoy the vibrant nightlife without fear.</p>
@@ -3414,7 +3455,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare is excellent, with centers like Waves Ahead providing specialized services for the community and foreigners.</p>
 
         <p>Access to HRT, PrEP, and HIV care is high and follows U.S. clinical guidelines. Medical institutions are proactive in inclusivity. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi</a>.</p>
@@ -3431,21 +3472,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Puerto Rico in 2026 is a "Green" status leader in the Caribbean. Its legal alignment with the U.S. and vibrant local culture provides a secure environment for all LGBT individuals.</p>
 
         <p>The 2025 social climate saw a continued expansion of services for LGBTQ+ elders and youth. Sources: Waves Ahead, ILGA World, Spartacus.</p>
     `,
 
-		sources: ["https://www.humandignitytrust.org/country-profile/puerto-rico/", "https://database.ilga.org/puerto-rico-lgbti", "https://www.equaldex.com/region/puerto-rico"],
-	},
+    sources: ["https://www.humandignitytrust.org/country-profile/puerto-rico/", "https://database.ilga.org/puerto-rico-lgbti", "https://www.equaldex.com/region/puerto-rico"],
+  },
 
-	saint_kitts_and_nevis: {
-		name: "Saint Kitts and Nevis",
-		continent: "americas",
-		status: "amber",
+  saint_kitts_and_nevis: {
+    name: "Saint Kitts and Nevis",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Saint Kitts and Nevis maintains the landmark 2022 decriminalization of consensual same-sex acts, which remains a cornerstone of its current legal framework. While the 2022 High Court ruling struck down sections of the Offences Against the Person Act that criminalized "buggery," the federation has not yet implemented explicit constitutional non-discrimination protections covering sexual orientation or gender identity.</p>
 
         <p>Marriage equality and civil unions are currently not recognized under the law. Local advocates note that while the 2022 ruling was a victory, legislative sessions in late 2025 have not prioritized further equality measures. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/saint-kitts-and-nevis/" target="_blank">Human Dignity Trust Advocacy Report</a>.</p>
@@ -3462,7 +3504,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Openness." Following the 2025 social shifts, polling suggests a gradual decline in public hostility, though religious conservatism remains a significant pillar of social stability. Public support for inclusive laws is moderate but growing among younger demographics.</p>
 
         <p>LGBT Third Spaces beyond bars are nearly non-existent; community gathering often occurs in private rentals or "inclusive art nights" hosted by local allies. Sentiment regarding intersectionality indicates that spaces are largely inclusive of QPOC due to the national demographic, but remain "G-mapped" with less visibility for feminine-presenting or non-binary individuals.</p>
@@ -3481,7 +3523,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is rated as "High" for those staying within resort areas. PDA is discouraged in public squares like Basseterre but generally ignored in high-end international hotel bars.</p>
 
         <p>Cis-Gay travelers typically report no issues at airport security. However, Trans/Non-Binary travelers may encounter confusion or intrusive questioning due to the lack of 2026 local ID laws recognizing gender diversity. Safe Haven: Frigate Bay (St. Kitts).</p>
@@ -3497,7 +3539,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is limited to NGO-led initiatives. General health services are safe for foreigners, but medical staff may lack specialized sensitivity training.</p>
 
         <p>Access to PrEP has improved in late 2025 through regional partnerships, though HRT access is "Data Not Found" within the local public system. HIV care is available via the Ministry of Health. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi Health Advocacy</a>.</p>
@@ -3514,25 +3556,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Saint Kitts and Nevis represents a Caribbean territory in transition. While legal barriers have fallen, social change is moving at a more measured pace in 2026.</p>
 
         <p>Travelers can expect a respectful environment provided discretion is used in rural areas. Sources: Spartacus Gay Travel Index, Human Dignity Trust.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/saint-kitts-and-nevis-lgbti",
-			"https://www.humandignitytrust.org/country-profile/saint-kitts-and-nevis/",
-			"https://www.equaldex.com/region/saint-kitts-and-nevis",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/saint-kitts-and-nevis-lgbti",
+      "https://www.humandignitytrust.org/country-profile/saint-kitts-and-nevis/",
+      "https://www.equaldex.com/region/saint-kitts-and-nevis",
+    ],
+  },
 
-	saint_lucia: {
-		name: "Saint Lucia",
-		continent: "americas",
-		status: "red",
+  saint_lucia: {
+    name: "Saint Lucia",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of 2026, Saint Lucia remains one of the few Eastern Caribbean nations that continues to criminalize consensual same-sex acts between men under Section 133 of the Criminal Code. No constitutional protections exist for LGBTQ+ citizens.</p>
 
         <p>Marriage equality, civil unions, and adoption are strictly prohibited. Legislative sessions in 2025 saw no movement toward reform despite international pressure. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/saint-lucia/" target="_blank">Human Dignity Trust</a>.</p>
@@ -3549,7 +3592,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Hostile Invisibility." 2025/2026 polling data reflects a strong religious and cultural bias against LGBTQ+ visibility, with rights often framed as a threat to traditional Caribbean stability.</p>
 
         <p>There are no public "LGBT Third Spaces." The community gathers privately via secret house parties and encrypted Telegram groups to avoid detection. Sentiment regarding intersectionality is largely non-existent in the public eye; Safe Havens do not exist for QPOC or trans individuals outside of very tight-knit underground networks.</p>
@@ -3568,7 +3611,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Saint Lucia is a "High Risk" destination for those seeking to be openly LGBTQ+. Travelers are advised to maintain total discretion. While tourists are rarely prosecuted, they are not immune to social harassment.</p>
 
         <p>Cis-Gay travelers are generally safe in gated luxury resorts. Trans/Non-Binary travelers face high risk at airport security due to strict 2026 ID policies that do not account for gender transition. There are no 'Safe Haven' neighborhoods. Practice total avoidance of PDA.</p>
@@ -3584,7 +3627,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is unavailable. Foreigners should rely on international insurance for evacuation or private care in Barbados if possible.</p>
 
         <p>Access to PrEP is limited and highly stigmatized. HRT access is "Data Not Found." HIV care is the only visible medical sector, managed through general infectious disease clinics. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi Local Link</a>.</p>
@@ -3601,21 +3644,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Saint Lucia remains a challenging environment for LGBTQ+ travelers and citizens alike in 2026. The persistence of colonial-era laws creates a climate of legal and social peril.</p>
 
         <p>Tourists should prioritize safety over visibility. Sources: Human Dignity Trust, Spartacus Gay Travel Index 2026.</p>
     `,
 
-		sources: ["https://database.ilga.org/saint-lucia-lgbti", "https://www.humandignitytrust.org/country-profile/saint-lucia/", "https://www.equaldex.com/region/saint-lucia"],
-	},
+    sources: ["https://database.ilga.org/saint-lucia-lgbti", "https://www.humandignitytrust.org/country-profile/saint-lucia/", "https://www.equaldex.com/region/saint-lucia"],
+  },
 
-	saint_pierre_and_miquelon: {
-		name: "Saint Pierre and Miquelon",
-		continent: "americas",
-		status: "green",
+  saint_pierre_and_miquelon: {
+    name: "Saint Pierre and Miquelon",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
 <p>As a self-governing overseas collectivity of France, these islands have full marriage equality and gender identity protections in line with French law.</p>
 <p><strong>The Statute vs. Ground Gap:</strong> Low. The community is small, and the French secular (laïcité) approach ensures legal neutrality. In 2026, the community reports High Trust in the Gendarmerie.</p> 
 <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -3626,7 +3670,7 @@ Object.assign(globalData, {
 <a href="http://www.saint-pierre-et-miquelon.gouv.fr/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
 </div> </div> `,
 
-		safety: ` 
+    safety: ` 
 <p>Physical safety is nearly absolute. These are some of the safest islands in the world, with virtually no violent crime.</p>
 <p><strong>Street Pulse & Policing:</strong> High Response. In 2026, visible travelers are safe to be themselves. The vibe is a mix of a small French village and a Newfoundland fishing port—initially reserved, but ultimately welcoming and inclusive.</p> 
 <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -3635,7 +3679,7 @@ Object.assign(globalData, {
 <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #5</strong> 
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: Near-zero crime rate and full legal integration with France.</p> </div> </div> `,
 
-		travel: ` 
+    travel: ` 
 <p>2026 Traveler Rating: Highly Visible. You are more likely to be judged on your choice of wine than your partner.</p> 
 <p><strong>Safe Havens vs. Red Zones:</strong> 
 * **Green Zones:** All of Saint Pierre and the village of Miquelon. 
@@ -3650,7 +3694,7 @@ Object.assign(globalData, {
 <p style="color: #fff; font-size: 0.85rem;">It is effectively a piece of France in North America. Be mindful that it is a very small, gossipy community, but not a hostile one.</p> 
 </div> </div> `,
 
-		health: ` 
+    health: ` 
 <p><strong>Standard of Care:</strong> Access to medical care is through the French social security system. PrEP is available, but for complex surgery, residents go to Montreal or St. John's (Canada) or mainland France.</p> 
 <p><strong>Traveler Essential:</strong> Your French or EU health card is valid here. Others should have comprehensive insurance for Canada/France.</p>
 <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
@@ -3660,22 +3704,23 @@ Object.assign(globalData, {
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">Saint Pierre - Competent French medical standard with a modern facility.</p> </div> 
 </div> `,
 
-		posture: ` 
+    posture: ` 
 <p>The "Northern French Peace" posture in Saint Pierre and Miquelon is one of quiet, secure inclusion. The 2026 verdict is "The Safest North Atlantic Secret."</p> `,
 
-		sources: [
-			{ label: "Ground Intel: Saint-Pierre et Miquelon la 1ère", url: "https://la1ere.francetvinfo.fr/saintpierreundmiquelon/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: France Equality Ministry", url: "https://www.egalite-femmes-hommes.gouv.fr/", button: "VIEW LEGAL DATA →" },
-			{ label: "Community Event: Dunefest (Visibility window)", url: "https://www.facebook.com/dunefestspm/", button: "EVENT DETAILS →" },
-		],
-	},
+    sources: [
+      { label: "Ground Intel: Saint-Pierre et Miquelon la 1ère", url: "https://la1ere.francetvinfo.fr/saintpierreundmiquelon/", button: "READ RECENT UPDATES →" },
+      { label: "Official Index: France Equality Ministry", url: "https://www.egalite-femmes-hommes.gouv.fr/", button: "VIEW LEGAL DATA →" },
+      { label: "Community Event: Dunefest (Visibility window)", url: "https://www.facebook.com/dunefestspm/", button: "EVENT DETAILS →" },
+    ],
+  },
 
-	saint_martin_and_barthelemy: {
-		name: "Saint Martin & Saint Barthélemy",
-		continent: "americas",
-		status: "green",
+  saint_martin_and_barthelemy: {
+    name: "Saint Martin & Saint Barthélemy",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
 <p>Both islands are French overseas collectivities, providing full marriage equality and extensive constitutional protections against LGBTQ+ discrimination.</p>
 <p><strong>The Statute vs. Ground Gap:</strong> Low in St. Barts; Moderate in St. Martin. St. Barts is highly cosmopolitan. St. Martin shares its island with the Dutch side (Sint Maarten), which has different laws, creating a complex border dynamic.</p> 
 <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -3686,7 +3731,7 @@ Object.assign(globalData, {
 <a href="https://safehavensxm.sx/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
 </div> </div> `,
 
-		safety: ` 
+    safety: ` 
 <p>Physical safety is high, especially for tourists. St. Barts is one of the most exclusive and safe islands in the world. St. Martin requires standard urban awareness.</p>
 <p><strong>Street Pulse & Policing:</strong> High Response. In 2026, the vibe in Gustavia (St. Barts) is "Total Luxury Inclusion." In Marigot (St. Martin), the vibe is "Busy French Caribbean," where public displays of affection are safe but may attract stares from older traditional locals.</p> 
 <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
@@ -3695,7 +3740,7 @@ Object.assign(globalData, {
 <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Safety Ranking: #21</strong> 
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">2026 Index Performance: High performance driven by the wealth of St. Barts and French law enforcement.</p> </div> </div> `,
 
-		travel: ` 
+    travel: ` 
 <p>2026 Traveler Rating: Highly Visible. St. Barts is an elite "Green Zone" globally.</p> 
 <p><strong>Safe Havens vs. Red Zones:</strong> 
 * **Green Zones:** St. Jean Beach (St. Barts), Gustavia, and Orient Bay (St. Martin). 
@@ -3710,7 +3755,7 @@ Object.assign(globalData, {
 <p style="color: #fff; font-size: 0.85rem;">St. Barts has no specific "gay" bars because the entire island is an open playground for the wealthy and LGBT-inclusive.</p> 
 </div> </div> `,
 
-		health: ` 
+    health: ` 
 <p><strong>Standard of Care:</strong> Good local facilities on St. Martin; St. Barts has excellent primary care but limited hospital capacity. PrEP is widely available in pharmacies.</p> 
 <p><strong>Traveler Essential:</strong> Ensure insurance covers private medical evacuation to Miami or Puerto Rico for emergencies, as island hospitals are small.</p>
 <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;"> 
@@ -3720,22 +3765,23 @@ Object.assign(globalData, {
 <p style="margin: 0; font-size: 0.95rem; opacity: 0.9; color: #fff;">St. Martin (French Side) - The primary regional hospital with HIV/PrEP services.</p> </div> 
 </div> `,
 
-		posture: ` 
+    posture: ` 
 <p>The "Chic Caribbean" posture in St. Barts and St. Martin balances elite French social liberty with a relaxed island vibe. The 2026 verdict is "Top Tier Inclusion."</p> `,
 
-		sources: [
-			{ label: "Ground Intel: Le Journal de Saint-Barth", url: "https://www.journaldesaintbarth.com/", button: "READ RECENT UPDATES →" },
-			{ label: "Official Index: IGLTA Saint Martin", url: "https://www.iglta.org/destinations/caribbean/saint-martin/", button: "VIEW TRAVEL DATA →" },
-			{ label: "Community Event: SXM Festival", url: "https://www.sxmfestival.com/", button: "EVENT DETAILS →" },
-		],
-	},
+    sources: [
+      { label: "Ground Intel: Le Journal de Saint-Barth", url: "https://www.journaldesaintbarth.com/", button: "READ RECENT UPDATES →" },
+      { label: "Official Index: IGLTA Saint Martin", url: "https://www.iglta.org/destinations/caribbean/saint-martin/", button: "VIEW TRAVEL DATA →" },
+      { label: "Community Event: SXM Festival", url: "https://www.sxmfestival.com/", button: "EVENT DETAILS →" },
+    ],
+  },
 
-	saint_vincent_and_the_grenadines: {
-		name: "Saint Vincent and the Grenadines",
-		continent: "americas",
-		status: "red",
+  saint_vincent_and_the_grenadines: {
+    name: "Saint Vincent and the Grenadines",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Saint Vincent and the Grenadines continues to criminalize consensual same-sex intimacy under Section 146 and Section 148 of the Criminal Code. A 2024 constitutional challenge to these laws was unsuccessfully dismissed, maintaining the status quo of criminalization.</p>
 
         <p>Marriage equality, civil unions, and adoption are not recognized. 2025 news reports indicate a strengthening of conservative legal rhetoric in the parliament. Voices from the Ground: <a href="https://www.humandignitytrust.org/country-profile/st-vincent-the-grenadines/" target="_blank">Human Dignity Trust</a>.</p>
@@ -3752,7 +3798,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Overt Social Hostility." 2025/2026 polling suggests that the majority of the population views LGBTQ+ rights as contrary to national cultural values, with a heavy emphasis on religious-led opposition.</p>
 
         <p>There are no public "LGBT Third Spaces." Gatherings are strictly private and often take place in "Safe Houses" or via underground Telegram groups. Intersectionality sentiment is poor; spaces are almost entirely "G-mapped" or focused on the survival of cis-gay males, with QPOC women and trans individuals facing double-marginalization.</p>
@@ -3771,7 +3817,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Saint Vincent is a "High Alert" destination for LGBTQ+ travelers. Extreme discretion is required outside of high-end private villas in the Grenadines (e.g., Mustique). 'De Facto' safety is only possible through wealth and isolation.</p>
 
         <p>Cis-Gay travelers should remain completely low-profile. Trans/Non-Binary travelers face significant risk at airport security; 2026 local ID laws are binary and customs agents often display overt hostility to gender non-conformity. No 'Safe Haven' districts exist. Total PDA ban is advised.</p>
@@ -3787,7 +3833,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent. Medical facilities are generally safe for emergencies, but staff are not trained in inclusive care.</p>
 
         <p>Access to PrEP and HRT is not publicly available and carries high social stigma. HIV care is available but often linked to traditional medical surveillance. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi Advocacy</a>.</p>
@@ -3804,25 +3850,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Saint Vincent and the Grenadines remains a "Red" status territory in 2026. The combination of legislative hostility and cultural conservatism makes it a high-risk environment.</p>
 
         <p>Travelers must prioritize privacy over all else. Sources: Human Dignity Trust, ILGA World.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/saint-vincent-and-the-grenadines-lgbti",
-			"https://www.humandignitytrust.org/country-profile/st-vincent-the-grenadines/",
-			"https://www.equaldex.com/region/saint-vincent-and-the-grenadines",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/saint-vincent-and-the-grenadines-lgbti",
+      "https://www.humandignitytrust.org/country-profile/st-vincent-the-grenadines/",
+      "https://www.equaldex.com/region/saint-vincent-and-the-grenadines",
+    ],
+  },
 
-	south_georgia_and_the_south_sandwich_islands: {
-		name: "South Georgia and the South Sandwich Islands",
-		continent: "antarctica",
-		status: "green",
+  south_georgia_and_the_south_sandwich_islands: {
+    name: "South Georgia and the South Sandwich Islands",
+    continent: "antarctica",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As a British Overseas Territory, the legal status of LGBTQ+ individuals in 2026 is governed by the laws of the territory, which are heavily influenced by the UK. Same-sex marriage was officially legalized via the Marriage Ordinance 2014, and subsequent 2025 updates have reinforced non-discrimination protections.</p>
 
         <p>Marriage equality is protected, though the territory has no permanent civilian population. Legal frameworks for adoption are theoretical as there are no resident children. Voices from the Ground: <a href="https://database.ilga.org/" target="_blank">ILGA World Database</a>.</p>
@@ -3839,7 +3886,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Absolute Stability." Due to the absence of a permanent population (only government officials and scientists), safety is entirely managed by the British Antarctic Survey and government protocols which are 100% inclusive as of 2026.</p>
 
         <p>There are no "LGBT Third Spaces" because there are no commercial spaces. Inclusion is a pillar of the scientific community's operational stability. Rights are treated as fundamental standards for all visiting personnel.</p>
@@ -3858,7 +3905,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers (primarily expedition cruise passengers) is "Exceptional." PDA is entirely safe, though the environment is exclusively wilderness and scientific bases.</p>
 
         <p>Cis-Gay and Trans/Non-Binary travelers face zero issues. Entry is strictly by permit and 2026 customs/vessel arrivals are professional and non-discriminatory. There are no neighborhoods, but Grytviken is the primary safe landing point. Practical advice: Focus on cold-weather gear rather than social attire.</p>
@@ -3874,7 +3921,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Healthcare is limited to scientific base medical facilities for emergencies only. There is no specific LGBTQ+ healthcare available due to the lack of infrastructure.</p>
 
         <p>Access to HRT/PrEP is "Data Not Found" locally; visitors must bring their own supplies. HIV care is available only as emergency stabilization. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi Health</a>.</p>
@@ -3891,21 +3938,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>South Georgia is a "Green" status wilderness. It is legally progressive but devoid of social infrastructure, making it a place of total safety and total isolation.</p>
 
         <p>Travelers are safe but must be self-sufficient. Sources: Government of GSGSSI, ILGA World.</p>
     `,
 
-		sources: ["https://www.gov.gs/", "https://database.ilga.org/", "https://www.equaldex.com/region/south-georgia-and-the-south-sandwich-islands"],
-	},
+    sources: ["https://www.gov.gs/", "https://database.ilga.org/", "https://www.equaldex.com/region/south-georgia-and-the-south-sandwich-islands"],
+  },
 
-	suriname: {
-		name: "Suriname",
-		continent: "americas",
-		status: "amber",
+  suriname: {
+    name: "Suriname",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Suriname occupies a unique position in South America with no laws criminalizing same-sex acts since 1869. While the 2015 Civil Code updates provided limited non-discrimination protections in employment, the country does not yet recognize same-sex marriage or civil unions.</p>
 
         <p>Marriage equality remains a point of debate following 2025 legislative petitions. Adoption rights for same-sex couples are not currently permitted. Voices from the Ground: <a href="https://www.parea.sr/" target="_blank">Parea Suriname (Professionals Association)</a>.</p>
@@ -3922,7 +3970,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Quiet Tolerance." 2025 polling suggests that while overt violence is rare, social inclusion is not yet widespread, with significant pressure from conservative religious communities to keep LGBTQ+ life private.</p>
 
         <p>LGBT Third Spaces exist primarily in Paramaribo, including inclusive art cafes and community meeting spots. Sentiment regarding intersectionality is positive, with spaces being largely inclusive of QPOC due to the multi-ethnic nature of Surinamese society. However, "Safe Havens" are still somewhat "G-mapped" in their nightlife aspects.</p>
@@ -3941,7 +3989,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is "Good." PDA is generally tolerated in Paramaribo but may attract unwanted attention in rural districts. 'De Facto' safety in the capital is significantly higher than in neighboring Guyana.</p>
 
         <p>Cis-Gay travelers face few issues. Trans/Non-Binary travelers may encounter bureaucratic hurdles at airport security as 2026 local ID laws remain binary. Safe Haven: Paramaribo City Center. Practical advice: Stick to well-known international hotels for the most inclusive service.</p>
@@ -3957,7 +4005,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is provided primarily by local NGOs. General medical institutions are professional but lack formal SOGI training as of 2026.</p>
 
         <p>Access to PrEP is available through NGO programs. HRT access is "Data Not Found" for the general public, though available through private international channels. HIV care is a national health priority. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi Health Local</a>.</p>
@@ -3974,21 +4022,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Suriname is an "Amber" status destination. It offers a level of historical decriminalization rare in the region, though legislative progress toward full equality is slow in 2026.</p>
 
         <p>Travelers are generally safe and welcome in the capital. Sources: Parea Suriname, Human Dignity Trust.</p>
     `,
 
-		sources: ["https://database.ilga.org/suriname-lgbti", "https://www.humandignitytrust.org/country-profile/suriname/", "https://www.equaldex.com/region/suriname"],
-	},
+    sources: ["https://database.ilga.org/suriname-lgbti", "https://www.humandignitytrust.org/country-profile/suriname/", "https://www.equaldex.com/region/suriname"],
+  },
 
-	trinidad_and_tobago: {
-		name: "Trinidad and Tobago",
-		continent: "americas",
-		status: "amber",
+  trinidad_and_tobago: {
+    name: "Trinidad and Tobago",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>As of early 2026, Trinidad and Tobago remains in a post-decriminalization adjustment phase following the landmark 2018 High Court ruling in <i>Jones v. Attorney General</i>. While consensual same-sex acts are legal, there are no explicit constitutional protections specifically for sexual orientation, and the Equal Opportunity Act still excludes these categories from its protective scope.</p>
 
         <p>Marriage equality and civil unions are not legally recognized. Legislative discussions in late 2025 have been stagnant regarding family law reform, and adoption by same-sex couples remains legally ambiguous and functionally restricted. Voices from the Ground: <a href="https://www.caiso68.org.tt/" target="_blank">CAISO: Sex and Gender Justice Advocacy</a>.</p>
@@ -4005,7 +4054,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Cautious Visibility." While public support has increased since 2024 polling, societal attitudes remain split between secular inclusion and religious conservatism. Public discourse is generally safe but can become polarized during election cycles.</p>
 
         <p>LGBT Third Spaces include the "Pride Arts Festival" venues and specific inclusive cafes in Woodbrook. However, "Safe Havens" are still largely "G-mapped" (cis-gay male focused), with trans and feminine-presenting individuals reporting higher rates of street harassment. Intersectionality remains a challenge as QPOC visibility is high, but class often dictates the level of safety one experiences.</p>
@@ -4024,7 +4073,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is good, particularly in tourist-centric areas of Tobago. In Port of Spain, the district of Woodbrook is considered the most gay-friendly. Discretion is advised in rural areas and during late-night travel outside known hubs.</p>
 
         <p>Social climate is one of "Passive Acceptance" for tourists. Cis-Gay travelers experience standard security, while Trans/Non-Binary travelers may encounter confusion at airport security due to rigid 2026 ID scanning protocols. "De Jure" discrimination is absent for tourists, but "De Facto" staring or hushed comments may occur in traditional markets.</p>
@@ -4040,7 +4089,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Availability of LGBTQ-specific healthcare is primarily managed through NGOs like the Family Planning Association (FPATT). General healthcare is safe for foreigners, though medical staff sensitivity can be inconsistent.</p>
 
         <p>Access to PrEP and HIV care is robust via the National AIDS Programme. HRT access is available through private providers, but no 2026 state-funded transition care exists. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi - Local Advocacy Links</a>.</p>
@@ -4057,25 +4106,26 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Trinidad and Tobago is a leading example of Caribbean legal progress, yet cultural shifts follow a slower trajectory in 2026. The islands are safe for travelers who exercise standard urban awareness.</p>
 
         <p>The duality of high-energy Pride events and conservative legislative sessions defines the current climate. Sources: ILGA World, Equaldex, CAISO.</p>
     `,
 
-		sources: [
-			"https://database.ilga.org/trinidad-and-tobago-lgbti",
-			"https://www.equaldex.com/region/trinidad-and-tobago",
-			"https://www.humandignitytrust.org/country-profile/trinidad-tobago/",
-		],
-	},
+    sources: [
+      "https://database.ilga.org/trinidad-and-tobago-lgbti",
+      "https://www.equaldex.com/region/trinidad-and-tobago",
+      "https://www.humandignitytrust.org/country-profile/trinidad-tobago/",
+    ],
+  },
 
-	united_states: {
-		name: "United States of America",
-		continent: "americas",
-		status: "amber",
+  united_states: {
+    name: "United States of America",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, the United States presents a deeply bifurcated legal landscape. At the federal level, the <i>Respect for Marriage Act</i> ensures the recognition of same-sex marriages, and the 2020 <i>Bostock</i> ruling protects LGBTQ+ employees from discrimination. However, there is no comprehensive federal Equality Act, leading to a "zip code" reality for civil rights.</p>
 
         <p>Marriage and adoption remain legal nationwide, but several state-level "Religious Freedom" bills passed in 2025 have created hurdles for service access and foster care. Voices from the Ground: <a href="https://www.hrc.org/" target="_blank">Human Rights Campaign - State of Equality</a>.</p>
@@ -4092,7 +4142,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "High Contrast Safety." Polling in early 2026 shows record-high support for LGBTQ+ rights among Gen Z and Millennials, yet a rise in targeted hate crimes in specific rural regions. Inclusive visibility in the 2026 administration remains a pillar of state stability.</p>
 
         <p>LGBT Third Spaces are abundant, ranging from "Bluestockings" bookstore in NYC to inclusive community gardens. Intersectionality is a core focus in urban hubs, with "Safe Havens" like West Hollywood or The Castro being highly inclusive of QPOC. However, "G-mapped" commercialization remains a critique within the community. Voices from the Ground: <a href="https://www.outrightinternational.org/" target="_blank">Outright International - US Domestic Analysis</a>.</p>
@@ -4111,7 +4161,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Traveler safety is "Variable." In hubs like NYC, San Francisco, or Chicago, the climate is one of "Confident Openness." In rural pockets of Florida or Texas, "Cis-Passing" or discretion is often a 'De Facto' safety strategy for visitors.</p>
 
         <p>Cis-Gay travelers usually navigate the country with ease. Trans/Non-Binary travelers face "Critical Friction" at airport security in 2026 due to TSA digital ID discrepancies in states with restrictive gender laws. Safe Havens: Hell's Kitchen (NYC), Northalsted (Chicago), Capitol Hill (Seattle). Avoid PDA in rural religious corridors.</p>
@@ -4127,7 +4177,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is highly developed in urban medical centers (e.g., Fenway Health, Callen-Lorde). However, the "Health Deserts" in rural states have expanded in 2026 due to legal restrictions on providers.</p>
 
         <p>Access to PrEP is widely available, though costs vary by insurance. HRT is legally restricted in several states for those under 21, and some 2025 laws target adult access. HIV care remains a federal priority. Voices from the Ground: <a href="https://www.glaad.org/" target="_blank">GLAAD - Healthcare Advocacy</a>.</p>
@@ -4144,21 +4194,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The USA is a "Living Lab" of LGBTQ+ rights in 2026. While the legal peaks are among the highest in the world, the legislative troughs in certain states represent a serious risk for trans travelers.</p>
 
         <p>Safety is entirely dependent on geography. Sources: Spartacus, HRC, Equaldex.</p>
     `,
 
-		sources: ["https://www.hrc.org/", "https://www.equaldex.com/region/united-states", "https://database.ilga.org/united-states-lgbti"],
-	},
+    sources: ["https://www.hrc.org/", "https://www.equaldex.com/region/united-states", "https://database.ilga.org/united-states-lgbti"],
+  },
 
-	united_states_virgin_islands: {
-		name: "United States Virgin Islands",
-		continent: "americas",
-		status: "amber",
+  united_states_virgin_islands: {
+    name: "United States Virgin Islands",
+    continent: "americas",
+    status: "amber",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>The USVI follows federal US law, meaning same-sex marriage has been legal since the 2015 <i>Obergefell</i> ruling. As a territory, it also falls under federal workplace protections. However, local 2025 legislative efforts to pass a comprehensive territorial non-discrimination bill have faced resistance.</p>
 
         <p>Marriage and adoption rights are legally secure. There is a "De Jure" protection for same-sex couples, but limited local infrastructure for enforcement compared to the mainland. Voices from the Ground: <a href="https://www.stxpride.org/" target="_blank">St. Croix Pride / Island Voices</a>.</p>
@@ -4175,7 +4226,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "Island Tolerance." 2025/2026 social sentiment is generally more inclusive than neighboring sovereign Caribbean nations, but remains more conservative than the US mainland. Visibility is high in tourist areas but discouraged in residential villages.</p>
 
         <p>LGBT Third Spaces are rare; inclusive beach clubs in Frederiksted (St. Croix) act as "De Facto" hubs. Intersectionality is naturally high due to the territory's demographics, though "Safe Havens" are often tourist-centric and can feel disconnected from the local QPOC struggle for visibility. Underground Telegram groups remain active for local organizing.</p>
@@ -4194,7 +4245,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>Traveler safety is "High" for those staying in major resorts. St. Croix is widely considered the most gay-friendly of the islands, specifically the Frederiksted area. St. Thomas is busier but equally tolerant in tourist zones.</p>
 
         <p>Cis-Gay travelers face no specific issues. Trans/Non-Binary travelers may face questioning at ferry terminals if IDs don't match presentation, as local 2026 security is vigilant. Safe Havens: Frederiksted (St. Croix), Frenchtown (St. Thomas). Public PDA is best kept to beaches and resorts.</p>
@@ -4210,7 +4261,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is limited; most complex care requires travel to the US mainland (Puerto Rico or Florida). However, basic services in Charlotte Amalie are safe.</p>
 
         <p>Access to PrEP and HIV care is available through territorial health clinics. HRT access in 2026 is "Data Not Found" for state-funded clinics but available via private telemedicine. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi - Caribbean Health Connect</a>.</p>
@@ -4227,21 +4278,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>The USVI is a "Safe Haven" within the Caribbean context, benefiting from US legal oversight. However, local culture remains conservative, requiring a balance of openness and discretion.</p>
 
         <p>Safety is high for tourists, with St. Croix being the cultural hub for the community. Sources: Spartacus 2026, Equaldex, IGLTA.</p>
     `,
 
-		sources: ["https://www.equaldex.com/region/united-states-virgin-islands", "https://database.ilga.org/united-states-virgin-islands-lgbti", "https://www.iglta.org/"],
-	},
+    sources: ["https://www.equaldex.com/region/united-states-virgin-islands", "https://database.ilga.org/united-states-virgin-islands-lgbti", "https://www.iglta.org/"],
+  },
 
-	uruguay: {
-		name: "Uruguay",
-		continent: "americas",
-		status: "green",
+  uruguay: {
+    name: "Uruguay",
+    continent: "americas",
+    status: "green",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>Uruguay maintains its position in 2026 as the gold standard for LGBTQ+ rights in Latin America. The 2013 Equal Marriage Law and the 2018 Comprehensive Trans Law provide some of the world's most robust constitutional protections against discrimination based on SOGIE.</p>
 
         <p>Marriage equality, adoption, and assisted reproduction are fully accessible to same-sex couples. Recent 2025 legislative reviews have further strengthened civil union portability for foreign residents. Voices from the Ground: <a href="https://www.mamba.org.uy/" target="_blank">Mamba: LGBT Collective Uruguay</a>.</p>
@@ -4258,7 +4310,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The current posture is "Confident Openness." 2026 polling data indicates over 80% public support for LGBTQ+ rights, treating these rights as a non-negotiable pillar of Uruguayan secular democracy and social stability.</p>
 
         <p>LGBT Third Spaces are widespread in Montevideo, including "La Linda" bookstore and multiple inclusive art galleries in Ciudad Vieja. Intersectionality is a high priority, with "Safe Havens" being intentionally inclusive of QPOC and non-binary individuals. The "G-mapping" of spaces is actively countered by feminist and trans-led collectives. Voices from the Ground: <a href="https://www.outrightinternational.org/" target="_blank">Outright International - Uruguay Profile</a>.</p>
@@ -4277,7 +4329,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is "Exceptional." Montevideo and Punta del Este are primary gay-friendly districts where "De Jure" and "De Facto" safety are identical. Even in rural areas, the climate is one of quiet respect.</p>
 
         <p>Cis-Gay and Trans/Non-Binary travelers face zero discrimination at airport security. 2026 local ID laws are fully trans-inclusive, and customs agents are trained in gender diversity. Safe Havens: Parque Rodó and Palermo (Montevideo). Public PDA is common and safe.</p>
@@ -4293,7 +4345,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>Uruguay offers world-class LGBTQ-specific healthcare. Foreigners can access clinics that are specialized in LGBT medicine with total safety.</p>
 
         <p>Access to HRT, PrEP, and HIV care is a universal right under 2026 state healthcare protocols. Transition-related surgeries are also covered by the state for residents. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi - Uruguay Health Hub</a>.</p>
@@ -4310,21 +4362,22 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Uruguay is the regional leader in human rights. For LGBTQ+ individuals, it offers a level of legal and social security that is among the highest in the world in 2026.</p>
 
         <p>It is the ideal destination for travelers seeking an environment of total acceptance. Sources: ILGA World, Spartacus, Equaldex.</p>
     `,
 
-		sources: ["https://database.ilga.org/uruguay-lgbti", "https://www.equaldex.com/region/uruguay", "https://www.humandignitytrust.org/country-profile/uruguay/"],
-	},
+    sources: ["https://database.ilga.org/uruguay-lgbti", "https://www.equaldex.com/region/uruguay", "https://www.humandignitytrust.org/country-profile/uruguay/"],
+  },
 
-	venezuela: {
-		name: "Venezuela",
-		continent: "americas",
-		status: "red",
+  venezuela: {
+    name: "Venezuela",
+    continent: "americas",
+    status: "red",
 
-		legal: `
+    isAI: true,
+    legal: `
         <p>In 2026, Venezuela's legal framework remains one of the most restrictive in South America. While consensual same-sex acts are not explicitly criminalized in the civil code, the absence of any non-discrimination protections or constitutional recognition of LGBTQ+ rights leaves the community vulnerable.</p>
 
         <p>Marriage equality and civil unions are strictly not recognized. 2025 news reports indicate that legislative petitions for marriage were once again ignored by the National Assembly, and adoption remains prohibited. Voices from the Ground: <a href="https://www.accionsolidaria.info/" target="_blank">Acción Solidaria - Human Rights Watch</a>.</p>
@@ -4341,7 +4394,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		safety: `
+    safety: `
         <p>The posture is "High Peril." 2026 polling data reflects a society preoccupied with economic crisis, where LGBTQ+ rights are often sidelined or used as political wedges. Harassment from state security forces is a persistent threat for visible community members.</p>
 
         <p>LGBT Third Spaces are largely underground; since 2024, many public bars have closed due to safety concerns. Gathering now occurs via "Secret House Parties" and encrypted Telegram groups. Intersectionality is a struggle for survival; QPOC and trans individuals face extreme "De Facto" exclusion. Safe Havens are almost entirely "G-mapped" and restricted to elite urban enclaves. Voices from the Ground: <a href="https://www.outrightinternational.org/" target="_blank">Outright International - Venezuela Crisis Report</a>.</p>
@@ -4360,7 +4413,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		travel: `
+    travel: `
         <p>General safety for travelers is "Critical Risk." It is strongly advised to avoid all non-essential travel. For those who must visit, absolute discretion is mandatory. Public visibility as LGBTQ+ can lead to immediate extortion or detention.</p>
 
         <p>Social climate is hostile. Cis-Gay travelers must stay in international hotels with private security. Trans/Non-Binary travelers face "Extreme Friction" at airport security; 2026 local ID checks are rigid and customs agents often target non-conformity. There are no 'Safe Haven' districts. Total PDA ban. Practical advice: Do not disclose LGBTQ+ status to any local authority.</p>
@@ -4376,7 +4429,7 @@ Object.assign(globalData, {
         </div>
     `,
 
-		health: `
+    health: `
         <p>LGBTQ-specific healthcare is non-existent within the public system. Medical facilities face chronic shortages of all supplies, and discrimination is widespread.</p>
 
         <p>Access to PrEP, HRT, and HIV care is "Critical" (near zero in public clinics). The community relies entirely on 2026 international humanitarian aid for antiretrovirals. Voices from the Ground: <a href="https://alturi.org/" target="_blank">Alturi - Venezuela Crisis Relief</a>.</p>
@@ -4393,12 +4446,12 @@ Object.assign(globalData, {
         </div>
     `,
 
-		posture: `
+    posture: `
         <p>Venezuela is a "Red" status territory in 2026. The intersection of political instability and lack of legal protection makes it one of the most dangerous places for LGBT life in the Americas.</p>
 
         <p>Visibility equals vulnerability. Sources: ILGA World, Human Dignity Trust, Outright International.</p>
     `,
 
-		sources: ["https://database.ilga.org/venezuela-lgbti", "https://www.equaldex.com/region/venezuela", "https://www.humandignitytrust.org/country-profile/venezuela/"],
-	},
+    sources: ["https://database.ilga.org/venezuela-lgbti", "https://www.equaldex.com/region/venezuela", "https://www.humandignitytrust.org/country-profile/venezuela/"],
+  },
 });

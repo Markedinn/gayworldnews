@@ -1,0 +1,43 @@
+{
+  "prettier.printWidth": 180,
+  "editor.wordWrap": "on",
+  "prettier.proseWrap": "never",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "emmet.triggerExpansionOnTab": true,
+  "editor.padding.top": 20,
+  "editor.padding.bottom": 20,
+  "editor.lineNumbers": "on",
+  "editor.glyphMargin": true,
+  "editor.folding": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "monokaiPro.fileIconsMonochrome": true,
+  "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+  "editor.tokenColorCustomizations": {
+    "[*Monokai Pro*]": {
+      "textMateRules": [
+        {
+          "name": "Force Pink Tags Desktop",
+          "scope": [
+            "entity.name.tag",
+            "entity.name.tag.html",
+            "entity.name.tag.script.html",
+            "entity.name.tag.structure.any.html",
+            "entity.name.tag.block.any.html",
+            "entity.name.tag.inline.any.html",
+            "meta.tag.any.html",
+            "punctuation.definition.tag"
+          ],
+          "settings": {
+            "foreground": "#FF69B4",
+            "fontStyle": ""
+          }
+        }
+      ]
+    }
+  }
+}
