@@ -100,77 +100,7 @@ Object.assign(globalData, {
     name: "Iran",
     continent: "asia",
     status: "red",
-
-    isAI: true,
-    legal: `
-        <p>In 2026, Iran remains one of the most legally hostile environments for LGBTQ+ individuals. Consensual same-sex acts are capital offenses under the Islamic Penal Code. While the state recognizes binary transgender transitions (following a 1987 fatwa), this is often used as a tool for "forced re-assignment" to fit the heteronormative legal framework.</p>
-
-        <p><strong>Voices from the Ground:</strong> Local advocates describe the current climate as "Survivalism." For example, the 2026 increased surveillance of encrypted messaging apps has provided a chilling precedent for the community, leading to a total withdrawal from digital visibility to avoid morality police entrapment.</p>
-        
-        <div class="legal-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #f1c40f; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Local Advocacy & Legal Support</h4>
-            <div class="legal-card" style="background: rgba(241, 196, 15, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #f1c40f;">
-                <strong style="display: block; font-size: 1.1rem; color: #f1c40f; margin-bottom: 5px;">🏛️ 6Rang (Iranian Lesbian and Transgender Network)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Operating from exile, they provide the primary 2026 reporting on human rights violations and legal aid for those attempting to flee.</p>
-                <a href="https://6rang.org/english/" target="_blank" style="display: inline-block; margin-top: 10px; color: #fff; text-decoration: underline; font-size: 0.85rem;">Official Site →</a>
-            </div>
-        </div>
-    `,
-
-    safety: `
-        <p>The 2026 public sentiment is highly hostile, governed by state-sanctioned homophobia. Public visibility is dangerous. However, in affluent North Tehran neighborhoods, "underground" house parties exist behind high walls and heavy security.</p>
-
-        <p><strong>Community Density:</strong> Underground. There are zero dedicated LGBT spaces; community life is entirely confined to private residences.</p>
-        
-        <div class="safety-metrics-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #e74c3c; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Safety Metrics & Warning Indicators</h4>
-            <div class="metrics-card" style="background: rgba(231, 76, 60, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #e74c3c;">
-                <strong style="display: block; font-size: 1.1rem; color: #e74c3c; margin-bottom: 5px;">📊 Global Ranking: #194</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.8;">Ranked among the most dangerous countries globally for LGBTQ+ life in 2026.</p>
-            </div>
-        </div>
-    `,
-
-    travel: `
-        <p>Extremely high risk. Travelers should maintain total digital and physical discretion. Foreign nationals are not immune to morality laws.</p>
-        
-        <p><strong>The Venue Spectrum:</strong>
-        * **Upscale/Protected:** Private North Tehran Villas - Only accessible via trusted local networks; security is handled by private gatekeepers.
-        * **The Local Way:** N/A - Authentic public community hubs do not exist due to the threat of execution.</p>
-        
-        <p><strong>Digital Pulse (Apps & Forums):</strong>
-        * **Primary Apps:** Hornet and Grindr are used via VPNs, but carry high risk of entrapment.
-        * **Community Forums:** JoopeA is a key digital resource for Iranian LGBT news and safety info in the diaspora.</p>
-        
-        <div class="travel-resource-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #3498db; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Traveler Intel</h4>
-            <div class="safety-card" style="background: rgba(52, 152, 219, 0.1); padding: 20px; border-radius: 8px; border: 1px solid rgba(52, 152, 219, 0.3);">
-                <strong style="display: block; font-size: 1.1rem; color: #3498db;">🛂 Entry & Visibility Tip</strong>
-                <p style="color: #fff; font-size: 0.85rem;">Wipe all LGBT-dating apps and sensitive photos before arrival. Do not discuss LGBTQ+ topics with guides or strangers.</p>
-            </div>
-        </div>
-    `,
-
-    health: `
-        <p>Sexual health care is virtually non-existent for the LGBT community outside of state-sanctioned transition paths. HIV care is available but highly stigmatized.</p>
-        <div class="medical-address-grid" style="margin-top: 40px; border-top: 2px solid rgba(255,255,255,0.1); padding-top: 25px;">
-            <h4 style="color: #00ff88; margin-bottom: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">On-The-Ground Health Contacts</h4>
-            <div class="address-block" style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; border-left: 4px solid #00ff88;">
-                <strong style="display: block; font-size: 1.1rem; margin-bottom: 5px;">JoopeA Health (Digital)</strong>
-                <p style="margin: 0; font-size: 0.95rem; opacity: 0.9;">Provides digital resources and anonymous health counseling for the Persian-speaking LGBT community.</p>
-            </div>
-        </div>
-    `,
-
-    posture: `
-        <p>The 2026 vibe is 'Extreme Erasure.' The community exists in total secrecy, showing resilience only through high-risk underground social networks.</p>
-    `,
-
-    sources: [
-      { label: "Ground Intel: JoopeA", url: "https://joopea.info/", button: "READ RECENT UPDATES →" },
-      { label: "Official Index: ILGA World", url: "https://ilga.org/", button: "VIEW LEGAL DATA →" },
-      { label: "Community Event: N/A", url: "#", button: "NO PUBLIC EVENTS →" },
-    ],
+    path: "asia/iran.html",
   },
 
   iraq: {
