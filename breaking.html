@@ -1,279 +1,275 @@
+
 <!doctype html>
-<html lang="en">	
-	<head>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title>Breaking News | Gay World News - Global LGBT Safety Watch</title>
+        <meta name="description" content="Real-time global LGBT news and safety alerts. Tracking the 'A-Z' of gay rights with independent, realist commentary." />
+        <meta name="keywords" content="LGBT world news, Gay safety map, LGBT travel alerts, Malaysia LGBT news, Belarus LGBT news" />
+        <link rel="canonical" href="https://gayworldnews.com/breaking.html" />
+
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://www.gayworldnews.com/" />
+            <meta property="og:title" content="Interactive LGBTQ+ Global Security Map | Gay World News" />
+            <meta property="og:description" content="A Global Hub for LGBTQ+ Rights Travel, Health, and Security. View risk levels by country." />
+            <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+            <meta property="og:image:alt" content="Gay World News interactive travel map highlighting global LGBTQ rights & security." />
+
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:url" content="https://www.gayworldnews.com/" />
+            <meta name="twitter:title" content="2026 LGBTQ+ Travel & Safety Map | Gay World News" />
+            <meta name="twitter:description" content="Real-time global updates for LGBTQ+ legal rights, health, and security." />
+            <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+
+            <link rel="icon" type="image/webp" href="images/favicon.webp" />
+            <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+        <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "name": "Gay World News",
+        "url": "https://gayworldnews.com",
+        "logo": "https://gayworldnews.com/images/favicon.webp",
+        "sameAs": [
+            "https://youtube.com/@yourchannel"
+        ]
+        }
+        </script>
+
+        <script>window.globalData = {};</script>
+        <link rel="stylesheet" href="breaking.css?v=5.3" />
+        <link rel="stylesheet" href="index.css?v=5.3" />
+        
+        <script src="index.js" defer></script>
+    </head>
 
 
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
-		<title>Breaking News | Gay World News - Global LGBT Safety Watch</title>
-		<meta name="description" content="Real-time global LGBT news and safety alerts. Tracking the 'A-Z' of gay rights with independent, realist commentary." />
-		<meta name="keywords" content="LGBT world news, Gay safety map, LGBT travel alerts, Malaysia LGBT news, Belarus LGBT news" />
-		<link rel="canonical" href="https://gayworldnews.com/breaking.html" />
+    <body class="standard-page">
+        <div id="translator-anchor"></div>
 
-			<meta property="og:type" content="website" />
-			<meta property="og:url" content="https://www.gayworldnews.com/" />
-			<meta property="og:title" content="Interactive LGBTQ+ Global Security Map | Gay World News" />
-			<meta property="og:description" content="A Global Hub for LGBTQ+ Rights Travel, Health, and Security. View risk levels by country." />
-			<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
-			<meta property="og:image:alt" content="Gay World News interactive travel map highlighting global LGBTQ rights & security." />
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
 
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:url" content="https://www.gayworldnews.com/" />
-			<meta name="twitter:title" content="2026 LGBTQ+ Travel & Safety Map | Gay World News" />
-			<meta name="twitter:description" content="Real-time global updates for LGBTQ+ legal rights, health, and security." />
-			<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+        <div id="sideMenu" class="side-menu">
+            <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
 
-			<link rel="icon" type="image/webp" href="images/favicon.webp" />
-			<link rel="apple-touch-icon" href="images/favicon.webp" />
+            <div class="slider-content">
+                <nav class="mobile-nav-links">
+                    <div class="landing-search-wrap">
+                        <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+                        <div id="searchResults" class="search-results-floating"></div>
+                    </div>
 
-			<link rel="preconnect" href="https://api.rss2json.com">
+                    <a href="../africa.html">AFRICA</a>
+                    <a href="../americas.html">AMERICAS</a>
+                    <a href="../asia.html">ASIA</a>
+                    <a href="../europe.html">EUROPE</a>
+                    <a href="../oceania.html">OCEANIA</a>
+                    <a href="../about.html">ABOUT</a>
+                    <a href="../contact.html">CONTACT</a>
+                </nav>
+                <div class="social-pill-container">
+                    <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                        </svg>
+                    </a>
 
-		<script type="application/ld+json">
-		{
-		"@context": "https://schema.org",
-		"@type": "NewsMediaOrganization",
-		"name": "Gay World News",
-		"url": "https://gayworldnews.com",
-		"logo": "https://gayworldnews.com/images/favicon.webp",
-		"sameAs": [
-			"https://youtube.com/@yourchannel"
-		]
-		}
-		</script>
+                    <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                fill="currentColor"
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                    </a>
 
-		<script>window.globalData = {};</script>
-		<link rel="stylesheet" href="breaking.css?v=5.2" />
-		<link rel="stylesheet" href="index.css?v=5.2" />
-		
-		<script src="news-loader.js" defer></script>
-		<script src="index.js" defer></script>
-	</head>
+                    <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                fill="currentColor"
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
 
+                <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+                    <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
 
-	<body class="standard-page">
-		<div id="translator-anchor"></div>
+                    <div class="faq-item" style="margin-bottom: 20px">
+                        <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+                            <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+                            advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+                            source information, further links and reading.
+                        </p>
+                    </div>
 
-		<div class="menu-toggle" onclick="toggleMenu()">
-			<div class="bar"></div>
-			<div class="bar"></div>
-			<div class="bar"></div>
-		</div>
+                    <div class="faq-item" style="margin-bottom: 20px">
+                        <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+                            Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
+                        </p>
+                    </div>
 
-		<div id="sideMenu" class="side-menu">
-			<a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+                    <div class="faq-item" style="margin-bottom: 20px">
+                        <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
+                        <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+                            This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
+                        </p>
+                    </div>
+                    <p style="color: #ffffff; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+                        <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
 
-			<div class="slider-content">
-				<nav class="mobile-nav-links">
-					<div class="landing-search-wrap">
-						<input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-						<div id="searchResults" class="search-results-floating"></div>
-					</div>
+        <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
 
-					<a href="../africa.html">AFRICA</a>
-					<a href="../americas.html">AMERICAS</a>
-					<a href="../asia.html">ASIA</a>
-					<a href="../europe.html">EUROPE</a>
-					<a href="../oceania.html">OCEANIA</a>
-					<a href="../about.html">ABOUT</a>
-					<a href="../contact.html">CONTACT</a>
-				</nav>
-				<div class="social-pill-container">
-					<a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
-						<svg viewBox="0 0 24 24">
-							<path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
-						</svg>
-					</a>
+        <a href="/" class="home-btn">HOME</a>
 
-					<a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
-						<svg viewBox="0 0 24 24">
-							<path
-								fill="currentColor"
-								d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-						</svg>
-					</a>
+        <div class="master-grid-container">
+            <header class="main-header">
+                <h1 class="main-title">Gay World News</h1>
+                <br>
+                <h2 class="main-site-subtitle" style="font-size: 1.6rem;">BREAKING</h2>
+            </header>
 
-					<a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
-						<svg viewBox="0 0 24 24">
-							<path
-								fill="currentColor"
-								d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-						</svg>
-					</a>
-				</div>
-
-				<div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
-					<h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
-							<span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
-							advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
-							source information, further links and reading.
-						</p>
-					</div>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBTQ+ Risk level determined?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
-							Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
-						</p>
-					</div>
-
-					<div class="faq-item" style="margin-bottom: 20px">
-						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
-						<p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
-							This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
-						</p>
-					</div>
-					<p style="color: #ffffff; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
-						<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<a href="https://google.com" class="exit-btn">QUICK EXIT</a>
-
-		<a href="/" class="home-btn">HOME</a>
-
-		<div class="master-grid-container">
-			<header class="main-header">
-				<h1 class="main-title">Gay World News</h1>
-				<br>
-				<h2 class="main-site-subtitle" style="font-size: 1.6rem;">BREAKING</h2>
-			</header>
-
-			<main class="news-feed-wrapper">
+            <main class="news-feed-wrapper">
     <div id="manual-news-portal">
 
-			<details class="news-accordion manual-pinned">
-				<summary>
-					<div class="tag-bar">
+            <details class="news-accordion manual-pinned">
+                <summary>
+                    <div class="tag-bar">
 
-						<span class="tag tag-down">Rights Trend: Down</span>
-					</div>
-					<div class="country-label manual-red-title">RUSSIA: Exclusive</div>
-					<h3>THE LEGAL FRAMEWORK FOR SOCIAL LGBT CLEANSING</h3>
-					<div class="date-manual">April 30, 2026</div>
-				</summary>
+                        <span class="tag tag-down">Rights Trend: Down</span>
+                    </div>
+                    <div class="country-label manual-red-title">RUSSIA: Exclusive</div>
+                    <h3>THE LEGAL FRAMEWORK FOR SOCIAL LGBT CLEANSING</h3>
+                    <div class="date-manual">April 30, 2026</div>
+                </summary>
 
-				<div class="news-content-expanded">
-					<div class="audio-controls" style="margin-bottom: 15px;">
-						<button class="play-news-btn">
-							<span class="play-icon">▶</span> 
-							<span class="button-text">Listen to Article</span>
-						</button>
-					</div>
+                <div class="news-content-expanded">
+                    <div class="audio-controls" style="margin-bottom: 15px;">
+                        <button class="play-news-btn">
+                            <span class="play-icon">▶</span> 
+                            <span class="button-text">Listen to Article</span>
+                        </button>
+                    </div>
 
-					<p class="news-text">
-						<strong>The Background: </strong>Between April 27 and April 29, 2026, the Russian judicial system designates several major advocacy groups - including the Russian LGBT Network, Callisto, Coming Out (Vykhod), and Center T - as "extremist organizations." These rulings criminalize the act of defending or promoting LGBTQ+ rights and reclassify human rights monitoring as a direct threat to national security.
-					</p>
+                    <p class="news-text">
+                        <strong>The Background: </strong>Between April 27 and April 29, 2026, the Russian judicial system designates several major advocacy groups - including the Russian LGBT Network, Callisto, Coming Out (Vykhod), and Center T - as "extremist organizations." These rulings criminalize the act of defending or promoting LGBTQ+ rights and reclassify human rights monitoring as a direct threat to national security.
+                    </p>
 
-					<p>
-						<strong>The Unreported Results: </strong>We are currently investigating worrying reports circulating out of Russia that reveal a standardized choice is being given to gay people in the current wave of arrests:
-					</p>
+                    <p>
+                        <strong>The Unreported Results: </strong>We are currently investigating worrying reports circulating out of Russia that reveal a standardized choice is being given to gay people in the current wave of arrests:
+                    </p>
 
-					<p>
-						<strong>Probable Death in the Penal Colonies:</strong><br>
-						This "extremist" legal framework effectively turns any interaction with the LGBT community into a high-stakes criminal offense. Under Article 282.2 of the Criminal Code, individuals identified as members or supporters of these "extremist" groups now face between 6 and 10 years in a penal colony. This could be for as little as posting a rainbow flag on social media or showing a gay movie, as reported by Amnesty International. For LGBT individuals, these colonies are extremely dangerous, and human rights observers note that any prisoner classified as "extremist" and 'outed' becomes a primary target for deadly and protracted violence from inmates in general, and specifically the prison staff and the ultra-nationalist inmate hierarchies who would likely act with impunity.
-					</p>
+                    <p>
+                        <strong>Probable Death in the Penal Colonies:</strong><br>
+                        This "extremist" legal framework effectively turns any interaction with the LGBT community into a high-stakes criminal offense. Under Article 282.2 of the Criminal Code, individuals identified as members or supporters of these "extremist" groups now face between 6 and 10 years in a penal colony. This could be for as little as posting a rainbow flag on social media or showing a gay movie, as reported by Amnesty International. For LGBT individuals, these colonies are extremely dangerous, and human rights observers note that any prisoner classified as "extremist" and 'outed' becomes a primary target for deadly and protracted violence from inmates in general, and specifically the prison staff and the ultra-nationalist inmate hierarchies who would likely act with impunity.
+                    </p>
 
-					<p>
-						<strong>Probable Death On the Ukrainian Frontlines:</strong><br> 
-						The true horror we are investigating is the potential for a "secret pipeline" to the Ukrainian frontlines. While media outlets have extensively documented the recent wave of "extremism" arrests, our investigation is looking into reports of a standardized ultimatum given to those being persecuted: accept a decade in a penal colony or sign a "voluntary" military contract. By choosing the frontline, the accused enters a specialized unit where their "extremism" and "terrorism" charges are reportedly suspended or expunged upon service completion. If true, this means there will be no public data to distinguish an LGBTQ+ individual who "volunteered" under duress from a standard service soldier.
-					</p>
+                    <p>
+                        <strong>Probable Death On the Ukrainian Frontlines:</strong><br> 
+                        The true horror we are investigating is the potential for a "secret pipeline" to the Ukrainian frontlines. While media outlets have extensively documented the recent wave of "extremism" arrests, our investigation is looking into reports of a standardized ultimatum given to those being persecuted: accept a decade in a penal colony or sign a "voluntary" military contract. By choosing the frontline, the accused enters a specialized unit where their "extremism" and "terrorism" charges are reportedly suspended or expunged upon service completion. If true, this means there will be no public data to distinguish an LGBTQ+ individual who "volunteered" under duress from a standard service soldier.
+                    </p>
 
-					<p>
-						With no data available, we will not be able to gather the evidence to prosecute the authorities for crimes against humanity. They will literally be committing mass murder with impunity.
-					</p>
+                    <p>
+                        With no data available, we will not be able to gather the evidence to prosecute the authorities for crimes against humanity. They will literally be committing mass murder with impunity.
+                    </p>
 
-					<p>
-						<strong>Genocide: </strong> The systematic killing or displacement of people belonging to a protected group is internationally recognized as genocide. However, the UN has consistently failed to identify the LGBTQ+ community as a "group" that can be the target of genocide. This is because, at the time the legal definition was written, many participating countries that voted for it had also criminalized homosexuality. However, we are a distinct group of people, and any attempt to kill us, displace us, or socially "cleanse" us from society is a genocide - whether the UN accepts the legal terminology or not.
-					</p>
+                    <p>
+                        <strong>Genocide: </strong> The systematic killing or displacement of people belonging to a protected group is internationally recognized as genocide. However, the UN has consistently failed to identify the LGBTQ+ community as a "group" that can be the target of genocide. This is because, at the time the legal definition was written, many participating countries that voted for it had also criminalized homosexuality. However, we are a distinct group of people, and any attempt to kill us, displace us, or socially "cleanse" us from society is a genocide - whether the UN accepts the legal terminology or not.
+                    </p>
 
-						<h3 style="margin-bottom: 20px; font-weight: 800;">Reference & Advocacy Links</h3>
-
-
-			<div class="resource-container">
-
-				<a href="https://en.zona.media/article/2026/04/29/lgbt_sweep" target="_blank" rel="noopener" class="resource-card">
-					<span class="resource-title">Mediazona: Russia Outlaws 7 LGBTQ+ Groups</span>
-					<span class="resource-desc">Detailed reporting on the April 2026 sweep and the designation of the Russian LGBT Network and Callisto as "extremist."</span>
-				</a>
-
-				<a href="https://www.amnesty.org/en/latest/news/2026/04/russia-russian-lgbt-network-is-labelled-extremist-in-escalating-crackdown-on-lgbti-rights/" target="_blank" rel="noopener" class="resource-card">
-					<span class="resource-title">Amnesty International: A Major Premeditated Blow</span>
-					<span class="resource-desc">Official condemnation of the April 2026 rulings and the systematic misuse of anti-extremism legislation.</span>
-				</a>
-
-				<a href="https://www.hrw.org/news/2026/02/04/russia-crackdown-on-dissent-escalates" target="_blank" rel="noopener" class="resource-card">
-					<span class="resource-title">HRW World Report 2026: The Traditional Values Crusade</span>
-					<span class="resource-desc">Investigation into the escalation of criminal sentences and the weaponization of "state security" charges against the LGBT community.</span>
-				</a>
-
-				<a href="https://www.jurist.org/news/2026/04/russia-court-declares-lgbt-network-as-extremist-amidst-intensified-crackdown/" target="_blank" rel="noopener" class="resource-card">
-					<span class="resource-title">Jurist: Criminalizing Human Rights Monitoring</span>
-					<span class="resource-desc">Legal analysis of how Article 282.2 creates 10-year prison liabilities for members and supporters of outlawed advocacy groups.</span>
-				</a>
-			</div>
-				</div>
-			</details>
+                        <h3 style="margin-bottom: 20px; font-weight: 800;">Reference & Advocacy Links</h3>
 
 
-		<details class="news-accordion manual-pinned">
-			<summary>
-				<div class="tag-bar">
-					<span class="tag tag-down">Rights Trend: Down</span>
-				</div>
-				<div class="country-label manual-red-title">Afghanistan</div>
-				<h3>New Laws Target Gay Community: Death Penalty for ‘Habitual Sodomy’</h3>
-				<div class="date-manual">April 30, 2026</div>
-			</summary>
+            <div class="resource-container">
 
-			<div class="news-content-expanded">
-				<div class="audio-controls" style="margin-bottom: 15px;">
-					<button class="play-news-btn">
-						<span class="play-icon">▶</span> 
-						<span class="button-text">Listen to Article</span>
-					</button>
-				</div>
+                <a href="https://en.zona.media/article/2026/04/29/lgbt_sweep" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Mediazona: Russia Outlaws 7 LGBTQ+ Groups</span>
+                    <span class="resource-desc">Detailed reporting on the April 2026 sweep and the designation of the Russian LGBT Network and Callisto as "extremist."</span>
+                </a>
 
-				<p class="news-text">
-					Amnesty International has released a critical analysis of the January 2026 Criminal Procedure Regulation, highlighting draconian provisions that institutionalize violence against marginalized groups. The regulation formalizes a system where human rights are secondary to discretionary religious interpretation.
-				</p>
+                <a href="https://www.amnesty.org/en/latest/news/2026/04/russia-russian-lgbt-network-is-labelled-extremist-in-escalating-crackdown-on-lgbti-rights/" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Amnesty International: A Major Premeditated Blow</span>
+                    <span class="resource-desc">Official condemnation of the April 2026 rulings and the systematic misuse of anti-extremism legislation.</span>
+                </a>
 
-				<p>
-					<strong>Death Penalty:</strong> The most severe provision includes the prescription of the death penalty for "habitual sodomy." This sentence can be handed down based on a discretionary judgment from an Imam if they deem it is in the "public interest," removing standard evidentiary requirements and fair trial protections.
-				</p>
+                <a href="https://www.hrw.org/news/2026/02/04/russia-crackdown-on-dissent-escalates" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">HRW World Report 2026: The Traditional Values Crusade</span>
+                    <span class="resource-desc">Investigation into the escalation of criminal sentences and the weaponization of "state security" charges against the LGBT community.</span>
+                </a>
 
-				<p>
-					<strong>Torture and Ill-treatment:</strong> The regulation explicitly prescribes flogging or lashing for a wide range of "moral offences." These punishments are often carried out in public settings, intended to serve as a deterrent while violating international prohibitions on torture.
-				</p>
+                <a href="https://www.jurist.org/news/2026/04/russia-court-declares-lgbt-network-as-extremist-amidst-intensified-crackdown/" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Jurist: Criminalizing Human Rights Monitoring</span>
+                    <span class="resource-desc">Legal analysis of how Article 282.2 creates 10-year prison liabilities for members and supporters of outlawed advocacy groups.</span>
+                </a>
+            </div>
+                </div>
+            </details>
 
-				<p>
-					<strong>Social Hierarchy:</strong> Under the new rules, offenders are divided into four distinct categories. This created a sliding scale of punishment based on social status, ensuring that those in lower social tiers face the most brutal iterations of the law.
-				</p>
 
-				<p>
-					<strong>Religious Erasure:</strong> The law mandates severe penalties for any deviation from the Hanafi School of Sunni Islam. Beliefs held by religious minorities or interpreted as "contrary" to this specific branch are officially designated as heretical.
-				</p>
-
-				<p>
-					<strong>Sources:</strong> Amnesty International; Human Rights Watch (2026)
-				</p>
-
-				<div>
-					<a href="https://www.amnesty.org/en/latest/news/2026/03/afghanistan-new-criminal-regulation-targets-women-and-minority-groups-with-ever-harsher-punishments/" target="_blank">READ Amnesty Report</a>
-					<span style="margin: 0 10px;"></span>
-					<a href="https://www.hrw.org/world-report/2026/country-chapters/afghanistan" target="_blank">Secondary HRW Source</a>
-				</div>
-			</div>
-		</details>
-		
         <details class="news-accordion manual-pinned">
-			
+            <summary>
+                <div class="tag-bar">
+                    <span class="tag tag-down">Rights Trend: Down</span>
+                </div>
+                <div class="country-label manual-red-title">Afghanistan</div>
+                <h3>New Laws Target Gay Community: Death Penalty for ‘Habitual Sodomy’</h3>
+                <div class="date-manual">April 30, 2026</div>
+            </summary>
+
+            <div class="news-content-expanded">
+                <div class="audio-controls" style="margin-bottom: 15px;">
+                    <button class="play-news-btn">
+                        <span class="play-icon">▶</span> 
+                        <span class="button-text">Listen to Article</span>
+                    </button>
+                </div>
+
+                <p class="news-text">
+                    Amnesty International has released a critical analysis of the January 2026 Criminal Procedure Regulation, highlighting draconian provisions that institutionalize violence against marginalized groups. The regulation formalizes a system where human rights are secondary to discretionary religious interpretation.
+                </p>
+
+                <p>
+                    <strong>Death Penalty:</strong> The most severe provision includes the prescription of the death penalty for "habitual sodomy." This sentence can be handed down based on a discretionary judgment from an Imam if they deem it is in the "public interest," removing standard evidentiary requirements and fair trial protections.
+                </p>
+
+                <p>
+                    <strong>Torture and Ill-treatment:</strong> The regulation explicitly prescribes flogging or lashing for a wide range of "moral offences." These punishments are often carried out in public settings, intended to serve as a deterrent while violating international prohibitions on torture.
+                </p>
+
+                <p>
+                    <strong>Social Hierarchy:</strong> Under the new rules, offenders are divided into four distinct categories. This created a sliding scale of punishment based on social status, ensuring that those in lower social tiers face the most brutal iterations of the law.
+                </p>
+
+                <p>
+                    <strong>Religious Erasure:</strong> The law mandates severe penalties for any deviation from the Hanafi School of Sunni Islam. Beliefs held by religious minorities or interpreted as "contrary" to this specific branch are officially designated as heretical.
+                </p>
+
+                <p>
+                    <strong>Sources:</strong> Amnesty International; Human Rights Watch (2026)
+                </p>
+
+                <div>
+                    <a href="https://www.amnesty.org/en/latest/news/2026/03/afghanistan-new-criminal-regulation-targets-women-and-minority-groups-with-ever-harsher-punishments/" target="_blank">READ Amnesty Report</a>
+                    <span style="margin: 0 10px;"></span>
+                    <a href="https://www.hrw.org/world-report/2026/country-chapters/afghanistan" target="_blank">Secondary HRW Source</a>
+                </div>
+            </div>
+        </details>
+        
+        <details class="news-accordion manual-pinned">
+            
             <summary>
                 <div class="tag-bar">
                     <span class="tag tag-down">Rights Trend: Down</span>
@@ -286,10 +282,10 @@
              
                 <!-- 1. ADDED BUTTON -->
                 <div class="audio-controls" style="margin-bottom: 15px;">
-				<button class="play-news-btn">
-					<span class="play-icon">▶</span> 
-					<span class="button-text"> Article</span>
-				</button>
+                <button class="play-news-btn">
+                    <span class="play-icon">▶</span> 
+                    <span class="button-text"> Article</span>
+                </button>
 
                 <p class="news-text">
                     I remember Margaret Thatcher, UK PM, introducing anti-gay 'propaganda' laws in the 80's. This new set of bans on 'propaganda' is Russian led and Belarus has followed this lead and somehow aligned sexual orientation and - with no distinction - pedophilia with 'gender reassignment' and 'childlessness' which are also to be banned under Alyaksandr Lukashenka's new laws. Lukashenka uses this 'strong man' bullying tactic to make himself appear more masculine to his voter base. However, the law is very dangerous for the LGBT community. By refusing to distinguish between adult same-sex relations and pedophilia, the law removes the possibility of a "civil" argument. If you defend one, the state accuses you of defending the other. This is a classic Propaganda Loop designed to silence dissent.
@@ -299,190 +295,169 @@
         </details>
 
 
-					<details class="news-accordion manual-pinned">
-						<summary>
-							<div class="tag-bar">
-								<span class="tag tag-down">Rights Trend: Down</span>
-							</div>
-							<div class="country-label manual-red-title">MALAYSIA</div>
-							<h3>Government Minister dressed in the clothes of a deviant culture says, don't say 'LGBT', say 'deviant culture'. </h3>
-							<div class="date-manual">April 24, 2026</div>
-						</summary>
-						<div class="news-content-expanded">
+                    <details class="news-accordion manual-pinned">
+                        <summary>
+                            <div class="tag-bar">
+                                <span class="tag tag-down">Rights Trend: Down</span>
+                            </div>
+                            <div class="country-label manual-red-title">MALAYSIA</div>
+                            <h3>Government Minister dressed in the clothes of a deviant culture says, don't say 'LGBT', say 'deviant culture'. </h3>
+                            <div class="date-manual">April 24, 2026</div>
+                        </summary>
+                        <div class="news-content-expanded">
 
-						<div class="audio-controls" style="margin-bottom: 15px;">
-						<button class="play-news-btn">
-							<span class="play-icon">▶</span> 
-							<span class="button-text"> Article</span>
-						</button>
-							<p class="news-text">
-								Malaysia’s minister of religious affairs, Marhamah Rosli - who prides herself on being a beacon of 'modernity', has declared that the term “LGBT” promotes illegal same-sex sexual relations and asks people to use the term “deviant culture” instead. The Malaysian human rights' commission denounced the suggestion. The incident has been reported to the Malaysian Fashion Police. Apologies, you'll have to open the article to see the joke. However, on a serious note, this follows the blocking of Grindr and Blued which took effect in March and April this year, reflecting where the true deviance lies. We can only wonder where this obsessive fantasizing over gay private lives comes from. 
-							</p>
-							<p>Source: Attitude Magazing / 76Crimes</p>
-							<div>
-								<a href="https://76crimes.com/2026/04/24/dont-say-lgbt-says-malaysia-official-say-deviant-culture-instead/" target="_blank"
-									>READ article</a
-								>
-							</div>
-						</div>
-					</details>
+                        <div class="audio-controls" style="margin-bottom: 15px;">
+                        <button class="play-news-btn">
+                            <span class="play-icon">▶</span> 
+                            <span class="button-text"> Article</span>
+                        </button>
+                            <p class="news-text">
+                                Malaysia’s minister of religious affairs, Marhamah Rosli - who prides herself on being a beacon of 'modernity', has declared that the term “LGBT” promotes illegal same-sex sexual relations and asks people to use the term “deviant culture” instead. The Malaysian human rights' commission denounced the suggestion. The incident has been reported to the Malaysian Fashion Police. Apologies, you'll have to open the article to see the joke. However, on a serious note, this follows the blocking of Grindr and Blued which took effect in March and April this year, reflecting where the true deviance lies. We can only wonder where this obsessive fantasizing over gay private lives comes from. 
+                            </p>
+                            <p>Source: Attitude Magazing / 76Crimes</p>
+                            <div>
+                                <a href="https://76crimes.com/2026/04/24/dont-say-lgbt-says-malaysia-official-say-deviant-culture-instead/" target="_blank"
+                                    >READ article</a
+                                >
+                            </div>
+                        </div>
+                    </details>
 
-										
+                                        
 
-				</div>
+                </div>
+                    </div>
+                </div>
 
+                <div class="footer-branding-wrapper">
+                    <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
+                    <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+                </div>
+            </main>
+        </div>
 
-<div id="automated-news-feed" class="bento-grid">
-    <div class="load-portal-container" style="padding: 2rem; text-align: center; border: 2px solid rgba(255,255,255,0.2); border-radius: 8px; width: 100%;">
-        
-        <p style="color: rgba(255,255,255,0.8); margin-bottom: 1.5rem; font-size: 1.1rem;">
-            Click below for <strong>LGBT Global Live News</strong>. <br>
-            <span style="font-size: 0.9rem; opacity: 0.6;">(Estimated data use: 1.5MB)</span>
-        </p>
+        <script>
+            window.globalData = window.globalData || {};
+        </script>
 
-        <button id="activate-feed-btn" class="play-news-btn" style="width: auto; padding: 12px 30px; display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 auto;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
-                <circle cx="12" cy="12" r="2" fill="currentColor"></circle>
-                <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
-            </svg>
-            <span class="button-text">START LIVE FEED</span>
-        </button>
-        
-    </div>
-</div>
+        <script src="country-info/country-files/africa-data.js?v=1.5" defer></script>
+        <script src="country-info/country-files/americas-data.js?v=1.5" defer></script>
+        <script src="country-info/country-files/asia-data.js?v=1.5" defer></script>
+        <script src="country-info/country-files/europe-data.js?v=1.5" defer></script>
+        <script src="country-info/country-files/oceania-data.js?v=1.5" defer></script>
 
-					</div>
-				</div>
+        <script>
+            (function () {
+                const params = new URLSearchParams(window.location.search);
+                // Your code uses "c" in some places and "country" in others. This checks both.
+                const rawC = params.get("c") || params.get("country") || "";
+                const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
+                const underscoredKey = slug.replace(/[\s-]/g, "_");
 
-				<div class="footer-branding-wrapper">
-					<div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
-					<p class="footer-site-subtitle">Legal Travel Health & Security</p>
-				</div>
-			</main>
-		</div>
+                if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
+                    const data = window.globalData[underscoredKey];
+                    // If a manual path exists, redirect immediately!
+                    if (data.path) {
+                        window.location.href = data.path;
+                    }
+                }
+            })();
+        </script>
 
-		<script>
-			window.globalData = window.globalData || {};
-		</script>
+        <script src="country-info/country-loader.js?v=1.5"></script>
+        <script>
+            window.gtranslateSettings = {
+                default_language: "en",
+                detect_browser_language: true,
+                wrapper_selector: "#translator-anchor",
+                type: "nicedropdown",
+            };
 
-		<script src="country-info/country-files/africa-data.js?v=1.5" defer></script>
-		<script src="country-info/country-files/americas-data.js?v=1.5" defer></script>
-		<script src="country-info/country-files/asia-data.js?v=1.5" defer></script>
-		<script src="country-info/country-files/europe-data.js?v=1.5" defer></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5" defer></script>
+            // This "forces" the text because the widget settings sometimes fail
+            window.addEventListener("load", function () {
+                setTimeout(function () {
+                    var select = document.querySelector("#translator-anchor select");
+                    if (select) {
+                        // Creates a new "Select Language" option at the very top
+                        var opt = document.createElement("option");
+                        opt.value = "";
+                        opt.innerHTML = "Language";
+                        opt.selected = true;
+                        opt.disabled = true;
+                        select.insertBefore(opt, select.firstChild);
+                    }
+                }, 1000); // Waits 1 second for the widget to finish loading
+            });
+        </script>
+        <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+        <script>
+            // 1. Function to update the tags
+            function updateMetadata(countryName) {
+                const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
+                const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
+                const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
 
-		<script>
-			(function () {
-				const params = new URLSearchParams(window.location.search);
-				// Your code uses "c" in some places and "country" in others. This checks both.
-				const rawC = params.get("c") || params.get("country") || "";
-				const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-				const underscoredKey = slug.replace(/[\s-]/g, "_");
+                // Update the Browser Tab
+                document.title = siteTitle;
 
-				if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-					const data = window.globalData[underscoredKey];
-					// If a manual path exists, redirect immediately!
-					if (data.path) {
-						window.location.href = data.path;
-					}
-				}
-			})();
-		</script>
+                // Update Standard Meta
+                const metaDesc = document.querySelector('meta[name="description"]');
+                if (metaDesc) metaDesc.setAttribute("content", siteDesc);
 
-		<script src="country-info/country-loader.js?v=1.5"></script>
-		<script>
-			window.gtranslateSettings = {
-				default_language: "en",
-				detect_browser_language: true,
-				wrapper_selector: "#translator-anchor",
-				type: "nicedropdown",
-			};
+                // Update Open Graph (Social Media)
+                const ogTitle = document.querySelector('meta[property="og:title"]');
+                const ogDesc = document.querySelector('meta[property="og:description"]');
+                const ogUrl = document.querySelector('meta[property="og:url"]');
 
-			// This "forces" the text because the widget settings sometimes fail
-			window.addEventListener("load", function () {
-				setTimeout(function () {
-					var select = document.querySelector("#translator-anchor select");
-					if (select) {
-						// Creates a new "Select Language" option at the very top
-						var opt = document.createElement("option");
-						opt.value = "";
-						opt.innerHTML = "Language";
-						opt.selected = true;
-						opt.disabled = true;
-						select.insertBefore(opt, select.firstChild);
-					}
-				}, 1000); // Waits 1 second for the widget to finish loading
-			});
-		</script>
-		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-		<script>
-			// 1. Function to update the tags
-			function updateMetadata(countryName) {
-				const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
-				const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
-				const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
+                if (ogTitle) ogTitle.setAttribute("content", siteTitle);
+                if (ogDesc) ogDesc.setAttribute("content", siteDesc);
+                if (ogUrl) ogUrl.setAttribute("content", pageUrl);
 
-				// Update the Browser Tab
-				document.title = siteTitle;
+                console.log(`Metadata updated for: ${countryName}`);
+            }
 
-				// Update Standard Meta
-				const metaDesc = document.querySelector('meta[name="description"]');
-				if (metaDesc) metaDesc.setAttribute("content", siteDesc);
+            // 2. Logic to detect the country from the URL and run the update
+            window.addEventListener("DOMContentLoaded", () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const countryParam = urlParams.get("country"); // Looks for ?country=Name
 
-				// Update Open Graph (Social Media)
-				const ogTitle = document.querySelector('meta[property="og:title"]');
-				const ogDesc = document.querySelector('meta[property="og:description"]');
-				const ogUrl = document.querySelector('meta[property="og:url"]');
+                if (countryParam) {
+                    // Clean up the name (e.g., "New_Zealand" to "New Zealand")
+                    const formattedName = countryParam.replace(/_/g, " ");
+                    updateMetadata(formattedName);
+                }
+            });
+        </script>
 
-				if (ogTitle) ogTitle.setAttribute("content", siteTitle);
-				if (ogDesc) ogDesc.setAttribute("content", siteDesc);
-				if (ogUrl) ogUrl.setAttribute("content", pageUrl);
+        <script>
+            function toggleMenu() {
+                const menu = document.getElementById("sideMenu");
+                menu.classList.toggle("open");
+            }
 
-				console.log(`Metadata updated for: ${countryName}`);
-			}
+            // Close menu if user clicks outside of the slider
+            window.addEventListener("click", function (e) {
+                const menu = document.getElementById("sideMenu");
+                const menuToggle = document.querySelector(".menu-toggle");
+                if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+                    toggleMenu();
+                }
+            });
 
-			// 2. Logic to detect the country from the URL and run the update
-			window.addEventListener("DOMContentLoaded", () => {
-				const urlParams = new URLSearchParams(window.location.search);
-				const countryParam = urlParams.get("country"); // Looks for ?country=Name
+            document.addEventListener("DOMContentLoaded", function () {
+                const now = new Date();
+                const options = { year: "numeric", month: "long", day: "numeric" };
+                const dateString = now.toLocaleDateString("en-US", options);
 
-				if (countryParam) {
-					// Clean up the name (e.g., "New_Zealand" to "New Zealand")
-					const formattedName = countryParam.replace(/_/g, " ");
-					updateMetadata(formattedName);
-				}
-			});
-		</script>
+                // Target the mobile ID
+                const mobileEl = document.getElementById("last-updated-mobile");
+                if (mobileEl) mobileEl.textContent = dateString;
 
-		<script>
-			function toggleMenu() {
-				const menu = document.getElementById("sideMenu");
-				menu.classList.toggle("open");
-			}
-
-			// Close menu if user clicks outside of the slider
-			window.addEventListener("click", function (e) {
-				const menu = document.getElementById("sideMenu");
-				const menuToggle = document.querySelector(".menu-toggle");
-				if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-					toggleMenu();
-				}
-			});
-
-			document.addEventListener("DOMContentLoaded", function () {
-				const now = new Date();
-				const options = { year: "numeric", month: "long", day: "numeric" };
-				const dateString = now.toLocaleDateString("en-US", options);
-
-				// Target the mobile ID
-				const mobileEl = document.getElementById("last-updated-mobile");
-				if (mobileEl) mobileEl.textContent = dateString;
-
-				// Target the desktop ID
-				const desktopEl = document.getElementById("last-updated-desktop");
-				if (desktopEl) desktopEl.textContent = dateString;
-			});
-		</script>
+                // Target the desktop ID
+                const desktopEl = document.getElementById("last-updated-desktop");
+                if (desktopEl) desktopEl.textContent = dateString;
+            });
+        </script>
 
 <script>
     document.addEventListener('click', function (e) {
@@ -537,17 +512,19 @@ const bestVoice =
     window.speechSynthesis.getVoices();
 </script>
 
-			<!-- Google tag (gtag.js) -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
-			<script>
-				window.dataLayer = window.dataLayer || [];
-				function gtag() {
-					dataLayer.push(arguments);
-				}
-				gtag("js", new Date());
+            <!-- Google tag (gtag.js) -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag("js", new Date());
 
-				gtag("config", "G-GSGX0B7ZB3");
-			</script>
+                gtag("config", "G-GSGX0B7ZB3");
+            </script>
 
-	</body>
+    </body>
 </html>
+
+```

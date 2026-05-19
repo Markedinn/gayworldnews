@@ -87,7 +87,7 @@ body::before {
   box-sizing: border-box;
   padding: 15px;
   margin: 0;
-  background: #fdf8f89d;
+  background: transparent;
   backdrop-filter: blur(10px);
   border: 4px solid rgba(255, 255, 255, 0.8);
   /* border-left: 5px solid rgba(255, 255, 255, 0.8);
@@ -114,17 +114,17 @@ body::before {
 #u-u-notice h4 {
   text-transform: uppercase;
   margin: 0 0 5px 0;
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.1rem;
   letter-spacing: 1.5px;
-  color: #000000;
+  color: #ffffff;
   line-height: 1;
 }
 
 #u-u-notice p {
   margin: 0;
   font-size: 0.9rem;
-  color: #000000;
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -1264,33 +1264,66 @@ body::before {
   animation: reveal-content 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-/* Article Image Container - Global Styling */
-.article-image-container {
-  max-width: 850px; /* Prevents images from overwhelming the text */
-  margin: 2.5rem auto; /* Creates that clean empty line break top/bottom */
-  padding: 0 1rem; /* Prevents touching screen edges on mobile */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Custom CSS Toggle rule for the inner crisis box */
+.crisis-toggle-container .crisis-body-content {
+  display: none;
+}
+.crisis-toggle-container .crisis-body-content.active {
+  display: block !important;
 }
 
-.article-main-img {
-  width: 100%; /* Fills the container width */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 4px; /* Softens the look to match your glass-cards */
-  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4); /* Adds depth */
+/* --- ARTICLE IMAGE HUB SYSTEM --- */
+.article-image-container {
+  width: 100%;
+  margin: 35px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Forces total horizontal centering */
+}
+
+/* Specificity Nuke: Target the anchor and ALL its browser states inside the container */
+.article-image-container a,
+.article-image-container a:link,
+.article-image-container a:visited,
+.article-image-container a:hover,
+.article-image-container a:active {
+  text-decoration: none !important;
   display: block;
+  width: 100%;
+  transition: opacity 0.3s ease;
+  color: inherit; /* Prevents default browser blue/purple link color forcing */
+}
+
+.article-image-container a:hover {
+  opacity: 0.9;
+}
+
+/* Consolidated Main Image Styles */
+.article-main-img {
+  display: block;
+  width: 100%; /* Fills the container width */
+  max-width: 100%;
+  height: auto; /* Maintains aspect ratio */
+  margin: 0 auto; /* The "No-Drift" centering rule */
+  border-radius: 4px; /* Softens the look to match your glass-cards */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Adds depth */
   object-fit: cover;
 }
 
-.image-caption {
-  margin-top: 12px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  color: #666; /* Subtle text for the caption */
-  font-style: italic;
-  text-align: center;
-  max-width: 90%; /* Keeps long captions from looking blocky */
+/* Base caption styles targeted directly inside the link structure */
+.article-image-container a .image-caption {
+  color: #0894f1 !important; /* Forces your custom blue over any inherited styles */
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  margin-top: 10px; /* Gives the text some breathing room below the image shadow */
+}
+
+/* Precise Hover Execution */
+.article-image-container a:hover .image-caption {
+  color: #3498db !important; /* High-end subtle color shift on hover */
+  text-decoration: underline !important;
 }
 
 .ai-warning-banner {
@@ -1321,6 +1354,100 @@ body::before {
   line-height: 1.8;
   opacity: 0.9;
 }
+
+/* --- ALPHABET BRIEFS CARD --- */
+.alphabet-brief-card {
+  margin-top: 50px;
+  background: rgba(255, 0, 255, 0.05); /* Soft signature glow */
+  border-left: 6px solid #ff00ff; /* Bold signature border */
+  padding: 30px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px); /* Premium glass effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Optional: Slight lift on hover to match your interactive vibe */
+.alphabet-brief-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 0, 255, 0.08);
+}
+
+.alphabet-brief-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #ff00ff !important;
+  margin-bottom: 15px;
+  margin-top: 0;
+  display: block;
+}
+
+.alphabet-brief-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #f0f0f0 !important;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+/* --- INSIDER INTELLIGENCE BLOCK --- */
+.insider-box {
+  background: rgba(255, 0, 255, 0.05);
+  /* border-left: removed to use the pseudo-element below */
+  padding: 30px 20px 20px 20px; /* Top padding increased slightly for the label */
+  margin: 30px 0;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+}
+
+/* THE MAGENTA LINE: Now we can control the height */
+.insider-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 5px;
+  background: #ff00ff;
+  /* Stops the line 20px from the bottom (matching your padding) */
+  bottom: 20px;
+}
+
+/* THE LABEL: Pinned to the top of the line */
+.insider-box::before {
+  content: "INSIDER";
+  position: absolute;
+  top: 8px; /* Perfectly aligned with the start of the line */
+  left: 15px;
+  font-size: 0.65rem;
+  font-weight: 900;
+  color: rgba(255, 0, 255, 1);
+  letter-spacing: 2px;
+  z-index: 2; /* Ensures it stays above the glass effect */
+}
+
+.insider-text {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #fff;
+  margin: 0;
+}
+
+/* Mobile Tweak for the Samsung S23 Ultra display */
+@media (max-width: 768px) {
+  .alphabet-brief-card {
+    padding: 20px;
+    margin-top: 30px;
+  }
+  .alphabet-brief-title {
+    font-size: 0.85rem;
+  }
+}
+
 /* --- MOBILE & TABLET BACKGROUND --- */
 
 @media only screen and (min-width: 481px) {

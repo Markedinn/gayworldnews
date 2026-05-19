@@ -269,7 +269,36 @@ window.addEventListener("load", function () {
                 if (countryData?.path) {
                   window.location.href = "/" + countryData.path;
                 } else {
-                  window.location.href = `/country.html?c=${key}`;
+                  // 1. Create a temporary text notification box
+                  const toast = document.createElement("div");
+                  toast.innerText = `${countryData?.name || name} guide coming soon!`;
+
+                  // 2. Style it inline so it looks like a sleek, dark floating capsule
+                  toast.style.position = "fixed";
+                  toast.style.bottom = "100px";
+                  toast.style.left = "50%";
+                  toast.style.transform = "translateX(-50%)";
+                  toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
+                  toast.style.color = "#ffffff";
+                  toast.style.padding = "12px 24px";
+                  toast.style.borderRadius = "30px";
+                  toast.style.fontSize = "0.9rem";
+                  toast.style.fontFamily = "sans-serif";
+                  toast.style.zIndex = "99999"; // Ensures it sits perfectly on top of the Leaflet map
+                  toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
+                  toast.style.transition = "opacity 0.4s ease";
+                  toast.style.pointerEvents = "none"; // Stop it from blocking any map mouse movements
+
+                  // 3. Inject it onto the screen
+                  document.body.appendChild(toast);
+
+                  // 4. Keep it visible for 2 seconds, then smoothly fade out and destroy it
+                  setTimeout(() => {
+                    toast.style.opacity = "0";
+                    setTimeout(() => toast.remove(), 400); // Completely erases it from the DOM
+                  }, 2000);
+
+                  console.log(`No active guide path for ${key}. Map tier display only.`);
                 }
               },
             }); // Closes layer.on({

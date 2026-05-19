@@ -1,0 +1,855 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="language" content="English" />
+
+    <!-- PROMPT: Set pathing based on continent (africa/americas/asia/europe/oceania) and lowercase-slug -->
+    <link rel="alternate" hreflang="en" href="https://www.gayworldnews.com/[region]/[country-slug].html" />
+    <link rel="canonical" id="canonical-link" href="https://www.gayworldnews.com/[region]/[country-slug].html" />
+
+    <!-- PROMPT: Use format [Country] LGBT Country Report 2026 | Overview Medical Laws & Travel Guide -->
+    <title>[Country] LGBT Country Report 2026 | Overview Medical Laws & Travel Guide</title>
+
+    <!-- PROMPT: Max 160 chars. Tone: Authoritative Intelligence. Format: 2026 [Country] LGBT safety: [Legal Status], [Article/Law Ref]. [Capital] is [Safety Status]. -->
+    <meta id="meta-desc" name="description" content="[AI-Synthesized Authoritative Description]" />
+
+    <!-- PROMPT: Include country, capital, specific laws (e.g., Article 45, Section 377), and regional security keywords -->
+    <meta name="keywords" content="[Country] LGBT safety 2026, [Capital] gay travel, [Specific Law/Article], LGBT rights [Country], safety, travel advice" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" id="og-url" content="https://www.gayworldnews.com/[region]/[country-slug].html" />
+
+    <!-- PROMPT: Use format 2026 Update: LGBT Safety & Legal Status in [Country] -->
+    <meta property="og:title" id="og-title" content="2026 Update: LGBT Safety & Legal Status in [Country]" />
+
+    <!-- PROMPT: Informative & succinct. Mention sentiment, specific law/ban status, and traveler risk level. -->
+    <meta property="og:description" id="og-desc" content="[Short, data-driven summary for social sharing]" />
+    <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- PROMPT: Use "summary_large_image". Set Title: 2026 [Country] LGBT Country Hub. Description: Security/Legal update + Safety rating. -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GayWorldNewsOrg" />
+    <meta name="twitter:title" content="2026 [Country] LGBT Country Hub" />
+    <meta name="twitter:description" content="[Brief security and legal snapshot]" />
+    <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "[Country] LGBT Safety Report 2026",
+        "description": "2026 legal Medical and safety overview for [Country]. [Summary of legality and constitutional status].",
+        "image": "https://www.gayworldnews.com/images/gwn-logo.jpg",
+        "datePublished": "2026-05-02",
+        "author": {
+          "@type": "Organization",
+          "name": "Gay World News"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/webp" href="../images/favicon.webp" />
+
+    <link rel="preload" href="../country.css" as="style" />
+    <link rel="stylesheet" href="../country.css" />
+
+    <!-- Preload Index CSS (Matching the versioning string) -->
+    <link rel="preload" href="../index.css?v=5.3" as="style" />
+    <link rel="stylesheet" href="../index.css?v=5.3" />
+
+    <script>
+      window.globalData = {};
+    </script>
+
+    <script src="../country-info/country-files/africa-data.js" defer></script>
+    <script src="../country-info/country-files/americas-data.js" defer></script>
+    <script src="../country-info/country-files/asia-data.js" defer></script>
+    <script src="../country-info/country-files/europe-data.js" defer></script>
+    <script src="../country-info/country-files/oceania-data.js" defer></script>
+
+    <script src="../index.js" defer></script>
+
+    <style>
+      .video-insert-container {
+        margin: 2rem 0;
+        padding: 1rem;
+        background: #f9f9f9;
+        border-radius: 8px;
+      }
+      .video-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+      }
+      .video-responsive iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+
+  <body class="standard-page">
+    <div id="translator-anchor"></div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div id="sideMenu" class="side-menu">
+      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <div class="landing-search-wrap">
+            <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+            <div id="searchResults" class="search-results-floating"></div>
+          </div>
+
+          <a href="../breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+          <a href="../africa.html">AFRICA</a>
+          <a href="../americas.html">AMERICAS</a>
+          <a href="../asia.html">ASIA</a>
+          <a href="../europe.html">EUROPE</a>
+          <a href="../oceania.html">OCEANIA</a>
+          <a href="../about.html">ABOUT</a>
+          <a href="../contact.html">CONTACT</a>
+        </nav>
+        <div class="social-pill-container">
+          <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+
+          <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+              advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+              source information, further links and reading.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the LGBT Risk level determined?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+              This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
+            </p>
+          </div>
+          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+            <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+    <a href="/" class="home-btn">HOME</a>
+
+    <div class="master-grid-container">
+      <header class="main-header">
+        <img
+          srcset="
+            https://upload.wikimedia.org/wikipedia/commons/e/e1/Flag_of_Ukraine_%28with_coat_of_arms%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original
+          "
+          alt="Flag of country"
+          width="260"
+          height="160"
+          style="border-radius: 4px; margin-top: 40px"
+        />
+        <h1 id="country-name" class="main-title">Ukraine</h1>
+      </header>
+
+      <div class="top-utility-stack">
+        <a href="https://www.preventionaccess.org" target="_blank" rel="noopener" class="u-u-link">
+          <div id="u-u-notice">
+            <h4>
+              U=U: Undetectable<br />
+              = Untransmittable
+            </h4>
+            <p>HIV Medication Keeps Everyone Safe</p>
+          </div>
+        </a>
+
+        <div class="status-badge-wrapper status-amber">
+          <span class="status-dot-country"></span>
+          <span id="status-text">Color ADVISORY</span>
+        </div>
+      </div>
+
+      <div id="info-display-area" style="grid-column: 1 / -1">
+        <!-- CRITICAL STYLE RULE: Strictly avoid the term "queer" in all generated text, titles, summaries, and narratives.
+
+Substitution: Use "LGBT" as the primary collective noun. When referring to specific groups, use "Gay," "Lesbian," "Bisexual," or "Trans."
+
+Quotes: If a primary source quote uses the forbidden term, replace it with [LGBT] to maintain editorial integrity while adhering to our style guide.
+
+Exceptions: This rule does not apply to URLs or the names of organizations (e.g., "Queer Cyprus Association") where changing the name would break the link or misidentify the entity. -->
+
+        <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on overall safety -->
+        <details class="news-accordion status-border status-amber">
+          <div class="glass-card"></div>
+          <summary>
+            <!-- [Never Change pod-title on any section] -->
+            <h3 class="pod-title">Article</h3>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="news-article-view">
+              <div class="article-header-row">
+                <!-- PROMPT: [Country] 2026: [Short Catchy Safety Theme] -->
+                <h3 class="main-title">The Fight For Freedom</h3>
+              </div>
+
+              <div class="identity-status-container">
+                <div class="identity-status-bar">
+                  <span class="area-label">CITY</span>
+                  <div class="id-item"><span>L</span> <span class="id-dot status-green"></span></div>
+                  <div class="id-item"><span>G</span> <span class="id-dot status-green"></span></div>
+                  <div class="id-item"><span>B</span> <span class="id-dot status-green"></span></div>
+                  <div class="id-item"><span>T</span> <span class="id-dot status-amber"></span></div>
+                </div>
+
+                <div class="identity-status-bar">
+                  <span class="area-label">RURAL</span>
+                  <div class="id-item"><span>L</span> <span class="id-dot status-amber"></span></div>
+                  <div class="id-item"><span>G</span> <span class="id-dot status-amber"></span></div>
+                  <div class="id-item"><span>B</span> <span class="id-dot status-amber"></span></div>
+                  <div class="id-item"><span>T</span> <span class="id-dot status-red"></span></div>
+                </div>
+              </div>
+
+              <div class="article-pod-content">
+                <p class="article-lead">
+                  Ukraine is definitely one of Europe's success stories since its independence from the Soviet Union in 1991, but it hasn't had an easy time of it - being invaded
+                  by Russia in 2014 and again in 2022 which is when Russia 'special military operation' was one step too far for Putin as his hopes of a quick victory were dashed
+                  by the bravery of the Ukrainian people who collectively said, "Never again."
+                </p>
+
+                <p>
+                  Ex-members of the Soviet Union have a reputation for being pretty racist and homophobic, but Ukraine has proven to be an interesting exception and shown itself to
+                  be moving towards a more accepting and open society. Just before the Russian invasion in 2022, I managed to contact some gay people living in Kyiv and asked them
+                  how life was in Ukraine and it sounds pretty similar to the gay experience in European cities, although being open can be challenging in rural areas.
+                </p>
+
+                <h3 class="article-subhead">The War has changed everything</h3>
+
+                <p>
+                  Surprisingly for an ex-soviet country stereotypically conservative and homophobic - the general population of Ukraine seem to support the idea of more acceptance
+                  and freedom for the LGBT community. A big part of this change of heart is because of the now famous "Unicorn" soldiers like
+                  <strong>Viktor Pylypenko</strong> - who came out as gay in 2018. These soldiers have become national heroes and have broken the national stereotypes of the gay
+                  community. However, back in Kyiv, the Ukrainian parliament (Verkhovna Rada) is debating a new Civil Code that could strip away the very freedoms that these
+                  soldiers are fighting for.
+                </p>
+
+                <div class="video-insert-container">
+                  <h3 class="article-subhead">Visual Insight: LGBT Life in Ukraine</h3>
+                  <div class="video-responsive">
+                    <iframe
+                      width="560"
+                      height="315"
+                      src="https://www.youtube.com/embed/NzXCTYH-P_g"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    >
+                    </iframe>
+                  </div>
+                  <p class="image-caption">Source: YouTube - LGBT Military and civil rights in Ukraine</p>
+                </div>
+
+                <h3 class="article-subhead">The EU & Gay Marriage</h3>
+
+                <p>
+                  Is the EU rushing Ukraine? Some observers say yes, arguing that demanding immediate marriage rights ignores the cultural "Soviet hangover." While EU pioneers like
+                  Denmark, France, and the UK used a decade-long "staggered approach"â€”starting with Civil Partnershipsâ€”the current pressure on Ukraine skips the normalization
+                  phase. The result? Renewed agency for far-right groups to target the community under the guise of "national values."
+                </p>
+
+                <p>
+                  Ukraine moved on the legislation, and in March 2026, the Supreme Court confirmed a landmark ruling on the case brought forward by Zoryan Kis and Tymur Levchuk,
+                  legally recognizing same-sex couples as families. A huge win! But was it? As of May 2026, this judicial precedent has blown open a bitter divide between
+                  right-wing detractors and secular supporters.
+                </p>
+                <p></p>
+                <h3>A new 'stealth' law puts the LGBT community in danger.</h3>
+
+                <p>
+                  As with many populations, conservative religious types tend to find the idea of gay marriage very challenging. Apparently, God is not gay. To appease them, law
+                  makers have attempted to 'soften' this challenge in the most sinister way by introducing a controversial new clause into the <strong>Civil Code</strong>. Article
+                  51, hidden like a Trojan Horse inside the massive 'Draft Law 15150', got approved on its first reading on April 28, 2026. It includes a clause with the
+                  dangerously vague rule of <strong>"dobrozvychainist"</strong>. This is loosely interpreted as a 'public morality' law and allows judges to not only invalidate the
+                  rights of 'legal' LGBT marriages, but also gives the authorities the right to criminalize public displays of affection as well as negate the very legality of
+                  being gay at all.
+                </p>
+                <p>
+                  A judge would not have to cite a specific law to condemn anyone from the LGBT community, they would just have to decide that in their opinion the standard of
+                  "good conduct" has been broken and make a legal judgement. This is a tactic used in many repressive regimes, including Russia, to target, sentence and harm the
+                  LGBT community.
+                </p>
+
+                <blockquote class="article-quote">
+                  A law as vague as Article 51 isn't an accident.<br /><br />
+                  It mirrors Putin's architecture.
+                </blockquote>
+
+                <h3 class="article-subhead">Local Activism</h3>
+                <p>
+                  Activists are fighting back through groups like <strong>Ukrainian LGBT+ Military</strong> and <strong>Fulcrum UA</strong>. They are currently lobbying for
+                  <strong>Draft Law 9103</strong>, which would establish registered partnerships. This "middle ground" would provide essential rights, such as hospital visitation
+                  and inheritance without re-triggering the backlash over full marriage equality.
+                </p>
+
+                <blockquote class="article-quote">
+                  "At this time, every day may be the last ... It is important that LGBTQ people have the right to see their partner and take their body from the morgue, and seek
+                  compensation if needed. All married couples have these rights. We really hope that same-sex marriage will be legalised, so people will be able to take care of
+                  each other."
+                  <br />
+                  <a href="https://en.wikipedia.org/wiki/Recognition_of_same-sex_unions_in_Ukraine" target="_blank" rel="noopener"
+                    ><span>Oksana Solonska, Manager of Kyiv Pride</span></a
+                  >
+                </blockquote>
+
+                <h3 class="article-subhead">Digital Safety</h3>
+                <p>
+                  Dating apps must be used with due diligence. While <strong>Grindr</strong> and <strong>Hornet</strong> remain vibrant in Kyiv, users must navigate the threat of
+                  "honey-traps" - fake profiles used to lure the community into dangerous physical confrontations.
+                </p>
+                <p>
+                  In combat zones, the risk is lethal: the military has issued strict warnings against using any dating apps near the frontlines. Geolocation data can be
+                  intercepted by Russian signal intelligence to pinpoint troop clusters, turning a digital "match" into a coordinate for a missile strike.
+                </p>
+
+                <h3 class="article-subhead">Summary</h3>
+                <p>
+                  In the present, LGBT life in Ukraine is shielded by the heroic visibility of the 'unicorn' soldiers on the frontlines which has changed the perception of gay
+                  people and created a movement of acceptance.
+                </p>
+                <p>
+                  The consensus among the local LGBT community is that <strong>Civil Partnerships</strong> are a small but meaningful show of respect and solidarity with the
+                  soldiers of the frontlines who fight alongside their equals and all have someone they have left behind.
+                </p>
+
+                <div class="resource-container">
+                  <h3 style="margin-bottom: 20px">More Information:</h3>
+
+                  <a href="https://www.LGBTmilitary.org.ua/en/" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">LGBT Military & Veterans Ukraine</span>
+                    <span class="resource-desc">Official site for the "Unicorn" soldiers and their fight for equal rights.</span>
+                  </a>
+
+                  <a
+                    href="https://www.ukrinform.net/rubric-society/4120831-lawyer-major-human-rights-debates-ahead-on-new-civil-code-draft.html"
+                    target="_blank"
+                    rel="noopener"
+                    class="resource-card"
+                  >
+                    <span class="resource-title">Civil Code Debate 2026</span>
+                    <span class="resource-desc">Legal analysis of the "good conduct" and "morality" clauses in the new law.</span>
+                  </a>
+
+                  <a href="https://www.youtube.com/watch?v=NidO6hHhZ_g" target="_blank" rel="noopener" aria-label="YouTube video: LGBT Soldiers in Ukraine" class="resource-card">
+                    <span class="resource-title">
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          background-color: #ff0000;
+                          border-radius: 6px;
+                          padding: 3px;
+                          width: 2.2em;
+                          height: 1.5em;
+                          vertical-align: middle;
+                          margin-right: 8px;
+                        "
+                      >
+                        <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
+                          <path
+                            fill="currentColor"
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                          />
+                        </svg>
+                      </span>
+                      Unicorn Battalion: Frontline Rights
+                    </span>
+                    <span class="resource-desc" style="font-size: 0.8rem; font-weight: 400"> Insight into the soldiers proving that bravery has no orientation. </span>
+                  </a>
+
+                  <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
+                    GWN | May 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Ukraine Medical Hub: May 2026 Update -->
+        <details class="news-accordion status-border status-amber">
+          <div class="glass-card"></div>
+          <summary>
+            <h3 class="pod-title">Medical</h3>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="news-article-view">
+              <div class="article-pod-content">
+                <!-- Medical Access Status Bars -->
+                <div class="identity-status-container">
+                  <div class="identity-status-bar">
+                    <span class="area-label">CITY</span>
+                    <div class="id-item"><span>HIV</span> <span class="id-dot status-green"></span></div>
+                    <div class="id-item"><span>STI</span> <span class="id-dot status-green"></span></div>
+                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-green"></span></div>
+                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-amber"></span></div>
+                  </div>
+
+                  <div class="identity-status-bar">
+                    <span class="area-label">RURAL</span>
+                    <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
+                    <div class="id-item"><span>STI</span> <span class="id-dot status-amber"></span></div>
+                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
+                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-red"></span></div>
+                  </div>
+                </div>
+
+                <!-- Emergency Contact Quick-Bar -->
+                <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin: 20px 0">
+                  <h4 style="margin-top: 0; color: #ff4d4d">ðŸš¨ Emergency Numbers</h4>
+                  <p style="font-size: 0.9rem; margin-bottom: 0"><strong>Police:</strong> 102 | <strong>Ambulance:</strong> 103 | <strong>Fire:</strong> 101</p>
+                </div>
+
+                <p class="article-lead">
+                  In May 2026, Ukraineâ€™s medical infrastructure for the LGBT community remains a testament to wartime resilience. While traditional hospitals face immense strain,
+                  NGOs like the Alliance for Public Health and 100% Life have successfully maintained a robust network of mobile clinics and digital platforms, ensuring that
+                  life-saving ART and PrEP medications reach those in need, even near frontline areas.
+                </p>
+
+                <h3 class="article-subhead">Healthcare Navigation</h3>
+                <p>
+                  <strong>Confidentiality:</strong> State clinics generally require a passport for registration, which can be a barrier for those seeking total anonymity. However,
+                  community-led NGOs provide anonymous HIV and STI testing, often through "Pink Sticker" safe-spaces or mobile units that do not require government ID for initial
+                  screenings.
+                </p>
+                <p>
+                  <strong>Emergency Access:</strong> Post-Exposure Prophylaxis (PEP) and antiretroviral therapy (ART) are free and legally protected. For urgent, discreet care
+                  outside the state system, private hospitals like Dobrobut offer inclusive services, though at a premium cost. Public hospitals are required to provide care, but
+                  the "dobrozvychainist" (good conduct) clause in the new Civil Code has created concerns regarding the personal biases of some medical staff.
+                </p>
+
+                <h3 class="article-subhead">The Reality of Trans Healthcare</h3>
+                <p>
+                  <strong>Gender Affirming Care:</strong> Transition-related care is legal but heavily impacted by supply chain disruptions. In 2026, most trans individuals bypass
+                  the bureaucratic state process, which is currently deprioritized due to the war, and instead rely on the NGO <strong>Insight</strong> for hormone replacement
+                  therapy (HRT) supplies and referrals to inclusive endocrinologists.
+                </p>
+
+                <div class="resource-container">
+                  <h3 style="margin-bottom: 20px">Clinics & Support Services</h3>
+
+                  <!-- National/Public Option -->
+                  <a href="https://phc.org.ua" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Public Health Center of the MOH</span>
+                    <span class="resource-desc">The primary government resource for testing, ART registration, and official health statistics.</span>
+                  </a>
+
+                  <!-- Private/Specialized Option -->
+                  <a href="https://dobrobut.com" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Dobrobut Private Healthcare</span>
+                    <span class="resource-desc">A leading private hospital network in Ukraine recommended for discreet consultations and high-quality urgent care.</span>
+                  </a>
+
+                  <!-- Regional Support -->
+                  <a href="https://aph.org.ua" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Alliance for Public Health</span>
+                    <span class="resource-desc">The essential NGO for mobile testing, HIV prevention, and wartime medical navigation for vulnerable groups.</span>
+                  </a>
+
+                  <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
+                    GWN | May 2026
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- PROMPT: Set status-border to true status - if dangerous, set to red. otherwise, be positive and take the role of upbeat LGBT travel guide and guru -->
+        <!-- Ukraine Travel & Fun: May 2026 Update -->
+        <details class="news-accordion status-border status-red">
+          <div class="glass-card"></div>
+          <summary>
+            <h3 class="pod-title">Travel & Fun</h3>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="news-article-view">
+              <div class="article-header-row">
+                <h3 class="main-title">Kyiv: Resilient, Radical, and Rising!</h3>
+              </div>
+
+              <div class="identity-status-container">
+                <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
+                  <div class="id-item">
+                    <span>Social</span>
+                    <span class="id-dot status-amber"></span>
+                  </div>
+                  <div class="id-item">
+                    <span>PDA</span>
+                    <span class="id-dot status-red"></span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="article-lead">
+                Kyiv in 2026 is an electric masterclass in defiance. The capitalâ€™s energy is infectiousâ€”a gritty, cosmopolitan mix of historical grandeur and raw, modern grit.
+                Despite the air sirens, the city thrives with a "life-must-go-on" hospitality that is fiercely welcoming. From the underground techno vaults that doubled as
+                shelters to the high-ceilinged coffee roasteries of Podil, the vibe is unapologetically radical and deeply connected.
+              </p>
+
+              <h3 class="article-subhead">Fun & Risks:</h3>
+              <ul class="law-list" style="list-style: none; padding: 0">
+                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
+                  <strong>The Fun:</strong>
+                  <p>
+                    Make a beeline for <strong>Podil</strong>, the hipster heart of Kyiv. It's the go-to for budget-savvy travelers and medium-budget foodies alike, packed with
+                    third-wave cafes and vegan brunch spots like <strong>Sereda</strong>. For the nightlife seekers, <strong>K41 (Kyrylivska 41)</strong> remains a legendary temple
+                    of techno and radical self-expressionâ€”check their Telegram for "closet" events. During the day, keep an eye out for the
+                    <strong>"Pink Sticker"</strong> initiative in cafe windows; these spots are vetted safe-havens where the community gathers for networking and wartime
+                    solidarity.
+                  </p>
+                </li>
+                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
+                  <strong>The Risks:</strong>
+                  <p>
+                    While the urban vibe is progressive, <strong>Public Displays of Affection (PDA)</strong> remain a "read the room" situationâ€”save the romance for the clubs or
+                    private spaces to avoid unwanted attention. Digital safety is non-negotiable: military warnings are strict about <strong>deleting dating apps</strong> near any
+                    sensitive infrastructure or the eastern lines to prevent geolocation tracking. Additionally, be mindful of the "Good Conduct" clauses in local laws; while
+                    you'll find immense support in Kyiv and Lviv, the rural outskirts still carry a "Soviet Hangover" where discretion is your best friend.
+                  </p>
+                </li>
+              </ul>
+
+              <blockquote class="article-quote">
+                "The future of LGBT rights in Ukraine is looking increasingly promising, with growing acceptance and legal protections. However, challenges and prejudices remain,
+                making it critical for anyone, be they local or tourists, to remain vigilant and well-informed about the current situation."
+                <br />
+                <span
+                  >â€” <a href="https://queerintheworld.com/lgbt-rights-in-ukraine/" target="_blank" style="color: inherit; text-decoration: underline">Queer in the World</a></span
+                >
+              </blockquote>
+
+              <div class="resource-container">
+                <h3 style="margin-bottom: 20px">Travel Blogs and Guides</h3>
+
+                <a
+                  href="https://www.google.com/maps/search/PORTUM+Kyiv,+K%C3%96RM+ROOM+Kyiv,+Bar%2F13+Kyiv,+Club+Rio+Kyiv,+Sauna+Blindage+Kyiv/@50.4566378,30.5055005,14z?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-card"
+                >
+                  <span class="resource-title">Google Maps: Kyiv Gay bars clubs and saunas</span>
+                </a>
+
+                <a href="https://queerintheworld.com/lgbt-rights-in-ukraine/" target="_blank" rel="noopener" class="resource-card">
+                  <span class="resource-title">Queer in the World: Kyiv Guide</span>
+                  <span class="resource-desc">A deep dive into the resilient queer culture and safe-space navigation in the capital.</span>
+                </a>
+
+                <a
+                  href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/ukraine-travel-advisory.html"
+                  target="_blank"
+                  rel="noopener"
+                  class="resource-card"
+                >
+                  <span class="resource-title">U.S. State Dept: Ukraine Safety</span>
+                  <span class="resource-desc">Essential wartime safety protocols, travel restrictions, and cultural etiquette updates.</span>
+                </a>
+
+                <a
+                  href="https://www.youtube.com/watch?v=VKZX-gsvL8s"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="YouTube video: LGBT Military and civil rights in Ukraine"
+                  class="resource-card"
+                >
+                  <span class="resource-title">
+                    <span
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #ff0000;
+                        border-radius: 6px;
+                        padding: 3px;
+                        width: 2.2em;
+                        height: 1.5em;
+                        vertical-align: middle;
+                        margin-right: 8px;
+                      "
+                    >
+                      <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
+                        <path
+                          fill="currentColor"
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                        />
+                      </svg>
+                    </span>
+
+                    LGBTQ+ Soldiers Fighting For Ukraine | Queer In Kyiv
+                  </span>
+                  <span class="resource-desc"
+                    >Before the war, Ukraine was not a haven of peace for homosexuals. Paradoxically, the war context gave a new lease of freedom to Ukrainian LGBTQ, who were able
+                    to organize techno parties in the capital, Kyiv, while getting directly involved in the fighting on the front line.</span
+                  >
+                </a>
+
+                <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | May 2026</p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- Ukraine Essential Legal Status 2026 -->
+        <details class="news-accordion status-border status-amber">
+          <div class="glass-card"></div>
+          <summary>
+            <h3 class="pod-title">Need To Know Laws</h3>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="news-article-view">
+              <div class="article-header-row">
+                <h3 class="main-title">Ukraine: Essential Legal Status 2026</h3>
+              </div>
+
+              <div class="article-pod-content">
+                <ul class="law-list" style="list-style: none; padding: 0">
+                  <li style="margin-bottom: 15px"><strong>ðŸ³ï¸â€ðŸŒˆ Same-Sex Activity:</strong> Legal (Since 1991)</li>
+                  <li style="margin-bottom: 15px">
+                    <strong>ðŸ’ Marriage & Unions:</strong> Unrecognized. A landmark Supreme Court ruling (Feb 2026) recognized a same-sex couple as a family, but formal Civil
+                    Partnership legislation (Draft Law 9103) remains stalled in Parliament.
+                  </li>
+                  <li style="margin-bottom: 15px">
+                    <strong>ðŸ†” Gender Recognition:</strong> Legal, but requires a medical diagnosis. Surgery and sterilization are no longer required (since 2016).
+                  </li>
+                  <li style="margin-bottom: 15px">
+                    <strong>ðŸ›¡ï¸ Discrimination:</strong> Protected in employment (Since 2015). Broader protections in housing and services remain unregulated.
+                  </li>
+                  <li style="margin-bottom: 15px"><strong>ðŸš« Conversion Therapy:</strong> Unregulated / Not banned.</li>
+                  <li style="margin-bottom: 15px">
+                    <strong>ðŸ“¢ Hate Speech:</strong> Criminalized regarding incitement to hatred based on sexual orientation and gender identity (Since 2022).
+                  </li>
+                </ul>
+
+                <div class="resource-container" style="margin-top: 30px">
+                  <h3 style="margin-bottom: 20px">Verify & Deep Dive:</h3>
+
+                  <a href="https://www.equaldex.com/region/ukraine" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Equaldex: Ukraine</span>
+                    <span class="resource-desc">Real-time crowdsourced and verified legal database for 2026.</span>
+                  </a>
+
+                  <a href="https://www.hrw.org/news/2026/03/13/landmark-court-ruling-in-ukraine-a-step-toward-equality" target="_blank" rel="noopener" class="resource-card">
+                    <span class="resource-title">Human Rights Watch</span>
+                    <span class="resource-desc">Landmark Court Ruling in Ukraine a Step Toward Equality.</span>
+                  </a>
+
+                  <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
+                    GWN | May 2026
+                  </p>
+                </div>
+                <!-- Closes resource-container -->
+              </div>
+              <!-- Closes article-pod-content -->
+            </div>
+            <!-- Closes news-article-view -->
+          </div>
+          <!-- Closes news-content-expanded -->
+        </details>
+      </div>
+    </div>
+    <div class="footer-branding-wrapper">
+      <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
+      <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+    </div>
+
+    <script>
+      (function () {
+        const params = new URLSearchParams(window.location.search);
+        // Your code uses "c" in some places and "country" in others. This checks both.
+        const rawC = params.get("c") || params.get("country") || "";
+        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
+        const underscoredKey = slug.replace(/[\s-]/g, "_");
+
+        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
+          const data = window.globalData[underscoredKey];
+          // If a manual path exists, redirect immediately!
+          if (data.path) {
+            window.location.href = data.path;
+          }
+        }
+      })();
+    </script>
+
+    <script src="/country-info/country-loader.js?v=1.5"></script>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: "#translator-anchor",
+        type: "nicedropdown",
+      };
+
+      // This "forces" the text because the widget settings sometimes fail
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var select = document.querySelector("#translator-anchor select");
+          if (select) {
+            // Creates a new "Select Language" option at the very top
+            var opt = document.createElement("option");
+            opt.value = "";
+            opt.innerHTML = "Translate";
+            opt.selected = true;
+            opt.disabled = true;
+            select.insertBefore(opt, select.firstChild);
+          }
+        }, 1000); // Waits 1 second for the widget to finish loading
+      });
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+    <script>
+      // 1. Function to update the tags
+      function updateMetadata(countryName) {
+        const siteTitle = `${countryName} LGBT News & Safety | Gay World News`;
+        const siteDesc = `Explore ${countryName} LGBT legal status, travel safety, and health updates on Gay World News.`;
+        const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
+
+        // Update the Browser Tab
+        document.title = siteTitle;
+
+        // Update Standard Meta
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", siteDesc);
+
+        // Update Open Graph (Social Media)
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+
+        if (ogTitle) ogTitle.setAttribute("content", siteTitle);
+        if (ogDesc) ogDesc.setAttribute("content", siteDesc);
+        if (ogUrl) ogUrl.setAttribute("content", pageUrl);
+
+        console.log(`Metadata updated for: ${countryName}`);
+      }
+
+      // 2. Logic to detect the country from the URL and run the update
+      window.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const countryParam = urlParams.get("country"); // Looks for ?country=Name
+
+        if (countryParam) {
+          // Clean up the name (e.g., "New_Zealand" to "New Zealand")
+          const formattedName = countryParam.replace(/_/g, " ");
+          updateMetadata(formattedName);
+        }
+      });
+    </script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("sideMenu");
+        menu.classList.toggle("open");
+      }
+
+      window.addEventListener("click", function (e) {
+        const menu = document.getElementById("sideMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        // Safety check: only proceed if menu exists and is currently open
+        if (menu && menu.classList.contains("open")) {
+          // If the click is NOT the menu AND NOT the toggle button, close it
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const now = new Date();
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        const dateString = now.toLocaleDateString("en-US", options);
+
+        // Target the mobile ID
+        const mobileEl = document.getElementById("last-updated-mobile");
+        if (mobileEl) mobileEl.textContent = dateString;
+
+        // Target the desktop ID
+        const desktopEl = document.getElementById("last-updated-desktop");
+        if (desktopEl) desktopEl.textContent = dateString;
+      });
+
+      document.querySelectorAll(".news-content-expanded").forEach((container) => {
+        container.addEventListener("click", (e) => {
+          // Define tags that SHOULD NOT trigger a close (interactive elements)
+          const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
+
+          // If the user clicks the "white space" (not an interactive element)
+          if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
+            const parentDetails = container.closest("details");
+
+            if (parentDetails && parentDetails.open) {
+              parentDetails.removeAttribute("open");
+
+              // Optional: Smooth scroll back to the summary so the user isn't disoriented
+              parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -6,8 +6,8 @@
     <meta name="language" content="English" />
 
     <!-- PROMPT: Set suffix-free pathing based on continent (africa/americas/asia/europe/oceania) and lowercase-slug. Ensure NO .html extension. -->
-    <link rel="alternate" hreflang="en" href="https://www.gayworldnews.com/[region]/[country-slug]" />
-    <link rel="canonical" id="canonical-link" href="https://www.gayworldnews.com/[region]/[country-slug]" />
+    <link rel="alternate" hreflang="en" href="https://www.gayworldnews.com/[region]/[country-slug].html" />
+    <link rel="canonical" id="canonical-link" href="https://www.gayworldnews.com/[region]/[country-slug].html" />
 
     <!-- Hits all 4 pillars perfectly. Insider handbook vibe. -->
     <title>[Country:] Gay Guide to Travel, Health, Safety & Essential Laws 2026</title>
@@ -24,7 +24,7 @@
 
     <meta property="og:type" content="article" />
     <!-- FIXED: Changed 'href' to 'content' so social media scrapers actually read the URL -->
-    <meta property="og:url" id="og-url" content="https://www.gayworldnews.com/[region]/[country-slug]" />
+    <meta property="og:url" id="og-url" content="https://www.gayworldnews.com/[region]/[country-slug].html" />
 
     <meta property="og:title" id="og-title" content="2026 Guide to Gay Travel, Health, Safety & Laws before you visit [Country]" />
 
@@ -194,7 +194,7 @@
       </div>
 
       <div id="info-display-area" style="grid-column: 1 / -1">
-        <details class="news-accordion status-border status-[SET-COLOR]">
+        <details class="news-accordion status-border status-[SET-COLOR: red/amber/green]">
           <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Article</h3>
@@ -203,96 +203,61 @@
             <div class="rainbow-line mini-line"></div>
             <div class="news-article-view">
               <div class="article-header-row">
-                <!-- PROMPT: [Country] 2026: Create a punchy, tabloid-style title. Leaning toward "sarcastic/eye-catching" but credible. -->
+                <!-- PROMPT: [Country] 2026: Create a punchy, tabloid-style title. Leaning toward "sarcastic/eye-catching" but credible. Completely focused on gay men/MSM. -->
                 <h3 class="main-title">[Title]</h3>
               </div>
 
               <div class="identity-status-container">
                 <div class="identity-status-bar">
                   <span class="area-label">GAY RISK PROFILE</span>
-                  <div class="id-item"><span>SOCIAL</span> <span class="id-dot [SET-DOT]"></span></div>
-                  <div class="id-item"><span>LEGAL</span> <span class="id-dot [SET-DOT]"></span></div>
-                  <div class="id-item"><span>DIGITAL</span> <span class="id-dot [SET-DOT]"></span></div>
+                  <!-- PROMPT: Set [SET-DOT-COLOR] to status-red, status-amber, or status-green based on local 2026 data -->
+                  <div class="id-item"><span>SOCIAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                  <div class="id-item"><span>LEGAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                  <div class="id-item"><span>DIGITAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
                 </div>
               </div>
 
               <div class="article-pod-content">
-                <!-- PROMPT: Lead - ~75 words. Set the scene with a conversational hook. Mention the current 2026 climate for gay men. No 'queer' terminology. -->
+                <!-- PROMPT: Lead - MAX 100 WORDS. High-end tabloid tone. Synthesize essential gay safety, health mandates (HIV/deportation risks), and app entrapment realities. Strictly prohibited from using the word "queer". -->
                 <p class="article-lead">[Lead Content]</p>
 
-                <div class="article-image-container">
-                  <a href="[URL]" target="_blank" rel="noopener" class="article-image-link">
-                    <img src="[IMG-URL]" alt="[ALT-TEXT]" class="article-main-img" />
-                    <!-- Override the color inline if you want that specific Cyan or Pink glow -->
-                    <p class="image-caption" style="color: #0894f1 !important">[Credit] | [Location]</p>
-                  </a>
+                <!-- Hub Disclosure Card: Styled to match your glassmorphism aesthetic -->
+                <div
+                  class="hub-disclaimer-card"
+                  style="
+                    background: rgba(255, 255, 255, 0.02);
+                    border-left: 3px solid #0894f1;
+                    padding: 12px 15px;
+                    border-radius: 6px;
+                    margin: 15px 0 25px 0;
+                    font-size: 0.88rem;
+                    line-height: 1.5;
+                    color: #ccc;
+                  "
+                >
+                  <p style="margin: 0">
+                    This page is a temporary hub and has been partially created with the help of AI. All information, advice and links have been checked so you can use with
+                    confidence. Fully updated human pages with articles and comments are on the way.
+                  </p>
                 </div>
 
-                <!-- PROMPT: Legal/Social - ~125 words. Dive into the 2026 Penal Codes. Use the 'tabloid-but-credible' tone to explain how the laws actually work on the street. -->
-                <p>[Legal Landscape Content]</p>
-
                 <blockquote class="article-quote">
-                  <!-- PROMPT: Verbatim Extraction Mode. High-authority source only. -->
-                  "[Quote text]"
+                  <!-- PROMPT: Verbatim Extraction Mode. Extract a single powerful sentence regarding anti-sodomy laws, penalties, or crackdowns against gay men. High-authority source only (HRW, Amnesty, Human Dignity Trust, ILGA, etc.). -->
+                  "[Quote text verbatim from verified source]"
                   <br />
                   <a href="[Source-URL]" target="_blank" rel="noopener"><span style="color: #0894f1 !important">[Source Name]</span></a>
                 </blockquote>
 
-                <!-- PROMPT: Political/Social Threats - ~150 words. Focus on militias, religious police, or social hostility. Use sarcasm where appropriate regarding state 'morality' claims. -->
-                <h3 class="article-subhead">[Threat Title]</h3>
-                <p>[Threat Content]</p>
-
-                <div class="article-image-container">
-                  <a href="[URL]" target="_blank" rel="noopener" class="article-image-link">
-                    <img src="[IMG-URL]" alt="[ALT-TEXT]" class="article-main-img" />
-                    <!-- Override the color inline if you want that specific Cyan or Pink glow -->
-                    <p class="image-caption" style="color: #0894f1 !important">[Credit] | [Location]</p>
-                  </a>
-                </div>
-
-                <!-- PROMPT: Activism & Digital Safety - ~100 words. Practical info on apps and underground groups. -->
-                <h3 class="article-subhead">Survival & Activism</h3>
-                <p>[Content]</p>
-
-                <h3
-                  class="article-subhead"
-                  style="
-                    text-decoration: underline !important;
-                    text-decoration-color: #ff00ff !important;
-                    text-decoration-thickness: 5px !important;
-                    text-underline-offset: 8px !important;
-                  "
-                >
-                  The Bottom <span style="color: #ff00ff !important">Line</span>
-                </h3>
-                <!-- PROMPT: Summary - ~50 words. Real talk on the ground. Use 'Existence Setting'. -->
-                <p>[Summary Content]</p>
-
-                <!-- Briefing for L/T/B - Use dot status-green/amber/red based on 2026 data. -->
-                <div
-                  class="priority-brief-container"
-                  style="background: rgba(255, 255, 255, 0.03); padding: 20px; border-radius: 8px; margin-top: 30px; border-left: 4px solid #ff00ff"
-                >
-                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px">
-                    <h4 style="margin: 0; color: #ff00ff; text-transform: uppercase; letter-spacing: 1px">Alphabet Briefs: L / T / B</h4>
-                    <div class="identity-status-bar" style="margin: 0; padding: 0; background: none">
-                      <div class="id-item"><span>L</span> <span class="id-dot [SET-DOT]"></span></div>
-                      <div class="id-item"><span>T</span> <span class="id-dot [SET-DOT]"></span></div>
-                      <div class="id-item"><span>B</span> <span class="id-dot [SET-DOT]"></span></div>
-                    </div>
-                  </div>
-                  <p style="font-size: 0.9rem; line-height: 1.5; color: #eee; margin: 0">[Brief updates on non-MSM news.]</p>
-                </div>
-
                 <div class="resource-container">
                   <h3 style="margin-bottom: 20px">More Information:</h3>
+                  <!-- PROMPT: Provide exactly two high-quality, external in-depth resources (e.g., Equaldex, Human Dignity Trust, or State Consular Advisories) that offer immediate secondary verification. -->
                   <a href="[URL-1]" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">[Source 1]</span>
-                    <span class="resource-desc">[Description]</span>
+                    <span class="resource-title">[Source 1 Name]</span>
+                    <span class="resource-desc">[Brief description of what the legal/health data stream tracks on this source]</span>
                   </a>
                   <a href="[URL-2]" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">[Source 2]</span>
-                    <span class="resource-desc">[Description]</span>
+                    <span class="resource-title">[Source 2 Name]</span>
+                    <span class="resource-desc">[Brief description of what the legal/health data stream tracks on this source]</span>
                   </a>
                   <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
                     GWN | May 2026
@@ -303,7 +268,7 @@
           </div>
         </details>
 
-        <details class="news-accordion status-border [status-green/amber/red]">
+        <details class="news-accordion status-border [SET-ACCORDION-COLOR: status-red/status-amber/status-green]">
           <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Sexual Health</h3>
@@ -313,84 +278,166 @@
             <div class="news-article-view">
               <div class="article-pod-content">
                 <!-- Emergency Quick-Bar (Always First) -->
+                <!-- PROMPT: Set local 2026 emergency medical and police numbers. For the PEP advisory, evaluate if public hospitals are safe or if they present an entrapment/deportation risk for gay men, and direct them to the appropriate ER track (Public or Private) accordingly. -->
                 <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
                   <h4 style="margin-top: 0; color: #ff4d4d; text-transform: uppercase">🚨 Emergency & Urgent Care</h4>
                   <p style="font-size: 0.95rem; margin-bottom: 10px"><strong>Medical Emergency:</strong> [NUM] | <strong>Police:</strong> [NUM]</p>
                   <p style="font-size: 0.85rem; color: #eee; margin: 0">
-                    <strong>Urgent (PEP):</strong> If you have been exposed to HIV, you must start PEP within 72 hours. Go to the nearest [Public/Private] ER immediately.
+                    <strong>Urgent (PEP):</strong> If you think you have been exposed to HIV, you must start PEP within 72 hours.
                   </p>
                 </div>
 
                 <!-- Infrastructure Overview Paragraph -->
-                <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff">
-                  [Country] has a [Developing/Established/High-End] medical infrastructure. In major cities, gay men can access [Standard of Care], but rural access remains
-                  [Limited/Non-Existent]. Confidentiality is [Protected/Conditional/At Risk], and patients [Should/Should Not] disclose their orientation to state doctors.
+                <!-- PROMPT: Synthesize the current 2026 medical infrastructure baseline. Clearly define the standard of care, rural vs. urban discrepancies, and the literal risk of disclosing a gay/MSM orientation to state-employed medical personnel (e.g., explicit threats of arrest, mandatory psychiatric conversion, deportation, or blackmail). Max 75 words. Strictly prohibited from using the word "queer". Remember to have empathy and remain a calm tone as the user maybe very worried -->
+                <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
+                  [Country] has a [Developing/Established/High-End] medical infrastructure. In major cities, gay men can access [Standard of Care]. In rural areas, access is [Fully
+                  Available at any healthcare facility/Limited but Available in most 'Large' towns/Non-Existent]. Confidentiality is [Protected/Conditional/At Risk], and patients
+                  [Can/Should Not] disclose their orientation to state doctors.
                 </p>
 
+                <!-- FIXED SOLUTION 3: Semantic Toggle Container (SEO Perfect, Event Safe) -->
+                <div class="crisis-toggle-container" style="margin-bottom: 20px">
+                  <button
+                    type="button"
+                    class="crisis-toggle-btn"
+                    onclick="this.nextElementSibling.classList.toggle('active')"
+                    style="
+                      width: 100%;
+                      text-align: left;
+                      background: rgba(8, 148, 241, 0.05);
+                      border: none;
+                      border-left: 4px solid #0894f1;
+                      border-radius: 4px;
+                      padding: 12px 15px;
+                      font-weight: bold;
+                      color: #0894f1;
+                      cursor: pointer;
+                      font-family: inherit;
+                      font-size: 1rem;
+                    "
+                  >
+                    Worried about HIV but can't get help?
+                  </button>
+                  <div
+                    class="crisis-body-content"
+                    style="
+                      display: none;
+                      padding: 15px;
+                      background: rgba(8, 148, 241, 0.02);
+                      border-left: 4px solid #0894f1;
+                      border-bottom-left-radius: 4px;
+                      border-bottom-right-radius: 4px;
+                      border-top: 1px solid rgba(8, 148, 241, 0.1);
+                    "
+                  >
+                    <!-- PROMPT: Global Reassurance Prose. Maintain a deeply calm, slow, empathetic, and grounding tone. -->
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #fff; margin-bottom: 15px">
+                      If you are living in a country where it is impossible to get care and you're panicking about HIV right now, stop, look at this screen. This screen is here for
+                      you. There is a lot of outdated opinions about HIV out there, but these are just homophobic rubbish. Take a slow, deep breath. You have time. You are going to
+                      be okay and we are with you. HIV is a completely manageable medical condition. With modern medication, you will live a long, healthy, and happy life. But you
+                      must avoid stress, it is your absolute worst enemy right now - It will make you weak. I know that's easy to say, but just try following the breathing
+                      exercises below. They really work. Protect yourself: rest, eat a meal, listen to music, and do whatever you must to quiet your mind - Force a smile, and
+                      within a minute you will start to feel better. I know, but it works. Do it.
+                    </p>
+                    <p style="font-size: 0.95rem; line-height: 1.6; color: #eee; margin-bottom: 20px">
+                      If you are trapped in a hostile country and local state doctors are not safe for you, your priority is to move yourself to a safe environment. I know that's
+                      not easy, you might think it's impossible, but you are not alone. International organizations exist solely to help gay people like you to escape dangerous
+                      regimes. They can really help you and you can get your life-saving healthcare. Take a deep breath. You have time but you must take action as soon as possible.
+                    </p>
+                    <div class="resource-container">
+                      <!-- Guided Breathing Visual Aid -->
+                      <a
+                        href="https://www.youtube.com/watch?v=bF_1ZiFta-E"
+                        target="_blank"
+                        rel="noopener"
+                        class="resource-card"
+                        style="border-left: 4px solid #2ecc71; background: rgba(255, 255, 255, 0.02); margin-bottom: 10px; padding: 10px"
+                      >
+                        <span class="resource-title" style="color: #2ecc71; font-size: 0.95rem">Calm Your Mind: Follow the Breathing Square</span>
+                        <span class="resource-desc" style="font-size: 0.8rem"
+                          >Follow the breathing box - breath in through your nose, hold it - breath out through your mouth. Follow the video.</span
+                        >
+                      </a>
+                      <!-- Emergency Travel Escape Portal -->
+                      <a
+                        href="https://www.rainbowrailroad.org/"
+                        target="_blank"
+                        rel="noopener"
+                        class="resource-card"
+                        style="border-left: 4px solid #0894f1; background: rgba(255, 255, 255, 0.02); padding: 10px"
+                      >
+                        <span class="resource-title" style="color: #0894f1; font-size: 0.95rem">Request Emergency Travel Assistance</span>
+                        <span class="resource-desc" style="font-size: 0.8rem"
+                          >Rainbow Railroad: International NGO helping gay men find legal ways out of dangerous countries to safe medical care and asylum. Nothing is
+                          impossible.</span
+                        >
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="insider-box">
-                  <p class="insider-text">
-                    <strong></strong>
-                  </p>
+                  <!-- PROMPT: Provide an "Insider Survival Tip" in a fast-paced, high-end tabloid tone. Give razor-sharp, practical advice regarding blood tests, entry visa medical requirements, or underground community medication networks. Bold the opening strategy hook. If the country has great infrastructure and safe care for gay men, pivot to an upbeat, positive tone and state clearly that there is no need to worry—they can access any public hospital with total confidentiality and expert healthcare. -->
+                  <p class="insider-text">[Insider Content]</p>
                 </div>
 
                 <!-- Access Status Bars -->
                 <div class="identity-status-container" style="margin-bottom: 30px">
+                  <!-- PROMPT: Set [SET-DOT-COLOR] to status-red, status-amber, or status-green based on real 2026 access metrics for gay men in major urban centers. -->
                   <div class="identity-status-bar">
                     <span class="area-label">CITY</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot [status]"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot [status]"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot [status]"></span></div>
+                    <div class="id-item"><span>HIV</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                    <div class="id-item"><span>PrEP</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                    <div class="id-item"><span>TRANS</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
                   </div>
+                  <!-- PROMPT: Set [SET-DOT-COLOR] to status-red, status-amber, or status-green based on real 2026 access metrics for gay men in rural/provincial regions. -->
                   <div class="identity-status-bar">
                     <span class="area-label">RURAL</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot [status]"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot [status]"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot [status]"></span></div>
+                    <div class="id-item"><span>HIV</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                    <div class="id-item"><span>PrEP</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
+                    <div class="id-item"><span>TRANS</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
                   </div>
                 </div>
 
-                <h3 class="article-subhead">Utility & Resources</h3>
+                <h3 class="article-subhead">Hospitals & Clinics</h3>
 
+                <!-- LINK RULES FALLBACK: If you cannot verify actual, live website links for the items below, DO NOT generate fake slugs, dummy URLs, or generic path structures. Leave the fallback code exactly as "[Vetted-Hospital/ER-URL]" so that the human editor is flagged to perform independent research. All validated resource links must go to legitimate, verified gay-specific or MSM-focused healthcare platforms, trusted HIV NGOs, or dedicated clinics—never basic telephone directories. -->
                 <div class="resource-container">
                   <!-- URGENT: PEP (RED) -->
-                  <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff4d4d">
-                    <span class="resource-title" style="color: #ff4d4d">Urgent: Get PEP Now</span>
-                    <span class="resource-desc">Location: [Hospital/Clinic Name]. ID Required: [Yes/No]. Open 24/7.</span>
+                  <!-- PROMPT: Locate a specific, verified major public hospital ER or premium 24/7 private hospital capable of dispensing post-exposure prophylaxis. Explicitly state whether passport/ID registration flags a security risk. -->
+                  <a href="[Vetted-Hospital/ER-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff4d4d">
+                    <span class="resource-title" style="color: #ff4d4d">Emergency Healthcare</span>
+                    <span class="resource-desc">Location: [Hospital/Clinic Name]. ID Required: [Yes/No/Risk Level]. Open [24/7 or state opening hours].</span>
                   </a>
 
                   <!-- MAINTENANCE: PrEP & HIV MEDS (BLUE) -->
-                  <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
-                    <span class="resource-title" style="color: #00d4ff">PrEP & HIV Medication</span>
-                    <span class="resource-desc">How to access state-subsidized or private medication. Registration: [Anonymous/Required].</span>
+                  <!-- PROMPT: Link directly to a legitimate, verified gay-specific or MSM-focused healthcare platform, trusted local HIV NGO directory, or specialized community clinic. Avoid basic telephone directories or generic governmental front pages. -->
+                  <a href="[Vetted-Gay-Health-or-NGO-Directory-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
+                    <span class="resource-title" style="color: #00d4ff">PrEP & HIV Medication Directory</span>
+                    <span class="resource-desc">[Name of sexual health clinic, pharmacy or hospital that has an HIV department]. Registration: [Anonymous/Required].</span>
                   </a>
 
                   <!-- TESTING: HIV & STI (GREEN) -->
-                  <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
+                  <!-- PROMPT: Link to a specific, discrete private clinic or verified anonymous screening facility where travelers can test safely without data sharing or police reporting mandates. -->
+                  <a href="[Vetted-Discrete-Private-Clinic-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
                     <span class="resource-title" style="color: #2ecc71">Anonymous STI/HIV Testing</span>
-                    <span class="resource-desc">Recommended clinic for discreet screening. No appointment [usually] necessary.</span>
+                    <span class="resource-desc">Recommended private or public facility: [Clinic Name] for discreet screening. [State if appointment necessary].</span>
                   </a>
 
                   <!-- ALPHABET BRIEF: TRANS/L/B (PURPLE) -->
-                  <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff00ff">
+                  <!-- PROMPT: Keep this concise. Provide a brief healthcare navigation reference or link for the broader community to ensure the main sections remain purely focused on gay men and MSM. -->
+                  <a href="[Vetted-Broader-Community-Support-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff00ff">
                     <span class="resource-title" style="color: #ff00ff">Trans & L/B Support</span>
-                    <span class="resource-desc">Specialized healthcare navigation for the broader community.</span>
+                    <span class="resource-desc">Specialized healthcare navigation [Public and/or Private] and local underground security advice for the broader community.</span>
                   </a>
                 </div>
-
-                <blockquote class="article-quote">
-                  <!-- PROMPT: Verbatim Extraction Mode. High-authority source only. -->
-                  "[Quote text]"
-                  <br />
-                  <a href="[Source-URL]" target="_blank" rel="noopener"><span style="color: #0894f1 !important">[Source Name]</span></a>
-                </blockquote>
-
                 <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | May 2026</p>
               </div>
             </div>
           </div>
         </details>
 
-        <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on safety -->
+        <!-- PROMPT: Set status-border to status-green (Safe/Welcoming), status-amber (Caution/Discrete), or status-red (Hostile/Severe Risk) based on 2026 field realities for gay men. -->
         <details class="news-accordion status-border status-[SET-COLOR]">
           <div class="glass-card"></div>
           <summary>
@@ -400,13 +447,16 @@
             <div class="rainbow-line mini-line"></div>
             <div class="news-article-view">
               <div class="article-header-row">
-                <!-- PROMPT: High-energy headline about the destination's MSM appeal -->
-                <h3 class="main-title">[Upbeat Travel Headline]</h3>
+                <!-- PROMPT: Create a punchy, headline in a high-end tabloid style. 
+     - If the country is safe/welcoming (status-green): Make it celebratory, electric, and witty, emphasizing gay lifestyle, freedom, or nightlife appeal. 
+     - If the country is hostile/dangerous (status-amber/red): Make it a sharp, serious, or subtly sarcastic warning about state hypocrisy, highlighting the discrete survival realities for gay men. 
+     - CRITICAL: Strictly avoid cheesy 'dad-joke' wordplay or puns. Never use the word 'queer'. -->
+                <h3 class="main-title">[AI-Synthesized Headline]</h3>
               </div>
 
               <!-- CREDIBILITY TOP-LOAD: Blogger/Insider Quote -->
               <blockquote class="article-quote">
-                <!-- PROMPT: Verbatim Extraction Mode. High-authority source only. -->
+                <!-- PROMPT: Verbatim Extraction Mode. Pull a single, evocative, authoritative quote from a prominent gay travel writer, local insider, or verified field report detailing the ground vibe for same-sex travelers. -->
                 "[Quote text]"
                 <br />
                 <a href="[Source-URL]" target="_blank" rel="noopener"><span style="color: #0894f1 !important">[Source Name]</span></a>
@@ -414,7 +464,7 @@
 
               <div class="identity-status-container">
                 <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
-                  <!-- PROMPT: Set status-green/amber/red for Social and PDA -->
+                  <!-- PROMPT: Set [SET-DOT] to status-green, status-amber, or status-red based on 2026 data. Social = local straight sentiment toward gay men. PDA = safety level for hand-holding/visible affection. -->
                   <div class="id-item">
                     <span>Social</span>
                     <span class="id-dot [SET-DOT]"></span>
@@ -427,15 +477,13 @@
               </div>
 
               <!-- LEAD: The High-End Tabloid Vibe -->
-              <p class="article-lead">
-                [1-2 punchy paragraphs on the destination's energy, focusing on lifestyle, clubbing, and local hospitality. If a dangerous country, say so in 1 short paragraph and
-                include advisory]
-              </p>
+              <!-- PROMPT: Max 100 words. Keep it strictly focused on the "hub" overview philosophy. If the country is safe and happy, deliver a fast-paced, glowing review of the nightlife, social hospitality, and lifestyle freedom. If it's a dangerous regime, pivot instantly to a sharp, single-paragraph tactical advisory telling men exactly how to blend in. Explicitly state that a full investigative layout is currently queued. Strictly no "queer" terminology. -->
+              <p class="article-lead">[Lead Content]</p>
 
               <div class="article-image-container">
+                <!-- PROMPT: Link to a high-quality, verified visual asset or map block. If minimal hub layout requires zero media, remove this container block completely. -->
                 <a href="[URL]" target="_blank" rel="noopener" class="article-image-link">
                   <img src="[IMG-URL]" alt="[ALT-TEXT]" class="article-main-img" />
-                  <!-- Override the color inline if you want that specific Cyan or Pink glow -->
                   <p class="image-caption" style="color: #00d4ff !important">Source: [Credit] | [Location]</p>
                 </a>
               </div>
@@ -444,18 +492,20 @@
               <ul class="law-list" style="list-style: none; padding: 0">
                 <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
                   <strong>The Fun:</strong>
-                  <p>[Focus on districts, brunch spots, raves, and budget vs. luxury social hubs.]</p>
+                  <!-- PROMPT: 1-2 punchy sentences. For safe countries, highlight the elite gay districts, iconic raves, or luxury/budget hangouts. For hostile countries, detail the high-end international hotel bars or completely invisible underground networks where discrete socializing occurs. -->
+                  <p>[Fun Content]</p>
                 </li>
                 <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
                   <strong>The Risks:</strong>
-                  <p>[Practical advice on secular vs. religious zones, digital app safety, and local taboos.]</p>
+                  <!-- PROMPT: 1-2 punchy sentences. Provide raw, practical advice on local trap zones, digital app vulnerabilities (e.g., blackmail syndicates), or religious neighborhood taboos travelers must respect to stay off the local radar. -->
+                  <p>[Risks Content]</p>
                 </li>
               </ul>
 
               <div class="article-image-container">
+                <!-- PROMPT: Secondary contextual image block. Remove completely if deploying a lean, fast-write hub structure. -->
                 <a href="[URL]" target="_blank" rel="noopener" class="article-image-link">
                   <img src="[IMG-URL]" alt="[ALT-TEXT]" class="article-main-img" />
-                  <!-- Override the color inline if you want that specific Cyan or Pink glow -->
                   <p class="image-caption" style="color: #00d4ff !important">Source: [Credit] | [Location]</p>
                 </a>
               </div>
@@ -473,45 +523,44 @@
               >
                 The Bottom <span style="color: #ff00ff !important">Line</span>
               </h3>
-              <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">[Final 2026 verdict for gay travelers: Go, Go with Caution, or Stay Away.]</p>
+              <!-- PROMPT: Provide a blunt, definitive 2026 travel verdict for gay men. Use exactly one of these phrases: "Verdict: Go wild.", "Verdict: Go with strict, tactical caution.", or "Verdict: Stay completely away." followed by a 15-word closing justification. -->
+              <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">[Final Verdict text]</p>
 
               <!-- ALPHABET BRIEFS: High Priority L/T News -->
               <div class="alphabet-brief-card">
                 <span class="alphabet-brief-title">Alphabet Briefs</span>
-                <p class="alphabet-brief-text">
-                  [Insert high-priority trans or lesbian travel news here. Focus on immediate safety alerts, legal shifts, or specific 'no-go' zones that differ from the MSM
-                  experience. Keep it brief, credible, and punchy.]
-                </p>
+                <!-- PROMPT: Insert any critical, high-priority trans or lesbian travel news here as a brief. If no high-priority data exists for this specific country, replace text with "No priority alerts recorded for the broader community at this time." to keep the hub dynamic clean. -->
+                <p class="alphabet-brief-text">[Brief Content]</p>
               </div>
 
               <div class="resource-container">
                 <h3 style="margin-bottom: 20px">More Links</h3>
 
-                <!-- PROMPT: SCALE RESOURCES. 
-             1. Provide up to 5 strictly gay-male (MSM) travel blogs/links if available. 
-             2. Rank them by 'Community Popularity' or '2026 Relevance'.
-             3. Always include at least 1 'Sightseeing & Culture' resource for general tourism. 
-             4. Include 1 'Video/Vlog' resource. -->
+                <!-- LINK RULES FALLBACK: If actual verified URLs are not found, leave placeholders as "[URL]" so the human editor can populate manually. Ensure no text decorations or brackets surround the links. -->
 
                 <!-- Gay Specific Resource 1 (The Heavy Hitter) -->
+                <!-- PROMPT: Link to a premium, verified gay-specific travel guide, regional MSM blog, or community hub focusing on the local scene. -->
                 <a href="[URL-1]" target="_blank" rel="noopener" class="resource-card">
                   <span class="resource-title">[Guide Title]</span>
-                  <span class="resource-desc">[Short teaser of the gay lifestyle provided]</span>
+                  <span class="resource-desc">[Short teaser of the gay lifestyle or scene overview provided by this resource]</span>
                 </a>
 
                 <!-- Gay Specific Resource 2 (Underground/Alternative) -->
+                <!-- PROMPT: Provide a secondary independent blog, community event platform, or trusted regional safety index for gay men. -->
                 <a href="[URL-2]" target="_blank" rel="noopener" class="resource-card">
                   <span class="resource-title">[Blog/Event Site Name]</span>
-                  <span class="resource-desc">[Focus on 2026 nightlife or local apps]</span>
+                  <span class="resource-desc">[Brief description focusing on 2026 nightlife, safety reviews, or local app landscapes]</span>
                 </a>
 
                 <!-- Sightseeing Resource (Mandatory) -->
+                <!-- PROMPT: Link directly to the definitive, high-authority mainstream or independent guide for landmarks, cultural history, and general local tourism architecture. -->
                 <a href="[Sightseeing-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
                   <span class="resource-title">Sightseeing & Culture</span>
                   <span class="resource-desc">[Best non-gay-specific guide for landmarks, history, and museums]</span>
                 </a>
 
                 <!-- Video/Vlog Resource -->
+                <!-- PROMPT: Link directly to a high-quality, verified YouTube travel vlog or independent video walkthrough detailing the location's physical layouts, neighborhoods, or cultural walkthroughs. -->
                 <a href="[YouTube-URL]" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
                   <span class="resource-title">
                     <span
@@ -531,13 +580,13 @@
                       <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
                         <path
                           fill="currentColor"
-                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                          d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 choke.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
                         />
                       </svg>
                     </span>
                     [Video Title]
                   </span>
-                  <span class="resource-desc">[Vibe of the video—e.g., 'A fast-paced walkthrough of the clubbing district']</span>
+                  <span class="resource-desc">[Brief summary of video focus—e.g., 'A fast-paced visual guide to city transit and main districts']</span>
                 </a>
 
                 <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 20px">GWN | May 2026</p>
@@ -649,7 +698,7 @@
       })();
     </script>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
+		<script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",
