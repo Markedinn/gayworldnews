@@ -313,6 +313,29 @@ body {
   opacity: 1 !important;
 }
 
+.support-btn {
+  display: block;
+  max-width: 90%; /* Changed to match the breaking news button */
+  margin: 15px auto 0 auto; /* Centers it perfectly with margin-top */
+  background-color: #ffb300;
+  color: #000 !important;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0px 4px 10px rgba(255, 179, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.support-btn:hover {
+  background-color: #ff9800; /* Slightly darker amber on hover */
+  transform: scaleY(1.1) !important;
+  opacity: 1 !important;
+}
+
 /* --- TRANSLATOR --- */
 
 #translator-anchor {
