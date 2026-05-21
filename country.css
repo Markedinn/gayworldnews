@@ -1272,6 +1272,17 @@ body::before {
   display: block !important;
 }
 
+.hub-disclaimer-card {
+  background: rgba(0, 0, 0, 0.5); /* Subtle dark tint instead of white tint */
+  border-left: 3px solid #0894f1;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin: 15px 0 25px 0;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #ffffff !important;
+}
+
 /* --- ARTICLE IMAGE HUB SYSTEM --- */
 .article-image-container {
   width: 100%;

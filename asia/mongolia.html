@@ -78,7 +78,82 @@
       <div class="bar"></div>
     </div>
 
-    <!-- SIDE MENU OMITTED FOR BREVITY BUT REMAINS UNCHANGED IN DEPLOYMENT -->
+    <div id="sideMenu" class="side-menu">
+      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <div class="landing-search-wrap">
+            <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+            <div id="searchResults" class="search-results-floating"></div>
+          </div>
+
+          <a href="../breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+          <a href="../africa.html">AFRICA</a>
+          <a href="../americas.html">AMERICAS</a>
+          <a href="../asia.html">ASIA</a>
+          <a href="../europe.html">EUROPE</a>
+          <a href="../oceania.html">OCEANIA</a>
+          <a href="../about.html">ABOUT</a>
+          <a href="../contact.html">CONTACT</a>
+        </nav>
+        <div class="social-pill-container">
+          <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+
+          <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+              advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+              source information, further links and reading.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the lgbt Risk level determined?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+              This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
+            </p>
+          </div>
+          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+            <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+          </p>
+        </div>
+      </div>
+    </div>
 
     <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
     <a href="/" class="home-btn">HOME</a>
@@ -106,6 +181,12 @@
         <div class="status-badge-wrapper status-amber">
           <span class="status-dot-country"></span>
           <span id="status-text">AMBER ADVISORY</span>
+        </div>
+
+        <div class="hub-disclaimer-card">
+          <p style="margin: 0">
+            <span style="color: #ffffff !important"> Updated: May 21, 2026. Hub Page. </span>
+          </p>
         </div>
       </div>
 
@@ -136,30 +217,17 @@
 
               <div class="article-pod-content">
                 <p class="article-lead">
-                  Mongolia might look like a breathtaking, wide-open escape for adventurous travelers, but do not expect a free-and-easy gay paradise. While the country's penal
-                  code outlaws discrimination on paper, the street reality in Ulaanbaatar is deeply conservative and practically demands you stay completely under the radar. The
-                  progressive laws are essentially a decorative mirage for international praise; local police apathy and fierce social stigma mean gay men are entirely on their own
-                  if things go south.
+                  Mongolia has those breathtaking grasslands, mountains and forests, even a desert - an absolute treasure of diversity for those adventurer types. And its
+                  gay-friendly legal landscape is just as stunning, but this is no gay paradise. The street reality in Ulaanbaatar is deeply homophobic and us gay people need to
+                  put on the jeans and a hoodie and wander around acting straight. I know, right? A hoodie? Well, just not so much color then - you know what to do.
+                  <a href="#legal">Mongolia's progressive laws are just a pink-washing for its international profile</a> and to make the ambassador's seat more cozy at the UN.
+                  Effeminate ones face fierce social stigma, and you know the drill -
+                  <a href="https://www.theadvocatesforhumanrights.org/Res/CCPR%20Joint%20Shadow%20Report%20Mongolia%20AHR_LGBT%20Center%20Final.pdf" target="_blank"
+                    >the police and any standing by are not going to get involved</a
+                  >
+                  in case people will start accusing them of being gay. Just a little bit immature? On the plus side, if you can be a little careful and keep your straight mask on,
+                  the more homophobes around, the more men looking for fun! Just make sure you keep it behind closed doors - and don't forget to lock them 🙄
                 </p>
-
-                <div
-                  class="hub-disclaimer-card"
-                  style="
-                    background: rgba(255, 255, 255, 0.02);
-                    border-left: 3px solid #0894f1;
-                    padding: 12px 15px;
-                    border-radius: 6px;
-                    margin: 15px 0 25px 0;
-                    font-size: 0.88rem;
-                    line-height: 1.5;
-                    color: #ccc;
-                  "
-                >
-                  <p style="margin: 0">
-                    <strong>May 21, 2026</strong> This is a hub page with all the quick information links you need and will be updated with a full article and detailed report as
-                    soon as possible. All information here has been checked for accuracy on the date published.
-                  </p>
-                </div>
 
                 <blockquote class="article-quote">
                   "There is a pervasive fear of reporting crimes due to distrust in law enforcement, and minimal confidence in the justice system."
@@ -171,13 +239,21 @@
 
                 <div class="resource-container">
                   <h3 style="margin-bottom: 20px">More Information:</h3>
-                  <a href="https://www.lgbtcentre.mn/en" target="_blank" rel="noopener" class="resource-card">
+                  <a href="https://lgbtcentre.mn/en" target="_blank" rel="noopener" class="resource-card">
                     <span class="resource-title">Human Rights Centre Mongolia</span>
                     <span class="resource-desc">Local ground advocate tracking security, health, and human rights updates.</span>
                   </a>
-                  <a href="https://giveout.org/mongolia-lgbt-centre/" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">GiveOut Mongolia Centre</span>
-                    <span class="resource-desc">International funding and strategic resource updates for local community survival.</span>
+                  <a
+                    href="https://www.youtube.com/watch?v=6bP-JGgZAW8"
+                    target="_blank"
+                    rel="noopener"
+                    class="resource-card"
+                    style="border-left: 4px solid #0894f1; background: rgba(255, 255, 255, 0.02); margin-bottom: 10px; padding: 10px"
+                  >
+                    <span class="resource-title" style="color: #0894f1; font-size: 0.95rem">MNB WORLD - Archive</span>
+                    <span class="resource-desc" style="font-size: 0.8rem">
+                      Watch Enkhmaa Enkhbold - executive director of LGBT Center Mongolia - discuss the challenges faced by the community.
+                    </span>
                   </a>
                   <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
                     GWN | May 2026
@@ -209,9 +285,11 @@
                 </div>
 
                 <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
-                  State clinics are risky, heavily biased, and lack meaningful sensitivity training. Disclosing a gay or MSM orientation to public doctors risks ridicule, denied
-                  services, and severe breaches of medical confidentiality. The state system is a privacy minefield. Your only safe, confidential options are community-led NGO
-                  clinics. Lying to a state doctor about your personal life here is a survival requirement.
+                  The state is unfortunately failing the community and that also stretches to healthcare. Gay people are not telling their sexual orientation to clinic staff due to
+                  an absolute lack of confidentiality and respect. This is especially dangerous for people with HIV symptoms who may be too afraid to seek care. However, there is
+                  some help: Youth for Health Center is the go-to for confidential STD and HIV testing and treatment, including PrEP and counseling. They are a small NGO and doing
+                  their best and to help them out it might be a good idea to give them a call before you go. Phone: +976 7272 0077 / +976 7011 1240. Email: health4men2003@gmail.com
+                  | Clinic Address: Office 1408, 14th Floor, Grand Plaza, Baruun 4 Zam, Ulaanbaatar, Mongolia. This is focused on providing services to locals.
                 </p>
 
                 <div class="crisis-toggle-container" style="margin-bottom: 20px">
@@ -250,7 +328,7 @@
                   >
                     <p style="font-size: 0.95rem; line-height: 1.6; color: #fff; margin-bottom: 15px">
                       If you are living in a country where it is impossible to get care and you're panicking about HIV right now, stop, look at this screen. This screen is here for
-                      you. There is a lot of outdated opinions about HIV out there, but these are just homophobic rubbish. Take a slow, deep breath. You have time. You are going to
+                      you. There is a lot of outdated opinion about HIV out there, but these are just homophobic rubbish. Take a slow, deep breath. You have time. You are going to
                       be okay and we are with you. HIV is a completely manageable medical condition. With modern medication, you will live a long, healthy, and happy life. But you
                       must avoid stress, it is your absolute worst enemy right now - It will make you weak. I know that's easy to say, but just try following the breathing
                       exercises below. They really work. Protect yourself: rest, eat a meal, listen to music, and do whatever you must to quiet your mind - Force a smile, and
@@ -259,7 +337,7 @@
                     <p style="font-size: 0.95rem; line-height: 1.6; color: #eee; margin-bottom: 20px">
                       If you are trapped in a hostile country and local state doctors are not safe for you, your priority is to move yourself to a safe environment. I know that's
                       not easy, you might think it's impossible, but you are not alone. International organizations exist solely to help gay people like you to escape dangerous
-                      regumes. They can really help you and you can get your life-saving healthcare. Take a deep breath. You have time but you must take action as soon as possible.
+                      regimes. They can really help you and you can get your life-saving healthcare. Take a deep breath. You have time but you must take action as soon as possible.
                     </p>
                     <div class="resource-container">
                       <a
@@ -293,9 +371,8 @@
 
                 <div class="insider-box">
                   <p class="insider-text">
-                    <strong>The Insider Play:</strong> The biggest health barrier is the unreliable public supply and mandatory state testing required to access prevention
-                    medication. The workaround? Bring a full, personal supply of your own PrEP and daily medications from home before arriving, bypassing their public health
-                    infrastructure completely.
+                    For travelers and expats who need confidential care without the language barriers or the public system privacy risks, we found: SOS Medica Mongolia |
+                    Ulaanbaatar. Tel: +976 11 464 325.
                   </p>
                 </div>
 
@@ -317,6 +394,18 @@
                 <h3 class="article-subhead">Hospitals & Clinics</h3>
                 <div class="resource-container">
                   <a
+                    href="https://sosmedica.mn/en/"
+                    target="_blank"
+                    rel="noopener"
+                    class="resource-card"
+                    style="border-left: 4px solid #0894f1; background: rgba(255, 255, 255, 0.02); margin-bottom: 10px; padding: 10px"
+                  >
+                    <span class="resource-title" style="color: #0894f1; font-size: 0.95rem">SOS Medica Mongolia</span>
+                    <span class="resource-desc" style="font-size: 0.8rem">
+                      Private international joint-venture clinic providing 100% English-fluent, confidential medical services and emergency care.
+                    </span>
+                  </a>
+                  <a
                     href="https://www.apcom.org/spotlight-youth-for-health-center-mongolia/"
                     target="_blank"
                     rel="noopener"
@@ -325,16 +414,6 @@
                   >
                     <span class="resource-title" style="color: #2ecc71">Youth for Health Center (NGO)</span>
                     <span class="resource-desc">Provides confidential testing, treatment, counseling, and PrEP access strictly for gay men. Avoids the state privacy risks.</span>
-                  </a>
-                  <a
-                    href="https://www.healthequitymatters.org.au/resources/prep-approved-for-registration-in-mongolia"
-                    target="_blank"
-                    rel="noopener"
-                    class="resource-card"
-                    style="border-left: 4px solid #00d4ff"
-                  >
-                    <span class="resource-title" style="color: #00d4ff">Health Equity Matters Mongolia</span>
-                    <span class="resource-desc">Essential information on legal PrEP registration, approval, and navigation within the country.</span>
                   </a>
                 </div>
                 <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | May 2026</p>
@@ -355,8 +434,16 @@
             <div class="rainbow-line mini-line"></div>
             <div class="news-article-view">
               <div class="article-header-row">
-                <h3 class="main-title">Mongolia Travel: Stunning Horizons, But Watch Your Back</h3>
+                <h3 class="main-title">One step back, two manly steps forward</h3>
               </div>
+
+              <p class="article-lead">
+                It's not all bad news. You have to keep your wits and you'll be ok as long as you can maintain a 'straight' profile. The dramatic scenery overflows the senses and
+                the nomadic culture is pretty amazing. But, and you know what's coming, be careful. This is like the old-school deep American South back in the day - and still
+                today in some parts. You really have to be cautious about letting on who you really are. In conversation, that's going to mean talking about imaginary girlfriends
+                and the like. Don't let your guard down. I generally have a rule about not telling unless I'm asked in most countries, but don't be brave here. Just go along with
+                the flow and the straight BS, however annoying that is, and you'll be fine. And, if you are in the city - there is a gay scene!
+              </p>
 
               <blockquote class="article-quote">
                 "While Ulaanbaatar doesn't have a visible 'gay village,' there is a discrete network of gay-friendly bars and clubs."
@@ -364,11 +451,21 @@
                 <a href="https://nomadicboys.com/gay-mongolia/" target="_blank" rel="noopener"><span style="color: #0894f1 !important">Nomadic Boys</span></a>
               </blockquote>
 
+              <p>Okay, Nomadic Boys, it might not be visible, but it's there and that means we can wind down from the outside conformity and have some fun.</p>
+
+              <p>
+                Nightlife: Finding the gay scene in Ulaanbaatar requires a bit of detective work and a complete lack of claustrophobia when navigating the city's soviet-style
+                architecture which can be a little intimidating at times. There are no neon signs, rainbow flags, or mannequins with leather shorts on in the windows or billboards
+                here. Everything is strictly hidden in plain sight. You keep that straight look glued on and you might have to pull open a heavy, unmarked iron door and suddenly
+                you are in a completely different world filled with high-energy drag cabaret shows, house music, and a packed house of local men who will adore you. That's enough
+                from us - This is a hub page so check out the links below and have a great time!
+              </p>
+
               <div class="identity-status-container">
                 <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
                   <div class="id-item">
-                    <span>Social</span>
-                    <span class="id-dot status-red"></span>
+                    <span>Social: Straight-Acting</span>
+                    <span class="id-dot status-amber"></span>
                   </div>
                   <div class="id-item">
                     <span>PDA</span>
@@ -377,26 +474,20 @@
                 </div>
               </div>
 
-              <p class="article-lead">
-                The street reality requires total discretion. Public displays of affection between men are heavily frowned upon and can quickly incite violent reactions or verbal
-                abuse from local nationalist groups. Dating apps are extremely dangerous hunting grounds. Criminal syndicates routinely create fake profiles to lure gay men into
-                isolated areas to rob and blackmail them, knowing victims will not dare call the police. Stick strictly to verified offline socializing.
-              </p>
-
               <h3 class="article-subhead">Fun & Risks:</h3>
               <ul class="law-list" style="list-style: none; padding: 0">
                 <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
                   <strong>The Fun:</strong>
                   <p>
-                    While there is no official gay village, Ulaanbaatar hosts a discrete underground network. Places like C.U.M. Gay Bar, DiEX, Melody Karaoke, and 18cm offer drag
-                    shows and safe community spaces—provided you stay entirely quiet about them on the public streets.
+                    While there is no official gay village, Ulaanbaatar hosts a discrete underground network. Places like C.U.M. Gay Bar, DiEX - the biggest gay club in the
+                    country, Melody Karaoke, and 18cm is not as short as it sounds and sizes up with drag shows and safe community spaces.
                   </p>
                 </li>
                 <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
                   <strong>The Risks:</strong>
                   <p>
-                    Digital extortion is rampant, and Grindr is a known trap zone. Always use registered taxis booked through your hotel rather than hailing rides at night to reach
-                    venues.
+                    Online extortion is a risk on Grindr and Romeo etc. Just be aware and don't let yourself be fooled by a photograph - Insist on a face-time call and then meet in
+                    a public place etc. You know the rules. It's also a good idea to book a taxi through your hotel to begin with and before you get to know the city better.
                   </p>
                 </li>
               </ul>
@@ -414,12 +505,16 @@
                 The Bottom <span style="color: #ff00ff !important">Line</span>
               </h3>
               <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">
-                Verdict: Go with strict, tactical caution. The nomadic landscapes are stunning but require total discretion and offline socializing.
+                You can definitely have a great holiday here but you're going to have to make some compromises if you come from a western country and are used to 'expressing'
+                yourself more freely. If you aren't prepared to do that, then this is not the country for you.
               </p>
 
               <div class="alphabet-brief-card">
                 <span class="alphabet-brief-title">Alphabet Briefs</span>
-                <p class="alphabet-brief-text">No priority alerts recorded.</p>
+                <p class="alphabet-brief-text">
+                  Our information on Transgender people is that despite progressive laws, it's a very challenging environment to live in. As a visitor, it's going to be dangerous
+                  unless you are extremely street savvy.
+                </p>
               </div>
 
               <div class="resource-container">
@@ -481,7 +576,7 @@
             <div class="rainbow-line mini-line"></div>
             <div class="news-article-view">
               <div class="article-header-row">
-                <h3 class="main-title">Mongolia: Essential Legal Status 2026</h3>
+                <h3 id="legal" class="main-title">Mongolia: Essential Legal Status 2026</h3>
               </div>
 
               <div class="article-pod-content">
@@ -561,12 +656,14 @@
     <script>
       (function () {
         const params = new URLSearchParams(window.location.search);
+        // Your code uses "c" in some places and "country" in others. This checks both.
         const rawC = params.get("c") || params.get("country") || "";
         const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
         const underscoredKey = slug.replace(/[\s-]/g, "_");
 
         if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
           const data = window.globalData[underscoredKey];
+          // If a manual path exists, redirect immediately!
           if (data.path) {
             window.location.href = data.path;
           }
@@ -574,7 +671,7 @@
       })();
     </script>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
+    <script src="country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",
@@ -583,32 +680,38 @@
         type: "nicedropdown",
       };
 
+      // This "forces" the text because the widget settings sometimes fail
       window.addEventListener("load", function () {
         setTimeout(function () {
           var select = document.querySelector("#translator-anchor select");
           if (select) {
+            // Creates a new "Select Language" option at the very top
             var opt = document.createElement("option");
             opt.value = "";
-            opt.innerHTML = "Translate";
+            opt.innerHTML = "Language";
             opt.selected = true;
             opt.disabled = true;
             select.insertBefore(opt, select.firstChild);
           }
-        }, 1000);
+        }, 1000); // Waits 1 second for the widget to finish loading
       });
     </script>
     <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
     <script>
+      // 1. Function to update the tags
       function updateMetadata(countryName) {
         const siteTitle = `${countryName} lgbt News & Safety | Gay World News`;
         const siteDesc = `Explore ${countryName} lgbt legal status, travel safety, and health updates on Gay World News.`;
-        const pageUrl = window.location.href;
+        const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
 
+        // Update the Browser Tab
         document.title = siteTitle;
 
+        // Update Standard Meta
         const metaDesc = document.querySelector('meta[name="description"]');
         if (metaDesc) metaDesc.setAttribute("content", siteDesc);
 
+        // Update Open Graph (Social Media)
         const ogTitle = document.querySelector('meta[property="og:title"]');
         const ogDesc = document.querySelector('meta[property="og:description"]');
         const ogUrl = document.querySelector('meta[property="og:url"]');
@@ -620,11 +723,13 @@
         console.log(`Metadata updated for: ${countryName}`);
       }
 
+      // 2. Logic to detect the country from the URL and run the update
       window.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
-        const countryParam = urlParams.get("country");
+        const countryParam = urlParams.get("country"); // Looks for ?country=Name
 
         if (countryParam) {
+          // Clean up the name (e.g., "New_Zealand" to "New Zealand")
           const formattedName = countryParam.replace(/_/g, " ");
           updateMetadata(formattedName);
         }
@@ -637,14 +742,12 @@
         menu.classList.toggle("open");
       }
 
+      // Close menu if user clicks outside of the slider
       window.addEventListener("click", function (e) {
         const menu = document.getElementById("sideMenu");
         const menuToggle = document.querySelector(".menu-toggle");
-
-        if (menu && menu.classList.contains("open")) {
-          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
-            toggleMenu();
-          }
+        if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
+          toggleMenu();
         }
       });
 
@@ -653,23 +756,28 @@
         const options = { year: "numeric", month: "long", day: "numeric" };
         const dateString = now.toLocaleDateString("en-US", options);
 
+        // Target the mobile ID
         const mobileEl = document.getElementById("last-updated-mobile");
         if (mobileEl) mobileEl.textContent = dateString;
 
+        // Target the desktop ID
         const desktopEl = document.getElementById("last-updated-desktop");
         if (desktopEl) desktopEl.textContent = dateString;
       });
 
       document.querySelectorAll(".news-content-expanded").forEach((container) => {
         container.addEventListener("click", (e) => {
+          // Define tags that SHOULD NOT trigger a close (interactive elements)
           const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
 
+          // If the user clicks the "white space" (not an interactive element)
           if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
             const parentDetails = container.closest("details");
 
             if (parentDetails && parentDetails.open) {
               parentDetails.removeAttribute("open");
 
+              // Optional: Smooth scroll back to the summary so the user isn't disoriented
               parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
             }
           }

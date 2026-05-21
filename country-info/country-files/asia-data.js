@@ -191,6 +191,7 @@ Object.assign(globalData, {
     name: "Mongolia",
     continent: "asia",
     status: "green",
+    path: "asia/mongolia.html",
   },
 
   myanmar: {
