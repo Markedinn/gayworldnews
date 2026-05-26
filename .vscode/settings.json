@@ -40,5 +40,20 @@
       ]
     }
   },
-  "cSpell.words": ["eswatini", "GSGX", "guineabissau", "latlng", "nicedropdown", "pathing", "sahrawi"]
+  "cSpell.words": ["eswatini", "GSGX", "guineabissau", "latlng", "nicedropdown", "pathing", "sahrawi"],
+  "cSpell.enabledLanguageIds": ["html", "markdown", "plaintext", "css", "javascript"],
+  "cSpell.ignoreRegExpList": ["class=\"[^\"]*\"", "href=\"[^\"]*\"", "src=\"[^\"]*\""],
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
+  }
 }

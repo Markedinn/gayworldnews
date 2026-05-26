@@ -198,54 +198,63 @@ Object.assign(globalData, {
     name: "Myanmar",
     continent: "asia",
     status: "red",
+    path: "asia/myanmar.html",
   },
 
   nepal: {
     name: "Nepal",
     continent: "asia",
     status: "green",
+    path: "asia/nepal.html",
   },
 
   north_korea: {
     name: "North Korea (DPRK)",
     continent: "asia",
     status: "red",
+    path: "asia/north_korea.html",
   },
 
   oman: {
     name: "Oman",
     continent: "asia",
     status: "red",
+    path: "asia/oman.html",
   },
 
   macau: {
     name: "Macau",
     continent: "asia",
     status: "amber",
+    path: "asia/macau.html",
   },
 
   pakistan: {
     name: "Pakistan",
     continent: "asia",
     status: "red",
+    path: "asia/pakistan.html",
   },
 
   palestinian_territories: {
     name: "Palestinian Territories",
     continent: "asia",
     status: "red",
+    path: "asia/palestine.html",
   },
 
   philippines: {
     name: "Philippines",
     continent: "asia",
     status: "amber",
+    path: "asia/philippines.html",
   },
 
   qatar: {
     name: "Qatar",
     continent: "asia",
     status: "red",
+    path: "asia/qatar.html",
   },
 
   saudi_arabia: {

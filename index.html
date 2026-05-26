@@ -65,7 +65,7 @@
     </script>
   </head>
   <body>
-    <a href="https://google.com" class="exit-btn" rel="nofollow noopener">QUICK EXIT</a>
+    <a href="https://google.com" class="exit-btn" rel="noopener">QUICK EXIT</a>
     <button class="legend-btn" onclick="toggleMobileLegend()">
       LEGEND
       <div id="mobileLegendContent" class="mobile-legend-content">
@@ -177,7 +177,8 @@
             </p>
           </div>
           <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
-            <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
+            <strong>Last Site Update:</strong>
+            <span id="last-updated-mobile"></span>
           </p>
         </div>
       </div>
@@ -193,6 +194,22 @@
     <div id="map"></div>
 
     <script>
+      // 1. Instantly paint a static placeholder so the widget never looks "missing"
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        // Only inject if it hasn't been populated yet
+        if (anchor && !anchor.innerHTML.trim()) {
+          anchor.innerHTML = `
+          <div id="gtranslate-placeholder" style="display: inline-block; vertical-align: middle;">
+            <select style="background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 6px 24px 6px 10px; font-size: 0.9rem; border-radius: 4px; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none;">
+              <option>Translate</option>
+            </select>
+          </div>
+        `;
+        }
+      });
+
+      // 2. Standard widget configuration parameters
       window.gtranslateSettings = {
         default_language: "en",
         detect_browser_language: true,
@@ -200,23 +217,57 @@
         type: "nicedropdown",
       };
 
-      // This "forces" the text because the widget settings sometimes fail
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          var select = document.querySelector("#translator-anchor select");
-          if (select) {
-            // Creates a new "Select Language" option at the very top
-            var opt = document.createElement("option");
-            opt.value = "";
-            opt.innerHTML = "Translate";
-            opt.selected = true;
-            opt.disabled = true;
-            select.insertBefore(opt, select.firstChild);
-          }
-        }, 1000); // Waits 1 second for the widget to finish loading
+      // 3. Flawless script injector and swap engine
+      function initGTranslateLazy() {
+        if (window.gtranslateScriptLoaded) return;
+        window.gtranslateScriptLoaded = true;
+
+        // Wipe out the temporary static placeholder right before the real widget mounts
+        const placeholder = document.getElementById("gtranslate-placeholder");
+        if (placeholder) placeholder.remove();
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+        script.async = true;
+
+        script.onload = () => {
+          // Force internal script load flags to execute immediately
+          window.dispatchEvent(new Event("load"));
+
+          // Ensure our clean "Translate" label is injected into the real generated select box
+          setTimeout(() => {
+            const select = document.querySelector("#translator-anchor select");
+            if (select && !select.querySelector('option[value=""][disabled]')) {
+              const opt = document.createElement("option");
+              opt.value = "";
+              opt.innerHTML = "Translate";
+              opt.selected = true;
+              opt.disabled = true;
+              select.insertBefore(opt, select.firstChild);
+            }
+          }, 150);
+        };
+
+        document.body.appendChild(script);
+      }
+
+      // 4. Zero-Delay Interaction Listeners: If they go near or click the box, swap it instantly
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        if (anchor) {
+          anchor.addEventListener("mouseenter", initGTranslateLazy, { once: true });
+          anchor.addEventListener("touchstart", initGTranslateLazy, { passive: true, once: true });
+          anchor.addEventListener("click", initGTranslateLazy, { once: true });
+        }
       });
+
+      // 5. Background Idle Execution: If they don't touch it, stream it quietly after paint finishes
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => setTimeout(initGTranslateLazy, 100));
+      } else {
+        window.addEventListener("load", () => setTimeout(initGTranslateLazy, 200));
+      }
     </script>
-    <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 
     <script src="country-info/country-files/africa-data.js?v=5.4" defer></script>
     <script src="country-info/country-files/americas-data.js?v=5.4" defer></script>

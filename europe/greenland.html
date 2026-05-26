@@ -538,44 +538,7 @@
 			});
 		</script>
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
-		<script>
-			// 1. Function to update the tags
-			function updateMetadata(countryName) {
-				const siteTitle = `${countryName} LGBTQ+ News & Safety | Gay World News`;
-				const siteDesc = `Explore ${countryName} LGBTQ+ legal status, travel safety, and health updates on Gay World News.`;
-				const pageUrl = window.location.href; // Grabs the current URL with the ?country= parameter
-
-				// Update the Browser Tab
-				document.title = siteTitle;
-
-				// Update Standard Meta
-				const metaDesc = document.querySelector('meta[name="description"]');
-				if (metaDesc) metaDesc.setAttribute("content", siteDesc);
-
-				// Update Open Graph (Social Media)
-				const ogTitle = document.querySelector('meta[property="og:title"]');
-				const ogDesc = document.querySelector('meta[property="og:description"]');
-				const ogUrl = document.querySelector('meta[property="og:url"]');
-
-				if (ogTitle) ogTitle.setAttribute("content", siteTitle);
-				if (ogDesc) ogDesc.setAttribute("content", siteDesc);
-				if (ogUrl) ogUrl.setAttribute("content", pageUrl);
-
-				console.log(`Metadata updated for: ${countryName}`);
-			}
-
-			// 2. Logic to detect the country from the URL and run the update
-			window.addEventListener("DOMContentLoaded", () => {
-				const urlParams = new URLSearchParams(window.location.search);
-				const countryParam = urlParams.get("country"); // Looks for ?country=Name
-
-				if (countryParam) {
-					// Clean up the name (e.g., "New_Zealand" to "New Zealand")
-					const formattedName = countryParam.replace(/_/g, " ");
-					updateMetadata(formattedName);
-				}
-			});
-		</script>
+		
 
 		<script>
 			function toggleMenu() {
