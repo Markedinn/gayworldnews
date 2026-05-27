@@ -43,20 +43,41 @@
     <link rel="stylesheet" href="../country.css" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
-    <script>window.globalData = {};</script>
+ <script>
+      window.globalData = window.globalData || {};
 
-    <script src="../country-info/country-files/africa-data.js" defer></script>
-    <script src="../country-info/country-files/americas-data.js" defer></script>
-    <script src="../country-info/country-files/asia-data.js" defer></script>
-    <script src="../country-info/country-files/europe-data.js" defer></script>
-    <script src="../country-info/country-files/oceania-data.js" defer></script>
+      // Event-Driven Registry Loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("globalSearch");
+        let registriesLoaded = false;
 
-    <script src="../index.js" defer></script>
+        if (searchInput) {
+          searchInput.addEventListener("focus", () => {
+            if (!registriesLoaded) {
+              const regions = ["africa", "americas", "asia", "europe", "oceania"];
+
+              regions.forEach((region) => {
+                const script = document.createElement("script");
+                script.src = `/country-info/country-files/${region}-data.js`;
+                script.async = true;
+                document.head.appendChild(script);
+              });
+
+              registriesLoaded = true;
+              console.log("Global routing arrays injected on demand.");
+            }
+          });
+        }
+      });
+    </script>
+
+    <script src="/index.js" defer></script>
 </head>
 
-	<div id="translator-anchor"></div>
-
 	<body class="standard-page">
+
+			<div id="translator-anchor"></div>
+
 
 			<div class="menu-toggle" onclick="toggleMenu()">
 				<div class="bar"></div>
@@ -121,9 +142,7 @@
 						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for legal travel planning?</h3>
 						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.</p>
 					</div>
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
-					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-					</p>
+
                 </div>
 			</div>
 		</div>
@@ -579,53 +598,32 @@
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 		
 
-		<script>
-function toggleMenu() {
-    const menu = document.getElementById("sideMenu");
-    menu.classList.toggle("open");
-}
+    <script>
+      // UI TOGGLES & EVENT LISTENERS
+      function toggleMenu() {
+        document.getElementById("sideMenu")?.classList.toggle("open");
+      }
 
-// Close menu if user clicks outside of the slider
-window.addEventListener('click', function(e) {
-    const menu = document.getElementById("sideMenu");
-    const menuToggle = document.querySelector(".menu-toggle");
-    if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-        toggleMenu();
-    }
-});
+      function toggleDesktopMenu() {
+        document.getElementById("desktopSlider")?.classList.toggle("active");
+      }
 
-document.addEventListener("DOMContentLoaded", function () {
-	const now = new Date();
-	const options = { year: "numeric", month: "long", day: "numeric" };
-	const dateString = now.toLocaleDateString("en-US", options);
+      document.addEventListener("click", (e) => {
+        const sideMenu = document.getElementById("sideMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+        const desktopSlider = document.getElementById("desktopSlider");
+        const desktopToggle = document.getElementById("desktopToggle");
 
-	// Target the mobile ID
-	const mobileEl = document.getElementById("last-updated-mobile");
-	if (mobileEl) mobileEl.textContent = dateString;
-
-	// Target the desktop ID
-	const desktopEl = document.getElementById("last-updated-desktop");
-	if (desktopEl) desktopEl.textContent = dateString;
-});
-
-document.querySelectorAll('.news-content-expanded').forEach(container => {
-    container.addEventListener('click', (e) => {
-        // Define tags that SHOULD NOT trigger a close (interactive elements)
-        const interactiveTags = ['A', 'BUTTON', 'IMG', 'IFRAME', 'TABLE', 'TH', 'TD', 'SPAN'];
-        
-        // If the user clicks the "white space" (not an interactive element)
-        if (!interactiveTags.includes(e.target.tagName) && !e.target.closest('.resource-card')) {
-            const parentDetails = container.closest('details');
-            
-            if (parentDetails && parentDetails.open) {
-                parentDetails.removeAttribute('open');
-                
-                // Optional: Smooth scroll back to the summary so the user isn't disoriented
-                parentDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            }
+        // Close Side Menu
+        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
+          sideMenu.classList.remove("open");
         }
-    });
-});
-</script>
+
+        // Close Desktop Slider
+        if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
+          desktopSlider.classList.remove("active");
+        }
+      });
+    </script>
 	</body>
 </html>

@@ -4,24 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Gay World News | Our Mission & LGBTQ+ Global Advocacy</title>
+    <title>Gay World News | Our Mission & Global Advocacy for Men</title>
+
+    <!-- SEO Metadata -->
     <meta
       name="description"
-      content="Discover the mission behind Gay World News. We provide the global LGBTQ+ community with essential data on legal rights, travel safety, and health across 200+ countries."
+      content="Discover the mission behind Gay World News. We provide the global community of gay men and MSM with essential data on legal rights, travel safety, and health across 200 countries."
     />
-
+    <meta name="keywords" content="Gay World News, gay safety map, gay rights advocacy, MSM health intelligence, safe travel for men" />
+    <meta name="author" content="Gay World News" />
     <link rel="canonical" href="https://www.gayworldnews.com/about.html" />
 
-    <meta property="og:title" content="Gay World News | About Our Mission" />
-    <meta property="og:description" content="Learn how GWN is working to keep the LGBTQ+ community safe and informed across the globe." />
-    <meta property="og:url" content="https://www.gayworldnews.com/about.html" />
+    <!-- Open Graph (Facebook / WhatsApp) -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.gayworldnews.com/about.html" />
+    <meta property="og:title" content="Gay World News | About Our Mission" />
+    <meta property="og:description" content="Learn how GWN is working to keep gay men and MSM safe and informed across the globe with data-driven reporting." />
     <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:alt" content="Gay World News interactive travel map highlighting global rights and security for men." />
 
+    <!-- X (Twitter) Cards -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.gayworldnews.com/about.html" />
     <meta name="twitter:title" content="Gay World News | Our Mission" />
-    <meta name="twitter:description" content="Empowering the LGBTQ+ community through global safety data and legal advocacy." />
+    <meta name="twitter:description" content="Empowering gay men and MSM through global safety data, legal intelligence, and health tracking." />
     <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+
+    <!-- Apple Touch Icon Consistency -->
+    <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+
+    <link rel="stylesheet" href="../index.css?v=5.4" />
+
+    <!-- Structured Data for About Page -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "headline": "Gay World News | Our Mission & Global Advocacy for Men",
+        "description": "Discover the mission behind Gay World News. We provide the global community of gay men and MSM with essential data on legal rights, travel safety, and health across 200 countries.",
+        "url": "https://www.gayworldnews.com/about.html",
+        "image": "https://www.gayworldnews.com/images/gwn-logo.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gay World News",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.gayworldnews.com/images/gwn-logo.jpg"
+          }
+        }
+      }
+    </script>
 
     <link rel="icon" type="image/webp" href="images/favicon.webp" />
     <link rel="apple-touch-icon" href="images/favicon.webp" />
@@ -29,14 +63,35 @@
     <!-- Preload Index CSS (Matching the versioning string) -->
     <link rel="preload" href="../index.css?v=5.4" as="style" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
+
     <script>
-      window.globalData = {};
+      window.globalData = window.globalData || {};
+
+      // Event-Driven Registry Loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("globalSearch");
+        let registriesLoaded = false;
+
+        if (searchInput) {
+          searchInput.addEventListener("focus", () => {
+            if (!registriesLoaded) {
+              const regions = ["africa", "americas", "asia", "europe", "oceania"];
+
+              regions.forEach((region) => {
+                const script = document.createElement("script");
+                script.src = `/country-info/country-files/${region}-data.js`;
+                script.async = true;
+                document.head.appendChild(script);
+              });
+
+              registriesLoaded = true;
+              console.log("Global routing arrays injected on demand.");
+            }
+          });
+        }
+      });
     </script>
-    <script src="country-info/country-files/africa-data.js" defer></script>
-    <script src="country-info/country-files/asia-data.js" defer></script>
-    <script src="country-info/country-files/europe-data.js" defer></script>
-    <script src="country-info/country-files/americas-data.js" defer></script>
-    <script src="country-info/country-files/oceania-data.js" defer></script>
+
     <script src="index.js" defer></script>
 
     <style>
@@ -362,54 +417,30 @@
     <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 
     <script>
-      // 5. UI TOGGLES & EVENT LISTENERS
+      // UI TOGGLES & EVENT LISTENERS
       function toggleMenu() {
-        document.getElementById("sideMenu").classList.toggle("open");
+        document.getElementById("sideMenu")?.classList.toggle("open");
       }
 
       function toggleDesktopMenu() {
-        const slider = document.getElementById("desktopSlider");
-        if (slider) slider.classList.toggle("active");
-      }
-
-      function toggleMobileLegend(event) {
-        // If you pass 'event' from the HTML, this stops the 'flash'
-        if (event) event.stopPropagation();
-
-        const content = document.getElementById("mobileLegendContent");
-        content.classList.toggle("show");
+        document.getElementById("desktopSlider")?.classList.toggle("active");
       }
 
       document.addEventListener("click", (e) => {
         const sideMenu = document.getElementById("sideMenu");
         const menuToggle = document.querySelector(".menu-toggle");
+        const desktopSlider = document.getElementById("desktopSlider");
+        const desktopToggle = document.getElementById("desktopToggle");
 
         // Close Side Menu
-        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
           sideMenu.classList.remove("open");
         }
-        // Close Legend
-        if (legendDropdown && !legendDropdown.contains(e.target)) {
-          document.getElementById("mobileLegendContent")?.classList.remove("show");
-        }
+
         // Close Desktop Slider
         if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
           desktopSlider.classList.remove("active");
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
     </script>
   </body>

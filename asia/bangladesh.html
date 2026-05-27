@@ -45,20 +45,40 @@
     <link rel="stylesheet" href="../country.css" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
-    <script>window.globalData = {};</script>
+ <script>
+      window.globalData = window.globalData || {};
 
-    <script src="../country-info/country-files/africa-data.js" defer></script>
-    <script src="../country-info/country-files/americas-data.js" defer></script>
-    <script src="../country-info/country-files/asia-data.js" defer></script>
-    <script src="../country-info/country-files/europe-data.js" defer></script>
-    <script src="../country-info/country-files/oceania-data.js" defer></script>
+      // Event-Driven Registry Loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("globalSearch");
+        let registriesLoaded = false;
 
-    <script src="../index.js" defer></script>
+        if (searchInput) {
+          searchInput.addEventListener("focus", () => {
+            if (!registriesLoaded) {
+              const regions = ["africa", "americas", "asia", "europe", "oceania"];
+
+              regions.forEach((region) => {
+                const script = document.createElement("script");
+                script.src = `/country-info/country-files/${region}-data.js`;
+                script.async = true;
+                document.head.appendChild(script);
+              });
+
+              registriesLoaded = true;
+              console.log("Global routing arrays injected on demand.");
+            }
+          });
+        }
+      });
+    </script>
+
+    <script src="/index.js" defer></script>
 </head>
 
-	<div id="translator-anchor"></div>
+		<body class="standard-page">
 
-	<body class="standard-page">
+			<div id="translator-anchor"></div>
 
 			<div class="menu-toggle" onclick="toggleMenu()">
 				<div class="bar"></div>
@@ -123,9 +143,7 @@
 						<h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0;">Can I use this for legal travel planning?</h3>
 						<p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.</p>
 					</div>
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
-					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-					</p>
+
                 </div>
 			</div>
 		</div>

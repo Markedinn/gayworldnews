@@ -4,7 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Gay World News | americas 2026 Guide</title>
+    <title>Gay World News | Americas 2026 Guide</title>
+
+    <!-- SEO Metadata -->
+    <meta
+      name="description"
+      content="The 2026 Americas guide for gay travelers. Verified legal status, real-time safety advisories, and health directories for gay men and MSM across the continent."
+    />
+    <meta name="keywords" content="gay travel Americas, MSM health directory, gay legal status Americas, Gay World News, gay safety map" />
+    <meta name="author" content="Gay World News" />
+    <link rel="canonical" href="https://www.gayworldnews.com/americas.html" />
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.gayworldnews.com/americas.html" />
+    <meta property="og:title" content="Gay World News | Americas 2026 Guide" />
+    <meta
+      property="og:description"
+      content="Essential legal, health, and security data for gay men across the Americas. Navigate real-time risks, local laws, and verified travel directories."
+    />
+    <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:alt" content="Gay World News interactive travel map highlighting global rights and security for men." />
+
+    <!-- X (Twitter) Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://www.gayworldnews.com/americas.html" />
+    <meta name="twitter:title" content="Gay World News | Americas 2026 Guide" />
+    <meta
+      name="twitter:description"
+      content="Essential legal, health, and security data for gay men across the Americas. Navigate real-time risks, local laws, and verified travel directories."
+    />
+    <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+
+    <!-- Apple Touch Icon Consistency -->
+    <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+
+    <link rel="stylesheet" href="../index.css?v=5.4" />
+    <link rel="stylesheet" href="../regions.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "headline": "Gay World News | Americas 2026 Guide",
+        "description": "Essential legal, health, and security data for gay men across the Americas. Navigate real-time risks, local laws, and verified travel directories.",
+        "url": "https://www.gayworldnews.com/americas.html",
+        "image": "https://www.gayworldnews.com/images/gwn-logo.jpg",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gay World News",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.gayworldnews.com/images/gwn-logo.jpg"
+          }
+        }
+      }
+    </script>
 
     <link rel="icon" type="image/webp" href="images/favicon.webp" />
 
@@ -12,13 +69,33 @@
     <link rel="stylesheet" href="../regions.css?v=5.4" />
 
     <script>
-      window.globalData = {};
+      window.globalData = window.globalData || {};
+
+      // Event-Driven Registry Loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("globalSearch");
+        let registriesLoaded = false;
+
+        if (searchInput) {
+          searchInput.addEventListener("focus", () => {
+            if (!registriesLoaded) {
+              const regions = ["africa", "americas", "asia", "europe", "oceania"];
+
+              regions.forEach((region) => {
+                const script = document.createElement("script");
+                script.src = `/country-info/country-files/${region}-data.js`;
+                script.async = true;
+                document.head.appendChild(script);
+              });
+
+              registriesLoaded = true;
+              console.log("Global routing arrays injected on demand.");
+            }
+          });
+        }
+      });
     </script>
-    <script src="country-info/country-files/africa-data.js" defer></script>
-    <script src="country-info/country-files/asia-data.js" defer></script>
-    <script src="country-info/country-files/europe-data.js" defer></script>
-    <script src="country-info/country-files/americas-data.js" defer></script>
-    <script src="country-info/country-files/oceania-data.js" defer></script>
+
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -102,10 +179,6 @@
               for the community.
             </p>
           </div>
-
-          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
-            <strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-          </p>
         </div>
       </div>
     </div>
@@ -353,19 +426,6 @@
     </div>
 
     <script>
-      window.globalData = window.globalData || {};
-    </script>
-
-    <script src="country-info/country-files/africa-data.js?v=1.5"></script>
-    <script src="country-info/country-files/americas-data.js?v=1.5"></script>
-    <script src="country-info/country-files/asia-data.js?v=1.5"></script>
-    <script src="country-info/country-files/europe-data.js?v=1.5"></script>
-    <script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-    <script src="country-info/country-files/europe-data.js?v=1.5"></script>
-    <script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-    <script>
       (function () {
         const params = new URLSearchParams(window.location.search);
         // Your code uses "c" in some places and "country" in others. This checks both.
@@ -429,20 +489,6 @@
         if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
           sideMenu.classList.remove("open");
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
     </script>
   </body>

@@ -2,25 +2,59 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>Gay World News | Contact Us & Community Support</title>
-		<meta
-			name="description"
-			content="Have questions or news tips? Get in touch with Gay World News. We are dedicated to providing safe, reliable LGBTQ+ travel and legal updates worldwide." />
+        <title>Gay World News | Contact Us & Community Support</title>
+        
+        <!-- SEO Metadata -->
+        <meta
+            name="description"
+            content="Have questions or news tips? Get in touch with Gay World News. We are dedicated to providing safe, reliable travel, health, and legal updates for gay men worldwide." />
+        <meta name="keywords" content="Contact Gay World News, gay news tips, gay travel support, media inquiries, secure communication" />
+        <meta name="author" content="Gay World News" />
+        <link rel="canonical" href="https://www.gayworldnews.com/contact.html" />
 
-		<link rel="canonical" href="https://www.gayworldnews.com/contact.html" />
+        <!-- Open Graph (Facebook / WhatsApp) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.gayworldnews.com/contact.html" />
+        <meta property="og:title" content="Gay World News | Contact Our Team" />
+        <meta property="og:description" content="Reach out to GWN for secure inquiries, news submissions, or feedback regarding global safety and intelligence for men." />
+        <meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
+        <meta property="og:image:alt" content="Gay World News interactive travel map highlighting global rights and security for men." />
 
-		<meta property="og:title" content="Gay World News | Contact Our Team" />
-		<meta property="og:description" content="Reach out to GWN for inquiries, feedback, or support regarding LGBTQ+ global safety and news." />
-		<meta property="og:url" content="https://www.gayworldnews.com/contact.html" />
-		<meta property="og:type" content="website" />
-		<meta property="og:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+        <!-- X (Twitter) Cards -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://www.gayworldnews.com/contact.html" />
+        <meta name="twitter:title" content="Gay World News | Contact Us" />
+        <meta name="twitter:description" content="Connect with the team at Gay World News for global safety inquiries, news updates, and community feedback." />
+        <meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg" />
 
-		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="Gay World News | Contact Us" />
-		<meta name="twitter:description" content="Connect with the team at Gay World News for LGBTQ+ global safety inquiries and community feedback." />
-		<meta name="twitter:image" content="https://www.gayworldnews.com/images/gwn-logo.jpg?v=2.0" />
+        <!-- Apple Touch Icon Consistency -->
+        <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+        <link rel="icon" type="image/webp" href="images/favicon.webp" />
+
+        <link rel="stylesheet" href="../index.css?v=5.4" />
+
+        <!-- Structured Data for Contact Page -->
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "headline": "Gay World News | Contact Us & Community Support",
+            "description": "Have questions or news tips? Get in touch with Gay World News. We are dedicated to providing safe, reliable travel, health, and legal updates for gay men worldwide.",
+            "url": "https://www.gayworldnews.com/contact.html",
+            "image": "https://www.gayworldnews.com/images/gwn-logo.jpg",
+            "publisher": {
+              "@type": "Organization",
+              "name": "Gay World News",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.gayworldnews.com/images/gwn-logo.jpg"
+              }
+            }
+          }
+        </script>
 
 		<link rel="icon" type="image/webp" href="images/favicon.webp?v=6" />
 		<link rel="apple-touch-icon" href="images/favicon.webp" />
@@ -30,15 +64,35 @@
 		<link rel="stylesheet" href="index.css?v=5.4" />
 
 		
-				<script>
-			window.globalData = {};
-		</script>
-		<script src="country-info/country-files/africa-data.js" defer></script>
-		<script src="country-info/country-files/asia-data.js" defer></script>
-		<script src="country-info/country-files/europe-data.js" defer></script>
-		<script src="country-info/country-files/americas-data.js" defer></script>
-		<script src="country-info/country-files/oceania-data.js" defer></script>
-		<script src="index.js?v=5.4" defer></script>
+ <script>
+      window.globalData = window.globalData || {};
+
+      // Event-Driven Registry Loader
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("globalSearch");
+        let registriesLoaded = false;
+
+        if (searchInput) {
+          searchInput.addEventListener("focus", () => {
+            if (!registriesLoaded) {
+              const regions = ["africa", "americas", "asia", "europe", "oceania"];
+
+              regions.forEach((region) => {
+                const script = document.createElement("script");
+                script.src = `/country-info/country-files/${region}-data.js`;
+                script.async = true;
+                document.head.appendChild(script);
+              });
+
+              registriesLoaded = true;
+              console.log("Global routing arrays injected on demand.");
+            }
+          });
+        }
+      });
+    </script>
+
+    <script src="index.js" defer></script>
 
 
 <style>
@@ -293,9 +347,7 @@ body.contact-page {
 						<p style="color: rgba(255,255,255,0.7); font-size: 0.85rem; line-height: 1.5;">Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news from verified sources to provide a comprehensive security rating for the community.</p>
 					</div>
 
-					<p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px;">
-					<strong>Status:</strong> Live Data | <span id="last-updated-mobile"></span>
-					</p>
+
                 </div>
 			</div>
 		</div>
@@ -334,18 +386,7 @@ body.contact-page {
     <p class="footer-site-subtitle">Legal Travel Health & Security</p>
 </div>
 
-<script>
-			window.globalData = window.globalData || {};
-		</script>
 
-		<script src="country-info/country-files/africa-data.js?v=1.5"></script>
-		<script src="country-info/country-files/americas-data.js?v=1.5"></script>
-		<script src="country-info/country-files/asia-data.js?v=1.5"></script>
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
-
-		<script src="country-info/country-files/europe-data.js?v=1.5"></script>
-		<script src="country-info/country-files/oceania-data.js?v=1.5"></script>
 
 		<script>
 			(function () {
@@ -394,63 +435,26 @@ body.contact-page {
 		<script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 		
 
-		<script>
-// 5. UI TOGGLES & EVENT LISTENERS
-function toggleMenu() {
-	document.getElementById("sideMenu").classList.toggle("open");
-}
+<script>
+      // 5. UI TOGGLES & EVENT LISTENERS
+      function toggleMenu() {
+        document.getElementById("sideMenu").classList.toggle("open");
+      }
 
-function toggleDesktopMenu() {
-	const slider = document.getElementById("desktopSlider");
-	if (slider) slider.classList.toggle("active");
-}
+      function toggleDesktopMenu() {
+        const slider = document.getElementById("desktopSlider");
+        if (slider) slider.classList.toggle("active");
+      }
 
-function toggleMobileLegend() {
-	const content = document.getElementById("mobileLegendContent");
-	const sideMenu = document.getElementById("sideMenu");
-	if (content) content.classList.toggle("show");
-	if (sideMenu?.classList.contains("open")) sideMenu.classList.remove("open");
-}
+      document.addEventListener("click", (e) => {
+        const sideMenu = document.getElementById("sideMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
 
-function toggleMobileLegend(event) {
-	// If you pass 'event' from the HTML, this stops the 'flash'
-	if (event) event.stopPropagation();
-
-	const content = document.getElementById("mobileLegendContent");
-	content.classList.toggle("show");
-}
-
-document.addEventListener("click", (e) => {
-	const sideMenu = document.getElementById("sideMenu");
-	const menuToggle = document.querySelector(".menu-toggle");
-
-	// Close Side Menu
-	if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-		sideMenu.classList.remove("open");
-	}
-	// Close Legend
-	if (legendDropdown && !legendDropdown.contains(e.target)) {
-		document.getElementById("mobileLegendContent")?.classList.remove("show");
-	}
-	// Close Desktop Slider
-	if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-		desktopSlider.classList.remove("active");
-	}
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-	const now = new Date();
-	const options = { year: "numeric", month: "long", day: "numeric" };
-	const dateString = now.toLocaleDateString("en-US", options);
-
-	// Target the mobile ID
-	const mobileEl = document.getElementById("last-updated-mobile");
-	if (mobileEl) mobileEl.textContent = dateString;
-
-	// Target the desktop ID
-	const desktopEl = document.getElementById("last-updated-desktop");
-	if (desktopEl) desktopEl.textContent = dateString;
-});
-</script>
+        // Close Side Menu
+        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+          sideMenu.classList.remove("open");
+        }
+      });
+    </script>
 	</body>
 </html>

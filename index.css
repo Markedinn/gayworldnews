@@ -485,12 +485,12 @@ body {
   bottom: 2rem;
   left: 2rem;
   width: 130px;
-  background: transparent;
-  color: white;
+  background: #faf9f6;
+  color: #f62681;
   padding: 10px 0;
   border-radius: 6px;
-  border: 1px solid white;
-  font-weight: 500;
+  border: 1px solid #f62681;
+  font-weight: 800;
   font-size: 0.8rem;
   letter-spacing: 1.2px;
   text-transform: uppercase;
