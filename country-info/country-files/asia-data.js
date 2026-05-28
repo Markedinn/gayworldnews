@@ -66,14 +66,12 @@ Object.assign(globalData, {
     name: "East Timor",
     continent: "asia",
     status: "amber",
-    path: "asia/east_timor.html",
   },
 
   hong_kong: {
     name: "Hong Kong",
     continent: "asia",
     status: "green",
-    path: "asia/hong_kong.html",
   },
 
   india: {

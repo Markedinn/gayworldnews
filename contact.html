@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -64,33 +64,7 @@
 		<link rel="stylesheet" href="index.css?v=5.4" />
 
 		
- <script>
-      window.globalData = window.globalData || {};
 
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
 
     <script src="index.js" defer></script>
 

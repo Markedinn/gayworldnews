@@ -61,7 +61,6 @@ Object.assign(globalData, {
     name: "Cyprus",
     continent: "europe",
     status: "amber",
-    path: "europe/cyprus.html",
   },
   czechia: {
     name: "Czechia",
@@ -145,6 +144,7 @@ Object.assign(globalData, {
     name: "Isle of Man",
     continent: "europe",
     status: "green",
+    path: "europe/isle_of_man.html",
   },
   italy: {
     name: "Italy",

@@ -61,16 +61,6 @@
     <link rel="preload" href="../index.css?v=5.4" as="style" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
-    <script>
-      window.globalData = {};
-    </script>
-
-    <script src="../country-info/country-files/africa-data.js" defer></script>
-    <script src="../country-info/country-files/americas-data.js" defer></script>
-    <script src="../country-info/country-files/asia-data.js" defer></script>
-    <script src="../country-info/country-files/europe-data.js" defer></script>
-    <script src="../country-info/country-files/oceania-data.js" defer></script>
-
     <script src="../index.js" defer></script>
 
     <style>
@@ -186,7 +176,7 @@
     <div class="master-grid-container">
       <header class="main-header">
         <img
-          srcset="
+          src="
             https://upload.wikimedia.org/wikipedia/commons/e/e1/Flag_of_Ukraine_%28with_coat_of_arms%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original
           "
           alt="Flag of country"
@@ -225,7 +215,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on overall safety -->
         <details class="news-accordion status-border status-amber">
-          <div class="glass-card"></div>
           <summary>
             <!-- [Never Change pod-title on any section] -->
             <h3 class="pod-title">Article</h3>
@@ -425,7 +414,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- Ukraine Medical Hub: May 2026 Update -->
         <details class="news-accordion status-border status-amber">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Medical</h3>
           </summary>
@@ -516,7 +504,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
         <!-- PROMPT: Set status-border to true status - if dangerous, set to red. otherwise, be positive and take the role of upbeat LGBT travel guide and guru -->
         <!-- Ukraine Travel & Fun: May 2026 Update -->
         <details class="news-accordion status-border status-red">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Travel & Fun</h3>
           </summary>
@@ -651,7 +638,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- Ukraine Essential Legal Status 2026 -->
         <details class="news-accordion status-border status-amber">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Need To Know Laws</h3>
           </summary>
@@ -713,24 +699,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        // Your code uses "c" in some places and "country" in others. This checks both.
-        const rawC = params.get("c") || params.get("country") || "";
-        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-        const underscoredKey = slug.replace(/[\s-]/g, "_");
-
-        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-          const data = window.globalData[underscoredKey];
-          // If a manual path exists, redirect immediately!
-          if (data.path) {
-            window.location.href = data.path;
-          }
-        }
-      })();
-    </script>
-
     <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
@@ -775,20 +743,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
             toggleMenu();
           }
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
 
       document.querySelectorAll(".news-content-expanded").forEach((container) => {

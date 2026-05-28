@@ -48,33 +48,7 @@
 <link rel="preload" href="../index.css?v=5.4" as="style">
 <link rel="stylesheet" href="../index.css?v=5.4" />
 
- <script>
-      window.globalData = window.globalData || {};
 
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
 
     <script src="/index.js" defer></script>
 </head>
@@ -157,7 +131,7 @@
 		<div class="master-grid-container">
 			<header class="main-header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
-            srcset="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Flag_of_Brunei.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
             alt="Flag of brunei"
             width="260"
             height="160"
@@ -193,7 +167,7 @@
 
 <!-- PROMPT: Set status-border to status-red based on extreme risk and criminalization -->
 <details class="news-accordion status-border status-red">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Article</h3>
     </summary>
@@ -276,7 +250,7 @@
 </details>
 
 <details class="news-accordion status-border status-red">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Medical</h3>
     </summary>
@@ -343,7 +317,7 @@
 
 <!-- PROMPT: Set status-border to status-red. While physically safe from common crime, the legal risk for LGBT travelers is extreme. -->
 <details class="news-accordion status-border status-red">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Travel & Fun</h3>
     </summary>
@@ -414,7 +388,7 @@
 
 <!-- PROMPT: Status-red. Brunei's laws are among the most severe in the world, including the theoretical use of the death penalty. -->
 <details class="news-accordion status-border status-red">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Your Rights & Safety</h3>
     </summary>

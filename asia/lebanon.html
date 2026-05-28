@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 	<meta charset="UTF-8" />
@@ -59,33 +59,7 @@
 		<link rel="stylesheet" href="../country.css?v=5.4" />
 		<link rel="stylesheet" href="../index.css?v=5.4" />
 
- <script>
-      window.globalData = window.globalData || {};
 
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
     <script src="/index.js" defer></script>
 
 	</head>
@@ -111,7 +85,7 @@
 					<div id="searchResults" class="search-results-floating"></div>
 				</div>
 
-                <a href="breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
+                <a href="../breaking.html" class="breaking-news-btn">BREAKING NEWS</a>
 				<a href="../africa.html">AFRICA</a>
 				<a href="../americas.html">AMERICAS</a>
 				<a href="../asia.html">ASIA</a>
@@ -193,7 +167,7 @@
 
 			<div id="info-display-area" style="grid-column: 1 / -1">
 				<details class="news-accordion status-border status-amber">
-					<div class="glass-card"></div>
+					
 					<summary>
 						<h3 class="pod-title">Article</h3>
 					</summary>
@@ -528,7 +502,7 @@
 			</details>
 
 				<details class="news-accordion status-border status-amber">
-					<div class="glass-card"></div>
+					
 					<summary>
 						<h3 class="pod-title">Medical</h3>
 					</summary>
@@ -598,7 +572,7 @@
 				</details>
 
 				<details class="news-accordion status-border status-amber">
-				<div class="glass-card"></div>
+				
 				<summary>
 				<h3 class="pod-title">Travel & Fun</h3>
 				</summary>
@@ -658,7 +632,7 @@
 				</details>
 
 				<details class="news-accordion status-border status-red">
-					<div class="glass-card"></div>
+					
 					<summary>
 						<h3 class="pod-title">Your Rights & Safety</h3>
 					</summary>

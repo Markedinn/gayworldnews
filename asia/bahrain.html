@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,33 +44,7 @@
     <link rel="stylesheet" href="../country.css" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
- <script>
-      window.globalData = window.globalData || {};
 
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
 
     <script src="/index.js" defer></script>
 </head>
@@ -153,7 +127,7 @@
 		<div class="master-grid-container">
 			<header class="main-header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" 
-            srcset="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" 
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Bahrain.svg" 
             alt="Flag of bahrain"
             width="160"
             style="border-radius: 4px; margin-top: 40px; border: 1px solid rgba(255, 255, 255, 0.1)" />
@@ -178,7 +152,7 @@
 			<div id="info-display-area" style="grid-column: 1 / -1">
 
 	<details class="news-accordion status-border status-amber">
-            <div class="glass-card"></div>
+            
             <summary>
                 <h3 class="pod-title">Article</h3>
             </summary>
@@ -265,7 +239,7 @@
 </details>
 
 <details class="news-accordion status-border status-amber">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Medical</h3>
     </summary>
@@ -345,7 +319,7 @@
 </details>
 
 <details class="news-accordion status-border status-amber">
-            <div class="glass-card"></div>
+            
             <summary>
                 <h3 class="pod-title">Travel & Fun</h3>
             </summary>
@@ -429,7 +403,7 @@
     </details>
 
 				<details class="news-accordion status-border status-red">
-				<div class="glass-card"></div>
+				
 				<summary>
 					<h3 class="pod-title"> Your Rights & Safety</h3>
 				</summary>

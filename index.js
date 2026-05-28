@@ -1,68 +1,115 @@
 document.addEventListener("DOMContentLoaded", () => {
-	const globalInput = document.getElementById("globalSearch");
-	const globalResults = document.getElementById("searchResults");
-	const targetContinent = document.body.dataset.continent;
+  const globalInput = document.getElementById("globalSearch");
+  const globalResults = document.getElementById("searchResults");
+  const targetContinent = document.body.dataset.continent;
+  let registriesLoaded = false; // Tracks if data is loaded
 
-	if (globalInput && globalResults) {
-		globalInput.addEventListener("input", (e) => {
-			const value = e.target.value.toLowerCase().trim();
-			globalResults.innerHTML = "";
+  if (globalInput && globalResults) {
+    // 1. THE LOADER: Fetches data when the search bar is focused
+    globalInput.addEventListener("focus", () => {
+      if (!registriesLoaded) {
+        const regions = ["africa", "americas", "asia", "europe", "oceania"];
+        regions.forEach((region) => {
+          const script = document.createElement("script");
+          script.src = `/country-info/country-files/${region}-data.js`;
+          script.async = true;
+          document.head.appendChild(script);
+        });
+        registriesLoaded = true;
+        console.log("Global routing arrays injected on demand.");
+      }
+    });
 
-			if (value.length > 0 && typeof globalData !== "undefined") {
-				globalResults.style.display = "flex";
+    // 2. THE SEARCH: Filters and displays live pages
+    globalInput.addEventListener("input", (e) => {
+      const value = e.target.value.toLowerCase().trim();
+      globalResults.innerHTML = "";
 
-				// SORTING SEARCH RESULTS
-				Object.keys(globalData)
-					.sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
-					.forEach((key) => {
-						const country = globalData[key];
-						const matchesSearch = country.name.toLowerCase().startsWith(value);
-						const matchesContinent = !targetContinent || country.continent === targetContinent;
+      if (value.length > 0 && typeof globalData !== "undefined") {
+        globalResults.style.display = "flex";
 
-						if (matchesSearch && matchesContinent) {
-							const link = document.createElement("a");
+        Object.keys(globalData)
+          .sort((a, b) => globalData[a].name.localeCompare(globalData[b].name))
+          .forEach((key) => {
+            const country = globalData[key];
+            const matchesSearch = country.name.toLowerCase().startsWith(value);
+            const matchesContinent = !targetContinent || country.continent === targetContinent;
 
-							// AUTOMATIC PATHFINDER
-							if (country.path) {
-								// If the data has a path, use it.
-								// We add '/' to the start to make sure it works from subfolders!
-								link.href = "/" + country.path;
-							} else {
-								// Fallback for countries that don't have their own .html file yet
-								link.href = `/country.html?c=${key}`;
-							}
+            // NEW FILTER: Only show if it matches AND has a path
+            if (matchesSearch && matchesContinent && country.path) {
+              const link = document.createElement("a");
+              link.href = "/" + country.path;
 
-							let s = (country.status || "warning").toLowerCase();
-							if (s === "danger" || s === "black") s = "red";
+              let s = (country.status || "warning").toLowerCase();
+              if (s === "danger" || s === "black") s = "red";
 
-							link.className = `side-country-card ${s}`;
-							link.innerHTML = `${country.name}`;
-							globalResults.appendChild(link);
-						}
-					});
-			} else {
-				globalResults.style.display = "none";
-			}
-		});
-	}
-}); // <--- This now correctly closes the DOMContentLoaded function
+              link.className = `side-country-card ${s}`;
+              link.innerHTML = `${country.name}`;
+              globalResults.appendChild(link);
+            }
+          });
+      } else {
+        globalResults.style.display = "none";
+      }
+    });
+  }
+});
 
-// ESC KEY EXIT (Lives outside the DOM listener so it's always ready)
+// ESC KEY EXIT
 document.addEventListener("keydown", (e) => {
-	if (e.key === "Escape") window.location.replace("https://www.google.com");
+  if (e.key === "Escape") window.location.replace("https://www.google.com");
 });
 
-// When the user leaves the tab or clicks exit, change the title
 window.addEventListener("blur", () => {
-	document.title = "Google Search";
+  document.title = "Google Search";
 });
 
-// Change it back when they return
 window.addEventListener("focus", () => {
-	document.title = "Home"; // Or your original title
+  document.title = "Home";
 });
+
 document.querySelector(".exit-btn").addEventListener("click", function (e) {
-	e.preventDefault();
-	document.title = "Google"; // Instant title change
-	window.location.replace("https://google.com");
+  e.preventDefault();
+  document.title = "Google";
+  window.location.replace("https://google.com");
+});
+
+document.body.addEventListener("click", (e) => {
+  const card = e.target.closest(".country-card");
+
+  if (card && card.getAttribute("href") === "javascript:void(0);") {
+    e.preventDefault();
+
+    const span = card.querySelector("span");
+    let countryName = "Country";
+
+    if (span && span.childNodes.length > 0) {
+      countryName = span.childNodes[0].textContent.trim();
+    }
+
+    const toast = document.createElement("div");
+    toast.innerText = `${countryName} guide coming soon!`;
+
+    toast.style.position = "fixed";
+    toast.style.bottom = "100px";
+    toast.style.left = "50%";
+    toast.style.transform = "translateX(-50%)";
+    toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
+    toast.style.color = "#ffffff";
+    toast.style.padding = "12px 24px";
+    toast.style.borderRadius = "30px";
+    toast.style.fontSize = "0.9rem";
+    toast.style.fontFamily = "sans-serif";
+    toast.style.zIndex = "99999";
+    toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
+    toast.style.transition = "opacity 0.4s ease";
+    toast.style.pointerEvents = "none";
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+      toast.style.opacity = "0";
+      setTimeout(() => toast.remove(), 400);
+    }, 2000);
+  }
 });

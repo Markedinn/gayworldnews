@@ -60,33 +60,7 @@
 <link rel="preload" href="../index.css?v=5.4" as="style">
 <link rel="stylesheet" href="../index.css?v=5.4" />
 
- <script>
-      window.globalData = window.globalData || {};
 
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
 
     <script src="/index.js" defer></script>
 </head>
@@ -169,7 +143,7 @@
 		<div class="master-grid-container">
 			<header class="main-header">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
-            srcset="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
+            src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_Cambodia.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" 
             alt="Flag of country"
             width="260"
             height="160"
@@ -190,6 +164,11 @@
 					<span class="status-dot-country"></span>
 					<span id="status-text">Color ADVISORY</span>
 				</div>
+                 <div class="hub-disclaimer-card">
+          <p style="margin: 0">
+            <span style="color: #ffffff !important"> Fact Checked: May 26, 2026. Hub Page. </span>
+          </p>
+        </div>
 			</div>
 
 
@@ -197,15 +176,13 @@
 
 
 			<div id="info-display-area" style="grid-column: 1 / -1">
-			<h4 style="font-size: 0.85rem; color: #f8cfcf; margin: -20px auto 10px auto;">
-				ðŸŸ¢ Updated: May 2026
-			</h4>
+
 
 
 	<!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on overall safety -->
 <!-- PROMPT: Status-amber. Cambodia is generally safe and "live and let live," but the lack of formal protection and occasional targeted raids prevent a green status. -->
 <details class="news-accordion status-border status-amber">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Article</h3>
     </summary>
@@ -333,7 +310,7 @@
 
 <!-- PROMPT: Status-red for infrastructure quality. While meds are available, the overall service standard for locals is poor compared to regional neighbors. -->
 <details class="news-accordion status-border status-red">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Medical</h3>
     </summary>
@@ -413,7 +390,7 @@
 
 <!-- PROMPT: Status-green for tourism. Generally very safe and welcoming for foreign travelers. -->
 <details class="news-accordion status-border status-green">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Travel & Fun</h3>
     </summary>
@@ -472,7 +449,7 @@
 
 <!-- PROMPT: Status-amber. Homosexuality is legal but protections are non-existent. Simplified for 2026 overview. -->
 <details class="news-accordion status-border status-amber">
-    <div class="glass-card"></div>
+    
     <summary>
         <h3 class="pod-title">Your Rights & Safety</h3>
     </summary>

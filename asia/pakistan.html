@@ -183,10 +183,6 @@
               This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
             </p>
           </div>
-          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
-            <strong>Last Site Update:</strong>
-            <span id="last-updated-mobile"></span>
-          </p>
         </div>
       </div>
     </div>
@@ -198,7 +194,7 @@
     <div class="master-grid-container">
       <header class="main-header">
         <img
-          srcset="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg"
+          src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flag_of_Pakistan.svg"
           alt="Flag of Pakistan"
           width="260"
           height="160"
@@ -229,7 +225,6 @@
 
       <div id="info-display-area" style="grid-column: 1 / -1">
         <details class="news-accordion status-border status-red">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Article</h3>
           </summary>
@@ -345,7 +340,6 @@
         </details>
 
         <details class="news-accordion status-border status-red">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Sexual Health</h3>
           </summary>
@@ -523,7 +517,6 @@
         </details>
 
         <details class="news-accordion status-border status-red">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Travel & Fun</h3>
           </summary>
@@ -676,7 +669,6 @@
         </details>
 
         <details class="news-accordion status-border status-red">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Need To Know Laws</h3>
           </summary>
@@ -761,24 +753,6 @@
       <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
-
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        // Your code uses "c" in some places and "country" in others. This checks both.
-        const rawC = params.get("c") || params.get("country") || "";
-        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-        const underscoredKey = slug.replace(/[\s-]/g, "_");
-
-        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-          const data = window.globalData[underscoredKey];
-          // If a manual path exists, redirect immediately!
-          if (data.path) {
-            window.location.href = data.path;
-          }
-        }
-      })();
-    </script>
 
     <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
@@ -874,20 +848,6 @@
             toggleMenu();
           }
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
 
       document.querySelectorAll(".news-content-expanded").forEach((container) => {

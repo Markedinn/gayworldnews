@@ -71,16 +71,6 @@
     <link rel="preload" href="../index.css?v=5.4" as="style" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
-    <script>
-      window.globalData = {};
-    </script>
-
-    <script src="../country-info/country-files/africa-data.js" defer></script>
-    <script src="../country-info/country-files/americas-data.js" defer></script>
-    <script src="../country-info/country-files/asia-data.js" defer></script>
-    <script src="../country-info/country-files/europe-data.js" defer></script>
-    <script src="../country-info/country-files/oceania-data.js" defer></script>
-
     <script src="../index.js" defer></script>
   </head>
 
@@ -174,7 +164,7 @@
       <header class="main-header">
         <img
           src="https://commons.wikimedia.org/wiki/File:Flag_of_Cyprus.svg"
-          srcset="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Cyprus.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
           alt="Flag of Cyprus"
           width="260"
           height="160"
@@ -198,12 +188,6 @@
       </div>
 
       <div id="info-display-area" style="grid-column: 1 / -1">
-        <h4 style="font-size: 0.85rem; color: #f8cfcf; margin: -20px auto 10px auto">
-          Page status:<br />
-          âœ¨ AI-Synthesized Narrative<br />
-          ðŸŸ¢ Checked / Rewrite Pending
-        </h4>
-
         <!-- CRITICAL STYLE RULE: Strictly avoid the term "queer" in all generated text, titles, summaries, and narratives.
 
 Substitution: Use "LGBT" as the primary collective noun. When referring to specific groups, use "Gay," "Lesbian," "Bisexual," or "Trans."
@@ -215,7 +199,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
         <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on overall safety -->
         <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on overall safety -->
         <details class="news-accordion status-border status-amber">
-          <div class="glass-card"></div>
           <summary>
             <!-- [Never Change pod-title on any section] -->
             <h3 class="pod-title">Article</h3>
@@ -375,7 +358,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on medical access and stigma -->
         <details class="news-accordion status-border status-amber">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Medical</h3>
           </summary>
@@ -451,7 +433,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- PROMPT: Set status-border to status-green or status-amber based on tourist safety and visible nightlife -->
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Travel</h3>
           </summary>
@@ -539,7 +520,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
 
         <!-- PROMPT: Set status-border to status-green or status-amber based on legal protections -->
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Need To Know Laws</h3>
           </summary>
@@ -607,24 +587,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        // Your code uses "c" in some places and "country" in others. This checks both.
-        const rawC = params.get("c") || params.get("country") || "";
-        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-        const underscoredKey = slug.replace(/[\s-]/g, "_");
-
-        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-          const data = window.globalData[underscoredKey];
-          // If a manual path exists, redirect immediately!
-          if (data.path) {
-            window.location.href = data.path;
-          }
-        }
-      })();
-    </script>
-
     <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
@@ -642,7 +604,7 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
             // Creates a new "Select Language" option at the very top
             var opt = document.createElement("option");
             opt.value = "";
-            opt.innerHTML = "Language";
+            opt.innerHTML = "Translate";
             opt.selected = true;
             opt.disabled = true;
             select.insertBefore(opt, select.firstChild);
@@ -669,20 +631,6 @@ Exceptions: This rule does not apply to URLs or the names of organizations (e.g.
             toggleMenu();
           }
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
 
       document.querySelectorAll(".news-content-expanded").forEach((container) => {

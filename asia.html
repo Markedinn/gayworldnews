@@ -62,34 +62,6 @@
     <link rel="stylesheet" href="../index.css?v=5.4" />
     <link rel="stylesheet" href="../regions.css" />
 
-    <script>
-      window.globalData = window.globalData || {};
-
-      // Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `/country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
-            }
-          });
-        }
-      });
-    </script>
-
     <script src="index.js" defer></script>
   </head>
   <body>
@@ -238,19 +210,13 @@
           >
         </a>
 
-        <a href="europe/cyprus.html" class="country-card green">
-          <span
-            >CYPRUS <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/east_timor.html" class="country-card amber">
+        <a href="javascript:void(0);" class="country-card amber">
           <span
             >East Timor <small><br />Full Article May 2026</small></span
           >
         </a>
 
-        <a href="asia/hong_kong.html" class="country-card green">
+        <a href="javascript:void(0);" class="country-card green">
           <span
             >Hong Kong <small><br />Full Article May 2026</small></span
           >
@@ -280,7 +246,7 @@
           >
         </a>
 
-        <a href="asia/iraq.html" class="country-card red">
+        <a href="javascript:void(0);" class="country-card red">
           <span
             >IRAQ <small><br />Full Article May 2026</small></span
           >
@@ -408,25 +374,25 @@
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >SAUDI ARABIA <small><br />Coming Soon</small></span
+            >SAUDI ARABIA <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card amber">
           <span
-            >SINGAPORE <small><br />Coming Soon</small></span
+            >SINGAPORE <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card amber">
           <span
-            >SOUTH KOREA <small><br />Coming Soon</small></span
+            >SOUTH KOREA <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >SRI LANKA <small><br />Coming Soon</small></span
+            >SRI LANKA <small><br />Arriving by June '26</small></span
           >
         </a>
 
@@ -438,25 +404,25 @@
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >SYRIA <small><br />Coming Soon</small></span
+            >SYRIA <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card green">
           <span
-            >TAIWAN <small><br />Coming Soon</small></span
+            >TAIWAN <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card amber">
           <span
-            >TAJIKISTAN <small><br />Coming Soon</small></span
+            >TAJIKISTAN <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card green">
           <span
-            >THAILAND <small><br />Coming Soon</small></span
+            >THAILAND <small><br />Arriving by June '26</small></span
           >
         </a>
 
@@ -468,25 +434,25 @@
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >TURKMENISTAN <small><br />Coming Soon</small></span
+            >TURKMENISTAN <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >UAE <small><br />Coming Soon</small></span
+            >UAE <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >UZBEKISTAN <small><br />Coming Soon</small></span
+            >UZBEKISTAN <small><br />Arriving by June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card amber">
           <span
-            >VIETNAM <small><br />Coming Soon</small></span
+            >VIETNAM <small><br />Arriving by June '26</small></span
           >
         </a>
 
@@ -498,7 +464,7 @@
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >YEMEN <small><br />Coming Soon</small></span
+            >YEMEN <small><br />Arriving by June '26</small></span
           >
         </a>
       </section>
@@ -540,7 +506,7 @@
           if (select) {
             var opt = document.createElement("option");
             opt.value = "";
-            opt.innerHTML = "Language";
+            opt.innerHTML = "Translate";
             opt.selected = true;
             opt.disabled = true;
             select.insertBefore(opt, select.firstChild);

@@ -69,16 +69,6 @@
     <link rel="preload" href="../index.css?v=5.4" as="style" />
     <link rel="stylesheet" href="../index.css?v=5.4" />
 
-    <script>
-      window.globalData = {};
-    </script>
-
-    <script src="../country-info/country-files/africa-data.js" defer></script>
-    <script src="../country-info/country-files/americas-data.js" defer></script>
-    <script src="../country-info/country-files/asia-data.js" defer></script>
-    <script src="../country-info/country-files/europe-data.js" defer></script>
-    <script src="../country-info/country-files/oceania-data.js" defer></script>
-
     <script src="../index.js" defer></script>
   </head>
 
@@ -171,7 +161,7 @@
     <div class="master-grid-container">
       <header class="main-header">
         <img
-          srcset="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
+          src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Flag_of_Israel.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original"
           alt="Flag of country"
           width="260"
           height="160"
@@ -196,7 +186,6 @@
 
       <div id="info-display-area" style="grid-column: 1 / -1">
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Article</h3>
           </summary>
@@ -350,7 +339,6 @@
         </details>
 
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Medical & Sexual Health</h3>
           </summary>
@@ -430,7 +418,6 @@
 
         <!-- PROMPT: Set status-border to status-green based on the 'Return to Life' energy in Tel Aviv -->
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Travel & Fun</h3>
           </summary>
@@ -613,7 +600,6 @@
 
         <!-- PROMPT: Set status-border to status-green or status-amber based on legal protections -->
         <details class="news-accordion status-border status-green">
-          <div class="glass-card"></div>
           <summary>
             <h3 class="pod-title">Need To Know Laws</h3>
           </summary>
@@ -699,24 +685,6 @@
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script>
-      (function () {
-        const params = new URLSearchParams(window.location.search);
-        // Your code uses "c" in some places and "country" in others. This checks both.
-        const rawC = params.get("c") || params.get("country") || "";
-        const slug = decodeURIComponent(rawC.replace(/\+/g, " ")).trim().toLowerCase();
-        const underscoredKey = slug.replace(/[\s-]/g, "_");
-
-        if (underscoredKey && window.globalData && window.globalData[underscoredKey]) {
-          const data = window.globalData[underscoredKey];
-          // If a manual path exists, redirect immediately!
-          if (data.path) {
-            window.location.href = data.path;
-          }
-        }
-      })();
-    </script>
-
     <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
@@ -761,20 +729,6 @@
             toggleMenu();
           }
         }
-      });
-
-      document.addEventListener("DOMContentLoaded", function () {
-        const now = new Date();
-        const options = { year: "numeric", month: "long", day: "numeric" };
-        const dateString = now.toLocaleDateString("en-US", options);
-
-        // Target the mobile ID
-        const mobileEl = document.getElementById("last-updated-mobile");
-        if (mobileEl) mobileEl.textContent = dateString;
-
-        // Target the desktop ID
-        const desktopEl = document.getElementById("last-updated-desktop");
-        if (desktopEl) desktopEl.textContent = dateString;
       });
 
       document.querySelectorAll(".news-content-expanded").forEach((container) => {
