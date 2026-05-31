@@ -5,14 +5,14 @@ Object.assign(globalData, {
     name: "Afghanistan",
     continent: "asia",
     status: "red",
-    path: "asia/afghanistan.html",
+    path: "asia/afghanistan",
   },
 
   armenia: {
     name: "Armenia",
     continent: "europe",
     status: "amber",
-    path: "asia/armenia.html",
+    path: "asia/armenia",
   },
   azerbaijan: {
     name: "Azerbaijan",
@@ -24,42 +24,42 @@ Object.assign(globalData, {
     name: "Bangladesh",
     continent: "asia",
     status: "red",
-    path: "asia/bangladesh.html",
+    path: "asia/bangladesh",
   },
 
   bahrain: {
     name: "Bahrain",
     continent: "asia",
     status: "amber",
-    path: "asia/bahrain.html",
+    path: "asia/bahrain",
   },
 
   bhutan: {
     name: "Bhutan",
     continent: "asia",
     status: "green",
-    path: "asia/bhutan.html",
+    path: "asia/bhutan",
   },
 
   brunei: {
     name: "Brunei",
     continent: "asia",
     status: "red",
-    path: "asia/brunei.html",
+    path: "asia/brunei",
   },
 
   cambodia: {
     name: "Cambodia",
     continent: "asia",
     status: "amber",
-    path: "asia/cambodia.html",
+    path: "asia/cambodia",
   },
 
   china: {
     name: "China",
     continent: "asia",
     status: "amber",
-    path: "asia/china.html",
+    path: "asia/china",
   },
 
   east_timor: {
@@ -78,181 +78,181 @@ Object.assign(globalData, {
     name: "India",
     continent: "asia",
     status: "amber",
-    path: "asia/india.html",
+    path: "asia/india",
   },
 
   indonesia: {
     name: "Indonesia",
     continent: "asia",
     status: "amber",
-    path: "asia/indonesia.html",
+    path: "asia/indonesia",
   },
 
   sumatra: {
     name: "Sumatra (Special Region)",
     continent: "asia",
     status: "red",
-    path: "asia/indonesia.html",
+    path: "asia/indonesia",
   },
 
   "west papua": {
     name: "West Papua (Special Region)",
     continent: "asia",
     status: "red",
-    path: "asia/indonesia.html",
+    path: "asia/indonesia",
   },
   iran: {
     name: "Iran",
     continent: "asia",
     status: "red",
-    path: "asia/iran.html",
+    path: "asia/iran",
   },
 
   iraq: {
     name: "Iraq",
     continent: "asia",
     status: "red",
-    path: "asia/iraq.html",
+    path: "asia/iraq",
   },
 
   israel: {
     name: "Israel",
     continent: "asia",
     status: "green",
-    path: "asia/israel.html",
+    path: "asia/israel",
   },
 
   japan: {
     name: "Japan",
     continent: "asia",
     status: "green",
-    path: "asia/japan.html",
+    path: "asia/japan",
   },
 
   jordan: {
     name: "Jordan",
     continent: "asia",
     status: "amber",
-    path: "asia/jordan.html",
+    path: "asia/jordan",
   },
 
   kazakhstan: {
     name: "Kazakhstan",
     continent: "asia",
     status: "red",
-    path: "asia/Kazakhstan.html",
+    path: "asia/Kazakhstan",
   },
 
   kuwait: {
     name: "Kuwait",
     continent: "asia",
     status: "red",
-    path: "asia/kuwait.html",
+    path: "asia/kuwait",
   },
 
   kyrgyzstan: {
     name: "Kyrgyzstan",
     continent: "asia",
     status: "red",
-    path: "asia/Kyrgyzstan.html",
+    path: "asia/Kyrgyzstan",
   },
 
   laos: {
     name: "Laos",
     continent: "asia",
     status: "amber",
-    path: "asia/laos.html",
+    path: "asia/laos",
   },
 
   lebanon: {
     name: "Lebanon",
     continent: "asia",
     status: "amber",
-    path: "asia/lebanon.html",
+    path: "asia/lebanon",
   },
 
   malaysia: {
     name: "Malaysia",
     continent: "asia",
     status: "amber",
-    path: "asia/malaysia.html",
+    path: "asia/malaysia",
   },
 
   maldives: {
     name: "Maldives",
     continent: "asia",
     status: "red",
-    path: "asia/maldives.html",
+    path: "asia/maldives",
   },
 
   mongolia: {
     name: "Mongolia",
     continent: "asia",
     status: "green",
-    path: "asia/mongolia.html",
+    path: "asia/mongolia",
   },
 
   myanmar: {
     name: "Myanmar",
     continent: "asia",
     status: "red",
-    path: "asia/myanmar.html",
+    path: "asia/myanmar",
   },
 
   nepal: {
     name: "Nepal",
     continent: "asia",
     status: "green",
-    path: "asia/nepal.html",
+    path: "asia/nepal",
   },
 
   north_korea: {
     name: "North Korea (DPRK)",
     continent: "asia",
     status: "red",
-    path: "asia/north_korea.html",
+    path: "asia/north_korea",
   },
 
   oman: {
     name: "Oman",
     continent: "asia",
     status: "red",
-    path: "asia/oman.html",
+    path: "asia/oman",
   },
 
   macau: {
     name: "Macau",
     continent: "asia",
     status: "amber",
-    path: "asia/macau.html",
+    path: "asia/macau",
   },
 
   pakistan: {
     name: "Pakistan",
     continent: "asia",
     status: "red",
-    path: "asia/pakistan.html",
+    path: "asia/pakistan",
   },
 
   palestinian_territories: {
     name: "Palestinian Territories",
     continent: "asia",
     status: "red",
-    path: "asia/palestine.html",
+    path: "asia/palestine",
   },
 
   philippines: {
     name: "Philippines",
     continent: "asia",
     status: "amber",
-    path: "asia/philippines.html",
+    path: "asia/philippines",
   },
 
   qatar: {
     name: "Qatar",
     continent: "asia",
     status: "red",
-    path: "asia/qatar.html",
+    path: "asia/qatar",
   },
 
   saudi_arabia: {

@@ -113,3 +113,42 @@ document.body.addEventListener("click", (e) => {
     }, 2000);
   }
 });
+
+// ==========================================
+// LOCAL DEV ROUTING SHIM
+// Fixes internal links when testing on VS Code.
+// Automatically disables on the live Hostinger server.
+// ==========================================
+document.addEventListener("DOMContentLoaded", () => {
+  const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:";
+
+  if (isLocal) {
+    document.body.addEventListener("click", (e) => {
+      // Check if a link (or an element inside a link) was clicked
+      const link = e.target.closest("a");
+      if (!link) return;
+
+      const href = link.getAttribute("href");
+
+      // Ignore external links, mailto, anchor jumps, or links that already have .html
+      if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#") || href.endsWith(".html")) {
+        return;
+      }
+
+      // Stop the browser from throwing a file not found error
+      e.preventDefault();
+
+      // THE FIX: Handle the root Home button explicitly
+      if (href === "/") {
+        window.location.href = "/index.html";
+        return;
+      }
+
+      // Clean up the URL and force the physical file to open locally
+      const cleanHref = href.replace(/\/$/, "");
+      window.location.href = cleanHref + ".html";
+    });
+
+    console.log("Local Dev Link Shim active: Routing clean URLs to physical files.");
+  }
+});

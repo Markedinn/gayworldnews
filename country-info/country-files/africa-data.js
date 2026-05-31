@@ -5,7 +5,7 @@ Object.assign(globalData, {
     name: "Algeria",
     continent: "africa",
     status: "red",
-    path: "africa/algeria.html",
+    path: "africa/algeria",
   },
   angola: {
     name: "Angola",
@@ -21,7 +21,7 @@ Object.assign(globalData, {
     name: "Bir Tawil",
     continent: "africa",
     status: "amber",
-    path: "africa/bir_tawil.html",
+    path: "africa/bir_tawil",
   },
   botswana: {
     name: "Botswana",

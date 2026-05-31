@@ -24,12 +24,12 @@
           "name": "Force Pink Tags Desktop",
           "scope": [
             "entity.name.tag",
-            "entity.name.tag.html",
-            "entity.name.tag.script.html",
-            "entity.name.tag.structure.any.html",
-            "entity.name.tag.block.any.html",
-            "entity.name.tag.inline.any.html",
-            "meta.tag.any.html",
+            "entity.name.tag",
+            "entity.name.tag.script",
+            "entity.name.tag.structure.any",
+            "entity.name.tag.block.any",
+            "entity.name.tag.inline.any",
+            "meta.tag.any",
             "punctuation.definition.tag"
           ],
           "settings": {

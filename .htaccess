@@ -10,14 +10,14 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
 # 2. CLEAN URLS REMOVE HTML EXTENSION
-# Redirect /page.html to /page
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP [NC]
-RewriteRule ^([^.]+)\.html$ https://gayworldnews.com/$1 [R=301,L]
+# Redirect /folder/page.html to /folder/page (now supports subdirectories)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+(.*)\.html\ HTTP [NC]
+RewriteRule ^(.*)\.html$ https://gayworldnews.com/$1 [R=301,L]
 
-# Internally forward /page to /page.html
+# Internally forward /folder/page to /folder/page.html
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)$ $1.html [L]
+RewriteRule ^(.*)$ $1.html [L]
 
 # 3. SEO BRUTE FORCE CACHING
 <IfModule mod_expires.c>

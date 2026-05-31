@@ -10,7 +10,7 @@ Object.assign(globalData, {
     name: "Albania",
     continent: "europe",
     status: "amber",
-    path: "europe/albania.html",
+    path: "europe/albania",
   },
   andorra: {
     name: "Andorra",
@@ -96,7 +96,7 @@ Object.assign(globalData, {
     name: "Georgia",
     continent: "europe",
     status: "red",
-    path: "europe/georgia.html",
+    path: "europe/georgia",
   },
   germany: {
     name: "Germany",
@@ -117,13 +117,13 @@ Object.assign(globalData, {
     name: "Greenland",
     continent: "europe",
     status: "green",
-    path: "europe/greenland.html",
+    path: "europe/greenland",
   },
   guernsey: {
     name: "Guernsey",
     continent: "europe",
     status: "green",
-    path: "europe/guernsey.html",
+    path: "europe/guernsey",
   },
   hungary: {
     name: "Hungary",
@@ -144,7 +144,7 @@ Object.assign(globalData, {
     name: "Isle of Man",
     continent: "europe",
     status: "green",
-    path: "europe/isle_of_man.html",
+    path: "europe/isle_of_man",
   },
   italy: {
     name: "Italy",
@@ -245,7 +245,7 @@ Object.assign(globalData, {
     name: "Russia",
     continent: "europe",
     status: "red",
-    path: "europe/russia.html",
+    path: "europe/russia",
   },
   san_marino: {
     name: "San Marino",
@@ -296,7 +296,7 @@ Object.assign(globalData, {
     name: "Ukraine",
     continent: "europe",
     status: "amber",
-    path: "europe/ukraine.html",
+    path: "europe/ukraine",
   },
   united_kingdom: {
     name: "United Kingdom",

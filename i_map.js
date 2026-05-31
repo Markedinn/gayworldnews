@@ -1,6 +1,4 @@
 // 1. GLOBAL SETTINGS & MAP INIT
-// document.body.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
-
 window.addEventListener("load", function () {
   setTimeout(function () {
     const map = L.map("map", {
@@ -19,7 +17,6 @@ window.addEventListener("load", function () {
       document.body.appendChild(hoverBox);
     }
 
-    // This function is what your HTML 'onclick="toggleMenu()"' calls
     function toggleMenu() {
       const sideMenu = document.getElementById("sideMenu");
       if (sideMenu) sideMenu.classList.toggle("open");
@@ -31,23 +28,20 @@ window.addEventListener("load", function () {
       if (content) content.classList.toggle("show");
     }
 
-    // "CLICK OUTSIDE TO CLOSE" LOGIC
     document.addEventListener("click", (e) => {
       const sideMenu = document.getElementById("sideMenu");
-      const menuToggle = document.querySelector(".menu-toggle"); // Using your CLASS here
+      const menuToggle = document.querySelector(".menu-toggle");
       const legendDropdown = document.querySelector(".mobile-legend-dropdown");
 
-      // Close Side Menu if clicking outside of the menu AND the toggle button
       if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle.contains(e.target)) {
         sideMenu.classList.remove("open");
       }
 
-      // Close Legend if clicking outside
       if (legendDropdown && !legendDropdown.contains(e.target)) {
         document.getElementById("mobileLegendContent")?.classList.remove("show");
       }
     });
-    // Add Scale Line (Minimalist)
+
     L.control.scale({ imperial: true, metric: true, position: "bottomleft" }).addTo(map);
 
     const countryNameOverrides = {
@@ -85,7 +79,6 @@ window.addEventListener("load", function () {
         geo.features.forEach((feature) => {
           const rawName = feature.properties.name || feature.properties.ADMIN || "";
 
-          // 1. ANTARCTICA SQUISH
           if (rawName === "Antarctica") {
             feature.geometry.coordinates.forEach((polygon) => {
               polygon[0].forEach((coord) => {
@@ -93,9 +86,7 @@ window.addEventListener("load", function () {
               });
             });
             fixedFeatures.push(feature);
-          }
-          // 2. RUSSIA SURGERY
-          else if (rawName === "Russia" || rawName === "Russian Federation") {
+          } else if (rawName === "Russia" || rawName === "Russian Federation") {
             const mainRussia = JSON.parse(JSON.stringify(feature));
             const peninsulaPart = JSON.parse(JSON.stringify(feature));
             mainRussia.geometry.coordinates = mainRussia.geometry.coordinates.filter((p) => p[0][0][0] > 0);
@@ -104,9 +95,7 @@ window.addEventListener("load", function () {
               .filter((p) => p[0][0][0] < 0)
               .map((p) => p.map((ring) => ring.map((coord) => [coord[0] + 360, coord[1]])));
             if (peninsulaPart.geometry.coordinates.length > 0) fixedFeatures.push(peninsulaPart);
-          }
-          // 3. FRANCE / GUIANA SPLIT & ISLAND CONSOLIDATION
-          else if (rawName === "France" && feature.geometry.type === "MultiPolygon") {
+          } else if (rawName === "France" && feature.geometry.type === "MultiPolygon") {
             const mainlandParts = [];
             feature.geometry.coordinates.forEach((polygonCoords) => {
               const lon = polygonCoords[0][0][0];
@@ -118,15 +107,13 @@ window.addEventListener("load", function () {
                 guianaPart.properties.ADMIN = "French Guiana";
                 fixedFeatures.push(guianaPart);
               } else {
-                mainlandParts.push(polygonCoords);
+                maintext = mainlandParts.push(polygonCoords);
               }
             });
             const cleanFrance = JSON.parse(JSON.stringify(feature));
             cleanFrance.geometry.coordinates = mainlandParts;
             fixedFeatures.push(cleanFrance);
-          }
-          // 4. EVERY OTHER COUNTRY (This is the part that was missing!)
-          else {
+          } else {
             fixedFeatures.push(feature);
           }
         });
@@ -135,28 +122,19 @@ window.addEventListener("load", function () {
 
         // 3. DRAW MAP & INTERACTIONS
         L.geoJSON(geo, {
-          // --- UPDATED BULLETPROOF FILTER ---
           filter: (f) => {
             const p = f.properties;
-            // Check for name in any case, and the ISO code 'ATA'
             const name = (p.name || p.NAME || p.ADMIN || p.admin || "").toLowerCase().trim();
             const id = (p.ISO_A3 || p.ADM0_A3 || "").toUpperCase();
-
-            // If it matches Antarctica or the ATA code, don't draw it
             return name !== "antarctica" && id !== "ATA";
           },
 
           style: (f) => {
             const props = f.properties;
             const name = props.name || props.ADMIN || "Unknown";
-
-            // 1. Try to find an ID (Checking common GeoJSON property names)
             const id = props.ISO_A3 || props["ISO3166-1-Alpha-3"] || props.ADM0_A3 || "";
-
-            // 2. Determine the key: Try ID first, then fallback to Clean Name
             let key = id ? id.toLowerCase() : getCleanKey(name);
 
-            // 3. Check if your data actually has this ID. If not, try the Name key.
             if (window.globalData && !window.globalData[key]) {
               key = getCleanKey(name);
             }
@@ -164,7 +142,7 @@ window.addEventListener("load", function () {
             const country = window.globalData ? window.globalData[key] : null;
             let status = country ? country.status.toLowerCase() : "gray";
 
-            let color = "#cbd5e1"; // Default Gray
+            let color = "#cbd5e1";
             if (status === "green") color = "#2ecc71";
             else if (status === "amber") color = "#ffeb3b";
             else if (status === "red" || status === "danger") color = "#c0392b";
@@ -182,29 +160,20 @@ window.addEventListener("load", function () {
           onEachFeature: (feature, layer) => {
             const props = feature.properties;
             const name = props.name || props.ADMIN || "Unknown";
-
             const id = props.ISO_A3 || props["ISO3166-1-Alpha-3"] || props.ADM0_A3 || "";
             let key = id ? id.toLowerCase() : getCleanKey(name);
             if (window.globalData && !window.globalData[key]) {
               key = getCleanKey(name);
             }
 
-            // 1. CALCULATE SIZE (Safely)
-            // We look at the "Bounding Box" coordinates provided by the GeoJSON
             let sizeClass = "size-tiny";
             if (feature.geometry && feature.geometry.coordinates) {
-              // A very simple way to guess size without crashing:
-              // We just count how many coordinate points the country has!
               const complexity = JSON.stringify(feature.geometry.coordinates).length;
-
-              if (complexity > 50000)
-                sizeClass = "size-giant"; // Russia, Canada, USA
-              else if (complexity > 10000)
-                sizeClass = "size-large"; // France, Spain
-              else if (complexity > 2000) sizeClass = "size-medium"; // UK, Chile
+              if (complexity > 50000) sizeClass = "size-giant";
+              else if (complexity > 10000) sizeClass = "size-large";
+              else if (complexity > 2000) sizeClass = "size-medium";
             }
 
-            // ... (Your mouseover/click code stays here)
             layer.on({
               mouseover: (e) => {
                 const cur = e.target;
@@ -213,9 +182,7 @@ window.addEventListener("load", function () {
 
                 if (typeof worldTerritories !== "undefined" && worldTerritories[name]) {
                   const match = worldTerritories[name].find((t) => mousePos.lat >= t.lat[0] && mousePos.lat <= t.lat[1] && mousePos.lng >= t.lng[0] && mousePos.lng <= t.lng[1]);
-                  if (match) {
-                    displayName = match.name; // This removes "Indonesia" and the brackets!
-                  }
+                  if (match) displayName = match.name;
                 }
 
                 if (displayName === name) {
@@ -230,7 +197,6 @@ window.addEventListener("load", function () {
                 hoverBox.innerText = displayName;
                 hoverBox.style.display = "block";
 
-                // Position for touch immediately
                 if (e.originalEvent && e.originalEvent.touches) {
                   const touch = e.originalEvent.touches[0];
                   hoverBox.style.left = touch.clientX + "px";
@@ -244,8 +210,6 @@ window.addEventListener("load", function () {
                 }
               },
               mouseout: (e) => {
-                // Only hide on mouseout if it's NOT a touch device
-                // This keeps the name visible on tablets after tapping
                 if (e.originalEvent && e.originalEvent.pointerType !== "touch" && !e.originalEvent.touches) {
                   const geojsonLayer = e.target._eventParents;
                   Object.values(geojsonLayer)[0].resetStyle(e.target);
@@ -253,7 +217,7 @@ window.addEventListener("load", function () {
                   hoverBox.style.display = "none";
                 }
               },
-              // If it's a mouse click, or the second tap on mobile/tablet, navigate
+              // SMART ENVIRONMENTAL ROUTING BLOCK
               click: (e) => {
                 const isTouch = e.originalEvent.pointerType === "touch" || e.originalEvent.touches;
 
@@ -265,15 +229,23 @@ window.addEventListener("load", function () {
 
                 const countryData = window.globalData ? window.globalData[key] : null;
 
-                // This is the specific fix for the "Folder Mess"
                 if (countryData?.path) {
-                  window.location.href = "/" + countryData.path;
+                  // Detect local live-server simulation vs live deployment
+                  const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:";
+
+                  const cleanPath = countryData.path.replace(/^\//, "");
+
+                  if (isLocal) {
+                    // Force file system compatibility for previewing local files
+                    window.location.href = "/" + cleanPath + ".html";
+                  } else {
+                    // Live asset production delivery without extensions
+                    window.location.href = "/" + cleanPath;
+                  }
                 } else {
-                  // 1. Create a temporary text notification box
                   const toast = document.createElement("div");
                   toast.innerText = `${countryData?.name || name} guide coming soon!`;
 
-                  // 2. Style it inline so it looks like a sleek, dark floating capsule
                   toast.style.position = "fixed";
                   toast.style.bottom = "100px";
                   toast.style.left = "50%";
@@ -284,42 +256,38 @@ window.addEventListener("load", function () {
                   toast.style.borderRadius = "30px";
                   toast.style.fontSize = "0.9rem";
                   toast.style.fontFamily = "sans-serif";
-                  toast.style.zIndex = "99999"; // Ensures it sits perfectly on top of the Leaflet map
+                  toast.style.zIndex = "99999";
                   toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
                   toast.style.transition = "opacity 0.4s ease";
-                  toast.style.pointerEvents = "none"; // Stop it from blocking any map mouse movements
+                  toast.style.pointerEvents = "none";
 
-                  // 3. Inject it onto the screen
                   document.body.appendChild(toast);
 
-                  // 4. Keep it visible for 2 seconds, then smoothly fade out and destroy it
                   setTimeout(() => {
                     toast.style.opacity = "0";
-                    setTimeout(() => toast.remove(), 400); // Completely erases it from the DOM
+                    setTimeout(() => toast.remove(), 400);
                   }, 2000);
 
                   console.log(`No active guide path for ${key}. Map tier display only.`);
                 }
               },
-            }); // Closes layer.on({
-          }, // Closes onEachFeature: (feature, layer) => {
-        }).addTo(map); // Closes L.geoJSON(geo, {
+            });
+          },
+        }).addTo(map);
       })
       .catch((err) => console.error("MAP ERROR:", err));
   }, 500);
 });
 
 // 5. UI TOGGLES & EVENT LISTENERS
-
-// Toggle the Side Menu
+// (Keep remaining toggles and date event updates exactly as they are)
 function toggleMenu() {
   const sideMenu = document.getElementById("sideMenu");
   if (sideMenu) sideMenu.classList.toggle("open");
 }
 
-// Toggle the Mobile Legend (Consolidated)
 function toggleMobileLegend(event) {
-  if (event) event.stopPropagation(); // Prevents the click from immediately reaching document
+  if (event) event.stopPropagation();
   const content = document.getElementById("mobileLegendContent");
   if (content) content.classList.toggle("show");
 }
@@ -327,24 +295,18 @@ function toggleMobileLegend(event) {
 document.addEventListener("click", (e) => {
   const sideMenu = document.getElementById("sideMenu");
   const menuToggle = document.querySelector(".menu-toggle");
-
-  // Select the whole legend container (button + content)
   const legendContainer = document.querySelector(".mobile-legend-dropdown");
   const legendContent = document.getElementById("mobileLegendContent");
 
-  // 1. Close Side Menu: if open AND click is outside menu AND click is not the toggle
   if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
     sideMenu.classList.remove("open");
   }
 
-  // 2. Close Legend: if show AND click is outside the entire legend container
-  // This ensures clicking the "up" content or the button doesn't accidentally trigger a close
   if (legendContent?.classList.contains("show") && legendContainer && !legendContainer.contains(e.target)) {
     legendContent.classList.remove("show");
   }
 });
 
-// Update Dates
 document.addEventListener("DOMContentLoaded", function () {
   const now = new Date();
   const options = { year: "numeric", month: "long", day: "numeric" };
