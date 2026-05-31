@@ -1492,6 +1492,61 @@ body::before {
   margin: 0;
 }
 
+/* pump up the boldness of your section titles */
+li span {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Legal Section Dashboard Grid */
+.legal-dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.legal-data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px 15px;
+  border-radius: 6px;
+}
+
+.legal-data-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.legal-data-verdict {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Color Coding Track Borders */
+.track-blue {
+  border-left: 3px solid #0894f1;
+}
+.track-amber {
+  border-left: 3px solid #ffbc00;
+}
+.track-green {
+  border-left: 3px solid #2ecc71;
+}
+.track-pink {
+  border-left: 3px solid #ff00ff;
+}
+.track-red {
+  border-left: 3px solid #ff4d4d;
+}
+
 /* Mobile Tweak for the Samsung S23 Ultra display */
 @media (max-width: 768px) {
   .alphabet-brief-card {
