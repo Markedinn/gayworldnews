@@ -140,7 +140,7 @@ Object.assign(globalData, {
     name: "Kazakhstan",
     continent: "asia",
     status: "red",
-    path: "asia/Kazakhstan",
+    path: "asia/kazakhstan",
   },
 
   kuwait: {
@@ -154,7 +154,7 @@ Object.assign(globalData, {
     name: "Kyrgyzstan",
     continent: "asia",
     status: "red",
-    path: "asia/Kyrgyzstan",
+    path: "asia/kyrgyzstan",
   },
 
   laos: {
