@@ -10,33 +10,33 @@
 1. For multi-word country names, you MUST use underscores (e.g., north_korea, saudi_arabia). 
 2. NEVER change non-country path elements, filenames, or assets to underscores. Standard site assets and structural paths must preserve their original format (e.g., KEEP dashes in paths like /images/gwn-logo.jpg or /assets/main-style.css). -->
 
-    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/asia/indonesia" />
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}" />
 
-    <title>Indonesia Gay Guide to Travel, Health, Safety & Essential Laws 2026</title>
+    <title>{COUNTRY_NAME} Gay Guide to Travel, Health, Safety & Essential Laws 2026</title>
 
     <meta
       id="meta-desc"
       name="description"
-      content="2026 Indonesia gay travel and health tracker. Essential laws to know before you visit include the new 2026 Indonesian Penal Code. Jakarta safety rating is amber."
+      content="2026 {COUNTRY_NAME} gay travel and health tracker. Essential laws to know before you visit include the core regional updates. {CAPITAL_CITY} safety rating is {STATUS_COLOR}."
     />
 
     <meta
       name="keywords"
-      content="Indonesia Gay guide to health, laws before traveling to Indonesia, Indonesia gay safety 2026, Jakarta gay travel, MSM sexual health, 2026 Indonesian Penal Code"
+      content="{COUNTRY_NAME} Gay guide to health, laws before traveling to {COUNTRY_NAME}, {COUNTRY_NAME} gay safety 2026, {CAPITAL_CITY} gay travel, MSM sexual health, key legal mandates"
     />
 
     <meta property="og:type" content="article" />
-    <meta property="og:url" id="og-url" content="https://gayworldnews.com/asia/indonesia" />
-    <meta property="og:title" id="og-title" content="2026 Guide to Gay Travel, Health, Safety & Laws before you visit Indonesia" />
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}" />
+    <meta property="og:title" id="og-title" content="2026 Guide to Gay Travel, Health, Safety & Laws before you visit {COUNTRY_NAME}" />
 
-    <meta property="og:description" id="og-desc" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting Indonesia." />
+    <meta property="og:description" id="og-desc" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting {COUNTRY_NAME}." />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@GayWorldNewsOrg" />
-    <meta name="twitter:title" content="2026 Indonesia Gay Travel, Safety & Health Hub" />
-    <meta name="twitter:description" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting Indonesia." />
+    <meta name="twitter:title" content="2026 {COUNTRY_NAME} Gay Travel, Safety & Health Hub" />
+    <meta name="twitter:description" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting {COUNTRY_NAME}." />
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
     <script type="application/ld+json">
@@ -46,10 +46,10 @@
           "@type": "NewsArticle",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://gayworldnews.com/asia/indonesia"
+            "@id": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
           },
-          "headline": "Indonesia Gay Travel, Health & Legal Safety Report 2026",
-          "description": "Essential 2026 guide for gay men traveling to Indonesia. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
+          "headline": "{COUNTRY_NAME} Gay Travel, Health & Legal Safety Report 2026",
+          "description": "Essential 2026 guide for gay men traveling to {COUNTRY_NAME}. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
           "image": "https://gayworldnews.com/images/gwn-logo.jpg",
           "datePublished": "2026-06-04",
           "dateModified": "2026-06-04",
@@ -82,14 +82,14 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Asia",
-              "item": "https://gayworldnews.com/asi"
+              "name": "{REGION_NAME}",
+              "item": "https://gayworldnews.com/{3_LETTER_REGION_ABBREVIATION}"
             },
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Indonesia",
-              "item": "https://gayworldnews.com/asia/indonesia"
+              "name": "{COUNTRY_NAME}",
+              "item": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
             }
           ]
         },
@@ -106,8 +106,8 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "Indonesia",
-              "item": "https://gayworldnews.com/asia/indonesia"
+              "name": "{COUNTRY_NAME}",
+              "item": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
             }
           ]
         }
@@ -244,7 +244,6 @@
       </div>
 
       <div id="info-display-area" style="grid-column: 1 / -1">
-        ```html
         <!-- ======================================================================= -->
         <!-- TEMPLATE 1: THE SHORT BRIEF (THE SNAPSHOT)                              -->
         <!-- Use for: High-turnover news, minor countries, or places without major   -->
@@ -525,6 +524,8 @@
             </div>
           </div>
         </details>
+
+        <!-- CRITICAL OPSEC GUARDRAIL: Actively verify that this clinic or digital link has not been raided, compromised, or turned into a state entrapment pipeline before deploying live. -->
 
         <details class="news-accordion status-border <!-- AI FLAG: Insert 'status-green', 'status-amber', or 'status-red' based on overall sexual health security -->">
           <summary>

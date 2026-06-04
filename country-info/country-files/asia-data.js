@@ -84,7 +84,7 @@ Object.assign(globalData, {
   indonesia: {
     name: "Indonesia",
     continent: "asia",
-    status: "amber",
+    status: "red",
     path: "asia/indonesia",
   },
 
@@ -259,36 +259,42 @@ Object.assign(globalData, {
     name: "Saudi Arabia",
     continent: "asia",
     status: "red",
+    path: "asia/saudi_arabia",
   },
 
   singapore: {
     name: "Singapore",
     continent: "asia",
     status: "amber",
+    path: "asia/singapore",
   },
 
   south_korea: {
     name: "South Korea",
     continent: "asia",
     status: "amber",
+    path: "asia/south_korea",
   },
 
   sri_lanka: {
     name: "Sri Lanka",
     continent: "asia",
     status: "amber",
+    path: "asia/sri_lanka",
   },
 
   syria: {
     name: "Syria",
     continent: "asia",
     status: "red",
+    path: "asia/syria",
   },
 
   taiwan: {
     name: "Taiwan",
     continent: "asia",
     status: "green",
+    path: "asia/taiwan",
   },
 
   tajikistan: {
