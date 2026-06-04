@@ -92,7 +92,7 @@ document.body.addEventListener("click", (e) => {
 
     toast.style.position = "fixed";
     toast.style.bottom = "100px";
-    toast.style.left = "50%";
+    toast.style.left = "50%;";
     toast.style.transform = "translateX(-50%)";
     toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
     toast.style.color = "#ffffff";
@@ -115,7 +115,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 // ==========================================
-// LOCAL DEV ROUTING SHIM
+// LOCAL DEV ROUTING SHIM (ANCHOR SMART V2)
 // Fixes internal links when testing on VS Code.
 // Automatically disables on the live Hostinger server.
 // ==========================================
@@ -124,31 +124,52 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (isLocal) {
     document.body.addEventListener("click", (e) => {
-      // Check if a link (or an element inside a link) was clicked
       const link = e.target.closest("a");
       if (!link) return;
 
       const href = link.getAttribute("href");
 
-      // Ignore external links, mailto, anchor jumps, or links that already have .html
-      if (!href || href.startsWith("http") || href.startsWith("mailto:") || href.startsWith("#") || href.endsWith(".html")) {
+      // Skip empty links, external sites, and mail protocols
+      if (!href || href.startsWith("http") || href.startsWith("mailto:")) return;
+
+      // SCENARIO 1: Link has a hash anchor inside it (e.g., /about#verify-clinics)
+      if (href.includes("#")) {
+        const [path, hash] = href.split("#");
+
+        // If it's a pure same-page jump link like href="#verify-clinics", do nothing
+        if (!path) return;
+
+        e.preventDefault();
+
+        let cleanPath = path;
+        if (cleanPath === "/") {
+          cleanPath = "/index.html";
+        } else {
+          cleanPath = cleanPath.replace(/\/$/, "");
+          if (!cleanPath.endsWith(".html")) {
+            cleanPath += ".html";
+          }
+        }
+
+        // Stitch the path and anchor back together perfectly
+        window.location.href = cleanPath + "#" + hash;
         return;
       }
 
-      // Stop the browser from throwing a file not found error
+      // SCENARIO 2: Link is a standard internal page path with no hash tag
+      if (href.endsWith(".html")) return;
+
       e.preventDefault();
 
-      // THE FIX: Handle the root Home button explicitly
       if (href === "/") {
         window.location.href = "/index.html";
         return;
       }
 
-      // Clean up the URL and force the physical file to open locally
       const cleanHref = href.replace(/\/$/, "");
       window.location.href = cleanHref + ".html";
     });
 
-    console.log("Local Dev Link Shim active: Routing clean URLs to physical files.");
+    console.log("Local Dev Link Shim active: Routing clean URLs to physical files smoothly.");
   }
 });

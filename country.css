@@ -828,6 +828,16 @@ body::before {
   margin-bottom: 0; /* No extra space at the bottom of the card */
 }
 
+/* THE DESCRIPTION - Clean Black */
+.resource-container .resource-desc {
+  display: block !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important; /* Forces a medium, highly readable weight */
+  color: #000000 !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0;
+}
+
 .resource-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
@@ -1333,7 +1343,6 @@ body::before {
   margin: 35px 0;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Forces total horizontal centering */
 }
 
 /* Specificity Nuke: Target the anchor and ALL its browser states inside the container */
@@ -1347,6 +1356,7 @@ body::before {
   width: 100%;
   transition: opacity 0.3s ease;
   color: inherit; /* Prevents default browser blue/purple link color forcing */
+  text-align: left !important;
 }
 
 .article-image-container a:hover {

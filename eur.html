@@ -3,58 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="English" />
 
     <title>Gay World News | Europe 2026 Guide</title>
 
     <!-- SEO Metadata -->
     <meta
+      id="meta-desc"
       name="description"
-      content="The 2026 Europe guide for gay travelers. Verified legal status, real-time safety advisories, and health directories for gay men and MSM across the continent."
+      content="The 2026 Europe guide for gay travelers. Verified legal status, safety advisories, and health directories for gay men and MSM across the continent."
     />
     <meta name="keywords" content="gay travel Europe, MSM health directory, gay legal status Europe, Gay World News, gay safety map" />
     <meta name="author" content="Gay World News" />
-    <link rel="canonical" href="https://gayworldnews.com/europe" />
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/eur" />
 
     <!-- Open Graph (Facebook / WhatsApp) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gayworldnews.com/europe" />
-    <meta property="og:title" content="Gay World News | Europe 2026 Guide" />
+    <meta property="og:url" id="og-url" href="https://gayworldnews.com/eur" />
+    <meta property="og:title" id="og-title" content="Gay World News | Europe 2026 Guide" />
     <meta
       property="og:description"
-      content="Essential legal, health, and security data for gay men across Europe. Navigate real-time risks, local laws, and verified travel directories."
+      id="og-desc"
+      content="Essential legal, health, and security data for gay men across Europe. Navigate regional risks, local laws, and verified travel directories."
     />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
     <meta property="og:image:alt" content="Gay World News interactive travel map highlighting global rights and security for men." />
 
     <!-- X (Twitter) Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://gayworldnews.com/europe" />
+    <meta name="twitter:url" content="https://gayworldnews.com/eur" />
     <meta name="twitter:title" content="Gay World News | Europe 2026 Guide" />
     <meta
       name="twitter:description"
-      content="Essential legal, health, and security data for gay men across Europe. Navigate real-time risks, local laws, and verified travel directories."
+      content="Essential legal, health, and security data for gay men across Europe. Navigate regional risks, local laws, and verified travel directories."
     />
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
-    <!-- Apple Touch Icon Consistency -->
-    <link rel="apple-touch-icon" href="images/favicon.webp" />
-
-    <link rel="icon" type="image/webp" href="images/favicon.webp" />
-
-    <link rel="stylesheet" href="../index.css?v=5.4" />
-    <link rel="stylesheet" href="../regions.css" />
-
+    <!-- Structured Data for Regional Index Page -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://gayworldnews.com/eur"
+        },
         "headline": "Gay World News | Europe 2026 Guide",
-        "description": "Essential legal, health, and security data for gay men across Europe. Navigate real-time risks, local laws, and verified travel directories.",
-        "url": "https://gayworldnews.com/europe",
+        "description": "Essential legal, health, and security data for gay men across Europe. Navigate regional risks, local laws, and verified travel directories.",
+        "url": "https://gayworldnews.com/eur",
         "image": "https://gayworldnews.com/images/gwn-logo.jpg",
+        "datePublished": "2026-05-18",
+        "dateModified": "2026-06-03",
         "publisher": {
           "@type": "Organization",
           "name": "Gay World News",
+          "url": "https://gayworldnews.com/",
           "logo": {
             "@type": "ImageObject",
             "url": "https://gayworldnews.com/images/gwn-logo.jpg"
@@ -63,12 +66,18 @@
       }
     </script>
 
-    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+    <!-- Root-Relative Core Assets & Icon Standardization -->
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+    <link rel="apple-touch-icon" href="/images/favicon.webp" />
 
-    <link rel="stylesheet" href="../index.css?v=5.4" />
-    <link rel="stylesheet" href="../regions.css" />
+    <!-- PERFORMANCE CORE: Version 6.0 preloader and stylesheet pairing -->
+    <link rel="preload" href="/regions.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/regions.css?v=6.0" />
 
-    <script src="index.js" defer></script>
+    <link rel="preload" href="/index.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/index.css?v=6.0" />
+
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
@@ -89,14 +98,13 @@
             <div id="searchResults" class="search-results-floating"></div>
           </div>
           <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
-
-          <a href="../afr">AFRICA</a>
-          <a href="../ame">AMERICAS</a>
-          <a href="../asi">ASIA</a>
-          <a href="../eur">EUROPE</a>
-          <a href="../oce">OCEANIA</a>
-          <a href="../about">ABOUT</a>
-          <a href="../contact">CONTACT</a>
+          <a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
         </nav>
         <div class="social-pill-container">
           <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
@@ -489,7 +497,6 @@
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",

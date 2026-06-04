@@ -92,14 +92,14 @@ Object.assign(globalData, {
     name: "Sumatra (Special Region)",
     continent: "asia",
     status: "red",
-    path: "asia/indonesia",
+    path: "asia/indonesia#sumatra",
   },
 
   "west papua": {
     name: "West Papua (Special Region)",
     continent: "asia",
     status: "red",
-    path: "asia/indonesia",
+    path: "asia/indonesia#west-papua",
   },
   iran: {
     name: "Iran",

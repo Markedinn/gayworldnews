@@ -3,24 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="English" />
 
     <title>Gay World News | Asia 2026 Guide</title>
 
     <!-- SEO Metadata -->
     <meta
+      id="meta-desc"
       name="description"
-      content="The 2026 Asia guide for gay travelers. Verified legal status, real-time safety advisories, and health directories for gay men and MSM across the continent."
+      content="The 2026 Asia guide for gay travelers. Real-time threat vectors, unvarnished legal status trackers, and health access maps for gay men and MSM."
     />
     <meta name="keywords" content="gay travel Asia, MSM health directory, gay legal status Asia, Gay World News, gay safety map" />
     <meta name="author" content="Gay World News" />
-    <link rel="canonical" href="https://gayworldnews.com/asia" />
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/asi" />
 
     <!-- Open Graph (Facebook / WhatsApp) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://gayworldnews.com/asia" />
-    <meta property="og:title" content="Gay World News | Asia 2026 Guide" />
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/asi" />
+    <meta property="og:title" id="og-title" content="Gay World News | Asia 2026 Guide" />
     <meta
       property="og:description"
+      id="og-desc"
       content="Essential legal, health, and security data for gay men across Asia. Navigate real-time risks, local laws, and verified travel directories."
     />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
@@ -28,24 +31,33 @@
 
     <!-- X (Twitter) Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://gayworldnews.com/asia" />
+    <meta name="twitter:url" content="https://gayworldnews.com/asi" />
     <meta name="twitter:title" content="Gay World News | Asia 2026 Guide" />
     <meta
       name="twitter:description"
       content="Essential legal, health, and security data for gay men across Asia. Navigate real-time risks, local laws, and verified travel directories."
     />
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+
+    <!-- Structured Data for Regional Index Page -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://gayworldnews.com/asi"
+        },
         "headline": "Gay World News | Asia 2026 Guide",
         "description": "Essential legal, health, and security data for gay men across Asia. Navigate real-time risks, local laws, and verified travel directories.",
-        "url": "https://gayworldnews.com/asia",
+        "url": "https://gayworldnews.com/asi",
         "image": "https://gayworldnews.com/images/gwn-logo.jpg",
+        "datePublished": "2026-05-18",
+        "dateModified": "2026-06-03",
         "publisher": {
           "@type": "Organization",
           "name": "Gay World News",
+          "url": "https://gayworldnews.com/",
           "logo": {
             "@type": "ImageObject",
             "url": "https://gayworldnews.com/images/gwn-logo.jpg"
@@ -54,15 +66,18 @@
       }
     </script>
 
-    <!-- Apple Touch Icon Consistency -->
-    <link rel="apple-touch-icon" href="images/favicon.webp" />
+    <!-- Root-Relative Core Assets & Icon Standardization -->
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+    <link rel="apple-touch-icon" href="/images/favicon.webp" />
 
-    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+    <!-- PERFORMANCE CORE: Version 6.0 preloader and stylesheet pairing -->
+    <link rel="preload" href="/regions.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/regions.css?v=6.0" />
 
-    <link rel="stylesheet" href="../index.css?v=5.4" />
-    <link rel="stylesheet" href="../regions.css" />
+    <link rel="preload" href="/index.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/index.css?v=6.0" />
 
-    <script src="index.js" defer></script>
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
@@ -83,14 +98,13 @@
             <div id="searchResults" class="search-results-floating"></div>
           </div>
           <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
-
-          <a href="../afr">AFRICA</a>
-          <a href="../ame">AMERICAS</a>
-          <a href="../asi">ASIA</a>
-          <a href="../eur">EUROPE</a>
-          <a href="../oce">OCEANIA</a>
-          <a href="../about">ABOUT</a>
-          <a href="../contact">CONTACT</a>
+          <a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
         </nav>
         <div class="social-pill-container">
           <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
@@ -152,319 +166,309 @@
     <div class="master-grid-container">
       <header class="main-header">
         <h1 class="main-title">Asia</h1>
-        <p style="display: none"><span id="last-updated-desktop"></span></p>
       </header>
 
       <section class="bento-grid" id="countryGrid">
         <a href="asia/afghanistan" class="country-card red">
           <span
-            >AFGHANISTAN <small><br />Full Article May 2026</small></span
+            >AFGHANISTAN <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/armenia" class="country-card amber">
           <span
-            >ARMENIA <small><br />Full Article May 2026</small></span
+            >ARMENIA <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="europe/azerbaijan" class="country-card amber">
           <span
-            >AZERBAIJAN <small><br />Full Article May 2026</small></span
+            >AZERBAIJAN <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/bahrain" class="country-card red">
           <span
-            >BAHRAIN <small><br />Full Article May 2026</small></span
+            >BAHRAIN <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/bangladesh" class="country-card red">
           <span
-            >BANGLADESH <small><br />Full Article May 2026</small></span
+            >BANGLADESH <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/bhutan" class="country-card green">
           <span
-            >BHUTAN <small><br />Full Article May 2026</small></span
+            >BHUTAN <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/brunei" class="country-card red">
           <span
-            >BRUNEI <small><br />Full Article May 2026</small></span
+            >BRUNEI <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/cambodia" class="country-card amber">
           <span
-            >CAMBODIA <small><br />Full Article May 2026</small></span
+            >CAMBODIA <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/china" class="country-card amber">
           <span
-            >CHINA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card amber">
-          <span
-            >East Timor <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card green">
-          <span
-            >Hong Kong <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="europe/georgia" class="country-card red">
-          <span
-            >GEORGIA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/india" class="country-card amber">
-          <span
-            >INDIA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/indonesia" class="country-card amber">
-          <span
-            >INDONESIA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/iran" class="country-card red">
-          <span
-            >IRAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card red">
-          <span
-            >IRAQ <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/israel" class="country-card green">
-          <span
-            >ISRAEL <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/japan" class="country-card amber">
-          <span
-            >JAPAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/jordan" class="country-card amber">
-          <span
-            >JORDAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/Kazakhstan" class="country-card red">
-          <span
-            >KAZAKHSTAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/kuwait" class="country-card red">
-          <span
-            >KUWAIT <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/Kyrgyzstan" class="country-card amber">
-          <span
-            >KYRGYZSTAN <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/laos" class="country-card amber">
-          <span
-            >LAOS <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/lebanon" class="country-card red">
-          <span
-            >LEBANON <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/macau" class="country-card red">
-          <span
-            >MACAU <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/malaysia" class="country-card red">
-          <span
-            >MALAYSIA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/maldives" class="country-card red">
-          <span
-            >MALDIVES <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/mongolia" class="country-card green">
-          <span
-            >MONGOLIA <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/myanmar" class="country-card red">
-          <span
-            >MYANMAR <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/nepal" class="country-card green">
-          <span
-            >NEPAL <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/north_korea" class="country-card red">
-          <span
-            >NORTH KOREA <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/oman" class="country-card red">
-          <span
-            >OMAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/pakistan" class="country-card red">
-          <span
-            >PAKISTAN <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/palestine" class="country-card red">
-          <span
-            >PALESTINE <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/philippines" class="country-card amber">
-          <span
-            >PHILIPPINES <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="asia/qatar" class="country-card red">
-          <span
-            >QATAR <small><br />Updated May 2026</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card red">
-          <span
-            >SAUDI ARABIA <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card amber">
-          <span
-            >SINGAPORE <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card amber">
-          <span
-            >SOUTH KOREA <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card red">
-          <span
-            >SRI LANKA <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="asia/indonesia" class="country-card red">
-          <span
-            >Sumatra (Indonesian Territory) <small><br />Full Article May 2026</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card red">
-          <span
-            >SYRIA <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card green">
-          <span
-            >TAIWAN <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card amber">
-          <span
-            >TAJIKISTAN <small><br />Arriving by June '26</small></span
-          >
-        </a>
-
-        <a href="javascript:void(0);" class="country-card green">
-          <span
-            >THAILAND <small><br />Arriving by June '26</small></span
+            >CHINA <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="asia/east_timor" class="country-card amber">
           <span
-            >TIMOR-LESTE <small><br />Full Article May 2026</small></span
+            >East Timor <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/hong_kong.html" class="country-card green">
+          <span
+            >Hong Kong <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="europe/georgia" class="country-card red">
+          <span
+            >GEORGIA <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/india" class="country-card amber">
+          <span
+            >INDIA <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/indonesia" class="country-card amber">
+          <span
+            >INDONESIA <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/iran" class="country-card red">
+          <span
+            >IRAN <small><br />Focus | May 2026</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >TURKMENISTAN <small><br />Arriving by June '26</small></span
+            >IRAQ <small><br />Focus | May 2026</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a href="asia/israel" class="country-card green">
           <span
-            >UAE <small><br />Arriving by June '26</small></span
+            >ISRAEL <small><br />Focus | May 2026</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a href="asia/japan" class="country-card amber">
           <span
-            >UZBEKISTAN <small><br />Arriving by June '26</small></span
+            >JAPAN <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/jordan" class="country-card amber">
+          <span
+            >JORDAN <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/kazakhstan" class="country-card red">
+          <span
+            >KAZAKHSTAN <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/kuwait" class="country-card red">
+          <span
+            >KUWAIT <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/kyrgyzstan" class="country-card amber">
+          <span
+            >KYRGYZSTAN <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/laos" class="country-card amber">
+          <span
+            >LAOS <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/lebanon" class="country-card red">
+          <span
+            >LEBANON <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/macau" class="country-card red">
+          <span
+            >MACAU <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/malaysia" class="country-card red">
+          <span
+            >MALAYSIA <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/maldives" class="country-card red">
+          <span
+            >MALDIVES <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/mongolia" class="country-card green">
+          <span
+            >MONGOLIA <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/myanmar" class="country-card red">
+          <span
+            >MYANMAR <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/nepal" class="country-card green">
+          <span
+            >NEPAL <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/north_korea" class="country-card red">
+          <span
+            >NORTH KOREA <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/oman" class="country-card red">
+          <span
+            >OMAN <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/pakistan" class="country-card red">
+          <span
+            >PAKISTAN <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/palestine" class="country-card red">
+          <span
+            >PALESTINE <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/philippines" class="country-card amber">
+          <span
+            >PHILIPPINES <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/qatar" class="country-card red">
+          <span
+            >QATAR <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/saudi_arabia" class="country-card red">
+          <span
+            >SAUDI ARABIA <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/singapore" class="country-card amber">
+          <span
+            >SINGAPORE <small><br />Hub | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/south_korea" class="country-card amber">
+          <span
+            >SOUTH KOREA <small><br />Focus | by June '26</small></span
+          >
+        </a>
+
+        <a href="asia/sri_lanka" class="country-card red">
+          <span
+            >SRI LANKA <small><br />Arriving in June '26</small></span
+          >
+        </a>
+        <a href="asia/indonesia#aceh-whipping" class="country-card red">
+          <span
+            >Sumatra (Indonesian Territory) <small><br />Focus | May 2026</small></span
+          >
+        </a>
+
+        <a href="asia/syria" class="country-card red">
+          <span
+            >SYRIA <small><br />Arriving in June '26</small></span
+          >
+        </a>
+
+        <a href="asia/taiwan" class="country-card green">
+          <span
+            >TAIWAN <small><br />Arriving in June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card amber">
           <span
-            >VIETNAM <small><br />Arriving by June '26</small></span
+            >TAJIKISTAN <small><br />Arriving in June '26</small></span
           >
         </a>
 
-        <a href="asia/indonesia" class="country-card red">
+        <a href="javascript:void(0);" class="country-card green">
           <span
-            >West Papua (Indonesian Territory) <small><br />Full Article May 2026</small></span
+            >THAILAND <small><br />Arriving in June '26</small></span
           >
         </a>
 
         <a href="javascript:void(0);" class="country-card red">
           <span
-            >YEMEN <small><br />Arriving by June '26</small></span
+            >TURKMENISTAN <small><br />Arriving in June '26</small></span
+          >
+        </a>
+
+        <a href="javascript:void(0);" class="country-card red">
+          <span
+            >UAE <small><br />Arriving in June '26</small></span
+          >
+        </a>
+
+        <a href="javascript:void(0);" class="country-card red">
+          <span
+            >UZBEKISTAN <small><br />Arriving in June '26</small></span
+          >
+        </a>
+
+        <a href="javascript:void(0);" class="country-card amber">
+          <span
+            >VIETNAM <small><br />Arriving in June '26</small></span
+          >
+        </a>
+        <a href="asia/indonesia#west-papua" class="country-card red">
+          <span
+            >West Papua (Indonesian Territory) <small><br />Focus | May 2026</small></span
+          >
+        </a>
+        <a href="javascript:void(0);" class="country-card red">
+          <span
+            >YEMEN <small><br />Arriving in June '26</small></span
           >
         </a>
       </section>
@@ -491,7 +495,6 @@
       })();
     </script>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",

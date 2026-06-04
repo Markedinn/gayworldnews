@@ -1,5 +1,5 @@
 # ----------------------------------------------------------
-# LGBT Travel Safety & Community Hub - robots.txt (v1.1 - March 2026)
+# LGBT Travel Safety & Community Hub - robots.txt (v1.2 - June 2026)
 # ----------------------------------------------------------
 
 User-agent: *
@@ -8,14 +8,20 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /config/
 
-# Allow "Search AI" to index us for citations (AEO)
+# Allow "Search AI" to index us for real-time citations (AEO)
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
 Allow: /
 
 # Block "Scraper AI" from training on our unique country data
+User-agent: Google-Extended
+Disallow: /
+
 User-agent: GPTBot
 Disallow: /
 

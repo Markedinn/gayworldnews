@@ -54,13 +54,13 @@
       }
     </script>
 
-    <link rel="icon" type="image/webp" href="../images/favicon.webp" />
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
 
-    <link rel="preload" href="../country.css" as="style" />
-    <link rel="stylesheet" href="../country.css" />
+    <link rel="preload" href="/country.css" as="style" />
+    <link rel="stylesheet" href="/country.css" />
 
-    <link rel="preload" href="../index.css?v=5.4" as="style" />
-    <link rel="stylesheet" href="../index.css?v=5.4" />
+    <link rel="preload" href="/index.css?v=5.4" as="style" />
+    <link rel="stylesheet" href="/index.css?v=5.4" />
 
     <script>
       window.globalData = {};
@@ -76,7 +76,7 @@
 
               regions.forEach((region) => {
                 const script = document.createElement("script");
-                script.src = `../country-info/country-files/${region}-data.js`;
+                script.src = `/country-info/country-files/${region}-data.js`;
                 script.async = true;
                 document.head.appendChild(script);
               });
@@ -89,7 +89,7 @@
       });
     </script>
 
-    <script src="../index.js" defer></script>
+    <script src="/index.js" defer></script>
   </head>
 
   <body class="standard-page">
@@ -111,16 +111,15 @@
             <div id="searchResults" class="search-results-floating"></div>
           </div>
 
-          <a href="../breaking" class="breaking-news-btn">BREAKING NEWS</a>
-          <a href="../afr">AFRICA</a>
-          <a href="../ame">AMERICAS</a>
-          <a href="../asi">ASIA</a>
-          <a href="../eur">EUROPE</a>
-          <a href="../oce">OCEANIA</a>
-          <a href="../about">ABOUT</a>
-          <a href="../contact">CONTACT</a>
+          <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a><a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
         </nav>
-        <a href="contact" class="support-btn">SUPPORT OUR REPORTING</a>
+        <a href="/contact" class="support-btn">SUPPORT OUR REPORTING</a>
 
         <div class="social-pill-container">
           <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
@@ -823,7 +822,6 @@
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       // 1. Instantly paint a static placeholder so the widget never looks "missing"
       document.addEventListener("DOMContentLoaded", () => {

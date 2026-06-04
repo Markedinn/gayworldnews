@@ -5,96 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="language" content="English" />
 
-    <!-- Set explicit .html pathing based on continent (africa/americas/asia/europe/oceania) and lowercase-slug. Ensure .html extension is included. -->
-    <link rel="alternate" hreflang="en" href="https://gayworldnews.com/asia/sri-lanka" />
-    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/asia/sri-lanka" />
+    <!-- CRITICAL HEAD SECTION RULE: This rule applies ONLY to country names within internal site links (canonical, hreflang, and routing keys). 
+  1. For multi-word country names, you MUST use underscores (e.g., north_korea, saudi_arabia). 
+  2. NEVER change non-country path elements, filenames, or assets to underscores. Standard site assets and structural paths must preserve their original format (e.g., KEEP dashes in paths like /images/gwn-logo.jpg or /assets/main-style.css). -->
 
-    <!-- Hits all 4 pillars perfectly. Insider handbook vibe. -->
-    <title>2026 Gay Travel & Safety Guide | Sri Lanka</title>
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/asia/sri_lanka" />
+
+    <title>Sri Lanka Gay Guide to Travel, Health, Safety & Essential Laws 2026</title>
+
     <meta
       id="meta-desc"
       name="description"
-      content="2026 Sri Lanka gay travel and health tracker. Essential laws to know before you visit: Penal Code Sections 365 and 365A. Colombo safety rating: Amber."
+      content="2026 Sri Lanka gay travel and health tracker. Learn about critical Penal Code Section 365 laws before you visit. Colombo street safety is rated amber."
     />
 
     <meta
       name="keywords"
-      content="Sri Lanka Gay guide to health, laws before traveling to Sri Lanka, Sri Lanka gay safety 2026, Colombo gay travel, MSM sexual health, Penal Code Section 365"
+      content="Sri Lanka, Sri Lanka gay guide to health, laws before traveling to Sri Lanka, Sri Lanka gay safety 2026, Colombo gay travel, MSM sexual health, Section 365"
     />
 
     <meta property="og:type" content="article" />
-    <meta property="og:url" id="og-url" content="https://gayworldnews.com/asia/sri-lanka" />
-
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/asia/sri_lanka" />
     <meta property="og:title" id="og-title" content="2026 Guide to Gay Travel, Health, Safety & Laws before you visit Sri Lanka" />
-
-    <meta
-      property="og:description"
-      id="og-desc"
-      content="Your 2026 gay travel, health, and legal safety hub for Sri Lanka. Get the unfiltered truth on coastal resorts, city safety, and local laws."
-    />
+    <meta property="og:description" id="og-desc" content="Get the news and updates on gay travel, health infrastructure, and legal risks in Sri Lanka." />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
     <meta property="og:locale" content="en_US" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@GayWorldNewsOrg" />
     <meta name="twitter:title" content="2026 Sri Lanka Gay Travel, Safety & Health Hub" />
-    <meta name="twitter:description" content="Unfiltered 2026 gay travel, health, and legal safety tracker for Sri Lanka." />
+    <meta name="twitter:description" content="2026 health, travel, and legal security snapshot for gay men in Sri Lanka." />
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
+    <!-- Unified Structured Data for Google Rich Snippets & AI Citations -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Sri Lanka Gay Travel, Health & Legal Safety Report 2026",
-        "description": "Essential 2026 guide for gay men traveling to Sri Lanka. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
-        "image": "https://gayworldnews.com/images/gwn-logo.jpg",
-        "datePublished": "2026-05-24",
-        "author": {
-          "@type": "Organization",
-          "name": "Gay World News"
-        }
-      }
-    </script>
-
-    <link rel="icon" type="image/webp" href="../images/favicon.webp" />
-
-    <!-- Preload Country CSS -->
-    <link rel="preload" href="../country.css" as="style" />
-    <link rel="stylesheet" href="../country.css" />
-
-    <!-- Preload Index CSS (Matching the versioning string) -->
-    <link rel="preload" href="../index.css?v=5.4" as="style" />
-    <link rel="stylesheet" href="../index.css?v=5.4" />
-
-    <script>
-      window.globalData = {};
-
-      // Option A: Event-Driven Registry Loader
-      document.addEventListener("DOMContentLoaded", () => {
-        const searchInput = document.getElementById("globalSearch");
-        let registriesLoaded = false;
-
-        if (searchInput) {
-          searchInput.addEventListener("focus", () => {
-            if (!registriesLoaded) {
-              const regions = ["africa", "americas", "asia", "europe", "oceania"];
-
-              regions.forEach((region) => {
-                const script = document.createElement("script");
-                script.src = `../country-info/country-files/${region}-data.js`;
-                script.async = true;
-                document.head.appendChild(script);
-              });
-
-              registriesLoaded = true;
-              console.log("Global routing arrays injected on demand.");
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://gayworldnews.com/asia/sri_lanka"
+          },
+          "headline": "Sri Lanka Gay Travel, Health & Legal Safety Report 2026",
+          "description": "Essential 2026 guide for gay men traveling to Sri Lanka. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
+          "image": "https://gayworldnews.com/images/gwn-logo.jpg",
+          "datePublished": "2026-06-02",
+          "dateModified": "2026-06-03",
+          "author": {
+            "@type": "Organization",
+            "name": "Gay World News",
+            "url": "https://gayworldnews.com/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Gay World News",
+            "url": "https://gayworldnews.com/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://gayworldnews.com/images/gwn-logo.jpg"
             }
-          });
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayworldnews.com/" },
+            /* AI PROMPT FOR POSITION 2: Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. Do NOT use the full folder name here. */
+            { "@type": "ListItem", "position": 2, "name": "Asia", "item": "https://gayworldnews.com/asi" },
+            { "@type": "ListItem", "position": 3, "name": "Sri Lanka", "item": "https://gayworldnews.com/asia/sri_lanka" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home & Interactive Map", "item": "https://gayworldnews.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Sri Lanka", "item": "https://gayworldnews.com/asia/sri_lanka" }
+          ]
         }
-      });
+      ]
     </script>
 
-    <script src="../index.js" defer></script>
+    <!-- Root-Relative Asset Routing with Performance Standarization -->
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+    <link rel="apple-touch-icon" href="/images/favicon.webp" />
+
+    <!-- PERFORMANCE CORE: Version 6.0 preloader and stylesheet pairing -->
+    <link rel="preload" href="/country.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/country.css?v=6.0" />
+
+    <link rel="preload" href="/index.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/index.css?v=6.0" />
+
+    <script src="/index.js" defer></script>
   </head>
 
   <body class="standard-page">
@@ -116,16 +121,15 @@
             <div id="searchResults" class="search-results-floating"></div>
           </div>
 
-          <a href="../breaking" class="breaking-news-btn">BREAKING NEWS</a>
-          <a href="../afr">AFRICA</a>
-          <a href="../ame">AMERICAS</a>
-          <a href="../asi">ASIA</a>
-          <a href="../eur">EUROPE</a>
-          <a href="../oce">OCEANIA</a>
-          <a href="../about">ABOUT</a>
-          <a href="../contact">CONTACT</a>
+          <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a><a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
         </nav>
-        <a href="contact" class="support-btn">SUPPORT OUR REPORTING</a>
+        <a href="/contact" class="support-btn">SUPPORT OUR REPORTING</a>
 
         <div class="social-pill-container">
           <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
@@ -213,7 +217,7 @@
 
         <div class="hub-disclaimer-card">
           <p style="margin: 0">
-            <span style="color: #ffffff !important"> Fact Checked: May 24, 2026. Hub Page. </span>
+            <span style="color: #ffffff !important"> Fact Checked: June 2nd, 2026. Hub Page. </span>
           </p>
         </div>
       </div>
@@ -225,337 +229,83 @@
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-header-row">
-                <h3 class="main-title">Paradise with a Script: The Double Life of Sri Lankan Tourism</h3>
-              </div>
+            <div class="article-header-row">
+              <h3 class="main-title">Sri Lanka's Two Faces</h3>
+            </div>
 
-              <div class="identity-status-container">
-                <div class="identity-status-bar">
-                  <span class="area-label">GAY RISK PROFILE</span>
-                  <div class="id-item"><span>SOCIAL</span> <span class="id-dot status-amber"></span></div>
-                  <div class="id-item"><span>LEGAL</span> <span class="id-dot status-red"></span></div>
-                  <div class="id-item"><span>DIGITAL</span> <span class="id-dot status-amber"></span></div>
-                </div>
-              </div>
-
-              <div class="article-pod-content">
-                <p class="article-lead">
-                  Sri Lanka is playing a high-stakes double game in 2026. For foreign gay men packing wallets filled with pink dollars, beach enclaves like Galle and Negombo offer
-                  an ultra-welcoming, luxury oasis. Step outside the resort gates, however, and you enter a legal twilight zone. Colonial-era zombie laws remain active on the
-                  books. While the Supreme Court has ruled these anti-sodomy statutes unenforceable for consenting adults, corrupt local police forces still use them as a license
-                  for terror, extortion, and shakedowns against local men.
-                </p>
-
-                <blockquote class="article-quote">
-                  "Human rights organisations, such as Human Rights Watch and the Human Dignity Trust, have documented these non-consensual physical examinations and widely condemn
-                  the practice as a form of torture."
-                  <br />
-                  <a href="https://www.humandignitytrust.org/country-profile/sri-lanka/" target="_blank" rel="noopener"
-                    ><span style="color: #0894f1 !important">Human Dignity Trust</span></a
-                  >
-                </blockquote>
-
-                <div class="resource-container">
-                  <h3 style="margin-bottom: 20px">More Information:</h3>
-                  <a href="https://www.equaldex.com/region/sri-lanka" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">Equaldex Sri Lanka</span>
-                    <span class="resource-desc">Real-time crowdsourced and verified legal database tracking rights, legislation, and safety metrics.</span>
-                  </a>
-                  <a href="https://database.ilga.org/sri-lanka-lgbti" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">ILGA World Database</span>
-                    <span class="resource-desc">Global statutory monitoring framework detailing local penal codes and human rights compliance records.</span>
-                  </a>
-                </div>
-                <!-- Verified Research Bibliography Stream -->
-                <h3 class="gwn-list-heading">Source Data:</h3>
-                <ul class="gwn-source-list">
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://www.fpasrilanka.org/sites/default/files/2024-10/English%20Summary%20-%202023%20Supreme%20Court%20Determination%20on%20the%20Penal%20Code%20%28Amendment%29%20Bill.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >2023 Supreme Court Determination on the Penal Code Amendment Bill</a
-                    >
-                    <span class="gwn-source-desc">Official judicial summary confirming the unconstitutionality of criminalizing adult same-sex intimacy.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://rkslaws.com/a-step-forward-recognition-of-same-sex-partnership-and-succession-planning/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >A Step Forward: Same-Sex Partnership and Succession Planning</a
-                    >
-                    <span class="gwn-source-desc">Legal analysis regarding asset protection and partnership rights for couples.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.equal-ground.org/about-us/" target="_blank" rel="noopener" class="gwn-source-link">About Us - EQUAL GROUND</a>
-                    <span class="gwn-source-desc">Overview of local advocacy work and community support networks in Sri Lanka.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://en.wikipedia.org/wiki/Article_365_of_the_Sri_Lankan_Penal_Code" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Article 365 of the Sri Lankan Penal Code - Wikipedia</a
-                    >
-                    <span class="gwn-source-desc">Historical timeline and current judicial status of colonial-era anti-sodomy laws.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://www.gov.uk/government/publications/sri-lanka-country-policy-and-information-notes/country-policy-and-information-note-sexual-orientation-and-gender-identity-sri-lanka-november-2021-accessible-version"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >Country Policy and Information Note: Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">UK government assessment on sexual orientation safety risks and local operational realities.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.dlapiperdataprotection.com/index.html?t=law&c=LK" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Data Protection Laws in Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Analysis of the Personal Data Protection Act and its classification of sexual orientation as sensitive data.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.equal-ground.org/" target="_blank" rel="noopener" class="gwn-source-link">EQUAL GROUND, Sri Lanka</a>
-                    <span class="gwn-source-desc">Official portal for security advice, human rights tracking, and community support.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://en.wikipedia.org/wiki/Equal_Ground" target="_blank" rel="noopener" class="gwn-source-link">Equal Ground - Wikipedia</a>
-                    <span class="gwn-source-desc">Encyclopedic documentation of local human rights advocacy and historical campaigns.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://mrhudsonexplores.com/mr-hudson-on/explore-our-favourite-10-places-in-gay-sri-lanka/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Explore Our Favourite 10 Places in Gay Sri Lanka | Mr Hudson</a
-                    >
-                    <span class="gwn-source-desc">Curated recommendations for luxury villas, beach hangouts, and safe coastal hubs.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.fpasrilanka.org/en/find-a-clinic" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Find a Clinic | The Family Planning Association of Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Interactive directory of operational clinical facilities providing sexual health services and guidance.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.youtube.com/watch?v=jPloAh0Uyzs" target="_blank" rel="noopener" class="gwn-source-link"
-                      >GAY TRAVEL: SRI LANKA'S CAPITAL, COLOMBO | VLOG 13</a
-                    >
-                    <span class="gwn-source-desc">Independent video walkthrough focusing on city street safety and neighborhood landscapes.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.outofoffice.com/sri-lanka/luxury-hotels/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Gay Hotels and Resorts Sri Lanka 2026 and 2027</a
-                    >
-                    <span class="gwn-source-desc">Vetted luxury accommodations offering inclusive and non-discriminatory services to couples.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.misterbandb.com/gay-hotels/galle" target="_blank" rel="noopener" class="gwn-source-link">Gay Hotels in Galle in 2026 - Misterb&b</a>
-                    <span class="gwn-source-desc">Community reviews and booking links for verified welcoming stays in the southern corridor.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.outofoffice.com/sri-lanka/gay-travel/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Gay Travel Sri Lanka 2026 and 2027 | Out Of Office</a
-                    >
-                    <span class="gwn-source-desc">Tailored safety assessments and travel planning itineraries for same-sex travelers.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.amnesty.org/en/location/asia-and-the-pacific/south-asia/sri-lanka/report-sri-lanka/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Human Rights in Sri Lanka - Amnesty International</a
-                    >
-                    <span class="gwn-source-desc">Annual operational oversight report covering civil liberties and state institutional behavior.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.fpasrilanka.org/en/content/information-centre" target="_blank" rel="noopener" class="gwn-source-link"
-                      >INFORMATION CENTRE | The Family Planning Association of Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Statutory repository for sexual health guidelines, medical research, and policy documentation.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.equaldex.com/region/sri-lanka" target="_blank" rel="noopener" class="gwn-source-link">Gay Rights in Sri Lanka | Equaldex</a>
-                    <span class="gwn-source-desc">Global crowdsourced and verified database for statutory rights, legal frameworks, and polls.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://database.ilga.org/sri-lanka-lgbti" target="_blank" rel="noopener" class="gwn-source-link">Rights in Sri Lanka - ILGA World Database</a>
-                    <span class="gwn-source-desc">International monitoring index tracking penal code regulations and local state adherence to rights.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://en.wikipedia.org/wiki/LGBTQ_rights_in_Sri_Lanka" target="_blank" rel="noopener" class="gwn-source-link">Gay Rights in Sri Lanka - Wikipedia</a>
-                    <span class="gwn-source-desc">Comprehensive reference log tracking colonial history, penal codes, and current litigation.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://76crimes.com/2026/01/10/lgbtq-rights-update-2025-tally-and-2026-preview/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Rights Update: 2025 Tally and 2026 Preview - Erasing 76 Crimes</a
-                    >
-                    <span class="gwn-source-desc">Independent journalism tracking criminalization metrics and repeal movements across the globe.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.fpasrilanka.org/en/content/launching-prep-demonstration-project-sri-lanka" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Launching PrEP Demonstration Project in Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Official medical briefing tracking the localized rollout and availability of preventative therapy.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://lankalaw.net/wp-content/uploads/2025/02/1981Y4V69C-1" target="_blank" rel="noopener" class="gwn-source-link"
-                      >MATRIMONIAL RIGHTS AND INHERITANCE - Lanka Law</a
-                    >
-                    <span class="gwn-source-desc">Statutory analysis detailing legal inequalities regarding property ownership and succession.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.fpasrilanka.org/en/content/multi-country-south-asia-global-fund-hiv-project" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Multi-Country South Asia Global Fund HIV Project | FPA Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Regional healthcare initiative focusing on preventative clinical services and MSM support networks.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://srilanka.unfpa.org/sites/default/files/pub-pdf/sri_lanka_national_policy_gewe_english.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >National Policy on Gender Equality and Women's Empowerment Sri Lanka - UNFPA</a
-                    >
-                    <span class="gwn-source-desc">Official policy draft outlining governmental standards and structural institutional frameworks.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.equal-ground.org/our-work/" target="_blank" rel="noopener" class="gwn-source-link">Our Work - EQUAL GROUND</a>
-                    <span class="gwn-source-desc">Summary of localized security training, advocacy, and human rights oversight efforts.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.ijllr.com/post/property-rights-of-lgbtq-legal-developments-and-challenges" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Property Rights: Legal Developments and Challenges</a
-                    >
-                    <span class="gwn-source-desc">Socio-legal analysis of inheritance restrictions and partnership protections on the ground.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.hotelguys.com/sri-lanka-2025" target="_blank" rel="noopener" class="gwn-source-link">Sri Lanka 2025 - Global Hotel Guys</a>
-                    <span class="gwn-source-desc">Independent hospitality reviews detailing welcoming properties and regional travel feedback.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.humandignitytrust.org/country-profile/sri-lanka/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Sri Lanka | Human Dignity Trust</a
-                    >
-                    <span class="gwn-source-desc">Strategic legal audit outlining criminal code statuses and international law compliance.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.youtube.com/watch?v=sykyprdmt3w" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Sri Lanka's Famous Stilt Fishermen and Beach Hopping | Gay Couple</a
-                    >
-                    <span class="gwn-source-desc">Independent travel video focusing on regional coastal hospitality and beachfront tours.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.amnesty.org/en/latest/press-release/2019/12/spectrum-sri-lanka-lgbti/" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Sri Lanka: End Discrimination Against the Community - Amnesty International</a
-                    >
-                    <span class="gwn-source-desc">Field advocacy manifest tracking police abuses and calling for institutional statutory reforms.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.hrw.org/news/2024/07/17/sri-lanka-false-terrorism-cases-enable-repression" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Sri Lanka: False Terrorism Cases Enable Repression | Human Rights Watch</a
-                    >
-                    <span class="gwn-source-desc">Investigative reporting covering systemic state overreach and misuse of security apparatuses.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://www.icj.org/sri-lanka-icj-welcomes-the-supreme-courts-determination-that-the-proposed-amendment-decriminalizing-consensual-same-sex-sexual-relations-between-adults-is-constitutional/"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >ICJ Welcomes Supreme Court Decriminalization Determination</a
-                    >
-                    <span class="gwn-source-desc">International legal analysis validating the constitutional framework for decriminalizing intimacy.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.justice.gov/sites/default/files/eoir/legacy/2014/03/06/LKA103948.E.pdf" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Sri Lanka: Treatment of Sexual Minorities - Department of Justice</a
-                    >
-                    <span class="gwn-source-desc">Asylum research documentation mapping state protection deficits and local NGO availability.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://cybersafe.lk/the-personal-data-protection-act-of-sri-lanka-its-origins-and-overview-of-critical-information-regarding-the-act/"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >The Personal Data Protection Act of Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Technical review of statutory digital rights and privacy requirements for sensitive personal information.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://www.icj.org/the-battle-against-an-archaic-law-targeting-those-already-at-risk-of-human-rights-violations/"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >The Battle Against an Archaic Law - International Commission of Jurists</a
-                    >
-                    <span class="gwn-source-desc">Strategic breakdown of litigation efforts challenging colonial penal codes on the island.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a
-                      href="https://76crimes.com/2024/09/26/the-stage-is-set-for-sri-lanka-to-repeal-its-anti-homosexuality-law/"
-                      target="_blank"
-                      rel="noopener"
-                      class="gwn-source-link"
-                      >The Stage is Set for Sri Lanka to Repeal its Anti-Homosexuality Law</a
-                    >
-                    <span class="gwn-source-desc">Independent political analysis tracking legislative movements toward formal penal code removal.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://ceylon-trails.com/lgbtq/hotels.php" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Verified Hotels Sri Lanka 2026 | Welcoming Stays - Ceylon Trails</a
-                    >
-                    <span class="gwn-source-desc">Localized commercial register mapping inclusive boutique operations and luxury villas.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.parliament.lk/uploads/acts/gbills/english/6348.pdf" target="_blank" rel="noopener" class="gwn-source-link"
-                      >WOMEN EMPOWERMENT - ACT, No. 37 OF 2024 - The Parliament of Sri Lanka</a
-                    >
-                    <span class="gwn-source-desc">Official legislative text outlining statutory updates regarding protections and rights frameworks.</span>
-                  </li>
-
-                  <li class="gwn-source-item">
-                    <a href="https://www.hrcsl.lk/wp-content/uploads/2020/02/HRCSL-Letter-to-MOJ-on-22-05-2025.pdf" target="_blank" rel="noopener" class="gwn-source-link"
-                      >Human Rights Commission of Sri Lanka Letter to Ministry of Justice</a
-                    >
-                    <span class="gwn-source-desc">Official institutional correspondence advising statutory adjustments to current penal guidelines.</span>
-                  </li>
-                </ul>
-                <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | May 2026</p>
+            <div class="identity-status-container">
+              <div class="identity-status-bar">
+                <span class="area-label">GAY RISK PROFILE</span>
+                <div class="id-item"><span>SOCIAL</span> <span class="id-dot status-amber"></span></div>
+                <div class="id-item"><span>LEGAL</span> <span class="id-dot status-red"></span></div>
+                <div class="id-item"><span>DIGITAL</span> <span class="id-dot status-amber"></span></div>
               </div>
             </div>
+
+            <h4>Pink Dollars</h4>
+            <p class="article-lead">
+              Sri Lanka is seen as a paradise destination for wealthier tourists and it has been using targeted marketing campaigns to pocket the pink dollars of gay travelers. No
+              problem, until... Can you guess? That's right! Religious types and conservatives have been simultaneously ramping up the pressure against any tolerance and acceptance
+              of the gay community. So far, the result has 'only' been the withdrawal of the inclusive marketing campaign. As these pressures have already forced the government to
+              make U-Turns on policy that affects the lucrative tourist industry, what more is round the corner?
+            </p>
+
+            <div class="article-image-container">
+              <img src="https://static.dw.com/image/73032047_906.jpg" alt="Pride Parade Sri Lanka" class="article-main-img" />
+              <p class="image-caption">DW | "Discrimination persists in Sri Lanka"</p>
+            </div>
+
+            <h4>Pressure Stops Reforms</h4>
+            <p>
+              The nation's highest court ruled that policing private consensual adult intimacy is unconstitutional. A major win for gay people, but then under pressure from
+              hardliners, the political will to pass a formal repeal bill vanished. This ongoing legislative gridlock guarantees this political football is kicked deep into the
+              grass, while all the time, local gay men remain the victims of corruption and violent attacks.
+            </p>
+
+            <h4>Police Serve & Protect</h4>
+            <p>
+              The actual threat to gay men is not a prison sentence or even a prosecution. That is very rare, but being targeted for extortion by police officers who see a bribe as
+              part of their salary is much too common. Because the colonial penal code was never officially wiped clean, many police weaponize the mere threat of public exposure or
+              arrest to milk cash bribes directly from local gay men at popular meeting spots.
+            </p>
+
+            <blockquote class="article-quote">
+              "LGBTQ+ Sri Lankans face violence, while promises by the government to repeal colonial-era laws remain unmet."
+              <br />
+              <a href="https://www.dw.com/en/lgbtq-discrimination-persists-in-sri-lanka/a-73034352" target="_blank" rel="noopener"
+                ><span style="color: #0894f1 !important">DW</span></a
+              >
+            </blockquote>
+
+            <div class="resource-container">
+              <h3 style="margin-bottom: 20px">Links:</h3>
+
+              <a href="https://www.icj.org/resource/marching-ahead-its-time-to-decriminalize/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">International Commission of Jurists</span>
+                <span class="resource-desc">Legal audit confirming the laws fuel corruption rather than formal prosecutions.</span>
+              </a>
+
+              <a
+                href="https://www.fpasrilanka.org/sites/default/files/2024-10/English%20Summary%20-%202023%20Supreme%20Court%20Determination%20on%20the%20Penal%20Code%20%28Amendment%29%20Bill.pdf"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+              >
+                <span class="resource-title">Sri Lanka Supreme Court</span>
+                <span class="resource-desc">Judicial review ruling that criminalizing consensual adult intimacy is entirely unconstitutional.</span>
+              </a>
+
+              <a
+                href="http://www.adaderana.lk/news/119249/sltda-takes-policy-decision-to-refrain-from-lgbtq-focused-tourism-in-sri-lanka-ag-tells-court"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+              >
+                <span class="resource-title">Local Press Report</span>
+                <span class="resource-desc">News tracking the state tourism authority folding to religious anti-gay pressure.</span>
+              </a>
+            </div>
+            <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | May 2026</p>
           </div>
         </details>
 
@@ -565,166 +315,95 @@
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-pod-content">
-                <!-- Emergency Quick-Bar (Always First) -->
-                <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
-                  <h4 style="margin-top: 0; color: #ff4d4d; text-transform: uppercase">🚨 Emergency & Urgent Care</h4>
-                  <p style="font-size: 0.95rem; margin-bottom: 10px"><strong>Medical Emergency:</strong> 1990 | <strong>Police:</strong> 119</p>
-                  <p style="font-size: 0.85rem; color: #eee; margin: 0">
-                    <strong>Urgent (PEP):</strong> If you think you have been exposed to HIV, you must start PEP within 72 hours.
-                  </p>
-                </div>
+            <!-- Emergency Quick-Bar (Always First) -->
+            <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
+              <h4 style="margin-top: 0; color: #ff4d4d; text-transform: uppercase">🚨 Emergency & Urgent Care</h4>
+              <p style="font-size: 0.95rem; margin-bottom: 10px"><strong>Medical Emergency:</strong> 1990 | <strong>Police:</strong> 119</p>
+              <p style="font-size: 0.85rem; color: #eee; margin: 0">
+                <strong>Urgent (PEP):</strong> If you think you have been exposed to HIV, you must start PEP within 72 hours.
+              </p>
+            </div>
 
-                <!-- Infrastructure Overview Paragraph -->
-                <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
-                  Sri Lanka has a developing medical infrastructure. In major cities, gay men can access limited but available care in specialized spaces. In rural areas, access is
-                  non-existent. Confidentiality is at risk, and patients should not disclose their orientation to state doctors due to systemic prejudice and blackmail
-                  opportunities exploited by local authorities.
-                </p>
+            <h4>Where are the clinics?</h4>
+            <!-- Infrastructure Overview Paragraph -->
+            <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
+              Sri Lanka has a highly fractured healthcare system where reliable sexual health care is only found in urban centers. While specialized metropolitan spaces provide
+              access to testing, rural outposts offer little to no infrastructure for local MSM.
+            </p>
 
-                <!-- FIXED SOLUTION 3: Semantic Toggle Container (SEO Perfect, Event Safe) -->
-                <div class="crisis-toggle-container" style="margin-bottom: 20px">
-                  <button
-                    type="button"
-                    class="crisis-toggle-btn"
-                    onclick="this.nextElementSibling.classList.toggle('active')"
-                    style="
-                      width: 100%;
-                      text-align: left;
-                      background: rgba(8, 148, 241, 0.05);
-                      border: none;
-                      border-left: 4px solid #0894f1;
-                      border-radius: 4px;
-                      padding: 12px 15px;
-                      font-weight: bold;
-                      color: #0894f1;
-                      cursor: pointer;
-                      font-family: inherit;
-                      font-size: 1rem;
-                    "
-                  >
-                    Worried about HIV but can't get help?
-                  </button>
-                  <div
-                    class="crisis-body-content"
-                    style="
-                      display: none;
-                      padding: 15px;
-                      background: rgba(8, 148, 241, 0.02);
-                      border-left: 4px solid #0894f1;
-                      border-bottom-left-radius: 4px;
-                      border-bottom-right-radius: 4px;
-                      border-top: 1px solid rgba(8, 148, 241, 0.1);
-                    "
-                  >
-                    <p style="font-size: 0.95rem; line-height: 1.6; color: #fff; margin-bottom: 15px">
-                      If you are living in a country where it is impossible to get care and you're panicking about HIV right now, stop, look at this screen. This screen is here for
-                      you. There is a lot of outdated opinion about HIV out there, but these are just homophobic rubbish. Take a slow, deep breath. You have time. You are going to
-                      be okay and we are with you. HIV is a completely manageable medical condition. With modern medication, you will live a long, healthy, and happy life. But you
-                      must avoid stress, it is your absolute worst enemy right now - It will make you weak. I know that's easy to say, but just try following the breathing
-                      exercises below. They really work. Protect yourself: rest, eat a meal, listen to music, and do whatever you must to quiet your mind - Force a smile, and
-                      within a minute you will start to feel better. I know, but it works. Do it.
-                    </p>
-                    <p style="font-size: 0.95rem; line-height: 1.6; color: #eee; margin-bottom: 20px">
-                      If you are trapped in a hostile country and local state doctors are not safe for you, your priority is to move yourself to a safe environment. I know that's
-                      not easy, you might think it's impossible, but you are not alone. International organizations exist solely to help gay people like you to escape dangerous
-                      regimes. They can really help you and you can get your life-saving healthcare. Take a deep breath. You have time but you must take action as soon as possible.
-                    </p>
-                    <div class="resource-container">
-                      <!-- Guided Breathing Visual Aid -->
-                      <a
-                        href="https://www.youtube.com/watch?v=bF_1ZiFta-E"
-                        target="_blank"
-                        rel="noopener"
-                        class="resource-card"
-                        style="border-left: 4px solid #2ecc71; background: rgba(255, 255, 255, 0.02); margin-bottom: 10px; padding: 10px"
-                      >
-                        <span class="resource-title" style="color: #2ecc71; font-size: 0.95rem">Calm Your Mind: Follow the Breathing Square</span>
-                        <span class="resource-desc" style="font-size: 0.8rem"
-                          >Follow the breathing box - breath in through your nose, hold it - breath out through your mouth. Follow the video.</span
-                        >
-                      </a>
-                      <!-- Emergency Travel Escape Portal -->
-                      <a
-                        href="https://www.rainbowrailroad.org/"
-                        target="_blank"
-                        rel="noopener"
-                        class="resource-card"
-                        style="border-left: 4px solid #0894f1; background: rgba(255, 255, 255, 0.02); padding: 10px"
-                      >
-                        <span class="resource-title" style="color: #0894f1; font-size: 0.95rem">Request Emergency Travel Assistance</span>
-                        <span class="resource-desc" style="font-size: 0.8rem"
-                          >Rainbow Railroad: International NGO helping gay men find legal ways out of dangerous countries to safe medical care and asylum. Nothing is
-                          impossible.</span
-                        >
-                      </a>
-                    </div>
-                  </div>
-                </div>
+            <h4>State Clinicians</h4>
+            <!-- Practical Action Plan Paragraph -->
+            <p style="font-size: 1rem; line-height: 1.6; color: #eee; margin-bottom: 20px">
+              Local gay men should avoid disclosing their sexual orientation to standard state hospital staff due to widespread institutional homophobia. As soon as anyone knows
+              your status, you are vulnerable to harassment and blackmail if the word gets out.
+            </p>
 
-                <div class="insider-box">
-                  <p class="insider-text">
-                    <strong>Pack your own prevention tools.</strong> While groups like the Family Planning Association of Sri Lanka run discrete clinics and pilot PrEP projects,
-                    public hospital staff are a gamble. Never count on local state infrastructure for sensitive MSM care, and carry digital copies of your prescriptions from home
-                    to avoid hostile questioning at borders.
-                  </p>
-                </div>
+            <h4>Confidential?</h4>
+            <div class="insider-box">
+              <p class="insider-text">
+                Use independent community clinics if possible to keep your identity off the records and to secure fast access to preventative care or long-term care. If you can't
+                afford private care, you should go to the
+                <a href="https://aidscontrol.gov.lk/index.php?option=com_content&view=article&id=100&Itemid=258&lang=en" target="_blank" rel="noopener">AIDs Control</a> website to
+                arrange an appointment and get the care you need. It is important to be prepared with a story because you are unlikely to want your sexual partners traced and
+                informed if you test positive. The clinic is obliged to check with all your sexual partners. However, you should still get the care you need there, just be prepared
+                with a story so that you are not exposed.
+              </p>
+            </div>
 
-                <!-- Access Status Bars -->
-                <div class="identity-status-container" style="margin-bottom: 30px">
-                  <div class="identity-status-bar">
-                    <span class="area-label">CITY</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-red"></span></div>
-                  </div>
-                  <div class="identity-status-bar">
-                    <span class="area-label">RURAL</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot status-red"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-red"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-red"></span></div>
-                  </div>
-                </div>
+            <!-- The Legal and Confidentiality Mandate Blockquote -->
+            <blockquote class="article-quote">
+              "Reducing stigma and discrimination is considered imperative in preventing HIV and increasing access to treatment and testing."
+              <br />
+              <a href="https://www.fpasrilanka.org/en/content/tot-healthcare-workers-working-institutionalised-women" target="_blank" rel="noopener"
+                ><span style="color: #0894f1 !important">Clinical Training Archive</span></a
+              >
+            </blockquote>
 
-                <div class="article-subhead">Hospitals & Clinics</div>
-
-                <div class="resource-container">
-                  <!-- URGENT: PEP (RED) -->
-                  <a href="https://www.fpasrilanka.org/en/find-a-clinic" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff4d4d">
-                    <span class="resource-title" style="color: #ff4d4d">Emergency Healthcare</span>
-                    <span class="resource-desc"
-                      >Location: FPA Point Chafing and Central Clinics. ID Required: Yes. Open standard operating hours, contact immediately for local referral network.</span
-                    >
-                  </a>
-
-                  <!-- MAINTENANCE: PrEP & HIV MEDS (BLUE) -->
-                  <a href="https://www.fpasrilanka.org/en/find-a-clinic" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
-                    <span class="resource-title" style="color: #00d4ff">PrEP & HIV Medication Directory</span>
-                    <span class="resource-desc">The Family Planning Association of Sri Lanka sexual health facility network. Registration: Required for medication tracking.</span>
-                  </a>
-
-                  <!-- TESTING: HIV & STI (GREEN) -->
-                  <a
-                    href="https://www.fpasrilanka.org/en/content/launching-prep-demonstration-project-sri-lanka"
-                    target="_blank"
-                    rel="noopener"
-                    class="resource-card"
-                    style="border-left: 4px solid #2ecc71"
-                  >
-                    <span class="resource-title" style="color: #2ecc71">Anonymous STI/HIV Testing</span>
-                    <span class="resource-desc">Recommended facility: FPA PrEP Demonstration Project centers for discreet screening. Appointment highly recommended.</span>
-                  </a>
-
-                  <!-- ALPHABET BRIEF: TRANS/L/B (PURPLE) -->
-                  <a href="https://www.equal-ground.org/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff00ff">
-                    <span class="resource-title" style="color: #ff00ff">Trans & L/B Support</span>
-                    <span class="resource-desc">Specialized healthcare navigation and local security advice managed by EQUAL GROUND.</span>
-                  </a>
-                </div>
-                <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | May 2026</p>
+            <!-- Access Status Bars -->
+            <div class="identity-status-container" style="margin-bottom: 30px">
+              <div class="identity-status-bar">
+                <span class="area-label">CITY</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
+              </div>
+              <div class="identity-status-bar">
+                <span class="area-label">RURAL</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-red"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-red"></span></div>
               </div>
             </div>
+
+            <h3 class="article-subhead">Hospitals & Clinics</h3>
+
+            <div class="resource-container">
+              <!-- Dynamic Card Example 1: Emergency PEP Track -->
+              <a href="https://www.fpasrilanka.org/en/find-a-clinic" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff4d4d">
+                <span class="resource-title" style="color: #ff4d4d">FPA Central Clinic</span>
+                <span class="resource-desc"
+                  >Specialized urban facilities offering rapid access to emergency preventative care lines | Our research flags this as the most confidential.</span
+                >
+              </a>
+
+              <!-- Dynamic Card Example 2: Treatment & Med Access -->
+              <a href="https://www.bluecross.lk/clinics/sexual-health-and-std-clinic/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
+                <span class="resource-title" style="color: #00d4ff">Blue Cross Hospital</span>
+                <span class="resource-desc">Private Hospital - Obliged to inform state on HIV positive results - Sexual Health and STD Clinic.</span>
+              </a>
+
+              <!-- Dynamic Card Example 3: Screening & Diagnostics -->
+              <a
+                href="https://aidscontrol.gov.lk/index.php?option=com_content&view=article&id=100&Itemid=258&lang=en"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="border-left: 4px solid #2ecc71"
+              >
+                <span class="resource-title" style="color: #2ecc71">Government STD/AIDS Control Programme</span>
+                <span class="resource-desc">Your partners are informed here - If you tell them!</span>
+              </a>
+            </div>
+
+            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | May 2026</p>
           </div>
         </details>
 
@@ -734,222 +413,260 @@
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-header-row">
-                <h3 class="main-title">Beachfront Bliss and Borderline Bigotry: The Coastal Divide</h3>
-              </div>
+            <div class="article-header-row">
+              <h3 class="main-title">Beachfront Bliss and Borderline Bigotry: The Coastal Divide</h3>
+            </div>
 
-              <div class="article-quote">
-                "Negombo on the west coast is widely considered the heart of gay Lanka and is a popular first stop for travellers."
-                <br />
-                <a href="https://mrhudsonexplores.com/mr-hudson-on/explore-our-favourite-10-places-in-gay-sri-lanka/" target="_blank" rel="noopener"
-                  ><span style="color: #0894f1 !important">Mr Hudson Explores</span></a
-                >
-              </div>
+            <div class="article-quote">
+              "Negombo on the west coast is widely considered the heart of gay Lanka and is a popular first stop for travellers."
+              <br />
+              <a href="https://mrhudsonexplores.com/mr-hudson-on/explore-our-favourite-10-places-in-gay-sri-lanka/" target="_blank" rel="noopener"
+                ><span style="color: #0894f1 !important">Mr Hudson Explores</span></a
+              >
+            </div>
 
-              <div class="identity-status-container">
-                <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
-                  <div class="id-item">
-                    <span>Social</span>
-                    <span class="id-dot status-amber"></span>
-                  </div>
-                  <div class="id-item">
-                    <span>PDA</span>
-                    <span class="id-dot status-red"></span>
-                  </div>
+            <div class="identity-status-container">
+              <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
+                <div class="id-item">
+                  <span>Social</span>
+                  <span class="id-dot status-amber"></span>
+                </div>
+                <div class="id-item">
+                  <span>PDA</span>
+                  <span class="id-dot status-red"></span>
                 </div>
               </div>
+            </div>
 
-              <p class="article-lead">
-                The holiday layout is electric if you stay on the beaten path. Coastal hubs love the economic power of gay travelers, providing seamless discretion across high-end
-                boutique properties. The reality shifts instantly if you flaunt your relationship in conservative urban blocks. We have a full investigative layout queued to track
-                how the state targets local men, but as a traveler, your foreign passport acts as a shield.
+            <p class="article-lead">
+              If you've got the cash, then you have pristine coastal enclave resorts that offer foreign gay travelers the seamless luxury holidays that make you feel like you're
+              really in paradise. For the budget traveler, that's going to be a different story. If you can play the straight game, you'll be fine. But show any non-masculine
+              behavior and you'll be at risk of deep-rooted local conservative and religious hostility. You are now in the local zone, open to exploitation from police and the
+              local thugs that spot you as an opportunity. So, NO PDA.
+            </p>
+
+            <h3 class="article-subhead">Fun & Risks:</h3>
+            <ul class="law-list" style="list-style: none; padding: 0">
+              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
+                <strong>The Fun:</strong>
+                <p>
+                  Negombo beach serves as a lively coastal playground while southern hotspots like Galle and Mirissa host exceptionally welcoming foreign-managed eco-resorts.
+                  Nobody cares if you are gay here - It's a purely transactional tourist experience.
+                </p>
+              </li>
+              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
+                <strong>The Risks:</strong>
+                <p>
+                  Outside of those high-end resorts, keep all PDA completely behind closed doors to avoid triggering street-level confrontation. Use digital networking apps with
+                  the due diligence you'd expect to use in other hostile countries as blackmailers do coordinate with police to run extortion traps.
+                </p>
+              </li>
+            </ul>
+
+            <h3
+              class="article-subhead"
+              style="
+                text-decoration: underline !important;
+                text-decoration-color: #ff00ff !important;
+                text-decoration-thickness: 5px !important;
+                text-underline-offset: 8px !important;
+                margin-top: 30px;
+              "
+            >
+              The Bottom <span style="color: #ff00ff !important">Line</span>
+            </h3>
+            <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">
+              Verdict: Secure the resort gates and enjoy the coastline with caution. Keep your personal life strictly private to stay entirely off the local radar.
+            </p>
+
+            <!-- ALPHABET BRIEFS: High Priority L/T News -->
+            <div class="alphabet-brief-card">
+              <span class="alphabet-brief-title">Alphabet Briefs</span>
+              <p class="alphabet-brief-text">
+                Local advocates report that police forces are actively refusing to file safety complaints regarding targeted violence against the community. Ground reports also
+                confirm that officers are increasingly weaponizing archaic obscenity statutes to seize phones and target users over digital media.
               </p>
+            </div>
 
-              <h3 class="article-subhead">Fun & Risks:</h3>
-              <ul class="law-list" style="list-style: none; padding: 0">
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
-                  <strong>The Fun:</strong>
-                  <p>
-                    Negombo Beach serves as a vibrant daytime hangout, while towns like Mirissa, Unawatuna, and Galle offer stunning beachfront villas and foreign-managed
-                    eco-resorts catering directly to same-sex couples.
-                  </p>
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
-                  <strong>The Risks:</strong>
-                  <p>
-                    Avoid all public displays of affection, which offend local conservative sensibilities. Be highly alert on digital dating apps, as local syndicates and corrupt
-                    police occasionally run blackmail operations targeting unsuspecting users.
-                  </p>
-                </li>
-              </ul>
+            <div class="resource-container">
+              <h3 style="margin-bottom: 20px">More Links</h3>
 
-              <h3
-                class="article-subhead"
-                style="
-                  text-decoration: underline !important;
-                  text-decoration-color: #ff00ff !important;
-                  text-decoration-thickness: 5px !important;
-                  text-underline-offset: 8px !important;
-                  margin-top: 30px;
-                "
-              >
-                The Bottom <span style="color: #ff00ff !important">Line</span>
-              </h3>
-              <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">
-                Verdict: Go with strict, tactical caution. Enjoy the pristine coastal resorts but avoid public affection to stay off the local radar.
-              </p>
+              <a href="https://mrhudsonexplores.com/mr-hudson-on/explore-our-favourite-10-places-in-gay-sri-lanka/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Mr Hudson Explores: Sri Lanka</span>
+                <span class="resource-desc">An elite overview of the island's premier boutique villas, coastal hangouts, and lifestyle hubs.</span>
+              </a>
 
-              <!-- ALPHABET BRIEFS: High Priority L/T News -->
-              <div class="alphabet-brief-card">
-                <span class="alphabet-brief-title">Alphabet Briefs</span>
-                <p class="alphabet-brief-text">No priority alerts recorded for the broader community at this time.</p>
-              </div>
+              <a href="https://www.outofoffice.com/sri-lanka/gay-travel/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Out Of Office Gay Travel Sri Lanka</span>
+                <span class="resource-desc">Comprehensive luxury itinerary builder and tailored safety guide for same-sex couples.</span>
+              </a>
 
-              <div class="resource-container">
-                <h3 style="margin-bottom: 20px">More Links</h3>
+              <a href="https://nomadicboys.com/gay-sri-lanka/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
+                <span class="resource-title">Nomadic Boys</span>
+                <span class="resource-desc">Gay Sri Lanka travel: a complete gay guide for LGBTQ travelers.</span>
+              </a>
 
-                <a href="https://mrhudsonexplores.com/mr-hudson-on/explore-our-favourite-10-places-in-gay-sri-lanka/" target="_blank" rel="noopener" class="resource-card">
-                  <span class="resource-title">Mr Hudson Explores: Sri Lanka</span>
-                  <span class="resource-desc">An elite overview of the island's premier boutique villas, coastal hangouts, and lifestyle hubs.</span>
-                </a>
+              <a href="https://www.youtube.com/watch?v=jPloAh0Uyzs" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
+                <span
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #ff0000;
+                    border-radius: 6px;
+                    padding: 3px;
+                    width: 2.2em;
+                    height: 1.5em;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                  "
+                >
+                  <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
+                    <path
+                      fill="currentColor"
+                      d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93-.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+                    />
+                  </svg>
+                </span>
+                <span class="resource-title">Colombo Gay Travel Vlog</span>
+                <span class="resource-desc">A fast-paced visual walkthrough detailing local city life, transit tips, and the capital's physical layout.</span>
+              </a>
 
-                <a href="https://www.outofoffice.com/sri-lanka/gay-travel/" target="_blank" rel="noopener" class="resource-card">
-                  <span class="resource-title">Out Of Office Gay Travel Sri Lanka</span>
-                  <span class="resource-desc">Comprehensive luxury itinerary builder and tailored safety guide for same-sex couples.</span>
-                </a>
-
-                <a href="https://ceylon-trails.com/lgbtq/hotels.php" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
-                  <span class="resource-title">Sightseeing & Culture</span>
-                  <span class="resource-desc">The definitive guide for regional landmarks, local architectural history, and ancestral temple sites.</span>
-                </a>
-
-                <a href="https://www.youtube.com/watch?v=jPloAh0Uyzs" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
-                  <span
-                    style="
-                      display: inline-flex;
-                      align-items: center;
-                      justify-content: center;
-                      background-color: #ff0000;
-                      border-radius: 6px;
-                      padding: 3px;
-                      width: 2.2em;
-                      height: 1.5em;
-                      vertical-align: middle;
-                      margin-right: 8px;
-                    "
-                  >
-                    <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
-                      <path
-                        fill="currentColor"
-                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93-.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                      />
-                    </svg>
-                  </span>
-                  Colombo Gay Travel Vlog
-                  <span class="resource-desc">A fast-paced visual walkthrough detailing local city life, transit tips, and the capital's physical layout.</span>
-                </a>
-
-                <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 20px">GWN | May 2026</p>
-              </div>
+              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | May 2026</p>
             </div>
           </div>
         </details>
 
-        <details class="news-accordion status-border status-amber">
+        <details class="news-accordion status-border status-red">
           <summary>
             <h3 class="pod-title">Need To Know Laws</h3>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-header-row">
-                <h3 class="main-title">Sri Lanka: Legal 2026</h3>
-              </div>
+            <div class="article-header-row">
+              <h3 class="main-title">Sri Lanka: Legal 2026</h3>
+            </div>
 
-              <div class="article-pod-content">
-                <!-- Reality Check: Quick scan summary -->
-                <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #ff00ff">
-                  <h4 style="margin: 0; color: #ff00ff; text-transform: uppercase; font-size: 0.9rem">The Reality Check</h4>
-                  <p style="font-size: 1rem; margin: 5px 0 0 0; line-height: 1.4">
-                    Same-sex relations are technically criminalized under archaic colonial statutes, but foreign travelers face zero risk of prosecution if they avoid public
-                    displays of affection.
-                  </p>
-                </div>
+            <!-- Reality Check: Quick scan summary box -->
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #ff00ff">
+              <h4 style="margin: 0; color: #ff00ff; text-transform: uppercase; font-size: 0.9rem">The Reality Check</h4>
+              <p style="font-size: 1rem; margin: 5px 0 0 0; line-height: 1.4">
+                While official court convictions under colonial anti-sodomy statutes average zero per year, arbitrary street detentions remain a regular threat. Foreign gay
+                travelers usually fly below the radar, but local authorities frequently use secondary loitering laws to target local MSM.
+              </p>
+            </div>
 
-                <ul class="law-list" style="list-style: none; padding: 0">
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">🏳️‍🌈</span>
-                    <span
-                      ><strong>Same-Sex Activity:</strong><br />
-                      Illegal but unenforced for consenting adults | <strong>Age of Consent:</strong> Unequal</span
+            <!-- Swipeable Mobile Container Wrapper -->
+            <div style="overflow-x: auto; width: 100%; margin-bottom: 25px; -webkit-overflow-scrolling: touch">
+              <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 500px">
+                <thead>
+                  <tr style="border-bottom: 2px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; width: 100%">
+                    <th style="padding: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.6; width: 100%; flex-grow: 1">Legal Category</th>
+                    <th
+                      style="
+                        padding: 10px;
+                        font-size: 0.85rem;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        opacity: 0.6;
+                        text-align: right;
+                        white-space: nowrap;
+                        margin-left: auto;
+                      "
                     >
-                  </li>
+                      2026 Statutory Verdict
+                    </th>
+                  </tr>
+                </thead>
+                <tbody style="display: block; width: 100%">
+                  <!-- Same-Sex Activity -->
+                  <tr class="legal-data-row track-blue" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🏳️‍🌈</span> Same-Sex Activity Legality</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Illegal (Section 365 active)</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">💍</span>
-                    <span
-                      ><strong>Marriage & Unions:</strong><br />
-                      No legal recognition | <strong>Foreign Recognition:</strong> No</span
-                    >
-                  </li>
+                  <!-- Age of Consent -->
+                  <tr class="legal-data-row track-blue" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">⏱️</span> Age of Consent Equality</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">No Equality</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">👶</span>
-                    <span><strong>Parental Rights:</strong> No rights | <strong>Surrogacy:</strong> Unregulated</span>
-                  </li>
+                  <!-- Civil Partnerships & Unions -->
+                  <tr class="legal-data-row track-amber" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">💍</span> Civil Partnerships and Unions</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Banned</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">🆔</span>
-                    <span
-                      ><strong>Gender Recognition:</strong><br />
-                      Transgender citizens face severe police harassment and misuse of personation laws during document updates</span
-                    >
-                  </li>
+                  <!-- Foreign Marriage Recognition -->
+                  <tr class="legal-data-row track-amber" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">✈️</span> Foreign Marriage Recognition</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">No Recognition</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">🛡️</span>
-                    <span
-                      ><strong>Discrimination:</strong><br />
-                      Narrow safeguards exist under the Personal Data Protection Act classifying sexual orientation as sensitive data</span
-                    >
-                  </li>
+                  <!-- Parental Rights -->
+                  <tr class="legal-data-row track-green" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">👶</span> Parental and Adoption Rights</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Banned</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">🚫</span>
-                    <span
-                      ><strong>Conversion Therapy:</strong><br />
-                      Unregulated</span
-                    >
-                  </li>
+                  <!-- Surrogacy Status -->
+                  <tr class="legal-data-row track-green" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🍼</span> Surrogacy Track Legality</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Illegal</td>
+                  </tr>
 
-                  <li style="margin-bottom: 15px; display: flex; align-items: baseline">
-                    <span style="margin-right: 10px">📢</span>
-                    <span
-                      ><strong>Hate Speech/Crimes:</strong><br />
-                      No formal protections, police frequently refuse to register complaints from gay victims</span
-                    >
-                  </li>
-                </ul>
+                  <!-- Gender Marker Changes -->
+                  <tr class="legal-data-row track-pink" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🆔</span> Gender Recognition and Changes</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Medical Requirements</td>
+                  </tr>
 
-                <div class="resource-container" style="margin-top: 30px">
-                  <h3 style="margin-bottom: 20px">Links:</h3>
+                  <!-- Discrimination Protections -->
+                  <tr class="legal-data-row track-pink" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🛡️</span> Workplace Discrimination Protections</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">None</td>
+                  </tr>
 
-                  <a href="https://www.equaldex.com/region/sri-lanka" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">Equaldex: Sri Lanka</span>
-                    <span class="resource-desc">Real-time crowdsourced and verified legal database.</span>
-                  </a>
+                  <!-- Conversion Therapy Status -->
+                  <tr class="legal-data-row track-red" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🚫</span> Conversion Therapy Ban Status</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">Unregulated</td>
+                  </tr>
 
-                  <a href="https://www.hrw.org/news/2024/07/17/sri-lanka-false-terrorism-cases-enable-repression" target="_blank" rel="noopener" class="resource-card">
-                    <span class="resource-title">Human Rights Watch</span>
-                    <span class="resource-desc">Latest human rights report and legal analysis.</span>
-                  </a>
+                  <!-- Hate Crime Protections -->
+                  <tr class="legal-data-row track-red" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
+                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">📢</span> Hate Crime Protections</td>
+                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">None</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-                  <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
-                    GWN Legal | May 2026
-                  </p>
-                </div>
-              </div>
+            <!-- Verification Links Container -->
+            <div class="resource-container" style="margin-top: 30px">
+              <h3 style="margin-bottom: 20px">Links:</h3>
+
+              <!-- Link 1: Mandatory Legal Database Reference -->
+              <a href="https://www.equaldex.com/region/sri-lanka" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Equaldex: Sri Lanka Legal Database</span>
+                <span class="resource-desc">Real-time crowdsourced and verified statutory legal database.</span>
+              </a>
+
+              <!-- Link 2: Live Media Verification Tracking Recent Court Cases or Arrest Stats -->
+              <a
+                href="https://www.icj.org/resource/marching-ahead-its-time-to-decriminalize/"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="border-left: 4px solid #ff00ff"
+              >
+                <span class="resource-title">International Commission of Jurists: Sri Lanka Report</span>
+                <span class="resource-desc">Vetted analysis of colonial penal codes and systemic police harassment patterns.</span>
+              </a>
+
+              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
+                GWN Legal | June 2026
+              </p>
             </div>
           </div>
         </details>
@@ -960,7 +677,6 @@
       <p class="footer-site-subtitle">Legal Travel Health & Security</p>
     </div>
 
-    <script src="/country-info/country-loader.js?v=1.5"></script>
     <script>
       // 1. Instantly paint a static placeholder so the widget never looks "missing"
       document.addEventListener("DOMContentLoaded", () => {
@@ -1075,5 +791,24 @@
         });
       });
     </script>
+    <style>
+      /* Webkit engines (Chrome, Safari, Edge, Mobile viewports) */
+      div::-webkit-scrollbar {
+        height: 6px;
+      }
+      div::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+      div::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #ff00ff, #ffbc00);
+        border-radius: 10px;
+      }
+      /* Modern Cross-Browser Standard (Firefox) */
+      div {
+        scrollbar-color: #ff00ff rgba(255, 255, 255, 0.05);
+        scrollbar-width: thin;
+      }
+    </style>
   </body>
 </html>
