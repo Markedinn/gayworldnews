@@ -139,11 +139,6 @@
 
       <div class="slider-content">
         <nav class="mobile-nav-links">
-          <div class="landing-search-wrap">
-            <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-            <div id="searchResults" class="search-results-floating"></div>
-          </div>
-
           <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a>
           <a href="/afr">AFRICA</a>
           <a href="/ame">AMERICAS</a>
@@ -211,6 +206,11 @@
     <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
     <a href="/" class="home-btn">HOME</a>
 
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
     <div class="master-grid-container">
       <header class="main-header">
         <img
@@ -245,90 +245,9 @@
 
       <div id="info-display-area" style="grid-column: 1 / -1">
         <!-- ======================================================================= -->
-        <!-- TEMPLATE 1: THE SHORT BRIEF (THE SNAPSHOT)                              -->
-        <!-- Use for: High-turnover news, minor countries, or places without major   -->
-        <!-- historical transitions that just need a lean utility overview.          -->
-        <!-- ======================================================================= -->
-
-        <details class="news-accordion status-border [status-color]">
-          <summary>
-            <h3 class="pod-title">Article</h3>
-          </summary>
-          <div class="news-content-expanded">
-            <div class="rainbow-line mini-line"></div>
-            <div class="article-header-row">
-              <h3 class="main-title">[Title - Max 5 words - Tabloid style, short and punchy]</h3>
-            </div>
-
-            <div class="identity-status-container">
-              <div class="identity-status-bar">
-                <span class="area-label">GAY RISK PROFILE</span>
-                <div class="id-item"><span>SOCIAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
-                <div class="id-item"><span>LEGAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
-                <div class="id-item"><span>DIGITAL</span> <span class="id-dot [SET-DOT-COLOR]"></span></div>
-              </div>
-            </div>
-
-            <h4>[Subheading 1: Max 4 Words Tabloid Style]</h4>
-            <p class="article-lead">
-              [PROMPT: Establish the public reality and long-term organic history of the local gay scene, bridging this background smoothly into any major recent historical or
-              legal milestones. Write exactly two punchy sentences using strong transitional language to create a fluid narrative instead of a dry list entry. Focus explicitly on
-              gay men / MSM. Strict linguistic ban on the word "queer". Tone must be high-end tabloid, fast-paced, and conversational. Zero semicolons or em-dashes.]
-            </p>
-
-            <div class="article-image-container">
-              <img
-                src="[IMG-URL - source an open-source or free image from travel blogs, never use corporate stock like Getty]"
-                alt="[ALT-TEXT - Target localized safety keywords using standard dashes]"
-                class="article-main-img"
-              />
-              <p class="image-caption">Source: [Credit] | [Location]</p>
-            </div>
-
-            <h4>[Subheading 2: Max 4 Words Tabloid Style]</h4>
-            <p>
-              [PROMPT: Deliver the real street reality based on source triangulation, blending it naturally with the previous paragraph using clear transitional flow. Focus on the
-              single most documented unique challenge or lifestyle freedom on the ground for working-class gay men, using elite classes purely as a sharp contrast. Exactly two
-              sentences. Sarcastic towards state hypocrisy. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>[Subheading 3: Max 4 Words Tabloid Style]</h4>
-            <p>
-              [PROMPT: Provide the current legislative and social future outlook to smoothly wrap up the narrative arc. State clearly if the trajectory shows progress, stagnation,
-              or regression based on recorded data. Exactly two sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <blockquote class="article-quote">
-              "[PROMPT: Extract a single sentence verbatim quote under 25 words that directly mirrors the local ground reality from paragraph 2. Source this strictly from a
-              mainstream news outlet, dedicated gay media stream, or a verified public social media post. Do not paraphrase.]"
-              <br />
-              <a href="[Source-URL]" target="_blank" rel="noopener"
-                ><span style="color: #0894f1 !important">[Source Name - Use a human credential label like Community Voice, Local Press Report, or Gay Media Archive]</span></a
-              >
-            </blockquote>
-
-            <div class="resource-container">
-              <h3 style="margin-bottom: 20px">Links:</h3>
-
-              <!-- PROMPT: Dynamic Resource Loop. Generate between 1 and 6 resource cards depending entirely on the actual verified information base used to write the article paragraphs. Do not invent links or create empty placeholders. Never use wikipedia as a source. Wrap individual links inside <a> tags exactly as shown below. -->
-
-              <a href="[Verified-Source-URL]" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-title">[Source Media or Organization Name]</span>
-                <span class="resource-desc"
-                  >[PROMPT: Provide a direct, factual summary of the specific dataset, local report, or incident from this source that verified the claims made in the text above.
-                  Max 12 words. No semicolons or em-dashes.]</span
-                >
-              </a>
-
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | June 2026</p>
-            </div>
-          </div>
-        </details>
-
-        <!-- ======================================================================= -->
-        <!-- TEMPLATE 2: THE SANCTUARY JOURNEY (THE HAVEN MODEL)                      -->
-        <!-- Use for: Countries that have successfully thrown off past authoritarian  -->
-        <!-- or social repression to build an active, safe haven for gay men.        -->
+        <!-- TEMPLATE 1: THE UPWARD ARC (THE TIMELINE MODEL)                        -->
+        <!-- Use for: Countries that have successfully thrown off past repression   -->
+        <!-- to build a modern, active safe haven for gay men.                      -->
         <!-- ======================================================================= -->
 
         <details class="news-accordion status-border green">
@@ -346,15 +265,27 @@
                 <span class="area-label">GAY RISK PROFILE</span>
                 <div class="id-item"><span>SOCIAL</span> <span class="id-dot green"></span></div>
                 <div class="id-item"><span>LEGAL</span> <span class="id-dot green"></span></div>
-                <div class="id-item"><span>DIGITAL</span> <span class="id-dot green"></span></div>
+                <div class="id-item"><span>ONLINE</span> <span class="id-dot green"></span></div>
               </div>
             </div>
 
-            <h4>[Subheading 1: Max 4 Words - Targets Historical Repression / Law Context]</h4>
+            <h4>1940s: [Max 2 Words]</h4>
             <p class="article-lead">
-              [PROMPT: Expose the raw historical baseline of state-sponsored terror or systemic policing before the turnaround. Clearly explain if homosexuality was explicitly
-              banned or if the regime weaponized generic public order, vagrancy, or morality codes to raid cruising spots, extort, or publicly shame gay men. Exactly two sentences.
-              High-end tabloid tone, fast-paced and conversational. Strictly focus on gay men / MSM. Never use the word "queer". Zero semicolons or em-dashes.]
+              [PROMPT: Expose the raw post-WWII legal trap or immediate survival landscape for gay men. Detail if the new regime preserved wartime criminal codes or weaponized
+              public indecency laws to police local cruising spots. Exactly 1-2 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons or em-dashes.
+              Strictly focus on gay men / MSM. Never use the word "queer".]
+            </p>
+
+            <h4>1950s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Map the Cold War era chill or underground survival tactics of local gay men during state-sponsored purges. Show how the community stayed invisible to evade
+              ruinous police entrapment or public exposure. Exactly 1-2 punchy sentences. Fast-paced, conversational tone. Zero semicolons or em-dashes.]
+            </p>
+
+            <h4>1960s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Document the initial underground sparks or early legal friction as brave networks started challenging state persecution. Highlight any early calls for
+              decriminalization or localized pushbacks against corrupt police blackmail. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
             <div class="article-image-container">
@@ -366,38 +297,40 @@
               <p class="image-caption">Source: [Credit] | [Location/Event Name]</p>
             </div>
 
-            <h4>[Subheading 2: Max 4 Words - The Shift / Parliament Battle]</h4>
+            <h4>1970s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Map the immediate aftermath of the regime's collapse or major transition as the battle shifted into parliament. Contrast how bureaucrats used sterile,
-              sanitized "equality" branding on early bills while the true teeth lay in the island's first explicit protections shielding gay men from being fired or outed. Exactly
-              two sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Capture the post-Stonewall explosion of visibility and the collapse of archaic criminal codes. Show how gay men boldly flooded the streets, trading forced
+              isolation for open political defiance. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 3: Max 4 Words - The Tragic Catalyst / Flashpoint]</h4>
+            <h4>1980s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Unpack the raw, human turning point that forced national outrage, detailing a specific historical tragedy, martyr, or bold public action that broke
-              institutional neglect. Connect how this bleeding flashpoint directly catalyzed milestone anti-discrimination reforms in schools or public life. Exactly two sentences.
-              High emotional impact. Zero semicolons or em-dashes.]
+              [PROMPT: Unpack the devastating arrival of the HIV/AIDS crisis and the initial state neglect that fueled it. Pivot instantly to how local gay men mobilized to save
+              themselves, turning a tragic flashpoint into a powerful political force. Exactly 1-2 punchy sentences. High emotional impact. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 4: Max 4 Words - Reclaiming Space & Pink Economy]</h4>
+            <h4>1990s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Describe how this legal armor transformed the physical environment, launching massive public Pride celebrations and weaponizing a lucrative pink economy.
-              Show how visibility forced mainstream society to trade traditional biases for massive commercial success. Exactly two sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Map the formal legal turnaround as parliaments stripped away remnants of discriminatory laws and passed early anti-bias protections. Show how the battle
+              successfully shifted from basic survival to demands for workplace and social equality. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 5: Max 4 Words - The Crown Jewel & Internal Rift]</h4>
+            <h4>2000s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Highlight the ultimate modern legal triumphs like marriage equality or joint adoption milestones. Immediately pivot to expose the current legal gridlock or
-              policy failures where the state still stalls, highlighting any bitter ideological rifts inside the local gay community itself (e.g. reproductive equity versus body
-              exploitation). Exactly two sentences. Lean into state hypocrisy. Zero semicolons or em-dashes.]
+              [PROMPT: Detail the introduction of registered partnerships or civil unions that brought gay couples to the threshold of full legal dignity. Highlight how the
+              domestic pink economy exploded as bars and businesses operated with total legal armor. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 6: Max 4 Words - Triumphant Regional Outlook]</h4>
+            <h4>2010s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Conclude on an incredibly celebratory note, framing the nation as a blinding microcosm of freedom that shames its conservative neighbors. Detail how the
-              "double income, no kids" (DINK) economic reality of local gay men and incoming tourists pours massive cash into wider society, proving that decency pays huge
-              dividends. Exactly two sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Celebrate the landmark arrival of full marriage equality, constitutional protections, or adoption rights. Contrast this crowning triumph against the frantic,
+              failed resistance of local conservative institutions. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
+            </p>
+
+            <h4>2020s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Conclude on the modern frontier, framing the country as a brilliant beacon of freedom that pours tourist cash into the economy. Expose any minor remaining
+              state hypocrisies or legal loose ends while confirming absolute safety for gay men today. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
             <blockquote class="article-quote">
@@ -412,7 +345,7 @@
             <div class="resource-container">
               <h3 style="margin-bottom: 20px">Links:</h3>
 
-              <!-- PROMPT: Dynamic Resource Loop. Generate between 3 and 6 verified resource cards confirming the historical milestones, the tragedy, and economic figures. No placeholders or wikipedia. Wrap individual links inside <a> tags exactly as shown below. -->
+              <!-- PROMPT: Dynamic Resource Loop. Generate between 3 and 6 verified resource cards confirming the legal milestones and historical data. No placeholders or wikipedia. Wrap individual links inside <a> tags exactly as shown below. -->
 
               <a href="[Verified-Source-URL]" target="_blank" rel="noopener" class="resource-card">
                 <span class="resource-title">[High-Authority Source or Media Name]</span>
@@ -427,13 +360,12 @@
         </details>
 
         <!-- ======================================================================= -->
-        <!-- TEMPLATE 3: THE DARK DESCENT (THE REGRESSION MODEL)                     -->
-        <!-- Use for: Regions or nations that formerly boasted bohemian fluidity,   -->
-        <!-- cosmopolitan safety, or historic tolerance, but have actively backslid  -->
-        <!-- into authoritarian crackdowns, political scapegoating, and entrapment.   -->
+        <!-- TEMPLATE 2: THE DARK DESCENT (THE TIMELINE REGRESSION MODEL)            -->
+        <!-- Use for: Nations backsliding into crackdowns, populist scapegoating,   -->
+        <!-- or police entrapment. Change class color to "amber" or "red" as needed.-->
         <!-- ======================================================================= -->
 
-        <details class="news-accordion status-border red">
+        <details class="news-accordion status-border [red/amber]">
           <summary>
             <h3 class="pod-title">Article</h3>
           </summary>
@@ -446,17 +378,29 @@
             <div class="identity-status-container">
               <div class="identity-status-bar">
                 <span class="area-label">GAY RISK PROFILE</span>
-                <div class="id-item"><span>SOCIAL</span> <span class="id-dot red"></span></div>
-                <div class="id-item"><span>LEGAL</span> <span class="id-dot red"></span></div>
-                <div class="id-item"><span>DIGITAL</span> <span class="id-dot red"></span></div>
+                <div class="id-item"><span>SOCIAL</span> <span class="id-dot [red/amber]"></span></div>
+                <div class="id-item"><span>LEGAL</span> <span class="id-dot [red/amber]"></span></div>
+                <div class="id-item"><span>ONLINE</span> <span class="id-dot [red/amber]"></span></div>
               </div>
             </div>
 
-            <h4>[Subheading 1: Max 4 Words - The Lost Legacy of Tolerance]</h4>
+            <h4>1940s: [Max 2 Words]</h4>
             <p class="article-lead">
-              [PROMPT: Establish the historical baseline of cosmopolitan fluidity, organic tolerance, or bohemian safety that formerly characterized this region's urban spaces.
-              Show how gay men or foreign visitors historically navigated an open, vibrant subculture free from aggressive state interference. Exactly two sentences. High-end
-              tabloid tone, fast-paced and conversational. Strictly focus on gay men / MSM. Never use the word "queer". Zero semicolons or em-dashes.]
+              [PROMPT: Establish the post-WWII baseline of early survival or legacy colonial codes. Detail if the state actively hunted local gay men or if the community managed to
+              stay under the radar of chaotic post-war authorities. Exactly 1-2 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons or em-dashes.
+              Strictly focus on gay men / MSM. Never use the word "queer".]
+            </p>
+
+            <h4>1950s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Map the mid-century chill as consolidating regimes began tightening public decency laws or launching early purges. Show how state surveillance forced local
+              networks deep underground to protect themselves from sudden exposure. Exactly 1-2 punchy sentences. Fast-paced and conversational. Zero semicolons or em-dashes.]
+            </p>
+
+            <h4>1960s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Document the codification of anti-gay bias as bureaucrats formalize penalties against deviations from the state path. Detail how police weaponized vague
+              vagrancy or morality laws to target urban meeting spots. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
             <div class="article-image-container">
@@ -468,32 +412,41 @@
               <p class="image-caption">Source: [Credit] | [Location/City Name]</p>
             </div>
 
-            <h4>[Subheading 2: Max 4 Words - The Political Scapegoat Pivot]</h4>
+            <h4>1970s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Expose the precise political turning point where a corrupt regime, economic collapse, or rising religious fundamentalism weaponized homophobia as a state
-              tool. Detail how the authorities deliberately chose to paint gay men as moral deviants to distract the public from collapsing infrastructure and failing state
-              accounts. Exactly two sentences. High sarcasm regarding state hypocrisy. Zero semicolons or em-dashes.]
+              [PROMPT: Unpack the missed opportunities where global liberation movements completely bypassed this region due to local political lockouts. Show how the state
+              actively crushed any early murmurs of visibility to keep the underground silent. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 3: Max 4 Words - The Digital Trap Reality]</h4>
+            <h4>1980s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Deliver the terrifying modern reality on the streets and screens, detailing exactly how the police state or rogue mobs entrap working-class gay men. Expose
-              the tactical use of dating apps for state-sponsored sting operations, blackmail, extortion, and arbitrary arrests that completely shatter digital safety. Exactly two
-              sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Describe how the regime weaponized the global HIV/AIDS crisis to justify aggressive police crackdowns and public shaming campaigns. Detail the state
+              hypocrisy of treating a public health emergency as a criminal conspiracy. Exactly 1-2 punchy sentences. High impact. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 4: Max 4 Words - Systematic Legal Strangling]</h4>
+            <h4>1990s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Detail the systematic stripping away of remaining legal defense walls, such as newly introduced cybercrime laws, debauchery codes, or anti-propaganda bans.
-              Show how these draconian updates have effectively criminalized the mere existence or online communication of local MSM. Exactly two sentences. Zero semicolons or
-              em-dashes.]
+              [PROMPT: Expose the false dawn of post-Cold War or regime transitions that promised modernization but left archaic anti-gay laws completely intact. Show how the new
+              political elite quietly preserved discrimination to appease conservative factions. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
             </p>
 
-            <h4>[Subheading 5: Max 4 Words - Stark Warning & Verdict]</h4>
+            <h4>2000s: [Max 2 Words]</h4>
             <p>
-              [PROMPT: Conclude with a blistering final warning directed at both international travelers and global human rights networks. Issue a sharp call to action to recognize
-              the immense danger facing local men surviving under the boot while refusing to sugarcoat the regime's hollow tourist ad campaigns. Exactly two sentences. Zero
-              semicolons or em-dashes.]
+              [PROMPT: Track the early stages of backsliding as rising religious nationalism or corrupt politicians started testing homophobia as a campaign distraction. Detail how
+              local media began turning gay men into cultural targets to mask economic failures. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
+            </p>
+
+            <h4>2010s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Map the official descent into codified persecution with the arrival of anti-propaganda bans, internet censorship, or harsher prison terms. Show how the state
+              systematically broke down basic public safety and right to associate. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
+            </p>
+
+            <h4>2020s: [Max 2 Words]</h4>
+            <p>
+              [PROMPT: Deliver the modern reality of digital entrapment via weaponized dating apps, arbitrary blackmail, and extortion rings. Conclude with a sharp warning
+              regarding current safety levels and tourist traps, confirming whether the map sits at a risky amber or an absolute red. Exactly 1-2 punchy sentences. Zero semicolons
+              or em-dashes.]
             </p>
 
             <blockquote class="article-quote">

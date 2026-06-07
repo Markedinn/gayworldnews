@@ -174,6 +174,33 @@ window.addEventListener("load", function () {
               else if (complexity > 2000) sizeClass = "size-medium";
             }
 
+            // Centralized toast layout engine
+            function triggerToast(message) {
+              const toast = document.createElement("div");
+              toast.innerText = message;
+              toast.style.position = "fixed";
+              toast.style.bottom = "100px";
+              toast.style.left = "50%";
+              toast.style.transform = "translateX(-50%)";
+              toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
+              toast.style.color = "#ffffff";
+              toast.style.padding = "12px 24px";
+              toast.style.borderRadius = "30px";
+              toast.style.fontSize = "0.9rem";
+              toast.style.fontFamily = "sans-serif";
+              toast.style.zIndex = "99999";
+              toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
+              toast.style.transition = "opacity 0.4s ease";
+              toast.style.pointerEvents = "none";
+
+              document.body.appendChild(toast);
+
+              setTimeout(() => {
+                toast.style.opacity = "0";
+                setTimeout(() => toast.remove(), 400);
+              }, 2000);
+            }
+
             layer.on({
               mouseover: (e) => {
                 const cur = e.target;
@@ -217,57 +244,38 @@ window.addEventListener("load", function () {
                   hoverBox.style.display = "none";
                 }
               },
-              // SMART ENVIRONMENTAL ROUTING BLOCK
+              // REFACTORED MOBILE REDIRECT ENGINE WITH INSTANT FALLBACKS
               click: (e) => {
                 const isTouch = e.originalEvent.pointerType === "touch" || e.originalEvent.touches;
-
-                if (isTouch && hoverBox.getAttribute("data-active") !== key) {
-                  hoverBox.setAttribute("data-active", key);
-                  hoverBox.style.display = "block";
-                  return;
-                }
-
                 const countryData = window.globalData ? window.globalData[key] : null;
 
+                // 1. IF THE DOSSIER EXISTS: Handle the high-end navigation sequence
                 if (countryData?.path) {
-                  // Detect local live-server simulation vs live deployment
-                  const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:";
+                  // First touch on mobile: activate the hover frame and show the guide hint once
+                  if (isTouch && hoverBox.getAttribute("data-active") !== key) {
+                    hoverBox.setAttribute("data-active", key);
+                    hoverBox.style.display = "block";
 
+                    if (!localStorage.getItem("hasSeenMapHint")) {
+                      triggerToast("Tap again to open country guide.");
+                      localStorage.setItem("hasSeenMapHint", "true");
+                    }
+                    return;
+                  }
+
+                  // Second touch on mobile (or instant desktop click): execute routing
+                  const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:";
                   const cleanPath = countryData.path.replace(/^\//, "");
 
                   if (isLocal) {
-                    // Force file system compatibility for previewing local files
                     window.location.href = "/" + cleanPath + ".html";
                   } else {
-                    // Live asset production delivery without extensions
                     window.location.href = "/" + cleanPath;
                   }
-                } else {
-                  const toast = document.createElement("div");
-                  toast.innerText = `${countryData?.name || name} guide coming soon!`;
-
-                  toast.style.position = "fixed";
-                  toast.style.bottom = "100px";
-                  toast.style.left = "50%";
-                  toast.style.transform = "translateX(-50%)";
-                  toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
-                  toast.style.color = "#ffffff";
-                  toast.style.padding = "12px 24px";
-                  toast.style.borderRadius = "30px";
-                  toast.style.fontSize = "0.9rem";
-                  toast.style.fontFamily = "sans-serif";
-                  toast.style.zIndex = "99999";
-                  toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
-                  toast.style.transition = "opacity 0.4s ease";
-                  toast.style.pointerEvents = "none";
-
-                  document.body.appendChild(toast);
-
-                  setTimeout(() => {
-                    toast.style.opacity = "0";
-                    setTimeout(() => toast.remove(), 400);
-                  }, 2000);
-
+                }
+                // 2. IF THE DOSSIER DOES NOT EXIST: Drop the toast instantly on the very first tap
+                else {
+                  triggerToast(`${countryData?.name || name} guide coming soon!`);
                   console.log(`No active guide path for ${key}. Map tier display only.`);
                 }
               },

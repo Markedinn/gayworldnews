@@ -238,21 +238,6 @@ body {
 
 /* --- DESKTOP (min-width: 1101px) --- */
 @media (min-width: 1101px) {
-  .menu-toggle {
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    transform: scale(1);
-    padding: 5px;
-    z-index: 200;
-  }
-
-  .bar {
-    width: 35px;
-    height: 4px;
-    margin: 6px 0;
-  }
-
   .glass-nav {
     top: 2rem;
     left: 1.5rem;
@@ -269,21 +254,6 @@ body {
 
   .mobile-utility-links {
     padding-bottom: 40px;
-  }
-
-  .menu-toggle {
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    transform: scale(1);
-    padding: 5px;
-    z-index: 200;
-  }
-
-  .bar {
-    width: 35px;
-    height: 4px;
-    margin: 6px 0;
   }
 
   #translator-anchor {
@@ -306,21 +276,6 @@ body {
     letter-spacing: 6px;
     margin-top: 8px;
     opacity: 0.9;
-  }
-
-  .menu-toggle {
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    transform: scale(1);
-    padding: 5px;
-    z-index: 200;
-  }
-
-  .bar {
-    width: 35px;
-    height: 4px;
-    margin: 6px 0;
   }
 }
 

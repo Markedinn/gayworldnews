@@ -81,10 +81,6 @@
     <div class="side-menu" id="sideMenu">
       <div class="slider-content">
         <nav class="mobile-nav-links">
-          <div class="landing-search-wrap">
-            <input autocomplete="off" id="globalSearch" placeholder="FIND COUNTRY" type="text" />
-            <div class="search-results-floating" id="searchResults"></div>
-          </div>
           <a class="breaking-news-btn" href="/breaking">BREAKING NEWS</a><a href="/afr">AFRICA</a>
           <a href="/ame">AMERICAS</a>
           <a href="/asi">ASIA</a>
@@ -144,13 +140,19 @@
 
     <a class="exit-btn" href="https://youtube.com">QUICK EXIT</a>
     <a class="home-btn" href="/">HOME</a>
+
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
     <div class="master-grid-container">
       <header class="main-header">
         <img
           alt="Flag of Algeria"
           src="https://upload.wikimedia.org/wikipedia/commons/7/77/Flag_of_Algeria.svg"
           style="border-radius: 4px; margin-top: 40px; border: 1px solid rgba(255, 255, 255, 0.1)"
-          width="160"
+          width="260"
         />
         <h1 class="main-title" id="country-name">Algeria</h1>
       </header>

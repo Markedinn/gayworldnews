@@ -110,30 +110,36 @@
         align-items: center; /* Ensures cards stay centered inside the container */
       }
 
-      /* THE PERFECT FROSTED GLASS CARD */
+      /* THE PERFECT FLOATING FROSTED GLASS CARD */
       .glass-mission-card {
-        width: 90%;
-        margin-top: 4rem;
-        margin-bottom: 25px;
+        width: 92%;
+        max-width: 900px; /* Keeps it perfectly scaled with your grid */
+        margin: 4rem auto 25px auto; /* Centers it perfectly on the page */
         padding: 40px 50px;
         border-radius: 14px;
         position: relative;
         display: block;
-        background: #faf9f6;
-        opacity: 0.9;
-        border: 1px solid rgba(255, 255, 255, 0.4) !important;
 
-        box-shadow: 15px 15px 32px 5px rgba(37, 37, 37, 0.9);
+        /* TRUE GLASS: Background transparency + blur filter */
+        background: rgba(250, 249, 246, 0.88);
+        backdrop-filter: blur(16px) saturate(130%);
+        -webkit-backdrop-filter: blur(16px) saturate(130%);
+
+        /* THE FLOATING BRIGHT EDGE: Cut through high-contrast backgrounds */
+        border: 2px solid rgba(255, 255, 255, 0.75) !important;
+
+        /* THE DOUBLE-LAYER SHADOW: Crisp floor drop + wide ambient glow */
+        box-shadow:
+          0 4px 10px rgba(0, 0, 0, 0.15),
+          0 25px 55px rgba(0, 0, 0, 0.3);
+
         transition:
-          transform 0.5s ease,
+          transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
           box-shadow 0.5s ease;
       }
 
+      /* CLEANED TYPOGRAPHY (No Duplicate Clashing) */
       .glass-mission-card p {
-        line-height: 1.8;
-        font-size: 1.1rem;
-        color: #000000;
-        margin-bottom: 20px;
         font-family:
           "Inter",
           -apple-system,
@@ -141,6 +147,7 @@
           "Segoe UI",
           Roboto,
           sans-serif;
+        color: #000000;
         font-weight: 400;
         font-size: 1.15rem;
         line-height: 1.6;
@@ -148,9 +155,11 @@
         text-align: left;
       }
 
+      /* CHARCOAL HEADINGS WITH WHITE LIFT GLOW */
       .glass-mission-card h1,
       .glass-mission-card h2 {
-        color: #8b0000;
+        color: #4946469d;
+        text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8); /* Crisp white reflection */
       }
 
       .gt_container {
@@ -195,6 +204,11 @@
     <main class="page-container">
       <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
       <a href="/" class="home-btn">HOME</a>
+
+      <div class="landing-search-wrap">
+        <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+        <div id="searchResults" class="search-results-floating"></div>
+      </div>
       <div id="translator-anchor"></div>
 
       <div class="menu-toggle" onclick="toggleMenu()">
@@ -206,10 +220,6 @@
       <div id="sideMenu" class="side-menu">
         <div class="slider-content">
           <nav class="mobile-nav-links">
-            <div class="landing-search-wrap">
-              <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-              <div id="searchResults" class="search-results-floating"></div>
-            </div>
             <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
 
             <a href="/afr">AFRICA</a>
@@ -277,7 +287,7 @@
         </div>
       </div>
       <div class="glass-mission-card">
-        <h1 class="main-title" style="margin-bottom: 30px; text-align: center">About Us</h1>
+        <h1 style="margin-bottom: 30px; text-align: center">About Us</h1>
 
         <p>
           We do not apologize for our mission at gayworldnews.com. We are here to support and track how gay men live, survive, and navigate daily life in every country and
@@ -369,6 +379,74 @@
         <p style="font-size: 1.15rem; line-height: 1.6; color: #000000; margin-bottom: 0px !important">
           Open a taxi app like Grab or Gojek on your phone. Type the address or the name of the place into the search box. If the app finds the location, shows a route on the map,
           and gives you a price, the address is correct. If the app cannot find the spot, check your spelling or assume the place has shut down.
+        </p>
+      </div>
+
+      <!-- Factual Testing Guide Component (About Page - Glass Template) -->
+      <div id="hiv-realities" class="glass-mission-card">
+        <h2 style="margin-bottom: 30px; text-align: center">Do you need to test for HIV?</h2>
+
+        <h3 style="color: #0894f1; font-size: 1.25rem; margin-top: 25px; margin-bottom: 10px; font-weight: 700">Phase 1: Early Exposure & Seroconversion</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          Within 2 to 6 weeks after exposure, the majority of people experience a seroconversion illness. This is your immune system's first big fight with the virus. The intensity
+          of this illness varies wildly. For some it is a mild bug, but for many it presents as a sudden, exceptionally severe flu that can cause you to experience high fevers and
+          extreme muscle aches, suffer from overwhelming fatigue that leaves you temporarily unable to move, or experience sudden drop-offs in blood pressure and dizzy spells.
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.25rem; margin-top: 25px; margin-bottom: 10px; font-weight: 700">The Danger Zone</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          This intense illness often vanishes entirely within a few days or a single week. Because it disappears so quickly and completely, it is very easy to ignore and many
+          people just put it down to a bad cold. Don't do that! Get tested.
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.25rem; margin-top: 25px; margin-bottom: 10px; font-weight: 700">Phase 2: The Silent Phase (The Latent Spectrum)</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          Once the early seroconversion illness disappears, the virus goes quiet. This is the most unpredictable stage of the condition. In a small percentage of cases (The Rapid
+          Progressors), the immune system can begin to show severe clinical drop-offs in under a year. To the other extreme, many people live with the virus replicating invisibly
+          in their bodies for 14, 15, or more years with absolutely zero symptoms. Most people's symptoms show between these extremes. You can feel completely healthy, active, and
+          physically fine while the virus slowly uses up your body's natural defenses over months and years.
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.25rem; margin-top: 25px; margin-bottom: 10px; font-weight: 700">Phase 3: Late-Stage Symptoms</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          When the silent phase ends and the immune system becomes heavily depleted, noticeable and uncomfortable symptoms finally surface. Some of the most common late-stage
+          warning signs include persistent, heavy night sweats and unexplained weight loss, chronic fatigue that does not improve with rest, recurrent thrush (white coatings) in
+          the mouth or throat, and frequent, unusually severe outbreaks of cold sores or shingles.
+        </p>
+
+        <h3
+          style="
+            color: #0894f1;
+            font-size: 1.25rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid rgba(8, 148, 241, 0.3);
+            padding-bottom: 5px;
+          "
+        >
+          The Ultimate Benefit of Early Testing: A Longer, Healthier Life
+        </h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          Finding out your status early is not a death sentence. With modern medical setups, it is actually a massive health advantage that simply removes the fear of testing:
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.1rem; margin-top: 20px; margin-bottom: 8px; font-weight: 700">Normal Life Expectancy</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          If you test positive in a country with a decent healthcare system, your life range will be completely normal. Modern, highly effective medications reduce the virus to
+          entirely undetectable levels with a single daily pill or the new injection regimes, meaning the virus cannot harm your health or be passed on to partners.
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.1rem; margin-top: 20px; margin-bottom: 8px; font-weight: 700">The Monitoring Advantage</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          If you are lucky enough to be registered within a structured health system, you will have your blood work checked thoroughly by specialists every few months.
+        </p>
+
+        <h3 style="color: #0894f1; font-size: 1.1rem; margin-top: 20px; margin-bottom: 8px; font-weight: 700">Catching Other Diseases Early</h3>
+        <p style="font-size: 0.9rem; line-height: 1.6; margin-bottom: 0">
+          This constant, proactive medical tracking means any other standard health issues - like high cholesterol, blood pressure changes, vitamin deficiencies, or early-stage
+          general illnesses that everyone gets as they age - are caught and treated months or even years before a regular citizen would ever notice them.
         </p>
       </div>
 

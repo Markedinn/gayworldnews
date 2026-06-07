@@ -66,6 +66,10 @@
   </head>
   <body>
     <a href="https://google.com" class="exit-btn" rel="noopener">QUICK EXIT</a>
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
     <button class="legend-btn" onclick="toggleMobileLegend()">
       LEGEND
       <div id="mobileLegendContent" class="mobile-legend-content">
@@ -86,10 +90,6 @@
     <div id="sideMenu" class="side-menu">
       <div class="slider-content">
         <nav class="mobile-nav-links">
-          <div class="landing-search-wrap">
-            <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
-            <div id="searchResults" class="search-results-floating"></div>
-          </div>
           <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
 
           <a href="afr">AFRICA</a>

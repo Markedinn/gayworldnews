@@ -68,55 +68,63 @@ body {
 .zoom-active .side-country-label {
   display: block;
 }
+/* --- GLOBAL SEARCH (TWIN TO TRANSLATOR) --- */
+
+.landing-search-wrap {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  width: 240px;
+  z-index: 250; /* Floats safely above the interactive map and the side drawer */
+}
 
 .landing-search-wrap input {
   width: 100%;
-  height: auto;
+  height: 35px; /* Matches translator height pixel for pixel */
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 10px 44px !important;
+  padding: 0 15px !important;
   border-radius: 6px;
-  background: rgba(255, 255, 255, 0.8) !important;
+  background: transparent !important;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  color: #000000;
-  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  color: #ffffff !important; /* Swapped to white text for the glass look */
+  border: 1.5px solid rgba(255, 255, 255, 0.8) !important;
   font-weight: 800;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 0.8rem; /* Matched translator typography sizing */
   letter-spacing: 1.5px;
   text-align: center;
   outline: none;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
   text-decoration: none;
-
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
 }
 
 .landing-search-wrap input:hover {
-  background-color: #ffffff;
-  transform: scaleY(1.1) !important;
-  opacity: 1 !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.99) !important;
+  transform: translateY(-3px) scale(1.02); /* Clean lift animation matching translator */
 }
 
 .landing-search-wrap input::placeholder {
-  color: #000000;
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 1px;
+  color: rgba(255, 255, 255);
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1.5px;
   opacity: 1;
 }
 
 .landing-search-wrap input:hover::placeholder {
-  color: #000000 !important;
+  color: #ffffff !important;
 }
 
 .search-results-floating {
   position: absolute;
-  top: 80%;
-  top: auto !important;
+  top: 100% !important; /* Drops cleanly directly below the 35px fixed search bar */
   left: 0;
   width: 100%;
   display: none;
@@ -133,13 +141,8 @@ body {
   overflow-x: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  margin-top: 1px;
+  margin-top: 5px; /* Clean air gap below input bar */
   max-height: 45vh;
-}
-
-.landing-search-wrap {
-  position: relative;
-  width: 90%;
 }
 
 .search-results-floating .side-country-card,
@@ -149,6 +152,21 @@ body {
   color: #000000 !important;
   font-weight: 600 !important;
   text-decoration: none;
+}
+
+.side-country-label {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 11px;
+  pointer-events: none;
+  display: none;
+}
+
+.zoom-active .side-country-label {
+  display: block;
 }
 
 .side-country-card {
@@ -188,9 +206,9 @@ body {
 
 .menu-toggle {
   position: fixed;
-  top: 2rem;
+  top: 5.5rem; /* Pushed down to clear the search bar footprint */
   right: 2rem;
-  z-index: 150;
+  z-index: 300; /* Keeps it layered cleanly near the search container */
   cursor: pointer;
   padding: 10px;
 }
@@ -357,7 +375,7 @@ body {
   border-radius: 6px !important;
   box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
   color: #ffffff !important;
-  font-weight: 400;
+  font-weight: 400 !important;
   text-transform: uppercase;
   font-size: 0.9rem;
   letter-spacing: 1.5px;
@@ -647,10 +665,10 @@ body {
   .menu-toggle {
     position: fixed;
     right: 2rem;
-    top: 2rem;
+    top: 5.5rem; /* Pushed down to clear the new search bar footprint */
     transform: scale(1);
     padding: 5px;
-    z-index: 200;
+    z-index: 300;
   }
 
   #translator-anchor {
@@ -673,10 +691,10 @@ body {
   .menu-toggle {
     position: fixed;
     right: 2rem;
-    top: 2rem;
+    top: 5.5rem; /* Pushed down to clear the new search bar footprint */
     transform: scale(1);
     padding: 5px;
-    z-index: 200;
+    z-index: 300;
   }
 
   .bar {
@@ -714,12 +732,12 @@ body {
   }
 
   .menu-toggle {
-    top: 2rem;
+    top: 5.5rem; /* Pushed down to clear the new search bar footprint */
     right: 2rem;
     display: block;
     transform: scale(1);
     padding: 5px;
-    z-index: 200;
+    z-index: 300;
   }
 
   .slider-content {
@@ -742,12 +760,6 @@ body {
     background-attachment: fixed;
   }
 
-  .main-site-title {
-    font-size: 1.2rem;
-    letter-spacing: 6px;
-    top: 60px;
-  }
-
   .portal-text-link {
     font-size: 14px;
     letter-spacing: 1.5px;
@@ -756,10 +768,10 @@ body {
   .menu-toggle {
     position: fixed;
     right: 2rem;
-    top: 1.5rem;
+    top: 2rem; /* Balanced spacing for small mobile viewports */
     display: block;
     transform: scale(1);
-    z-index: 150;
+    z-index: 300; /* Bumped to match the desktop layer scale */
   }
 
   .bar {
@@ -772,7 +784,7 @@ body {
     top: 2rem;
     left: 2rem;
     right: auto;
-    width: 240px;
+    width: 210px;
     font-size: 0.5rem;
     font-weight: 300;
     z-index: 150;
@@ -782,6 +794,14 @@ body {
     letter-spacing: 1.5px;
     font-size: 0.8rem;
     font-weight: 800;
+  }
+
+  .landing-search-wrap {
+    top: 5rem; /* Placed directly under the translator */
+    left: 2rem; /* Anchored to the left margin */
+    right: auto; /* Completely breaks the desktop top-right rule */
+    width: 210px; /* Matches the translator width pixel-for-pixel */
+    z-index: 250;
   }
 
   .side-menu {

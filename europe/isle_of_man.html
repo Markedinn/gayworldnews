@@ -106,10 +106,6 @@
       <a class="close-btn" href="javascript:void(0)" onclick="toggleMenu()">×</a>
       <div class="slider-content">
         <nav class="mobile-nav-links">
-          <div class="landing-search-wrap">
-            <input autocomplete="off" id="globalSearch" placeholder="FIND COUNTRY" type="text" />
-            <div class="search-results-floating" id="searchResults"></div>
-          </div>
           <a class="breaking-news-btn" href="/breaking">BREAKING NEWS</a><a href="/afr">AFRICA</a>
           <a href="/ame">AMERICAS</a>
           <a href="/asi">ASIA</a>
@@ -169,6 +165,12 @@
 
     <a class="exit-btn" href="https://google.com">QUICK EXIT</a>
     <a class="home-btn" href="/">HOME</a>
+
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
     <div class="master-grid-container">
       <header class="main-header">
         <img
