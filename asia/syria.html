@@ -33,9 +33,7 @@
   <meta name="twitter:description" content="Gay travel, health, legal, and security snapshot for Syria." />
   <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
-  <!-- Unified Structured Data for Google Rich Snippets & AI Citations -->
   <script type="application/ld+json">
-  [
     {
       "@context": "https://schema.org",
       "@type": "NewsArticle",
@@ -62,26 +60,34 @@
           "url": "https://gayworldnews.com/images/gwn-logo.jpg"
         }
       }
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayworldnews.com/" },
-        /* AI PROMPT FOR POSITION 2: Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. Do NOT use the full folder name here. */
-        { "@type": "ListItem", "position": 2, "name": "Asia", "item": "https://gayworldnews.com/asi" },
-        { "@type": "ListItem", "position": 3, "name": "Syria", "item": "https://gayworldnews.com/asia/syria" }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home and Interactive Map", "item": "https://gayworldnews.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Syria", "item": "https://gayworldnews.com/asia/syria" }
-      ]
     }
-  ]
+  </script>
+
+  <!-- 
+    DEVELOPER & AI ROUTING PROMPT FOR BREADCRUMB POSITION 2: 
+    Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. 
+    Do NOT use the full folder name here.
+  -->
+  <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://gayworldnews.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Asia", "item": "https://gayworldnews.com/asi" },
+          { "@type": "ListItem", "position": 3, "name": "Syria", "item": "https://gayworldnews.com/asia/syria" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home and Interactive Map", "item": "https://gayworldnews.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Syria", "item": "https://gayworldnews.com/asia/syria" }
+        ]
+      }
+    ]
   </script>
 
   <!-- Root-Relative Asset Routing to Bulletproof Sub-folder Nesting -->

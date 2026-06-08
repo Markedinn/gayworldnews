@@ -40,34 +40,42 @@
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
     <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
-          },
-          "headline": "{COUNTRY_NAME} Gay Travel, Health & Legal Safety Report 2026",
-          "description": "Essential 2026 guide for gay men traveling to {COUNTRY_NAME}. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
-          "image": "https://gayworldnews.com/images/gwn-logo.jpg",
-          "datePublished": "2026-06-04",
-          "dateModified": "2026-06-04",
-          "author": {
-            "@type": "Organization",
-            "name": "Gay World News",
-            "url": "https://gayworldnews.com/"
-          },
-          "publisher": {
-            "@type": "Organization",
-            "name": "Gay World News",
-            "url": "https://gayworldnews.com/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://gayworldnews.com/images/gwn-logo.jpg"
-            }
-          }
+      {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
         },
+        "headline": "{COUNTRY_NAME} Gay Travel, Health & Legal Safety Report 2026",
+        "description": "Essential 2026 guide for gay men traveling to {COUNTRY_NAME}. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
+        "image": "https://gayworldnews.com/images/gwn-logo.jpg",
+        "datePublished": "2026-06-04",
+        "dateModified": "2026-06-04",
+        "author": {
+          "@type": "Organization",
+          "name": "Gay World News",
+          "url": "https://gayworldnews.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Gay World News",
+          "url": "https://gayworldnews.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://gayworldnews.com/images/gwn-logo.jpg"
+          }
+        }
+      }
+    </script>
+
+    <!-- 
+      DEVELOPER & AI ROUTING PROMPT FOR BREADCRUMB POSITION 2: 
+      Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. 
+      Do NOT use the full folder name here.
+    -->
+    <script type="application/ld+json">
+      [
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
@@ -78,7 +86,6 @@
               "name": "Home",
               "item": "https://gayworldnews.com/"
             },
-            /* AI PROMPT FOR POSITION 2: Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. Do NOT use the full folder name here. */
             {
               "@type": "ListItem",
               "position": 2,
@@ -885,100 +892,73 @@
               </p>
             </div>
 
-            <!-- Swipeable Mobile Container Wrapper -->
-            <div style="overflow-x: auto; width: 100%; margin-bottom: 25px; -webkit-overflow-scrolling: touch">
-              <table style="width: 100%; border-collapse: collapse; text-align: left; min-width: 500px">
-                <thead>
-                  <tr style="border-bottom: 2px solid rgba(255, 255, 255, 0.1); display: flex; justify-content: space-between; width: 100%">
-                    <th style="padding: 10px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.6; width: 100%; flex-grow: 1">Legal Category</th>
-                    <th
-                      style="
-                        padding: 10px;
-                        font-size: 0.85rem;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
-                        opacity: 0.6;
-                        text-align: right;
-                        white-space: nowrap;
-                        margin-left: auto;
-                      "
-                    >
-                      2026 Statutory Verdict
-                    </th>
-                  </tr>
-                </thead>
-                <tbody style="display: block; width: 100%">
-                  <!-- Same-Sex Activity -->
-                  <tr class="legal-data-row track-blue" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🏳️‍🌈</span> Same-Sex Activity Legality</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">[Legal / Illegal + Year decriminalized]</td>
-                  </tr>
+            <!-- Authentic Legal Cards Bento Grid Layout -->
+            <div class="legal-cards-grid">
+              <!-- Card 1: Same-Sex Activity (Wide Panel) -->
+              <div class="legal-card lc-wide lc-1">
+                <h4 class="legal-card-label"><span>🏳️‍🌈</span> Same-Sex Activity</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Age of Consent -->
-                  <tr class="legal-data-row track-blue" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">⏱️</span> Age of Consent Equality</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">[Equal Age / Specific Discrepancies]</td>
-                  </tr>
+              <!-- Card 2: Age of Consent (Square Panel) -->
+              <div class="legal-card lc-2">
+                <h4 class="legal-card-label"><span>⏱️</span> Age of Consent</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Civil Partnerships & Unions -->
-                  <tr class="legal-data-row track-amber" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">💍</span> Civil Partnerships and Unions</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">
-                      [Marriage Status / Civil Union Recognition / Banned]
-                    </td>
-                  </tr>
+              <!-- Card 3: Civil Partnerships (Square Panel) -->
+              <div class="legal-card lc-3">
+                <h4 class="legal-card-label"><span>💍</span> Civil Partnerships</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Foreign Marriage Recognition -->
-                  <tr class="legal-data-row track-amber" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">✈️</span> Foreign Marriage Recognition</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">
-                      [Recognized / Constitutional Ban / No Recognition]
-                    </td>
-                  </tr>
+              <!-- Card 4: Marriage Equality (Wide Panel) -->
+              <div class="legal-card lc-wide lc-4">
+                <h4 class="legal-card-label"><span>💍</span> Marriage</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Parental Rights -->
-                  <tr class="legal-data-row track-green" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">👶</span> Parental and Adoption Rights</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">
-                      [Joint Adoption Status / Second-Parent Rights / Banned]
-                    </td>
-                  </tr>
+              <!-- Card 5: Foreign Marriage Recognition (Square Panel) -->
+              <div class="legal-card lc-5">
+                <h4 class="legal-card-label"><span>✈️</span> Foreign Marriage</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Surrogacy Status -->
-                  <tr class="legal-data-row track-green" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🍼</span> Surrogacy Track Legality</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">[Legal / Banned / Unregulated]</td>
-                  </tr>
+              <!-- Card 6: Adoption Rights (Square Panel) -->
+              <div class="legal-card lc-6">
+                <h4 class="legal-card-label"><span>👶</span> Adoption</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Gender Marker Changes -->
-                  <tr class="legal-data-row track-pink" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🆔</span> Gender Recognition and Changes</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">[Self-ID / Medical Requirements / Outlawed]</td>
-                  </tr>
+              <!-- Card 7: Surrogacy Track (Square Panel) -->
+              <div class="legal-card lc-7">
+                <h4 class="legal-card-label"><span>🍼</span> Surrogacy</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Discrimination Protections -->
-                  <tr class="legal-data-row track-pink" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🛡️</span> Workplace Discrimination Protections</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">
-                      [Constitutional Protection / Employment Law Code / None]
-                    </td>
-                  </tr>
+              <!-- Card 8: Gender Markers (Square Panel) -->
+              <div class="legal-card lc-8">
+                <h4 class="legal-card-label"><span>🆔</span> Gender Recognition</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Conversion Therapy Status -->
-                  <tr class="legal-data-row track-red" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">🚫</span> Conversion Therapy Ban Status</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">[Banned / Unregulated / Legal]</td>
-                  </tr>
+              <!-- Card 9: Workplace Discrimination (Wide Panel) -->
+              <div class="legal-card lc-wide lc-9">
+                <h4 class="legal-card-label"><span>🛡️</span> Workplace Discrimination</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
 
-                  <!-- Hate Crime Protections -->
-                  <tr class="legal-data-row track-red" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); display: flex; align-items: center; width: 100%">
-                    <td style="padding: 12px 10px; width: 100%; flex-grow: 1"><span style="margin-right: 8px">📢</span> Hate Crime Protections</td>
-                    <td style="padding: 12px 10px; text-align: right; font-weight: 600; white-space: nowrap; margin-left: auto">
-                      [Explicit Protective Penalties / Pending Bills / None]
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <!-- Card 10: Conversion Therapy Status (Square Panel) -->
+              <div class="legal-card lc-10">
+                <h4 class="legal-card-label"><span>🚫</span> Conversion Therapy</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 11: Hate Crime Protections (Square Panel) -->
+              <div class="legal-card lc-11">
+                <h4 class="legal-card-label"><span>📢</span> Hate Crime Laws</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
             </div>
 
             <!-- Verification Links Container -->

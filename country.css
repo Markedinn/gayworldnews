@@ -1596,6 +1596,126 @@ li span {
 .track-red {
   border-left: 3px solid #ff4d4d;
 }
+/* ==========================================================================
+   GAY WORLD NEWS - FIXED 2-COLUMN BENTO SYSTEM (ACCORDION OPTIMIZED)
+   ========================================================================== */
+
+/* 1. Parent Grid Container (Forced 2-Column Desktop Matrix) */
+.legal-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly 2 columns on desktop/tablet */
+  gap: 16px;
+  margin: 20px 0 30px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 2. Base Component Card Styles */
+.legal-card {
+  background: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.015);
+  grid-column: span 1; /* Takes up 1 of the 2 columns */
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.legal-card:hover {
+  background: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Wide Bento Panels (Spans 100% of the 2-column container width) */
+.lc-wide {
+  grid-column: span 2;
+}
+
+/* 3. Typography Hierarchy (Accessible Charcoal & Black) */
+.legal-card-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #444444;
+  display: flex;
+  align-items: center;
+  margin: 0 0 10px 0;
+}
+
+.legal-card-label span {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.legal-card-verdict {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  line-height: 1.3;
+}
+
+/* 4. Descending Rainbow Borders (11-Card Sequential Loop) */
+.lc-1 {
+  border-left: 4px solid #ff5964 !important;
+} /* Soft Red */
+.lc-2 {
+  border-left: 4px solid #ff7e5f !important;
+} /* Coral */
+.lc-3 {
+  border-left: 4px solid #ffa64d !important;
+} /* Soft Orange */
+.lc-4 {
+  border-left: 4px solid #f7cc46 !important;
+} /* Soft Yellow Gold */
+.lc-5 {
+  border-left: 4px solid #38b000 !important;
+} /* Mid Green */
+.lc-6 {
+  border-left: 4px solid #00b4d8 !important;
+} /* Light Blue */
+.lc-7 {
+  border-left: 4px solid #0077b6 !important;
+} /* Deep Ocean Blue */
+.lc-8 {
+  border-left: 4px solid #7209b7 !important;
+} /* Indigo Purple */
+.lc-9 {
+  border-left: 4px solid #b5179e !important;
+} /* Deep Magenta */
+.lc-10 {
+  border-left: 4px solid #f72585 !important;
+} /* Neon Pink */
+.lc-11 {
+  border-left: 4px solid #7a7adb !important;
+} /* Soft Slate Violet */
+
+/* 5. Mobile Viewport Collapse */
+@media (max-width: 600px) {
+  .legal-cards-grid {
+    grid-template-columns: 1fr !important; /* Drops to a single full-width column on phones */
+    gap: 12px;
+  }
+  .lc-wide,
+  .legal-card {
+    grid-column: span 1 !important;
+    min-height: auto !important;
+    padding: 14px;
+  }
+  .legal-card-label {
+    font-size: 0.7rem;
+  }
+  .legal-card-verdict {
+    font-size: 1.05rem;
+  }
+}
 
 /* Mobile Tweak for the Samsung S23 Ultra display */
 @media (max-width: 768px) {
