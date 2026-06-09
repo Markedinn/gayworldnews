@@ -308,6 +308,7 @@ Object.assign(globalData, {
     name: "Thailand",
     continent: "asia",
     status: "green",
+    path: "asia/thailand",
   },
 
   turkey: {
