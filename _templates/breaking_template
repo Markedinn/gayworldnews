@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="English" />
+
+    <title>[Insert Page Title] | Gay World News</title>
+
+    <!-- SEO Metadata -->
+    <meta id="meta-desc" name="description" content="[Insert Description]" />
+    <meta name="keywords" content="[Insert Keywords]" />
+    <meta name="author" content="Gay World News" />
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/breaking" />
+
+    <!-- Open Graph & Twitter Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/breaking" />
+    <meta property="og:title" id="og-title" content="Breaking Gay News Hub" />
+    <meta property="og:description" id="og-desc" content="Urgent global news stream." />
+    <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "headline": "Breaking Gay News | Global Alerts",
+        "url": "https://gayworldnews.com/breaking",
+        "publisher": { "@type": "NewsMediaOrganization", "name": "Gay World News" }
+      }
+    </script>
+
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+    <link rel="stylesheet" href="/breaking.css?v=6.0" />
+    <link rel="stylesheet" href="/index.css?v=6.0" />
+    <script src="/index.js" defer></script>
+  </head>
+
+  <body class="standard-page">
+    <div id="translator-anchor"></div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Side Menu & Nav -->
+    <div id="sideMenu" class="side-menu">
+      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
+        </nav>
+      </div>
+    </div>
+
+    <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+    <a href="/" class="home-btn">HOME</a>
+
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
+    <div class="master-grid-container">
+      <header class="main-header">
+        <h1 class="main-title">Gay World News</h1>
+        <h2 class="main-site-subtitle" style="font-size: 1.6rem">BREAKING</h2>
+      </header>
+
+      <main class="news-feed-wrapper">
+        <div id="manual-news-portal">
+          <!-- START: INSERT NEW STORIES BELOW THIS LINE -->
+
+          <!-- REUSABLE STORY MODULE: COPY THIS BLOCK FOR NEW UPDATES -->
+          <details class="news-accordion manual-pinned">
+            <summary>
+              <div class="tag-bar">
+                <span class="tag tag-down">Rights Trend: [Down/Up]</span>
+              </div>
+              <div class="country-label manual-red-title">[COUNTRY NAME]</div>
+              <h3>[INSERT HEADLINE HERE]</h3>
+              <div class="date-manual">[Date]</div>
+            </summary>
+
+            <div class="news-content-expanded">
+              <div class="audio-controls" style="margin-bottom: 15px">
+                <button class="play-news-btn">
+                  <span class="play-icon">▶</span>
+                  <span class="button-text">Listen to Article</span>
+                </button>
+              </div>
+
+              <div class="news-text">
+                <p>[INSERT PARAGRAPH 1]</p>
+                <p>[INSERT PARAGRAPH 2]</p>
+              </div>
+
+              <div class="resource-container" style="margin-top: 20px">
+                <a href="[LINK]" target="_blank" rel="noopener" class="resource-card">
+                  <span class="resource-title">[Source Name]</span>
+                  <span class="resource-desc">[Brief description of link]</span>
+                </a>
+              </div>
+            </div>
+          </details>
+          <!-- END: REUSABLE STORY MODULE -->
+        </div>
+
+        <div class="footer-branding-wrapper">
+          <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
+          <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+      window.globalData = window.globalData || {};
+    </script>
+    <script src="country-info/country-files/africa-data.js?v=1.5" defer></script>
+    <script src="country-info/country-files/americas-data.js?v=1.5" defer></script>
+    <script src="country-info/country-files/asia-data.js?v=1.5" defer></script>
+    <script src="country-info/country-files/europe-data.js?v=1.5" defer></script>
+    <script src="country-info/country-files/oceania-data.js?v=1.5" defer></script>
+    <script src="country-info/country-loader.js?v=1.5"></script>
+
+    <!-- UI Logic -->
+    <script>
+      function toggleMenu() {
+        document.getElementById("sideMenu").classList.toggle("open");
+      }
+      // ... (Include your existing menu/search scripts here)
+    </script>
+
+    <!-- Audio Playback Script -->
+    <script>
+      document.addEventListener("click", function (e) {
+        const btn = e.target.closest(".play-news-btn");
+        if (!btn) return;
+        const synth = window.speechSynthesis;
+        const card = btn.closest(".news-content-expanded");
+        const textToRead = card.querySelector(".news-text").innerText;
+        const buttonText = btn.querySelector(".button-text");
+        const playIcon = btn.querySelector(".play-icon");
+
+        if (synth.speaking) {
+          synth.cancel();
+          buttonText.innerText = "Listen to Article";
+          playIcon.innerText = "▶";
+          return;
+        }
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        utterance.rate = 0.9;
+        utterance.pitch = 1.0;
+        utterance.onstart = () => {
+          playIcon.innerText = "⏹";
+        };
+        utterance.onend = () => {
+          buttonText.innerText = "Listen to Article";
+          playIcon.innerText = "▶";
+        };
+        synth.speak(utterance);
+      });
+    </script>
+
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-GSGX0B7ZB3");
+    </script>
+  </body>
+</html>

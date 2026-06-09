@@ -252,114 +252,193 @@
 
       <div id="info-display-area" style="grid-column: 1 / -1">
         <!-- ======================================================================= -->
-        <!-- TEMPLATE 1: THE UPWARD ARC (THE TIMELINE MODEL)                        -->
-        <!-- Use for: Countries that have successfully thrown off past repression   -->
-        <!-- to build a modern, active safe haven for gay men.                      -->
+        <!-- THE EVERGREEN HISTORY MODEL (THE STORY-DRIVEN TIMELINE)                 -->
+        <!-- Use for: Dynamically mapping the 5 to 7 most scandalous, impactful, or  -->
+        <!-- triumphant historical flashpoints for gay men across any era.          -->
         <!-- ======================================================================= -->
 
-        <details class="news-accordion status-border green">
+        <details class="news-accordion status-border status-[green/amber/red]">
           <summary>
-            <h3 class="pod-title">Article</h3>
+            <h3 class="pod-title">History</h3>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
             <div class="article-header-row">
-              <h3 class="main-title">[Title - Max 5 words - Exploit the sanctuary/haven angle with heavy tabloid punch]</h3>
+              <h3 class="main-title">[Title - Max 5 words - Exploit the historical narrative with heavy tabloid punch]</h3>
             </div>
 
-            <div class="identity-status-container">
-              <div class="identity-status-bar">
-                <span class="area-label">GAY RISK PROFILE</span>
-                <div class="id-item"><span>SOCIAL</span> <span class="id-dot green"></span></div>
-                <div class="id-item"><span>LEGAL</span> <span class="id-dot green"></span></div>
-                <div class="id-item"><span>ONLINE</span> <span class="id-dot green"></span></div>
-              </div>
-            </div>
+            <!-- ======================================================================= -->
+            <!-- DYNAMIC STORY LOOP: Repeat this structure for between 5 and 7 eras max  -->
+            <!-- No rigid time limits. Can span from antiquity/bronze age to modern day. -->
+            <!-- ======================================================================= -->
 
-            <h4>1940s: [Max 2 Words]</h4>
+            <!-- BLOCK 1 EXAMPLE (LEAD PARAGRAPH USE CLASS "article-lead") -->
+            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
             <p class="article-lead">
-              [PROMPT: Expose the raw post-WWII legal trap or immediate survival landscape for gay men. Detail if the new regime preserved wartime criminal codes or weaponized
-              public indecency laws to police local cruising spots. Exactly 1-2 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons or em-dashes.
-              Strictly focus on gay men / MSM. Never use the word "queer".]
+              [PROMPT: Expose the core historical event, palace scandal, or state crackdown of this era. Keep sentences short, fast-paced, and highly conversational. One phrase
+              inside this text block MUST be hyperlinked using standard blue text to act as a direct anchor link pointing to the corresponding ledger header in The Source Files
+              below. Exactly 2-3 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons, zero em-dashes. Focus strictly on gay men / MSM. Never use the
+              word "queer".]
+              <a href="#source-1" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 1 Header verbatim]</a>
             </p>
 
-            <h4>1950s: [Max 2 Words]</h4>
+            <!-- BLOCK 2 EXAMPLE (STANDARD PARAGRAPH) -->
+            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
             <p>
-              [PROMPT: Map the Cold War era chill or underground survival tactics of local gay men during state-sponsored purges. Show how the community stayed invisible to evade
-              ruinous police entrapment or public exposure. Exactly 1-2 punchy sentences. Fast-paced, conversational tone. Zero semicolons or em-dashes.]
+              [PROMPT: Document the next massive historical story, underground network milestone, or political rebellion. Ensure the prose flows naturally without sounding like an
+              academic textbook. Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
+              <a href="#source-2" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 2 Header verbatim]</a>
             </p>
 
-            <h4>1960s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Document the initial underground sparks or early legal friction as brave networks started challenging state persecution. Highlight any early calls for
-              decriminalization or localized pushbacks against corrupt police blackmail. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
+            <!-- VISUAL BREAK (Drop 1 or 2 historical, non-corporate images between narrative blocks) -->
             <div class="article-image-container">
               <img
-                src="[IMG-URL - source a high-quality free image representing local gay visibility or historic landmarks]"
-                alt="[ALT-TEXT - Localized safety and historical gay travel keywords using hyphens]"
+                src="[IMG-URL - Source an authentic historical artifact, archival document, local landmark, or vintage photo from Wikimedia]"
+                alt="[ALT-TEXT - Localized historical gay travel keywords using hyphens]"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: [Credit] | [Location/Event Name]</p>
+              <p class="image-caption">Source: [Credit Name/Platform] | [Location or Historical Event Name]</p>
             </div>
 
-            <h4>1970s: [Max 2 Words]</h4>
+            <!-- BLOCK 3 EXAMPLE (STANDARD PARAGRAPH) -->
+            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
             <p>
-              [PROMPT: Capture the post-Stonewall explosion of visibility and the collapse of archaic criminal codes. Show how gay men boldly flooded the streets, trading forced
-              isolation for open political defiance. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Move the narrative forward to the next major flashpoint or turning point in society. Keep the energy high and highlight the human drama or state hypocrisy.
+              Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
+              <a href="#source-3" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 3 Header verbatim]</a>
             </p>
 
-            <h4>1980s: [Max 2 Words]</h4>
+            <!-- BLOCK 4 EXAMPLE (STANDARD PARAGRAPH) -->
+            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
             <p>
-              [PROMPT: Unpack the devastating arrival of the HIV/AIDS crisis and the initial state neglect that fueled it. Pivot instantly to how local gay men mobilized to save
-              themselves, turning a tragic flashpoint into a powerful political force. Exactly 1-2 punchy sentences. High emotional impact. Zero semicolons or em-dashes.]
+              [PROMPT: Map the arrival of modern legal changes, social evolutions, or historic milestones. Maintain the active voice and zero filler padding. Exactly 2-3 punchy
+              sentences. Zero semicolons, zero em-dashes.]
+              <a href="#source-4" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 4 Header verbatim]</a>
             </p>
 
-            <h4>1990s: [Max 2 Words]</h4>
+            <!-- BLOCK 5 EXAMPLE (STANDARD PARAGRAPH) -->
+            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
             <p>
-              [PROMPT: Map the formal legal turnaround as parliaments stripped away remnants of discriminatory laws and passed early anti-bias protections. Show how the battle
-              successfully shifted from basic survival to demands for workplace and social equality. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
+              [PROMPT: Conclude the history timeline on the current state of affairs, legal breakthroughs, or remaining local hypocrisies. Leave a strong impression that ties
+              directly to the modern travel experience. Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
+              <a href="#source-5" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 5 Header verbatim]</a>
             </p>
 
-            <h4>2000s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Detail the introduction of registered partnerships or civil unions that brought gay couples to the threshold of full legal dignity. Highlight how the
-              domestic pink economy exploded as bars and businesses operated with total legal armor. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>2010s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Celebrate the landmark arrival of full marriage equality, constitutional protections, or adoption rights. Contrast this crowning triumph against the frantic,
-              failed resistance of local conservative institutions. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>2020s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Conclude on the modern frontier, framing the country as a brilliant beacon of freedom that pours tourist cash into the economy. Expose any minor remaining
-              state hypocrisies or legal loose ends while confirming absolute safety for gay men today. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
+            <!-- BRITTLED VERBATIM ANECDOTE OR QUOTE -->
             <blockquote class="article-quote">
-              "[PROMPT: Extract a single sentence verbatim quote under 25 words highlighting local commercial, pride, or lifestyle success. Source strictly from a credible news
-              outlet or gay archive. Do not paraphrase.]"
+              "[PROMPT: Extract a single sentence verbatim quote under 25 words highlighting local lifestyle, legal triumph, or historical testimony. Source strictly from a
+              credible book, news archive, or court document. Do not paraphrase.]"
               <br />
-              <a href="[Source-URL]" target="_blank" rel="noopener"
-                ><span style="color: #0894f1 !important">[Source Name - Use human labels like Local Press Report, Regional Archive, or Community Dispatch]</span></a
+              <a href="#source-quote" style="color: #0894f1 !important; text-decoration: underline"
+                ><span style="color: #0894f1 !important">[Source Name - Use human labels like Historical Court Ledger, Official Archive Records, or Published Biography]</span></a
               >
             </blockquote>
 
-            <div class="resource-container">
-              <h3 style="margin-bottom: 20px">Links:</h3>
+            <!-- ======================================================================= -->
+            <!-- THE SOURCE FILES (THE RECEIPTS LEDGER)                                  -->
+            <!-- Maps 1:1 with the narrative paragraphs above. Never link to Wikipedia.  -->
+            <!-- ======================================================================= -->
+            <div class="resource-container" style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px">
+              <h3 style="margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px">The Source Files</h3>
 
-              <!-- PROMPT: Dynamic Resource Loop. Generate between 3 and 6 verified resource cards confirming the legal milestones and historical data. No placeholders or wikipedia. Wrap individual links inside <a> tags exactly as shown below. -->
-
-              <a href="[Verified-Source-URL]" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-title">[High-Authority Source or Media Name]</span>
-                <span class="resource-desc"
-                  >[PROMPT: Direct, factual summary of the dataset or historical record verifying the claims made in the copy. Max 12 words. No semicolons or em-dashes.]</span
+              <!-- SOURCE CARD 1 -->
+              <div id="source-1" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 1 here to map 1:1 with paragraph]</h5>
+                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Exact Blue Link Text From Paragraph 1 Verbatim Here]
+                </span>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
                 >
-              </a>
+                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
+                  em-dashes.]
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 2 -->
+              <div id="source-2" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 2 here to map 1:1 with paragraph]</h5>
+                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Exact Blue Link Text From Paragraph 2 Verbatim Here]
+                </span>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
+                >
+                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
+                  em-dashes.]
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 3 -->
+              <div id="source-3" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 3 here to map 1:1 with paragraph]</h5>
+                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Exact Blue Link Text From Paragraph 3 Verbatim Here]
+                </span>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
+                >
+                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
+                  em-dashes.]
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 4 -->
+              <div id="source-4" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 4 here to map 1:1 with paragraph]</h5>
+                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Exact Blue Link Text From Paragraph 4 Verbatim Here]
+                </span>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
+                >
+                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
+                  em-dashes.]
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 5 -->
+              <div id="source-5" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 5 here to map 1:1 with paragraph]</h5>
+                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Exact Blue Link Text From Paragraph 5 Verbatim Here]
+                </span>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
+                >
+                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
+                  em-dashes.]
+                </a>
+              </div>
+
+              <!-- QUOTE SOURCE CARD -->
+              <div id="source-quote" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">Verbatim Quote Receipt</h5>
+                <a
+                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  target="_blank"
+                  rel="noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
+                >
+                  <strong>[Official Repository or Primary Source Publication]</strong> — [Verification data tracking the specific page or interview transcription. Max 15 words. No
+                  semicolons or em-dashes.]
+                </a>
+              </div>
 
               <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | June 2026</p>
             </div>
@@ -367,227 +446,44 @@
         </details>
 
         <!-- ======================================================================= -->
-        <!-- TEMPLATE 2: THE DARK DESCENT (THE TIMELINE REGRESSION MODEL)            -->
-        <!-- Use for: Nations backsliding into crackdowns, populist scapegoating,   -->
-        <!-- or police entrapment. Change class color to "amber" or "red" as needed.-->
+        <!-- TEMPLATE 2: THE CRISIS-OPTIMIZED MEDICAL ACCESS MODEL                  -->
+        <!-- Use for: High-efficiency, low-scroll emergency and clinic navigation.   -->
         <!-- ======================================================================= -->
 
-        <details class="news-accordion status-border [red/amber]">
-          <summary>
-            <h3 class="pod-title">Article</h3>
-          </summary>
-          <div class="news-content-expanded">
-            <div class="rainbow-line mini-line"></div>
-            <div class="article-header-row">
-              <h3 class="main-title">[Title - Max 5 words - High-impact tabloid alert exposing the regressive trap]</h3>
-            </div>
-
-            <div class="identity-status-container">
-              <div class="identity-status-bar">
-                <span class="area-label">GAY RISK PROFILE</span>
-                <div class="id-item"><span>SOCIAL</span> <span class="id-dot [red/amber]"></span></div>
-                <div class="id-item"><span>LEGAL</span> <span class="id-dot [red/amber]"></span></div>
-                <div class="id-item"><span>ONLINE</span> <span class="id-dot [red/amber]"></span></div>
-              </div>
-            </div>
-
-            <h4>1940s: [Max 2 Words]</h4>
-            <p class="article-lead">
-              [PROMPT: Establish the post-WWII baseline of early survival or legacy colonial codes. Detail if the state actively hunted local gay men or if the community managed to
-              stay under the radar of chaotic post-war authorities. Exactly 1-2 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons or em-dashes.
-              Strictly focus on gay men / MSM. Never use the word "queer".]
-            </p>
-
-            <h4>1950s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Map the mid-century chill as consolidating regimes began tightening public decency laws or launching early purges. Show how state surveillance forced local
-              networks deep underground to protect themselves from sudden exposure. Exactly 1-2 punchy sentences. Fast-paced and conversational. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>1960s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Document the codification of anti-gay bias as bureaucrats formalize penalties against deviations from the state path. Detail how police weaponized vague
-              vagrancy or morality laws to target urban meeting spots. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <div class="article-image-container">
-              <img
-                src="[IMG-URL - source an image depicting the reality or stark architectural contrast of the local urban landscape]"
-                alt="[ALT-TEXT - Localized danger, risk profile, and gay travel alert keywords using hyphens]"
-                class="article-main-img"
-              />
-              <p class="image-caption">Source: [Credit] | [Location/City Name]</p>
-            </div>
-
-            <h4>1970s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Unpack the missed opportunities where global liberation movements completely bypassed this region due to local political lockouts. Show how the state
-              actively crushed any early murmurs of visibility to keep the underground silent. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>1980s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Describe how the regime weaponized the global HIV/AIDS crisis to justify aggressive police crackdowns and public shaming campaigns. Detail the state
-              hypocrisy of treating a public health emergency as a criminal conspiracy. Exactly 1-2 punchy sentences. High impact. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>1990s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Expose the false dawn of post-Cold War or regime transitions that promised modernization but left archaic anti-gay laws completely intact. Show how the new
-              political elite quietly preserved discrimination to appease conservative factions. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>2000s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Track the early stages of backsliding as rising religious nationalism or corrupt politicians started testing homophobia as a campaign distraction. Detail how
-              local media began turning gay men into cultural targets to mask economic failures. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>2010s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Map the official descent into codified persecution with the arrival of anti-propaganda bans, internet censorship, or harsher prison terms. Show how the state
-              systematically broke down basic public safety and right to associate. Exactly 1-2 punchy sentences. Zero semicolons or em-dashes.]
-            </p>
-
-            <h4>2020s: [Max 2 Words]</h4>
-            <p>
-              [PROMPT: Deliver the modern reality of digital entrapment via weaponized dating apps, arbitrary blackmail, and extortion rings. Conclude with a sharp warning
-              regarding current safety levels and tourist traps, confirming whether the map sits at a risky amber or an absolute red. Exactly 1-2 punchy sentences. Zero semicolons
-              or em-dashes.]
-            </p>
-
-            <blockquote class="article-quote">
-              "[PROMPT: Extract a single sentence verbatim quote under 25 words from an international watchdog (Amnesty, HRW) or a local underground dispatch exposing the ongoing
-              police terror or arbitrary arrests. Do not paraphrase.]"
-              <br />
-              <a href="[Source-URL]" target="_blank" rel="noopener"
-                ><span style="color: #0894f1 !important"
-                  >[Source Name - Use high-authority or grounded labels like Human Rights Watch, Amnesty International, or Underground Activist Dispatch]</span
-                ></a
-              >
-            </blockquote>
-
-            <div class="resource-container">
-              <h3 style="margin-bottom: 20px">Links:</h3>
-
-              <!-- PROMPT: Dynamic Resource Loop. Generate between 2 and 6 verified resource cards linking to official human rights reports, documentation on dating app crackdowns, or global travel warnings. No placeholders or wikipedia. Wrap individual links inside <a> tags exactly as shown below. -->
-
-              <a href="[Verified-Source-URL]" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-title">[Watchdog Group or Major News Agency Name]</span>
-                <span class="resource-desc"
-                  >[PROMPT: Direct, factual summary of the specific arrest data, legal code update, or human rights brief documenting the crackdown. Max 12 words. No semicolons or
-                  em-dashes.]</span
-                >
-              </a>
-
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | June 2026</p>
-            </div>
-          </div>
-        </details>
-
-        <!-- CRITICAL OPSEC GUARDRAIL: Actively verify that this clinic or digital link has not been raided, compromised, or turned into a state entrapment pipeline before deploying live. -->
-
-        <details class="news-accordion status-border <!-- AI FLAG: Insert 'status-green', 'status-amber', or 'status-red' based on overall sexual health security -->">
+        <details class="news-accordion status-border [STATUS-COLOR]">
           <summary>
             <h3 class="pod-title">Sexual Health</h3>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
 
-            <!-- Emergency Quick-Bar (Always First) -->
-            <div style="background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
-              <h4 style="margin-top: 0; color: #ff4d4d; text-transform: uppercase">🚨 Emergency & Urgent Care</h4>
-              <p style="font-size: 0.95rem; margin-bottom: 10px">
-                <strong>Medical Emergency:</strong>
-                <!-- [MANDATORY: Insert national medical emergency number] -->
-                | <strong>Police:</strong>
-                <!-- [MANDATORY: Insert national emergency police number] -->
-              </p>
-              <p style="font-size: 0.85rem; color: #eee; margin: 0">
-                <strong>Urgent (PEP):</strong> If you think you have been exposed to HIV, you must start PEP within 72 hours.
-                <!-- [MANDATORY: Insert a 1-sentence hyper-direct command on exactly where an MSM traveler should physically run to get emergency PEP in the capital city of this country] -->
-              </p>
+            <!-- 1. Emergency Quick-Bar (Always First) -->
+            <div style="border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
+              <h4>🚨 Emergency & Urgent Care</h4>
+              <p><strong>Medical Emergency:</strong> [EMERGENCY NUMBER] | <strong>Police:</strong> [POLICE NUMBER]</p>
+              <p><strong>Urgent (PEP):</strong> Unsafe sex? Take PEP within 72 hours. Go to [PRIMARY PEP CLINIC] or the 24-hour emergency room at [MAJOR HOSPITAL].</p>
             </div>
 
-            <h4>The State Clinic Lottery</h4>
-            <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
-              <!-- 
-        AI MANDATE: Write a fast-paced, punchy paragraph (~70-90 words). Style: High-end tabloid, conversational, sarcastic regarding state hypocrisy. 
-        Focus: Analyze the state infrastructure for gay men / MSM. Detail the exact ground realities of public health setups, the presence of moral judgment or bureaucratic hostility from admin staff, and crucial warnings regarding whether national tracking registries expose patient data to families or local community leaders.
-      -->
-            </p>
-
-            <h4>Visa Rules and Rights</h4>
-            <p style="font-size: 1rem; line-height: 1.6; color: #eee; margin-bottom: 20px">
-              <!-- 
-        AI MANDATE: Write an unvarnished statutory summary (~60-80 words). 
-        Focus: Detail travel and immigration laws regarding HIV status for this specific country. State clearly if testing positive locally or declaring status triggers automatic visa rejection, immediate deportation, or quarantine. State whether tourists must completely avoid state systems and use private pipelines to protect future residency permits.
-      -->
-            </p>
-
-            <h4>Safe Screening Pipelines</h4>
-            <div class="insider-box">
-              <p class="insider-text">
-                <!-- 
-          AI MANDATE: Write a high-value tactical insider brief (~70-90 words). 
-          Focus: Give direct navigation commands. Tell the reader how to skip generic public intake lines, which key regional teaching hospitals or specialized wings handle the highest volume of gay patients safely, and where to find anonymous grassroots alternatives that bypass state tracking entirely.
-        -->
-              </p>
-            </div>
-
-            <!-- The Legal and Confidentiality Mandate Blockquote -->
-            <blockquote class="article-quote">
-              <!-- 
-        AI MANDATE: Source a verbatim quote highlighting stigma, legal barriers, or healthcare access for gay men/MSM in this country. 
-        The link MUST point to a high-authority source (UNAIDS, Human Rights Watch, Amnesty, or the World Health Organization).
-      -->
-              "<!-- [MANDATORY: Insert verbatim quote text here] -->"
-              <br />
-              <a href="<!-- [MANDATORY: Insert full URL link here] -->" target="_blank" rel="noopener">
-                <span style="color: #0894f1 !important"><!-- [MANDATORY: Insert Source Name, e.g., Human Rights Watch Country Report] --></span>
-              </a>
-            </blockquote>
-
-            <!-- Access Status Bars -->
-            <div class="identity-status-container" style="margin-bottom: 30px">
-              <div class="identity-status-bar">
-                <span class="area-label">CITY</span>
-                <!-- AI FLAG: Swap classes ('status-green', 'status-amber', 'status-red') based on urban availability & safety -->
-                <div class="id-item"><span>HIV</span> <span class="id-dot status-green"></span></div>
-                <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
-                <div class="id-item"><span>TRANS</span> <span class="id-dot status-red"></span></div>
-              </div>
-              <div class="identity-status-bar">
-                <span class="area-label">RURAL</span>
-                <!-- AI FLAG: Swap classes ('status-green', 'status-amber', 'status-red') based on rural availability & safety -->
-                <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
-                <div class="id-item"><span>PrEP</span> <span class="id-dot status-red"></span></div>
-                <div class="id-item"><span>TRANS</span> <span class="id-dot status-red"></span></div>
-              </div>
-            </div>
-
-            <h3 class="article-subhead">Hospitals & Clinics</h3>
-
-            <!-- Universal Safety Warning Banner -->
-            <div style="background: #ff0095; padding: 12px 15px; margin-bottom: 25px; border-radius: 4px">
-              <span style="display: block; font-size: 0.95rem; color: #ffffff !important; font-weight: 600; line-height: 1.45">
-                Check these clinic details before you visit because facts change fast, especially phone numbers, and we cannot guarantee every source.
-                <a href="/about#verify-clinics" style="color: #ffffff !important; text-decoration: underline; font-weight: 700; margin-left: 4px">Learn How To Check</a>
-              </span>
-            </div>
+            <!-- 2. Fast Facts -->
+            <h4 style="margin-bottom: 15px; color: #111">Fast Facts</h4>
+            <ul style="margin-bottom: 25px; padding-left: 20px; color: #222; font-size: 0.95rem; line-height: 1.5">
+              <li style="margin-bottom: 10px"><strong>General:</strong> [1 punchy sentence on public vs private screening, confidentiality, and judgment level].</li>
+              <li style="margin-bottom: 10px"><strong>Safety:</strong> [1 punchy sentence on visa traps, deportation threats, or quarantine rules].</li>
+              <li><strong>Insider:</strong> [1 aggressive, actionable tip on bypassing queues or saving money].</li>
+            </ul>
 
             <div class="resource-container">
-              <h3 style="margin-bottom: 20px; color: #111">Official State Hospital Care Network</h3>
+              <h3 style="margin-bottom: 20px; color: #111">Hospitals & Clinics</h3>
 
-              <!-- 
-        AI MANDATE FOR PUBLIC MEDICAL STACK: 
-        You MUST research and generate between 3 to 6 separate resource cards matching the template block below.
-        Geographic Scope: Populate 2-3 key options for the primary capital city, and 1 option for each major regional/tourist hub in that country.
-        Data Quality: Every single card must contain a specific local address string and a verified, active phone number formatted with the international country code.
-        STRICT ZERO-HALLUCINATION MANDATE: If you cannot find verified, current, real-world data for any specific address, phone number, or URL, do NOT invent fake strings, placeholders, or estimations. If the data is missing from your knowledge base or search results, skip that specific resource card entirely. It is a strict requirement to leave it out rather than write unverified information.
-      -->
+              <!-- 3. Universal Safety Warning Banner -->
+              <div style="background: #ff0095; padding: 12px 15px; margin-bottom: 25px; border-radius: 4px">
+                <span style="display: block; font-size: 0.95rem; color: #ffffff !important; font-weight: 600; line-height: 1.45">
+                  Check these clinic details before you visit because facts change fast, especially phone numbers, and we cannot guarantee every source.
+                  <a href="/about#verify-clinics" style="color: #ffffff !important; text-decoration: underline; font-weight: 700; margin-left: 4px">Learn How To Check</a>
+                </span>
+              </div>
 
-              <!-- REPEATABLE PUBLIC HOSPITAL CARD (Repeat this block for each researched facility) -->
+              <!-- Hospital 1 -->
               <div
                 class="resource-card"
                 style="
@@ -601,132 +497,177 @@
                 "
               >
                 <div style="background: #0894f1; padding: 12px 15px">
-                  <span style="color: #ffffff; font-weight: 700; display: block; font-size: 1.05rem"
-                    ><!-- [MANDATORY: Full official Hospital Name AND the specific internal department/infectious disease clinic shorthand, e.g., RSUPN Dr. Cipto Mangunkusumo (Pokdiksus Clinic)] --></span
-                  >
+                  <span style="color: #ffffff; font-weight: 700; display: block; font-size: 1.05rem">[CLINIC NAME 1]</span>
                 </div>
                 <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
-                    ><strong>Address:</strong>
-                    <!-- [MANDATORY: Exact street address, building number, and city location] --></span
+                    ><strong>Address:</strong> [FULL ADDRESS]</span
                   >
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
-                    ><strong>Phone:</strong>
-                    <!-- [MANDATORY: Active telephone line formatted with international code, e.g., +62 21 1500135] --></span
+                    ><strong>Phone:</strong> [PHONE NUMBER]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
-                    <!-- [MANDATORY INSIDER INSTRUCTION: Write 2-3 sentences of raw operational advice. Explain exactly which floor, wing, or specialized clinic name the user needs to request upon arrival to bypass general triage. State the volume of MSM patients they handle, medication supply reliability, and what to expect regarding staff discretion or crowd wait times.] -->
+                    <strong>Instructions:</strong> [1 sharp sentence on exactly where to walk or what to say to bypass triage].
                   </span>
                 </div>
               </div>
-              <!-- END OF REPEATABLE PUBLIC HOSPITAL CARD -->
+
+              <!-- Hospital 2 -->
+              <div
+                class="resource-card"
+                style="
+                  margin-bottom: 20px;
+                  display: block;
+                  background: #ffffff;
+                  border: 1px solid #e2e8f0;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+                "
+              >
+                <div style="background: #0894f1; padding: 12px 15px">
+                  <span style="color: #ffffff; font-weight: 700; display: block; font-size: 1.05rem">[CLINIC NAME 2]</span>
+                </div>
+                <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
+                    ><strong>Address:</strong> [FULL ADDRESS]</span
+                  >
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
+                    ><strong>Phone:</strong> [PHONE NUMBER]</span
+                  >
+                  <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
+                    <strong>Instructions:</strong> [1 sharp sentence on exactly where to walk or what to say to bypass triage].
+                  </span>
+                </div>
+              </div>
 
               <h3 style="margin-top: 30px; margin-bottom: 20px; color: #111">Community Links & Support</h3>
 
-              <!-- 
-        AI MANDATE FOR COMMUNITY/NGO STACK:
-        You MUST research and generate 2 to 4 external website link cards utilizing the standard format below.
-        Target Profile: Find 1 discreet, professional private clinic layout, 1 community-led grassroots foundation/NGO conducting rapid testing, and 1 friendly local neighborhood clinic or community center.
-        URL Validation: Every link MUST be a live, verified external domain. No placeholders allowed.
-        Border styling can cycle colors: #00d4ff (cyan), #2ecc71 (green), #ff00ff (magenta).
-      -->
-
-              <!-- REPEATABLE LINK CARD (Repeat this block for each NGO/Private Clinic) -->
-              <a
-                href="<!-- [MANDATORY: Insert live, verified external website URL here] -->"
-                target="_blank"
-                rel="noopener"
-                class="resource-card"
-                style="border-left: 4px solid #00d4ff"
-              >
-                <span class="resource-title" style="color: #00d4ff"><!-- [MANDATORY: Official Organization or Clinic Brand Name, e.g., Angsamerah Jakarta] --></span>
-                <span class="resource-desc"
-                  ><!-- [MANDATORY: Write 1-2 direct sentences explaining exactly what this link provides: their screening cost, language capabilities, speed of anonymous rapid testing, or mental health counseling setup.] --></span
-                >
+              <!-- Community Resource 1 -->
+              <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
+                <span class="resource-title" style="color: #00d4ff">[COMMUNITY OR PRIVATE CLINIC NAME]</span>
+                <span class="resource-desc"> [1 punchy sentence describing the vibe and service provided]. </span>
               </a>
-              <!-- END OF REPEATABLE LINK CARD -->
+
+              <!-- Community Resource 2 -->
+              <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
+                <span class="resource-title" style="color: #2ecc71">[GRASSROOTS NGO OR FOUNDATION NAME]</span>
+                <span class="resource-desc"> [1 punchy sentence describing the vibe and service provided]. </span>
+              </a>
             </div>
 
-            <!-- Footer Timestamp Note -->
-            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
-              GWN Medical |
-              <!-- [MANDATORY: Injected execution date, format: Month Year, e.g., June 2026] -->
-            </p>
+            <!-- 4. Access Status Bars -->
+            <div class="identity-status-container" style="margin-top: 30px; margin-bottom: 30px">
+              <div class="identity-status-bar">
+                <span class="area-label">CITY</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>TRANS</span> <span class="id-dot status-[COLOR]"></span></div>
+              </div>
+              <div class="identity-status-bar">
+                <span class="area-label">RURAL</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>TRANS</span> <span class="id-dot status-[COLOR]"></span></div>
+              </div>
+            </div>
+
+            <!-- 5. Factual HIV Navigation Tile -->
+            <div class="medical-cta-block">
+              <a href="/about#hiv-realities"> Get Informed About HIV And Stop The Stress </a>
+            </div>
+
+            <!-- 6. Footer Timestamp Note -->
+            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | [MONTH YEAR]</p>
           </div>
         </details>
 
-        <!-- PROMPT: Set status-border to status-green (Safe/Welcoming), status-amber (Caution/Discrete), or status-red (Hostile/Severe Risk) based on 2026 field realities for gay men. 
-     CRITICAL FORMATTING RULES: Zero semicolons and zero em dashes allowed in any generated text blocks or titles. 
-     LINGUISTIC RULE: Strict ban on the word "queer" across all fields, focus exclusively on gay men and MSM. -->
-        <details class="news-accordion status-border status-[SET-COLOR]">
+        <!-- ======================================================================= -->
+        <!-- THE GROUND REPORTS MODEL (THE AGGREGATOR)                               -->
+        <!-- Use for: Contrasting official NGO/legal research with the top 3 human   -->
+        <!-- travel blogs. Let the guides speak verbatim. Let the user decide.       -->
+        <!-- ======================================================================= -->
+
+        <details class="news-accordion status-border green">
           <summary>
             <h3 class="pod-title">Travel & Fun</h3>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
             <div class="article-header-row">
-              <!-- PROMPT: Create a punchy headline in a high-end tabloid style. Max 4 words. No semicolons or em-dashes. 
-             If the country is green: Make it celebratory and electric. 
-             If the country is amber: Blend the electric vibe with a serious undertone. 
-             If the country is red: Deliver a sharp warning about state hypocrisy. -->
-              <h3 class="main-title">[AI-Synthesized Headline]</h3>
+              <h3 class="main-title">[TITLE PROMPT: Max 5 words. Make it fun and punchy, or dark and sarcastic depending on the country's actual vibe. Nail the irony.]</h3>
             </div>
 
-            <div class="identity-status-container">
-              <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
-                <!-- PROMPT: Set [SET-DOT] to status-green, status-amber, or status-red based on 2026 data. Social = local straight sentiment toward gay men. PDA = safety level for hand-holding or visible affection. -->
-                <div class="id-item">
-                  <span>Social</span>
-                  <span class="id-dot [SET-DOT]"></span>
-                </div>
-                <div class="id-item">
-                  <span>PDA</span>
-                  <span class="id-dot [SET-DOT]"></span>
-                </div>
-              </div>
+            <!-- THE GWN OVERVIEW (DATA VS DESTINATION) -->
+            <h4>The Research vs Reality</h4>
+            <p class="article-lead">
+              [PROMPT: First, run a live search targeting local gay forums, Reddit, Substack, and underground expat networks to find one highly specific, lesser-known truth about
+              the gay street reality here that mainstream NGOs and travel gurus completely ignore. Then, write exactly 2-3 punchy sentences contrasting the official safety data
+              with this raw, on-the-ground reality. Focus specifically on gay men. High-end tabloid tone. Zero padding. Zero semicolons. Zero em dashes. Strictly ban the word
+              "queer".]
+            </p>
+
+            <!-- THE BATTLE (NO COMMENTARY, JUST QUOTES) -->
+            <h4 style="margin-top: 30px">The Travel Blogs</h4>
+            <p style="margin-bottom: 20px">
+              We pulled these quotes from the top independent and most reliable travel guides so you can choose the one for you. Here is what they are saying right now.
+            </p>
+
+            <!-- ======================================================================= -->
+            <!-- ANTI-HALLUCINATION PROTOCOL: You MUST perform a live search for         -->
+            <!-- "top gay travel blogs [Country]" and select 3 independent, human-run    -->
+            <!-- blogs that actually specialize in this region. Do not default to the    -->
+            <!-- same global blogs. Never fabricate a quote or URL.                      -->
+            <!-- ======================================================================= -->
+
+            <!-- GURU 1 -->
+            <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+              <h5 style="margin: 0 0 10px 0; font-size: 1rem">[Verified Human Blog Name 1]</h5>
+              <blockquote style="margin: 0 0 10px 0; padding-left: 10px; border-left: 2px solid #ccc; font-style: italic; color: #444; font-size: 0.9rem">
+                "[PROMPT: Extract a highly descriptive 2 to 3 sentence verbatim quote from their live country guide. Do not paraphrase. Do not add commentary.]"
+              </blockquote>
+              <a
+                href="[Verified-Live-URL]"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block; font-size: 0.85rem; color: #0894f1; text-decoration: underline; font-weight: bold"
+              >
+                Read the full guide
+              </a>
             </div>
 
-            <h4>[Subheading 1: Max 4 Words Tabloid Style]</h4>
-            <!-- LEAD: The High-End Tabloid Vibe -->
-            <!-- PROMPT: MAX 60 WORDS. High-end tabloid overview. If the country is safe and happy, deliver a fast-paced review of the lifestyle freedom and hospitality. If it is a dangerous regime, pivot instantly to a sharp tactical advisory telling men how to blend in. Note that a full investigative layout is queued. Zero semicolons or em-dashes. -->
-            <p class="article-lead">[Lead Content]</p>
-
-            <div class="article-image-container">
-              <!-- PROMPT: Select a high-quality photo asset. It can either completely mirror the high-level global perception from paragraph 1, or introduce the raw street-level reality of paragraph 2. Target localized safety keywords using standard dashes in the alt text. -->
-              <img src="[IMG-URL]" alt="[ALT-TEXT]" class="article-main-img" />
-              <p class="image-caption" style="color: #00d4ff !important">Source: [Credit] | [Location]</p>
+            <!-- GURU 2 -->
+            <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+              <h5 style="margin: 0 0 10px 0; font-size: 1rem">[Verified Human Blog Name 2]</h5>
+              <blockquote style="margin: 0 0 10px 0; padding-left: 10px; border-left: 2px solid #ccc; font-style: italic; color: #444; font-size: 0.9rem">
+                "[PROMPT: Extract a highly descriptive 2 to 3 sentence verbatim quote from their live country guide. Do not paraphrase. Do not add commentary.]"
+              </blockquote>
+              <a
+                href="[Verified-Live-URL]"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block; font-size: 0.85rem; color: #0894f1; text-decoration: underline; font-weight: bold"
+              >
+                Read the full guide
+              </a>
             </div>
 
-            <h4>[Subheading 2: Max 4 Words Tabloid Style]</h4>
-            <!-- PROMPT: MAX 60 WORDS. Deliver the raw street reality for local and visiting gay men. Focus strictly on the actual street-level social tolerance or backlash, skipping generic tropes. Base this entirely on recent ground data. Zero semicolons or em-dashes. -->
-            <p>[Street Reality Content]</p>
-            <!-- CREDIBILITY TOP-LOAD: Blogger/Insider Quote -->
-            <blockquote class="article-quote">
-              <!-- PROMPT: Verbatim Extraction Mode. Pull a single, short, evocative sentence under 25 words from a prominent gay travel writer, local insider, or verified field report. Must match character-for-character with zero paraphrasing. No brackets or text decorations around the link. -->
-              "[Quote text]"
-              <br />
-              <a href="[Source-URL]" target="_blank" rel="noopener"><span style="color: #0894f1 !important">[Source Name]</span></a>
-            </blockquote>
+            <!-- GURU 3 -->
+            <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+              <h5 style="margin: 0 0 10px 0; font-size: 1rem">[Verified Human Blog Name 3]</h5>
+              <blockquote style="margin: 0 0 10px 0; padding-left: 10px; border-left: 2px solid #ccc; font-style: italic; color: #444; font-size: 0.9rem">
+                "[PROMPT: Extract a highly descriptive 2 to 3 sentence verbatim quote from their live country guide. Do not paraphrase. Do not add commentary.]"
+              </blockquote>
+              <a
+                href="[Verified-Live-URL]"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block; font-size: 0.85rem; color: #0894f1; text-decoration: underline; font-weight: bold"
+              >
+                Read the full guide
+              </a>
+            </div>
 
-            <h4>[Subheading 3: Max 4 Words Tabloid Style]</h4>
-            <!-- PROMPT: MAX 60 WORDS. Provide practical budget-conscious travel and socializing advice. Focus on neighborhood accessibility, popular gay areas, or how to avoid overpaying at tourist traps. Zero semicolons or em-dashes. -->
-            <p>[Budget & Practical Area Content]</p>
-
-            <h3 class="article-subhead">Fun & Risks:</h3>
-            <ul class="law-list" style="list-style: none; padding: 0">
-              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
-                <strong>The Fun:</strong>
-                <!-- PROMPT: MAX 30 WORDS. For safe countries, name the main physical gay neighborhood clusters or street venues. For hostile countries, detail discrete international hotel setups or underground networks where low-profile socializing occurs. Zero semicolons or em-dashes. -->
-                <p>[Fun Content]</p>
-              </li>
-              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ff4d4d">
-                <strong>The Risks:</strong>
-                <!-- PROMPT: MAX 30 WORDS. Provide raw, practical advice on local street scams, digital app vulnerabilities, pickpocket zones, or corrupt police shakedowns targeting normal earners. Zero semicolons or em-dashes. -->
-                <p>[Risks Content]</p>
-              </li>
-            </ul>
-
-            <!-- THE BOTTOM LINE: Triage Summary -->
             <h3
               class="article-subhead"
               style="
@@ -739,132 +680,35 @@
             >
               The Bottom <span style="color: #ff00ff !important">Line</span>
             </h3>
-            <!-- PROMPT: Provide a blunt, definitive 2026 travel verdict for gay men. Use exactly one of these phrases: "Verdict: Go wild.", "Verdict: Go with strict, tactical caution.", or "Verdict: Stay completely away." followed by a maximum 15-word closing justification. Zero semicolons or em-dashes. -->
-            <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">[Final Verdict text]</p>
+            <p>[PROMPT: Deliver a final 1-2 sentence verdict that helps the user weigh the official research against the travel guides. Zero semicolons, zero em-dashes.]</p>
 
-            <!-- ALPHABET BRIEFS: High Priority L/T News -->
-            <div class="alphabet-brief-card">
-              <span class="alphabet-brief-title">Alphabet Briefs</span>
-              <!-- PROMPT: MAX 40 WORDS. Insert critical, high-priority trans or lesbian travel news here as a brief. If no high-priority data exists for this country, replace text with "No priority alerts recorded for the broader community at this time." -->
-              <p class="alphabet-brief-text">[Brief Content]</p>
-            </div>
-
-            <!-- PROMPT: CONDITION OVERRIDE FOR RESOURCE CONTAINERS.
-           IF COUNTRY IS HOSTILE/UNSAFE (RED): Deploy the custom unsafe container block below. Completely wipe out any city directories, local venue links, or vlog cards to protect user security.
-           IF COUNTRY IS SAFE/MIXED (GREEN/AMBER): Completely strip the unsafe block and deploy the standard resource container further down instead. -->
-
-            <!-- UNSAFE NATIONS ONLY: Custom High-Risk Security Card Setup -->
-            <div class="unsafe_resource-container" style="background: rgba(255, 77, 77, 0.1); border: 2px solid #ff4d4d; border-radius: 8px; padding: 20px; margin-top: 30px">
-              <h3 style="margin-top: 0; color: #ff4d4d; text-transform: uppercase; letter-spacing: 1px">⚠️ Safety Warnings</h3>
+            <!-- THE ESSENTIALS -->
+            <div class="resource-container" style="margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px">
+              <h4 style="margin-bottom: 15px">The Essentials</h4>
 
               <a
-                href="[Vetted-International-NGO-or-Human-Rights-Tracker-URL]"
+                href="[PROMPT: Insert exact USA State Dept Travel Advisory link for this country]"
                 target="_blank"
                 rel="noopener"
                 class="resource-card"
-                style="display: block; background: #ff4d4d; border-radius: 6px; padding: 15px; text-decoration: none; margin-bottom: 15px"
+                style="margin-bottom: 10px; display: block; text-decoration: none"
               >
-                <span class="resource-title" style="color: #ffffff !important; font-weight: bold; font-size: 1.1rem; display: block; margin-bottom: 5px"
-                  >[NGO or Direct Protection Platform Name]</span
-                >
-                <span class="resource-desc" style="color: #ffffff !important; font-size: 0.9rem; line-height: 1.4; display: block">
-                  [PROMPT: !Important: if the country is safe, write, "There are no current safety warnings for [Country Name]! If dangerous, write a calm, fact-driven breakdown of
-                  immediate street and legal risks. Do Not use 'padding adjectives'! Detail active threats like police dating app entrapment, localized extortion syndicates, or
-                  severe prison mandates. Max 25 words. No semicolons or em-dashes.]
-                </span>
+                <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">US State Department Advisory</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem">Official real time safety warnings and regional travel restrictions.</span>
               </a>
 
-              <!-- Mandatory Mainstream Landmarks Link for Hostile Zones -->
               <a
-                href="[Sightseeing-URL]"
+                href="[PROMPT: Insert URL for the top local gay NGO or health clinic]"
                 target="_blank"
                 rel="noopener"
                 class="resource-card"
-                style="display: block; background: rgba(255, 255, 255, 0.05); border-left: 4px solid #00f2ff; padding: 12px; text-decoration: none"
+                style="display: block; text-decoration: none"
               >
-                <span class="resource-title" style="color: #00f2ff; font-weight: bold; display: block; margin-bottom: 3px">Sightseeing & Culture</span>
-                <span class="resource-desc" style="color: #eee; font-size: 0.85rem; display: block"
-                  >[Best non-gay guide for historic architecture, national museums, and landmarks. Max 10 words.]</span
-                >
-              </a>
-            </div>
-
-            <!-- SAFE / MIXED NATIONS ONLY: Standard Directory Setup -->
-            <div class="resource-container" style="margin-top: 30px">
-              <h3 style="margin-bottom: 20px">Local City Directories & Guides</h3>
-
-              <!-- PROMPT: Alphabetical City Loop. Generate cards sorted alphabetically by major cities. Limit to a maximum of 9 links. 
-             Each card must link to a real, verified local scene map or directory. 
-             The description must explicitly state if the local scene is physically unified in one district or fluidly split across different neighborhoods, citing the exact areas. Max 15 words per card. Zero semicolons or em-dashes. -->
-              <a href="[Vetted-Local-City-Scene-URL]" target="_blank" rel="noopener" class="resource-card">
-                <span class="resource-title">[City Name Gay Scene Guide]</span>
-                <span class="resource-desc"
-                  >[PROMPT: Note if the local scene is concentrated or fluidly split across distinct districts. Name the neighborhoods. Max 15 words.]</span
-                >
+                <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">[NGO or Clinic Name]</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem">[PROMPT: 10 word max description of the local resource. No semicolons or em-dashes.]</span>
               </a>
 
-              <!-- Mainstream Sightseeing Link -->
-              <a href="[Sightseeing-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
-                <span class="resource-title">Sightseeing & Culture</span>
-                <span class="resource-desc">[Best independent guide for local landmarks, transit transit systems, and museums. Max 10 words.]</span>
-              </a>
-
-              <!-- Video Walkthrough Link -->
-              <a href="[YouTube-URL]" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
-                <span class="resource-title">
-                  <span
-                    style="
-                      display: inline-flex;
-                      align-items: center;
-                      justify-content: center;
-                      background-color: #ff0000;
-                      border-radius: 6px;
-                      padding: 3px;
-                      width: 2.2em;
-                      height: 1.5em;
-                      vertical-align: middle;
-                      margin-right: 8px;
-                    "
-                  >
-                    <svg viewBox="0 0 24 24" style="color: #ffffff; width: 100%; height: 100%">
-                      <path
-                        fill="currentColor"
-                        d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
-                      />
-                    </svg>
-                  </span>
-                  [Video Walkthrough Title]
-                </span>
-                <span class="resource-desc"
-                  >[PROMPT: Provide a summary of the verified video travel vlog, focusing on transit routes or neighborhood atmosphere. Max 12 words.]</span
-                >
-              </a>
-
-              <!-- Mainstream Tourism & Blending Resource Card -->
-              <a
-                href="[Vetted-Official-Government-Tourism-or-Mainstream-Sightseeing-URL]"
-                target="_blank"
-                rel="noopener"
-                class="resource-card"
-                style="border-left: 4px solid #00f2ff"
-              >
-                <span class="resource-title" style="color: #00f2ff">
-                  [CONDITION: Set title strictly to 'Straight Actors Travel Guide' if country is hostile or red. Set title strictly to 'The Straight Tourist Guide' if country is
-                  safe, amber, or green.]
-                </span>
-                <span class="resource-desc">
-                  [PROMPT: Target official state tourism boards or non-gay respected and popular travel guides. If safe, provide a witty teaser for iconic museums and transit
-                  access. If hostile, deliver a sharp tactical blending tip for navigating high security mainstream monuments safely. Max 15 words. No semicolons or em-dashes.]
-                </span>
-              </a>
-
-              <!-- Luxury Contrast Link (Exactly One Permitted) -->
-              <a href="[Vetted-Luxury-Five-Star-Hotels-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid gold; opacity: 0.85">
-                <span class="resource-title" style="color: #d4af37">Five-Star Luxury Contrast</span>
-                <span class="resource-desc">[PROMPT: Provide a single reference link to premium luxury hotel lines strictly as an upscale budget contrast. Max 12 words.]</span>
-              </a>
-
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 20px">GWN | May 2026</p>
+              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 30px">GWN | June 2026</p>
             </div>
           </div>
         </details>
