@@ -259,7 +259,7 @@
 
         <details class="news-accordion status-border status-[green/amber/red]">
           <summary>
-            <h3 class="pod-title">History</h3>
+            <h2 class="pod-title">History</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -297,7 +297,7 @@
                 alt="[ALT-TEXT - Localized historical gay travel keywords using hyphens]"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: [Credit Name/Platform] | [Location or Historical Event Name]</p>
+              <span class="image-caption">Source: [Credit Name/Platform] | [Location or Historical Event Name]</span>
             </div>
 
             <!-- BLOCK 3 EXAMPLE (STANDARD PARAGRAPH) -->
@@ -452,7 +452,7 @@
 
         <details class="news-accordion status-border [STATUS-COLOR]">
           <summary>
-            <h3 class="pod-title">Sexual Health</h3>
+            <h2 class="pod-title">Sexual Health</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -590,7 +590,7 @@
 
         <details class="news-accordion status-border green">
           <summary>
-            <h3 class="pod-title">Travel & Fun</h3>
+            <h2 class="pod-title">Travel & Fun</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -719,7 +719,7 @@
         <!-- Replace [STATUS-COLOR] with status-green, status-amber, or status-red based on legal status -->
         <details class="news-accordion status-border [STATUS-COLOR]">
           <summary>
-            <h3 class="pod-title">Need To Know Laws</h3>
+            <h2 class="pod-title">Need To Know Laws</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -917,5 +917,6 @@
         scrollbar-width: thin;
       }
     </style>
+    <div id="zoom-overlay" class="image-zoom-overlay"></div>
   </body>
 </html>

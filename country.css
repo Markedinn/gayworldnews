@@ -1366,6 +1366,14 @@ body::before {
   display: block !important;
 }
 
+.pod-title {
+  font-size: 1.15rem !important; /* Forces it to look exactly like your old h3 */
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  display: inline-block;
+}
+
 .hub-disclaimer-card {
   background: rgba(0, 0, 0, 0.5); /* Subtle dark tint instead of white tint */
   border-left: 3px solid #0894f1;
@@ -1376,43 +1384,53 @@ body::before {
   line-height: 1.5;
   color: #ffffff !important;
 }
-
 /* --- ARTICLE IMAGE HUB SYSTEM --- */
+/* 1. The Container: Stays locked to the screen width */
 .article-image-container {
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   margin: 35px 0;
   display: flex;
   flex-direction: column;
 }
 
-/* Specificity Nuke: Target the anchor and ALL its browser states inside the container */
-.article-image-container a,
-.article-image-container a:link,
-.article-image-container a:visited,
-.article-image-container a:hover,
-.article-image-container a:active {
-  text-decoration: none !important;
-  display: block;
-  width: 100%;
-  transition: opacity 0.3s ease;
-  color: inherit; /* Prevents default browser blue/purple link color forcing */
-  text-align: left !important;
-}
-
-.article-image-container a:hover {
-  opacity: 0.9;
-}
-
-/* Consolidated Main Image Styles */
+/* 2. The Image: Scales down perfectly on mobile, never breaks out */
 .article-main-img {
   display: block;
-  width: 100%; /* Fills the container width */
+  width: 100%;
   max-width: 100%;
-  height: auto; /* Maintains aspect ratio */
-  margin: 0 auto; /* The "No-Drift" centering rule */
-  border-radius: 4px; /* Softens the look to match your glass-cards */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Adds depth */
-  object-fit: cover;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Target the container */
+.article-image-container .image-caption {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Force the text and any sub-elements inside it to be blue */
+.article-image-container .image-caption,
+.article-image-container .image-caption * {
+  color: #0894f1 !important;
+}
+
+/* 3. The Caption Links: Clean blue text, NO underline by default */
+.article-image-container .image-caption a {
+  color: #0894f1 !important;
+  text-decoration: none !important; /* Strips the default underline */
+  display: inline;
+  transition: text-decoration 0.2s ease;
+}
+
+/* 4. The Hover State: Underline appears ONLY when hovering */
+.article-image-container .image-caption a:hover {
+  text-decoration: underline !important;
 }
 
 /* Base caption styles targeted directly inside the link structure */
@@ -1429,6 +1447,56 @@ body::before {
 .article-image-container a:hover .image-caption {
   color: #3498db !important; /* High-end subtle color shift on hover */
   text-decoration: underline !important;
+}
+
+/* 1. Tell the user the image is interactive */
+.article-main-img {
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+.article-main-img:hover {
+  opacity: 0.95;
+}
+
+/* 2. The Full-Screen Overlay Background */
+.image-zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9); /* Deep dark background */
+  backdrop-filter: blur(8px); /* Blurs the article text BEHIND the overlay */
+  z-index: 99999; /* Higher than everything else on the site */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* 3. When the overlay is active */
+.image-zoom-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 4. The Zoomed Image inside the overlay */
+.image-zoom-overlay img {
+  max-width: 95vw;
+  max-height: 95vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  cursor: zoom-out;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.image-zoom-overlay.active img {
+  transform: scale(1); /* Subtle snap-into-focus animation */
 }
 
 .ai-warning-banner {

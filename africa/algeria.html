@@ -171,7 +171,7 @@
       <div id="info-display-area" style="grid-column: 1 / -1">
         <details class="news-accordion status-border status-red">
           <summary>
-            <h3 class="pod-title">Article</h3>
+            <h2 class="pod-title">Article</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -314,19 +314,16 @@
               </p>
               <br />
               <div class="info-display-area" style="margin-top: 20px; text-align: center">
-                <div class="glass-card" style="padding: 20px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1)">
-                  <a href="#map-popout">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/ECHO_Algeria_Editable_A3_Landscape.png/800px-ECHO_Algeria_Editable_A3_Landscape.png"
-                      style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); cursor: zoom-in"
-                    />
-                  </a>
-                  <p style="font-size: 0.7rem; color: #999; margin-top: 15px; line-height: 1.2">
-                    Map Reference:
-                    <a href="https://commons.wikimedia.org/wiki/File:ECHO_Algeria_Editable_A3_Landscape.png" style="color: #007bff; text-decoration: none" target="_blank"
-                      >ERCC / Wikimedia Commons</a
-                    >.
-                  </p>
+                <div class="article-image-container">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b0/ECHO_Algeria_Editable_A3_Landscape.png"
+                    alt="algeria-topography-map-travel-risk-profile"
+                    class="article-main-img"
+                  />
+                  <span class="image-caption">
+                    Source: European Commission / DG ECHO via Wikimedia Commons |
+                    <a href="https://commons.wikimedia.org/wiki/File:ECHO_Algeria_Editable_A3_Landscape.png" target="_blank" rel="noopener">Map of Algeria</a>
+                  </span>
                 </div>
               </div>
               <br />
@@ -353,7 +350,7 @@
         </details>
         <details class="news-accordion status-border status-red">
           <summary>
-            <h3 class="pod-title">Medical</h3>
+            <h2 class="pod-title">Sexual Health</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -479,7 +476,7 @@
 
         <details class="news-accordion status-border status-red">
           <summary>
-            <h3 class="pod-title">Need To Know Laws</h3>
+            <h2 class="pod-title">Need To Know Laws</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -618,5 +615,6 @@
         }
       });
     </script>
+    <div id="zoom-overlay" class="image-zoom-overlay"></div>
   </body>
 </html>

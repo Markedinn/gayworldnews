@@ -259,7 +259,7 @@
 
         <details class="news-accordion status-border status-green">
           <summary>
-            <h3 class="pod-title">History</h3>
+            <h2 class="pod-title">History</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -281,13 +281,14 @@
               his favorite actors with expensive jewelry and clothing in a very public display of wealth and same sex affection.
             </p>
 
-            <div class="article-image-container">
+            <div class="article-image-container" style="max-width: 100%; overflow: hidden; padding: 10px 0">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Thai-Dancers-greeted-The-France-Commission-d%27Exploration-du-Mekong-Cambodia-1866.jpg"
                 alt="1866-drawing-of-thai-male-dancers-in-drag-greeting-french-commission"
                 class="article-main-img"
+                style="width: 100%; height: auto; display: block"
               />
-              <p class="image-caption">Wikimedia | Thai Dancers Greet The French Commission</p>
+              <span class="image-caption" style="margin-top: 8px; font-size: 0.9rem; text-align: center">Wikimedia | Thai Dancers Greet The French Commission</span>
             </div>
 
             <h4>1908: The Civilized Panic</h4>
@@ -300,7 +301,7 @@
 
             <h4>1956: The Quiet Decriminalization</h4>
             <p>
-              While the US and UK were aggressively hunting down gay men during the Cold War Thailand quietly
+              While the US and UK were aggressively hunting down gay men during the Cold War, Thailand quietly
               <a href="#source-4" style="color: #0894f1 !important; text-decoration: underline">decriminalized sodomy</a>. It was an incredibly progressive legal move that
               completely contradicted the strict gender norms the state had been desperately trying to enforce since the 1930s.
             </p>
@@ -437,7 +438,7 @@
 
         <details class="news-accordion status-border status-green">
           <summary>
-            <h3 class="pod-title">Sexual Health</h3>
+            <h2 class="pod-title">Sexual Health</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -613,7 +614,7 @@
 
         <details class="news-accordion status-border status-green">
           <summary>
-            <h3 class="pod-title">Travel & Fun</h3>
+            <h2 class="pod-title">Travel & Fun</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -752,7 +753,7 @@
 
         <details class="news-accordion status-border status-green">
           <summary>
-            <h3 class="pod-title">Need To Know Laws</h3>
+            <h2 class="pod-title">Need To Know Laws</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
@@ -772,10 +773,10 @@
                 <ul class="law-list" style="list-style: none; padding: 0">
                   <li style="margin-bottom: 15px; display: flex; align-items: baseline">
                     <span style="margin-right: 10px">🏳️‍🌈</span>
-                    <span
-                      ><strong>Same-Sex Activity:</strong><br />
-                      Legal | <strong>Age of Consent:</strong> Equal</span
-                    >
+                    <span>
+                      <strong>Same-Sex Activity:</strong><br />
+                      Legal | <strong>Age of Consent:</strong> <a href="#age-of-consent-details" style="color: #0894f1 !important; text-decoration: underline">Equal: 15</a>
+                    </span>
                   </li>
 
                   <li style="margin-bottom: 15px; display: flex; align-items: baseline">
@@ -823,6 +824,26 @@
                     >
                   </li>
                 </ul>
+
+                <p id="age-of-consent-details">
+                  <strong>Age of Consent Details:</strong> The legal age of consent in Thailand is 15, and it is applied equally regardless of sexual orientation or gender.
+                  However, engaging in sexual activity with individuals between the ages of 15 and 18 - even consensually - can still result in severe criminal penalties under
+                  child protection statutes and "taking a minor from a guardian" laws (<em>phrak phu yao</em>).
+                </p>
+
+                <p>
+                  <strong>After You Get Caught:</strong> Anecdotal reports and legal briefings frequently highlight that this specific statute is highly susceptible to
+                  exploitation. Because the legal offense is technically committed against the <em>parents' rights</em> rather than the minor, it is often weaponized after the
+                  fact.
+                </p>
+
+                <p>
+                  <strong>Prison Or Huge Financial Penalties:</strong> Local legal platform reports indicate that many cases involving consenting teenagers aged 15 to 17 never
+                  reach a courtroom. Instead, they are settled via police-mediated financial compensation paid directly to the parents to drop the "abduction" complaint. Foreign
+                  travelers and wealthier individuals are disproportionately targeted for these private settlements because the statutory criminal penalty carries 3 to 10 years in
+                  prison, giving local families immense leverage.
+                </p>
+                <p><strong>Opinion:</strong> Don't mess around with minors and always check identification if you are not 100% sure of the age of who you are meeting.</p>
 
                 <div class="resource-container" style="margin-top: 30px">
                   <h3 style="margin-bottom: 20px">Links:</h3>
@@ -971,5 +992,6 @@
         });
       });
     </script>
+    <div id="zoom-overlay" class="image-zoom-overlay"></div>
   </body>
 </html>

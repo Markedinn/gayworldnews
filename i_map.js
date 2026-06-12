@@ -174,24 +174,31 @@ window.addEventListener("load", function () {
               else if (complexity > 2000) sizeClass = "size-medium";
             }
 
-            // Centralized toast layout engine
+            // Premium Glassy White Toast Engine
             function triggerToast(message) {
               const toast = document.createElement("div");
               toast.innerText = message;
-              toast.style.position = "fixed";
-              toast.style.bottom = "100px";
-              toast.style.left = "50%";
-              toast.style.transform = "translateX(-50%)";
-              toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
-              toast.style.color = "#ffffff";
-              toast.style.padding = "12px 24px";
-              toast.style.borderRadius = "30px";
-              toast.style.fontSize = "0.9rem";
-              toast.style.fontFamily = "sans-serif";
-              toast.style.zIndex = "99999";
-              toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
-              toast.style.transition = "opacity 0.4s ease";
-              toast.style.pointerEvents = "none";
+
+              Object.assign(toast.style, {
+                position: "fixed",
+                bottom: "100px",
+                left: "50%",
+                transform: "translateX(-50%)",
+                background: "rgba(255, 255, 255, 0.4)",
+                backdropFilter: "blur(12px)",
+                webkitBackdropFilter: "blur(12px)",
+                color: "#0f172a",
+                padding: "12px 24px",
+                borderRadius: "30px",
+                fontSize: "0.9rem",
+                fontWeight: "600",
+                fontFamily: "sans-serif",
+                zIndex: "99999",
+                boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.08)",
+                border: "1px solid rgba(255, 255, 255, 0.4)",
+                transition: "opacity 0.4s ease",
+                pointerEvents: "none",
+              });
 
               document.body.appendChild(toast);
 
@@ -199,6 +206,28 @@ window.addEventListener("load", function () {
                 toast.style.opacity = "0";
                 setTimeout(() => toast.remove(), 400);
               }, 2000);
+            }
+
+            // NEW: Boundary Collision Engine for Hover/Tap Box
+            function positionHoverBox(clientX, clientY, isTouch) {
+              const boxWidth = hoverBox.offsetWidth;
+              const winWidth = window.innerWidth;
+
+              let x = isTouch ? clientX : clientX + 15;
+              let y = isTouch ? clientY - 60 : clientY - 35;
+
+              // Prevent Right Edge Overflow (The "Russia" fix)
+              if (x + boxWidth + 15 > winWidth) {
+                x = winWidth - boxWidth - 15;
+              }
+              // Prevent Left Edge Overflow
+              if (x < 15) x = 15;
+
+              // Prevent Top Edge Overflow (moves box below the finger if too high)
+              if (y < 15) y = clientY + 30;
+
+              hoverBox.style.left = x + "px";
+              hoverBox.style.top = y + "px";
             }
 
             layer.on({
@@ -221,19 +250,35 @@ window.addEventListener("load", function () {
                 cur.setStyle({ fillOpacity: 0.7 });
                 if (cur._path) cur._path.style.filter = "drop-shadow(0px 0px 8px rgba(255,255,255,0.5))";
 
-                hoverBox.innerText = displayName;
-                hoverBox.style.display = "block";
+                // Apply premium glass style to the hover tooltips
+                Object.assign(hoverBox.style, {
+                  background: "rgba(255, 255, 255, 0.4)",
+                  backdropFilter: "blur(12px)",
+                  webkitBackdropFilter: "blur(12px)",
+                  color: "#0f172a",
+                  padding: "6px 14px",
+                  borderRadius: "20px",
+                  fontSize: "0.85rem",
+                  fontWeight: "600",
+                  fontFamily: "sans-serif",
+                  zIndex: "100000",
+                  boxShadow: "0px 4px 16px rgba(0, 0, 0, 0.05)",
+                  border: "1px solid rgba(255, 255, 255, 0.4)",
+                  display: "block",
+                });
 
+                hoverBox.innerText = displayName;
+
+                // Run Boundary Engine
                 if (e.originalEvent && e.originalEvent.touches) {
                   const touch = e.originalEvent.touches[0];
-                  hoverBox.style.left = touch.clientX + "px";
-                  hoverBox.style.top = touch.clientY - 60 + "px";
+                  positionHoverBox(touch.clientX, touch.clientY, true);
                 }
               },
               mousemove: (e) => {
                 if (e.originalEvent && !e.originalEvent.touches) {
-                  hoverBox.style.left = e.originalEvent.clientX + 15 + "px";
-                  hoverBox.style.top = e.originalEvent.clientY - 35 + "px";
+                  // Run Boundary Engine for desktop mice
+                  positionHoverBox(e.originalEvent.clientX, e.originalEvent.clientY, false);
                 }
               },
               mouseout: (e) => {
@@ -249,12 +294,16 @@ window.addEventListener("load", function () {
                 const isTouch = e.originalEvent.pointerType === "touch" || e.originalEvent.touches;
                 const countryData = window.globalData ? window.globalData[key] : null;
 
-                // 1. IF THE DOSSIER EXISTS: Handle the high-end navigation sequence
                 if (countryData?.path) {
-                  // First touch on mobile: activate the hover frame and show the guide hint once
                   if (isTouch && hoverBox.getAttribute("data-active") !== key) {
                     hoverBox.setAttribute("data-active", key);
                     hoverBox.style.display = "block";
+
+                    // Re-run boundary check on tap just to be perfectly safe
+                    if (e.originalEvent.touches) {
+                      const touch = e.originalEvent.touches[0];
+                      positionHoverBox(touch.clientX, touch.clientY, true);
+                    }
 
                     if (!localStorage.getItem("hasSeenMapHint")) {
                       triggerToast("Tap again to open country guide.");
@@ -263,7 +312,6 @@ window.addEventListener("load", function () {
                     return;
                   }
 
-                  // Second touch on mobile (or instant desktop click): execute routing
                   const isLocal = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost" || window.location.protocol === "file:";
                   const cleanPath = countryData.path.replace(/^\//, "");
 
@@ -272,9 +320,7 @@ window.addEventListener("load", function () {
                   } else {
                     window.location.href = "/" + cleanPath;
                   }
-                }
-                // 2. IF THE DOSSIER DOES NOT EXIST: Drop the toast instantly on the very first tap
-                else {
+                } else {
                   triggerToast(`${countryData?.name || name} guide coming soon!`);
                   console.log(`No active guide path for ${key}. Map tier display only.`);
                 }
@@ -325,4 +371,47 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const desktopEl = document.getElementById("last-updated-desktop");
   if (desktopEl) desktopEl.textContent = dateString;
+});
+
+// Standalone Intro Glass Toast - Fires exactly once on homepage load
+document.addEventListener("DOMContentLoaded", () => {
+  if (!localStorage.getItem("hasSeenIntroGlass")) {
+    const intro = document.createElement("div");
+    intro.innerText = "Zoom & Click To Open Country";
+
+    // Premium Glassmorphism Styles with Deep Slate/Blue Text
+    Object.assign(intro.style, {
+      position: "fixed",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      background: "rgba(255, 255, 255, 0.4)",
+      backdropFilter: "blur(12px)",
+      webkitBackdropFilter: "blur(12px)",
+      color: "#0f172a",
+      padding: "16px 32px",
+      borderRadius: "30px",
+      fontSize: "1rem",
+      fontWeight: "600",
+      fontFamily: "sans-serif",
+      zIndex: "999999",
+      boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.08)",
+      border: "1px solid rgba(255, 255, 255, 0.4)",
+      opacity: "1",
+      transition: "opacity 1.0s ease",
+      pointerEvents: "none", // Allows instant map interactions right through the text
+      letterSpacing: "0.5px",
+    });
+
+    document.body.appendChild(intro);
+
+    // Lock it down so it never appears again
+    localStorage.setItem("hasSeenIntroGlass", "true");
+
+    // Display for 2 seconds, then execute a smooth 1-second fade out before removal
+    setTimeout(() => {
+      intro.style.opacity = "0";
+      setTimeout(() => intro.remove(), 1000);
+    }, 2000);
+  }
 });

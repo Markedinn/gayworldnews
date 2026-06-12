@@ -90,20 +90,27 @@ document.body.addEventListener("click", (e) => {
     const toast = document.createElement("div");
     toast.innerText = `${countryName} guide coming soon!`;
 
-    toast.style.position = "fixed";
-    toast.style.bottom = "100px";
-    toast.style.left = "50%;";
-    toast.style.transform = "translateX(-50%)";
-    toast.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
-    toast.style.color = "#ffffff";
-    toast.style.padding = "12px 24px";
-    toast.style.borderRadius = "30px";
-    toast.style.fontSize = "0.9rem";
-    toast.style.fontFamily = "sans-serif";
-    toast.style.zIndex = "99999";
-    toast.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.3)";
-    toast.style.transition = "opacity 0.4s ease";
-    toast.style.pointerEvents = "none";
+    // The Glassy White Upgrade + Fixed Left Positioning
+    Object.assign(toast.style, {
+      position: "fixed",
+      bottom: "100px",
+      left: "50%", // Rogue semicolon removed!
+      transform: "translateX(-50%)",
+      background: "rgba(255, 255, 255, 0.4)",
+      backdropFilter: "blur(12px)",
+      webkitBackdropFilter: "blur(12px)",
+      color: "#0f172a",
+      padding: "12px 24px",
+      borderRadius: "30px",
+      fontSize: "0.9rem",
+      fontWeight: "600",
+      fontFamily: "sans-serif",
+      zIndex: "99999",
+      boxShadow: "0px 8px 32px rgba(0, 0, 0, 0.08)",
+      border: "1px solid rgba(255, 255, 255, 0.4)",
+      transition: "opacity 0.4s ease",
+      pointerEvents: "none",
+    });
 
     document.body.appendChild(toast);
 
@@ -171,5 +178,46 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     console.log("Local Dev Link Shim active: Routing clean URLs to physical files smoothly.");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay = document.getElementById("zoom-overlay");
+
+  document.querySelectorAll(".article-main-img").forEach((img) => {
+    img.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Clear out any previous zoomed image from the overlay
+      overlay.innerHTML = "";
+
+      // Clone the clicked image
+      const zoomedImg = img.cloneNode(true);
+
+      // Append the clone into our top-level overlay layout
+      overlay.appendChild(zoomedImg);
+
+      // Reveal the overlay and lock the background article scroll
+      overlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // Close everything when clicking anywhere on the overlay or the zoomed image
+  overlay.addEventListener("click", closeZoom);
+
+  // Close on Escape key press
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeZoom();
+  });
+
+  function closeZoom() {
+    overlay.classList.remove("active");
+    document.body.style.overflow = ""; // Restore site scrolling
+
+    // Clear the image out after the fade animation completes
+    setTimeout(() => {
+      overlay.innerHTML = "";
+    }, 300);
   }
 });
