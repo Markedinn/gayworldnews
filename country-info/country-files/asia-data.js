@@ -321,6 +321,7 @@ Object.assign(globalData, {
     name: "Turkmenistan",
     continent: "asia",
     status: "red",
+    path: "asia/turkmenistan",
   },
 
   united_arab_emirates: {
