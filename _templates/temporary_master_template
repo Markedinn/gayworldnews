@@ -5,66 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="language" content="English" />
 
-    <!-- CRITICAL HEAD SECTION RULE: This rule applies ONLY to country names within internal site links (canonical, hreflang, and routing keys). 
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/[region]/[country]" />
 
-1. For multi-word country names, you MUST use underscores (e.g., north_korea, saudi_arabia). 
-2. NEVER change non-country path elements, filenames, or assets to underscores. Standard site assets and structural paths must preserve their original format (e.g., KEEP dashes in paths like /images/gwn-logo.jpg or /assets/main-style.css). -->
-
-    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}" />
-
-    <title>{COUNTRY_NAME} Gay Guide to Travel, Health, Safety & Essential Laws 2026</title>
-
+    <!-- 1. The Direct Search Hook: Connecting the Timeline to Survival -->
+    <title>[Country] Gay History & Survival Guide (2026) | Gay World News</title>
     <meta
       id="meta-desc"
       name="description"
-      content="2026 {COUNTRY_NAME} gay travel and health tracker. Essential laws to know before you visit include the core regional updates. {CAPITAL_CITY} safety rating is {STATUS_COLOR}."
+      content="Gay World News maps [Country]'s gay history to its modern reality. Explore the exact timeline behind today's laws, health access, and survival alerts."
     />
 
     <meta
       name="keywords"
-      content="{COUNTRY_NAME} Gay guide to health, laws before traveling to {COUNTRY_NAME}, {COUNTRY_NAME} gay safety 2026, {CAPITAL_CITY} gay travel, MSM sexual health, key legal mandates"
+      content="Gay World News [Country], [Country] gay history, [Country] gay timeline, [Country] gay survival 2026, MSM sexual health laws, travel laws for men"
     />
 
     <meta property="og:type" content="article" />
-    <meta property="og:url" id="og-url" content="https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}" />
-    <meta property="og:title" id="og-title" content="2026 Guide to Gay Travel, Health, Safety & Laws before you visit {COUNTRY_NAME}" />
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/[region]/[country]" />
 
-    <meta property="og:description" id="og-desc" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting {COUNTRY_NAME}." />
+    <!-- 2. The Social Media Feed Hook: Tabloid Edge -->
+    <meta property="og:title" id="og-title" content="[Country] Gay History, Laws & Modern Survival Alerts (2026) | Gay World News" />
+    <meta
+      property="og:description"
+      id="og-desc"
+      content="From historical roots to the brutal 2026 reality. Discover the exact timeline that shaped current state policy, sexual health, and survival risks for gay men in [Country]."
+    />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:alt" content="Gay World News logo stenciled as activist graffiti with a dripping rainbow flag on a weathered concrete flyover pillar." />
     <meta property="og:locale" content="en_US" />
-
+    <!-- 3. X / Twitter Tracker Signals -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@GayWorldNewsOrg" />
-    <meta name="twitter:title" content="2026 {COUNTRY_NAME} Gay Travel, Safety & Health Hub" />
-    <meta name="twitter:description" content="Get the unvarnished 2026 gay travel, health, and legal snapshot before visiting {COUNTRY_NAME}." />
+    <meta name="twitter:title" content="[Country] Gay History & Survival Report (2026) | Gay World News" />
+    <meta name="twitter:description" content="How historical shifts created today's legal realities for men in [Country]. Get the raw historical timeline from Gay World News." />
     <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
 
+    <!-- 4. Structured Schema: Validating Your Investigative Archive -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
-        },
-        "headline": "{COUNTRY_NAME} Gay Travel, Health & Legal Safety Report 2026",
-        "description": "Essential 2026 guide for gay men traveling to {COUNTRY_NAME}. Features crucial local laws to know before you travel, MSM sexual health mandates, and core safety updates.",
+        "headline": "Gay World News: [Country] Gay History, Health & Legal Survival Report 2026",
+        "description": "Essential 2026 timeline analysis from Gay World News mapping the history of [Country] to its current legal status, survival standards, and sexual health realities for men.",
         "image": "https://gayworldnews.com/images/gwn-logo.jpg",
-        "datePublished": "2026-06-04",
-        "dateModified": "2026-06-04",
+        "datePublished": "2026-05-24",
         "author": {
           "@type": "Organization",
-          "name": "Gay World News",
-          "url": "https://gayworldnews.com/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Gay World News",
-          "url": "https://gayworldnews.com/",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://gayworldnews.com/images/gwn-logo.jpg"
-          }
+          "name": "Gay World News"
         }
       }
     </script>
@@ -95,8 +82,8 @@
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "{COUNTRY_NAME}",
-              "item": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
+              "name": "[Country]",
+              "item": "https://gayworldnews.com/[region]/[country]"
             }
           ]
         },
@@ -113,8 +100,8 @@
             {
               "@type": "ListItem",
               "position": 2,
-              "name": "{COUNTRY_NAME}",
-              "item": "https://gayworldnews.com/{REGION_PATH}/{COUNTRY_PATH}"
+              "name": "[Country]",
+              "item": "https://gayworldnews.com/[region]/[country]"
             }
           ]
         }
@@ -182,10 +169,10 @@
         </div>
 
         <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
-          <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Map Information & FAQ</h2>
+          <span class="faq-section-title">Map Information & FAQ</span>
 
           <div class="faq-item" style="margin-bottom: 20px">
-            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How do I use this interactive map?</h3>
+            <span class="faq-question">Using the home page interactive map</span>
             <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
               <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
               advice, Health - medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
@@ -194,14 +181,14 @@
           </div>
 
           <div class="faq-item" style="margin-bottom: 20px">
-            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the lgbt Risk level determined?</h3>
+            <span class="faq-question">Judging the gay Risk level.</span>
             <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
               Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
             </p>
           </div>
 
           <div class="faq-item" style="margin-bottom: 20px">
-            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px; left: 0">Can I use this for legal travel planning?</h3>
+            <span class="faq-question">Gay World News For Safe Travel.</span>
             <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
               This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
             </p>
@@ -252,191 +239,175 @@
 
       <div id="info-display-area" style="grid-column: 1 / -1">
         <!-- ======================================================================= -->
-        <!-- THE EVERGREEN HISTORY MODEL (THE STORY-DRIVEN TIMELINE)                 -->
-        <!-- Use for: Dynamically mapping the 5 to 7 most scandalous, impactful, or  -->
-        <!-- triumphant historical flashpoints for gay men across any era.          -->
+        <!-- THE STORIES ENGINE: GLOBAL HISTORY MASTER CODE SKELETON                -->
         <!-- ======================================================================= -->
 
-        <details class="news-accordion status-border status-[green/amber/red]">
+        <!-- 
+  GWN AI ROUTING & RESEARCH ENGINE PROTOCOL: DYNAMIC HISTORY & PERSPECTIVE CONSTRAINTS
+  
+  1. THE IDEOLOGICAL HORIZON & THE RECEIPT FALLBACK RULE
+  - Structure history chronologically across major ideological milestones. 
+  - Phase 1: The Indigenous Baseline (Life before dominant religious or political ideologies like Christianity, Islam, or rigid state doctrines).
+  - Phase 2: The Ideological Shift (The exact moment a new belief system took root and altered the legal or social landscape for male intimacy).
+  - Phase 3: The Modern Transition (How post-war, colonial, or revolutionary forces shaped today's state stance).
+  - FALLBACK TRIGGER: If pre-ideological eras lack concrete primary archival records specifically tracking gay men or MSM, do not invent folklore or write vague summaries. Automatically drop the ancient era entirely and anchor the narrative at the earliest century where ironclad historical receipts exist.
+  
+  2. FORENSIC NARRATIVE TEXTURE (SHOW, DON'T TELL)
+  - Strictly ban loose, weak, or novelistic AI crutches like "fluid," "tactical," "poetic," or "shifting."
+  - Deploy sharp, forensic, street-legal, or cynical alternatives like "legal quicksand," "grey zones," "calculated," "app stings," or "profile setups."
+  - Driven entirely by fact-heavy vocabulary. BANNED filler phrases: "this proves that," "it is interesting to note," "as we can see," "history shows." Let raw numbers and archive codes deliver the impact.
+  - HUMAN INTEREST FOCUS: Prioritize real human names. Explicitly name BOTH partners involved in any historical record to ensure equal recognition. Truly establish their documented characters to drive immediate narrative stakes.
+  
+  3. DYNAMIC PERSPECTIVE ALIGNMENT (THE RE-ENGINEERED OP-ED LAYER)
+  - Evaluate the state transaction based on the country's specific regional risk profile.
+  - FOR SAFE HAVENS / LUCRATIVE STATES: Frame rights around economic pragmatism and tourist revenue goldmines. Treat the lack of civil partnerships as an economic own goal that blocks local men and expats from opening businesses or investing capital.
+  - FOR HOSTILE / DANGEROUS STATES: Expose the regime's corruption and hypocrisy. Frame persecution as a calculated political tool and a weaponized distraction used by a failing government to appease traditionalists and mask internal infrastructure collapse.
+  - FOR WESTERN STATES: Expose performative pinkwashing and virtue signaling. Detail how governments push symbolic legislation to score progressive points to distract from housing crises, inflation, or policy failures. Highlight how loud street theater and radical activist demands alienate the straight majority, creating a dangerous cultural friction that populist leaders weaponize to trigger a backlash. Conclude by arguing for quiet normalization and basic civil contracts based on mutual respect rather than exhausting, unwinnable cultural fights.
+
+  4. MASTER STRUCTURAL CONSTRAINTS
+  - CRITICAL GRAMMAR: Under no circumstances use semicolons or em-dashes in any generated text blocks, summaries, or headings. Use commas, full stops, or standard hyphens instead.
+  - LINGUISTIC RULE: Strict ban on the forbidden word starting with Q across all fields. Focus exclusively on gay men and MSM.
+  - TIME RULE: Write the entire chronicles section using the historical present tense to make the narrative unfold like an active, breaking news story.
+-->
+
+        <details class="news-accordion status-border status-pink">
           <summary>
             <h2 class="pod-title">History</h2>
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
             <div class="article-header-row">
-              <h3 class="main-title">[Title - Max 5 words - Exploit the historical narrative with heavy tabloid punch]</h3>
+              <!-- Dynamic Journalistic Title (Hyper-localized, no filler, maximum 6 words) -->
+              <h3 class="main-title">[Insert Short, Punchy Tabloid Title Here]</h3>
             </div>
 
-            <!-- ======================================================================= -->
-            <!-- DYNAMIC STORY LOOP: Repeat this structure for between 5 and 7 eras max  -->
-            <!-- No rigid time limits. Can span from antiquity/bronze age to modern day. -->
-            <!-- ======================================================================= -->
+            <!-- 1. THE BASELINE INTRO & CONVERSATIONAL PIVOT -->
+            <p>
+              [Insert 2-3 clinical sentences establishing the exact modern 2026 travel security baseline, stating clearly if the nation operates as a sanctuary, a legal trap, or a
+              confusing grey zone for gay men.]
+            </p>
+            <p>So, how did [Insert Country Name] become so/such [tolerant / a mixed bag / dangerous]?</p>
 
-            <!-- BLOCK 1 EXAMPLE (LEAD PARAGRAPH USE CLASS "article-lead") -->
-            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
+            <!-- 2. THE CHRONICLES (STORY REPETITION CONTAINER: SCALE FROM 1 TO 10+ AS FACTS DICTATE) -->
+
+            <!-- STORY BLOCK 1 -->
+            <h4>[Insert Century/Decade]: [Insert Short Story Title]</h4>
+
+            <!-- Paragraph 1: The Setting & The Specific Protagonists -->
             <p class="article-lead">
-              [PROMPT: Expose the core historical event, palace scandal, or state crackdown of this era. Keep sentences short, fast-paced, and highly conversational. One phrase
-              inside this text block MUST be hyperlinked using standard blue text to act as a direct anchor link pointing to the corresponding ledger header in The Source Files
-              below. Exactly 2-3 punchy sentences. High-end tabloid tone, zero padding adjectives, zero semicolons, zero em-dashes. Focus strictly on gay men / MSM. Never use the
-              word "queer".]
-              <a href="#source-1" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 1 Header verbatim]</a>
+              [Paragraph 1: Launch directly into the action using the historical present tense. Name the specific primary cities, ports, or courts. Explicitly name both partners
+              involved if available in the archival records to ensure equal recognition. Clearly establish their documented characters to drive the human interest baseline
+              immediately.]
             </p>
 
-            <!-- BLOCK 2 EXAMPLE (STANDARD PARAGRAPH) -->
-            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
+            <!-- Paragraph 2: The Climax & Tension Mechanics -->
             <p>
-              [PROMPT: Document the next massive historical story, underground network milestone, or political rebellion. Ensure the prose flows naturally without sounding like an
-              academic textbook. Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
-              <a href="#source-2" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 2 Header verbatim]</a>
+              [Paragraph 2: Deliver the core factual friction or scandal with absolute precision using active, forensic nouns. Describe the arrest, the court ledger entry, the
+              street protest, or the high-level betrayal. Embed primary data or legal terminology directly inside an outbound anchor receipt link like this:
+              <a href="#source-1" style="color: #0894f1 !important; text-decoration: underline">[Insert Local Archive File Name Here]</a>. Zero empty moralizing text allowed.]
             </p>
 
-            <!-- VISUAL BREAK (Drop 1 or 2 historical, non-corporate images between narrative blocks) -->
+            <!-- Paragraph 3: The Complete Archival Resolution -->
+            <p>
+              [Paragraph 3: Complete the historical loop. State exactly what happened to both individuals in the aftermath, how the local community reacted at the time, or how the
+              local regime executed the final judgment. Keep the entire narrative contained strictly within its historical era.]
+            </p>
+
+            <!-- MANDATORY ARTICLE IMAGE FORMAT (Include only if an authentic historical image URL from Wikipedia Commons or a verified archive exists in the data, otherwise omit this div entirely) -->
             <div class="article-image-container">
-              <img
-                src="[IMG-URL - Source an authentic historical artifact, archival document, local landmark, or vintage photo from Wikimedia]"
-                alt="[ALT-TEXT - Localized historical gay travel keywords using hyphens]"
-                class="article-main-img"
-              />
-              <span class="image-caption">Source: [Credit Name/Platform] | [Location or Historical Event Name]</span>
+              <img src="[Insert Wikipedia Commons / Media URL]" alt="[Insert Factual Description]" class="article-main-img" />
+              <p class="image-caption">Source: [Insert Explicit Archive Attribution here]</p>
             </div>
 
-            <!-- BLOCK 3 EXAMPLE (STANDARD PARAGRAPH) -->
-            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
-            <p>
-              [PROMPT: Move the narrative forward to the next major flashpoint or turning point in society. Keep the energy high and highlight the human drama or state hypocrisy.
-              Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
-              <a href="#source-3" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 3 Header verbatim]</a>
-            </p>
-
-            <!-- BLOCK 4 EXAMPLE (STANDARD PARAGRAPH) -->
-            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
-            <p>
-              [PROMPT: Map the arrival of modern legal changes, social evolutions, or historic milestones. Maintain the active voice and zero filler padding. Exactly 2-3 punchy
-              sentences. Zero semicolons, zero em-dashes.]
-              <a href="#source-4" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 4 Header verbatim]</a>
-            </p>
-
-            <!-- BLOCK 5 EXAMPLE (STANDARD PARAGRAPH) -->
-            <h4>[Era or Specific Year Range]: [Max 3 Words Characterizing The Vibe]</h4>
-            <p>
-              [PROMPT: Conclude the history timeline on the current state of affairs, legal breakthroughs, or remaining local hypocrisies. Leave a strong impression that ties
-              directly to the modern travel experience. Exactly 2-3 punchy sentences. Zero semicolons, zero em-dashes.]
-              <a href="#source-5" style="color: #0894f1 !important; text-decoration: underline">[Hyperlink natural proof phrase here - matching Source 5 Header verbatim]</a>
-            </p>
-
-            <!-- BRITTLED VERBATIM ANECDOTE OR QUOTE -->
+            <!-- VERBATIM TEXT QUOTE FORMAT (Deploy only if an exact quote fragment exists from a verified link, otherwise omit this blockquote entirely) -->
             <blockquote class="article-quote">
-              "[PROMPT: Extract a single sentence verbatim quote under 25 words highlighting local lifestyle, legal triumph, or historical testimony. Source strictly from a
-              credible book, news archive, or court document. Do not paraphrase.]"
+              "[Insert verbatim historical quote text here]"
               <br />
               <a href="#source-quote" style="color: #0894f1 !important; text-decoration: underline"
-                ><span style="color: #0894f1 !important">[Source Name - Use human labels like Historical Court Ledger, Official Archive Records, or Published Biography]</span></a
+                ><span style="color: #0894f1 !important">[Insert Primary Chronicle Name]</span></a
               >
             </blockquote>
 
-            <!-- ======================================================================= -->
-            <!-- THE SOURCE FILES (THE RECEIPTS LEDGER)                                  -->
-            <!-- Maps 1:1 with the narrative paragraphs above. Never link to Wikipedia.  -->
-            <!-- ======================================================================= -->
+            <!-- 3. THE EDITORIAL TAKEAWAY (THE FREEDOM OF VOICE LAYER) -->
+            <h3
+              class="article-subhead"
+              style="
+                text-decoration: underline !important;
+                text-decoration-color: #ff00ff !important;
+                text-decoration-thickness: 5px !important;
+                text-underline-offset: 8px !important;
+                margin-top: 40px;
+              "
+            >
+              Opinion
+            </h3>
+            <p>
+              [Insert a single, fast-paced concluding paragraph here. This is your dedicated arena to break from pure history and apply your platform's editorial feelings. Execute
+              the cold, transactional state analysis, expose state hypocrisy or pinkwashing, highlight backlash risks if applicable, and deliver the final realist verdict for gay
+              men on the ground.]
+            </p>
+
+            <!-- 4. TWO-TIERED RESOURCE FOOTER (THE RECEIPTS LEDGER) -->
             <div class="resource-container" style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px">
               <h3 style="margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px">The Source Files</h3>
 
+              <!-- TIER 1: GENERAL BACKGROUND HUB (With Strict User-Warning Container) -->
+              <div class="general-trust-box" style="border: 1px dashed #ff9800; background: rgba(255, 152, 0, 0.03); padding: 15px; border-radius: 6px; margin-bottom: 25px">
+                <h4 style="margin: 0 0 8px 0; color: #e65100; font-size: 0.95rem">⚠ General Reading Advisory</h4>
+                <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #444; line-height: 1.4">
+                  Public encyclopedias and community hubs are user-edited and subject to change. For ironclad investigative receipts and primary records, bypass these links and
+                  consult our verified source files below.
+                </p>
+                <a
+                  href="[Insert Wikipedia/Documentary URL]"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #e65100; text-decoration: underline; font-weight: bold"
+                >
+                  Open General History Archive Hub
+                </a>
+              </div>
+
+              <!-- TIER 2: PRIMARY RECEIPTS (Ensure ID matches the story anchor href perfectly) -->
+
               <!-- SOURCE CARD 1 -->
               <div id="source-1" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 1 here to map 1:1 with paragraph]</h5>
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Century/Decade]: [Insert Subject Focus]</h5>
                 <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Exact Blue Link Text From Paragraph 1 Verbatim Here]
+                  [Insert Core Document Ledger Group Title]
                 </span>
                 <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
+                  href="[Insert Primary Academic Repository Domain / National Archive Hub]"
                   target="_blank"
                   rel="noopener"
                   style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
                 >
-                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
-                  em-dashes.]
+                  <strong>[Insert Publisher Name / State Archive Group]</strong> – [Insert brief 1-sentence description of what the record catalogs regarding male relations].
+                  <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #0894f1 !important">How to Find It:</strong> [Insert step-by-step search instruction blueprint to help the user locate the exact volume,
+                    chronicle series, or record reference code from the main homepage].
+                  </span>
                 </a>
               </div>
 
-              <!-- SOURCE CARD 2 -->
-              <div id="source-2" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 2 here to map 1:1 with paragraph]</h5>
-                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Exact Blue Link Text From Paragraph 2 Verbatim Here]
+              <!-- QUOTE RECIPIENT CARD (Deploy only if a quote block was utilized above) -->
+              <div
+                id="source-quote"
+                class="resource-card"
+                style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #ff00ff !important"
+              >
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">Verbatim Quote Origin</h5>
+                <span style="color: #ff00ff !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Verified Chronicle Reference Name]
                 </span>
-                <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
-                  target="_blank"
-                  rel="noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
-                >
-                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
-                  em-dashes.]
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 3 -->
-              <div id="source-3" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 3 here to map 1:1 with paragraph]</h5>
-                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Exact Blue Link Text From Paragraph 3 Verbatim Here]
-                </span>
-                <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
-                  target="_blank"
-                  rel="noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
-                >
-                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
-                  em-dashes.]
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 4 -->
-              <div id="source-4" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 4 here to map 1:1 with paragraph]</h5>
-                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Exact Blue Link Text From Paragraph 4 Verbatim Here]
-                </span>
-                <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
-                  target="_blank"
-                  rel="noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
-                >
-                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
-                  em-dashes.]
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 5 -->
-              <div id="source-5" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">[Insert Timeline Title 5 here to map 1:1 with paragraph]</h5>
-                <span style="color: #0894f1 !important; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Exact Blue Link Text From Paragraph 5 Verbatim Here]
-                </span>
-                <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
-                  target="_blank"
-                  rel="noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
-                >
-                  <strong>[Author Name / Media House / Academic Publisher]</strong> — [Full citation or book title verifying the historical data. Max 15 words. No semicolons or
-                  em-dashes.]
-                </a>
-              </div>
-
-              <!-- QUOTE SOURCE CARD -->
-              <div id="source-quote" class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem">Verbatim Quote Receipt</h5>
-                <a
-                  href="[Verified-High-Authority-URL-No-Wikipedia]"
-                  target="_blank"
-                  rel="noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none"
-                >
-                  <strong>[Official Repository or Primary Source Publication]</strong> — [Verification data tracking the specific page or interview transcription. Max 15 words. No
-                  semicolons or em-dashes.]
+                <a href="https://archive.org" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
+                  <strong>[Insert Primary Library / Registry Repository Name]</strong> – Retained historical documents compiled by contemporary authors capturing original
+                  statements. <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #ff00ff !important">How to Find It:</strong> [Insert text collection query string or volume index path to cross-examine the quote text
+                    directly].
+                  </span>
                 </a>
               </div>
 
@@ -446,7 +417,26 @@
         </details>
 
         <!-- ======================================================================= -->
-        <!-- TEMPLATE 2: THE CRISIS-OPTIMIZED MEDICAL ACCESS MODEL                  -->
+        <!-- MASTER AI PROTOCOL: EMERGENCY CONTAINER GENERATION RULES                -->
+        <!-- ======================================================================= -->
+        <!-- 
+  CRITICAL EMERGENCY CONTAINER PROTOCOL:
+  Analyze the country profile data to determine if the nation is classified as a Safe Sanctuary/Mixed-Bag (Track A) or a Lethal Blackout Zone (Track B).
+
+  If Track A (Safe or Mixed-Bag Country):
+  1. Output the standard emergency lines paragraph with the verified local medical and police numbers.
+  2. Output the Track A PEP text instructing users to visit local clinics or emergency rooms.
+  3. Completely omit the Crisis NGO text and the red emergency button from the layout.
+
+  If Track B (Lethal Blackout Country):
+  1. Delete the entire paragraph containing the medical emergency and police phone numbers so no local state numbers are displayed.
+  2. Output the Track B PEP text explaining that local facilities are unsafe, do not offer confidentiality, and carry severe consequences.
+  3. Directly below the PEP text, insert the high-visibility crisis intervention box. Populate the text exactly as follows: "If you are facing a severe medical crisis or an immediate physical threat on the ground here, you can connect with a specialized network that is there just for you. Please use this link if you are in an urgent, life-saving emergency situation."
+  4. Generate the anchor button exactly as styled in the template, displaying the text: CRISIS ONLY NGO (with the word ONLY highlighted in yellow for maximum contrast). Set the href destination to the verified emergency NGO intake link.
+-->
+
+        <!-- ======================================================================= -->
+        <!-- TEMPLATE 2: THE RE-ENGINEERED MEDICAL & LIFELINE ACCESS MODEL          -->
         <!-- Use for: High-efficiency, low-scroll emergency and clinic navigation.   -->
         <!-- ======================================================================= -->
 
@@ -460,16 +450,65 @@
             <!-- 1. Emergency Quick-Bar (Always First) -->
             <div style="border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
               <h4>🚨 Emergency & Urgent Care</h4>
-              <p><strong>Medical Emergency:</strong> [EMERGENCY NUMBER] | <strong>Police:</strong> [POLICE NUMBER]</p>
-              <p><strong>Urgent (PEP):</strong> Unsafe sex? Take PEP within 72 hours. Go to [PRIMARY PEP CLINIC] or the 24-hour emergency room at [MAJOR HOSPITAL].</p>
+
+              <!-- EMERGENCY PHONE LINE PARAGRAPH: If local authorities or state hospitals present a direct threat of arrest, violence, or mandatory reporting for gay men, the AI must delete this entire p tag completely so no numbers are displayed. If the country is safe, populate it normally. -->
+              <p><strong>Medical Emergency:</strong> [Insert Medical Number] | <strong>Police:</strong> [Insert Police Number]</p>
+
+              <!-- DYNAMIC PEP ROUTING PROTOCOL: The AI will select the correct text block based on local risk. -->
+              <p style="margin-bottom: 0">
+                <strong>Urgent (PEP):</strong>
+                [TRACK A TEXT: If you had unsafe sex, you can protect yourself by taking PEP within 72 hours. Go to [INSERT PRIMARY PEP CLINIC] or use the 24-hour emergency room at
+                [INSERT MAJOR HOSPITAL] if you can.] [TRACK B TEXT: PEP is not safely available at hospitals or clinics anywhere in this country, and walking into a public facility
+                carries severe consequences. If you had unsafe sex or are in a crisis, please do not go to a local emergency room. Instead, look at the specialized link below right
+                now.]
+              </p>
+
+              <!-- LETHAL BLACKOUT EXTRACTION GATEKEEPER: This container and button must be completely deleted by the AI if the country is safe or a mixed bag. It must only appear for high-risk blackout territories. -->
+              <div class="crisis-gatekeeper-block" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ff4d4d">
+                <p style="font-size: 0.9rem; line-height: 1.4; color: #222; margin-bottom: 12px">
+                  If you are facing a severe medical crisis or an immediate physical threat on the ground here, you can connect with a specialized network that is there just for
+                  you. Please use this link if you are in an urgent, life-saving emergency situation.
+                </p>
+                <a
+                  href="[INSERT EMERGENCY NGO URL]"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display: block;
+                    text-align: center;
+                    background: #ff4d4d;
+                    color: #ffffff !important;
+                    font-size: 0.95rem;
+                    font-weight: bold;
+                    letter-spacing: 0.5px;
+                    padding: 12px 15px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    box-shadow: 0 2px 4px rgba(255, 77, 77, 0.2);
+                  "
+                >
+                  Crisis <span style="color: #ffe600 !important; font-weight: 900">ONLY</span> NGO
+                </a>
+              </div>
             </div>
 
             <!-- 2. Fast Facts -->
             <h4 style="margin-bottom: 15px; color: #111">Fast Facts</h4>
-            <ul style="margin-bottom: 25px; padding-left: 20px; color: #222; font-size: 0.95rem; line-height: 1.5">
-              <li style="margin-bottom: 10px"><strong>General:</strong> [1 punchy sentence on public vs private screening, confidentiality, and judgment level].</li>
-              <li style="margin-bottom: 10px"><strong>Safety:</strong> [1 punchy sentence on visa traps, deportation threats, or quarantine rules].</li>
-              <li><strong>Insider:</strong> [1 aggressive, actionable tip on bypassing queues or saving money].</li>
+            <ul class="fact-list">
+              <li style="margin-bottom: 10px">
+                <strong>General:</strong> [Insert 1 reassuring sentence on local testing. State the baseline rules for state facilities cleanly and validate the situation by adding
+                that you must get tested as soon as you can. If public hospitals are safe and confidential, recommend using them to save money. If state facilities are unsafe or
+                log personal details, point to a recognized private clinic instead if you are able to protect your privacy.]
+              </li>
+              <li style="margin-bottom: 10px">
+                <strong>Safety:</strong> [Insert 1 protective, non-alarmist sentence on local medical screening, visa rules, or residency policies, framing the situation as an
+                administrative fact while offering a calm workaround.]
+              </li>
+              <li>
+                <strong>Insider:</strong> [Insert 1 helpful, everyday tip on how to handle clinic navigation easily, bypass standard triage desks, or speak to staff comfortably
+                without stress.]
+              </li>
             </ul>
 
             <div class="resource-container">
@@ -507,7 +546,8 @@
                     ><strong>Phone:</strong> [PHONE NUMBER]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
-                    <strong>Instructions:</strong> [1 sharp sentence on exactly where to walk or what to say to bypass triage].
+                    <strong>Instructions:</strong> [Insert 1 clear sentence using normal everyday language explaining exactly where to walk or what to say to bypass standard triage
+                    desks easily.]
                   </span>
                 </div>
               </div>
@@ -536,23 +576,32 @@
                     ><strong>Phone:</strong> [PHONE NUMBER]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
-                    <strong>Instructions:</strong> [1 sharp sentence on exactly where to walk or what to say to bypass triage].
+                    <strong>Instructions:</strong> [Insert 1 clear sentence using normal everyday language explaining exactly where to walk or what to say to bypass standard triage
+                    desks easily.]
                   </span>
                 </div>
               </div>
 
-              <h3 style="margin-top: 30px; margin-bottom: 20px; color: #111">Community Links & Support</h3>
+              <h3 style="margin-top: 30px; margin-bottom: 10px; color: #111">Community Links & Support</h3>
+              <p style="font-size: 0.95rem; margin: 0 0 20px 0; color: #444; line-height: 1.4">
+                Look at the links below, read the descriptions and use the one that best describes your situation. These are networks that are there just for you.
+              </p>
 
               <!-- Community Resource 1 -->
               <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
                 <span class="resource-title" style="color: #00d4ff">[COMMUNITY OR PRIVATE CLINIC NAME]</span>
-                <span class="resource-desc"> [1 punchy sentence describing the vibe and service provided]. </span>
+                <span class="resource-desc">
+                  [Insert 1 simple sentence using everyday conversational language describing what this clinic offers, how they protect your details, and how they help you.]
+                </span>
               </a>
 
               <!-- Community Resource 2 -->
               <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
                 <span class="resource-title" style="color: #2ecc71">[GRASSROOTS NGO OR FOUNDATION NAME]</span>
-                <span class="resource-desc"> [1 punchy sentence describing the vibe and service provided]. </span>
+                <span class="resource-desc">
+                  [Insert 1 simple sentence using everyday conversational language describing how this group offers local care, extraction support, or emergency housing if you are
+                  in a difficult spot.]
+                </span>
               </a>
             </div>
 
@@ -578,7 +627,7 @@
             </div>
 
             <!-- 6. Footer Timestamp Note -->
-            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | [MONTH YEAR]</p>
+            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | June 2026</p>
           </div>
         </details>
 
@@ -588,7 +637,7 @@
         <!-- travel blogs. Let the guides speak verbatim. Let the user decide.       -->
         <!-- ======================================================================= -->
 
-        <details class="news-accordion status-border green">
+        <details class="news-accordion status-border [STATUS-COLOR]">
           <summary>
             <h2 class="pod-title">Travel & Fun</h2>
           </summary>
@@ -668,42 +717,30 @@
               </a>
             </div>
 
-            <h3
-              class="article-subhead"
-              style="
-                text-decoration: underline !important;
-                text-decoration-color: #ff00ff !important;
-                text-decoration-thickness: 5px !important;
-                text-underline-offset: 8px !important;
-                margin-top: 30px;
-              "
-            >
-              The Bottom <span style="color: #ff00ff !important">Line</span>
-            </h3>
+            <h3 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h3>
+
             <p>[PROMPT: Deliver a final 1-2 sentence verdict that helps the user weigh the official research against the travel guides. Zero semicolons, zero em-dashes.]</p>
 
             <!-- THE ESSENTIALS -->
             <div class="resource-container" style="margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px">
+              <!-- OPTIONAL VIDEO GUIDE CARD: Omit this entire component and the video travel blog subtitle if no authentic community videos are available, especially for high-risk or hostile destinations where local MSM content doesn't exist -->
+              <h4 style="margin-bottom: 15px">Video Travel Blog</h4>
+
+              <a href="{{ VIDEO_URL }}" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
+                <span class="resource-title" style="display: flex; align-items: center">
+                  <span class="youtube-icon-box"></span>
+                  {{ VLOG_NAME }}
+                </span>
+                <span class="resource-desc">{{ VIDEO_DESCRIPTION }}</span>
+              </a>
               <h4 style="margin-bottom: 15px">The Essentials</h4>
 
-              <a
-                href="[PROMPT: Insert exact USA State Dept Travel Advisory link for this country]"
-                target="_blank"
-                rel="noopener"
-                class="resource-card"
-                style="margin-bottom: 10px; display: block; text-decoration: none"
-              >
+              <a href="[verified-state-department-url]" target="_blank" rel="noopener" class="resource-card" style="margin-bottom: 10px; display: block; text-decoration: none">
                 <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">US State Department Advisory</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem">Official real time safety warnings and regional travel restrictions.</span>
               </a>
 
-              <a
-                href="[PROMPT: Insert URL for the top local gay NGO or health clinic]"
-                target="_blank"
-                rel="noopener"
-                class="resource-card"
-                style="display: block; text-decoration: none"
-              >
+              <a href="[verified-local-ngo-url]" target="_blank" rel="noopener" class="resource-card" style="display: block; text-decoration: none">
                 <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">[NGO or Clinic Name]</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem">[PROMPT: 10 word max description of the local resource. No semicolons or em-dashes.]</span>
               </a>
@@ -831,9 +868,8 @@
     </div>
     <div class="footer-branding-wrapper">
       <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
-      <p class="footer-site-subtitle">Legal Travel Health & Security</p>
+      <p class="footer-site-subtitle">History, Health, Travel & Law</p>
     </div>
-
     <script>
       window.gtranslateSettings = {
         default_language: "en",

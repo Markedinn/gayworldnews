@@ -45,6 +45,12 @@ body::before {
   pointer-events: none;
 }
 
+h5 {
+  font-size: 0.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
 .standard-page {
   margin: 0;
   width: 100vw;
@@ -355,7 +361,7 @@ body::before {
 
 .news-accordion h3 {
   margin: 0;
-  font-size: 1.4rem;
+  font-size: 1.3rem !important;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #000000;
@@ -617,7 +623,6 @@ body::before {
 .news-article-view,
 .news-article-view p,
 .news-article-view h1,
-.news-article-view h3,
 .news-article-view span,
 .news-article-view blockquote {
   color: #000000 !important;
@@ -631,10 +636,12 @@ body::before {
 }
 
 .article-subhead {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 8px;
-  margin-top: 30px;
-  font-size: 1.4rem;
+  text-decoration: underline !important;
+  text-decoration-color: #ff00ff !important;
+  text-decoration-thickness: 5px !important;
+  text-underline-offset: 8px !important;
+  margin-top: 40px;
+  margin-bottom: 30px !important;
 }
 
 /* Fix the Identity Bar specifically */
@@ -680,10 +687,6 @@ body::before {
   font-weight: 800;
 }
 
-.news-accordion[open] summary h3 {
-  color: #000000 !important;
-}
-
 /* THE TEXT INSIDE THE POD */
 .news-accordion[open] .news-content-expanded {
   background: #ffffff !important;
@@ -713,8 +716,7 @@ body::before {
   color: #000000 !important; /* Turns black the moment it opens */
 }
 
-/* Target any h3 or h4 that might be INSIDE the expanded text area */
-.news-content-expanded h3,
+/* Target any h4 that might be INSIDE the expanded text area */
 .news-content-expanded h4,
 .news-content-expanded strong {
   color: #000000 !important;
@@ -828,6 +830,26 @@ body::before {
   text-decoration: underline !important;
 }
 
+/* --- FAST FACTS SECTION --- */
+
+.fact-list {
+  margin-bottom: 25px;
+  padding-left: 20px;
+  color: #222;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.fact-list li {
+  margin-bottom: 10px;
+}
+
+/* Forces the labels like General and Safety to break onto a clean new line */
+.fact-list li strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
 /* --- RESOURCE SECTION --- */
 
 .resource-container {
@@ -848,7 +870,6 @@ body::before {
 }
 
 /* THE TITLE - Electric Blue */
-/* Change this in your CSS */
 .resource-container a.resource-card .resource-title {
   display: block;
   color: #0894f1 !important;
@@ -859,20 +880,17 @@ body::before {
   margin-bottom: 12px;
 }
 
-/* THE DESCRIPTION - Clean Black */
-.resource-container a.resource-card .resource-desc {
+/* THE LABELS - Forces text below bold indicators like Address and Phone */
+.resource-container .resource-card strong {
   display: block;
-  font-size: 1rem;
-  color: #000000 !important;
-  line-height: 1.6;
-  margin-bottom: 0; /* No extra space at the bottom of the card */
+  margin-bottom: 4px;
 }
 
 /* THE DESCRIPTION - Clean Black */
 .resource-container .resource-desc {
   display: block !important;
   font-size: 1rem !important;
-  font-weight: 500 !important; /* Forces a medium, highly readable weight */
+  font-weight: 500 !important;
   color: #000000 !important;
   line-height: 1.6 !important;
   margin-bottom: 0;
@@ -881,7 +899,7 @@ body::before {
 .resource-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  background: #ffffff !important; /* Flips to white on hover */
+  background: #ffffff !important;
 }
 
 /* --- UNIVERSAL TABLE STYLING --- */
@@ -1110,6 +1128,11 @@ body::before {
 
 .news-accordion.status-border.status-green {
   border-left-color: #2ecc71; /* Green */
+}
+
+.news-accordion.status-border.status-pink {
+  border-left-color: #ff00ff !important; /* Pink */
+  border-top-color: #ff00ff !important; /* Pink */
 }
 
 .news-accordion.status-border summary {
@@ -1367,8 +1390,8 @@ body::before {
 }
 
 .pod-title {
-  font-size: 1.15rem !important; /* Forces it to look exactly like your old h3 */
-  font-weight: 700;
+  font-size: 1.3rem !important; /* Forces it to look exactly like your old h3 */
+  font-weight: 800;
   color: #111;
   margin: 0;
   display: inline-block;
@@ -1520,6 +1543,62 @@ body::before {
   margin-bottom: 8px;
 }
 
+/* TEMPORARY HISTORY CARDS */
+
+.historical-context-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #007bff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  backdrop-filter: blur(10px);
+}
+
+.historical-context-card h4 {
+  color: #ffeb3b;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.historical-context-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.historical-context-card .sources-container {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 10px;
+}
+
+.historical-context-card .sources-title {
+  display: block;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.historical-context-card .source-link {
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: block;
+  word-break: break-all;
+  margin-bottom: 5px;
+}
+
+.historical-context-card .source-link:last-child {
+  margin-bottom: 0;
+}
+
 .ai-warning-banner p {
   margin: 0;
   color: #fff;
@@ -1663,6 +1742,24 @@ li span {
 }
 .track-red {
   border-left: 3px solid #ff4d4d;
+}
+
+.youtube-icon-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  width: 2.2em;
+  height: 1.5em;
+  vertical-align: middle;
+  margin-right: 8px;
+  flex-shrink: 0;
+
+  /* The encoded SVG sits cleanly inside the background property */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23ff0000' d='M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z'/%3E%3Cpath fill='%23ffffff' d='M9.545 15.568V8.432L15.818 12l-6.273 3.568z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 /* ==========================================================================
    GAY WORLD NEWS - FIXED 2-COLUMN BENTO SYSTEM (ACCORDION OPTIMIZED)
@@ -1827,10 +1924,6 @@ li span {
   /* 3. THE CLICKABLE HEADER: Adjust padding so the title isn't cramped */
   .news-accordion summary {
     padding: 18px 20px; /* Reduced from 25px 30px */
-  }
-
-  .news-accordion h3 {
-    font-size: 1.1rem; /* Slightly smaller title to prevent awkward wrapping */
   }
 
   /* 4. THE INSIDE TEXT: The "Breathability" fix */

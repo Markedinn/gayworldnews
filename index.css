@@ -270,6 +270,24 @@ body {
   gap: 30px;
 }
 
+.faq-section-title {
+  display: block;
+  font-weight: bold;
+  color: #ffeb3b;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  display: block;
+  font-weight: bold;
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
 /* --- MOBILE SPECIFIC UI --- */
 
 .mobile-nav-links {

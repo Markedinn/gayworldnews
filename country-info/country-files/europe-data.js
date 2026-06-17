@@ -287,11 +287,6 @@ Object.assign(globalData, {
     continent: "europe",
     status: "green",
   },
-  turkey: {
-    name: "Turkey",
-    continent: "europe",
-    status: "amber",
-  },
   ukraine: {
     name: "Ukraine",
     continent: "europe",

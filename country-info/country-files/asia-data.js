@@ -313,8 +313,9 @@ Object.assign(globalData, {
 
   turkey: {
     name: "Turkey",
-    continent: "europe_asia",
+    continent: "asia",
     status: "amber",
+    path: "asia/turkey",
   },
 
   turkmenistan: {
@@ -328,18 +329,21 @@ Object.assign(globalData, {
     name: "United Arab Emirates",
     continent: "asia",
     status: "red",
+    path: "asia/united_arab_emirates",
   },
 
   uzbekistan: {
     name: "Uzbekistan",
     continent: "asia",
     status: "red",
+    path: "asia/uzbekistan",
   },
 
   vietnam: {
     name: "Vietnam",
     continent: "asia",
     status: "green",
+    path: "asia/vietnam",
   },
 
   yemen: {
