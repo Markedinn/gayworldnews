@@ -184,38 +184,30 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("zoom-overlay");
 
-  document.querySelectorAll(".article-main-img").forEach((img) => {
-    img.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      // Clear out any previous zoomed image from the overlay
-      overlay.innerHTML = "";
-
-      // Clone the clicked image
-      const zoomedImg = img.cloneNode(true);
-
-      // Append the clone into our top-level overlay layout
-      overlay.appendChild(zoomedImg);
-
-      // Reveal the overlay and lock the background article scroll
-      overlay.classList.add("active");
-      document.body.style.overflow = "hidden";
+  // Only run if the element actually exists on the current page
+  if (overlay) {
+    document.querySelectorAll(".article-main-img").forEach((img) => {
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        overlay.innerHTML = "";
+        const zoomedImg = img.cloneNode(true);
+        overlay.appendChild(zoomedImg);
+        overlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      });
     });
-  });
 
-  // Close everything when clicking anywhere on the overlay or the zoomed image
-  overlay.addEventListener("click", closeZoom);
+    overlay.addEventListener("click", closeZoom);
 
-  // Close on Escape key press
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeZoom();
-  });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeZoom();
+    });
+  }
 
   function closeZoom() {
+    if (!overlay) return; // Quick safeguard
     overlay.classList.remove("active");
-    document.body.style.overflow = ""; // Restore site scrolling
-
-    // Clear the image out after the fade animation completes
+    document.body.style.overflow = "";
     setTimeout(() => {
       overlay.innerHTML = "";
     }, 300);

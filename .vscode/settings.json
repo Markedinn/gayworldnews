@@ -40,7 +40,24 @@
       ]
     }
   },
-  "cSpell.words": ["eswatini", "GSGX", "guineabissau", "latlng", "nicedropdown", "pathing", "sahrawi"],
+  "cSpell.words": [
+    "eswatini",
+    "ghazal",
+    "GSGX",
+    "guineabissau",
+    "Himyar",
+    "Houthi",
+    "latlng",
+    "marginalised",
+    "nicedropdown",
+    "pathing",
+    "Rasulid",
+    "Rasulids",
+    "Sabaean",
+    "sahrawi",
+    "Taiz",
+    "Untransmittable"
+  ],
   "cSpell.enabledLanguageIds": ["html", "markdown", "plaintext", "css", "javascript"],
   "cSpell.ignoreRegExpList": ["class=\"[^\"]*\"", "href=\"[^\"]*\"", "src=\"[^\"]*\""],
   "github.copilot.enable": {

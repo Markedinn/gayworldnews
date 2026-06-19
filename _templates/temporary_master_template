@@ -20,7 +20,7 @@
       content="Gay World News [Country], [Country] gay history, [Country] gay timeline, [Country] gay survival 2026, MSM sexual health laws, travel laws for men"
     />
 
-    <meta property="og:type" content="article" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" id="og-url" content="https://gayworldnews.com/[region]/[country]" />
 
     <!-- 2. The Social Media Feed Hook: Tabloid Edge -->
@@ -31,6 +31,8 @@
       content="From historical roots to the brutal 2026 reality. Discover the exact timeline that shaped current state policy, sexual health, and survival risks for gay men in [Country]."
     />
     <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Gay World News logo stenciled as activist graffiti with a dripping rainbow flag on a weathered concrete flyover pillar." />
     <meta property="og:locale" content="en_US" />
     <!-- 3. X / Twitter Tracker Signals -->
@@ -44,7 +46,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "NewsArticle",
+        "@type": "WebPage",
         "headline": "Gay World News: [Country] Gay History, Health & Legal Survival Report 2026",
         "description": "Essential 2026 timeline analysis from Gay World News mapping the history of [Country] to its current legal status, survival standards, and sexual health realities for men.",
         "image": "https://gayworldnews.com/images/gwn-logo.jpg",

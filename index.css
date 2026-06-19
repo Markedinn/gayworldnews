@@ -750,12 +750,61 @@ body {
   }
 
   .menu-toggle {
-    top: 5.5rem; /* Pushed down to clear the new search bar footprint */
-    right: 2rem;
+    top: 3rem; /* Aligns perfectly on the same horizontal plane as the translator */
+    right: 3rem;
     display: block;
-    transform: scale(1);
-    padding: 5px;
     z-index: 300;
+
+    /* Inflate the clickable hit-box area */
+    padding: 12px !important;
+    cursor: pointer;
+  }
+
+  /* Make the three distinct lines physically fatter and longer */
+  .bar {
+    width: 45px !important; /* Stretched from 35px for prominent tablet presence */
+    height: 5px !important; /* Thickened from 4px for solid weight */
+    margin: 8px 0 !important; /* Increased gap to balance the extra thickness */
+    background-color: #ffffff; /* Ensures contrast against the wallpaper */
+    border-radius: 2px;
+  }
+  /* FORCE THE LEFT VERTICAL STACK ON TABLETS TOO */
+  #translator-anchor {
+    position: fixed; /* Ensures it stays pinned */
+    top: 2rem;
+    left: 3rem;
+    right: auto;
+    width: 240px; /* Perfectly matches mobile width */
+    z-index: 150;
+  }
+
+  /* Target the actual dropdown element inside the widget to force vertical height */
+  #translator-anchor select {
+    height: 40px !important; /* Forces a thick, solid vertical height */
+    padding: 10px 15px !important; /* Inflates the inner spacing */
+    font-size: 1rem !important; /* Pumps up the text visibility */
+    line-height: 1.2 !important;
+  }
+
+  .landing-search-wrap {
+    position: fixed;
+    top: 5.5rem; /* Pushed down slightly so it doesn't collide with the fatter translate button */
+    left: 3rem;
+    right: auto;
+    width: 240px;
+    z-index: 250;
+  }
+
+  /* Target the actual input field inside the wrapper */
+  #globalSearch {
+    height: 40px !important;
+    padding: 0 20px !important; /* Set vertical padding to 0 and expand side padding */
+    line-height: 50px !important; /* Matches height exactly to snap text to the vertical center */
+  }
+  /* Target the specific placeholder inside the tablet media query */
+  .landing-search-wrap input::placeholder {
+    font-size: 1rem !important; /* Forces the placeholder to match the input font size */
+    letter-spacing: 1px !important;
   }
 
   .slider-content {

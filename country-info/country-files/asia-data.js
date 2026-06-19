@@ -350,5 +350,6 @@ Object.assign(globalData, {
     name: "Yemen",
     continent: "asia",
     status: "red",
+    path: "asia/yemen",
   },
 });
