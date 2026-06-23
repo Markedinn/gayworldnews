@@ -99,13 +99,12 @@
 
   <body class="standard-page">
     <div id="translator-anchor"></div>
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
     <div class="side-menu" id="sideMenu">
-      <a class="close-btn" href="javascript:void(0)" onclick="toggleMenu()">×</a>
       <div class="slider-content">
         <nav class="mobile-nav-links">
           <a class="breaking-news-btn" href="/breaking">BREAKING NEWS</a><a href="/afr">AFRICA</a>
@@ -382,8 +381,23 @@
       <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
       <p class="footer-site-subtitle">Legal Travel Health &amp; Security</p>
     </div>
-    <script src="country-info/country-loader.js?v=1.5"></script>
     <script>
+      // 1. Instantly paint a static placeholder so the widget never looks "missing"
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        // Only inject if it hasn't been populated yet
+        if (anchor && !anchor.innerHTML.trim()) {
+          anchor.innerHTML = `
+          <div id="gtranslate-placeholder" style="display: inline-block; vertical-align: middle;">
+            <select style="background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 6px 24px 6px 10px; font-size: 0.9rem; border-radius: 4px; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none;">
+              <option>Translate</option>
+            </select>
+          </div>
+        `;
+        }
+      });
+
+      // 2. Standard widget configuration parameters
       window.gtranslateSettings = {
         default_language: "en",
         detect_browser_language: true,
@@ -391,36 +405,94 @@
         type: "nicedropdown",
       };
 
-      // This "forces" the text because the widget settings sometimes fail
-      window.addEventListener("load", function () {
-        setTimeout(function () {
-          var select = document.querySelector("#translator-anchor select");
-          if (select) {
-            // Creates a new "Select Language" option at the very top
-            var opt = document.createElement("option");
-            opt.value = "";
-            opt.innerHTML = "Translate";
-            opt.selected = true;
-            opt.disabled = true;
-            select.insertBefore(opt, select.firstChild);
-          }
-        }, 1000); // Waits 1 second for the widget to finish loading
+      // 3. Flawless script injector and swap engine
+      function initGTranslateLazy() {
+        if (window.gtranslateScriptLoaded) return;
+        window.gtranslateScriptLoaded = true;
+
+        // Wipe out the temporary static placeholder right before the real widget mounts
+        const placeholder = document.getElementById("gtranslate-placeholder");
+        if (placeholder) placeholder.remove();
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+        script.async = true;
+
+        script.onload = () => {
+          // Force internal script load flags to execute immediately
+          window.dispatchEvent(new Event("load"));
+
+          // Ensure our clean "Translate" label is injected into the real generated select box
+          setTimeout(() => {
+            const select = document.querySelector("#translator-anchor select");
+            if (select && !select.querySelector('option[value=""][disabled]')) {
+              const opt = document.createElement("option");
+              opt.value = "";
+              opt.innerHTML = "Translate";
+              opt.selected = true;
+              opt.disabled = true;
+              select.insertBefore(opt, select.firstChild);
+            }
+          }, 150);
+        };
+
+        document.body.appendChild(script);
+      }
+
+      // 4. Zero-Delay Interaction Listeners: If they go near or click the box, swap it instantly
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        if (anchor) {
+          anchor.addEventListener("mouseenter", initGTranslateLazy, { once: true });
+          anchor.addEventListener("touchstart", initGTranslateLazy, { passive: true, once: true });
+          anchor.addEventListener("click", initGTranslateLazy, { once: true });
+        }
       });
+
+      // 5. Background Idle Execution: If they don't touch it, stream it quietly after paint finishes
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => setTimeout(initGTranslateLazy, 100));
+      } else {
+        window.addEventListener("load", () => setTimeout(initGTranslateLazy, 200));
+      }
     </script>
-    <script defer="" src="https://cdn.gtranslate.net/widgets/latest/dropdown.js"></script>
+
     <script>
       function toggleMenu() {
         const menu = document.getElementById("sideMenu");
         menu.classList.toggle("open");
       }
 
-      // Close menu if user clicks outside of the slider
       window.addEventListener("click", function (e) {
         const menu = document.getElementById("sideMenu");
         const menuToggle = document.querySelector(".menu-toggle");
-        if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-          toggleMenu();
+
+        // Safety check: only proceed if menu exists and is currently open
+        if (menu && menu.classList.contains("open")) {
+          // If the click is NOT the menu AND NOT the toggle button, close it
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
         }
+      });
+
+      document.querySelectorAll(".news-content-expanded").forEach((container) => {
+        container.addEventListener("click", (e) => {
+          // Define tags that SHOULD NOT trigger a close (interactive elements)
+          const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
+
+          // If the user clicks the "white space" (not an interactive element)
+          if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
+            const parentDetails = container.closest("details");
+
+            if (parentDetails && parentDetails.open) {
+              parentDetails.removeAttribute("open");
+
+              // Optional: Smooth scroll back to the summary so the user isn't disoriented
+              parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }
+        });
       });
     </script>
     <div id="zoom-overlay" class="image-zoom-overlay"></div>

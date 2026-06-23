@@ -101,15 +101,13 @@
   <body class="standard-page">
     <div id="translator-anchor"></div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
 
     <div id="sideMenu" class="side-menu">
-      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-
       <div class="slider-content">
         <nav class="mobile-nav-links">
           <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a><a href="/afr">AFRICA</a>
@@ -550,7 +548,6 @@
       <p class="footer-site-subtitle">History, Health, Travel & Law</p>
     </div>
 
-    <script src="country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",
@@ -578,32 +575,62 @@
     <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
 
     <script>
-      // UI TOGGLES & EVENT LISTENERS
       function toggleMenu() {
-        document.getElementById("sideMenu")?.classList.toggle("open");
+        const menu = document.getElementById("sideMenu");
+        menu.classList.toggle("open");
       }
 
-      function toggleDesktopMenu() {
-        document.getElementById("desktopSlider")?.classList.toggle("active");
-      }
-
-      document.addEventListener("click", (e) => {
-        const sideMenu = document.getElementById("sideMenu");
+      window.addEventListener("click", function (e) {
+        const menu = document.getElementById("sideMenu");
         const menuToggle = document.querySelector(".menu-toggle");
-        const desktopSlider = document.getElementById("desktopSlider");
-        const desktopToggle = document.getElementById("desktopToggle");
 
-        // Close Side Menu
-        if (sideMenu?.classList.contains("open") && !sideMenu.contains(e.target) && !menuToggle?.contains(e.target)) {
-          sideMenu.classList.remove("open");
-        }
-
-        // Close Desktop Slider
-        if (desktopSlider?.classList.contains("active") && !desktopSlider.contains(e.target) && !desktopToggle?.contains(e.target)) {
-          desktopSlider.classList.remove("active");
+        // Safety check: only proceed if menu exists and is currently open
+        if (menu && menu.classList.contains("open")) {
+          // If the click is NOT the menu AND NOT the toggle button, close it
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
         }
       });
+
+      document.querySelectorAll(".news-content-expanded").forEach((container) => {
+        container.addEventListener("click", (e) => {
+          // Define tags that SHOULD NOT trigger a close (interactive elements)
+          const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
+
+          // If the user clicks the "white space" (not an interactive element)
+          if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
+            const parentDetails = container.closest("details");
+
+            if (parentDetails && parentDetails.open) {
+              parentDetails.removeAttribute("open");
+
+              // Optional: Smooth scroll back to the summary so the user isn't disoriented
+              parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }
+        });
+      });
     </script>
+    <style>
+      /* Webkit engines (Chrome, Safari, Edge, Mobile viewports) */
+      div::-webkit-scrollbar {
+        height: 6px;
+      }
+      div::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+      div::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #ff00ff, #ffbc00);
+        border-radius: 10px;
+      }
+      /* Modern Cross-Browser Standard (Firefox) */
+      div {
+        scrollbar-color: #ff00ff rgba(255, 255, 255, 0.05);
+        scrollbar-width: thin;
+      }
+    </style>
     <div id="zoom-overlay" class="image-zoom-overlay"></div>
   </body>
 </html>

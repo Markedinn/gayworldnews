@@ -103,15 +103,13 @@
   <body class="standard-page">
     <div id="translator-anchor"></div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
+    <div class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
     </div>
 
     <div id="sideMenu" class="side-menu">
-      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
-
       <div class="slider-content">
         <nav class="mobile-nav-links">
           <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a><a href="/afr">AFRICA</a>
@@ -752,7 +750,6 @@
       <p class="footer-site-subtitle">History, Health, Travel & Law</p>
     </div>
 
-    <script src="country-info/country-loader.js?v=1.5"></script>
     <script>
       window.gtranslateSettings = {
         default_language: "en",
@@ -785,12 +782,16 @@
         menu.classList.toggle("open");
       }
 
-      // Close menu if user clicks outside of the slider
       window.addEventListener("click", function (e) {
         const menu = document.getElementById("sideMenu");
         const menuToggle = document.querySelector(".menu-toggle");
-        if (menu.classList.contains("open") && !menu.contains(e.target) && !menuToggle.contains(e.target)) {
-          toggleMenu();
+
+        // Safety check: only proceed if menu exists and is currently open
+        if (menu && menu.classList.contains("open")) {
+          // If the click is NOT the menu AND NOT the toggle button, close it
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
         }
       });
 
