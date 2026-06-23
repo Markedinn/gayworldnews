@@ -17,6 +17,7 @@ body {
   background-color: #096ae9;
 }
 
+/* THE OPTIMIZED BASE CONTAINER */
 #map {
   position: fixed !important;
   top: 0;
@@ -26,7 +27,6 @@ body {
   width: 100vw;
   height: 125vh !important;
   height: 125dvh !important;
-  background-image: url("images/world_img.webp");
   filter: brightness(0.9) contrast(1.5) saturate(1.8);
   background-color: rgba(73, 73, 68, 0.141);
   background-blend-mode: multiply;
@@ -34,6 +34,14 @@ body {
   background-position: center;
   background-attachment: fixed;
   z-index: 1;
+}
+
+/* --- DESKTOP COGNITIVE SHIELD --- 
+   Forces the browser to ONLY request the high-res wallpaper on real computers */
+@media (min-width: 761px) {
+  #map {
+    background-image: url("images/world_img.webp");
+  }
 }
 
 /* --- 2. LEAFLET & MAP UI --- */
