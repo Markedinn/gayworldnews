@@ -211,10 +211,10 @@ Object.assign(globalData, {
     continent: "americas",
     status: "green",
   },
-  saint_kitts_nevis: {
-    name: "Saint Kitts and Nevis",
+  st_kitts_nevis: {
+    name: "St. Kitts & Nevis",
     continent: "americas",
-    status: "amber",
+    status: "green", // High Court struck down anti-buggery laws completely
   },
   saint_lucia: {
     name: "Saint Lucia",
@@ -226,10 +226,10 @@ Object.assign(globalData, {
     continent: "americas",
     status: "green",
   },
-  saint_vincent_grenadines: {
-    name: "Saint Vincent and the Grenadines",
+  saint_vincent_and_the_grenadines: {
+    name: "St. Vincent & Grenadines",
     continent: "americas",
-    status: "red",
+    status: "red", // Archaic colonial-era laws still active here
   },
   sint_maarten: {
     name: "Sint Maarten",
@@ -246,10 +246,10 @@ Object.assign(globalData, {
     continent: "americas",
     status: "amber",
   },
-  trinidad_tobago: {
+  trinidad_and_tobago: {
     name: "Trinidad and Tobago",
     continent: "americas",
-    status: "amber",
+    status: "red",
   },
   turks_caicos: {
     name: "Turks and Caicos Islands",
@@ -260,6 +260,7 @@ Object.assign(globalData, {
     name: "United States",
     continent: "americas",
     status: "green",
+    path: "united_states",
   },
   uruguay: {
     name: "Uruguay",
@@ -275,5 +276,20 @@ Object.assign(globalData, {
     name: "Virgin Islands (US)",
     continent: "americas",
     status: "green",
+  },
+
+  // states
+  alabama: {
+    name: "Alabama",
+    continent: "americas",
+    status: "amber",
+    path: "usa/alabama",
+  },
+
+  alaska: {
+    name: "Alaska",
+    continent: "americas",
+    status: "amber",
+    path: "usa/alaska",
   },
 });

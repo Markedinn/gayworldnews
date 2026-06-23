@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>United States Gay Travel Risk Map, History, Health & Law 2026 | Gay World News</title>
+    <meta
+      name="description"
+      content="Interactive 2026 gay safety and risk map tracking all 50 US states. Explore deep state history, MSM health resources, clinic locations, and local penal codes."
+    />
+    <meta name="keywords" content="gay travel USA, US state laws gay, MSM health resources America, interactive USA safety map, gay history database United States" />
+
+    <link rel="canonical" href="https://gayworldnews.com/united-states.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://gayworldnews.com/united-states.html" />
+    <meta property="og:title" content="United States Gay Safety, Health & Legal Map Dashboard 2026" />
+    <meta property="og:description" content="Interactive 2026 safety map tracking all 50 US states. Explore local history, clinical MSM access, and real-time legal profiles." />
+    <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gay World News logo stenciled as activist graffiti with a dripping rainbow flag on a weathered concrete flyover pillar." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://gayworldnews.com/united-states.html" />
+    <meta name="twitter:title" content="United States Gay Safety, Health & Legal Map Dashboard 2026" />
+    <meta name="twitter:description" content="Interactive 2026 safety map tracking all 50 US states. Explore local history, clinical MSM access, and real-time legal profiles." />
+    <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+
+    <link rel="icon" type="image/webp" href="images/favicon.webp" />
+    <link rel="apple-touch-icon" href="images/favicon.webp" />
+
+    <link rel="preload" href="index.css?v=6.0" as="style" />
+    <link rel="preload" href="usa_map.css?v=6.0" as="style" />
+
+    <link rel="stylesheet" href="index.css?v=6.0" />
+    <link rel="stylesheet" href="usa_map.css?v=6.0" />
+
+    <link rel="stylesheet" href="index.css?v=6.0" />
+    <link rel="stylesheet" href="regions.css?v=6.0" />
+    <link rel="stylesheet" href="usa_map.css?v=6.0" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+
+    <script>
+      window.globalData = {};
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "United States Gay Travel, History & Law Map Dashboard",
+        "url": "https://gayworldnews.com/united-states.html",
+        "description": "Interactive USA database mapping state-level gay history, local legal tracking, anonymous clinic links, and travel safety guides for men.",
+        "applicationCategory": "NewsApplication",
+        "operatingSystem": "Web",
+        "author": {
+          "@type": "Organization",
+          "name": "Gay World News"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://gayworldnews.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "United States Map",
+            "item": "https://gayworldnews.com/united-states.html"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="https://google.com" class="exit-btn" rel="noopener">QUICK EXIT</a>
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
+    <div id="translator-anchor"></div>
+    <a href="/" class="home-btn">HOME</a>
+
+    <div class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div id="sideMenu" class="side-menu">
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
+
+          <a href="afr">AFRICA</a>
+          <a href="ame">AMERICAS</a>
+          <a href="asi">ASIA</a>
+          <a href="eur">EUROPE</a>
+          <a href="oce">OCEANIA</a>
+          <a href="about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
+        </nav>
+
+        <a href="/contact" class="support-btn">SUPPORT OUR REPORTING</a>
+
+        <div class="social-pill-container">
+          <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+
+          <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93$.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="mission-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <h2 style="color: #ffeb3b; font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase">Your First Stop For Gay World News</h2>
+
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px">
+            Gay World News is the premier global hub for men seeking verified, high-end reporting on travel safety, health resources, and legal risks. State tourism boards will
+            gladly smile for your tourist dollars while actively suppressing local populations. We cut through the PR and state hypocrisy to deliver hard, actionable facts to
+            support the gay community.
+          </p>
+
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px">
+            Whether you need an overview of draconian legal codes, emergency medical contacts, or local clinic locations, our interactive risk dashboard tracks it all. We
+            cross-reference ground-level reports with trusted international watchdogs so you don't have to rely on gossip when traveling to hostile zones.
+          </p>
+
+          <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+            Stay ahead of legal crackdowns and travel advisories by exploring our verified guides for
+            <a href="afr" style="color: #4caf50; text-decoration: none; font-weight: bold">africa</a>,
+            <a href="ame" style="color: #4caf50; text-decoration: none; font-weight: bold">americas</a>,
+            <a href="asi" style="color: #4caf50; text-decoration: none; font-weight: bold">Asia</a>,
+            <a href="eur" style="color: #4caf50; text-decoration: none; font-weight: bold">Europe</a>, and
+            <a href="oce" style="color: #4caf50; text-decoration: none; font-weight: bold">Oceania</a>.
+          </p>
+        </div>
+
+        <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <span class="faq-section-title">Map Information & FAQ</span>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <span class="faq-question">The US State Interactive Risk Map</span>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700"> Tap a state boundary for its risk level, and tap again to open the full state dashboard. </span>
+              From deep state histories to current medical profiles and regional laws, we cut right through localized state-sponsored marketing. We use triangulation methods to
+              track legal shifts and secure reliable human sources while never relying on gossip.
+            </p>
+          </div>
+          <div class="faq-item" style="margin-bottom: 20px">
+            <span class="faq-question">How Is The State Risk Level Determined?</span>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              Our 2026 data aggregates state penal structures, clinical access disparities, local physical security indicators, and real-time news to provide a clear safety rating
+              for each jurisdiction.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <span class="faq-question">Can I Use This for Local Travel?</span>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+              Yes. Every single state layout offers custom history resources for context, immediate sexual health and anonymous clinical contacts, travel guidance, and local penal
+              listings to maintain absolute situational awareness.
+            </p>
+          </div>
+          <p style="color: #4caf50; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 20px">
+            <strong>Last Site Update:</strong>
+            <span id="last-updated-mobile"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="hoverBox"></div>
+
+    <div class="usa-header-wrapper">
+      <h1 class="usa-page-title">United States</h1>
+      <p class="usa-page-subtitle">Gay History, Health, Travel & Law</p>
+    </div>
+
+    <div id="map-toast" class="map-toast">Pinch to zoom & tap any state</div>
+    <div id="usa-map"></div>
+
+    <main class="master-grid-container">
+      <section class="bento-grid" id="countryGrid">
+        <a class="country-card" data-state="alabama" href="usa/alabama">
+          <span>ALAbama</span>
+        </a>
+
+        <!-- ACTIVE LIVE HUB -->
+        <a class="country-card" data-state="alaska" href="usa/alaska">
+          <span>ALASKA</span>
+        </a>
+
+        <a class="country-card green" data-state="arizona" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>ARIZONA</span>
+        </a>
+
+        <a class="country-card green" data-state="arkansas" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>ARKANSAS</span>
+        </a>
+
+        <a class="country-card green" data-state="california" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>CALIFORNIA</span>
+        </a>
+
+        <a class="country-card green" data-state="colorado" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>COLORADO</span>
+        </a>
+
+        <a class="country-card green" data-state="connecticut" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>CONNECTICUT</span>
+        </a>
+
+        <a class="country-card green" data-state="delaware" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>DELAWARE</span>
+        </a>
+
+        <a class="country-card green" data-state="florida" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>FLORIDA</span>
+        </a>
+
+        <a class="country-card green" data-state="georgia" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>GEORGIA</span>
+        </a>
+
+        <a class="country-card green" data-state="hawaii" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>HAWAII</span>
+        </a>
+
+        <a class="country-card green" data-state="idaho" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>IDAHO</span>
+        </a>
+
+        <a class="country-card green" data-state="illinois" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>ILLINOIS</span>
+        </a>
+
+        <a class="country-card green" data-state="indiana" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>INDIANA</span>
+        </a>
+
+        <a class="country-card green" data-state="iowa" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>IOWA</span>
+        </a>
+
+        <a class="country-card green" data-state="kansas" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>KANSAS</span>
+        </a>
+
+        <a class="country-card green" data-state="kentucky" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>KENTUCKY</span>
+        </a>
+
+        <a class="country-card green" data-state="louisiana" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>LOUISIANA</span>
+        </a>
+
+        <a class="country-card green" data-state="maine" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MAINE</span>
+        </a>
+
+        <a class="country-card green" data-state="maryland" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MARYLAND</span>
+        </a>
+
+        <a class="country-card green" data-state="massachusetts" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MASSACHUSETTS</span>
+        </a>
+
+        <a class="country-card green" data-state="michigan" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MICHIGAN</span>
+        </a>
+
+        <a class="country-card green" data-state="minnesota" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MINNESOTA</span>
+        </a>
+
+        <a class="country-card green" data-state="mississippi" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MISSISSIPPI</span>
+        </a>
+
+        <a class="country-card green" data-state="missouri" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MISSOURI</span>
+        </a>
+
+        <a class="country-card green" data-state="montana" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>MONTANA</span>
+        </a>
+
+        <a class="country-card green" data-state="nebraska" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEBRASKA</span>
+        </a>
+
+        <a class="country-card green" data-state="nevada" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEVADA</span>
+        </a>
+
+        <a class="country-card green" data-state="new_hampshire" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEW HAMPSHIRE</span>
+        </a>
+
+        <a class="country-card green" data-state="new_jersey" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEW JERSEY</span>
+        </a>
+
+        <a class="country-card green" data-state="new_mexico" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEW MEXICO</span>
+        </a>
+
+        <a class="country-card green" data-state="new_york" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NEW YORK</span>
+        </a>
+
+        <a class="country-card green" data-state="north_carolina" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NORTH CAROLINA</span>
+        </a>
+
+        <a class="country-card green" data-state="north_dakota" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>NORTH DAKOTA</span>
+        </a>
+
+        <a class="country-card green" data-state="ohio" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>OHIO</span>
+        </a>
+
+        <a class="country-card green" data-state="oklahoma" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>OKLAHOMA</span>
+        </a>
+
+        <a class="country-card green" data-state="oregon" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>OREGON</span>
+        </a>
+
+        <a class="country-card green" data-state="pennsylvania" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>PENNSYLVANIA</span>
+        </a>
+
+        <a class="country-card green" data-state="rhode_island" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>RHODE ISLAND</span>
+        </a>
+
+        <a class="country-card green" data-state="south_carolina" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>SOUTH CAROLINA</span>
+        </a>
+
+        <a class="country-card green" data-state="south_dakota" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>SOUTH DAKOTA</span>
+        </a>
+
+        <a class="country-card green" data-state="tennessee" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>TENNESSEE</span>
+        </a>
+
+        <a class="country-card green" data-state="texas" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>TEXAS</span>
+        </a>
+
+        <a class="country-card green" data-state="utah" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>UTAH</span>
+        </a>
+
+        <a class="country-card green" data-state="vermont" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>VERMONT</span>
+        </a>
+
+        <a class="country-card green" data-state="virginia" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>VIRGINIA</span>
+        </a>
+
+        <a class="country-card green" data-state="washington" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>WASHINGTON</span>
+        </a>
+
+        <a class="country-card green" data-state="west_virginia" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>WEST VIRGINIA</span>
+        </a>
+
+        <a class="country-card green" data-state="wisconsin" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>WISCONSIN</span>
+        </a>
+
+        <a class="country-card green" data-state="wyoming" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
+          <span>WYOMING</span>
+        </a>
+      </section>
+    </main>
+
+    <div class="offshore-map-stack">
+      <a href="/usa/alaska.html" id="offshore-alaska" class="offshore-element">
+        <span class="offshore-label">Alaska</span>
+        <svg viewBox="0 0 100 70" class="offshore-svg">
+          <path d="M15,45 L25,30 L45,20 L60,22 L85,25 L90,40 L70,52 L50,48 L30,55 Z" />
+        </svg>
+      </a>
+      <a href="/usa/hawaii.html" id="offshore-hawaii" class="offshore-element">
+        <span class="offshore-label">Hawaii</span>
+        <svg viewBox="0 0 100 70" class="offshore-svg">
+          <circle cx="20" cy="50" r="5" />
+          <circle cx="40" cy="42" r="6" />
+          <circle cx="60" cy="32" r="5" />
+          <circle cx="80" cy="22" r="6" />
+        </svg>
+      </a>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        if (anchor && !anchor.innerHTML.trim()) {
+          anchor.innerHTML = `
+          <div id="gtranslate-placeholder" style="display: inline-block; vertical-align: middle;">
+            <select style="background: #222; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 6px 24px 6px 10px; font-size: 0.9rem; border-radius: 4px; font-family: inherit; cursor: pointer; -webkit-appearance: none; appearance: none;">
+              <option>Translate</option>
+            </select>
+          </div>
+        `;
+        }
+      });
+
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: "#translator-anchor",
+        type: "nicedropdown",
+      };
+
+      function initGTranslateLazy() {
+        if (window.gtranslateScriptLoaded) return;
+        window.gtranslateScriptLoaded = true;
+
+        const placeholder = document.getElementById("gtranslate-placeholder");
+        if (placeholder) placeholder.remove();
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+        script.async = true;
+
+        script.onload = () => {
+          window.dispatchEvent(new Event("load"));
+          setTimeout(() => {
+            const select = document.querySelector("#translator-anchor select");
+            if (select && !select.querySelector('option[value=""][disabled]')) {
+              const opt = document.createElement("option");
+              opt.value = "";
+              opt.innerHTML = "Translate";
+              opt.selected = true;
+              opt.disabled = true;
+              select.insertBefore(opt, select.firstChild);
+            }
+          }, 150);
+        };
+
+        document.body.appendChild(script);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const anchor = document.getElementById("translator-anchor");
+        if (anchor) {
+          anchor.addEventListener("mouseenter", initGTranslateLazy, { once: true });
+          anchor.addEventListener("touchstart", initGTranslateLazy, { passive: true, once: true });
+          anchor.addEventListener("click", initGTranslateLazy, { once: true });
+        }
+      });
+
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => setTimeout(initGTranslateLazy, 100));
+      } else {
+        window.addEventListener("load", () => setTimeout(initGTranslateLazy, 200));
+      }
+    </script>
+
+    <script src="country-info/country-files/americas-data.js?v=6.0" defer></script>
+    <script src="/index.js" defer></script>
+    <script src="usa_map.js?v=6.0" defer></script>
+
+    <script>
+      (function () {
+        const loadGA = () => {
+          if (window.gaLoaded) return;
+          window.gaLoaded = true;
+          var script = document.createElement("script");
+          script.async = true;
+          script.src = "https://www.googletagmanager.com/gtag/js?id=G-GSGX0B7ZB3";
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-GSGX0B7ZB3");
+        };
+
+        ["mouseover", "keydown", "touchstart", "scroll"].forEach((event) => {
+          window.addEventListener(event, loadGA, { once: true });
+        });
+      })();
+    </script>
+  </body>
+</html>
+>

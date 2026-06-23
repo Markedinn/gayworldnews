@@ -125,7 +125,7 @@
     </div>
 
     <div id="sideMenu" class="side-menu">
-      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+      <button class="close-btn" onclick="toggleMenu()" style="background: none; border: none; cursor: pointer; padding: 0">&times;</button>
 
       <div class="slider-content">
         <nav class="mobile-nav-links">
@@ -205,20 +205,14 @@
 
     <div class="master-grid-container">
       <header class="main-header">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg"
-          alt="Flag of Vietnam"
-          width="260"
-          height="160"
-          style="border-radius: 4px; margin-top: 40px"
-        />
+        <img src="/flags/Flag_of_Vietnam.webp" alt="Flag of Vietnam" width="260" height="160" style="border-radius: 4px; margin-top: 40px" />
         <h1 id="country-name" class="main-title">Vietnam</h1>
       </header>
 
       <div class="top-utility-stack">
         <a href="https://www.preventionaccess.org" target="_blank" rel="noopener" class="u-u-link">
           <div id="u-u-notice">
-            <h4>U=U: Undetectable = Untransmittable</h4>
+            <span class="u-u-title">U=U: Undetectable = Untransmittable</span>
             <p>HIV Medication Keeps Everyone Safe</p>
           </div>
         </a>
@@ -235,7 +229,7 @@
         </div>
       </div>
 
-      <div id="info-display-area" style="grid-column: 1 / -1">
+      <main id="info-display-area" style="grid-column: 1 / -1">
         <details class="news-accordion status-border status-pink">
           <summary>
             <h2 class="pod-title">History & Perspective</h2>
@@ -273,7 +267,7 @@
                 alt="Historical portrait of Prince Canh, illustrating early international and diplomatic ties in Vietnam"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: Wikimedia Commons | The Emperor's son in opulent surroundings</p>
+              <span class="image-caption">Source: Wikimedia Commons | The Emperor's son in opulent surroundings</span>
             </div>
             <p>
               The law, compiled under Emperor Gia Long, introduces harsh penalties for domestic violations and marital adultery under Article 332. However, legislators completely
@@ -300,7 +294,7 @@
                 alt="Historical photograph of a bustling street in Saigon during the 1910s, showcasing early 20th-century urban life"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: Wikimedia Commons | Atmospheric view of old Saigon life</p>
+              <span class="image-caption">Source: Wikimedia Commons | Atmospheric view of old Saigon life</span>
             </div>
 
             <p>
@@ -320,7 +314,7 @@
                 alt="Historical photograph of Emperor Khai Dinh seated on his ornate imperial throne in Hue, Vietnam"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: Wikimedia Commons | The Emperor on his imperial throne</p>
+              <span class="image-caption">Source: Wikimedia Commons | The Emperor on his imperial throne</span>
             </div>
 
             <p>
@@ -347,7 +341,7 @@
                 alt="A gritty black and white historical representation of an American GI entering a discreet male venue in 1960s Saigon"
                 class="article-main-img"
               />
-              <p class="image-caption">Source: GWN | Representation of a secret wartime venue hiding from the military police</p>
+              <span class="image-caption">Source: GWN | Representation of a secret wartime gay bar in Saigon</span>
             </div>
             <h5>April 1975</h5>
             <p>
@@ -408,11 +402,11 @@
             </p>
 
             <!-- 4. TWO-TIERED RESOURCE FOOTER -->
-            <div class="resource-container" style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px">
+            <div class="resource-container" style="margin-top: 50px; padding-top: 30px">
               <h3 style="margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px">The Source Files</h3>
 
               <!-- TIER 1: GENERAL BACKGROUND HUB -->
-              <div class="general-trust-box" style="border: 1px dashed #ff9800; background: rgba(255, 152, 0, 0.03); padding: 15px; border-radius: 6px; margin-bottom: 25px">
+              <div class="general-trust-box" style="border: 2px solid #ff9800; padding: 15px; border-radius: 6px; margin-bottom: 25px">
                 <h4 style="margin: 0 0 8px 0; color: #e65100; font-size: 0.95rem">⚠ General Reading Advisory</h4>
                 <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #444; line-height: 1.4">
                   Wikipedia and community hubs are open-source and subject to change. For peer-to-peer academic research pages, consult our verified 'blue' sources below.
@@ -482,7 +476,7 @@
                 </a>
               </div>
 
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | June 2026</p>
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
@@ -493,120 +487,108 @@
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-pod-content">
-                <div style="background: rgba(46, 204, 113, 0.1); border: 1px solid #2ecc71; padding: 15px; border-radius: 8px; margin-bottom: 20px">
-                  <h4 style="margin-top: 0; color: #2ecc71; text-transform: uppercase">Emergency & Medical Infrastructure</h4>
-                  <p style="font-size: 0.95rem; margin-bottom: 10px"><strong>Medical Emergency:</strong> 115 | <strong>Police:</strong> 113</p>
-                  <p style="font-size: 0.85rem; color: #eee; margin: 0">
-                    <strong>Confidence Metric:</strong> High safety indicators. Peer-led health operations offer premium, confidential PrEP and ART access across core metropolitan
-                    hubs.
-                  </p>
-                </div>
+            <div style="border: 1px solid #2ecc71; padding: 15px; border-radius: 8px; margin-bottom: 10px">
+              <h3 style="margin: 10px 0; color: red; text-transform: uppercase">Emergency & Medical</h3>
+              <p><strong>Ambulance:</strong> 115 | <strong>Police:</strong> 113</p>
+              <p><strong>Confidence:</strong> Very Safe. Confidential PrEP and ART access across public and private clinics.</p>
+            </div>
 
-                <p class="article-lead" style="font-size: 1rem; line-height: 1.6; color: #fff; margin-bottom: 20px">
-                  Vietnam has a highly functional health network. In major cities, gay men can access excellent public, private, and community-led care. In rural areas, access is
-                  growing but uneven. Confidentiality is highly secure within private sectors, and state channels operate under strict anti-stigma directives.
-                </p>
+            <p>
+              Vietnam has a highly functional health network. In major cities, gay men can access excellent public, private, and community-led care. In rural areas, access is
+              growing but uneven. Confidentiality is highly secure within private sectors, and state channels operate under strict anti-stigma directives.
+            </p>
 
-                <div class="insider-box">
-                  <p class="insider-text">
-                    <strong>Bypass standard public hospitals for specialized needs.</strong> Private community services like G-link and the Men's Health Center deliver highly
-                    efficient, stigma-free testing and treatment. They offer streamlined access to PrEP, ART, testosterone replacement therapy, and HPV vaccinations, avoiding the
-                    red tape.
-                  </p>
-                </div>
+            <div class="insider-box">
+              <p>
+                Private community services like G-link and the Men's Health Center deliver highly efficient, stigma-free testing and treatment. They offer streamlined access to
+                PrEP, ART, testosterone replacement therapy, and HPV vaccinations, avoiding the red tape.
+              </p>
+            </div>
 
-                <div class="identity-status-container" style="margin-bottom: 30px">
-                  <div class="identity-status-bar">
-                    <span class="area-label">CITY</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot status-green"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-green"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-green"></span></div>
-                  </div>
-                  <div class="identity-status-bar">
-                    <span class="area-label">RURAL</span>
-                    <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
-                    <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
-                    <div class="id-item"><span>TRANS</span> <span class="id-dot status-amber"></span></div>
-                  </div>
-                </div>
-
-                <div class="article-subhead">Hospitals & Clinics</div>
-
-                <div class="resource-container">
-                  <a href="https://www.glinkvn.com/en/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
-                    <span class="resource-title" style="color: #2ecc71">Glink English Portal</span>
-                    <span class="resource-desc"
-                      >Pioneering peer-led clinics in Ho Chi Minh City and Hanoi. Top tier anonymous testing, confidential PrEP delivery, and specialized ART care models.</span
-                    >
-                  </a>
-
-                  <a
-                    href="https://menhealth.vn/comprehensive-sti-and-hiv-testing-services-in-ho-chi-minh-city/"
-                    target="_blank"
-                    rel="noopener"
-                    class="resource-card"
-                    style="border-left: 4px solid #00d4ff"
-                  >
-                    <span class="resource-title" style="color: #00d4ff">Men's Health Center Saigon</span>
-                    <span class="resource-desc"
-                      >Premium private and discreet facility specializing in advanced STI diagnostics, HPV-related wart management, and specialized urology.</span
-                    >
-                  </a>
-
-                  <a
-                    href="https://menhealth.vn/testosterone-replacement-therapy-trt-for-men-and-transgender-individuals/"
-                    target="_blank"
-                    rel="noopener"
-                    class="resource-card"
-                    style="border-left: 4px solid #ff00ff"
-                  >
-                    <span class="resource-title" style="color: #ff00ff">Men's Health Center: TRT & Trans Support</span>
-                    <span class="resource-desc">Clinical protocols covering testosterone replacement therapy and hormone path guidance for transgender individuals.</span>
-                  </a>
-
-                  <a href="https://lighthousevietnam.org/en/the-lighthouse-clinic/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ffbc00">
-                    <span class="resource-title" style="color: #ffbc00">The Lighthouse Clinic</span>
-                    <span class="resource-desc"
-                      >Hanoi-based community support association providing confidential wellness screenings, counseling, and integrated MSM health monitoring.</span
-                    >
-                  </a>
-                </div>
-
-                <div class="gwn-additional-health-links" style="margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
-                  <h4 style="color: #fff; margin-bottom: 15px">Research & Infrastructure Diagnostics:</h4>
-                  <ul style="list-style: none; padding: 0">
-                    <li style="margin-bottom: 10px">
-                      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11337901/" target="_blank" rel="noopener" style="color: #0894f1">PMC BAI Study Protocol</a> - Randomized
-                      controlled trial mapping behavioral interventions and PrEP adherence metrics among MSM networks.
-                    </li>
-                    <li style="margin-bottom: 10px">
-                      <a
-                        href="https://www.apcom.org/wp-content/uploads/2023/02/Country-summary-HIV-KP-snapshot-Vietnam_v1.pdf"
-                        target="_blank"
-                        rel="noopener"
-                        style="color: #0894f1"
-                        >APCOM Country Summary</a
-                      >
-                      - Epidemiological snapshot recording transmission control values and structural state funding indicators.
-                    </li>
-                    <li style="margin-bottom: 10px">
-                      <a
-                        href="https://www.path.org/our-impact/media-center/community-based-hiv-testing-effective-reaching-undiagnosed-populations-path-led-study-finds/"
-                        target="_blank"
-                        rel="noopener"
-                        style="color: #0894f1"
-                        >PATH Community Impact Review</a
-                      >
-                      - Empirical data proving the high efficacy of localized diagnostic testing over rigid state institutional loops.
-                    </li>
-                  </ul>
-                </div>
-
-                <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | June 2026</p>
+            <div class="identity-status-container" style="margin-bottom: 30px">
+              <div class="identity-status-bar">
+                <span class="area-label">CITY</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-green"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-green"></span></div>
+                <div class="id-item"><span>TRANS</span> <span class="id-dot status-green"></span></div>
+              </div>
+              <div class="identity-status-bar">
+                <span class="area-label">RURAL</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-amber"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-amber"></span></div>
+                <div class="id-item"><span>TRANS</span> <span class="id-dot status-amber"></span></div>
               </div>
             </div>
+
+            <div class="article-subhead">Hospitals & Clinics</div>
+
+            <div class="resource-container">
+              <a href="https://www.glinkvn.com/en/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
+                <span class="resource-title" style="color: #2ecc71">Glink English Portal</span>
+                <span class="resource-desc"
+                  >Pioneering peer-led clinics in Ho Chi Minh City and Hanoi. Top tier anonymous testing, confidential PrEP delivery, and specialized ART care models.</span
+                >
+              </a>
+
+              <a
+                href="https://menhealth.vn/comprehensive-sti-and-hiv-testing-services-in-ho-chi-minh-city/"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="border-left: 4px solid #00d4ff"
+              >
+                <span class="resource-title" style="color: #00d4ff">Men's Health Center Saigon</span>
+                <span class="resource-desc"
+                  >Premium private and discreet facility specializing in advanced STI diagnostics, HPV-related wart management, and specialized urology.</span
+                >
+              </a>
+
+              <a
+                href="https://menhealth.vn/testosterone-replacement-therapy-trt-for-men-and-transgender-individuals/"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="border-left: 4px solid #ff00ff"
+              >
+                <span class="resource-title" style="color: #ff00ff">Men's Health Center: TRT & Trans Support</span>
+                <span class="resource-desc">Clinical protocols covering testosterone replacement therapy and hormone path guidance for transgender individuals.</span>
+              </a>
+
+              <a href="https://lighthousevietnam.org/en/the-lighthouse-clinic/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ffbc00">
+                <span class="resource-title" style="color: #ffbc00">The Lighthouse Clinic</span>
+                <span class="resource-desc"
+                  >Hanoi-based community support association providing confidential wellness screenings, counseling, and integrated MSM health monitoring.</span
+                >
+              </a>
+            </div>
+
+            <div style="margin-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+              <h4 style="color: #fff; margin-bottom: 15px">Research:</h4>
+              <ul style="list-style: none; padding: 0">
+                <li style="margin-bottom: 10px">
+                  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11337901/" target="_blank" rel="noopener" style="color: #0894f1">PMC BAI Study Protocol</a> - Randomized
+                  controlled trial mapping behavioral interventions and PrEP adherence metrics among MSM networks.
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a href="https://www.apcom.org/wp-content/uploads/2023/02/Country-summary-HIV-KP-snapshot-Vietnam_v1.pdf" target="_blank" rel="noopener" style="color: #0894f1"
+                    >APCOM Country Summary</a
+                  >
+                  - Epidemiological snapshot recording transmission control values and structural state funding indicators.
+                </li>
+                <li style="margin-bottom: 10px">
+                  <a
+                    href="https://www.path.org/our-impact/media-center/community-based-hiv-testing-effective-reaching-undiagnosed-populations-path-led-study-finds/"
+                    target="_blank"
+                    rel="noopener"
+                    style="color: #0894f1"
+                    >PATH Community Impact Review</a
+                  >
+                  - Empirical data proving the high efficacy of localized diagnostic testing over rigid state institutional loops.
+                </li>
+              </ul>
+            </div>
+
+            <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
           </div>
         </details>
 
@@ -616,101 +598,98 @@
           </summary>
           <div class="news-content-expanded">
             <div class="rainbow-line mini-line"></div>
-            <div class="news-article-view">
-              <div class="article-header-row">
-                <h3 class="main-title">Asia's Best Gay Scene</h3>
-              </div>
+            <div class="article-header-row">
+              <h3 class="main-title">Asia's Best Gay Scene?</h3>
+            </div>
 
-              <div class="identity-status-container">
-                <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
-                  <div class="id-item">
-                    <span>City</span>
-                    <span class="id-dot status-green"></span>
-                  </div>
-                  <div class="id-item">
-                    <span>Urban</span>
-                    <span class="id-dot status-green"></span>
-                  </div>
+            <div class="identity-status-container">
+              <div style="display: flex; flex-direction: column; align-items: end; gap: 8px">
+                <div class="id-item">
+                  <span>City</span>
+                  <span class="id-dot status-green"></span>
+                </div>
+                <div class="id-item">
+                  <span>Urban</span>
+                  <span class="id-dot status-green"></span>
                 </div>
               </div>
+            </div>
 
-              <p class="article-lead">
-                Travel around Vietnam and you'll see real smiles. Ho Chi Minh City is mostly referred to as Saigon locally and in the south of the city is your mix of gay bars,
-                dance clubs, and saunas for every taste. In Hanoi, it's a more chilled scene and you'll find guides that are good for both cities as well as the rest of the country
-                below (If you've just arrived here, this section is a hub for the best guides so you don't have to go through the AI maze). Over-the-top public displays of
-                affection will draw looks in more conservative rural provinces, just like any other country. But urban settings are safe and, within reason, PDA is accepted. In the
-                buzzing bar and club areas, you may see the odd drunk being thrown out, but this is very controlled nowadays and the security know what they are doing. It's not
-                like the wild west of 20 years ago.
-              </p>
+            <p>
+              It's debatable, there are a few contenders, but travel around Vietnam and you'll see real smiles. That's a welcome that's often said but rarely found. Ho Chi Minh
+              City is a bit of a mouthful, so locals mostly refer to it as Saigon, and you should too. In the south of the city are a mix of gay bars, dance clubs, and saunas for
+              most tastes. It definitely has a lot of energy, if you don't want that, then in Hanoi it's a more chilled scene and you'll find guides that are good for both cities
+              as well as the rest of the country below (If you've just arrived here, this section is a hub for the best guides so you don't have to go through the AI maze).
+              Over-the-top public displays of affection will draw looks in more conservative rural provinces, just like any other country. But urban settings are safe and, within
+              reason, PDA is accepted. In the buzzing bar and club areas, you may see the odd drunk being thrown out, but this is very controlled nowadays and the security know
+              what they are doing. It's not like the wild west of 20 years ago.
+            </p>
 
-              <h3 class="article-subhead">Fun & Risks:</h3>
-              <ul class="law-list" style="list-style: none; padding: 0">
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #2ecc71">
-                  <strong>The Fun:</strong>
-                  <p>
-                    It is intense when celebrations like NYE are on. You will not be able to move in the cities. Pride is also a massive pull. If you are looking to relax, make
-                    sure you book that deck chair by the beach. We can't recommend Vietnam enough.
-                  </p>
-                </li>
-                <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
-                  <strong>The Risks:</strong>
-                  <p>
-                    Street safety is high, but in the bright neon-lit tourist spots, you're going to be surrounded by people and opportunistic pickpockets do operate here. If you
-                    can avoid it, don't use the long-distance overnight buses. Not because of safety, but you are not expected to move from your steel bed during the ride and you
-                    will get told off. We guess that's a safety thing, but it is annoying.
-                  </p>
-                </li>
-              </ul>
-
-              <h3 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h3>
-              <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">
-                This is a country for everyone. If you want to chill or adventure or have a high-energy nightlife experience, it's all here. The beaches are great, the people
-                actually like talking to you and - we're honestly not being paid by the government, but just go. It's one for the bucket list.
-              </p>
-
-              <div class="alphabet-brief-card">
-                <span class="alphabet-brief-title">Alphabet Briefs</span>
-                <p class="alphabet-brief-text">
-                  Transgender inclusion is advancing faster clinically than logistically. While hormone access and medical procedures are highly secure in elite urban spaces,
-                  changing official gender markers on identification records remains bottlenecked by administrative reviews.
+            <h4 class="article-subhead">Fun & Risks:</h4>
+            <ul class="law-list" style="list-style: none; padding: 0">
+              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #2ecc71">
+                <strong>The Fun:</strong>
+                <p>
+                  It is intense when celebrations like NYE are on. You will not be able to move in the cities. Pride is also a massive pull. If you are looking to relax, make sure
+                  you book that deck chair by the beach. We can't recommend Vietnam enough.
                 </p>
-              </div>
+              </li>
+              <li style="margin-bottom: 15px; padding-left: 20px; border-left: 3px solid #ffbc00">
+                <strong>The Risks:</strong>
+                <p>
+                  Street safety is high, but in the bright neon-lit tourist spots, you're going to be surrounded by people and opportunistic pickpockets do operate here. If you can
+                  avoid it, don't use the long-distance overnight buses. Not because of safety, but you are not expected to move from your steel bed during the ride and you will
+                  get told off. We guess that's a safety thing, but it is annoying.
+                </p>
+              </li>
+            </ul>
 
-              <div class="resource-container">
-                <h3 style="margin-bottom: 20px">More Links</h3>
+            <h4 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h4>
+            <p style="font-weight: 500; line-height: 1.5; margin-bottom: 30px">
+              This is a country for everyone. If you want to chill or adventure or have a high-energy nightlife experience, it's all here. The beaches are great, the people
+              actually like talking to you and - we're honestly not being paid by the government, but just go. It's one for the bucket list.
+            </p>
 
-                <a href="https://thegaypassport.com/destinations/gay-ho-chi-minh/" target="_blank" rel="noopener" class="resource-card">
-                  <span class="resource-title">Gay Passport Saigon Guide 2026</span>
-                  <span class="resource-desc">Up to date directory listing gay saunas, evening circuit events, and commercial dance venues in District 1.</span>
-                </a>
+            <div class="alphabet-brief-card">
+              <span class="alphabet-brief-title">Alphabet Briefs</span>
+              <p class="alphabet-brief-text">
+                Transgender inclusion is advancing faster clinically than logistically. While hormone access and medical procedures are highly secure in elite urban spaces,
+                changing official gender markers on identification records remains bottlenecked by administrative reviews.
+              </p>
+            </div>
 
-                <a href="https://thegaypassport.com/destinations/gay-hanoi/" target="_blank" rel="noopener" class="resource-card">
-                  <span class="resource-title">Gay Passport Hanoi Guide 2026</span>
-                  <span class="resource-desc">Comprehensive urban review mapping alternative cafes, lounge bars, and social gatherings in the capital.</span>
-                </a>
+            <div class="resource-container">
+              <h3 style="margin-bottom: 20px">More Links</h3>
 
-                <a href="https://pridedrives.com/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
-                  <span class="resource-title">Pride Drives Vietnam</span>
-                  <span class="resource-desc">Gay operated tour agency delivering private custom day trips, food crawls, and urban transit operations.</span>
-                </a>
+              <a href="https://thegaypassport.com/destinations/gay-ho-chi-minh/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Gay Passport Saigon Guide 2026</span>
+                <span class="resource-desc">Up to date directory listing gay saunas, evening circuit events, and commercial dance venues in District 1.</span>
+              </a>
 
-                <a href="https://nomadicboys.com/gay-vietnam/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff3366">
-                  <span class="resource-title" style="color: #ff3366">Nomadic Boys Travel Guide</span>
-                  <span class="resource-desc"
-                    >Firsthand dispatch mapping the best gay bars, local safety tips, and trending hotspots across Hanoi and Saigon for MSM travelers.</span
-                  >
-                </a>
+              <a href="https://thegaypassport.com/destinations/gay-hanoi/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Gay Passport Hanoi Guide 2026</span>
+                <span class="resource-desc">Comprehensive urban review mapping alternative cafes, lounge bars, and social gatherings in the capital.</span>
+              </a>
 
-                <a href="https://youtu.be/juFlxDQYY1M" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
-                  <span class="resource-title" style="display: flex; align-items: center">
-                    <span class="youtube-icon-box"></span>
-                    Birdie & Bambam Travel Vlog
-                  </span>
-                  <span class="resource-desc">Independent community video reviews detailing real beach travel, food spots, and couple safety in Da Nang.</span>
-                </a>
+              <a href="https://pridedrives.com/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00f2ff">
+                <span class="resource-title">Pride Drives Vietnam</span>
+                <span class="resource-desc">Gay operated tour agency delivering private custom day trips, food crawls, and urban transit operations.</span>
+              </a>
 
-                <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 20px">GWN | June 2026</p>
-              </div>
+              <a href="https://nomadicboys.com/gay-vietnam/" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff3366">
+                <span class="resource-title" style="color: #ff3366">Nomadic Boys Travel Guide</span>
+                <span class="resource-desc">Firsthand dispatch mapping the best gay bars, local safety tips, and trending hotspots across Hanoi and Saigon for MSM travelers.</span>
+              </a>
+
+              <a href="https://youtu.be/juFlxDQYY1M" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
+                <span class="resource-title" style="display: flex; align-items: center">
+                  <span class="youtube-icon-box"></span>
+                  Birdie & Bambam Travel Vlog
+                </span>
+                <span class="resource-desc">Independent community video reviews detailing real beach travel, food spots, and couple safety in Da Nang.</span>
+              </a>
+
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
@@ -730,8 +709,8 @@
 
             <!-- Reality Check: Quick scan summary box -->
             <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #ff00ff">
-              <h4 style="margin: 0; color: #ff00ff; text-transform: uppercase; font-size: 0.9rem">The Reality Check</h4>
-              <p style="font-size: 1rem; margin: 5px 0 0 0; line-height: 1.4">
+              <h4>It's Not A Utopia</h4>
+              <p>
                 Vietnam is one of the safest countries in the world for gay men with no recorded cases of arrests for sexual orientation logged in recent history. There are no laws
                 criminalizing same-sex acts, but marriage is <strong>currently</strong> not legally recognized, although symbolic marriages are permitted. Specific hate-crime laws
                 have not been implemented for the gay community, but these are generally covered under existing laws for the whole population and visitors alike. However, by not
@@ -840,13 +819,11 @@
                 <span class="resource-desc">Investigative tracking covering state policy updates and safety metrics for local men.</span>
               </a>
 
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
-                GWN Legal | June 2026
-              </p>
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
-      </div>
+      </main>
     </div>
 
     <div class="footer-branding-wrapper">

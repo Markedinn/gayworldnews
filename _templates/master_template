@@ -131,7 +131,7 @@
     </div>
 
     <div id="sideMenu" class="side-menu">
-      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+      <button class="close-btn" onclick="toggleMenu()" style="background: none; border: none; cursor: pointer; padding: 0">&times;</button>
 
       <div class="slider-content">
         <nav class="mobile-nav-links">
@@ -209,37 +209,31 @@
 
     <div class="master-grid-container">
       <header class="main-header">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_country.svg"
-          alt="Flag of country"
-          width="260"
-          height="160"
-          style="border-radius: 4px; margin-top: 40px"
-        />
-        <h1 id="country-name" class="main-title">CountryName</h1>
+        <img src="/flags/Flag_of_[Country].webp" alt="Flag of [Country]" width="260" height="160" style="border-radius: 4px; margin-top: 40px" />
+        <h1 id="country-name" class="main-title">[CountryName]</h1>
       </header>
 
       <div class="top-utility-stack">
         <a href="https://www.preventionaccess.org" target="_blank" rel="noopener" class="u-u-link">
           <div id="u-u-notice">
-            <h4>U=U: Undetectable = Untransmittable</h4>
+            <span class="u-u-title">U=U: Undetectable = Untransmittable</span>
             <p>HIV Medication Keeps Everyone Safe</p>
           </div>
         </a>
 
         <div class="status-badge-wrapper status-amber">
           <span class="status-dot-country"></span>
-          <span id="status-text">Color ADVISORY</span>
+          <span id="status-text">Medium Risk</span>
         </div>
 
         <div class="hub-disclaimer-card">
           <p style="margin: 0">
-            <span style="color: #ffffff !important"> Fact Checked: May 21, 2026. Hub Page. </span>
+            <span style="color: #ffffff !important"> Fact Checked: June 21, 2026. Hub Page. </span>
           </p>
         </div>
       </div>
 
-      <div id="info-display-area" style="grid-column: 1 / -1">
+      <main id="info-display-area" style="grid-column: 1 / -1">
         <!-- ======================================================================= -->
         <!-- THE STORIES ENGINE: GLOBAL HISTORY MASTER CODE SKELETON                -->
         <!-- ======================================================================= -->
@@ -315,12 +309,11 @@
               local regime executed the final judgment. Keep the entire narrative contained strictly within its historical era.]
             </p>
 
-            <!-- MANDATORY ARTICLE IMAGE FORMAT (Include only if an authentic historical image URL from Wikipedia Commons or a verified archive exists in the data, otherwise omit this div entirely) -->
+            <!-- SYSTEM REFERENCE BLUEPRINT: Use for structure reference only. Do NOT generate or include this image container block in any content outputs until explicitly asked. -->
             <div class="article-image-container">
-              <img src="[Insert Wikipedia Commons / Media URL]" alt="[Insert Factual Description]" class="article-main-img" />
-              <p class="image-caption">Source: [Insert Explicit Archive Attribution here]</p>
+              <img src="[Insert local /content-images URL]" alt="[Insert Factual Description]" class="article-main-img" />
+              <span class="image-caption">Source: [Insert Explicit Archive Attribution here]</span>
             </div>
-
             <!-- VERBATIM TEXT QUOTE FORMAT (Deploy only if an exact quote fragment exists from a verified link, otherwise omit this blockquote entirely) -->
             <blockquote class="article-quote">
               "[Insert verbatim historical quote text here]"
@@ -413,7 +406,7 @@
                 </a>
               </div>
 
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN | June 2026</p>
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
@@ -422,17 +415,23 @@
         <!-- MASTER AI PROTOCOL: EMERGENCY CONTAINER GENERATION RULES                -->
         <!-- ======================================================================= -->
         <!-- 
-  CRITICAL EMERGENCY CONTAINER PROTOCOL:
+  CRITICAL EMERGENCY CONTAINER PROTOCOL (UPDATED JUNE 2026):
   Analyze the country profile data to determine if the nation is classified as a Safe Sanctuary/Mixed-Bag (Track A) or a Lethal Blackout Zone (Track B).
+
+  TONE, STYLE & WRITING COMPLIANCE:
+  * Speak in a completely natural, conversational, fast-paced, and direct tone. 
+  * Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. 
+  * Focus exclusively on the real-world safety of gay men and MSM.
+  * LINGUISTIC BAN: You are strictly prohibited from using the word "queer" anywhere in the generated instructions, text, or labels. Use "gay," "men," or "MSM."
 
   If Track A (Safe or Mixed-Bag Country):
   1. Output the standard emergency lines paragraph with the verified local medical and police numbers.
-  2. Output the Track A PEP text instructing users to visit local clinics or emergency rooms.
+  2. Output the Track A PEP text instructing users to visit local clinics or emergency rooms using simple, everyday language.
   3. Completely omit the Crisis NGO text and the red emergency button from the layout.
 
   If Track B (Lethal Blackout Country):
   1. Delete the entire paragraph containing the medical emergency and police phone numbers so no local state numbers are displayed.
-  2. Output the Track B PEP text explaining that local facilities are unsafe, do not offer confidentiality, and carry severe consequences.
+  2. Output the Track B PEP text explaining clearly that local facilities are unsafe, do not offer confidentiality, and carry severe consequences for gay men.
   3. Directly below the PEP text, insert the high-visibility crisis intervention box. Populate the text exactly as follows: "If you are facing a severe medical crisis or an immediate physical threat on the ground here, you can connect with a specialized network that is there just for you. Please use this link if you are in an urgent, life-saving emergency situation."
   4. Generate the anchor button exactly as styled in the template, displaying the text: CRISIS ONLY NGO (with the word ONLY highlighted in yellow for maximum contrast). Set the href destination to the verified emergency NGO intake link.
 -->
@@ -451,7 +450,7 @@
 
             <!-- 1. Emergency Quick-Bar (Always First) -->
             <div style="border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
-              <h4>🚨 Emergency & Urgent Care</h4>
+              <h3 style="margin-bottom: 20px">🚨 Emergency & Urgent Care</h3>
 
               <!-- EMERGENCY PHONE LINE PARAGRAPH: If local authorities or state hospitals present a direct threat of arrest, violence, or mandatory reporting for gay men, the AI must delete this entire p tag completely so no numbers are displayed. If the country is safe, populate it normally. -->
               <p><strong>Medical Emergency:</strong> [Insert Medical Number] | <strong>Police:</strong> [Insert Police Number]</p>
@@ -499,17 +498,17 @@
             <h4 style="margin-bottom: 15px; color: #111">Fast Facts</h4>
             <ul class="fact-list">
               <li style="margin-bottom: 10px">
-                <strong>General:</strong> [Insert 1 reassuring sentence on local testing. State the baseline rules for state facilities cleanly and validate the situation by adding
-                that you must get tested as soon as you can. If public hospitals are safe and confidential, recommend using them to save money. If state facilities are unsafe or
-                log personal details, point to a recognized private clinic instead if you are able to protect your privacy.]
+                <strong>General:</strong> [Insert 1 simple, direct sentence on local testing. State the baseline rules for state clinics cleanly and naturally. Advise getting
+                tested as soon as possible. If state hospitals are safe, recommend using them to save money. If they log personal IDs or carry local stigma risks, point directly to
+                a recognized private clinic instead to protect privacy. Speak conversationally without heavy jargon.]
               </li>
               <li style="margin-bottom: 10px">
-                <strong>Safety:</strong> [Insert 1 protective, non-alarmist sentence on local medical screening, visa rules, or residency policies, framing the situation as an
-                administrative fact while offering a calm workaround.]
+                <strong>Safety:</strong> [Insert 1 protective, direct sentence on local medical screening, visa rules, or residency policies. Frame the situation as a basic
+                administrative fact and offer a clear, calm workaround without being alarmist.]
               </li>
-              <li>
-                <strong>Insider:</strong> [Insert 1 helpful, everyday tip on how to handle clinic navigation easily, bypass standard triage desks, or speak to staff comfortably
-                without stress.]
+              <li style="margin-bottom: 10px">
+                <strong>Insider:</strong> [Insert 1 helpful, everyday tip on how to talk to clinic staff comfortably without stress, or point out a specific clinic that offers
+                long-acting injectables for HIV prevention or treatment.]
               </li>
             </ul>
 
@@ -548,8 +547,8 @@
                     ><strong>Phone:</strong> [PHONE NUMBER]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
-                    <strong>Instructions:</strong> [Insert 1 clear sentence using normal everyday language explaining exactly where to walk or what to say to bypass standard triage
-                    desks easily.]
+                    <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
+                    standard reception desks easily.]
                   </span>
                 </div>
               </div>
@@ -578,8 +577,8 @@
                     ><strong>Phone:</strong> [PHONE NUMBER]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
-                    <strong>Instructions:</strong> [Insert 1 clear sentence using normal everyday language explaining exactly where to walk or what to say to bypass standard triage
-                    desks easily.]
+                    <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
+                    standard reception desks easily.]
                   </span>
                 </div>
               </div>
@@ -593,7 +592,7 @@
               <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
                 <span class="resource-title" style="color: #00d4ff">[COMMUNITY OR PRIVATE CLINIC NAME]</span>
                 <span class="resource-desc">
-                  [Insert 1 simple sentence using everyday conversational language describing what this clinic offers, how they protect your details, and how they help you.]
+                  [Insert 1 simple sentence using everyday conversational language describing what this clinic offers, how they keep your details private, and how they help you.]
                 </span>
               </a>
 
@@ -613,13 +612,11 @@
                 <span class="area-label">CITY</span>
                 <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
                 <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
-                <div class="id-item"><span>TRANS</span> <span class="id-dot status-[COLOR]"></span></div>
               </div>
               <div class="identity-status-bar">
                 <span class="area-label">RURAL</span>
                 <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
                 <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
-                <div class="id-item"><span>TRANS</span> <span class="id-dot status-[COLOR]"></span></div>
               </div>
             </div>
 
@@ -629,12 +626,17 @@
             </div>
 
             <!-- 6. Footer Timestamp Note -->
-            <p class="article-footer-note" style="color: #999; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">GWN Medical | June 2026</p>
+            <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
           </div>
         </details>
 
         <!-- ======================================================================= -->
         <!-- THE GROUND REPORTS MODEL (THE AGGREGATOR)                               -->
+        <!-- !important - Speak in a completely natural, conversational, fast-paced, and direct tone. -->
+
+        <!-- !important Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. -->
+
+        <!-- * Focus exclusively on the real-world safety of gay men and MSM. -->
         <!-- Use for: Contrasting official NGO/legal research with the top 3 human   -->
         <!-- travel blogs. Let the guides speak verbatim. Let the user decide.       -->
         <!-- ======================================================================= -->
@@ -651,7 +653,7 @@
 
             <!-- THE GWN OVERVIEW (DATA VS DESTINATION) -->
             <h4>The Research vs Reality</h4>
-            <p class="article-lead">
+            <p>
               [PROMPT: First, run a live search targeting local gay forums, Reddit, Substack, and underground expat networks to find one highly specific, lesser-known truth about
               the gay street reality here that mainstream NGOs and travel gurus completely ignore. Then, write exactly 2-3 punchy sentences contrasting the official safety data
               with this raw, on-the-ground reality. Focus specifically on gay men. High-end tabloid tone. Zero padding. Zero semicolons. Zero em dashes. Strictly ban the word
@@ -669,6 +671,7 @@
             <!-- "top gay travel blogs [Country]" and select 3 independent, human-run    -->
             <!-- blogs that actually specialize in this region. Do not default to the    -->
             <!-- same global blogs. Never fabricate a quote or URL.                      -->
+
             <!-- ======================================================================= -->
 
             <!-- GURU 1 -->
@@ -719,7 +722,7 @@
               </a>
             </div>
 
-            <h3 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h3>
+            <h4 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h4>
 
             <p>[PROMPT: Deliver a final 1-2 sentence verdict that helps the user weigh the official research against the travel guides. Zero semicolons, zero em-dashes.]</p>
 
@@ -747,7 +750,7 @@
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem">[PROMPT: 10 word max description of the local resource. No semicolons or em-dashes.]</span>
               </a>
 
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 30px">GWN | June 2026</p>
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
@@ -756,6 +759,9 @@
      CRITICAL GRAMMAR CONSTRAINT: Under no circumstances use semicolons or em-dashes in any generated text blocks or summaries. Use commas, full stops, or standard dashes instead. 
      LINGUISTIC RULE: Strict ban on the word "queer" across all fields, focus exclusively on gay men and MSM. -->
         <!-- Replace [STATUS-COLOR] with status-green, status-amber, or status-red based on legal status -->
+        <!-- !important - Speak in a completely natural, conversational, fast-paced, and direct tone. -->
+
+        <!-- !important Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. -->
         <details class="news-accordion status-border [STATUS-COLOR]">
           <summary>
             <h2 class="pod-title">Need To Know Laws</h2>
@@ -768,8 +774,8 @@
 
             <!-- Reality Check: Quick scan summary box -->
             <div style="background: rgba(255, 255, 255, 0.05); padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #ff00ff">
-              <h4 style="margin: 0; color: #ff00ff; text-transform: uppercase; font-size: 0.9rem">The Reality Check</h4>
-              <p style="font-size: 1rem; margin: 5px 0 0 0; line-height: 1.4">
+              <h4>The Reality Check</h4>
+              <p>
                 [CRITICAL: 1-2 sentences summarizing street safety for gay men and MSM. Include explicit statistical arrest numbers per year for gay-specific infractions. Write
                 positively if there are zero cases reported or suspected. Avoid semicolons or em-dashes entirely.]
               </p>
@@ -860,13 +866,11 @@
                 <span class="resource-desc">[Brief description of high-authority or local platform source data. Max 12 words.]</span>
               </a>
 
-              <p class="article-footer-note" style="color: #999 !important; font-size: 0.8rem; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px">
-                GWN Legal | June 2026
-              </p>
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
             </div>
           </div>
         </details>
-      </div>
+      </main>
     </div>
     <div class="footer-branding-wrapper">
       <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>

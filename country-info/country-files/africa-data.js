@@ -20,7 +20,7 @@ Object.assign(globalData, {
   bir_tawil: {
     name: "Bir Tawil",
     continent: "africa",
-    status: "amber",
+    status: "red",
     path: "africa/bir_tawil",
   },
   botswana: {

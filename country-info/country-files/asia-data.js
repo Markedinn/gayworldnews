@@ -68,6 +68,13 @@ Object.assign(globalData, {
     status: "amber",
   },
 
+  georgia: {
+    name: "Georgia",
+    continent: "asia",
+    status: "red",
+    path: "europe/georgia",
+  },
+
   hong_kong: {
     name: "Hong Kong",
     continent: "asia",
@@ -344,6 +351,12 @@ Object.assign(globalData, {
     continent: "asia",
     status: "green",
     path: "asia/vietnam",
+  },
+
+  west_papua: {
+    name: "West Papua",
+    continent: "asia",
+    status: "red", // Brutal federal penal code updates criminalize all same-sex intimacy under marriage bans
   },
 
   yemen: {

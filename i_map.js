@@ -107,7 +107,7 @@ window.addEventListener("load", function () {
                 guianaPart.properties.ADMIN = "French Guiana";
                 fixedFeatures.push(guianaPart);
               } else {
-                maintext = mainlandParts.push(polygonCoords);
+                mainlandParts.push(polygonCoords);
               }
             });
             const cleanFrance = JSON.parse(JSON.stringify(feature));

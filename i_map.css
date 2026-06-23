@@ -132,7 +132,7 @@ body {
   width: 100%;
 }
 
-.main-site-title {
+.home-page-title {
   margin: 0;
   font-size: 2.2rem;
   font-weight: 300;
@@ -142,7 +142,7 @@ body {
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.main-site-subtitle {
+.home-page-subtitle {
   margin-top: 10px;
   font-size: 0.75rem;
   font-weight: 500;
@@ -265,13 +265,19 @@ body {
 
 /* --- STRICT TABLET (768px to 1100px) --- */
 @media (max-width: 1100px) and (min-width: 760px) {
-  .main-site-title {
+  .central-header-wrapper {
+    bottom: auto;
+    /* Adjust this pixel value so it sits neatly below the stacked tools */
+    top: 13%;
+  }
+
+  .home-page-title {
     font-size: 2.4rem; /* Specific scale-up for high-res tablet */
     letter-spacing: 10px;
     top: 75px;
   }
 
-  .main-site-subtitle {
+  .home-page-subtitle {
     font-size: 1rem;
     letter-spacing: 6px;
     margin-top: 8px;

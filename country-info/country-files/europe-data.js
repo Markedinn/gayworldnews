@@ -17,10 +17,20 @@ Object.assign(globalData, {
     continent: "europe",
     status: "green",
   },
+  armenia: {
+    name: "Armenia",
+    continent: "europe",
+    status: "amber", // Formal legalization completely detached from severe street-level blackmail risks
+  },
   austria: {
     name: "Austria",
     continent: "europe",
     status: "green",
+  },
+  azerbaijan: {
+    name: "Azerbaijan",
+    continent: "europe",
+    status: "red", // Toxic political hostility and active police entrapment make survival a minefield
   },
   azores: {
     name: "Azores",
@@ -286,6 +296,12 @@ Object.assign(globalData, {
     name: "Switzerland",
     continent: "europe",
     status: "green",
+  },
+  turkey: {
+    name: "Turkey",
+    continent: "europe",
+    status: "red",
+    path: "asia/turkey", // Redirects Europe map clicks directly to your unified Asia file path
   },
   ukraine: {
     name: "Ukraine",

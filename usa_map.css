@@ -1,0 +1,235 @@
+#usa-map {
+  position: absolute !important;
+  display: block !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh !important;
+  height: 100dvh !important;
+  z-index: 1;
+  background: transparent !important;
+}
+
+/* ==========================================================================
+   2. FLOATING HOVER LABELS
+   ========================================================================== */
+#hoverBox {
+  position: fixed;
+  background: #0038b8;
+  color: #ffffff;
+  padding: 7px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  display: none;
+  z-index: 9999;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   3. RESPONSIVE HEADER ARCHITECTURE
+   ========================================================================== */
+.usa-header-wrapper {
+  position: fixed;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  pointer-events: none;
+  text-align: center;
+  width: 90%;
+}
+
+.usa-page-title {
+  margin: 0;
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: uppercase;
+  text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.usa-page-subtitle {
+  margin: 10px 0 0 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 7px;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   4. FIXED OFFSHORE MAP OVERLAYS & TOAST CODES
+   ========================================================================== */
+.map-toast {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99999;
+  background: rgba(0, 56, 184, 0.95);
+  color: #ffffff;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  display: block;
+  width: auto;
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.map-toast.fade-out {
+  opacity: 0;
+  transform: translate(-50%, -15px);
+}
+
+.offshore-map-stack {
+  position: fixed;
+  bottom: 280px;
+  left: 45px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.offshore-element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none !important;
+  outline: none;
+  color: inherit;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.offshore-element:hover {
+  transform: scale(1.1);
+}
+
+.offshore-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+  text-decoration: none !important;
+}
+
+.offshore-svg {
+  width: 80px;
+  height: 50px;
+  filter: drop-shadow(0px 6px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* ==========================================================================
+   5. VIEWPORT RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 1100px) and (min-width: 768px) {
+  .usa-header-wrapper {
+    top: 15%;
+  }
+  .usa-page-title {
+    font-size: 1.9rem;
+    letter-spacing: 10px;
+  }
+  .usa-page-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .usa-header-wrapper {
+    top: 10rem;
+    bottom: auto;
+    width: 95%;
+  }
+  .usa-page-title {
+    font-size: 1.4rem;
+    letter-spacing: 6px;
+  }
+  .usa-page-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+  #usa-map {
+    height: 75vh !important;
+    height: 75dvh !important;
+  }
+  .offshore-map-stack {
+    display: none !important;
+  }
+  .map-toast {
+    width: 80%;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    padding: 10px 15px;
+  }
+}
+
+/* ==========================================================================
+   MAP TO BENTO BRIDGE
+   ========================================================================== */
+.master-grid-container {
+  margin-top: 100vh;
+  margin-top: 100dvh; /* Dynamic viewport guard for standard desktop scaling */
+}
+
+@media screen and (max-width: 767px) {
+  #usa-map {
+    /* 1. THIS MOVES THE MAP LOWER. Increase this number (e.g., 22rem) to push it down further */
+    top: 12rem !important;
+
+    /* 2. Keeps the map container tall and natural so Leaflet doesn't squish the graphics */
+    height: 60vh !important;
+    height: 60dvh !important;
+  }
+
+  .master-grid-container {
+    /* 3. Pulls the bento cards up so they stay perfectly snapped to the bottom of the map */
+    margin-top: 80vh !important;
+    margin-top: 80dvh !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: block !important; /* Neutralizes the main regions.css flex centering layout */
+    height: auto !important;
+    overflow-y: auto !important; /* Safely releases the vertical scrollbar for large monitors */
+  }
+
+  #usa-map {
+    top: 10rem !important; /* Pushes the map down safely past the desktop titles */
+    height: 70vh !important;
+    height: 70dvh !important; /* Keeps the map container height stable */
+  }
+
+  .master-grid-container {
+    /* Dropping this to 62vh/62dvh pulls the bento grid higher up the screen */
+    margin-top: calc(10rem + 62vh) !important;
+    margin-top: calc(10rem + 62dvh) !important;
+    display: block !important; /* Overrides middle tablet-flex rules from regions.css */
+    background: transparent !important;
+  }
+}

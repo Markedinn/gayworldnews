@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="language" content="English" />
+
+    <link rel="canonical" id="canonical-link" href="https://gayworldnews.com/[region]/[country]" />
+
+    <!-- 1. The Direct Search Hook: Connecting the Timeline to Survival -->
+    <title>[Country] Gay History & Survival Guide (2026) | Gay World News</title>
+    <meta
+      id="meta-desc"
+      name="description"
+      content="Gay World News maps [Country]'s gay history to its modern reality. Explore the exact timeline behind today's laws, health access, and survival alerts."
+    />
+
+    <meta
+      name="keywords"
+      content="Gay World News [Country], [Country] gay history, [Country] gay timeline, [Country] gay survival 2026, MSM sexual health laws, travel laws for men"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" id="og-url" content="https://gayworldnews.com/[region]/[country]" />
+
+    <!-- 2. The Social Media Feed Hook: Tabloid Edge -->
+    <meta property="og:title" id="og-title" content="[Country] Gay History, Laws & Modern Survival Alerts (2026) | Gay World News" />
+    <meta
+      property="og:description"
+      id="og-desc"
+      content="From historical roots to the brutal 2026 reality. Discover the exact timeline that shaped current state policy, sexual health, and survival risks for gay men in [Country]."
+    />
+    <meta property="og:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Gay World News logo stenciled as activist graffiti with a dripping rainbow flag on a weathered concrete flyover pillar." />
+    <meta property="og:locale" content="en_US" />
+    <!-- 3. X / Twitter Tracker Signals -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@GayWorldNewsOrg" />
+    <meta name="twitter:title" content="[Country] Gay History & Survival Report (2026) | Gay World News" />
+    <meta name="twitter:description" content="How historical shifts created today's legal realities for men in [Country]. Get the raw historical timeline from Gay World News." />
+    <meta name="twitter:image" content="https://gayworldnews.com/images/gwn-logo.jpg" />
+
+    <!-- 4. Structured Schema: Validating Your Investigative Archive -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "headline": "Gay World News: [Country] Gay History, Health & Legal Survival Report 2026",
+        "description": "Essential 2026 timeline analysis from Gay World News mapping the history of [Country] to its current legal status, survival standards, and sexual health realities for men.",
+        "image": "https://gayworldnews.com/images/gwn-logo.jpg",
+        "datePublished": "2026-05-24",
+        "author": {
+          "@type": "Organization",
+          "name": "Gay World News"
+        }
+      }
+    </script>
+
+    <!-- 
+      DEVELOPER & AI ROUTING PROMPT FOR BREADCRUMB POSITION 2: 
+      Always use the short 3-letter physical file abbreviation for the link (e.g., eur, asi, afr, ame, oce) to match the bento-grid nav landing pages. 
+      Do NOT use the full folder name here.
+    -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://gayworldnews.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{REGION_NAME}",
+            "item": "https://gayworldnews.com/{3_LETTER_REGION_ABBREVIATION}"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "[Country]",
+            "item": "https://gayworldnews.com/[region]/[country]"
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home & Interactive Map",
+            "item": "https://gayworldnews.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "[Country]",
+            "item": "https://gayworldnews.com/[region]/[country]"
+          }
+        ]
+      }
+    </script>
+
+    <link rel="icon" type="image/webp" href="/images/favicon.webp" />
+
+    <link rel="preload" href="/country.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/country.css?v=6.0" />
+
+    <link rel="preload" href="/index.css?v=6.0" as="style" type="text/css" />
+    <link rel="stylesheet" href="/index.css?v=6.0" />
+
+    <script src="/index.js" defer></script>
+  </head>
+
+  <body class="standard-page">
+    <div id="translator-anchor"></div>
+
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <div id="sideMenu" class="side-menu">
+      <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+
+      <div class="slider-content">
+        <nav class="mobile-nav-links">
+          <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a>
+          <a href="/afr">AFRICA</a>
+          <a href="/ame">AMERICAS</a>
+          <a href="/asi">ASIA</a>
+          <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
+          <a href="/about">ABOUT</a>
+          <a href="/contact">CONTACT</a>
+        </nav>
+        <a href="/contact" class="support-btn">SUPPORT OUR REPORTING</a>
+
+        <div class="social-pill-container">
+          <a href="https://www.facebook.com/GayWorldNewsOrg/" target="_blank" rel="noopener" class="social-pill facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+            </svg>
+          </a>
+
+          <a href="https://x.com/GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill x-twitter" aria-label="X">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+          </a>
+
+          <a href="https://www.youtube.com/@GayWorldNewsOrg" target="_blank" rel="noopener" class="social-pill youtube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93 .502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="faq-section" style="margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 20px">
+          <span class="faq-section-title">Map Information & FAQ</span>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <span class="faq-question">Using the home page interactive map</span>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              <span style="color: rgba(255, 255, 255, 0.9); font-weight: 700">Zoom in and Click any Country</span> to find information on the best travel guides and links, legal
+              advice, Health, medication and clinic locations as well as emergency contacts, safety and security awareness in every country world-wide, as well as a host of other
+              source information, further links and reading.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <h3 style="color: white; font-size: 0.9rem; margin-bottom: 5px">How is the risk level determined?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.85rem; line-height: 1.5">
+              Our 2026 data aggregates legal status, travel advisories, local health security, and real-time news to provide a comprehensive security rating for the community.
+            </p>
+          </div>
+
+          <div class="faq-item" style="margin-bottom: 20px">
+            <span class="faq-question">Gay World News For Safe Travel.</span>
+            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem">
+              This dashboard serves as a primary security guide. We recommend checking specific country alerts for detailed health and security protocols before departing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="https://google.com" class="exit-btn">QUICK EXIT</a>
+
+    <a href="/" class="home-btn">HOME</a>
+
+    <div class="landing-search-wrap">
+      <input type="text" id="globalSearch" placeholder="FIND COUNTRY" autocomplete="off" />
+      <div id="searchResults" class="search-results-floating"></div>
+    </div>
+
+    <div class="master-grid-container">
+      <header class="main-header">
+        <img src="/flags/Flag_of_[Country].webp" alt="Flag of [Country]" width="260" height="160" style="border-radius: 4px; margin-top: 40px" />
+        <h1 id="country-name" class="main-title">[CountryName]</h1>
+      </header>
+
+      <div class="top-utility-stack">
+        <a href="https://www.preventionaccess.org" target="_blank" rel="noopener" class="u-u-link">
+          <div id="u-u-notice">
+            <span class="u-u-title">U=U: Undetectable = Untransmittable</span>
+            <p>HIV Medication Keeps Everyone Safe</p>
+          </div>
+        </a>
+
+        <div class="status-badge-wrapper status-amber">
+          <span class="status-dot-country"></span>
+          <span id="status-text">Medium Risk</span>
+        </div>
+
+        <div class="hub-disclaimer-card">
+          <p style="margin: 0">
+            <span style="color: #ffffff !important"> Fact Checked: June 21, 2026. Hub Page. </span>
+          </p>
+        </div>
+      </div>
+
+      <main id="info-display-area" style="grid-column: 1 / -1">
+        <!-- ======================================================================= -->
+        <!-- THE STORIES ENGINE: GLOBAL HISTORY MASTER CODE SKELETON                -->
+        <!-- ======================================================================= -->
+
+        <!-- 
+  GWN AI ROUTING & RESEARCH ENGINE PROTOCOL: DYNAMIC HISTORY & PERSPECTIVE CONSTRAINTS
+  
+  1. THE IDEOLOGICAL HORIZON & THE RECEIPT FALLBACK RULE
+  - Structure history chronologically across major ideological milestones. 
+  - Phase 1: The Indigenous Baseline (Life before dominant religious or political ideologies like Christianity, Islam, or rigid state doctrines).
+  - Phase 2: The Ideological Shift (The exact moment a new belief system took root and altered the legal or social landscape for male intimacy).
+  - Phase 3: The Modern Transition (How post-war, colonial, or revolutionary forces shaped today's state stance).
+  - FALLBACK TRIGGER: If pre-ideological eras lack concrete primary archival records specifically tracking gay men or MSM, do not invent folklore or write vague summaries. Automatically drop the ancient era entirely and anchor the narrative at the earliest century where ironclad historical receipts exist.
+  
+  2. FORENSIC NARRATIVE TEXTURE (SHOW, DON'T TELL)
+  - Strictly ban loose, weak, or novelistic AI crutches like "fluid," "tactical," "poetic," or "shifting."
+  - Deploy sharp, forensic, street-legal, or cynical alternatives like "legal quicksand," "grey zones," "calculated," "app stings," or "profile setups."
+  - Driven entirely by fact-heavy vocabulary. BANNED filler phrases: "this proves that," "it is interesting to note," "as we can see," "history shows." Let raw numbers and archive codes deliver the impact.
+  - HUMAN INTEREST FOCUS: Prioritize real human names. Explicitly name BOTH partners involved in any historical record to ensure equal recognition. Truly establish their documented characters to drive immediate narrative stakes.
+  
+  3. DYNAMIC PERSPECTIVE ALIGNMENT (THE RE-ENGINEERED OP-ED LAYER)
+  - Evaluate the state transaction based on the country's specific regional risk profile.
+  - FOR SAFE HAVENS / LUCRATIVE STATES: Frame rights around economic pragmatism and tourist revenue goldmines. Treat the lack of civil partnerships as an economic own goal that blocks local men and expats from opening businesses or investing capital.
+  - FOR HOSTILE / DANGEROUS STATES: Expose the regime's corruption and hypocrisy. Frame persecution as a calculated political tool and a weaponized distraction used by a failing government to appease traditionalists and mask internal infrastructure collapse.
+  - FOR WESTERN STATES: Expose performative pinkwashing and virtue signaling. Detail how governments push symbolic legislation to score progressive points to distract from housing crises, inflation, or policy failures. Highlight how loud street theater and radical activist demands alienate the straight majority, creating a dangerous cultural friction that populist leaders weaponize to trigger a backlash. Conclude by arguing for quiet normalization and basic civil contracts based on mutual respect rather than exhausting, unwinnable cultural fights.
+
+  4. MASTER STRUCTURAL CONSTRAINTS
+  - CRITICAL GRAMMAR: Under no circumstances use semicolons or em-dashes in any generated text blocks, summaries, or headings. Use commas, full stops, or standard hyphens instead.
+  - LINGUISTIC RULE: Strict ban on the forbidden word starting with Q across all fields. Focus exclusively on gay men and MSM.
+  - TIME RULE: Write the entire chronicles section using the historical present tense to make the narrative unfold like an active, breaking news story.
+-->
+
+        <details class="news-accordion status-border status-pink">
+          <summary>
+            <h2 class="pod-title">History</h2>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="article-header-row">
+              <h3 class="main-title">[Insert Short, Punchy Title - Max 6 Words]</h3>
+            </div>
+
+            <!-- 1. THE BASELINE INTRO -->
+            <p style="color: #222">
+              [Insert 1-2 clinical sentences establishing the modern 2026 travel security baseline, stating clearly if the state operates as a sanctuary, a legal trap, or a
+              confusing grey zone for gay men.]
+            </p>
+            <p style="color: #222">So, how did [Insert State/Country Name] get here?</p>
+
+            <!-- 2. THE 4-POINT CHRONICLES CHRONOLOGY -->
+
+            <!-- MILESTONE 1: THE ERA OF THE INDIGENOUS BASELINE OR EARLIEST ARCHIVE -->
+            <h4 style="color: #111">[Insert Century/Decade]: [Insert Short Topic Title]</h4>
+            <p class="article-lead" style="color: #333">
+              [Insert exactly 1-2 punchy sentences using the historical present tense. Cover the earliest documented records of male intimacy or indigenous tribal traditions before
+              colonial or modern state intervention. Keep this text completely clean with no inline hyperlinks.]
+            </p>
+
+            <!-- MILESTONE 2: THE INTRODUCTION OF THE LEGAL TRAP -->
+            <h4 style="color: #111">[Insert Century/Decade]: [Insert Short Topic Title]</h4>
+            <p class="article-lead" style="color: #333">
+              [Insert exactly 1-2 punchy sentences in the historical present tense detailing the exact moment criminalization, sodomy laws, or structural hostility takes root.
+              Focus on the raw legal mechanics without empty moralizing filler.]
+            </p>
+
+            <!-- MILESTONE 3: THE TWENTIETH CENTURY CRACKDOWN -->
+            <h4 style="color: #111">[Insert Century/Decade]: [Insert Short Topic Title]</h4>
+            <p class="article-lead" style="color: #333">
+              [Insert exactly 1-2 punchy sentences in the historical present tense mapping a major regional flashpoint, such as a localized police bar raid, a statehouse sting
+              operation, or a weaponized media moral panic targeting gay men.]
+            </p>
+
+            <!-- MILESTONE 4: THE MODERN FLASHPOINT OR DECISION -->
+            <h4 style="color: #111">[Insert Century/Decade]: [Insert Short Topic Title]</h4>
+            <p class="article-lead" style="color: #333">
+              [Insert exactly 1-2 punchy sentences in the historical present tense establishing the turning point, like the repeal of state penal codes, a major grassroots revolt,
+              or how the modern status quo locks into place.]
+            </p>
+
+            <!-- 3. FEATURED REGIONAL HISTORY BOOK COMPONENT -->
+            <div
+              class="featured-book-box"
+              style="margin-top: 40px; border: 1px solid #e2e8f0; border-left: 4px solid #ff00ff; background: #fafafa; padding: 20px; border-radius: 8px"
+            >
+              <h4 style="margin: 0 0 10px 0; color: #ff00ff; text-transform: uppercase; letter-spacing: 0.5px; font-size: 0.9rem">Essential Local Reading</h4>
+              <h5 style="margin: 0 0 8px 0; font-size: 1.1rem; color: #111">[Insert Book Title: The Definitive Gay History of the State]</h5>
+              <p style="margin: 0 0 15px 0; font-size: 0.9rem; color: #444; line-height: 1.5">
+                [Insert a direct, 1-2 sentence description explaining why this specific text is the single best resource for understanding the historical timeline of gay men and
+                MSM in this region.]
+              </p>
+              <a
+                href="https://www.amazon.com"
+                target="_blank"
+                rel="noopener"
+                style="display: inline-block; font-size: 0.85rem; color: #0894f1; text-decoration: underline; font-weight: bold"
+              >
+                Find this book on Amazon
+              </a>
+            </div>
+
+            <!-- 4. TWO-TIERED RESOURCE FOOTER (THE TRACEABLE RECEIPTS LEDGER) -->
+            <div class="resource-container" style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px">
+              <h3 style="margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; color: #111">The Source Files</h3>
+
+              <!-- TIER 1: GENERAL HISTORICAL OVERVIEW HUB -->
+              <div class="general-trust-box" style="border: 1px dashed #ff9800; background: rgba(255, 152, 0, 0.03); padding: 15px; border-radius: 6px; margin-bottom: 25px">
+                <h4 style="margin: 0 0 8px 0; color: #e65100; font-size: 0.95rem">⚠ General Reading Advisory</h4>
+                <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #444; line-height: 1.4">
+                  Public encyclopedias are user-edited and change rapidly. For ironclad investigative receipts and verified historical records, consult our primary repository files
+                  below.
+                </p>
+                <a
+                  href="https://wikipedia.org"
+                  target="_blank"
+                  rel="nofollow noopener"
+                  style="display: inline-block; font-size: 0.85rem; color: #e65100; text-decoration: underline; font-weight: bold"
+                >
+                  Open General History Archive Hub
+                </a>
+              </div>
+
+              <!-- TIER 2: VERIFIABLE PRIMARY RECEIPTS -->
+
+              <!-- SOURCE CARD 1: BASELINE DATA -->
+              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 1 Era]: [Insert Subject Focus]</h5>
+                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Library, Tribe Record, or Early Document Group Title]
+                </span>
+                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
+                  <strong>[Insert Main Archive Body or Publisher Name]</strong> - [Insert 1 sentence description detailing exactly what this verified file or ledger catalogs
+                  regarding regional male relations].
+                  <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #0894f1">How to Find It:</strong> [Insert clear, step by step text search directions or catalog index paths to help users locate the
+                    primary records].
+                  </span>
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 2: LEGAL TRAP DATA -->
+              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 2 Era]: [Insert Subject Focus]</h5>
+                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Early Statutory Penal Code or Court Ledger Title]
+                </span>
+                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
+                  <strong>[Insert State Law Library or University Repository Name]</strong> - [Insert 1 sentence description of the original text defining historical sodomy codes
+                  or criminal penalties].
+                  <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #0894f1">How to Find It:</strong> [Insert exact legal reference codes, act numbers, or volume pathways to verify the statutory text].
+                  </span>
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 3: CRACKDOWN DATA -->
+              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 3 Era]: [Insert Subject Focus]</h5>
+                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Police Blotter, News Archive, or Raid Report Title]
+                </span>
+                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
+                  <strong>[Insert Historical Society or City Record Archive Name]</strong> - [Insert 1 sentence description detailing what these specific investigative files or
+                  news prints expose about the crackdown].
+                  <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #0894f1">How to Find It:</strong> [Insert key phrase queries or date ranges to immediately retrieve the original microfiche or digital
+                    scans].
+                  </span>
+                </a>
+              </div>
+
+              <!-- SOURCE CARD 4: MODERN FLASHPOINT DATA -->
+              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
+                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 4 Era]: [Insert Subject Focus]</h5>
+                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
+                  [Insert Landmark Case Ruling or Modern Decriminalization Bill Title]
+                </span>
+                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
+                  <strong>[Insert Supreme Court Repository or Legislative Database Name]</strong> - [Insert 1 sentence description mapping the concrete legal judgment that formally
+                  altered the state stance].
+                  <br />
+                  <span style="display: block; margin-top: 6px">
+                    <strong style="color: #0894f1">How to Find It:</strong> [Insert the explicit case citation number or statutory bill number for quick external verification].
+                  </span>
+                </a>
+              </div>
+
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- ======================================================================= -->
+        <!-- MASTER AI PROTOCOL: EMERGENCY CONTAINER GENERATION RULES                -->
+        <!-- ======================================================================= -->
+        <!-- 
+  CRITICAL EMERGENCY CONTAINER PROTOCOL (UPDATED JUNE 2026):
+  Analyze the country profile data to determine if the nation is classified as a Safe Sanctuary/Mixed-Bag (Track A) or a Lethal Blackout Zone (Track B).
+
+  TONE, STYLE & WRITING COMPLIANCE:
+  * Speak in a completely natural, conversational, fast-paced, and direct tone. 
+  * Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. 
+  * Focus exclusively on the real-world safety of gay men and MSM.
+  * LINGUISTIC BAN: You are strictly prohibited from using the word "queer" anywhere in the generated instructions, text, or labels. Use "gay," "men," or "MSM."
+
+  If Track A (Safe or Mixed-Bag Country):
+  1. Output the standard emergency lines paragraph with the verified local medical and police numbers.
+  2. Output the Track A PEP text instructing users to visit local clinics or emergency rooms using simple, everyday language.
+  3. Completely omit the Crisis NGO text and the red emergency button from the layout.
+
+  If Track B (Lethal Blackout Country):
+  1. Delete the entire paragraph containing the medical emergency and police phone numbers so no local state numbers are displayed.
+  2. Output the Track B PEP text explaining clearly that local facilities are unsafe, do not offer confidentiality, and carry severe consequences for gay men.
+  3. Directly below the PEP text, insert the high-visibility crisis intervention box. Populate the text exactly as follows: "If you are facing a severe medical crisis or an immediate physical threat on the ground here, you can connect with a specialized network that is there just for you. Please use this link if you are in an urgent, life-saving emergency situation."
+  4. Generate the anchor button exactly as styled in the template, displaying the text: CRISIS ONLY NGO (with the word ONLY highlighted in yellow for maximum contrast). Set the href destination to the verified emergency NGO intake link.
+-->
+
+        <!-- ======================================================================= -->
+        <!-- TEMPLATE 2: THE RE-ENGINEERED MEDICAL & LIFELINE ACCESS MODEL          -->
+        <!-- Use for: High-efficiency, low-scroll emergency and clinic navigation.   -->
+        <!-- ======================================================================= -->
+
+        <details class="news-accordion status-border [STATUS-COLOR]">
+          <summary>
+            <h2 class="pod-title">Sexual Health</h2>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+
+            <!-- 1. Emergency Quick-Bar (Always First) -->
+            <div style="border: 1px solid #ff4d4d; padding: 15px; border-radius: 8px; margin-bottom: 20px">
+              <h3 style="margin-bottom: 20px">🚨 Emergency & Urgent Care</h3>
+
+              <!-- EMERGENCY PHONE LINE PARAGRAPH: If local authorities or state hospitals present a direct threat of arrest, violence, or mandatory reporting for gay men, the AI must delete this entire p tag completely so no numbers are displayed. If the country is safe, populate it normally. -->
+              <p><strong>Medical Emergency:</strong> [Insert Medical Number] | <strong>Police:</strong> [Insert Police Number]</p>
+
+              <!-- DYNAMIC PEP ROUTING PROTOCOL: The AI will select the correct text block based on local risk. -->
+              <p style="margin-bottom: 0">
+                <strong>Urgent (PEP):</strong>
+                [TRACK A TEXT: If you had unsafe sex, you can protect yourself by taking PEP within 72 hours. Go to [INSERT PRIMARY PEP CLINIC] or use the 24-hour emergency room at
+                [INSERT MAJOR HOSPITAL] if you can.] [TRACK B TEXT: PEP is not safely available at hospitals or clinics anywhere in this country, and walking into a public facility
+                carries severe consequences. If you had unsafe sex or are in a crisis, please do not go to a local emergency room. Instead, look at the specialized link below right
+                now.]
+              </p>
+
+              <!-- LETHAL BLACKOUT EXTRACTION GATEKEEPER: This container and button must be completely deleted by the AI if the country is safe or a mixed bag. It must only appear for high-risk blackout territories. -->
+              <div class="crisis-gatekeeper-block" style="margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ff4d4d">
+                <p style="font-size: 0.9rem; line-height: 1.4; color: #222; margin-bottom: 12px">
+                  If you are facing a severe medical crisis or an immediate physical threat on the ground here, you can connect with a specialized network that is there just for
+                  you. Please use this link if you are in an urgent, life-saving emergency situation.
+                </p>
+                <a
+                  href="[INSERT EMERGENCY NGO URL]"
+                  target="_blank"
+                  rel="noopener"
+                  style="
+                    display: block;
+                    text-align: center;
+                    background: #ff4d4d;
+                    color: #ffffff !important;
+                    font-size: 0.95rem;
+                    font-weight: bold;
+                    letter-spacing: 0.5px;
+                    padding: 12px 15px;
+                    border-radius: 6px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    box-shadow: 0 2px 4px rgba(255, 77, 77, 0.2);
+                  "
+                >
+                  Crisis <span style="color: #ffe600 !important; font-weight: 900">ONLY</span> NGO
+                </a>
+              </div>
+            </div>
+
+            <!-- 2. Fast Facts -->
+            <h4 style="margin-bottom: 15px; color: #111">Fast Facts</h4>
+            <ul class="fact-list">
+              <li style="margin-bottom: 10px">
+                <strong>General:</strong> [Insert 1 simple, direct sentence on local testing. State the baseline rules for state clinics cleanly and naturally. Advise getting
+                tested as soon as possible. If state hospitals are safe, recommend using them to save money. If they log personal IDs or carry local stigma risks, point directly to
+                a recognized private clinic instead to protect privacy. Speak conversationally without heavy jargon.]
+              </li>
+              <li style="margin-bottom: 10px">
+                <strong>Safety:</strong> [Insert 1 protective, direct sentence on local medical screening, visa rules, or residency policies. Frame the situation as a basic
+                administrative fact and offer a clear, calm workaround without being alarmist.]
+              </li>
+              <li style="margin-bottom: 10px">
+                <strong>Insider:</strong> [Insert 1 helpful, everyday tip on how to talk to clinic staff comfortably without stress, or point out a specific clinic that offers
+                long-acting injectables for HIV prevention or treatment.]
+              </li>
+            </ul>
+
+            <div class="resource-container">
+              <h3 style="margin-bottom: 20px; color: #111">Hospitals & Clinics</h3>
+
+              <!-- 3. Universal Safety Warning Banner -->
+              <div style="background: #ff0095; padding: 12px 15px; margin-bottom: 25px; border-radius: 4px">
+                <span style="display: block; font-size: 0.95rem; color: #ffffff !important; font-weight: 600; line-height: 1.45">
+                  Check these clinic details before you visit because facts change fast, especially phone numbers, and we cannot guarantee every source.
+                  <a href="/about#verify-clinics" style="color: #ffffff !important; text-decoration: underline; font-weight: 700; margin-left: 4px">Learn How To Check</a>
+                </span>
+              </div>
+
+              <!-- Hospital 1 -->
+              <div
+                class="resource-card"
+                style="
+                  margin-bottom: 20px;
+                  display: block;
+                  background: #ffffff;
+                  border: 1px solid #e2e8f0;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+                "
+              >
+                <div style="background: #0894f1; padding: 12px 15px">
+                  <span style="color: #ffffff; font-weight: 700; display: block; font-size: 1.05rem">[CLINIC NAME 1]</span>
+                </div>
+                <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
+                    ><strong>Address:</strong> [FULL ADDRESS]</span
+                  >
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
+                    ><strong>Phone:</strong> [PHONE NUMBER]</span
+                  >
+                  <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
+                    <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
+                    standard reception desks easily.]
+                  </span>
+                </div>
+              </div>
+
+              <!-- Hospital 2 -->
+              <div
+                class="resource-card"
+                style="
+                  margin-bottom: 20px;
+                  display: block;
+                  background: #ffffff;
+                  border: 1px solid #e2e8f0;
+                  border-radius: 8px;
+                  overflow: hidden;
+                  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+                "
+              >
+                <div style="background: #0894f1; padding: 12px 15px">
+                  <span style="color: #ffffff; font-weight: 700; display: block; font-size: 1.05rem">[CLINIC NAME 2]</span>
+                </div>
+                <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
+                    ><strong>Address:</strong> [FULL ADDRESS]</span
+                  >
+                  <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
+                    ><strong>Phone:</strong> [PHONE NUMBER]</span
+                  >
+                  <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
+                    <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
+                    standard reception desks easily.]
+                  </span>
+                </div>
+              </div>
+
+              <h3 style="margin-top: 30px; margin-bottom: 10px; color: #111">Community Links & Support</h3>
+              <p style="font-size: 0.95rem; margin: 0 0 20px 0; color: #444; line-height: 1.4">
+                Look at the links below, read the descriptions and use the one that best describes your situation. These are networks that are there just for you.
+              </p>
+
+              <!-- Community Resource 1 -->
+              <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #00d4ff">
+                <span class="resource-title" style="color: #00d4ff">[COMMUNITY OR PRIVATE CLINIC NAME]</span>
+                <span class="resource-desc">
+                  [Insert 1 simple sentence using everyday conversational language describing what this clinic offers, how they keep your details private, and how they help you.]
+                </span>
+              </a>
+
+              <!-- Community Resource 2 -->
+              <a href="[URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #2ecc71">
+                <span class="resource-title" style="color: #2ecc71">[GRASSROOTS NGO OR FOUNDATION NAME]</span>
+                <span class="resource-desc">
+                  [Insert 1 simple sentence using everyday conversational language describing how this group offers local care, extraction support, or emergency housing if you are
+                  in a difficult spot.]
+                </span>
+              </a>
+            </div>
+
+            <!-- 4. Access Status Bars -->
+            <div class="identity-status-container" style="margin-top: 30px; margin-bottom: 30px">
+              <div class="identity-status-bar">
+                <span class="area-label">CITY</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
+              </div>
+              <div class="identity-status-bar">
+                <span class="area-label">RURAL</span>
+                <div class="id-item"><span>HIV</span> <span class="id-dot status-[COLOR]"></span></div>
+                <div class="id-item"><span>PrEP</span> <span class="id-dot status-[COLOR]"></span></div>
+              </div>
+            </div>
+
+            <!-- 5. Factual HIV Navigation Tile -->
+            <div class="medical-cta-block">
+              <a href="/about#hiv-realities"> Get Informed About HIV And Stop The Stress </a>
+            </div>
+
+            <!-- 6. Footer Timestamp Note -->
+            <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
+          </div>
+        </details>
+
+        <!-- ======================================================================= -->
+        <!-- THE GROUND REPORTS MODEL (THE AGGREGATOR)                               -->
+        <!-- !important - Speak in a completely natural, conversational, fast-paced, and direct tone. -->
+
+        <!-- !important Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. -->
+
+        <!-- * Focus exclusively on the real-world safety of gay men and MSM. -->
+        <!-- Use for: Contrasting official NGO/legal research with the top 3 human   -->
+        <!-- travel blogs. Let the guides speak verbatim. Let the user decide.       -->
+        <!-- ======================================================================= -->
+
+        <details class="news-accordion status-border [STATUS-COLOR]">
+          <summary>
+            <h2 class="pod-title">Travel & Fun</h2>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="article-header-row">
+              <h3 class="main-title">[TITLE PROMPT: Max 5 words. Make it fun and punchy, or dark and sarcastic depending on the country's actual vibe. Nail the irony.]</h3>
+            </div>
+
+            <!-- THE GWN OVERVIEW (DATA VS DESTINATION) -->
+            <h4>The Research vs Reality</h4>
+            <p>
+              [PROMPT: First, run a live search targeting local gay forums, Reddit, Substack, and underground expat networks to find one highly specific, lesser-known truth about
+              the gay street reality here that mainstream NGOs and travel gurus completely ignore. Then, write exactly 2-3 punchy sentences contrasting the official safety data
+              with this raw, on-the-ground reality. Focus specifically on gay men. High-end tabloid tone. Zero padding. Zero semicolons. Zero em dashes. Strictly ban the word
+              "queer".]
+            </p>
+
+            <!-- THE BATTLE (NO COMMENTARY, JUST QUOTES) -->
+            <h4 style="margin-top: 30px">The Travel Blogs</h4>
+            <p style="margin-bottom: 20px">
+              We pulled these quotes from the top independent and most reliable travel guides so you can choose the one for you. Here is what they are saying right now.
+            </p>
+
+            <!-- THE ESSENTIALS / LOCAL SOURCES -->
+            <div class="resource-container" style="margin-top: 30px; margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 20px">
+              <h4 style="margin-bottom: 15px">Local Gay Venues & Networks</h4>
+
+              <!-- 🛑 CRITICAL RND LOGIC: RESOURCE CONTAINER GENERATION
+  You must strictly execute an EITHER/OR layout rendering based on the real-time 2026 data. Mixed states are fatal to the DOM footprint.
+
+  IF VERIFIED SCENE EXISTS: You MUST completely delete the  FALLBACK CARD: THE DATA DEAD ZONE  block from the HTML string before outputting. Render only the active city headings, Type 1/2 Heritage links, and the Type 3 Strategic Hand-off.
+
+  IF NO VERIFIED SCENE EXISTS: You MUST completely delete all City Headings, Card Type 1, Card Type 2, and Card Type 3 blocks from the HTML string. The container should output only the  FALLBACK CARD: THE DATA DEAD ZONE  block inside the parent wrapper.
+
+  Zero-Tolerance Policy: Under no circumstance may an anchor tag (<a>) link and the Dead Zone <div> coexist inside the same resource-container output. -->
+
+              <!-- FALLBACK CARD: THE DATA DEAD ZONE (Use ONLY if no verified historical bars exist) -->
+              <div class="resource-card" style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important">
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">State Scene Alert — Digital Dead Zone</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
+                  Our ground-level research confirms that corporate travel algorithms are flat-out lying about this state—there are currently zero permanent, dedicated gay venues
+                  operating here. The local scene relies entirely on underground, word-of-mouth pop-up parties and private networks.
+                  <a href="/contact"
+                    >Are you a local holding down the scene or running a secret night here? Contact us right now so we can verify the facts and put your event on the map for guys
+                    passing through.</a
+                  >
+                </span>
+              </div>
+
+              <!-- OPTIONAL CITY HEADING: Duplicate this h5 block if breaking a massive state down by city hubs -->
+              <!-- <h5 style="margin-top: 20px; margin-bottom: 10px; color: #111; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">City Name</h5> -->
+
+              <!-- CARD TYPE 1: THE SURVIVING INSTITUTION (Strict Max 6-7 per state page) -->
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=VENUE+NAME+STREET+ADDRESS+CITY+STATE+ZIP"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
+              >
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">VENUE NAME (City) — Map & Directions</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
+                  [INSERT_PUNCHY_TABLOID_DESCRIPTION] — This is an unshakeable local monument. It has been packing in loyal crowds of gay men for decades, surviving every wave of
+                  gentrification and corporate dilution. It remains a mandatory launchpad for any real local night out.
+                </span>
+              </a>
+
+              <!-- CARD TYPE 2: THE HEROIC SURVIVOR (Use to rally support for struggling historic spaces) -->
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=VENUE+NAME+STREET+ADDRESS+CITY+STATE+ZIP"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
+              >
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">VENUE NAME (City) — Community Action Hub</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
+                  [INSERT_PUNCHY_TABLOID_DESCRIPTION] — A legendary, historic space that is actively fighting against soaring commercial rents and corporate land grabs. This venue
+                  needs the community's direct support right now. Skip the tourist traps, go buy a heavy pour here tonight, and keep real gay history alive.
+                </span>
+              </a>
+
+              <!-- CARD TYPE 3: THE STRATEGIC HAND-OFF (Outsource to a independent, gritty local tracker or grassroots blog) -->
+              <a
+                href="URL_OF_GRITTY_LOCAL_INDEPENDENT_BLOG_OR_SUBSTACK"
+                target="_blank"
+                rel="noopener"
+                class="resource-card"
+                style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
+              >
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">The Complete Local Scene Insider (Region/City)</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
+                  We refuse to clog our server with stale, corporate-advertised club listings. For the exhaustive, street-by-street underground tracker of every neighborhood dive
+                  bar, pop-up mixer, and grassroots event, skip the rainbow-washed corporate travel sites and check out the raw, zero-censorship local data curated directly by the
+                  team at [PLATFORM_NAME].
+                </span>
+              </a>
+            </div>
+
+            <h4 class="article-subhead">The Bottom <span style="color: #ff00ff !important">Line</span></h4>
+
+            <p>[PROMPT: Deliver a final 1-2 sentence verdict that helps the user weigh the official research against the travel guides. Zero semicolons, zero em-dashes.]</p>
+
+            <!-- THE ESSENTIALS -->
+            <div class="resource-container" style="margin-top: 40px; border-top: 2px solid #eee; padding-top: 20px">
+              <!-- OPTIONAL VIDEO GUIDE CARD: Omit this entire component and the video travel blog subtitle if no authentic community videos are available, especially for high-risk or hostile destinations where local MSM content doesn't exist -->
+              <h4 style="margin-bottom: 15px">Video Travel Blog</h4>
+
+              <a href="{{ VIDEO_URL }}" target="_blank" rel="noopener" aria-label="YouTube video" class="resource-card">
+                <span class="resource-title" style="display: flex; align-items: center">
+                  <span class="youtube-icon-box"></span>
+                  {{ VLOG_NAME }}
+                </span>
+                <span class="resource-desc">{{ VIDEO_DESCRIPTION }}</span>
+              </a>
+              <h4 style="margin-bottom: 15px">The Essentials</h4>
+
+              <a href="[verified-state-department-url]" target="_blank" rel="noopener" class="resource-card" style="margin-bottom: 10px; display: block; text-decoration: none">
+                <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">US State Department Advisory</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem">Official real time safety warnings and regional travel restrictions.</span>
+              </a>
+
+              <a href="[verified-local-ngo-url]" target="_blank" rel="noopener" class="resource-card" style="display: block; text-decoration: none">
+                <span class="resource-title" style="color: #0894f1; font-weight: bold; display: block">[NGO or Clinic Name]</span>
+                <span class="resource-desc" style="color: #555; font-size: 0.85rem">[PROMPT: 10 word max description of the local resource. No semicolons or em-dashes.]</span>
+              </a>
+
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
+            </div>
+          </div>
+        </details>
+
+        <!-- PROMPT: Set status-border to status-green, status-amber, or status-red based on legal protections. 
+     CRITICAL GRAMMAR CONSTRAINT: Under no circumstances use semicolons or em-dashes in any generated text blocks or summaries. Use commas, full stops, or standard dashes instead. 
+     LINGUISTIC RULE: Strict ban on the word "queer" across all fields, focus exclusively on gay men and MSM. -->
+        <!-- Replace [STATUS-COLOR] with status-green, status-amber, or status-red based on legal status -->
+        <!-- !important - Speak in a completely natural, conversational, fast-paced, and direct tone. -->
+
+        <!-- !important Keep it simple, clear, and punchy. Avoid smart-sounding words, administrative fluff, or academic jargon. -->
+        <details class="news-accordion status-border [STATUS-COLOR]">
+          <summary>
+            <h2 class="pod-title">Need To Know Laws</h2>
+          </summary>
+          <div class="news-content-expanded">
+            <div class="rainbow-line mini-line"></div>
+            <div class="article-header-row">
+              <h3 class="main-title">[COUNTRY]: Legal 2026</h3>
+            </div>
+
+            <!-- Reality Check: Quick scan summary box -->
+            <div style="padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #ff00ff">
+              <h4>The Reality Check</h4>
+              <p>
+                [CRITICAL: 1-2 sentences summarizing street safety for gay men and MSM. Include explicit statistical arrest numbers per year for gay-specific infractions. Write
+                positively if there are zero cases reported or suspected. Avoid semicolons or em-dashes entirely.]
+              </p>
+            </div>
+
+            <!-- Authentic Legal Cards Bento Grid Layout -->
+            <div class="legal-cards-grid">
+              <!-- Card 1: Same-Sex Activity (Wide Panel) -->
+              <div class="legal-card lc-wide lc-1">
+                <h4 class="legal-card-label"><span>🏳️‍🌈</span> Same-Sex Activity</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 2: Age of Consent (Square Panel) -->
+              <div class="legal-card lc-2">
+                <h4 class="legal-card-label"><span>⏱️</span> Age of Consent</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 3: Civil Partnerships (Square Panel) -->
+              <div class="legal-card lc-3">
+                <h4 class="legal-card-label"><span>💍</span> Civil Partnerships</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 4: Marriage Equality (Wide Panel) -->
+              <div class="legal-card lc-wide lc-4">
+                <h4 class="legal-card-label"><span>💍</span> Marriage</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 5: Foreign Marriage Recognition (Square Panel) -->
+              <div class="legal-card lc-5">
+                <h4 class="legal-card-label"><span>✈️</span> Foreign Marriage</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 6: Adoption Rights (Square Panel) -->
+              <div class="legal-card lc-6">
+                <h4 class="legal-card-label"><span>👶</span> Adoption</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 7: Surrogacy Track (Square Panel) -->
+              <div class="legal-card lc-7">
+                <h4 class="legal-card-label"><span>🍼</span> Surrogacy</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 8: Gender Markers (Square Panel) -->
+              <div class="legal-card lc-8">
+                <h4 class="legal-card-label"><span>🆔</span> Gender Recognition</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 9: Workplace Discrimination (Wide Panel) -->
+              <div class="legal-card lc-wide lc-9">
+                <h4 class="legal-card-label"><span>🛡️</span> Workplace Discrimination</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 10: Conversion Therapy Status (Square Panel) -->
+              <div class="legal-card lc-10">
+                <h4 class="legal-card-label"><span>🚫</span> Conversion Therapy</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+
+              <!-- Card 11: Hate Crime Protections (Square Panel) -->
+              <div class="legal-card lc-11">
+                <h4 class="legal-card-label"><span>📢</span> Hate Crime Laws</h4>
+                <div class="legal-card-verdict"></div>
+              </div>
+            </div>
+
+            <!-- Verification Links Container -->
+            <div class="resource-container" style="margin-top: 30px">
+              <h3 style="margin-bottom: 20px">Links:</h3>
+
+              <!-- Link 1: Mandatory Legal Database Reference -->
+              <a href="https://mapresearch.org/equality-profiles/[state_code]/" target="_blank" rel="noopener" class="resource-card">
+                <span class="resource-title">Movement Advancement Project: State Law Profile</span>
+                <span class="resource-desc">Real time independent tracker mapping local penal codes and structural discrimination benchmarks for gay men across the region.</span>
+              </a>
+
+              <!-- Link 2: Live Media Verification Tracking Recent Court Cases or Arrest Stats -->
+              <a href="[VERIFIED-SOURCE-URL]" target="_blank" rel="noopener" class="resource-card" style="border-left: 4px solid #ff00ff">
+                <span class="resource-title">[SOURCE NAME]: [COUNTRY] Report</span>
+                <span class="resource-desc">[Brief description of high-authority or local platform source data. Max 12 words.]</span>
+              </a>
+
+              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
+            </div>
+          </div>
+        </details>
+      </main>
+    </div>
+    <div class="footer-branding-wrapper">
+      <div class="footer-site-title" style="margin-top: 5rem">Gay World News</div>
+      <p class="footer-site-subtitle">History, Health, Travel & Law</p>
+    </div>
+    <script>
+      window.gtranslateSettings = {
+        default_language: "en",
+        detect_browser_language: true,
+        wrapper_selector: "#translator-anchor",
+        type: "nicedropdown",
+      };
+
+      // This "forces" the text because the widget settings sometimes fail
+      window.addEventListener("load", function () {
+        setTimeout(function () {
+          var select = document.querySelector("#translator-anchor select");
+          if (select) {
+            // Creates a new "Select Language" option at the very top
+            var opt = document.createElement("option");
+            opt.value = "";
+            opt.innerHTML = "Translate";
+            opt.selected = true;
+            opt.disabled = true;
+            select.insertBefore(opt, select.firstChild);
+          }
+        }, 1000); // Waits 1 second for the widget to finish loading
+      });
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
+
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("sideMenu");
+        menu.classList.toggle("open");
+      }
+
+      window.addEventListener("click", function (e) {
+        const menu = document.getElementById("sideMenu");
+        const menuToggle = document.querySelector(".menu-toggle");
+
+        // Safety check: only proceed if menu exists and is currently open
+        if (menu && menu.classList.contains("open")) {
+          // If the click is NOT the menu AND NOT the toggle button, close it
+          if (!menu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu();
+          }
+        }
+      });
+
+      document.querySelectorAll(".news-content-expanded").forEach((container) => {
+        container.addEventListener("click", (e) => {
+          // Define tags that SHOULD NOT trigger a close (interactive elements)
+          const interactiveTags = ["A", "BUTTON", "IMG", "IFRAME", "TABLE", "TH", "TD", "SPAN"];
+
+          // If the user clicks the "white space" (not an interactive element)
+          if (!interactiveTags.includes(e.target.tagName) && !e.target.closest(".resource-card")) {
+            const parentDetails = container.closest("details");
+
+            if (parentDetails && parentDetails.open) {
+              parentDetails.removeAttribute("open");
+
+              // Optional: Smooth scroll back to the summary so the user isn't disoriented
+              parentDetails.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            }
+          }
+        });
+      });
+    </script>
+    <style>
+      /* Webkit engines (Chrome, Safari, Edge, Mobile viewports) */
+      div::-webkit-scrollbar {
+        height: 6px;
+      }
+      div::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+      }
+      div::-webkit-scrollbar-thumb {
+        background: linear-gradient(90deg, #ff00ff, #ffbc00);
+        border-radius: 10px;
+      }
+      /* Modern Cross-Browser Standard (Firefox) */
+      div {
+        scrollbar-color: #ff00ff rgba(255, 255, 255, 0.05);
+        scrollbar-width: thin;
+      }
+    </style>
+    <div id="zoom-overlay" class="image-zoom-overlay"></div>
+  </body>
+</html>

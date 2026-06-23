@@ -187,97 +187,97 @@
       </header>
 
       <section class="bento-grid" id="countryGrid">
-        <a href="javascript:void(0);" class="country-card green">
+        <a class="country-card" data-key="australia" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >AUSTRALIA <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="cook_islands" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >COOK ISLANDS <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card green">
+        <a class="country-card" data-key="fiji" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >FIJI <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="kiribati" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >KIRIBATI <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="marshall_islands" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >MARSHALL ISLANDS <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="micronesia" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >MICRONESIA <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="nauru" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >NAURU <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card green">
+        <a class="country-card" data-key="new_zealand" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >NEW ZEALAND <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="niue" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >NIUE <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="palau" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >PALAU <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="papua_new_guinea" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >PAPUA NEW GUINEA <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="samoa" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >SAMOA <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="solomon_islands" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >SOLOMON ISLANDS <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="tonga" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >TONGA <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card red">
+        <a class="country-card" data-key="tuvalu" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >TUVALU <small><br />Arriving in Jul '26</small></span
           >
         </a>
 
-        <a href="javascript:void(0);" class="country-card amber">
+        <a class="country-card" data-key="vanuatu" style="pointer-events: none; opacity: 0.6; cursor: not-allowed">
           <span
             >VANUATU <small><br />Arriving in Jul '26</small></span
           >
@@ -402,6 +402,32 @@
             }
           }
         });
+      });
+    </script>
+
+    <!-- 1. LOAD OCEANIA REGISTRY FIRST -->
+    <script src="/country-info/country-files/oceania-data.js"></script>
+
+    <!-- 2. RUN THE BENTO PAINT ENGINE -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const COLOR_CLASSES = ["green", "amber", "red", "ice"];
+        const staticCards = document.querySelectorAll("#countryGrid .country-card");
+        const regionData = window.globalData;
+
+        if (regionData) {
+          staticCards.forEach((card) => {
+            const countryKey = card.getAttribute("data-key");
+            if (!countryKey) return;
+
+            const countryData = regionData[countryKey];
+
+            if (countryData && countryData.status) {
+              card.classList.remove(...COLOR_CLASSES);
+              card.classList.add(countryData.status);
+            }
+          });
+        }
       });
     </script>
   </body>

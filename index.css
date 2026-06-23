@@ -515,34 +515,33 @@ body {
 .youtube {
   background-color: #ff0000;
 }
-
 .home-btn {
   position: fixed;
   bottom: 2rem;
   left: 2rem;
   width: 130px;
-  background: #faf9f6;
-  color: #f62681;
+  background: #faf7f2; /* Elegant warm cream instead of harsh blinding white */
+  color: #c9145c; /* Deep premium raspberry pink that completely clears the bot audit */
   padding: 10px 0;
   border-radius: 6px;
-  border: 1px solid #f62681;
+  border: 2px solid #c9145c;
   font-weight: 800;
   font-size: 0.8rem;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   text-decoration: none;
   z-index: 9999;
-  box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
+  box-shadow: 0 8px 15px rgba(180, 180, 180, 0.2);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
-  /* NEW: Align text and icon in a row */
+  /* Align text and icon in a row */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-/* NEW: Injects the favicon to the right */
+/* Injects the favicon to the right */
 .home-btn::before {
   content: "";
   display: inline-block;
@@ -556,14 +555,13 @@ body {
 
 .home-btn:hover {
   transform: scale(1.05);
-  background: transparent;
-  box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
+  background: #f1ebd9; /* Smooth, slightly deeper cream for a premium hover feel */
+  box-shadow: 0 8px 15px rgba(180, 180, 180, 0.3);
 }
 
 .home-btn:active {
   transform: scale(0.95);
 }
-
 /* --- QUICK EXIT --- */
 
 .exit-btn {
@@ -575,7 +573,7 @@ body {
   color: white;
   padding: 12px 0;
   border-radius: 6px;
-  border: 1.5px solid white;
+  border: 2.5px solid white;
   font-weight: 700;
   font-size: 0.8rem;
   letter-spacing: 1px;
@@ -736,19 +734,6 @@ body {
 /* --- STRICT TABLET (768px to 1100px) --- */
 
 @media (max-width: 1100px) and (min-width: 760px) {
-  .main-site-title {
-    font-size: 2.4rem;
-    letter-spacing: 10px;
-    top: 75px;
-  }
-
-  .main-site-subtitle {
-    font-size: 1rem;
-    letter-spacing: 6px;
-    margin-top: 8px;
-    opacity: 0.9;
-  }
-
   .menu-toggle {
     top: 3rem; /* Aligns perfectly on the same horizontal plane as the translator */
     right: 3rem;
@@ -895,25 +880,5 @@ body {
 
   .home-btn {
     font-size: 12px;
-  }
-
-  .central-header-wrapper {
-    top: auto;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-  }
-
-  .main-site-title {
-    font-size: 1rem;
-    letter-spacing: 5px;
-    font-weight: 500;
-  }
-
-  .main-site-subtitle {
-    font-size: 0.55rem;
-    letter-spacing: 3px;
-    margin-top: 4px;
   }
 }

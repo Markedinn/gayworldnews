@@ -107,8 +107,5 @@ const worldTerritories = {
     { name: "US Virgin Islands", lat: [17.6, 18.4], lng: [-65.1, -64.5] },
     { name: "American Samoa", lat: [-14.5, -14.1], lng: [-170.9, -168.1] },
     { name: "Northern Mariana Islands", lat: [14.1, 20.6], lng: [144.8, 146.1] },
-    { name: "Puerto Rico", lat: [17.8, 18.5], lng: [-67.3, -65.2] },
-    { name: "Guam", lat: [13.2, 13.7], lng: [144.6, 145.0] },
-    { name: "US Virgin Islands", lat: [17.6, 18.4], lng: [-65.1, -64.5] },
   ],
 };
