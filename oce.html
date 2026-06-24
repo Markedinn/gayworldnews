@@ -105,20 +105,20 @@
 
     <a href="/" class="home-btn">HOME</a>
 
-    <div class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
+    <button class="menu-toggle" onclick="toggleMenu()" role="button" aria-label="Open Navigation" tabindex="0">
       <div class="bar"></div>
       <div class="bar"></div>
       <div class="bar"></div>
-    </div>
+    </button>
 
-    <div id="sideMenu" class="side-menu">
+    <aside id="sideMenu" class="side-menu">
       <div class="slider-content">
         <nav class="mobile-nav-links">
-          <a href="breaking" class="breaking-news-btn">BREAKING NEWS</a>
+          <a href="/breaking" class="breaking-news-btn">BREAKING NEWS</a>
           <a href="/afr">AFRICA</a>
-          <a href="/ame">AMERICAS</a>
           <a href="/asi">ASIA</a>
           <a href="/eur">EUROPE</a>
+          <a href="/oce">OCEANIA</a>
           <a href="/about">ABOUT</a>
           <a href="/contact">CONTACT</a>
         </nav>
@@ -177,9 +177,9 @@
           </div>
         </div>
       </div>
-    </div>
+    </aside>
 
-    <div class="master-grid-container">
+    <main class="master-grid-container">
       <header class="main-header">
         <h1 class="region-hub-title">Oceania</h1>
       </header>
@@ -281,12 +281,12 @@
           >
         </a>
       </section>
-    </div>
+    </main>
 
-    <div class="footer-branding-wrapper">
+    <footer class="footer-branding-wrapper">
       <div class="footer-site-title">Gay World News</div>
       <p class="footer-site-subtitle">History, Health, Travel & Law</p>
-    </div>
+    </footer>
 
     <script>
       // 1. Instantly paint a static placeholder so the widget never looks "missing"
@@ -403,10 +403,10 @@
       });
     </script>
 
-    <!-- 1. LOAD OCEANIA REGISTRY FIRST -->
+    <!-- 1. LOAD DATA FIRST: Fills window.globalData with your clean keys -->
     <script src="/country-info/country-files/oceania-data.js"></script>
 
-    <!-- 2. RUN THE BENTO PAINT ENGINE -->
+    <!-- 2. RUN ENGINE SECOND: Scans the HTML and paints the empty cards -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const COLOR_CLASSES = ["green", "amber", "red", "ice"];
@@ -430,4 +430,3 @@
     </script>
   </body>
 </html>
->

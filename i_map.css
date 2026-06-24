@@ -295,9 +295,17 @@ body {
 
 /* --- MOBILE (max-width: 768px) --- */
 @media (max-width: 760px) {
+  /* STEP 1: Fully sanitize the body so the underlying image doesn't double-load */
   body {
-    background-image: url("images/world_img_mobile.webp");
+    background-image: none !important;
+    background-color: #096ae9;
+  }
+
+  /* STEP 2: Force the mobile wallpaper directly into the hardware-accelerated filter box */
+  #map {
+    background-image: url("images/world_img_mobile.webp") !important;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
   }
 

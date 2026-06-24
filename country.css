@@ -24,25 +24,6 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 20px 0 0 0;
-  background-color: #1a1a1a;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: url("images/world_img.webp");
-  filter: brightness(0.9) contrast(1.5) saturate(1.8);
-  background-color: rgba(73, 73, 68, 0.141);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  pointer-events: none;
 }
 
 h5 {
@@ -518,7 +499,7 @@ h5 {
 
 /* RED STATUS */
 .status-badge-wrapper.status-red #status-text {
-  color: #e40303 !important;
+  color: #000000 !important;
 }
 .status-badge-wrapper.status-red .status-dot-country {
   background: #e40303 !important;
@@ -527,7 +508,7 @@ h5 {
 
 /* AMBER STATUS - Fixed text contrast with a bright indicator dot */
 .status-badge-wrapper.status-amber #status-text {
-  color: #a16207 !important; /* Deep luxury gold that clears the 4.5 ratio */
+  color: #000000 !important; /* Deep luxury gold that clears the 4.5 ratio */
 }
 .status-badge-wrapper.status-amber .status-dot-country {
   background: #f59e0b !important; /* Retains your bright glowing amber alert dot */
@@ -536,7 +517,7 @@ h5 {
 
 /* GREEN STATUS */
 .status-badge-wrapper.status-green #status-text {
-  color: #10882e !important; /* Passes the 4.5:1 contrast check */
+  color: #000000 !important; /* Passes the 4.5:1 contrast check */
 }
 .status-badge-wrapper.status-green .status-dot-country {
   background: #16d242 !important; /* Keeps your glowing neon indicator */
@@ -545,7 +526,7 @@ h5 {
 
 /* ICE STATUS */
 .status-badge-wrapper.status-ice #status-text {
-  color: #00b8d4 !important;
+  color: #000000 !important;
 }
 .status-badge-wrapper.status-ice .status-dot-country {
   background: rgba(0, 229, 255, 0.8) !important;
@@ -1741,7 +1722,7 @@ li span {
   background-size: contain;
 }
 /* ==========================================================================
-   GAY WORLD NEWS - FIXED 2-COLUMN BENTO SYSTEM (ACCORDION OPTIMIZED)
+   FIXED 2-COLUMN BENTO SYSTEM (ACCORDION OPTIMIZED)
    ========================================================================== */
 
 /* 1. Parent Grid Container (Forced 2-Column Desktop Matrix) */
