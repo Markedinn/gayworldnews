@@ -145,7 +145,7 @@ body {
   font-size: 2.2rem;
   font-weight: 300;
   letter-spacing: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
   text-transform: uppercase;
   text-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -155,7 +155,7 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 8px;
-  color: rgba(255, 255, 255, 0.582);
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -169,7 +169,7 @@ body {
   color: #ffffff;
   padding: 10px 32px;
   border-radius: 6px;
-  border: 1px solid white;
+  border: 1.5px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -179,14 +179,10 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .legend-btn:hover {
   transform: scale(1.05);
-  background: transparent;
-  box-shadow: 0 8px 15px rgba(214, 213, 213, 0.2);
 }
 
 /* --- THE POP-UP CONTENT (Upward Dropdown) --- */

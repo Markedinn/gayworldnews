@@ -61,7 +61,12 @@
       }
     </script>
 
-    <!-- Parent Breadcrumb Structural Validation -->
+    Found it. You nailed it, this is exactly where the glitch is hiding. Take a close look at the very end of your `BreadcrumbList` script. You accidentally used a curly brace `}`
+    instead of a square bracket `]` to close out your array loop. Google's automated code parser opened the array with `[` on the `itemListElement` line, read your two items, and
+    then threw a total tantrum when it hit a curly brace instead of the closing square bracket. This is why Search Console fired off that exact message: `Missing ',' or ']' in
+    array declaration`. Here is the clean, fully corrected block for that parent breadcrumb section. Swap this in on your regional index page, and the error will clear out
+    completely.
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -79,7 +84,7 @@
             "name": "Americas",
             "item": "https://gayworldnews.com/ame"
           }
-        }
+        ]
       }
     </script>
 

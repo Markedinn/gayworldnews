@@ -211,12 +211,18 @@
 
     <div class="master-grid-container">
       <header class="main-header">
-        <img src="/flags/Flag_of_[Country].webp" alt="Flag of [Country]" width="270" height="180" style="border-radius: 4px; margin-top: 40px" fetchpriority="high" />
+        <img src="/flags/Flag_of_[Country].webp" alt="Flag of [Country]" width="300" height="212" style="border-radius: 4px; margin-top: 40px" fetchpriority="high" />
         <h1 id="country-name" class="main-title">[CountryName]</h1>
       </header>
 
       <div class="top-utility-stack">
-        <a href="https://www.preventionaccess.org" target="_blank" rel="noopener" class="u-u-link">
+        <a
+          href="https://www.preventionaccess.org"
+          target="_blank"
+          rel="noopener"
+          class="u-u-link"
+          aria-label="Learn more about Prevention Access Campaign Undetectable equals Untransmittable statistics"
+        >
           <div id="u-u-notice">
             <span class="u-u-title">U=U: Undetectable = Untransmittable</span>
             <p>HIV Medication Keeps Everyone Safe</p>
@@ -326,107 +332,74 @@
                 [Insert a direct, 1-2 sentence description explaining why this specific text is the single best resource for understanding the historical timeline of gay men and
                 MSM in this region.]
               </p>
-              <a
-                href="https://www.amazon.com"
-                target="_blank"
-                rel="noopener"
-                style="display: inline-block; font-size: 0.85rem; color: #0894f1; text-decoration: underline; font-weight: bold"
+            </div>
+
+            <!-- [CRITICAL HTML GENERATION RULE: RECONSTRUCTED SOURCE CARDS]
+When generating the source cards inside the <div> block for the resource footer container, you must output the exact structural markup below for each milestone event. Replace the bracketed placeholders with direct, hyper-targeted research data. 
+
+Strict constraints:
+- Do not add text links or text search directions at the bottom of the card.
+- The entire card must be wrapped inside the <a> tag as a single clickable target.
+- Keep descriptions punchy, active-voice, and strictly focused on gay men and MSM. 
+- Maintain the strict linguistic ban: Never use the word "queer" in the generated code. Use "gay," "men," or "MSM."
+- The background color of the card must be pure white (#ffffff) to preserve the typography weight against the gray container background.
+
+You can add between 3 and 10 sources -->
+
+            <!-- SOURCE CARD TEMPLATE -->
+            <a
+              href="[INSERT_EXACT_DEEP_LINK_URL]"
+              target="_blank"
+              rel="noopener"
+              class="resource-card"
+              style="
+                display: block;
+                margin-bottom: 20px;
+                padding: 18px;
+                background: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-left: 5px solid #0894f1;
+                border-radius: 6px;
+                text-decoration: none;
+                font-family:
+                  system-ui,
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  &quot;Segoe UI&quot;,
+                  Roboto,
+                  sans-serif;
+                -webkit-font-smoothing: antialiased;
+              "
+            >
+              <!-- Milestone Header -->
+              <h5 style="margin: 0 0 4px 0; font-size: 1.05rem; color: #111111; font-weight: 700; letter-spacing: -0.2px; text-decoration: none">
+                [YEAR OR ERA]: [SHORT MILESTONE EVENT TITLE]
+              </h5>
+
+              <!-- Category Label -->
+              <span
+                style="
+                  color: #0894f1;
+                  font-weight: 700;
+                  display: block;
+                  margin-bottom: 12px;
+                  font-size: 0.8rem;
+                  letter-spacing: 0.5px;
+                  text-transform: uppercase;
+                  text-decoration: none;
+                "
               >
-                Find this book on Amazon
-              </a>
-            </div>
+                [LEGAL OR HISTORICAL RECORD CATEGORY]
+              </span>
 
-            <!-- 4. TWO-TIERED RESOURCE FOOTER (THE TRACEABLE RECEIPTS LEDGER) -->
-            <div class="resource-container" style="margin-top: 50px; border-top: 2px solid #eee; padding-top: 30px">
-              <h3 style="margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; color: #111">The Source Files</h3>
+              <!-- Core Text Block -->
+              <p style="margin: 0; font-size: 0.95rem; color: #000000; line-height: 1.5; font-weight: 500; letter-spacing: -0.1px; text-decoration: none">
+                <strong style="color: #111111; font-weight: 800; margin-right: 4px">[PRIMARY ARCHIVE OR PUBLISHER NAME]</strong> [Insert one clear sentence detailing exactly what
+                this verified file, case, or ledger catalogs regarding regional gay male history or legal penal status].
+              </p>
+            </a>
 
-              <!-- TIER 1: GENERAL HISTORICAL OVERVIEW HUB -->
-              <div class="general-trust-box" style="border: 1px dashed #ff9800; background: rgba(255, 152, 0, 0.03); padding: 15px; border-radius: 6px; margin-bottom: 25px">
-                <h4 style="margin: 0 0 8px 0; color: #e65100; font-size: 0.95rem">⚠ General Reading Advisory</h4>
-                <p style="margin: 0 0 12px 0; font-size: 0.85rem; color: #444; line-height: 1.4">
-                  Public encyclopedias are user-edited and change rapidly. For ironclad investigative receipts and verified historical records, consult our primary repository files
-                  below.
-                </p>
-                <a
-                  href="https://wikipedia.org"
-                  target="_blank"
-                  rel="nofollow noopener"
-                  style="display: inline-block; font-size: 0.85rem; color: #e65100; text-decoration: underline; font-weight: bold"
-                >
-                  Open General History Archive Hub
-                </a>
-              </div>
-
-              <!-- TIER 2: VERIFIABLE PRIMARY RECEIPTS -->
-
-              <!-- SOURCE CARD 1: BASELINE DATA -->
-              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 1 Era]: [Insert Subject Focus]</h5>
-                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Library, Tribe Record, or Early Document Group Title]
-                </span>
-                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
-                  <strong>[Insert Main Archive Body or Publisher Name]</strong> - [Insert 1 sentence description detailing exactly what this verified file or ledger catalogs
-                  regarding regional male relations].
-                  <br />
-                  <span style="display: block; margin-top: 6px">
-                    <strong style="color: #0894f1">How to Find It:</strong> [Insert clear, step by step text search directions or catalog index paths to help users locate the
-                    primary records].
-                  </span>
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 2: LEGAL TRAP DATA -->
-              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 2 Era]: [Insert Subject Focus]</h5>
-                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Early Statutory Penal Code or Court Ledger Title]
-                </span>
-                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
-                  <strong>[Insert State Law Library or University Repository Name]</strong> - [Insert 1 sentence description of the original text defining historical sodomy codes
-                  or criminal penalties].
-                  <br />
-                  <span style="display: block; margin-top: 6px">
-                    <strong style="color: #0894f1">How to Find It:</strong> [Insert exact legal reference codes, act numbers, or volume pathways to verify the statutory text].
-                  </span>
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 3: CRACKDOWN DATA -->
-              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 3 Era]: [Insert Subject Focus]</h5>
-                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Police Blotter, News Archive, or Raid Report Title]
-                </span>
-                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
-                  <strong>[Insert Historical Society or City Record Archive Name]</strong> - [Insert 1 sentence description detailing what these specific investigative files or
-                  news prints expose about the crackdown].
-                  <br />
-                  <span style="display: block; margin-top: 6px">
-                    <strong style="color: #0894f1">How to Find It:</strong> [Insert key phrase queries or date ranges to immediately retrieve the original microfiche or digital
-                    scans].
-                  </span>
-                </a>
-              </div>
-
-              <!-- SOURCE CARD 4: MODERN FLASHPOINT DATA -->
-              <div class="resource-card" style="margin-bottom: 20px; display: block; padding: 15px; background: #fafafa; border-left: 4px solid #0894f1">
-                <h5 style="margin: 0 0 5px 0; font-size: 0.95rem; color: #111">[Insert Milestone 4 Era]: [Insert Subject Focus]</h5>
-                <span style="color: #0894f1; font-weight: bold; display: block; margin-bottom: 8px; font-size: 0.85rem">
-                  [Insert Landmark Case Ruling or Modern Decriminalization Bill Title]
-                </span>
-                <a href="[INSERT_EXACT_LINK_HERE]" target="_blank" rel="noopener" style="display: inline-block; font-size: 0.85rem; color: #333; text-decoration: none">
-                  <strong>[Insert Supreme Court Repository or Legislative Database Name]</strong> - [Insert 1 sentence description mapping the concrete legal judgment that formally
-                  altered the state stance].
-                  <br />
-                  <span style="display: block; margin-top: 6px">
-                    <strong style="color: #0894f1">How to Find It:</strong> [Insert the explicit case citation number or statutory bill number for quick external verification].
-                  </span>
-                </a>
-              </div>
-
-              <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
-            </div>
+            <p class="article-footer-note" style="color: #000000 !important; font-size: 0.8rem; margin-top: 40px; padding-top: 20px">GWN | June 2026</p>
           </div>
         </details>
 
@@ -543,7 +516,10 @@
               </div>
 
               <!-- Hospital 1 -->
-              <div
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=[CLINIC+NAME+1]+[FULL+ADDRESS+1]"
+                target="_blank"
+                rel="noopener"
                 class="resource-card"
                 style="
                   margin-bottom: 20px;
@@ -553,6 +529,7 @@
                   border-radius: 8px;
                   overflow: hidden;
                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+                  text-decoration: none;
                 "
               >
                 <div style="background: #0894f1; padding: 12px 15px">
@@ -560,20 +537,23 @@
                 </div>
                 <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
-                    ><strong>Address:</strong> [FULL ADDRESS]</span
+                    ><strong>Address:</strong> [FULL ADDRESS 1]</span
                   >
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
-                    ><strong>Phone:</strong> [PHONE NUMBER]</span
+                    ><strong>Phone:</strong> [PHONE NUMBER 1]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
                     <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
                     standard reception desks easily.]
                   </span>
                 </div>
-              </div>
+              </a>
 
               <!-- Hospital 2 -->
-              <div
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=[CLINIC+NAME+2]+[FULL+ADDRESS+2]"
+                target="_blank"
+                rel="noopener"
                 class="resource-card"
                 style="
                   margin-bottom: 20px;
@@ -583,6 +563,7 @@
                   border-radius: 8px;
                   overflow: hidden;
                   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+                  text-decoration: none;
                 "
               >
                 <div style="background: #0894f1; padding: 12px 15px">
@@ -590,17 +571,17 @@
                 </div>
                 <div style="padding: 15px; background: rgba(0, 0, 0, 0.01)">
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 4px"
-                    ><strong>Address:</strong> [FULL ADDRESS]</span
+                    ><strong>Address:</strong> [FULL ADDRESS 2]</span
                   >
                   <span class="resource-desc" style="color: #222; display: block; font-size: 0.95rem; line-height: 1.5; margin-bottom: 10px"
-                    ><strong>Phone:</strong> [PHONE NUMBER]</span
+                    ><strong>Phone:</strong> [PHONE NUMBER 2]</span
                   >
                   <span class="resource-desc" style="color: #444; display: block; font-size: 0.95rem; line-height: 1.5">
                     <strong>Instructions:</strong> [Insert 1 clear, punchy sentence using normal everyday language explaining exactly where to walk or what to say to bypass
                     standard reception desks easily.]
                   </span>
                 </div>
-              </div>
+              </a>
 
               <h3 style="margin-top: 30px; margin-bottom: 10px; color: #111">Community Links & Support</h3>
               <p style="font-size: 0.95rem; margin: 0 0 20px 0; color: #444; line-height: 1.4">
@@ -673,16 +654,43 @@
             <!-- THE GWN OVERVIEW (DATA VS DESTINATION) -->
             <h4>The Research vs Reality</h4>
             <p>
-              [PROMPT: First, run a live search targeting local gay forums, Reddit, Substack, and underground expat networks to find one highly specific, lesser-known truth about
-              the gay street reality here that mainstream NGOs and travel gurus completely ignore. Then, write exactly 2-3 punchy sentences contrasting the official safety data
-              with this raw, on-the-ground reality. Focus specifically on gay men. High-end tabloid tone. Zero padding. Zero semicolons. Zero em dashes. Strictly ban the word
-              "queer".]
+              [PROMPT: First, run a live search targeting local gay forums, Reddit, Substack, and underground expat networks - amd especially social media like instagram which is
+              very popular for gay people - to find one highly specific, lesser-known interesting and truth about the gay scene reality here - if you can't find, don't write it -
+              and write exactly 2-3 punchy sentences contrasting the official safety data with this raw, on-the-ground reality. Focus specifically on gay men. High-end tabloid
+              tone. Zero padding. Zero semicolons. Zero em dashes. Strictly ban the word "queer".]
             </p>
 
             <!-- THE BATTLE (NO COMMENTARY, JUST QUOTES) -->
             <h4 style="margin-top: 30px">The Travel Blogs</h4>
             <p style="margin-bottom: 20px">
-              We pulled these quotes from the top independent and most reliable travel guides so you can choose the one for you. Here is what they are saying right now.
+              <!-- ======================================================================= -->
+              <!-- DYNAMIC TRAVEL GUIDE ROUTING PROTOCOL                                   -->
+              <!-- ======================================================================= -->
+              <!-- 
+  CRITICAL ROUTING RULES:
+  Analyze the current safety data and travel media landscape for this country to execute an EITHER/OR text delivery. Strictly follow the linguistic ban: do not use the word "queer."
+
+  TRACK 1: Dedicated Gay Guides Exist (Standard/Mixed States)
+  Output this exact text block:
+  <h4 style="margin-top: 30px">The Travel Blogs</h4>
+  <p style="margin-bottom: 20px">
+    We pulled these quotes from the top independent and most reliable travel guides so you can choose the one for you. Here is what they are saying right now.
+  </p>
+
+  TRACK 2: No Gay Guides Exist but Sight-Seeing is Safe (Straight Fallback)
+  Output this exact text block (inserting the actual country name):
+  <h4 style="margin-top: 30px">The Travel Blogs</h4>
+  <p style="margin-bottom: 20px">
+    We cannot find any gay guides for [Country Name], so we are showing a couple of popular straight guides if you are just interested in some sight-seeing.
+  </p>
+
+  TRACK 3: High-Hostility / Extreme Physical Danger (Lethal Blackout Zone)
+  Output this exact text block (and completely delete any quote containers below it):
+  <h4 style="margin-top: 30px">The Travel Blogs</h4>
+  <p style="margin-bottom: 20px; font-weight: bold; color: #ff4d4d;">
+    There are no venues to have any fun here. This country is too dangerous to visit and there are no guides.
+  </p>
+-->
             </p>
 
             <!-- THE ESSENTIALS / LOCAL SOURCES -->
@@ -702,61 +710,72 @@
               <div class="resource-card" style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important">
                 <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">State Scene Alert — Digital Dead Zone</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
-                  Our ground-level research confirms that corporate travel algorithms are flat-out lying about this state—there are currently zero permanent, dedicated gay venues
-                  operating here. The local scene relies entirely on underground, word-of-mouth pop-up parties and private networks.
-                  <a href="/contact"
-                    >Are you a local holding down the scene or running a secret night here? Contact us right now so we can verify the facts and put your event on the map for guys
-                    passing through.</a
-                  >
+                  Our ground-level research confirm that there are currently no permanent, dedicated gay venues in [ Country Name]. The local scene relies entirely on underground,
+                  word-of-mouth pop-up parties and private networks / is too dangerous for even an undergound scene to exist.
+                  <a href="/contact">Are you a local some more information? Contact us so we can pass that on to other gay men.</a>
                 </span>
               </div>
 
               <!-- OPTIONAL CITY HEADING: Duplicate this h5 block if breaking a massive state down by city hubs -->
               <!-- <h5 style="margin-top: 20px; margin-bottom: 10px; color: #111; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.5px;">City Name</h5> -->
 
-              <!-- CARD TYPE 1: THE SURVIVING INSTITUTION (Strict Max 6-7 per state page) -->
+              <!-- ======================================================================= -->
+              <!-- MASTER AI PROTOCOL: STRICT VENUE EXISTENCE & CONDITIONAL RENDERING     -->
+              <!-- ======================================================================= -->
+              <!-- 
+  CRITICAL DATA INTEGRITY & ZERO-ASSUMPTION RULE:
+  Before generating any cards, run a definitive search for active, physical gay venues in this specific country. 
+
+  1. ABSOLUTE OMISSION: If the country has zero permanent, verified gay bars, clubs, or cafes operating on the ground, you MUST completely delete the entire "Local Gay Venues & Networks" h4 heading and all cards. Do not show empty headers, do not leave placeholders, and do not guess.
+  2. STRICT CONDITIONAL RENDERING: Only render a card if that specific type of venue actively exists. If a city has a famous club but absolutely no gay cafes, output ONLY the Club Card. Delete the Cafe Card entirely from the code footprint.
+  3. NO ASSUMPTIONS OR GUESSTIMATES: You are strictly forbidden from fabricating venue names, assuming a generic straight venue is a gay hub, or using speculative data. If you cannot verify it directly from multiple local sources, it does not exist.
+-->
+
+              <!-- CARD TYPE 1: THE CLUB (OUR TIPS) -->
               <a
-                href="https://www.google.com/maps/search/?api=1&query=VENUE+NAME+STREET+ADDRESS+CITY+STATE+ZIP"
+                href="https://www.google.com/maps/search/?api=1&query=[CLUB+NAME+STREET+ADDRESS+CITY+STATE+ZIP]"
                 target="_blank"
                 rel="noopener"
                 class="resource-card"
                 style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
               >
-                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">VENUE NAME (City) — Map & Directions</span>
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">[CLUB NAME] ([CITY]) — Club Tip</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
-                  [INSERT_PUNCHY_TABLOID_DESCRIPTION] — This is an unshakeable local monument. It has been packing in loyal crowds of gay men for decades, surviving every wave of
-                  gentrification and corporate dilution. It remains a mandatory launchpad for any real local night out.
+                  "[PROMPT: Find the most fun and popular dedicated gay dance club or major weekly party venue in this city. Pull their exact official self-description from their
+                  website or main channel or social media connection, translate it into clean English, and put it inside these quotes.]" [PROMPT: Add exactly 1 short, direct
+                  sentence giving our specific insider tip on the best hour to arrive and what to wear - casual, leather, suit or anything.]
                 </span>
               </a>
 
-              <!-- CARD TYPE 2: THE HEROIC SURVIVOR (Use to rally support for struggling historic spaces) -->
+              <!-- CARD TYPE 2: THE BAR (OUR TIPS) -->
               <a
-                href="https://www.google.com/maps/search/?api=1&query=VENUE+NAME+STREET+ADDRESS+CITY+STATE+ZIP"
+                href="https://www.google.com/maps/search/?api=1&query=[BAR+NAME+STREET+ADDRESS+CITY+STATE+ZIP]"
                 target="_blank"
                 rel="noopener"
                 class="resource-card"
                 style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
               >
-                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">VENUE NAME (City) — Community Action Hub</span>
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">[BAR NAME] ([CITY]) — Bar Tip</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
-                  [INSERT_PUNCHY_TABLOID_DESCRIPTION] — A legendary, historic space that is actively fighting against soaring commercial rents and corporate land grabs. This venue
-                  needs the community's direct support right now. Skip the tourist traps, go buy a heavy pour here tonight, and keep real gay history alive.
+                  "[PROMPT: Find the most popular physical gay bar or cruise spot in the city. Pull their exact official public self-description or motto from their social
+                  profiles, translate it to English, and drop it in these quotes.]" [PROMPT: Add exactly 1 short, direct sentence giving our specific insider tip on the crowd mix,
+                  price of beers, and best time to arrive.]
                 </span>
               </a>
 
-              <!-- CARD TYPE 3: THE STRATEGIC HAND-OFF (Outsource to a independent, gritty local tracker or grassroots blog) -->
+              <!-- CARD TYPE 3: THE CAFE / LOUNGE (OUR TIPS) -->
               <a
-                href="URL_OF_GRITTY_LOCAL_INDEPENDENT_BLOG_OR_SUBSTACK"
+                href="https://www.google.com/maps/search/?api=1&query=[CAFE+NAME+STREET+ADDRESS+CITY+STATE+ZIP]"
                 target="_blank"
                 rel="noopener"
                 class="resource-card"
                 style="display: block; margin-bottom: 15px; padding: 15px; border-left: 4px solid #7f00ff !important; text-decoration: none"
               >
-                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">The Complete Local Scene Insider (Region/City)</span>
+                <span class="resource-title" style="color: #111; font-weight: bold; display: block; margin-bottom: 5px">[CAFE/LOUNGE NAME] ([CITY]) — Cafe & Social Tip</span>
                 <span class="resource-desc" style="color: #555; font-size: 0.85rem; line-height: 1.4; display: block">
-                  We refuse to clog our server with stale, corporate-advertised club listings. For the exhaustive, street-by-street underground tracker of every neighborhood dive
-                  bar, pop-up mixer, and grassroots event, skip the rainbow-washed corporate travel sites and check out the raw, zero-censorship local data curated directly by the
-                  team at [PLATFORM_NAME].
+                  "[PROMPT: Find the top gay-owned or strictly gay-friendly cafe, daytime social hub, or relaxed community lounge in the city. Pull their official self-description,
+                  translate it into punchy English, and drop it in these quotes.]" [PROMPT: Add exactly 1 short, direct sentence giving our specific insider tip on the daytime
+                  vibe, type of food served, type of crowd, or grabbing a coffee before the night starts.]
                 </span>
               </a>
             </div>
@@ -891,7 +910,7 @@
 
             <!-- Verification Links Container -->
             <div class="resource-container" style="margin-top: 30px">
-              <h3 style="margin-bottom: 20px">Links:</h3>
+              <h4 style="margin-bottom: 20px">Links:</h4>
 
               <!-- Link 1: Mandatory Legal Database Reference -->
               <a href="https://mapresearch.org/equality-profiles/[state_code]/" target="_blank" rel="noopener" class="resource-card">
